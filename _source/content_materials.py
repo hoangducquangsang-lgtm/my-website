@@ -71,6 +71,31 @@ def build(root):
     <img src="/assets/img/product-coffeewood-stick.jpg" alt="Coffee wood chew sticks in a range of sizes">
   </div>
 </section>
+<section class="section">
+  <div class="wrap">
+    <h2>Your wholesale &amp; private label coffee wood dog chew supplier</h2>
+    <p>{BRAND} is the export brand of WINVN INT CO., LTD, a real coffee wood dog chew manufacturer in Vietnam's Central Highlands &mdash; not a trading middleman. Because we own production across three factories, we control quality, sizing and customisation end to end, and back every order with export documentation you can verify. Whether you're a pet retailer, eco shop, Amazon FBA seller or private-label brand, you buy direct from the factory. <a href="/pet-toys-manufacturer-vietnam/">See our full manufacturing capabilities &rarr;</a></p>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap grid grid-2">
+    <img src="/assets/img/process-moisture-check.jpg" alt="Worker checking the moisture of coffee wood with a calibrated meter">
+    <div>
+      <h2 class="mt0">Quality control &amp; export compliance</h2>
+      <p>Every batch passes our five-stage QC &mdash; raw material, in-process, semi-finished, final product and pre-shipment inspection &mdash; with moisture held at 12&ndash;14% by calibrated meters to prevent cracking and mold in transit. Defective goods are covered by a 1-for-1 replacement policy, and CPSIA (US) or REACH (EU) testing is available on request. Certificate of Origin (incl. EUR1), phytosanitary, fumigation and inspection reports ship with every order. <a href="/certifications/">See certifications &amp; compliance &rarr;</a></p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <h2>Shop the coffee wood range</h2>
+    <div class="grid grid-3">
+      <div class="card"><div class="card-img"><img src="/assets/img/product-coffeewood-stick.jpg" alt="Coffee wood dog chew stick, six sizes"></div><h3>Coffee Wood Dog Chew Stick</h3><p>Six sizes XS&ndash;XXL, single-ingredient, laser engraving available.</p><a href="/products/coffee-wood-dog-chew/">View product &rarr;</a></div>
+      <div class="card"><div class="card-img"><img src="/assets/img/product-coffeewood-single.jpg" alt="Dense coffee wood chew for aggressive chewers"></div><h3>For Aggressive Chewers</h3><p>Extra-dense XL/XXL sizing for dogs with strong jaws.</p><a href="/collections/aggressive-chewers/">Explore &rarr;</a></div>
+      <div class="card"><div class="card-img"><img src="/assets/img/dog-lifestyle-chew-1.jpg" alt="Smaller coffee wood chew for teething puppies"></div><h3>For Teething Puppies</h3><p>Gentler XS/S sizing for developing jaws.</p><a href="/collections/teething-puppies/">Explore &rarr;</a></div>
+    </div>
+  </div>
+</section>
 """]
     faqs = [
         ("Are coffee wood chews safe for dogs?", "Yes. They're made from a single natural material — real coffee wood — with no chemicals or additives, and finished to be splinter-resistant. As with any chew, supervise your dog and choose the correct size for their breed."),

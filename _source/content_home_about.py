@@ -8,7 +8,8 @@ def build(root):
   <div class="wrap hero-inner">
     <div>
       <p class="hero-eyebrow">Manufacturer &middot; Vietnam &middot; Since {FOUNDED}</p>
-      <h1>Natural Pet Toys Your Brand Can Stand Behind</h1>
+      <h1>Natural Pet Toys Manufacturer in Vietnam</h1>
+      <p class="hero-sub" style="font-size:1.2rem;font-weight:600;margin:6px 0 12px"><strong>Natural pet toys your brand can stand behind.</strong></p>
       <p class="hero-lede">{BRAND} manufactures natural, biodegradable pet toys in Vietnam &mdash; coffee wood chews, coconut fiber, hemp fiber and loofah. Low MOQ from 50 pcs, full OEM/private label, free samples, and export documentation on every shipment.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="/request-a-quote/">Request a Free Sample</a>
@@ -22,6 +23,20 @@ def build(root):
       </div>
     </div>
     <img src="/assets/img/hero-lifestyle-toys.jpg" alt="Dog and cat with natural coffee wood and coconut fiber pet toys made by {BRAND}" loading="eager">
+  </div>
+</section>
+
+<section class="trust-bar" style="padding:16px 0;border-top:1px solid #ececec;border-bottom:1px solid #ececec;background:#faf7f2">
+  <div class="wrap" style="text-align:center">
+    <p class="small" style="margin:0;letter-spacing:.03em;text-transform:uppercase;opacity:.85">Trusted by pet brands, wholesalers &amp; Amazon sellers across the USA &middot; UK &middot; Germany &middot; France &middot; Netherlands &middot; Australia &middot; Canada &mdash; exporting to {COUNTRIES} countries since {FOUNDED}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center" style="margin:0 auto">
+      <p>{BRAND} is a <a href="/pet-toys-manufacturer-vietnam/">natural pet toys manufacturer in Vietnam</a>, producing coffee wood dog chews, coconut fiber, hemp fiber and loofah toys for wholesale, OEM/ODM and private label. As the export brand of {LEGAL_NAME}, we run three factories with {CAPACITY} capacity, low MOQ from 50 pcs, free samples, and full export documentation &mdash; helping distributors, retailers, eco pet shops, Amazon sellers and startup brands source natural pet products with confidence.</p>
+    </div>
   </div>
 </section>
 
@@ -163,7 +178,7 @@ def build(root):
         "foundingDate": FOUNDED,
         "address": {"@type": "PostalAddress", "streetAddress": ADDRESS},
         "telephone": PHONE, "email": EMAIL,
-        "sameAs": []
+        "sameAs": ["https://www.winvnint.com"]
     }, {
         "@context": "https://schema.org", "@type": "WebSite",
         "name": BRAND, "url": BASE_URL
@@ -204,7 +219,7 @@ def build(root):
     <h2>Where we're made</h2>
     <div class="stats">
       <div><strong>3</strong><span>Factories: Gia Lai &amp; Dak Lak, Ho Chi Minh City</span></div>
-      <div><strong>{CAPACITY.split(' ')[0]}</strong><span>Units produced per year</span></div>
+      <div><strong>{CAPACITY.split(' units')[0]}</strong><span>Units produced per year</span></div>
       <div><strong>{COUNTRIES}</strong><span>Countries we export to</span></div>
       <div><strong>{FOUNDED}</strong><span>Manufacturing natural pet products since</span></div>
     </div>

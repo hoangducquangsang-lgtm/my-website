@@ -18,6 +18,7 @@ shutil.copy(f"{SRC}/style.css", f"{ROOT}/assets/style.css")
 
 MODULES = [
     "content_home_about",
+    "content_landing",
     "content_company",
     "content_materials",
     "content_categories",
