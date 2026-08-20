@@ -1,0 +1,17 @@
+# Cache policy (Netlify / Cloudflare Pages read this file)
+# Fingerprint-free assets: long cache for images, shorter for CSS/HTML.
+
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/downloads/*
+  Cache-Control: public, max-age=2592000
+
+/assets/style.css
+  Cache-Control: public, max-age=86400
+
+/*.html
+  Cache-Control: public, max-age=3600
+
+/
+  Cache-Control: public, max-age=3600

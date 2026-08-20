@@ -166,6 +166,11 @@ def page(title, meta_description, path, content, active_top="", schemas=None, og
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) - deferred load -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}
+(function(){{var id="G-XTXJ45XN8B",done=false;function load(){{if(done)return;done=true;var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+id;document.head.appendChild(s);gtag("js",new Date());gtag("config",id);}}var evs=["scroll","mousemove","touchstart","keydown","click"];function fire(){{load();evs.forEach(function(e){{window.removeEventListener(e,fire)}});}}evs.forEach(function(e){{window.addEventListener(e,fire,{{passive:true}})}});window.addEventListener("load",function(){{setTimeout(load,3500)}});}})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
@@ -186,7 +191,8 @@ def page(title, meta_description, path, content, active_top="", schemas=None, og
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="/">{BRAND}<span class="brand-sub">by {LEGAL_NAME}</span></a>
-    <nav class="main-nav" aria-label="Main">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
       <ul>{nav_html(active_top)}</ul>
     </nav>
     <a class="btn btn-primary btn-header" href="/request-a-quote/">Request a Quote</a>
@@ -199,6 +205,7 @@ def page(title, meta_description, path, content, active_top="", schemas=None, og
 <a href="https://wa.me/{WHATSAPP_NUM}" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25)">
 <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M16.02 3.2c-7.06 0-12.8 5.73-12.8 12.79 0 2.25.59 4.45 1.71 6.39L3.2 28.8l6.6-1.73a12.76 12.76 0 0 0 6.21 1.58h.01c7.06 0 12.79-5.73 12.79-12.79 0-3.42-1.33-6.63-3.75-9.05a12.7 12.7 0 0 0-9.04-3.61zm0 23.31h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.92 1.03 1.05-3.82-.25-.4a10.56 10.56 0 0 1-1.62-5.63c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.51 1.11 7.52 3.12a10.58 10.58 0 0 1 3.11 7.52c0 5.86-4.77 10.63-10.63 10.63zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65 0 1.56 1.14 3.07 1.3 3.28.16.21 2.25 3.43 5.44 4.81.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37z"/></svg>
 </a>
+<script>(function(){{var h=document.querySelector(".site-header"),b=h&&h.querySelector(".nav-toggle");if(!b)return;b.addEventListener("click",function(){{var o=h.classList.toggle("nav-open");b.setAttribute("aria-expanded",o?"true":"false");}});h.querySelectorAll(".main-nav li.has-sub > a").forEach(function(a){{a.addEventListener("click",function(e){{if(window.matchMedia("(max-width:980px)").matches){{var li=a.parentNode;if(!li.classList.contains("open")){{e.preventDefault();li.parentNode.querySelectorAll(".has-sub.open").forEach(function(x){{if(x!==li)x.classList.remove("open");}});li.classList.add("open");}}}}}});}});}})();</script>
 </body>
 </html>
 """

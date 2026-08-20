@@ -1,0 +1,456 @@
+{
+ "cat-loofah-toys-lifestyle.jpg": {
+  "w": 709,
+  "h": 543,
+  "variants": [
+   [
+    400,
+    "cat-loofah-toys-lifestyle-400.webp"
+   ],
+   [
+    709,
+    "cat-loofah-toys-lifestyle.webp"
+   ]
+  ]
+ },
+ "dog-chewing-coffeewood.jpg": {
+  "w": 901,
+  "h": 730,
+  "variants": [
+   [
+    400,
+    "dog-chewing-coffeewood-400.webp"
+   ],
+   [
+    800,
+    "dog-chewing-coffeewood-800.webp"
+   ],
+   [
+    901,
+    "dog-chewing-coffeewood.webp"
+   ]
+  ]
+ },
+ "dog-coconut-balls-lifestyle.jpg": {
+  "w": 538,
+  "h": 394,
+  "variants": [
+   [
+    400,
+    "dog-coconut-balls-lifestyle-400.webp"
+   ],
+   [
+    538,
+    "dog-coconut-balls-lifestyle.webp"
+   ]
+  ]
+ },
+ "dog-lifestyle-chew-1.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   [
+    400,
+    "dog-lifestyle-chew-1-400.webp"
+   ],
+   [
+    800,
+    "dog-lifestyle-chew-1-800.webp"
+   ],
+   [
+    1080,
+    "dog-lifestyle-chew-1.webp"
+   ]
+  ]
+ },
+ "dog-lifestyle-chew-2.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   [
+    400,
+    "dog-lifestyle-chew-2-400.webp"
+   ],
+   [
+    800,
+    "dog-lifestyle-chew-2-800.webp"
+   ],
+   [
+    1080,
+    "dog-lifestyle-chew-2.webp"
+   ]
+  ]
+ },
+ "dog-rope-toy-lifestyle.jpg": {
+  "w": 708,
+  "h": 535,
+  "variants": [
+   [
+    400,
+    "dog-rope-toy-lifestyle-400.webp"
+   ],
+   [
+    708,
+    "dog-rope-toy-lifestyle.webp"
+   ]
+  ]
+ },
+ "export-carton-labels.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   [
+    400,
+    "export-carton-labels-400.webp"
+   ],
+   [
+    800,
+    "export-carton-labels-800.webp"
+   ],
+   [
+    1080,
+    "export-carton-labels.webp"
+   ]
+  ]
+ },
+ "export-packed-box.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   [
+    400,
+    "export-packed-box-400.webp"
+   ],
+   [
+    800,
+    "export-packed-box-800.webp"
+   ],
+   [
+    1080,
+    "export-packed-box.webp"
+   ]
+  ]
+ },
+ "hero-lifestyle-toys.jpg": {
+  "w": 1238,
+  "h": 991,
+  "variants": [
+   [
+    400,
+    "hero-lifestyle-toys-400.webp"
+   ],
+   [
+    800,
+    "hero-lifestyle-toys-800.webp"
+   ],
+   [
+    1200,
+    "hero-lifestyle-toys-1200.webp"
+   ],
+   [
+    1238,
+    "hero-lifestyle-toys.webp"
+   ]
+  ]
+ },
+ "loofah-stick-packed-1.jpg": {
+  "w": 1284,
+  "h": 912,
+  "variants": [
+   [
+    400,
+    "loofah-stick-packed-1-400.webp"
+   ],
+   [
+    800,
+    "loofah-stick-packed-1-800.webp"
+   ],
+   [
+    1200,
+    "loofah-stick-packed-1-1200.webp"
+   ],
+   [
+    1284,
+    "loofah-stick-packed-1.webp"
+   ]
+  ]
+ },
+ "loofah-warehouse-rack.jpg": {
+  "w": 1284,
+  "h": 963,
+  "variants": [
+   [
+    400,
+    "loofah-warehouse-rack-400.webp"
+   ],
+   [
+    800,
+    "loofah-warehouse-rack-800.webp"
+   ],
+   [
+    1200,
+    "loofah-warehouse-rack-1200.webp"
+   ],
+   [
+    1284,
+    "loofah-warehouse-rack.webp"
+   ]
+  ]
+ },
+ "process-coffeewood-styled.jpg": {
+  "w": 1400,
+  "h": 1413,
+  "variants": [
+   [
+    400,
+    "process-coffeewood-styled-400.webp"
+   ],
+   [
+    800,
+    "process-coffeewood-styled-800.webp"
+   ],
+   [
+    1200,
+    "process-coffeewood-styled-1200.webp"
+   ],
+   [
+    1400,
+    "process-coffeewood-styled.webp"
+   ]
+  ]
+ },
+ "process-laser-engraving.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   [
+    400,
+    "process-laser-engraving-400.webp"
+   ],
+   [
+    800,
+    "process-laser-engraving-800.webp"
+   ],
+   [
+    1080,
+    "process-laser-engraving.webp"
+   ]
+  ]
+ },
+ "process-moisture-check.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   [
+    400,
+    "process-moisture-check-400.webp"
+   ],
+   [
+    800,
+    "process-moisture-check-800.webp"
+   ],
+   [
+    1080,
+    "process-moisture-check.webp"
+   ]
+  ]
+ },
+ "process-raw-sticks.jpg": {
+  "w": 1400,
+  "h": 1400,
+  "variants": [
+   [
+    400,
+    "process-raw-sticks-400.webp"
+   ],
+   [
+    800,
+    "process-raw-sticks-800.webp"
+   ],
+   [
+    1200,
+    "process-raw-sticks-1200.webp"
+   ],
+   [
+    1400,
+    "process-raw-sticks.webp"
+   ]
+  ]
+ },
+ "process-vacuum-packing.jpg": {
+  "w": 1400,
+  "h": 1866,
+  "variants": [
+   [
+    400,
+    "process-vacuum-packing-400.webp"
+   ],
+   [
+    800,
+    "process-vacuum-packing-800.webp"
+   ],
+   [
+    1200,
+    "process-vacuum-packing-1200.webp"
+   ],
+   [
+    1400,
+    "process-vacuum-packing.webp"
+   ]
+  ]
+ },
+ "product-coconut-ball-sizes.jpg": {
+  "w": 502,
+  "h": 671,
+  "variants": [
+   [
+    400,
+    "product-coconut-ball-sizes-400.webp"
+   ],
+   [
+    502,
+    "product-coconut-ball-sizes.webp"
+   ]
+  ]
+ },
+ "product-coconut-fiber-raw.jpg": {
+  "w": 877,
+  "h": 414,
+  "variants": [
+   [
+    400,
+    "product-coconut-fiber-raw-400.webp"
+   ],
+   [
+    800,
+    "product-coconut-fiber-raw-800.webp"
+   ],
+   [
+    877,
+    "product-coconut-fiber-raw.webp"
+   ]
+  ]
+ },
+ "product-coffeewood-single.jpg": {
+  "w": 435,
+  "h": 578,
+  "variants": [
+   [
+    400,
+    "product-coffeewood-single-400.webp"
+   ],
+   [
+    435,
+    "product-coffeewood-single.webp"
+   ]
+  ]
+ },
+ "product-coffeewood-stick.jpg": {
+  "w": 550,
+  "h": 550,
+  "variants": [
+   [
+    400,
+    "product-coffeewood-stick-400.webp"
+   ],
+   [
+    550,
+    "product-coffeewood-stick.webp"
+   ]
+  ]
+ },
+ "product-hemp-ball.jpg": {
+  "w": 442,
+  "h": 442,
+  "variants": [
+   [
+    400,
+    "product-hemp-ball-400.webp"
+   ],
+   [
+    442,
+    "product-hemp-ball.webp"
+   ]
+  ]
+ },
+ "product-hemp-dumbbell.jpg": {
+  "w": 420,
+  "h": 316,
+  "variants": [
+   [
+    400,
+    "product-hemp-dumbbell-400.webp"
+   ],
+   [
+    420,
+    "product-hemp-dumbbell.webp"
+   ]
+  ]
+ },
+ "product-hemp-rope-trio.jpg": {
+  "w": 665,
+  "h": 368,
+  "variants": [
+   [
+    400,
+    "product-hemp-rope-trio-400.webp"
+   ],
+   [
+    665,
+    "product-hemp-rope-trio.webp"
+   ]
+  ]
+ },
+ "product-loofah-basket.jpg": {
+  "w": 277,
+  "h": 208,
+  "variants": [
+   [
+    277,
+    "product-loofah-basket.webp"
+   ]
+  ]
+ },
+ "puppy-ball-lifestyle.jpg": {
+  "w": 713,
+  "h": 713,
+  "variants": [
+   [
+    400,
+    "puppy-ball-lifestyle-400.webp"
+   ],
+   [
+    713,
+    "puppy-ball-lifestyle.webp"
+   ]
+  ]
+ },
+ "raw-loofah-gourd.jpg": {
+  "w": 255,
+  "h": 144,
+  "variants": [
+   [
+    255,
+    "raw-loofah-gourd.webp"
+   ]
+  ]
+ },
+ "warehouse-winvn-boxes.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   [
+    400,
+    "warehouse-winvn-boxes-400.webp"
+   ],
+   [
+    800,
+    "warehouse-winvn-boxes-800.webp"
+   ],
+   [
+    1080,
+    "warehouse-winvn-boxes.webp"
+   ]
+  ]
+ }
+}
