@@ -182,7 +182,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{BASE_URL}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=20260820">
 <link rel="icon" href="/assets/img/logo-icon.png">
 {schema_tags}
 </head>
