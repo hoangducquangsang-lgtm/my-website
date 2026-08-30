@@ -612,6 +612,88 @@
         }
       ]
     },
+    "assets/img/winvn-hemp-fiber-rope-ball.png": {
+      "sha256": "7653b92c0a5fccb2880655d1b16ae6ccbdc2326531615603d0c4d0843abb90ae",
+      "width": 902,
+      "height": 637,
+      "bytes": 701175,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-320w.webp",
+          "width": 320,
+          "height": 226,
+          "bytes": 10790
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-480w.webp",
+          "width": 480,
+          "height": 339,
+          "bytes": 18060
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-640w.webp",
+          "width": 640,
+          "height": 452,
+          "bytes": 26182
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-800w.webp",
+          "width": 800,
+          "height": 565,
+          "bytes": 33992
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-902w.webp",
+          "width": 902,
+          "height": 637,
+          "bytes": 38766
+        }
+      ]
+    },
+    "assets/img/winvn-hemp-rope-dog-toy.jpg": {
+      "sha256": "296e88e79fabe67aa594f64312a8eaac571ee9140b708f3feee8e4c4c397fa33",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 80824,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 6586
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 12404
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 19258
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 27624
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 36428
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 46438
+        }
+      ]
+    },
     "assets/img/winvn-hemp-wood-assortment.jpg": {
       "sha256": "12b306986531601b00d1f34ff3eb242c66addce1936471aaecbc9fb611e5d67e",
       "width": 2000,

@@ -73,7 +73,7 @@ def nav_html(active_top=""):
         cls = "active" if label == active_top else ""
         if children:
             sub = "".join(f'<li><a href="{h}">{escape(l)}</a></li>' for l,h in children)
-            items.append(f'<li class="{cls}"><details class="nav-menu"><summary>{escape(label)}</summary><ul class="sub-nav">{sub}</ul></details></li>')
+            items.append(f'<li class="{cls}"><details class="nav-menu" name="main-navigation"><summary>{escape(label)}</summary><ul class="sub-nav">{sub}</ul></details></li>')
         else:
             items.append(f'<li class="{cls}"><a href="{href}">{escape(label)}</a></li>')
     return "".join(items)
@@ -144,14 +144,14 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}{og_image}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title,quote=True)}">
 <meta name="twitter:description" content="{escape(meta_description,quote=True)}"><meta name="twitter:image" content="{BASE_URL}{og_image}">
-<link rel="stylesheet" href="/assets/style.css?v=20260830-form-webp"><link rel="icon" href="/assets/img/logo-icon.png">
+<link rel="stylesheet" href="/assets/style.css?v=20260830-menu-hemp"><link rel="icon" href="/assets/img/logo-icon.png">
 {schema_tags}</head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="/">{BRAND}<span class="brand-sub">Natural Pet Products</span></a>
 <nav class="main-nav" aria-label="Main"><ul>{nav_html(active_top)}</ul></nav>
 <a class="btn btn-primary btn-header" href="/request-a-quote/">Request a Quote</a>
-</div></header><main id="main">{content}</main>{footer_html()}{sticky}</body></html>
+</div></header><main id="main">{content}</main>{footer_html()}{sticky}<script src="/assets/navigation.js?v=20260830-exclusive" defer></script></body></html>
 """
 
 def write_page(root, path, html):

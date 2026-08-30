@@ -10,6 +10,12 @@
   "footer_pages_verified": 67,
   "sarah_authored_guides_verified": 20,
   "http": null,
+  "navigation_pages_verified": 67,
+  "guide_update_dates_verified": 20,
+  "displayed_guide_date_range": [
+    "2026-06-25",
+    "2026-08-30"
+  ],
   "content_words": {
     "/about/": 324,
     "/capabilities/": 475,
@@ -39,7 +45,7 @@
     "/guides/coffee-wood-vs-antler-nylon-rawhide/": 461,
     "/guides/how-long-do-coffee-wood-chews-last/": 445,
     "/guides/how-to-vet-an-eco-pet-toy-supplier/": 450,
-    "/guides/": 600,
+    "/guides/": 680,
     "/guides/natural-dog-chew-toys-guide/": 481,
     "/guides/natural-dog-toy-manufacturer-vietnam/": 469,
     "/guides/non-toxic-cat-toys-wholesale-buying-guide/": 449,
@@ -60,8 +66,8 @@
     "/products/coconut-fiber-cat-ball/": 624,
     "/products/coconut-fiber-dog-ball/": 617,
     "/products/coffee-wood-dog-chew/": 796,
-    "/products/hemp-fiber-ball/": 660,
-    "/products/hemp-rope-dog-toy/": 640,
+    "/products/hemp-fiber-ball/": 638,
+    "/products/hemp-rope-dog-toy/": 618,
     "/products/loofah-cat-toy/": 625,
     "/quality-control/": 416,
     "/request-a-quote/": 232,

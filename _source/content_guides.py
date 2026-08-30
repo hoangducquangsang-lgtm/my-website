@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """WINVN editorial guides. Author attribution supplied by the website owner."""
-from common import BASE_URL, REVIEW_DATE, BRAND, page, write_page, breadcrumb_html
+from common import BASE_URL, BRAND, page, write_page, breadcrumb_html
+from guide_dates import GUIDE_UPDATED_DATES, updated_time
 from content_helpers import section, p, ul, table, cards, rfq_bar, FTC, CPSC, ECHA, AAHA
 from content_products import coffee_size_table
 
@@ -374,7 +375,7 @@ def build(root):
     bc,bs=breadcrumb_html([("Home","/"),("Guides",None)])
     hub=bc+'<section class="hero"><div class="wrap"><h1>Pet Product &amp; Sourcing Guides</h1>'+p("Written by Sarah for pet brands, retailers and importers. Practical guidance on choosing natural toys, evaluating samples and managing an international order from the first brief to receiving.")+'</div></section>'
     for cluster,articles in clusters.items():
-        hub+=section(cluster,cards([(a["title"],a["description"],"/guides/"+a["slug"]+"/") for a in articles]))
+        hub+=section(cluster,cards([(a["title"],a["description"]+f'<span class="guide-updated">Updated {updated_time(a["slug"])}</span>',"/guides/"+a["slug"]+"/") for a in articles]))
     write_page(root,"/guides/",page("Guides & Resources | Natural Pet Toy Sourcing | WINVN",
         "Buyer guides to natural pet toy materials, sizes, supplier verification, wholesale ordering and product-specific compliance planning.",
         "/guides/",hub+rfq_bar(),"Guides",[bs]))
@@ -388,9 +389,9 @@ def build(root):
             body+="<h2>Further reading</h2>"+ul([f'<a href="{u}">{t}</a>' for t,u in a["related"]])
         if a["sources"]:
             body+='<div class="source-note"><h2>Reference guidance</h2>'+ul([f'<a href="{u}">{t}</a>' for t,u in a["sources"]])+'</div>'
-        content=bc+f'<article class="section"><div class="wrap article"><p class="tag">{a["cluster"]}</p><h1>{a["title"]}</h1><p class="meta article-byline">By <span class="author-name">Sarah</span> · WINVN · Updated <time datetime="{REVIEW_DATE}">30 August 2026</time></p>{body}</div></article>'
+        content=bc+f'<article class="section"><div class="wrap article"><p class="tag">{a["cluster"]}</p><h1>{a["title"]}</h1><p class="meta article-byline">By <span class="author-name">Sarah</span> · WINVN · Updated {updated_time(a["slug"])}</p>{body}</div></article>'
         schema={"@context":"https://schema.org","@type":"Article","@id":BASE_URL+path+"#article",
-            "headline":a["title"],"description":a["description"],"dateModified":REVIEW_DATE,
+            "headline":a["title"],"description":a["description"],"dateModified":GUIDE_UPDATED_DATES[a["slug"]],
             "mainEntityOfPage":BASE_URL+path,"image":BASE_URL+"/assets/img/"+a["image"],
             "author":{"@type":"Person","name":"Sarah"},
             "publisher":{"@id":BASE_URL+"/#organization"}}

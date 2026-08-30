@@ -78,6 +78,7 @@ img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
 .card-img{border-radius:var(--radius) var(--radius) 0 0;margin:-24px -24px 16px}
 .card-img img{border-radius:var(--radius) var(--radius) 0 0;width:100%;aspect-ratio:4/3;object-fit:cover}
 .card-img img[src*="winvn-coffee-wood"],.card-img img[src*="winvn-hemp-wood"],.card-img img[src*="winvn-loofah-play"],.card-img img[src*="winvn-natural-toy"]{object-fit:contain;background:#f7f8f4}
+.card-img img[src*="winvn-hemp-fiber-rope-ball"],.card-img img[src*="winvn-hemp-rope-dog-toy"]{object-fit:contain;background:#f7f8f4}
 .material-card{position:relative;overflow:hidden}
 .material-card img{aspect-ratio:1/1;object-fit:cover}
 .tag{display:inline-block;background:var(--kraft-dark);color:var(--forest-dark);font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:8px}
@@ -140,6 +141,7 @@ th{background:var(--kraft);color:var(--forest-dark)}
 .article{max-width:74ch;margin:0 auto}
 .article h2{margin-top:1.6em}
 .article .meta{color:var(--ink-soft);font-size:.85rem;margin-bottom:2em}
+.guide-updated{display:block;margin-top:10px;color:var(--ink-soft);font-size:.82rem}
 .callout{background:var(--kraft);border-left:4px solid var(--terracotta);padding:16px 20px;border-radius:8px;margin:1.5em 0}
 
 /* Guides list */

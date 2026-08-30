@@ -22,6 +22,8 @@ IMAGE_DESCRIPTIONS = {
     "winvn-coffee-wood-sizes.png": "Six coffee wood chew stick sizes on a light background",
     "winvn-coconut-fiber-balls.jpg": "Coconut-fiber balls held outdoors against green foliage",
     "winvn-hemp-wood-assortment.jpg": "Rope-ball and coffee wood combinations displayed in a sample basket",
+    "winvn-hemp-fiber-rope-ball.png": "Golden retriever holding a rope ball indoors",
+    "winvn-hemp-rope-dog-toy.jpg": "Two coffee wood toys with knotted rope ends on a light background",
     "winvn-loofah-play-shapes.png": "Loofah cat-play shapes in a basket on a light surface",
     "winvn-loofah-growing.png": "A green loofah gourd growing on its vine",
     "winvn-moisture-check-kiem-go-9.jpg": "Moisture meter checking a coffee wood stick above a carton of sticks",

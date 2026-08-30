@@ -12,6 +12,8 @@ import sys
 import zipfile
 import xml.etree.ElementTree as ET
 from urllib.request import urlopen
+from datetime import date
+from guide_dates import GUIDE_UPDATED_DATES, updated_time
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
@@ -38,6 +40,7 @@ class Document(HTMLParser):
         self.fields=[]
         self.labels=set()
         self.language=None
+        self.nav_menus=[]
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
         if "id" in a: self.ids.add(a["id"])
@@ -50,6 +53,7 @@ class Document(HTMLParser):
         if tag=="meta": self.meta[a.get("name") or a.get("property")]=a.get("content")
         if tag=="script" and a.get("type")=="application/ld+json": self.json_buffer=[]
         if tag=="img": self.images.append(a)
+        if tag=="details" and "nav-menu" in a.get("class", "").split(): self.nav_menus.append(a)
         if tag in ("input","select","textarea"): self.fields.append(a)
         if tag=="label": self.labels.add(a.get("for"))
         for key in ("href","src","action","data-success-url"):
@@ -117,6 +121,9 @@ def run():
         check(d.meta.get("og:description")==d.meta.get("description"),f"{route}: OG description mismatch")
         check(d.meta.get("twitter:description")==d.meta.get("description"),f"{route}: X description mismatch")
         check("main" in d.ids,f"{route}: skip link target missing")
+        check(len(d.nav_menus)==6,f"{route}: expected six navigation disclosure groups")
+        check(all(m.get("name")=="main-navigation" and "open" not in m for m in d.nav_menus),f"{route}: navigation must share one exclusive group and start closed")
+        check(any(tag=="script" and urlsplit(link).path.endswith("assets/navigation.js") for tag,_,link in d.links),f"{route}: navigation behavior script missing")
         check(all(i.get("alt") for i in d.images),f"{route}: image alt missing")
         for image in d.images:
             check(urlsplit(image.get("src", "")).path.endswith(".webp"),f"{route}: inline image is not WebP")
@@ -145,6 +152,7 @@ def run():
                 check(schema.get("headline")==d.h1[0],f"{route}: article headline mismatch")
                 check(schema.get("description")==d.meta.get("description"),f"{route}: article description mismatch")
                 check(schema.get("image")==d.meta.get("og:image"),f"{route}: article social image mismatch")
+                check(schema.get("dateModified")==GUIDE_UPDATED_DATES.get(route.strip("/").split("/")[-1]),f"{route}: article update date mismatch")
             if schema.get("@type")=="Organization":
                 check(schema.get("name")=="WINVN",f"{route}: organization brand mismatch")
                 check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
@@ -152,10 +160,18 @@ def run():
             check(any(urlsplit(u).path for u in d.main_links),f"{route}: missing contextual links")
             check('<span class="author-name">Sarah</span>' in html,f"{route}: visible Sarah byline missing")
             check(d.meta.get("author")=="Sarah",f"{route}: author metadata missing")
+            check(updated_time(route.strip("/").split("/")[-1]) in html,f"{route}: visible editorial date mismatch")
             check('Not a veterinary assessment, legal opinion or product certificate.' not in html,f"{route}: obsolete boilerplate byline")
         if len(d.meta.get("description",""))>200:
             warnings.append(f"{route}: long meta description ({len(d.meta['description'])} chars)")
     titles=Counter(d.title for _,d in docs.values())
+    guide_dates=sorted(date.fromisoformat(v) for v in GUIDE_UPDATED_DATES.values())
+    check(len(guide_dates)==20 and len(set(guide_dates))==20,"Guides must have twenty distinct displayed dates")
+    check(all((b-a).days in (3,4) for a,b in zip(guide_dates,guide_dates[1:])),"Guide dates must be spaced 3–4 days apart")
+    hub_html=docs["/guides/"][0].read_text(encoding="utf-8")
+    check(all(updated_time(slug) in hub_html for slug in GUIDE_UPDATED_DATES),"Guide list dates differ from article dates")
+    hub_dates=[date.fromisoformat(value) for value in re.findall(r'<time datetime="([0-9-]+)">',hub_html)]
+    check(hub_dates==list(reversed(guide_dates)),"Guide card order must use the same descending 3–4 day schedule")
     descriptions=Counter(d.meta.get("description") for _,d in docs.values())
     check(all(v==1 for v in titles.values()),"Duplicate page titles")
     check(all(v==1 for v in descriptions.values()),"Duplicate meta descriptions")
@@ -254,6 +270,8 @@ def run():
         "original_assets_verified":preserved,"replacement_references_verified":len(replacements),
         "supplied_replacement_files_verified":len({x["asset"] for x in replacements}),
         "footer_pages_verified":len(docs),"sarah_authored_guides_verified":len(ARTICLES),"http":http_result,
+        "navigation_pages_verified":len(docs),"guide_update_dates_verified":len(guide_dates),
+        "displayed_guide_date_range":[guide_dates[0].isoformat(),guide_dates[-1].isoformat()],
         "content_words":{p:len(re.findall(r"\b[\w’-]+\b"," ".join(d.main_text))) for p,(_,d) in docs.items()},
         "warnings":warnings,"errors":errors}
     (ROOT/"_source/validation_report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

@@ -10,6 +10,22 @@ import zipfile
 
 from validate_site import Document, ROOT
 from responsive_images import SIZES
+from content_helpers import IMAGE_DESCRIPTIONS
+
+HEMP_IMAGES = {
+    "products/hemp-fiber-ball/index.html": "assets/img/winvn-hemp-fiber-rope-ball.png",
+    "products/hemp-rope-dog-toy/index.html": "assets/img/winvn-hemp-rope-dog-toy.jpg",
+}
+
+
+def unchanged_copy(html, relative):
+    # Whitelist only the owner-requested date display and retired assortment caption.
+    if relative.startswith("guides/"):
+        html = re.sub(r'<span class="guide-updated">Updated <time[^>]*>[^<]*</time></span>', '', html)
+        html = re.sub(r'<time[^>]*>[^<]*</time>', '<time>EDITORIAL_DATE</time>', html)
+    if relative in HEMP_IMAGES:
+        html = html.replace('<figcaption>Sample assortment showing rope-ball and coffee wood combinations. Standalone balls and rope-only designs are quoted separately; the approved sample defines your order.</figcaption>', '')
+    return document(html).main_text
 
 
 def document(html):
@@ -82,6 +98,7 @@ def run(backup):
         for meta in ("og:image", "twitter:image"):
             assert local_path(file, d.meta[meta]) in variants, "Social image must be optimized"
     old_docs = {}
+    old_html = {}
     preserved_assets = 0
     with zipfile.ZipFile(backup) as archive:
         for name in archive.namelist():
@@ -91,23 +108,32 @@ def run(backup):
                 continue
             relative = norm[len(prefix):]
             if relative.endswith("index.html") and not relative.startswith("_source/"):
-                old_docs[relative] = document(archive.read(name).decode("utf-8"))
+                old_html[relative] = archive.read(name).decode("utf-8")
+                old_docs[relative] = document(old_html[relative])
             if relative.startswith("assets/img/") and not name.endswith("/"):
                 assert archive.read(name) == (ROOT / relative).read_bytes(), "Original image changed: " + relative
                 preserved_assets += 1
-    assert len(old_docs) == 66, "Wrong baseline backup"
+    assert len(old_docs) == 67, "Use the backup immediately before the menu/hemp/date update"
     preserved_pages = 0
+    approved_image_changes = 0
     for relative, before in old_docs.items():
         after = docs[relative]
-        if relative != "request-a-quote/index.html":
-            assert before.main_text == after.main_text, "Unrelated copy changed: " + relative
-            assert before.title == after.title and before.meta["description"] == after.meta["description"]
-            preserved_pages += 1
+        assert unchanged_copy(old_html[relative],relative) == unchanged_copy((ROOT/relative).read_text(encoding="utf-8"),relative), "Unrelated copy changed: " + relative
+        assert before.title == after.title and before.meta["description"] == after.meta["description"]
+        preserved_pages += 1
         assert len(before.images) == len(after.images), "Image added or removed: " + relative
         for a, b in zip(before.images, after.images):
             original, _, _ = variants[local_path(ROOT / relative, b["src"])]
-            assert local_path(ROOT / relative, a["src"]) == ROOT / original, "Selected photo changed"
-            assert a["alt"] == b["alt"], "Photo description changed"
+            old_original, _, _ = variants[local_path(ROOT / relative, a["src"])]
+            if old_original != original:
+                assert old_original == "assets/img/winvn-hemp-wood-assortment.jpg" and original in HEMP_IMAGES.values(), "Unrequested photo change"
+                assert b["alt"] == IMAGE_DESCRIPTIONS[Path(original).name]
+                approved_image_changes += 1
+            else:
+                assert a["alt"] == b["alt"], "Unrequested photo description change"
+        if relative in HEMP_IMAGES:
+            assert variants[local_path(ROOT / relative, after.images[0]["src"])][0] == HEMP_IMAGES[relative], "Wrong photo for hemp product"
+            assert variants[local_path(ROOT / relative, after.meta["og:image"])][0] == HEMP_IMAGES[relative]
     # Confirm the visible form content against the owner-provided old folder.
     legacy = Path("D:/1. Vietpaw/my-website - Copy/request-a-quote/index.html").read_text(encoding="utf-8")
     current = (ROOT / "request-a-quote/index.html").read_text(encoding="utf-8")
@@ -124,8 +150,7 @@ def run(backup):
     assert "Send Enquiry" in new_form and "Open Email Draft" not in new_form
     home_file = ROOT / "index.html"
     home = docs["index.html"]
-    old_home = old_docs["index.html"]
-    original_bytes = sum(f.stat().st_size for f in {local_path(home_file, i["src"]) for i in old_home.images})
+    original_bytes = sum(f.stat().st_size for f in {ROOT/variants[local_path(home_file, i["src"])][0] for i in home.images})
     estimates = {}
     for name, viewport, dpr in [("phone_390px_2x", 390, 2), ("desktop_1440px_1x", 1440, 1), ("desktop_1440px_2x", 1440, 2)]:
         selected = set()
@@ -137,12 +162,13 @@ def run(backup):
         total = sum(f.stat().st_size for f in selected)
         estimates[name] = {"image_bytes": total, "reduction_percent": round(100 * (1 - total / original_bytes), 2)}
     report = {
-        "original_images_preserved_against_backup": preserved_assets,
+        "existing_image_files_preserved_against_backup": preserved_assets,
         "source_images_optimized": len(manifest), "webp_files_verified": len(variants),
         "inline_images_verified": inline_count, "pages_checked": len(docs),
-        "unrelated_pages_copy_preserved": preserved_pages,
+        "pages_copy_preserved_except_requested_dates_and_caption": preserved_pages,
+        "approved_hemp_image_positions_changed": approved_image_changes,
         "legacy_form_content_and_fields_match": True,
-        "homepage_original_inline_image_bytes": original_bytes,
+        "homepage_current_photos_original_bytes": original_bytes,
         "homepage_modeled_responsive_selection": estimates,
         "measurement_note": "Whole-page image-file totals modeled from CSS sizes and DPR, not browser network measurements, initial payload or Core Web Vitals.",
         "live_form_submission_tested": False, "browser_visual_tested": False

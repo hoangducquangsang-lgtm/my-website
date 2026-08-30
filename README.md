@@ -6,7 +6,7 @@ Bản cập nhật thương hiệu, hình ảnh và Guides ngày **30/08/2026**.
 
 Mở `index.html` hoặc chạy một static server tại thư mục này. HTML/ảnh/liên kết nội bộ dùng đường dẫn tương đối để giữ cách xem offline. Trang có canonical theo `https://vietpaw.com/`.
 
-Xem **WEBP_FORM_UPDATE_VI.md** để đọc cập nhật biểu mẫu và ảnh mới nhất. **WINVN_UPDATE_REPORT_VI.md** ghi nhận đợt đổi thương hiệu; **SEO_UPDATE_REPORT_VI.md** ghi nhận đợt SEO trước đó.
+Xem **MENU_HEMP_GUIDES_UPDATE_VI.md** để đọc cập nhật menu, hai ảnh hemp và ngày Guides mới nhất. **WEBP_FORM_UPDATE_VI.md** ghi nhận đợt biểu mẫu/WebP; **WINVN_UPDATE_REPORT_VI.md** ghi nhận đợt đổi thương hiệu; **SEO_UPDATE_REPORT_VI.md** ghi nhận đợt SEO trước đó.
 
 ## Quy mô
 
@@ -19,7 +19,9 @@ Xem **WEBP_FORM_UPDATE_VI.md** để đọc cập nhật biểu mẫu và ảnh 
 - Chân trang theo nội dung chủ website yêu cầu, gồm 40+ countries và email `sarah@vietpaw.com`.
 - 30 tài nguyên cũ vẫn còn để phục hồi/giữ liên kết cũ, nhưng ảnh nền đen không còn được trang nào gọi. Ảnh mới giữ nguyên dữ liệu ảnh gốc.
 - Biểu mẫu 5 trường và nút **Send Enquiry** được khôi phục từ folder cũ; gửi đến điểm nhận Formspree có sẵn `https://formspree.io/f/mvkpbvlb`. Chưa kiểm tra gửi/nhận email thật hoặc trạng thái tài khoản nhận.
-- 20 ảnh nội dung/chia sẻ có 120 phiên bản WebP trong `assets/img/webp/`; 85 vị trí ảnh dùng `srcset`, `sizes` và kích thước nội tại. Ảnh gốc và favicon PNG được giữ nguyên.
+- 22 ảnh nội dung/chia sẻ có 131 phiên bản WebP trong `assets/img/webp/`; 85 vị trí ảnh dùng `srcset`, `sizes` và kích thước nội tại. Ảnh gốc và favicon PNG được giữ nguyên.
+- Menu chỉ mở một nhóm tại một thời điểm; đóng khi bấm ra ngoài, chọn liên kết, nhấn Esc hoặc chuyển tiêu điểm ra ngoài menu.
+- 20 ngày hiển thị trong Guides cách nhau 3–4 ngày, từ 25/06 đến 30/08/2026, theo thứ tự thẻ bài. Đây là lịch hiển thị do chủ website yêu cầu, không phải lịch sử sửa tệp được xác minh.
 
 ## Chỉnh sửa và tạo lại trang
 
@@ -31,12 +33,15 @@ Bộ tạo trang dùng Python 3 và Pillow có hỗ trợ WebP, không cần cà
 python _source/build.py
 python _source/validate_site.py
 node _source/test_rfq.cjs
-python _source/test_responsive_images.py "../_VietPaw_backups/Website-before-form-webp-20260830-203740.zip"
+node _source/test_navigation.cjs
+python _source/test_responsive_images.py "../_VietPaw_backups/Website-before-menu-hemp-dates-20260830-211411.zip"
 ```
 
 Nếu có local server tại 127.0.0.1:8765, có thể thêm `--http` vào lệnh kiểm tra. Không dùng lệnh build cũ trỏ tới `/tmp/site_build`: đã thay bằng đường dẫn dựa trên vị trí project. Build không xóa thư mục, không ghi lại ảnh gốc/catalogue; các bản WebP được tạo hoặc tái sử dụng khi nguồn chưa thay đổi. Chỉnh quy tắc ảnh trong `_source/responsive_images.py`; khi đổi cách mã hóa, tăng `SETTINGS.version` để tạo lại các bản dẫn xuất.
 
 Đừng sửa riêng HTML nếu muốn giữ thay đổi qua lần build tiếp theo.
+
+Ngày Guides được lưu cố định theo từng đường dẫn trong `_source/guide_dates.py`, không tự thay theo ngày chạy build. Menu dùng `assets/navigation.js`; ảnh hai sản phẩm hemp được chọn trong `_source/content_products.py` và tự đồng bộ sang thẻ sản phẩm, ảnh chia sẻ, dữ liệu cấu trúc.
 
 ## Hồ sơ nội bộ
 
@@ -49,6 +54,7 @@ Nếu có local server tại 127.0.0.1:8765, có thể thêm `--http` vào lện
 - Backup trước khi sửa: `../_VietPaw_backups/VietPaw-before-SEO-2026-08-30.zip`.
 - Backup trước đợt đổi thương hiệu: `../_VietPaw_backups/Website-before-WINVN-2026-08-30.zip`.
 - Backup trước đợt biểu mẫu/WebP: `../_VietPaw_backups/Website-before-form-webp-20260830-203740.zip`.
+- Backup trước đợt menu/ảnh hemp/ngày Guides: `../_VietPaw_backups/Website-before-menu-hemp-dates-20260830-211411.zip`.
 
 ## Trước khi đăng lên hosting
 

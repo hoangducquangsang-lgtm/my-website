@@ -1,12 +1,13 @@
 {
-  "original_images_preserved_against_backup": 38,
-  "source_images_optimized": 20,
-  "webp_files_verified": 120,
+  "existing_image_files_preserved_against_backup": 158,
+  "source_images_optimized": 22,
+  "webp_files_verified": 131,
   "inline_images_verified": 85,
   "pages_checked": 67,
-  "unrelated_pages_copy_preserved": 65,
+  "pages_copy_preserved_except_requested_dates_and_caption": 67,
+  "approved_hemp_image_positions_changed": 13,
   "legacy_form_content_and_fields_match": true,
-  "homepage_original_inline_image_bytes": 13792857,
+  "homepage_current_photos_original_bytes": 13792857,
   "homepage_modeled_responsive_selection": {
     "phone_390px_2x": {
       "image_bytes": 822660,

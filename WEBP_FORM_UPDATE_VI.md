@@ -2,6 +2,8 @@
 
 Ngày: 30/08/2026. Chỉ cập nhật thư mục `4. VietPaw Website`, chưa xuất bản. Folder cũ tại `D:/1. Vietpaw/my-website - Copy/` chỉ được đọc, không chỉnh sửa.
 
+Cập nhật kế tiếp về menu, hai ảnh hemp và lịch ngày Guides: xem **MENU_HEMP_GUIDES_UPDATE_VI.md**. Các số liệu 20 ảnh/120 WebP dưới đây ghi nhận trạng thái tại thời điểm hoàn thành đợt biểu mẫu; hiện có 22 ảnh/131 WebP.
+
 ## Biểu mẫu theo bản cũ
 
 - Khôi phục nguyên văn đoạn giới thiệu bên dưới “Tell us about your project”.
