@@ -6,6 +6,7 @@ import json
 import shutil
 from xml.sax.saxutils import escape
 from common import PAGES, BASE_URL
+from responsive_images import save_manifest
 
 ROOT = Path(__file__).resolve().parent.parent
 MODULES = [
@@ -23,6 +24,7 @@ def build():
     (ROOT/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls+'\n</urlset>\n',encoding="utf-8")
     (ROOT/"robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /_source/\n\nSitemap: "+BASE_URL+"/sitemap.xml\n",encoding="utf-8")
     (ROOT/"_source"/"page_manifest.json").write_text(json.dumps(PAGES,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    save_manifest()
     print(f"Built {len(PAGES)} HTML pages; {sum(p['indexable'] for p in PAGES.values())} sitemap URLs. Existing assets preserved.")
 
 if __name__ == "__main__":

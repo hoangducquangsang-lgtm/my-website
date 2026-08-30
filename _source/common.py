@@ -5,6 +5,7 @@ import os
 import re
 from html import escape
 from urllib.parse import urlsplit
+from responsive_images import responsive_markup, optimized_url, optimize_schema
 
 DOMAIN = "vietpaw.com"
 BASE_URL = f"https://{DOMAIN}"
@@ -116,7 +117,9 @@ def organization_schema():
 def page(title, meta_description, path, content, active_top="", schemas=None,
          og_image="/assets/img/winvn-natural-toy-assortment.png", noindex=False):
     canonical = BASE_URL+path
-    schemas = list(schemas or [])
+    content = responsive_markup(content)
+    og_image = optimized_url(og_image)
+    schemas = optimize_schema(list(schemas or []))
     if not any(s.get("@type")=="Organization" for s in schemas):
         schemas.append(organization_schema())
     for s in schemas:
@@ -141,7 +144,7 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}{og_image}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title,quote=True)}">
 <meta name="twitter:description" content="{escape(meta_description,quote=True)}"><meta name="twitter:image" content="{BASE_URL}{og_image}">
-<link rel="stylesheet" href="/assets/style.css"><link rel="icon" href="/assets/img/logo-icon.png">
+<link rel="stylesheet" href="/assets/style.css?v=20260830-form-webp"><link rel="icon" href="/assets/img/logo-icon.png">
 {schema_tags}</head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
@@ -155,10 +158,9 @@ def write_page(root, path, html):
     target = os.path.join(root, path.strip("/"), "index.html")
     os.makedirs(os.path.dirname(target), exist_ok=True)
     # Keep the original offline-friendly delivery: relative HTML, assets and query strings.
-    def relative(match):
-        attr, url = match.groups()
+    def relative_url(url):
         if url.startswith("//"):
-            return match.group(0)
+            return url
         parts = urlsplit(url)
         dest = os.path.join(root, parts.path.lstrip("/"))
         if parts.path.endswith("/"):
@@ -166,8 +168,18 @@ def write_page(root, path, html):
         rel = os.path.relpath(dest, os.path.dirname(target)).replace(os.sep,"/")
         if parts.query: rel += "?"+parts.query
         if parts.fragment: rel += "#"+parts.fragment
-        return f'{attr}="{rel}"'
-    html = re.sub(r'(href|src)="(/[^"]*)"', relative, html)
+        return rel
+    def relative(match):
+        attr, url = match.groups()
+        return f'{attr}="{relative_url(url)}"'
+    def relative_srcset(match):
+        candidates = []
+        for candidate in match.group(1).split(","):
+            url, descriptor = candidate.strip().rsplit(" ", 1)
+            candidates.append(f'{relative_url(url) if url.startswith("/") else url} {descriptor}')
+        return 'srcset="' + ", ".join(candidates) + '"'
+    html = re.sub(r'(href|src|data-success-url)="(/[^"]*)"', relative, html)
+    html = re.sub(r'srcset="([^"]+)"', relative_srcset, html)
     with open(target,"w",encoding="utf-8",newline="\n") as f:
         f.write(html)
     return target

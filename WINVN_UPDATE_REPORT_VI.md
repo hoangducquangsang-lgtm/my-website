@@ -2,6 +2,8 @@
 
 Ngày thực hiện: 30/08/2026. Phạm vi: thư mục `4. VietPaw Website`; chưa xuất bản lên internet.
 
+**Cập nhật mới hơn:** biểu mẫu 5 trường/Send Enquiry đã được khôi phục từ folder cũ; website hiện có 67 trang, 20 ảnh có phiên bản WebP responsive. Xem **WEBP_FORM_UPDATE_VI.md**. Các số liệu 66 trang và phần mô tả bản nháp email bên dưới là lịch sử đợt đổi thương hiệu, không phải trạng thái biểu mẫu hiện tại.
+
 **Cập nhật tiếp theo theo yêu cầu chủ website:** riêng ảnh chính trang chủ và hình chia sẻ của trang chủ đã chuyển từ `Bản sao của xo_muop_13.png` sang `GỖ NHAI CÀ PHÊ/Bản sao của thu_cung_3.jpg`. Tệp dùng trên web: `assets/img/winvn-home-thu-cung-3.jpg`. Ảnh ở các trang khác giữ nguyên; bảng dưới đây ghi nhận đợt thay ảnh trước đó.
 
 ## Nội dung đã hoàn thành

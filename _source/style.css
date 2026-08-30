@@ -22,7 +22,7 @@ h3{font-size:1.3rem}
 p{margin:0 0 1em}
 a{color:var(--terracotta-dark);text-decoration:none}
 a:hover{text-decoration:underline}
-img{max-width:100%;display:block;border-radius:var(--radius)}
+img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .skip-link{position:absolute;left:-999px;top:0;background:#fff;padding:8px;z-index:200}
 .skip-link:focus{left:8px}
@@ -155,7 +155,7 @@ th{background:var(--kraft);color:var(--forest-dark)}
 .mt0{margin-top:0}
 .small{font-size:.85rem;color:var(--ink-soft)}
 
-/* Content expansion: accessible menus, long specifications and local RFQ. */
+/* Content expansion: accessible menus, long specifications and enquiry form. */
 .header-inner{gap:16px;flex-wrap:wrap}
 .main-nav > ul > li > a,.nav-menu > summary{padding:10px 8px;font-size:.88rem}
 .nav-menu{position:relative}
@@ -184,6 +184,9 @@ figcaption{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
 #rfq-form input:focus,#rfq-form select:focus,#rfq-form textarea:focus{outline:2px solid var(--forest)}
 #rfq-form details{margin-top:20px}
 #rfq-status{margin-top:14px}
+#rfq-form .form-error{color:#9b291c}
+#rfq-form button:disabled{opacity:.65;cursor:wait}
+#rfq-form [hidden]{display:none}
 .article .source-note{font-size:.85rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:20px;margin-top:30px}
 @media(max-width:1050px){
   .main-nav{order:3;flex-basis:100%}

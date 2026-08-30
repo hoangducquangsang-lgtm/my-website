@@ -1,0 +1,898 @@
+{
+  "settings": {
+    "version": 1,
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      960,
+      1200,
+      1600
+    ],
+    "quality": 85,
+    "method": 6
+  },
+  "images": {
+    "assets/img/cat-loofah-toys-lifestyle.jpg": {
+      "sha256": "157f969b7b8452c4e4dd8ae599170522a6da7bf2bb794a29ff03dcc84d7500ee",
+      "width": 709,
+      "height": 543,
+      "bytes": 53183,
+      "variants": [
+        {
+          "path": "assets/img/webp/cat-loofah-toys-lifestyle-jpg-320w.webp",
+          "width": 320,
+          "height": 245,
+          "bytes": 15688
+        },
+        {
+          "path": "assets/img/webp/cat-loofah-toys-lifestyle-jpg-480w.webp",
+          "width": 480,
+          "height": 368,
+          "bytes": 30666
+        },
+        {
+          "path": "assets/img/webp/cat-loofah-toys-lifestyle-jpg-640w.webp",
+          "width": 640,
+          "height": 490,
+          "bytes": 48402
+        },
+        {
+          "path": "assets/img/webp/cat-loofah-toys-lifestyle-jpg-709w.webp",
+          "width": 709,
+          "height": 543,
+          "bytes": 55510
+        }
+      ]
+    },
+    "assets/img/dog-chewing-coffeewood.jpg": {
+      "sha256": "e0ab4e56ffd39cee2165f93ca51e86a0a3ad8f98ebf70359d0f063692dd11e76",
+      "width": 901,
+      "height": 730,
+      "bytes": 58435,
+      "variants": [
+        {
+          "path": "assets/img/webp/dog-chewing-coffeewood-jpg-320w.webp",
+          "width": 320,
+          "height": 259,
+          "bytes": 12274
+        },
+        {
+          "path": "assets/img/webp/dog-chewing-coffeewood-jpg-480w.webp",
+          "width": 480,
+          "height": 389,
+          "bytes": 21908
+        },
+        {
+          "path": "assets/img/webp/dog-chewing-coffeewood-jpg-640w.webp",
+          "width": 640,
+          "height": 519,
+          "bytes": 33230
+        },
+        {
+          "path": "assets/img/webp/dog-chewing-coffeewood-jpg-800w.webp",
+          "width": 800,
+          "height": 648,
+          "bytes": 44696
+        },
+        {
+          "path": "assets/img/webp/dog-chewing-coffeewood-jpg-901w.webp",
+          "width": 901,
+          "height": 730,
+          "bytes": 50956
+        }
+      ]
+    },
+    "assets/img/dog-coconut-balls-lifestyle.jpg": {
+      "sha256": "aea3c09cf318fa5d29cedc0e0a85faf23e2c0e78588e1b400fe156b510118411",
+      "width": 538,
+      "height": 394,
+      "bytes": 30450,
+      "variants": [
+        {
+          "path": "assets/img/webp/dog-coconut-balls-lifestyle-jpg-320w.webp",
+          "width": 320,
+          "height": 234,
+          "bytes": 15302
+        },
+        {
+          "path": "assets/img/webp/dog-coconut-balls-lifestyle-jpg-480w.webp",
+          "width": 480,
+          "height": 352,
+          "bytes": 25900
+        },
+        {
+          "path": "assets/img/webp/dog-coconut-balls-lifestyle-jpg-538w.webp",
+          "width": 538,
+          "height": 394,
+          "bytes": 30250
+        }
+      ]
+    },
+    "assets/img/dog-lifestyle-chew-1.jpg": {
+      "sha256": "a0e3b4169a0d797088db7ff47e9ebd1c8729e88033ccd54f071882100c99773b",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 168830,
+      "variants": [
+        {
+          "path": "assets/img/webp/dog-lifestyle-chew-1-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 25404
+        },
+        {
+          "path": "assets/img/webp/dog-lifestyle-chew-1-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 44768
+        },
+        {
+          "path": "assets/img/webp/dog-lifestyle-chew-1-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 62746
+        },
+        {
+          "path": "assets/img/webp/dog-lifestyle-chew-1-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 82688
+        },
+        {
+          "path": "assets/img/webp/dog-lifestyle-chew-1-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 100716
+        },
+        {
+          "path": "assets/img/webp/dog-lifestyle-chew-1-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 119498
+        }
+      ]
+    },
+    "assets/img/export-carton-labels.jpg": {
+      "sha256": "fa70b7989f589b8ce5aa6a75d98e250560a5e8a524c5af75fdfab3c7a9844185",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 271774,
+      "variants": [
+        {
+          "path": "assets/img/webp/export-carton-labels-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 27102
+        },
+        {
+          "path": "assets/img/webp/export-carton-labels-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 54408
+        },
+        {
+          "path": "assets/img/webp/export-carton-labels-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 90668
+        },
+        {
+          "path": "assets/img/webp/export-carton-labels-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 131374
+        },
+        {
+          "path": "assets/img/webp/export-carton-labels-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 176404
+        },
+        {
+          "path": "assets/img/webp/export-carton-labels-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 222190
+        }
+      ]
+    },
+    "assets/img/export-packed-box.jpg": {
+      "sha256": "6cbeffd4d2c3bb24a64f042408f8b0b7e37b24cca23b027f3200886bfbff326d",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 286241,
+      "variants": [
+        {
+          "path": "assets/img/webp/export-packed-box-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 33026
+        },
+        {
+          "path": "assets/img/webp/export-packed-box-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 70002
+        },
+        {
+          "path": "assets/img/webp/export-packed-box-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 114418
+        },
+        {
+          "path": "assets/img/webp/export-packed-box-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 158142
+        },
+        {
+          "path": "assets/img/webp/export-packed-box-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 199668
+        },
+        {
+          "path": "assets/img/webp/export-packed-box-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 234768
+        }
+      ]
+    },
+    "assets/img/process-coffeewood-styled.jpg": {
+      "sha256": "38bd7036ed0cbb1747775c14410f115b1aad426e279c78acad27644d8fab9dd4",
+      "width": 1400,
+      "height": 1413,
+      "bytes": 262734,
+      "variants": [
+        {
+          "path": "assets/img/webp/process-coffeewood-styled-jpg-320w.webp",
+          "width": 320,
+          "height": 323,
+          "bytes": 25688
+        },
+        {
+          "path": "assets/img/webp/process-coffeewood-styled-jpg-480w.webp",
+          "width": 480,
+          "height": 484,
+          "bytes": 43116
+        },
+        {
+          "path": "assets/img/webp/process-coffeewood-styled-jpg-640w.webp",
+          "width": 640,
+          "height": 646,
+          "bytes": 62322
+        },
+        {
+          "path": "assets/img/webp/process-coffeewood-styled-jpg-800w.webp",
+          "width": 800,
+          "height": 807,
+          "bytes": 84774
+        },
+        {
+          "path": "assets/img/webp/process-coffeewood-styled-jpg-960w.webp",
+          "width": 960,
+          "height": 969,
+          "bytes": 109136
+        },
+        {
+          "path": "assets/img/webp/process-coffeewood-styled-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1211,
+          "bytes": 143018
+        },
+        {
+          "path": "assets/img/webp/process-coffeewood-styled-jpg-1400w.webp",
+          "width": 1400,
+          "height": 1413,
+          "bytes": 182414
+        }
+      ]
+    },
+    "assets/img/process-laser-engraving.jpg": {
+      "sha256": "236fcc80cddb407d9faf9b36989af7f8aad048920e28a09c79a017b05aac5fc3",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 122987,
+      "variants": [
+        {
+          "path": "assets/img/webp/process-laser-engraving-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18836
+        },
+        {
+          "path": "assets/img/webp/process-laser-engraving-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 29874
+        },
+        {
+          "path": "assets/img/webp/process-laser-engraving-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 41672
+        },
+        {
+          "path": "assets/img/webp/process-laser-engraving-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 54792
+        },
+        {
+          "path": "assets/img/webp/process-laser-engraving-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 66364
+        },
+        {
+          "path": "assets/img/webp/process-laser-engraving-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 77154
+        }
+      ]
+    },
+    "assets/img/process-raw-sticks.jpg": {
+      "sha256": "05d67a4fbf7892229f53dce2382a9da8acc481932461fe9259e31af6faf3cbbc",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 137389,
+      "variants": [
+        {
+          "path": "assets/img/webp/process-raw-sticks-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 7368
+        },
+        {
+          "path": "assets/img/webp/process-raw-sticks-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 13408
+        },
+        {
+          "path": "assets/img/webp/process-raw-sticks-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 20704
+        },
+        {
+          "path": "assets/img/webp/process-raw-sticks-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 28982
+        },
+        {
+          "path": "assets/img/webp/process-raw-sticks-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 38084
+        },
+        {
+          "path": "assets/img/webp/process-raw-sticks-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 53774
+        },
+        {
+          "path": "assets/img/webp/process-raw-sticks-jpg-1400w.webp",
+          "width": 1400,
+          "height": 1400,
+          "bytes": 70646
+        }
+      ]
+    },
+    "assets/img/product-coconut-fiber-raw.jpg": {
+      "sha256": "66ff68ad5c40c5c70229d4516e901b71cd8f340b1f603f980cbe30573e738b9c",
+      "width": 877,
+      "height": 414,
+      "bytes": 44971,
+      "variants": [
+        {
+          "path": "assets/img/webp/product-coconut-fiber-raw-jpg-320w.webp",
+          "width": 320,
+          "height": 151,
+          "bytes": 9954
+        },
+        {
+          "path": "assets/img/webp/product-coconut-fiber-raw-jpg-480w.webp",
+          "width": 480,
+          "height": 227,
+          "bytes": 19340
+        },
+        {
+          "path": "assets/img/webp/product-coconut-fiber-raw-jpg-640w.webp",
+          "width": 640,
+          "height": 302,
+          "bytes": 30066
+        },
+        {
+          "path": "assets/img/webp/product-coconut-fiber-raw-jpg-800w.webp",
+          "width": 800,
+          "height": 378,
+          "bytes": 41576
+        },
+        {
+          "path": "assets/img/webp/product-coconut-fiber-raw-jpg-877w.webp",
+          "width": 877,
+          "height": 414,
+          "bytes": 46240
+        }
+      ]
+    },
+    "assets/img/warehouse-winvn-boxes.jpg": {
+      "sha256": "e3669f793eb37c3494e635844493493de6c7f5e2cf5242b13dd8682c1acaa14c",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 221174,
+      "variants": [
+        {
+          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 22982
+        },
+        {
+          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 43464
+        },
+        {
+          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 68638
+        },
+        {
+          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 97296
+        },
+        {
+          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 128176
+        },
+        {
+          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 155322
+        }
+      ]
+    },
+    "assets/img/winvn-coconut-fiber-balls.jpg": {
+      "sha256": "946985142dfe8cee06f687be58f1b1984496e3679ba34cc17e285114eb6a856f",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 236552,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 31064
+        },
+        {
+          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 58946
+        },
+        {
+          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 94704
+        },
+        {
+          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 132436
+        },
+        {
+          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 169840
+        },
+        {
+          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-1086w.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 208068
+        }
+      ]
+    },
+    "assets/img/winvn-coffee-wood-single.jpg": {
+      "sha256": "4dae33ca3794b1044a73617a4257d4f18f262d94cf7653ba09dfdaeb7b0b2cf3",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 141812,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 3388
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 6028
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 9140
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 12836
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 17018
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 25004
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 40436
+        }
+      ]
+    },
+    "assets/img/winvn-coffee-wood-sizes.png": {
+      "sha256": "82b8e733c0d819db2090cf7a5f1e725571f75584d814de2ef94ad85baa8f4269",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 3473253,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 8994
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 16014
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 23480
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 32302
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 42086
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 58294
+        },
+        {
+          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 85728
+        }
+      ]
+    },
+    "assets/img/winvn-hemp-wood-assortment.jpg": {
+      "sha256": "12b306986531601b00d1f34ff3eb242c66addce1936471aaecbc9fb611e5d67e",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 587421,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28858
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 56108
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 85460
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 121346
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 158840
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 217158
+        },
+        {
+          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 327516
+        }
+      ]
+    },
+    "assets/img/winvn-home-thu-cung-3.jpg": {
+      "sha256": "23941576ba783782d23bfa2b55ca10de9c49477ef13d1743833007c43bf8719e",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 217675,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 25906
+        },
+        {
+          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 49086
+        },
+        {
+          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 77326
+        },
+        {
+          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 108936
+        },
+        {
+          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 137038
+        },
+        {
+          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 168698
+        }
+      ]
+    },
+    "assets/img/winvn-loofah-growing.png": {
+      "sha256": "906966e81c23580072df768a981e440ce05a2bcb2075a5bdfa6b3996bf743bfc",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 4150172,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-loofah-growing-png-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 53890
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-growing-png-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 105944
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-growing-png-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 161416
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-growing-png-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 214560
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-growing-png-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 268488
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-growing-png-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 311456
+        }
+      ]
+    },
+    "assets/img/winvn-loofah-play-shapes.png": {
+      "sha256": "0afc84c98c06877ceaf1f149d6fd12a78c218bf5a3db028698da6d4d3e6ec89f",
+      "width": 2048,
+      "height": 1536,
+      "bytes": 4903511,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-loofah-play-shapes-png-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 18782
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-play-shapes-png-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 40118
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-play-shapes-png-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 69212
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-play-shapes-png-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 104550
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-play-shapes-png-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 145370
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-play-shapes-png-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 211736
+        },
+        {
+          "path": "assets/img/webp/winvn-loofah-play-shapes-png-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 335992
+        }
+      ]
+    },
+    "assets/img/winvn-moisture-check-kiem-go-9.jpg": {
+      "sha256": "d66d406d41b2ffbd766c641e64cde9ccbf461f1d57fa8b15bc199741017725b0",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 131974,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18734
+        },
+        {
+          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 30610
+        },
+        {
+          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 43144
+        },
+        {
+          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 56098
+        },
+        {
+          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 70802
+        },
+        {
+          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 81276
+        }
+      ]
+    },
+    "assets/img/winvn-natural-toy-assortment.png": {
+      "sha256": "9821e186f07f5b1e78c711009f8ef73b8719ac9162da8b6bb78ed429ed2b1b66",
+      "width": 2048,
+      "height": 1536,
+      "bytes": 4577601,
+      "variants": [
+        {
+          "path": "assets/img/webp/winvn-natural-toy-assortment-png-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 15466
+        },
+        {
+          "path": "assets/img/webp/winvn-natural-toy-assortment-png-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 33464
+        },
+        {
+          "path": "assets/img/webp/winvn-natural-toy-assortment-png-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 57470
+        },
+        {
+          "path": "assets/img/webp/winvn-natural-toy-assortment-png-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 88120
+        },
+        {
+          "path": "assets/img/webp/winvn-natural-toy-assortment-png-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 124526
+        },
+        {
+          "path": "assets/img/webp/winvn-natural-toy-assortment-png-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 187528
+        },
+        {
+          "path": "assets/img/webp/winvn-natural-toy-assortment-png-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 309316
+        }
+      ]
+    }
+  }
+}

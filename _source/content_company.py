@@ -148,37 +148,37 @@ def build_rfq(root):
         "Tell us the product and destination first. Add what you know about quantities, branding and launch timing; you do not need a finished technical brief.",eyebrow="WINVN B2B enquiries",ctas=False)
     content+=f"""
 <section class="section"><div class="wrap grid grid-2">
-<form id="rfq-form" class="card" action="mailto:{EMAIL}" method="post" enctype="text/plain">
+<form id="rfq-form" class="card" action="https://formspree.io/f/mvkpbvlb" method="post" data-success-url="/request-a-quote/thank-you/">
+<input type="hidden" name="_subject" value="New enquiry from WINVN website">
+<div hidden aria-hidden="true"><label for="rfq-gotcha">Don't fill this out if you're human</label><input id="rfq-gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
 <h2>Tell us about your project</h2>
-<p class="small">Required fields are marked *. This local form prepares an email draft; it does not submit or store a lead on a server. Send the draft from your email app, or download the text and email it to us.</p>
-<label for="rfq-name">Full name *</label><input id="rfq-name" name="Name" autocomplete="name" required maxlength="120">
-<label for="rfq-email">Business email *</label><input id="rfq-email" name="Email" type="email" autocomplete="email" required maxlength="254">
-<label for="rfq-company">Company and role</label><input id="rfq-company" name="Company and role" autocomplete="organization" maxlength="180">
-<label for="rfq-website">Company website</label><input id="rfq-website" name="Website" type="url" placeholder="https://example.com" maxlength="250">
-<label for="rfq-country">Destination country *</label><input id="rfq-country" name="Destination country" autocomplete="country-name" required maxlength="100">
-<label for="rfq-buyer">Buyer type</label><select id="rfq-buyer" name="Buyer type">
-<option value="">Please select, if known</option><option>Pet brand</option><option>Amazon seller</option><option>Wholesaler / distributor</option><option>Retail chain</option><option>Eco pet shop</option><option>Startup brand</option><option>Other</option></select>
-<label for="rfq-request">Request type</label><select id="rfq-request" name="Request type">
-<option>Sample and quotation</option><option>Sample only</option><option>Wholesale quotation</option><option>OEM / ODM project</option></select>
-<label for="rfq-products">Products and sizes *</label><textarea id="rfq-products" name="Products and sizes" required rows="3" maxlength="1800" placeholder="Product name or catalogue reference; sizes if known"></textarea>
-<label for="rfq-quantity">Estimated quantity per SKU</label><input id="rfq-quantity" name="Quantity per SKU" maxlength="250" placeholder="For example: CC01-M 500 pcs, CC01-L 500 pcs">
-<label for="rfq-branding">Branding or development</label><select id="rfq-branding" name="Branding requirement">
-<option value="">Not decided</option><option>Standard wholesale product</option><option>Private label / custom packaging</option><option>OEM to our specification</option><option>ODM / new design development</option></select>
-<label for="rfq-destination">Destination city, port or warehouse</label><input id="rfq-destination" name="Destination details" maxlength="250">
-<label for="rfq-launch">Target launch or required delivery date</label><input id="rfq-launch" name="Target date" type="date">
-<label for="rfq-notes">Packaging, testing and other requirements</label><textarea id="rfq-notes" name="Additional requirements" rows="4" maxlength="2500" placeholder="Sales channel, pack type, barcode artwork, compliance brief, freight preference"></textarea>
-<div class="hero-ctas"><button class="btn btn-primary" type="submit">Open Email Draft</button>
-<button class="btn btn-outline" type="button" id="rfq-download">Download Enquiry Text</button></div>
+<p class="small">Fill in the form and we'll reply with pricing, lead time and sample availability — usually within one business day. Prefer email? Write to us directly, or use WhatsApp/phone below.</p>
+<label for="rfq-name">Full name</label><input id="rfq-name" name="name" autocomplete="name" required maxlength="120">
+<label for="rfq-company">Company &amp; role</label><input id="rfq-company" name="company" autocomplete="organization" maxlength="180">
+<label for="rfq-email">Email</label><input id="rfq-email" name="email" type="email" autocomplete="email" required maxlength="254">
+<label for="rfq-buyer">I am a...</label><select id="rfq-buyer" name="segment">
+<option>Startup brand</option><option>Amazon seller</option><option>Eco pet shop (EU)</option><option>Wholesaler / distributor</option><option>Other</option></select>
+<label for="rfq-products">Products of interest</label><textarea id="rfq-products" name="products" rows="3" maxlength="2500" placeholder="e.g. Coffee wood chew stick, private label, MOQ 500"></textarea>
+<div class="hero-ctas"><button class="btn btn-primary" type="submit">Send Enquiry</button></div>
 <p id="rfq-status" class="small" role="status" aria-live="polite"></p>
-<details><summary>Preview enquiry text</summary><label for="rfq-preview">Prepared message</label><textarea id="rfq-preview" rows="12" readonly></textarea></details>
-<noscript><p>The email form needs your email application. If fields are not included in the draft, email us directly using the address alongside.</p></noscript>
+<p id="form-error" class="small form-error" role="alert" tabindex="-1" hidden>Something went wrong. Please email us at <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </form>
 <div><h2>What happens next</h2><p>We review your brief and confirm product availability, MOQ, sample terms and an indicative timeline. New development or testing may need a separate feasibility discussion.</p>
 {ul(["Starting MOQ from 50 pcs on selected standard products; confirm each line.","Free standard sample options, with terms and shipping agreed before dispatch.","OEM/ODM and private-label packaging by quotation.","Shipment documents scoped to the destination and selected product."])}
 <h3>Contact sales directly</h3><p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></p>
 <p class="small">Do not include payment-card information or confidential designs in this first enquiry. Request an agreed confidentiality process if needed.</p>
 {trust_links()}</div></div></section>
-<script src="/assets/rfq.js" defer></script>"""
+<script src="/assets/rfq.js?v=20260830-form" defer></script>"""
     write_page(root,"/request-a-quote/",page("Request Pet Toy Samples & Wholesale Quote | WINVN",
-        "Prepare a WINVN sample or wholesale enquiry with country, products, quantity and branding requirements. Opens an email draft; no automatic submission.",
+        "Request a quote or product sample from WINVN. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",
         "/request-a-quote/",content,schemas=[bs]))
+    bc,bs=breadcrumb_html([("Home","/"),("Request a Quote","/request-a-quote/"),("Thank You",None)])
+    thanks=bc+hero("Thank you — we've got your enquiry",
+        "Our team will get back to you, usually within one business day, with indicative pricing, MOQ and lead time. If your request is urgent, reach us directly on WhatsApp or by phone.",
+        eyebrow="Enquiry received",ctas=False)
+    thanks+=section("Stay in touch",p(f'<a class="btn btn-primary" href="https://wa.me/{PHONE_TEL[1:]}">Contact us on WhatsApp</a>')+
+        p(f'<a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="tel:{PHONE_TEL}">{PHONE}</a>')+
+        p('<a href="/wholesale-catalogue/">Browse the catalogue</a> or <a href="/">return to the homepage</a>.'))
+    write_page(root,"/request-a-quote/thank-you/",page("Thank You for Your Enquiry | WINVN",
+        "Thank you for contacting WINVN. Our team will review your pet toy enquiry and reply with pricing, sample availability and lead time.",
+        "/request-a-quote/thank-you/",thanks,schemas=[bs],noindex=True))

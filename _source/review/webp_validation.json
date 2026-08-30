@@ -1,0 +1,27 @@
+{
+  "original_images_preserved_against_backup": 38,
+  "source_images_optimized": 20,
+  "webp_files_verified": 120,
+  "inline_images_verified": 85,
+  "pages_checked": 67,
+  "unrelated_pages_copy_preserved": 65,
+  "legacy_form_content_and_fields_match": true,
+  "homepage_original_inline_image_bytes": 13792857,
+  "homepage_modeled_responsive_selection": {
+    "phone_390px_2x": {
+      "image_bytes": 822660,
+      "reduction_percent": 94.04
+    },
+    "desktop_1440px_1x": {
+      "image_bytes": 351166,
+      "reduction_percent": 97.45
+    },
+    "desktop_1440px_2x": {
+      "image_bytes": 803364,
+      "reduction_percent": 94.18
+    }
+  },
+  "measurement_note": "Whole-page image-file totals modeled from CSS sizes and DPR, not browser network measurements, initial payload or Core Web Vitals.",
+  "live_form_submission_tested": false,
+  "browser_visual_tested": false
+}

@@ -1,5 +1,5 @@
 {
-  "pages": 66,
+  "pages": 67,
   "indexed_sitemap_urls": 65,
   "guides": 20,
   "products": 6,
@@ -7,7 +7,7 @@
   "original_assets_verified": 30,
   "replacement_references_verified": 10,
   "supplied_replacement_files_verified": 8,
-  "footer_pages_verified": 66,
+  "footer_pages_verified": 67,
   "sarah_authored_guides_verified": 20,
   "http": null,
   "content_words": {
@@ -64,7 +64,8 @@
     "/products/hemp-rope-dog-toy/": 640,
     "/products/loofah-cat-toy/": 625,
     "/quality-control/": 416,
-    "/request-a-quote/": 315,
+    "/request-a-quote/": 232,
+    "/request-a-quote/thank-you/": 69,
     "/services/oem-odm-pet-toy-manufacturing/": 592,
     "/services/private-label-pet-toys/": 536,
     "/services/wholesale-pet-products/": 551,

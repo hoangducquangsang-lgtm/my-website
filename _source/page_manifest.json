@@ -41,8 +41,13 @@
   },
   "/request-a-quote/": {
     "title": "Request Pet Toy Samples & Wholesale Quote | WINVN",
-    "description": "Prepare a WINVN sample or wholesale enquiry with country, products, quantity and branding requirements. Opens an email draft; no automatic submission.",
+    "description": "Request a quote or product sample from WINVN. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",
     "indexable": true
+  },
+  "/request-a-quote/thank-you/": {
+    "title": "Thank You for Your Enquiry | WINVN",
+    "description": "Thank you for contacting WINVN. Our team will review your pet toy enquiry and reply with pricing, sample availability and lead time.",
+    "indexable": false
   },
   "/contact/": {
     "title": "Contact WINVN | Samples & Wholesale Enquiries",

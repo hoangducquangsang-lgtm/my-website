@@ -52,10 +52,13 @@ class Document(HTMLParser):
         if tag=="img": self.images.append(a)
         if tag in ("input","select","textarea"): self.fields.append(a)
         if tag=="label": self.labels.add(a.get("for"))
-        for key in ("href","src","action"):
+        for key in ("href","src","action","data-success-url"):
             if key in a:
                 self.links.append((tag,key,a[key]))
                 if self.main and tag=="a": self.main_links.append(a[key])
+        if "srcset" in a:
+            for candidate in a["srcset"].split(","):
+                self.links.append((tag,"srcset",candidate.strip().rsplit(" ",1)[0]))
     def handle_endtag(self,tag):
         if tag=="title": self.in_title=False
         if tag=="main": self.main=False
@@ -115,6 +118,10 @@ def run():
         check(d.meta.get("twitter:description")==d.meta.get("description"),f"{route}: X description mismatch")
         check("main" in d.ids,f"{route}: skip link target missing")
         check(all(i.get("alt") for i in d.images),f"{route}: image alt missing")
+        for image in d.images:
+            check(urlsplit(image.get("src", "")).path.endswith(".webp"),f"{route}: inline image is not WebP")
+            check(bool(image.get("srcset")) and bool(image.get("sizes")),f"{route}: responsive image candidates missing")
+            check(int(image.get("width",0))>0 and int(image.get("height",0))>0,f"{route}: image dimensions missing")
         check(route in manifest,f"{route}: missing from manifest")
         if route in manifest:
             expected="index,follow" if manifest[route]["indexable"] else "noindex,follow"
@@ -199,10 +206,13 @@ def run():
                  if not urlsplit(link).scheme and not urlsplit(link).netloc and urlsplit(link).path}
         check(target in targets,f"{route}: expected contextual commercial link missing")
     for field in rfq.fields:
+        if field.get("type")=="hidden": continue
         check(field.get("id") in rfq.labels,"RFQ field has no label: "+str(field))
     names={f.get("name") for f in rfq.fields}
-    check({"Destination country","Quantity per SKU","Branding requirement","Company and role","Buyer type","Target date"}.issubset(names),"RFQ qualifier missing")
-    check(sum("required" in f for f in rfq.fields)==4,"RFQ must have four required fields")
+    check(names=={"name","company","email","segment","products","_subject","_gotcha"},"RFQ must match the legacy five-field form, subject and honeypot")
+    check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email"},"RFQ must require name and email only, as in the supplied old form")
+    check(any(key=="action" and link=="https://formspree.io/f/mvkpbvlb" for _,key,link in rfq.links),"Legacy Formspree destination missing")
+    check(docs["/request-a-quote/thank-you/"][1].meta.get("robots")=="noindex,follow","Thank-you page must be noindex")
     for route in ("/products/coffee-wood-dog-chew/","/guides/coffee-wood-chew-size-guide/"):
         text=" ".join(docs[route][1].main_text)
         for value in ("CC01-XS","CC01-XXL","Under 5 kg","Over 40 kg"):
