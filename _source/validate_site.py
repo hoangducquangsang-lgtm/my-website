@@ -1,0 +1,253 @@
+"""Offline/source QA plus optional read-only local HTTP checks. No browser automation."""
+from pathlib import Path
+from html.parser import HTMLParser
+from html import unescape
+from urllib.parse import urlsplit, unquote, urljoin
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
+import hashlib
+import json
+import re
+import sys
+import zipfile
+import xml.etree.ElementTree as ET
+from urllib.request import urlopen
+
+ROOT = Path(__file__).resolve().parent.parent
+BASE = "https://vietpaw.com"
+EXPECTED_TAGLINE = "Natural, biodegradable pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. WINVN INT CO., LTD, manufacturing natural pet products since 2018. Exporting to 40+ countries."
+
+class Document(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.ids=set()
+        self.links=[]
+        self.headings=[]
+        self.title=""
+        self.h1=[]
+        self.meta={}
+        self.canonicals=[]
+        self.schemas=[]
+        self.json_buffer=None
+        self.in_title=False
+        self.h1_buffer=None
+        self.main=False
+        self.main_text=[]
+        self.main_links=[]
+        self.images=[]
+        self.fields=[]
+        self.labels=set()
+        self.language=None
+    def handle_starttag(self,tag,attrs):
+        a=dict(attrs)
+        if "id" in a: self.ids.add(a["id"])
+        if tag=="html": self.language=a.get("lang")
+        if tag=="main": self.main=True
+        if tag=="title": self.in_title=True
+        if tag=="h1": self.h1_buffer=[]
+        if tag in ("h1","h2","h3","h4"): self.headings.append(tag)
+        if tag=="link" and a.get("rel")=="canonical": self.canonicals.append(a.get("href"))
+        if tag=="meta": self.meta[a.get("name") or a.get("property")]=a.get("content")
+        if tag=="script" and a.get("type")=="application/ld+json": self.json_buffer=[]
+        if tag=="img": self.images.append(a)
+        if tag in ("input","select","textarea"): self.fields.append(a)
+        if tag=="label": self.labels.add(a.get("for"))
+        for key in ("href","src","action"):
+            if key in a:
+                self.links.append((tag,key,a[key]))
+                if self.main and tag=="a": self.main_links.append(a[key])
+    def handle_endtag(self,tag):
+        if tag=="title": self.in_title=False
+        if tag=="main": self.main=False
+        if tag=="h1" and self.h1_buffer is not None:
+            self.h1.append("".join(self.h1_buffer))
+            self.h1_buffer=None
+        if tag=="script" and self.json_buffer is not None:
+            self.schemas.append(json.loads("".join(self.json_buffer)))
+            self.json_buffer=None
+    def handle_data(self,data):
+        if self.in_title: self.title+=data
+        if self.h1_buffer is not None: self.h1_buffer.append(data)
+        if self.json_buffer is not None: self.json_buffer.append(data)
+        elif self.main: self.main_text.append(data)
+
+def route_for(path):
+    parent=path.relative_to(ROOT).parent.as_posix()
+    return "/" if parent=="." else "/"+parent+"/"
+
+def run():
+    errors=[]
+    warnings=[]
+    docs={}
+    manifest=json.loads((ROOT/"_source/page_manifest.json").read_text(encoding="utf-8"))
+    def check(ok,message):
+        if not ok: errors.append(message)
+    for file in sorted(ROOT.rglob("index.html")):
+        if "_source" in file.parts: continue
+        d=Document()
+        html=file.read_text(encoding="utf-8")
+        try: d.feed(html)
+        except Exception as exc:
+            errors.append(f"{file}: parse/schema error {exc}")
+            continue
+        route=route_for(file)
+        docs[route]=(file,d)
+        # The domain and owner-requested email are retained; displayed branding is WINVN only.
+        check(not re.search(r"vietpaw",html.replace("vietpaw.com",""),re.I),f"{route}: obsolete brand outside retained domain/email")
+        check("sarah.winvn@gmail.com" not in html,f"{route}: superseded email")
+        check("Exporting to 30+" not in html,f"{route}: superseded export reach")
+        footer=re.search(r'<footer class="site-footer">(.*?)</footer>',html,re.S)
+        check(bool(footer),f"{route}: missing shared footer")
+        if footer:
+            plain=" ".join(unescape(re.sub(r"<[^>]+>"," ",footer.group(1))).split())
+            check(EXPECTED_TAGLINE in plain,f"{route}: owner-requested footer text differs")
+            for item in ("WINVN","70 St. 10, Van Phuc City, Hiep Binh Ward, Ho Chi Minh City, Vietnam","+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
+                check(item in plain,f"{route}: footer field missing {item}")
+        check(d.language=="en",f"{route}: wrong language")
+        check(len(d.h1)==1,f"{route}: expected one H1, got {len(d.h1)}")
+        check(bool(d.title.strip()),f"{route}: missing title")
+        check(bool(d.meta.get("description")),f"{route}: missing description")
+        check(d.canonicals==[BASE+route],f"{route}: wrong canonical")
+        check(d.meta.get("og:url")==BASE+route,f"{route}: wrong OG URL")
+        check(d.meta.get("og:title")==d.title,f"{route}: OG title mismatch")
+        check(d.meta.get("twitter:title")==d.title,f"{route}: X title mismatch")
+        check(d.meta.get("og:description")==d.meta.get("description"),f"{route}: OG description mismatch")
+        check(d.meta.get("twitter:description")==d.meta.get("description"),f"{route}: X description mismatch")
+        check("main" in d.ids,f"{route}: skip link target missing")
+        check(all(i.get("alt") for i in d.images),f"{route}: image alt missing")
+        check(route in manifest,f"{route}: missing from manifest")
+        if route in manifest:
+            expected="index,follow" if manifest[route]["indexable"] else "noindex,follow"
+            check(d.meta.get("robots")==expected,f"{route}: robots mismatch")
+        for schema in d.schemas:
+            check(schema.get("@context")=="https://schema.org",f"{route}: bad schema context")
+            if schema.get("@type")=="BreadcrumbList":
+                items=schema["itemListElement"]
+                check(items[-1].get("item")==BASE+route,f"{route}: final breadcrumb target missing")
+                check(all(x.get("item","").startswith(BASE+"/") for x in items),f"{route}: incomplete breadcrumb")
+            if schema.get("@type")=="Product":
+                check(schema.get("brand",{}).get("name")=="WINVN",f"{route}: product brand mismatch")
+                check(schema.get("image","").startswith(BASE+"/assets/"),f"{route}: product image not absolute")
+                check(bool(schema.get("material")),f"{route}: product material missing")
+                check(not any(k in schema for k in ("offers","aggregateRating","review","gtin")),f"{route}: unsupported commercial schema")
+                check(schema.get("image")==d.meta.get("og:image"),f"{route}: product social image mismatch")
+            if schema.get("@type")=="Article":
+                check(schema.get("mainEntityOfPage")==BASE+route,f"{route}: article URL mismatch")
+                check(bool(schema.get("author")) and bool(schema.get("publisher")),f"{route}: article responsibility missing")
+                check(schema.get("author")=={"@type":"Person","name":"Sarah"},f"{route}: Sarah author schema missing")
+                check(schema.get("headline")==d.h1[0],f"{route}: article headline mismatch")
+                check(schema.get("description")==d.meta.get("description"),f"{route}: article description mismatch")
+                check(schema.get("image")==d.meta.get("og:image"),f"{route}: article social image mismatch")
+            if schema.get("@type")=="Organization":
+                check(schema.get("name")=="WINVN",f"{route}: organization brand mismatch")
+                check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
+        if route.startswith("/guides/") and route!="/guides/":
+            check(any(urlsplit(u).path for u in d.main_links),f"{route}: missing contextual links")
+            check('<span class="author-name">Sarah</span>' in html,f"{route}: visible Sarah byline missing")
+            check(d.meta.get("author")=="Sarah",f"{route}: author metadata missing")
+            check('Not a veterinary assessment, legal opinion or product certificate.' not in html,f"{route}: obsolete boilerplate byline")
+        if len(d.meta.get("description",""))>200:
+            warnings.append(f"{route}: long meta description ({len(d.meta['description'])} chars)")
+    titles=Counter(d.title for _,d in docs.values())
+    descriptions=Counter(d.meta.get("description") for _,d in docs.values())
+    check(all(v==1 for v in titles.values()),"Duplicate page titles")
+    check(all(v==1 for v in descriptions.values()),"Duplicate meta descriptions")
+    incoming=Counter()
+    for route,(file,d) in docs.items():
+        for tag,key,link in d.links:
+            u=urlsplit(link)
+            if u.scheme or u.netloc: continue
+            target=(ROOT/u.path.lstrip("/")) if u.path.startswith("/") else (file.parent/unquote(u.path))
+            if not u.path: target=file
+            if target.is_dir(): target=target/"index.html"
+            target=target.resolve()
+            check(target.is_relative_to(ROOT),f"{route}: link outside site {link}")
+            check(target.exists(),f"{route}: broken {tag} {link}")
+            if target.suffix==".html" and target.exists():
+                dest=route_for(target)
+                if dest!=route: incoming[dest]+=1
+                if u.fragment and dest in docs:
+                    check(unquote(u.fragment) in docs[dest][1].ids,f"{route}: missing anchor {link}")
+        image=d.meta.get("og:image","")
+        check(image.startswith(BASE+"/assets/"),f"{route}: invalid social image")
+        check((ROOT/image.removeprefix(BASE+"/")).is_file(),f"{route}: missing social image")
+    urls={n.text for n in ET.parse(ROOT/"sitemap.xml").getroot().iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")}
+    expected={BASE+p for p,data in manifest.items() if data["indexable"]}
+    check(urls==expected,"Sitemap differs from indexable manifest")
+    check(set(docs)==set(manifest),"HTML route set differs from manifest")
+    for route,data in manifest.items():
+        if data["indexable"] and route!="/":
+            check(incoming[route]>0,f"{route}: orphaned indexable URL")
+    check("Sitemap: "+BASE+"/sitemap.xml" in (ROOT/"robots.txt").read_text(),"robots sitemap missing")
+    replacements=json.loads((ROOT/"_source/review/image_replacements.json").read_text(encoding="utf-8"))
+    raw_root=ROOT.parent/"1. Raw material/1. Hinh anh/HÌNH ẢNH"
+    for item in replacements:
+        source=raw_root/item["source"]
+        target=ROOT/"assets/img"/item["asset"]
+        check(target.is_file(),"Replacement image missing: "+item["asset"])
+        check(source.is_file() and target.is_file() and hashlib.sha256(source.read_bytes()).digest()==hashlib.sha256(target.read_bytes()).digest(),"Replacement is not the supplied original: "+item["asset"])
+        for route,(file,d) in docs.items():
+            references=[v for _,_,v in d.links]+[d.meta.get("og:image",""),d.meta.get("twitter:image","")]
+            check(not any(urlsplit(v).path.endswith('/'+item["old"]) for v in references),f"{route}: retired image still referenced {item['old']}")
+    rfq=docs["/request-a-quote/"][1]
+    from content_guides import ARTICLES
+    for article in ARTICLES:
+        route="/guides/"+article["slug"]+"/"
+        source_file,d=docs[route]
+        target=(ROOT/article["commercial"][1].strip("/")/"index.html").resolve()
+        targets={(source_file.parent/unquote(urlsplit(link).path)).resolve() for link in d.main_links
+                 if not urlsplit(link).scheme and not urlsplit(link).netloc and urlsplit(link).path}
+        check(target in targets,f"{route}: expected contextual commercial link missing")
+    for field in rfq.fields:
+        check(field.get("id") in rfq.labels,"RFQ field has no label: "+str(field))
+    names={f.get("name") for f in rfq.fields}
+    check({"Destination country","Quantity per SKU","Branding requirement","Company and role","Buyer type","Target date"}.issubset(names),"RFQ qualifier missing")
+    check(sum("required" in f for f in rfq.fields)==4,"RFQ must have four required fields")
+    for route in ("/products/coffee-wood-dog-chew/","/guides/coffee-wood-chew-size-guide/"):
+        text=" ".join(docs[route][1].main_text)
+        for value in ("CC01-XS","CC01-XXL","Under 5 kg","Over 40 kg"):
+            check(value in text,f"{route}: current reference size data missing {value}")
+        check("3–5kg" not in text and "12–20kg" not in text,f"{route}: obsolete size bands")
+    forbidden=("minimum 15% / $0.30","What our own AOV data shows","EWX","Trial Box of 3–5","Every material we use is biodegradable","safe when swallowed","no questions asked")
+    for route,(_,d) in docs.items():
+        text=" ".join(d.main_text)
+        for phrase in forbidden: check(phrase.lower() not in text.lower(),f"{route}: obsolete claim {phrase}")
+    backup=ROOT.parent/"_VietPaw_backups/VietPaw-before-SEO-2026-08-30.zip"
+    preserved=0
+    old_routes=set()
+    if backup.exists():
+        with zipfile.ZipFile(backup) as z:
+            for name in z.namelist():
+                norm=name.replace("\\","/")
+                prefix=ROOT.name+"/"
+                if not norm.startswith(prefix): continue
+                rel=norm[len(prefix):]
+                if rel.endswith("index.html"):
+                    old_routes.add(rel)
+                    check((ROOT/rel).exists(),"Existing URL deleted: "+rel)
+                if rel.startswith("assets/") and rel not in ("assets/style.css","assets/rfq.js") and not rel.endswith("/"):
+                    file=ROOT/rel
+                    check(file.exists() and hashlib.sha256(file.read_bytes()).digest()==hashlib.sha256(z.read(name)).digest(),"Original asset changed: "+rel)
+                    preserved+=1
+    http_result=None
+    if "--http" in sys.argv:
+        def request(route):
+            try:
+                with urlopen("http://127.0.0.1:8765"+route,timeout=10) as response:
+                    return route,response.status
+            except Exception as exc: return route,str(exc)
+        results=list(ThreadPoolExecutor(max_workers=8).map(request,docs))
+        for route,status in results: check(status==200,f"HTTP {route}: {status}")
+        http_result={"checked":len(results),"status_200":sum(s==200 for _,s in results)}
+    report={"pages":len(docs),"indexed_sitemap_urls":len(urls),"guides":sum(p.startswith("/guides/") and p!="/guides/" for p in docs),
+        "products":sum(p.startswith("/products/") for p in docs),"baseline_pages":len(old_routes),
+        "original_assets_verified":preserved,"replacement_references_verified":len(replacements),
+        "supplied_replacement_files_verified":len({x["asset"] for x in replacements}),
+        "footer_pages_verified":len(docs),"sarah_authored_guides_verified":len(ARTICLES),"http":http_result,
+        "content_words":{p:len(re.findall(r"\b[\w’-]+\b"," ".join(d.main_text))) for p,(_,d) in docs.items()},
+        "warnings":warnings,"errors":errors}
+    (ROOT/"_source/validation_report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print(json.dumps({k:v for k,v in report.items() if k!="content_words"},ensure_ascii=False,indent=2))
+    if errors: raise SystemExit(1)
+
+if __name__=="__main__": run()

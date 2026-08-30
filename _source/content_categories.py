@@ -1,132 +1,106 @@
 # -*- coding: utf-8 -*-
-from common import page, write_page, rfq_bar, breadcrumb_html, BRAND
+from content_helpers import publish, section, p, ul, cards, table, terms, trust_links, SAFETY
+from content_products import product_cards
 
-def cat_page(root, path, parent_label, parent_href, h1, meta_title, meta_desc, lede, img, cards, active_top):
-    bc, bc_s = breadcrumb_html([("Home","/"), (parent_label, parent_href), (h1, None)] if parent_href else [("Home","/"), (h1, None)])
-    card_html = "".join(
-        f'<div class="card"><div class="card-img"><img src="{c[2]}" alt="{c[0]}"></div><h3>{c[0]}</h3><p>{c[1]}</p><a href="{c[3]}">Explore &rarr;</a></div>'
-        for c in cards
-    )
-    content = f"""
-{bc}
-<section class="hero" style="padding:40px 0 48px">
-  <div class="wrap hero-inner">
-    <div>
-      <p class="hero-eyebrow">Wholesale</p>
-      <h1>{h1}</h1>
-      <p class="hero-lede">{lede}</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="/request-a-quote/">Request Wholesale Catalogue</a>
-      </div>
-    </div>
-    <img src="{img}" alt="{h1}">
-  </div>
-</section>
-<section class="section">
-  <div class="wrap grid grid-3">{card_html}</div>
-</section>
-"""
-    html = page(meta_title, meta_desc, path, content + rfq_bar(), active_top, [bc_s])
-    write_page(root, path, html)
-
+CATEGORIES = [
+("/dog-toys/","Wholesale Natural Dog Toys from Vietnam","Dog Toys","dog-chewing-coffeewood.jpg",
+ "Build a wholesale dog-toy assortment around coffee wood, coconut fiber and hemp. Compare play types, sample-approved sizes and private-label packaging with a Vietnam manufacturer.",
+ ["coffee-wood-dog-chew","coconut-fiber-dog-ball","hemp-rope-dog-toy"],
+ [("Chew toys","Wood stick specifications and responsible chew-range planning.","/dog-toys/chew-toys/"),
+ ("Rope & tug toys","Define length, knots and attachment checks.","/dog-toys/rope-toys/"),
+ ("Fetch & balls","Compare diameter, construction and pack format.","/dog-toys/fetch-toys/"),
+ ("Enrichment","Texture-led formats and development briefs.","/dog-toys/puzzle-toys/")],
+ [("Coffee wood","Hard chew format","Size, surface, cracks and a conservative use label"),
+ ("Coconut fiber","Supervised fetch and carry","Diameter, winding, loose fiber and internal components"),
+ ("Hemp fiber","Supervised interactive play","Knot security, fraying and any rope connections")],
+ "Start with a narrow assortment that has a clear role at shelf: a wood chew, a fetch ball and an interactive rope. For each, specify the intended dog size and play context. Add more designs after sample evaluation and actual sell-through data."),
+("/dog-toys/chew-toys/","Natural Dog Chews Wholesale","Dog Toys","winvn-coffee-wood-sizes.png",
+ "Source non-edible natural dog chew toys led by coffee wood sticks. Compare reference sizes, review use limitations and approve the product specification before placing a wholesale order.",
+ ["coffee-wood-dog-chew"],[],
+ [("Standard stick","Single wood component","Confirm size and composition"),
+ ("Wood with rope","Multi-component toy","Confirm both materials and connection security"),
+ ("Private-label pack","Brand-specific presentation","Size guide, warnings and pack protection")],
+ "This category covers chew toys, not edible treats. Harder does not automatically mean safer or better for strong chewers. Select a range only after reviewing sample construction and clear supervised-use instructions. Coffee wood collection information supports supplier selection; the product page carries the detailed size table."),
+("/dog-toys/rope-toys/","Rope & Tug Dog Toys Wholesale","Dog Toys","winvn-hemp-wood-assortment.jpg",
+ "Discuss natural-fiber rope, knotted and ball-with-rope designs for supervised tug play. Specify fiber identity, rope geometry and packaging for wholesale or private-label orders.",
+ ["hemp-rope-dog-toy","hemp-fiber-ball"],[],
+ [("Knotted rope","Length, diameter, knots","Inspect knot security and fraying"),
+ ("Ball with rope","Ball and handle geometry","Assess the connection as a separate part"),
+ ("Wood with rope","Wood and rope specification","Agree component and attachment checks")],
+ "Hemp, cotton and coconut fiber are different materials; confirm the exact fiber or blend in the selected design. A catalogue photo is not proof of reinforcement or measured pull strength. Define any test method and acceptance criteria before using a strength claim on packaging."),
+("/dog-toys/fetch-toys/","Natural Fetch & Ball Dog Toys Wholesale","Dog Toys","dog-coconut-balls-lifestyle.jpg",
+ "Compare coconut-fiber and hemp balls for a supervised fetch-and-carry assortment. Approve diameter, weight, surface and packing before committing to volume.",
+ ["coconut-fiber-dog-ball","hemp-fiber-ball"],[],
+ [("Coir ball","Texture and winding","Confirm diameter and any core"),
+ ("Hemp ball","Wound-fiber construction","Confirm the three catalogue size references"),
+ ("Multi-pack","Assortment and carton","Check every component and sold-as-set label")],
+ "A natural-fiber ball is not a rubber ball with a different appearance. Do not assume bounce, flotation, weather resistance or a fixed lifespan. The ball must be too large to swallow whole, and the chosen sample should be assessed for the intended style of supervised play."),
+("/dog-toys/puzzle-toys/","Natural Enrichment Dog Toys Wholesale","Dog Toys","winvn-hemp-wood-assortment.jpg",
+ "Explore texture-led natural toys and discuss enrichment designs for your range. Current products emphasize material and shape; treat new treat-dispensing mechanisms as custom development.",
+ ["hemp-rope-dog-toy","hemp-fiber-ball"],[],
+ [("Knotted forms","Handling and supervised interaction","Define geometry and intended use"),
+ ("Mixed textures","Range variety","Declare every component"),
+ ("New mechanisms","OEM/ODM feasibility","Prototype, test and approve before claiming availability")],
+ "This is an enrichment sourcing category, not a claim that the displayed products are tested food puzzles. If you need a treat dispenser or measured difficulty levels, submit a specific brief. Agree cleaning, moving-part and food-contact requirements with the appropriate specialists for that construction."),
+("/cat-toys/","Wholesale Natural Cat Toys","Cat Toys","cat-loofah-toys-lifestyle.jpg",
+ "Build a cat-toy range from coconut-fiber balls and loofah shapes. Compare construction, shape-specific dimensions and private-label packaging for international retail.",
+ ["coconut-fiber-cat-ball","loofah-cat-toy"],
+ [("Balls & chasers","Choose a cat-specific size and construction.","/cat-toys/balls/"),
+ ("Catnip & play shapes","Optional filling and attachment requirements.","/cat-toys/catnip-toys/")],
+ [("Coconut-fiber balls","Batting and chasing","Check size and loose fiber"),
+ ("Loofah shapes","Lightweight play","Check stitching and detachable parts"),
+ ("Optional catnip","Development request","Confirm inclusion, source and labeling")],
+ "A cat assortment needs its own specifications rather than scaled-down dog-toy descriptions. Ask for each shape's measurements and every internal or attached component. Plan pack information around supervised play, inspection and replacement, without promising dental or therapeutic benefits."),
+("/cat-toys/balls/","Natural Cat Balls & Chasers Wholesale","Cat Toys","winvn-coconut-fiber-balls.jpg",
+ "Request coconut-fiber cat-ball samples and build a measured, consistent batting-and-chasing range with your own tags or packaging.",
+ ["coconut-fiber-cat-ball"],[],
+ [("Single ball","Diameter and mass","Approve a cat-specific sample"),
+ ("Ball set","Quantity and size mix","Check individual and outer labeling"),
+ ("Retail carton","Units and dimensions","Confirm master-carton packing")],
+ "Specify the diameter, mass and finished texture rather than selecting from S/M/L alone. Check winding and any core or binding thread. A mixed-size photo is a range reference, not evidence that all sizes suit cats."),
+("/cat-toys/catnip-toys/","Loofah Shapes & Catnip Options Wholesale","Cat Toys","winvn-loofah-play-shapes.png",
+ "Source loofah play shapes and discuss optional catnip-filled designs. Confirm filling, seams and labeling for each selected SKU.",
+ ["loofah-cat-toy"],[],
+ [("Unfilled shape","Loofah and attachments","Confirm dimensions and seams"),
+ ("Catnip option","Optional inclusion","Approve filling specification and source"),
+ ("Custom silhouette","OEM/ODM development","Review detachable parts and feasibility")],
+ "Catnip is not included in every toy. State clearly whether a quoted SKU is unfilled or contains catnip, and confirm the amount and source when relevant. A custom shape requires its own sample and component list."),
+("/collections/aggressive-chewers/","Sourcing Toys for Strong Chewers: Limits & Options","Materials","dog-chewing-coffeewood.jpg",
+ "Evaluate strong-chewer requests carefully. No natural toy is indestructible, and hard wood is not automatically suitable for forceful chewing.",
+ ["coffee-wood-dog-chew","hemp-rope-dog-toy"],[],
+ [("Hard chew","Tooth and fracture risks","Seek veterinary guidance on suitability"),
+ ("Rope play","Fraying and ingestion risks","Use only for supervised interaction"),
+ ("Claims","No indestructible promise","Describe tested construction, not guaranteed outcomes")],
+ "Do not use XL or XXL as a blanket answer for every power chewer. Mouth size, chewing behavior and dental health matter, and increasing size does not remove the risks of hard chewing. Retail copy should acknowledge limits rather than promising safe failure or swallowable fibers."),
+("/collections/teething-puppies/","Puppy Toy Sourcing: Size & Material Considerations","Materials","dog-lifestyle-chew-1.jpg",
+ "Plan puppy-focused ranges with particular care around developing teeth, detachable parts and size. Small dimensions alone do not make a hard chew puppy-safe.",
+ [],[],
+ [("Age and dental stage","Individual suitability","Obtain veterinary advice"),
+ ("Toy construction","Attachments and loose fibers","Approve a species-appropriate design"),
+ ("Labeling","Supervision and replacement","Avoid universal puppy-safe claims")],
+ "Do not automatically recommend coffee wood XS/S for teething puppies. Discuss a puppy-specific design, intended age range and professional suitability assessment. A loofah material reference can inform development, but an existing cat SKU is not a validated puppy product."),
+("/collections/plastic-free/","Pet Toys for a Plastic-Free Sourcing Brief","Materials","winvn-natural-toy-assortment.png",
+ "Explore coffee wood, coconut fiber, hemp and loofah options, then verify the complete product and packaging composition before using a plastic-free claim.",
+ ["coffee-wood-dog-chew","coconut-fiber-dog-ball","hemp-fiber-ball","loofah-cat-toy"],[],
+ [("Product body","Headline natural material","Check cores, thread, glue and coatings"),
+ ("Retail packaging","Paper or kraft options","Check laminates, inks and windows"),
+ ("Shipping protection","Bags and desiccants","Do not describe vacuum film as plastic-free")],
+ "Natural, renewable, upcycled and biodegradable describe different properties. Coffee wood and coconut husks can support specific reuse stories; hemp and loofah should not automatically be called waste-derived. Whole-product disposal claims need evidence for the selected construction and conditions."),
+]
 
 def build(root):
-    cat_page(root, "/dog-toys/", "", "", "Wholesale Natural Dog Toys",
-        f"Wholesale Natural Dog Toys | Made in Vietnam | {BRAND}",
-        "Wholesale natural, biodegradable dog toys from Vietnam — coffee wood chews, coconut fiber balls, hemp fiber ropes. Low MOQ, OEM & private label, free samples.",
-        "Chew toys, rope toys, fetch balls and enrichment toys, all made from natural, biodegradable materials sourced in Vietnam.",
-        "/assets/img/dog-chewing-coffeewood.jpg",
-        [("Chew Toys","Coffee wood chews, splinter-resistant and single-ingredient.","/assets/img/product-coffeewood-stick.jpg","/dog-toys/chew-toys/"),
-         ("Rope & Tug Toys","Hemp fiber rope for tug and multi-dog play.","/assets/img/product-hemp-rope-trio.jpg","/dog-toys/rope-toys/"),
-         ("Fetch & Ball Toys","Coconut fiber balls, biodegradable and durable.","/assets/img/product-coconut-ball-sizes.jpg","/dog-toys/fetch-toys/"),
-         ("Puzzle & Enrichment","Natural enrichment shapes for mental stimulation.","/assets/img/product-hemp-dumbbell.jpg","/dog-toys/puzzle-toys/")],
-        "Dog Toys")
-
-    cat_page(root, "/dog-toys/chew-toys/", "Dog Toys", "/dog-toys/", "Natural Dog Chew Toys Wholesale",
-        f"Natural Dog Chew Toys Wholesale | Coffee Wood | {BRAND}",
-        "Wholesale natural dog chew toys from Vietnam, led by splinter-resistant coffee wood. Single-ingredient, low MOQ, OEM & private label available.",
-        "Our chew range is led by coffee wood — a dense, splinter-resistant hardwood upcycled from retired coffee trees.",
-        "/assets/img/dog-chewing-coffeewood.jpg",
-        [("Coffee Wood Chew Stick","Six sizes, XS–XXL, matched to dog weight.","/assets/img/product-coffeewood-stick.jpg","/products/coffee-wood-dog-chew/"),
-         ("For Aggressive Chewers","Extra-dense sizing for strong chewers.","/assets/img/product-coffeewood-single.jpg","/collections/aggressive-chewers/"),
-         ("For Teething Puppies","Gentler sizing for young dogs.","/assets/img/dog-lifestyle-chew-1.jpg","/collections/teething-puppies/")],
-        "Dog Toys")
-
-    cat_page(root, "/dog-toys/rope-toys/", "Dog Toys", "/dog-toys/", "Natural Rope & Tug Dog Toys Wholesale",
-        f"Natural Rope & Tug Dog Toys Wholesale | Hemp Fiber | {BRAND}",
-        "Wholesale hemp fiber rope and tug dog toys from Vietnam. Durable natural fibre, plastic-free, low MOQ, OEM & private label.",
-        "Hemp fiber twisted into rope balls, tug ropes and knotted bones — built for tug-of-war and multi-dog households.",
-        "/assets/img/dog-rope-toy-lifestyle.jpg",
-        [("Hemp Fiber Ball","A tough rope ball for tug and fetch.","/assets/img/product-hemp-ball.jpg","/products/hemp-fiber-ball/"),
-         ("Hemp Rope Trio","Three sizes of knotted rope toys.","/assets/img/product-hemp-rope-trio.jpg","/collections/hemp-fiber/")],
-        "Dog Toys")
-
-    cat_page(root, "/dog-toys/fetch-toys/", "Dog Toys", "/dog-toys/", "Natural Fetch & Ball Dog Toys Wholesale",
-        f"Natural Fetch & Ball Dog Toys Wholesale | Coconut Fiber | {BRAND}",
-        "Wholesale natural fetch and ball dog toys from Vietnam, made from coconut fiber. Biodegradable, plastic-free, low MOQ, private label.",
-        "Coconut fiber balls in three sizes — light enough to fetch, tough enough to last.",
-        "/assets/img/puppy-ball-lifestyle.jpg",
-        [("Coconut Fiber Dog Ball","Three sizes, biodegradable coconut fiber.","/assets/img/product-coconut-ball-sizes.jpg","/products/coconut-fiber-dog-ball/")],
-        "Dog Toys")
-
-    cat_page(root, "/dog-toys/puzzle-toys/", "Dog Toys", "/dog-toys/", "Natural Enrichment & Puzzle Dog Toys Wholesale",
-        f"Natural Enrichment & Puzzle Dog Toys | Wholesale | {BRAND}",
-        "Wholesale natural enrichment and puzzle dog toys from Vietnam. Eco materials, engaging designs, low MOQ, OEM & private label.",
-        "Shape and texture-driven natural toys that reward chewing and nosing, without a shred of plastic.",
-        "/assets/img/product-hemp-dumbbell.jpg",
-        [("Hemp Dumbbell","A knotted natural enrichment shape.","/assets/img/product-hemp-dumbbell.jpg","/collections/hemp-fiber/")],
-        "Dog Toys")
-
-    cat_page(root, "/cat-toys/", "", "", "Wholesale Natural Cat Toys",
-        f"Wholesale Natural Cat Toys | Loofah & Coconut Fiber | {BRAND}",
-        "Natural, biodegradable cat toys wholesale from Vietnam — loofah, coconut fiber balls. Low MOQ from 50 pcs, private label, free samples.",
-        "Loofah and coconut fiber toys shaped for the way cats actually play — batting, chasing and dental chewing.",
-        "/assets/img/cat-loofah-toys-lifestyle.jpg",
-        [("Balls & Chasers","Coconut fiber balls for batting and chasing.","/assets/img/product-coconut-ball-sizes.jpg","/cat-toys/balls/"),
-         ("Catnip & Chew Toys","Loofah shapes for dental chewing and play.","/assets/img/product-loofah-basket.jpg","/cat-toys/catnip-toys/")],
-        "Cat Toys")
-
-    cat_page(root, "/cat-toys/balls/", "Cat Toys", "/cat-toys/", "Coconut Fiber Cat Balls Wholesale",
-        f"Coconut Fiber Cat Balls Wholesale | Natural & Plastic-Free | {BRAND}",
-        "Wholesale coconut fiber cat balls and chasers from Vietnam. Biodegradable, plastic-free, naturally textured. Low MOQ, private label.",
-        "Light, springy coconut fiber balls sized for batting and chasing.",
-        "/assets/img/product-coconut-ball-sizes.jpg",
-        [("Coconut Fiber Cat Ball","Naturally textured, biodegradable.","/assets/img/product-coconut-ball-sizes.jpg","/products/coconut-fiber-cat-ball/")],
-        "Cat Toys")
-
-    cat_page(root, "/cat-toys/catnip-toys/", "Cat Toys", "/cat-toys/", "Natural Catnip & Chew Cat Toys Wholesale",
-        f"Natural Catnip & Chew Cat Toys Wholesale | Loofah | {BRAND}",
-        "Wholesale natural loofah chew toys for cats, made in Vietnam. Biodegradable, safe, low MOQ, OEM & private label.",
-        "Loofah shapes built for dental chewing, with catnip-fill options available on OEM runs.",
-        "/assets/img/cat-loofah-toys-lifestyle.jpg",
-        [("Loofah Cat Toy","Mouse, fish, rabbit and more shapes.","/assets/img/product-loofah-basket.jpg","/products/loofah-cat-toy/")],
-        "Cat Toys")
-
-    # ---------- niche collections ----------
-    cat_page(root, "/collections/aggressive-chewers/", "Materials", "/materials/", "Natural Dog Toys for Aggressive Chewers",
-        f"Natural Dog Toys for Aggressive Chewers | Wholesale | {BRAND}",
-        "Wholesale natural, durable dog toys for aggressive chewers — led by tough coffee wood. Splinter-resistant, low MOQ, OEM & private label.",
-        "Extra-dense coffee wood sizing and reinforced hemp rope for dogs with strong jaws and high chew drive.",
-        "/assets/img/dog-chewing-coffeewood.jpg",
-        [("Coffee Wood XL/XXL","Sized for strong chewers 12kg+.","/assets/img/product-coffeewood-stick.jpg","/products/coffee-wood-dog-chew/"),
-         ("Hemp Rope Bones","Reinforced knotted rope for tug.","/assets/img/product-hemp-rope-trio.jpg","/collections/hemp-fiber/")],
-        "Materials")
-
-    cat_page(root, "/collections/teething-puppies/", "Materials", "/materials/", "Natural Teething Toys for Puppies",
-        f"Natural Teething Toys for Puppies | Wholesale | {BRAND}",
-        "Wholesale natural, safe teething toys for puppies from Vietnam. Gentle materials, low MOQ, OEM & private label for pet brands.",
-        "Smaller, softer-edged coffee wood and coconut fiber shapes sized for developing jaws.",
-        "/assets/img/dog-lifestyle-chew-1.jpg",
-        [("Coffee Wood XS/S","Sized for puppies and toy breeds.","/assets/img/product-coffeewood-single.jpg","/products/coffee-wood-dog-chew/")],
-        "Materials")
-
-    cat_page(root, "/collections/plastic-free/", "Materials", "/materials/", "Plastic-Free & Biodegradable Pet Toys",
-        f"Plastic-Free & Biodegradable Pet Toys | Wholesale | {BRAND}",
-        "Wholesale plastic-free, biodegradable pet toys from Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Low MOQ, OEM & private label.",
-        "Every material across our range is biodegradable and upcycled — a genuine eco shelf, not a greenwashed one.",
-        "/assets/img/hero-lifestyle-toys.jpg",
-        [("Coffee Wood","Upcycled hardwood dog chews.","/assets/img/product-coffeewood-stick.jpg","/collections/coffee-wood/"),
-         ("Coconut Fiber","Biodegradable balls & rope.","/assets/img/product-coconut-ball-sizes.jpg","/collections/coconut-fiber/"),
-         ("Hemp Fiber","Plastic-free tug & rope.","/assets/img/product-hemp-ball.jpg","/collections/hemp-fiber/"),
-         ("Loofah","Biodegradable cat & small-pet toys.","/assets/img/product-loofah-basket.jpg","/collections/loofah/")],
-        "Materials")
+    for path,h1,active,img,lede,products,subcategories,comparison,notes in CATEGORIES:
+        puppy_link=p('Planning a young-dog range? Review <a href="/collections/teething-puppies/">puppy-toy sourcing and suitability considerations</a>.') if path=="/dog-toys/" else ""
+        references=product_cards(products) if products else p('No puppy-specific SKU has been confirmed in the supplied specification. Use the <a href="/materials/">material overview</a> to discuss a dedicated design; do not relabel a cat toy or hard wood stick as puppy-safe.')
+        parts=[section("Plan the assortment",p(notes)+(cards(subcategories,2) if subcategories else "")+puppy_link),
+               section("Product references for your brief",references,True),
+               section("Materials, formats and buying checks",table(["Option","What to specify","What to check"],comparison)),
+               section("Wholesale terms: MOQ, samples and lead time",terms(),True),
+               section("Private label, quality and export preparation",
+                 p("Send quantities per SKU, destination country, intended sales channel and required launch date. Standard designs with your branding are quoted differently from new constructions. Separate product quantity from the minimum for printed boxes.")+
+                 p('Explore <a href="/services/private-label-pet-toys/">private-label options</a> or <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development</a>. For recurring assortments, use our <a href="/services/wholesale-pet-products/">wholesale service</a>.')+trust_links()),
+               section("Clear use instructions belong on every pack",p(SAFETY)+p('Review <a href="/guides/pet-toy-safety-testing-requirements/">how to scope product testing</a> and <a href="/sustainability/">how material claims are qualified</a>.'),True)]
+        publish(root,path,h1+" | WINVN",lede,h1,lede,parts,active=active,image="/assets/img/"+img,
+            faqs=[("Can I start with a small mixed order?", "Ask for a line-by-line quote. A minimum starting from 50 pcs applies only to selected standard products, not automatically to the whole assortment or every custom design."),
+                  ("Can the products carry my brand?", "Yes, discuss labels, tags, packaging and wood engraving where suitable. Approve artwork and the physical sample before production."),
+                  ("What does the quotation need to include?", "Product references, dimensions, quantities per SKU, branding, packaging, destination, timing and any buyer testing or document requirements.")])

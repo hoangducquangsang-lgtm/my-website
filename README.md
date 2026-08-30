@@ -1,32 +1,56 @@
-# VietPaw — B2B Website (v1)
+# WINVN — Website nội dung B2B
 
-Website tĩnh (static HTML) cho VietPaw — thương hiệu xuất khẩu/bán sỉ của **WINVN INT CO., LTD**, dùng cho khách B2B quốc tế: startup brand, Amazon seller, eco pet shop (EU), wholesaler/distributor.
+Bản cập nhật thương hiệu, hình ảnh và Guides ngày **30/08/2026**. Website tĩnh tiếng Anh dành cho buyer quốc tế. Đã sửa trong thư mục local; chưa đăng lên website live. Toàn bộ thương hiệu hiển thị là **WINVN**.
 
-## Cách xem thử ngay
-Mở file `index.html` bằng trình duyệt (double-click) để xem toàn bộ site chạy offline. Menu, link nội bộ, ảnh đều hoạt động vì dùng đường dẫn tương đối.
+## Xem kết quả
 
-## Cách deploy thật (khuyến nghị)
-Kéo thả cả thư mục này vào [Netlify Drop](https://app.netlify.com/drop) hoặc Vercel/Cloudflare Pages để có link live trong ~1 phút, sau đó trỏ domain `vietpaw.com` (khi đã mua) vào đó. Site không cần build step — publish thẳng thư mục gốc.
+Mở `index.html` hoặc chạy một static server tại thư mục này. HTML/ảnh/liên kết nội bộ dùng đường dẫn tương đối để giữ cách xem offline. Trang có canonical theo `https://vietpaw.com/`.
 
-## Quy mô đã build
-- 56 trang HTML: 35 trang lõi (trang chủ, About, Capabilities, Materials, Certifications, Sustainability, How to Order, Wholesale Catalogue, RFQ, Contact, danh mục Dog/Cat Toys, 4 collection vật liệu thật, 5 trang sản phẩm, 4 trang Solutions theo tệp khách + hub) + 1 Guides hub + 20 bài content hub (19 bài theo kế hoạch gốc + 1 bài size guide bổ sung).
-- `sitemap.xml` và `robots.txt` đã có sẵn ở gốc.
-- Schema.org: Organization, WebSite, BreadcrumbList, FAQPage, Product (không kèm giá) trên các trang liên quan.
-- Ảnh: lấy từ catalog thật (CATALOG WINVN 2026.pdf) và ảnh raw material/xuất hàng bạn cung cấp — không dùng ảnh stock.
+Xem **WINVN_UPDATE_REPORT_VI.md** để đọc thay đổi mới nhất. **SEO_UPDATE_REPORT_VI.md** ghi nhận đợt SEO trước đó, không phải cấu hình thương hiệu/contact hiện hành.
 
-## Thông tin đã dùng (xác nhận lại trước khi public)
-- Brand hiển thị: **VietPaw** — pháp nhân công khai: **WINVN INT CO., LTD**
-- Domain dự kiến: `vietpaw.com` (bạn cần tự đăng ký, tôi chỉ kiểm tra sơ bộ chưa có site đang chạy, không phải WHOIS chính thức)
-- Điện thoại: +84 906 111 016 · Email: sarah.winvn@gmail.com
-- Địa chỉ: 70 St. 10, Van Phuc City, Hiep Binh Ward, Ho Chi Minh City, Vietnam
+## Quy mô
 
-## Việc cần làm trước khi public chính thức
-1. **Mua domain vietpaw.com** (hoặc domain bạn chọn) và cập nhật `DOMAIN` trong `site_src/common.py` nếu đổi.
-2. **Form RFQ** (`/request-a-quote/`) hiện dùng `mailto:` — mở email client của khách, không lưu lead tự động. Nên nối vào Formspree/Google Form/CRM thật khi có domain.
-3. **Catalogue PDF** ở `/wholesale-catalogue/` đang là bản catalog WINVN 2026 gốc — nên làm lại bìa/thương hiệu VietPaw nếu muốn tách bạch hoàn toàn.
-4. **Rà lại toàn bộ số liệu** (công suất 5–6 triệu sp/năm, 30+ nước, MOQ, thời gian sản xuất...) với đội vận hành trước khi public — đây là số liệu lấy từ tài liệu nội bộ bạn cung cấp, cần xác nhận vẫn đúng thời điểm hiện tại.
-5. **Ảnh sản phẩm còn thiếu**: một số sản phẩm (ví dụ Coconut Fiber Dog Ball, Hemp Fiber Ball) đang dùng ảnh gần giống thay vì ảnh chụp riêng — nên bổ sung ảnh chuyên biệt khi có.
-6. **Pháp lý**: các câu chuyện "hỗ trợ cộng đồng dân tộc thiểu số", chứng chỉ CPSIA/REACH "có sẵn theo yêu cầu" cần đúng sự thật 100% trước khi đăng — đây là các claim nhạy cảm dễ bị buyer hoặc marketplace kiểm chứng ngược.
+- **66 trang HTML**, giữ nguyên 56 URL cũ và bổ sung 10 trang.
+- 20 guide, 6 sản phẩm, 4 collection vật liệu, 6 giải pháp khách hàng.
+- 65 URL trong sitemap; `/case-studies/` là bản chuẩn bị hồ sơ, `noindex,follow`.
+- Cấu trúc SEO: Organization, WebSite, BreadcrumbList, Product, Article. Không tự tạo giá, rating, GTIN hay chứng nhận.
+- Đã thay mọi tham chiếu tới 8 ảnh nền đen bằng ảnh trong thư mục được cung cấp; ảnh kiểm tra độ ẩm dùng đúng `Bản sao của kiem_go_9.jpg`.
+- 20 bài Guides được viết lại và ghi tác giả Sarah trong nội dung lẫn metadata.
+- Chân trang theo nội dung chủ website yêu cầu, gồm 40+ countries và email `sarah@vietpaw.com`.
+- 30 tài nguyên cũ vẫn còn để phục hồi/giữ liên kết cũ, nhưng ảnh nền đen không còn được trang nào gọi. Ảnh mới giữ nguyên dữ liệu ảnh gốc.
+- Form chỉ chuẩn bị bản nháp email/tệp text, **không gửi hoặc lưu lead tự động**.
 
-## Cấu trúc mã nguồn (để chỉnh sửa sau này)
-Toàn bộ site được generate từ Python trong thư mục `_source/` (đã kèm trong bản giao này) — mỗi trang là 1 hàm Python build HTML từ template dùng chung (`common.py`). Nếu cần tôi chỉnh nội dung/thêm trang, cứ nhắn — tôi sửa script và build lại toàn site trong vài giây thay vì sửa tay từng file HTML.
+## Chỉnh sửa và tạo lại trang
+
+Nội dung và bố cục chung nằm trong `_source/`; `assets/rfq.js` xử lý biểu mẫu tại máy khách. Chỉnh CSS tại `_source/style.css`, không chỉ sửa bản sao `assets/style.css`.
+
+Bộ tạo trang dùng Python 3 và thư viện chuẩn, không cần cài framework:
+
+```text
+python _source/build.py
+python _source/validate_site.py
+node _source/test_rfq.cjs
+```
+
+Nếu có local server tại 127.0.0.1:8765, có thể thêm `--http` vào lệnh kiểm tra. Không dùng lệnh build cũ trỏ tới `/tmp/site_build`: đã thay bằng đường dẫn dựa trên vị trí project. Build không xóa thư mục và không ghi lại ảnh/catalogue.
+
+Đừng sửa riêng HTML nếu muốn giữ thay đổi qua lần build tiếp theo.
+
+## Hồ sơ nội bộ
+
+- `_source/review/SOURCE_REGISTER_VI.md`: nguồn và quyết định sử dụng/không sử dụng từng claim.
+- `_source/review/KEYWORD_MAP.md`: intent cho toàn bộ URL, chưa có search volume xác minh.
+- `_source/validation_report.json`: kiểm tra nội bộ và local HTTP.
+- `_source/review/image_replacements.json`: đối chiếu từng ảnh cũ với ảnh nguồn mới.
+- Backup trước khi sửa: `../_VietPaw_backups/VietPaw-before-SEO-2026-08-30.zip`.
+- Backup trước đợt đổi thương hiệu: `../_VietPaw_backups/Website-before-WINVN-2026-08-30.zip`.
+
+## Trước khi đăng lên hosting
+
+Chưa có thao tác xuất bản trong lần chỉnh này. Tên miền canonical vẫn là `https://vietpaw.com/`: chủ website yêu cầu đổi thương hiệu, chưa yêu cầu chuyển tên miền. Email `sarah@vietpaw.com` được giữ đúng chỉ định. Không đổi tên thư mục dự án để tránh ảnh hưởng đường dẫn đang dùng.
+
+Kiểm tra trước khi public: địa điểm/công suất, size hiện hành, MOQ/chính sách mẫu, đổi trả và hồ sơ testing. Tuyên bố biodegradable trong footer được chép theo yêu cầu trực tiếp của chủ website, không đồng nghĩa với việc đã có kiểm nghiệm cho mọi SKU/bao bì. Bộ Proof có tài liệu tên công ty khác và mẫu DRAFT; không dùng như chứng chỉ đã xác minh.
+
+Khi triển khai, chỉ đưa các trang HTML, assets cần thiết, robots.txt và sitemap.xml vào gói public. **Không đưa `_source/`, các báo cáo nội bộ, tài liệu nghiên cứu PDF ở root hoặc backup lên public.** robots.txt không phải cơ chế bảo mật. Bản catalogue đang được liên kết có tên `winvn-wholesale-catalogue.pdf`, nội dung giữ nguyên tài liệu WINVN đã cung cấp.
+
+Việc kết nối CRM/form endpoint, đăng lên server/domain hiện hành, GSC và kiểm tra Core Web Vitals cần một bước triển khai riêng được cho phép. Không có điểm SEO hoặc kết quả ranking được đo trong lần sửa nội dung này.

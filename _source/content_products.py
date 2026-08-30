@@ -1,216 +1,90 @@
 # -*- coding: utf-8 -*-
-from common import page, write_page, rfq_bar, breadcrumb_html, BRAND, BASE_URL
+"""Product specifications grounded in the supplied WINVN product sheets."""
+from common import BASE_URL, BRAND, LEGAL_NAME
+from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SAFETY
 
-def faq_schema(pairs):
-    return {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in pairs]}
+COFFEE_SIZES = [
+    ("XS","CC01-XS","10","1.5–2.0","23–30","Under 5 kg"),
+    ("S","CC01-S","13–14","2.0–2.5","35–45","5–10 kg"),
+    ("M","CC01-M","17–18","2.5–3.5","90–110","10–20 kg"),
+    ("L","CC01-L","19–20","3.5–4.5","110–150","20–30 kg"),
+    ("XL","CC01-XL","21–22","4.5–5.5","150–225","30–40 kg"),
+    ("XXL","CC01-XXL","22–23","5.5–7.0","325–450","Over 40 kg"),
+]
+def coffee_size_table():
+    return table(["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight"],COFFEE_SIZES)+p("Reference: WINVN coffee wood product specification supplied for this website. Natural shape and weight vary; confirm the current size sheet and agreed tolerances with your sample. Dog weight is a starting reference, not a veterinary suitability assessment. Older charts use different weight bands; do not combine them.")
 
-def faq_html(pairs):
-    items = "".join(f'<div class="faq-item"><h3>{q}</h3><p>{a}</p></div>' for q,a in pairs)
-    return f'<section class="section"><div class="wrap"><h2>Frequently asked questions</h2>{items}</div></section>'
+PRODUCTS = {
+"coffee-wood-dog-chew":dict(name="Coffee Wood Dog Chew Stick",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
+ image="winvn-coffee-wood-sizes.png",size="XS–XXL; six reference sizes",moq="From 50 pcs per SKU on standard coffee wood sticks.",
+ lede="Source a coffee wood chew stick cut, shaped, dried and surface-finished in Vietnam. Compare six reference sizes, agree the finished sample, and add laser engraving or your own packaging.",
+ overview="The standard stick is described in the WINVN product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
+ options=["Standard stick sizes XS–XXL; natural grain, outline and shade vary.","Laser-engraved brand mark on an agreed area of the wood, with placement approved on a sample.","Coffee wood combined with cotton or hemp rope is a separate construction; specify the rope material rather than describing the whole toy as single-ingredient."],
+ checks=["Confirm size, diameter and weight bands against the approved reference sample.","Inspect edges, surface finish and visible cracks; agree unacceptable defects before production.","Agree drying, storage and packing requirements. The supplier describes a 12–14% wood moisture target; request the method and batch record rather than treating it as a guarantee."]),
+"coconut-fiber-cat-ball":dict(name="Coconut Fiber Cat Ball",material="Coconut fiber",collection="coconut-fiber",group="Coconut Fiber",
+ image="winvn-coconut-fiber-balls.jpg",size="Size and diameter selected by sample",moq="Request the current per-size minimum; selected standard lines start from 50 pcs.",
+ lede="A textured coconut-husk fiber ball for supervised batting and chasing. Build a cat-focused assortment with sample-approved dimensions, secure construction and private-label tags.",
+ overview="This product uses coconut husk fiber as its headline material. Confirm the full construction, including any core, binding thread, adhesive or decorative attachment, before approving composition and environmental claims. Cat and dog versions should not be treated as interchangeable just because a photo looks similar.",
+ options=["Choose the diameter and finished weight for the cat range; no dog-size chart is reused here.","Approve winding, surface texture and any internal or binding components.","Use a branded tag or small paper box; define whether units are sold singly or as a set."],
+ checks=["Check for loose strands and attachment security before packing.","Compare sample diameter, mass and construction across the order.","Reject musty or visibly contaminated units and define clean, dry storage conditions."]),
+"coconut-fiber-dog-ball":dict(name="Coconut Fiber Dog Ball",material="Coconut fiber",collection="coconut-fiber",group="Coconut Fiber",
+ image="dog-coconut-balls-lifestyle.jpg",size="S / M / L references; confirm diameter",moq="Request MOQ by size and construction; selected standard lines start from 50 pcs.",
+ lede="A natural-texture ball for supervised fetch and carry play. Quote the diameter, finished weight, fiber construction and packing format your dog-toy range needs.",
+ overview="Coconut fiber offers a different texture from molded rubber or plastic. The approved sample should determine winding density, size and construction; the material name alone does not establish durability, bounce, buoyancy or suitability for power chewing.",
+ options=["Specify S, M or L only together with measurable dimensions and an approved sample.","Choose individual, multi-pack or assortment presentation; quote each component of a mixed box.","Private-label tags and box artwork can carry your handling instructions and product identification."],
+ checks=["Check diameter, mass, winding consistency and loose fiber against the agreed sample.","Confirm there are no unapproved changes to the core or binding materials.","Review labeling, carton count and moisture protection before shipment."]),
+"hemp-fiber-ball":dict(name="Hemp Fiber Rope Ball",material="Hemp fiber",collection="hemp-fiber",group="Hemp Fiber",
+ image="winvn-hemp-wood-assortment.jpg",size="S: 4–5 cm; M: 6–7 cm; L: 8–9 cm (catalogue reference)",moq="Confirm MOQ by size; selected standard hemp products start from 50 pcs.",
+ lede="A wound hemp-fiber ball for supervised interactive play. Compare three catalogue diameter bands and agree fiber composition, knot construction and packaging before ordering.",
+ overview="The 2026 WINVN catalogue lists hemp balls in three sizes. A ball without a handle and a ball-with-rope are different products: identify the exact construction in the quote. Fiber identity, any blend and all binding components should be declared for the selected item.",
+ options=["Catalogue reference diameters: S 4–5 cm, M 6–7 cm, L 8–9 cm; confirm current tolerances.","Choose the standalone ball or discuss a separately specified rope-handle version.","Use branded tags and paper packaging; do not laser-engrave loose fiber as though it were wood."],
+ checks=["Compare diameter, finished weight, winding and knots with the approved sample.","Agree an appropriate pull/attachment check for the specific construction; request results if numerical strength is claimed.","Inspect for strand shedding and provide supervised-use instructions."]),
+"loofah-cat-toy":dict(name="Loofah Cat Toy",material="Loofah",collection="loofah",group="Loofah",
+ image="winvn-loofah-play-shapes.png",size="Dimensions confirmed per shape",moq="Quoted per shape; ask about small trial quantities and mixed-shape feasibility.",
+ lede="Lightweight loofah-gourd fiber shaped for supervised cat play. Choose the shape, dimensions and attachments, then approve your sample and private-label packaging.",
+ overview="Loofah is the fibrous interior of a dried gourd. WINVN's product sheet describes cutting and shaping this material into play forms. Dimensions differ by design, so a fish, mouse or plain roll must each have a specification rather than a single universal size range.",
+ options=["Request available shapes and a dimensioned sample for each chosen SKU.","Specify stitching, decorative parts and any filling as separate components.","Catnip inclusion is an optional development request, not standard contents; confirm source, amount and labeling for the target market."],
+ checks=["Check surface cleanliness, dryness, shape consistency and seam or attachment security.","Agree the full component list before describing a finished toy as all-natural or plastic-free.","Match pack warnings to the selected species and construction; this cat page does not establish suitability for every small animal."]),
+"hemp-rope-dog-toy":dict(name="Hemp Rope Dog Toy",material="Hemp fiber",collection="hemp-fiber",group="Hemp Fiber",
+ image="winvn-hemp-wood-assortment.jpg",size="Length, rope diameter and knot format quoted by design",moq="Project-specific; discuss a trial run and separate packaging minimum.",
+ lede="Develop a knotted hemp rope or ball-with-rope toy for supervised tug play. Specify finished length, rope diameter, knot geometry and branding instead of ordering from appearance alone.",
+ overview="WINVN's supplied product materials describe knotted hemp ropes and hemp ball-with-rope formats. This page covers those rope-based constructions, distinct from the standalone hemp ball. The image is a range reference; your approved physical sample defines the supplied design.",
+ options=["Define overall length, strand or rope diameter, handle opening and knot count.","Choose an all-fiber format or a coffee wood combination with every component listed.","Discuss tag attachment, printed sleeves, assortment packs and custom design feasibility."],
+ checks=["Agree knot security and an attachment/pull-check method relevant to the intended play.","Check for loose long strands and unintended loops or attachments.","Do not advertise a tensile rating, reinforcement or lifetime durability without design-specific evidence."]),
+}
 
-def product_schema(name, desc, img, category, sku=None, brand=BRAND):
-    s = {
-        "@context": "https://schema.org", "@type": "Product",
-        "name": name, "description": desc, "image": img,
-        "brand": {"@type": "Brand", "name": brand},
-        "category": category,
-        "manufacturer": {"@type": "Organization", "name": "WINVN INT CO., LTD"},
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "businessFunction": "http://purl.org/goodrelations/v1#Sell",
-            "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 50, "unitText": "pcs"},
-            "seller": {"@type": "Organization", "name": "WINVN INT CO., LTD"},
-            "url": f"{BASE_URL}/request-a-quote/"
-        }
-    }
-    if sku:
-        s["sku"] = sku
-    return s
-
-def related_grid(items):
-    """items: list of (title, desc, href, img) -> a real card grid, not just buttons."""
-    cards = ""
-    for title, desc, href, img in items:
-        imgtag = f'<div class="card-img"><img src="{img}" alt="{title}"></div>' if img else ""
-        cards += f'<div class="card">{imgtag}<h3>{title}</h3><p>{desc}</p><a href="{href}">Explore &rarr;</a></div>'
-    return f'<section class="section section-alt"><div class="wrap"><h2>Related products</h2><div class="grid grid-3">{cards}</div></div></section>'
-
-def product_page(root, slug, parent_label, parent_href, name, meta_title, meta_desc, lede, hero_img,
-                  specs_rows, faqs, related, body_extra="", related_cards=None, sku=None):
-    bc, bc_s = breadcrumb_html([("Home","/"), (parent_label, parent_href), (name, None)])
-    specs = "".join(f"<tr><td>{k}</td><td>{v}</td></tr>" for k,v in specs_rows)
-    content = f"""
-{bc}
-<section class="section">
-  <div class="wrap grid grid-2">
-    <img src="{hero_img}" alt="{name}">
-    <div>
-      <h1>{name}</h1>
-      <p class="hero-lede">{lede}</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="/request-a-quote/">Request a Quote</a>
-        <a class="btn btn-outline" href="/request-a-quote/">Request a Free Sample</a>
-      </div>
-      <h3 style="margin-top:28px">Specifications</h3>
-      <table>{specs}</table>
-    </div>
-  </div>
-</section>
-{body_extra}
-"""
-    if related_cards:
-        rel_section = related_grid(related_cards)
-    else:
-        rel = "".join(f'<a class="btn btn-outline" href="{r[1]}" style="margin-right:10px">{r[0]}</a>' for r in related)
-        rel_section = f'<section class="section section-alt"><div class="wrap"><h3 class="mt0">You may also want</h3>{rel}</div></section>'
-    html = page(meta_title, meta_desc, f"/products/{slug}/", content + rel_section + faq_html(faqs) + rfq_bar(), "",
-                [bc_s, faq_schema(faqs), product_schema(name, meta_desc, hero_img, parent_label, sku=sku)])
-    write_page(root, f"/products/{slug}/", html)
-
-
-# ---- Rich body for the hero coffee-wood product (the strongest commercial product page) ----
-COFFEEWOOD_BODY = """
-<section class="section">
-  <div class="wrap grid grid-2">
-    <div>
-      <h2 class="mt0">Why buyers choose our coffee wood dog chew</h2>
-      <ul class="check-list">
-        <li><strong>Single ingredient</strong> — 100% real coffee wood, no glue, resin, additives or artificial flavour.</li>
-        <li><strong>Splinter-resistant</strong> — wears into soft fibres rather than sharp shards, unlike antler or bone.</li>
-        <li><strong>Long-lasting</strong> — a dense hardwood that outlasts most soft, pressed and rawhide chews.</li>
-        <li><strong>Naturally odourless</strong> — no chemical smell out of the box, with a faint natural aroma dogs are drawn to.</li>
-        <li><strong>Upcycled &amp; sustainable</strong> — cut from retired coffee trees, a story your customers will pay more for.</li>
-      </ul>
-    </div>
-    <img src="/assets/img/dog-chewing-coffeewood.jpg" alt="Dog chewing a natural coffee wood dog chew stick from VietPaw">
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="wrap grid grid-2">
-    <img src="/assets/img/process-raw-sticks.jpg" alt="Raw coffee wood before processing into natural dog chews">
-    <div>
-      <h2 class="mt0">The material &amp; where it comes from</h2>
-      <p>Our coffee wood is sourced in Vietnam's Central Highlands — coffee country — from coffee trees retired at the end of their productive life. Cutting locally keeps the supply chain short and directly supports local farming communities, including ethnic minority households who prepare the raw material. Each piece is naturally dried and finished to retail-ready standards, then held at 12–14% moisture to prevent cracking and mold in transit.</p>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="wrap">
-    <h2>OEM, private label &amp; packaging</h2>
-    <p>Every coffee wood chew can ship under your brand. We offer laser-engraved logos directly on the chew, custom kraft labels, retail-ready and bulk packaging, and Amazon FBA-compliant barcodes and warning labels. Prototype samples are typically ready in about 7 days so you can approve branding before bulk production. <a href="/capabilities/">See private label options &rarr;</a></p>
-    <table>
-      <tr><td>Branding</td><td>Laser logo engraving, custom label &amp; kraft packaging</td></tr>
-      <tr><td>Packaging</td><td>Bulk carton, retail-ready sleeve/box, custom, FBA-ready</td></tr>
-      <tr><td>Moisture control</td><td>Held at 12–14%, vacuum-sealing available for long transit</td></tr>
-    </table>
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="wrap">
-    <h2>Quality control &amp; compliance</h2>
-    <p>Coffee wood chews pass our five-stage QC — raw material, in-process, semi-finished, final product and pre-shipment inspection — with moisture checked by calibrated meters on every batch. Defective goods are covered by a 1-for-1 replacement policy, and we arrange third-party testing (CPSIA, REACH) on request. Export documentation — Certificate of Origin/EUR1, phytosanitary, fumigation and inspection reports — ships with every order. <a href="/certifications/">See certifications &amp; compliance &rarr;</a></p>
-  </div>
-</section>
-<section class="section">
-  <div class="wrap">
-    <h2>Who it's for</h2>
-    <p>The coffee wood dog chew is a proven entry SKU for pet retailers, eco pet shops, Amazon FBA sellers, subscription boxes and private-label brands looking for a differentiated, natural chew. Amazon sellers often pair it with coconut fiber and hemp fiber toys into a combo/gift box to lift average order value — see our <a href="/solutions/amazon-sellers/">Amazon sellers solution</a>.</p>
-  </div>
-</section>
-"""
+def product_cards(slugs):
+    return cards([(PRODUCTS[s]["name"],
+        PRODUCTS[s]["material"]+" · "+PRODUCTS[s]["size"]+". "+PRODUCTS[s]["moq"]+" Private-label options available.",
+        "/products/"+s+"/","/assets/img/"+PRODUCTS[s]["image"]) for s in slugs])
 
 def build(root):
-    product_page(root, "coffee-wood-dog-chew", "Coffee Wood", "/collections/coffee-wood/",
-        "Coffee Wood Dog Chew Stick",
-        f"Coffee Wood Dog Chew Supplier | Wholesale & Private Label | {BRAND}",
-        "Coffee wood dog chew supplier from Vietnam. Natural single-ingredient, splinter-resistant, non-toxic. Wholesale & private label, low MOQ from 50 pcs, laser engraving, full export docs.",
-        "A single-ingredient chew cut from real Vietnamese coffee trees, naturally dried and finished to retail-ready standards. Available in six sizes matched to dog weight, wholesale and private label from a real manufacturer.",
-        "/assets/img/product-coffeewood-stick.jpg",
-        [("Material","100% coffee wood, no additives"),
-         ("Sizes","XS (&lt;3kg) · S (3–5kg) · M (5–8kg) · L (8–12kg) · XL (12–20kg) · XXL (20kg+)"),
-         ("Moisture","12–14%, factory-controlled"),
-         ("MOQ","50 pcs per SKU"),
-         ("Customisation","Laser logo engraving, custom label & packaging"),
-         ("Lead time","15–20 working days standard, 25–30 OEM/ODM")],
-        [("Are coffee wood chews safe for dogs?", "Yes — single natural material, no chemicals, finished splinter-resistant. Choose the correct size and supervise chewing as with any chew."),
-         ("What sizes are available?", "Six sizes from XS to XXL, sized to dog weight from under 3kg to over 20kg. See our full size guide."),
-         ("Can I laser-engrave my logo?", "Yes, directly onto the chew, as part of our OEM/private label service."),
-         ("What is the MOQ and can I get samples first?", "MOQ starts at 50 pcs per SKU. We offer a Trial Box of 3–5 free samples — you cover shipping, refunded on your first order."),
-         ("Do you ship export documents?", "Yes — Certificate of Origin (incl. EUR1), phytosanitary, fumigation and inspection reports ship with every order.")],
-        [("Coffee Wood Collection","/collections/coffee-wood/"), ("Size Guide","/guides/coffee-wood-chew-size-guide/")],
-        body_extra=COFFEEWOOD_BODY,
-        related_cards=[
-            ("Coconut Fiber Dog Ball","Biodegradable fetch ball — pairs into a natural combo box.","/products/coconut-fiber-dog-ball/","/assets/img/dog-coconut-balls-lifestyle.jpg"),
-            ("Hemp Fiber Rope Ball","Tough hemp rope ball for tug and multi-dog play.","/products/hemp-fiber-ball/","/assets/img/product-hemp-ball.jpg"),
-            ("Coffee Wood Collection","Explore the full coffee wood range, sizes and formats.","/collections/coffee-wood/","/assets/img/product-coffeewood-single.jpg"),
-        ],
-        sku="VP-CW-CHEW")
-
-    product_page(root, "coconut-fiber-cat-ball", "Coconut Fiber", "/collections/coconut-fiber/",
-        "Coconut Fiber Cat Ball",
-        f"Coconut Fiber Cat Ball | Natural, Plastic-Free | Wholesale | {BRAND}",
-        "Natural coconut fiber cat ball, wholesale from Vietnam. Biodegradable, plastic-free, naturally textured. Low MOQ, OEM & private label.",
-        "A springy, naturally textured ball made from coconut husk fibre — light enough to bat, tough enough to last.",
-        "/assets/img/product-coconut-ball-sizes.jpg",
-        [("Material","100% coconut fiber"),
-         ("Sizes","S / M / L"),
-         ("MOQ","50–100 pcs per SKU"),
-         ("Customisation","Custom label & kraft packaging"),
-         ("Lead time","15–20 working days standard")],
-        [("Is this safe for cats?", "Yes — natural coconut husk fibre, cleaned and dried with no chemical treatment."),
-         ("What's the minimum order?", "From 50–100 pcs per SKU depending on size.")],
-        [("Coconut Fiber Collection","/collections/coconut-fiber/"), ("Cat Toys","/cat-toys/balls/")],
-        sku="VP-CF-CATBALL")
-
-    product_page(root, "coconut-fiber-dog-ball", "Coconut Fiber", "/collections/coconut-fiber/",
-        "Coconut Fiber Dog Ball",
-        f"Coconut Fiber Dog Ball | Wholesale | {BRAND}",
-        "Wholesale coconut fiber dog fetch ball from Vietnam. Biodegradable, durable, plastic-free. Low MOQ, private label available.",
-        "A durable, biodegradable fetch ball sized for daily play, in three sizes to suit small through large dogs.",
-        "/assets/img/dog-coconut-balls-lifestyle.jpg",
-        [("Material","100% coconut fiber"),
-         ("Sizes","S / M / L"),
-         ("MOQ","50–100 pcs per SKU"),
-         ("Lead time","15–20 working days standard")],
-        [("Is it durable enough for daily fetch?", "Yes, for normal fetch and carry play. It is not designed for aggressive power-chewing — pair with coffee wood for that use case."),
-         ("Can this be private labelled?", "Yes, with custom tags and kraft packaging.")],
-        [("Coconut Fiber Collection","/collections/coconut-fiber/"), ("Fetch & Ball Toys","/dog-toys/fetch-toys/")],
-        sku="VP-CF-DOGBALL")
-
-    product_page(root, "loofah-cat-toy", "Loofah", "/collections/loofah/",
-        "Loofah Cat & Small Pet Toy",
-        f"Loofah Cat Toy | Biodegradable Shapes | Wholesale | {BRAND}",
-        "Wholesale loofah cat and small-pet toy from Vietnam. Biodegradable, naturally textured, mouse/fish/rabbit and other shapes. Low MOQ, OEM available.",
-        "Dried loofah gourd fibre shaped into playful forms for cats and small animals — naturally textured for dental chewing.",
-        "/assets/img/product-loofah-basket.jpg",
-        [("Material","100% dried loofah fibre"),
-         ("Shapes","Mouse, teddy bear, fish, fish-with-tail, rabbit, duck, bone and more"),
-         ("Size range","Approx. 4–16 cm"),
-         ("MOQ","100 pcs per SKU (mixed-shape trial cartons available)"),
-         ("Lead time","15–20 working days standard")],
-        [("Is loofah safe for rabbits and small pets?", "Yes — natural plant fibre commonly used for dental chewing in small animals."),
-         ("Can shapes be customised?", "Yes, custom shapes and catnip-fill options are available on OEM runs.")],
-        [("Loofah Collection","/collections/loofah/"), ("Cat Toys","/cat-toys/catnip-toys/")],
-        sku="VP-LF-CATTOY")
-
-    product_page(root, "hemp-fiber-ball", "Hemp Fiber", "/collections/hemp-fiber/",
-        "Hemp Fiber Rope Ball",
-        f"Hemp Fiber Rope Ball | Wholesale | {BRAND}",
-        "Wholesale hemp fiber rope ball dog toy from Vietnam. Durable, plastic-free, biodegradable. Low MOQ, OEM & private label.",
-        "A tightly wound hemp fiber ball built for tug, fetch and chew — a plastic-free alternative to synthetic rope toys.",
-        "/assets/img/product-hemp-ball.jpg",
-        [("Material","100% hemp fiber"),
-         ("Sizes","S / M / L"),
-         ("MOQ","50–100 pcs per SKU"),
-         ("Lead time","15–20 working days standard")],
-        [("Is hemp fiber tougher than coconut fiber?", "Generally yes for tug and rope applications — hemp strands are longer and higher tensile strength."),
-         ("Can I mix this into a combo box?", "Yes — many Amazon sellers combine coffee wood, coconut fiber and hemp fiber into a single gift/combo box for higher AOV.")],
-        [("Hemp Fiber Collection","/collections/hemp-fiber/"), ("Amazon Sellers Solution","/solutions/amazon-sellers/")],
-        sku="VP-HF-BALL")
-
-if __name__ == "__main__":
-    import sys
-    build(sys.argv[1] if len(sys.argv) > 1 else "site")
+    for slug,d in PRODUCTS.items():
+        path="/products/"+slug+"/"
+        image="/assets/img/"+d["image"]
+        specifications=table(["Specification","Details"],[
+            ("Material",d["material"]+"; confirm complete component list"),
+            ("Sizes",d["size"]),("MOQ",d["moq"]),
+            ("Branding","Laser engraving for suitable wood; labels, tags or boxes for fiber products."),
+            ("Sample","Request a sample of this exact product and chosen packaging."),
+            ("OEM / ODM","Custom construction is subject to feasibility, sample approval and separate quotation.")])
+        sections=[
+            section("Product overview",p(d["overview"])),
+            section("Product specifications",specifications+(coffee_size_table() if slug=="coffee-wood-dog-chew" else ""),True),
+            section("Sizes, formats and private-label options",ul(d["options"])+p('For branding an existing item, see <a href="/services/private-label-pet-toys/">private-label pet toys</a>. For structural changes, use our <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development service</a>.')),
+            section("Quality control and use instructions",ul(d["checks"])+p(SAFETY)+trust_links(),True),
+            section("Packaging, samples and export planning",terms(d["moq"])+p("Natural-material products are not interchangeable with their packaging. Confirm the bag film, paper coating, inks, adhesive and desiccant separately, especially for a plastic-free retail brief.")),
+            section("Recommended buyers and related products",p("Suitable sourcing conversations include pet brands, wholesalers and retailers building a sample-approved natural-material range. Marketplace acceptance and retail suitability remain specific to your listing and target market.")+
+                p(f'<a href="/collections/{d["collection"]}/">Explore the {d["group"].lower()} wholesale collection</a> or <a href="/services/wholesale-pet-products/">plan a mixed-product wholesale order</a>.'),True)]
+        schema={"@context":"https://schema.org","@type":"Product","@id":BASE_URL+path+"#product",
+            "name":d["name"],"description":d["lede"],"url":BASE_URL+path,"image":BASE_URL+image,
+            "material":d["material"],"brand":{"@type":"Brand","name":BRAND},
+            "manufacturer":{"@type":"Organization","name":LEGAL_NAME}}
+        publish(root,path,d["name"]+" | Wholesale & Private Label | WINVN",
+            f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.',
+            d["name"]+" — Wholesale & Private Label",d["lede"],sections,image=image,product=d["name"],
+            trail=[("Home","/"),(d["group"],"/collections/"+d["collection"]+"/"),(d["name"],None)],
+            faqs=[("Can I order this exact sample?", "Yes, request the product, size and packaging combination. We confirm availability, any sample charge and courier cost before dispatch."),
+                  ("Are the photos and dimensions a binding specification?", "No. Photos show the range and natural variation. The agreed sample, drawing and purchase-order specification define the supplied product."),
+                  ("Is private labeling available?", "Discuss the artwork, packaging and order quantity with us. New shapes, printed boxes and special finishes may have separate minimums and costs.")],
+            schemas=[schema])
