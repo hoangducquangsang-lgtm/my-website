@@ -1,5 +1,19 @@
 # VietPaw — cập nhật URL, nhận diện và B2B leads
 
+## Bổ sung theo yêu cầu title và canonical mới nhất
+
+- Materials: Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw.
+- Factory: Pet Toy Factory Vietnam | VietPaw.
+- Quality Control: Pet Toy Quality Control | VietPaw.
+- Wholesale: Wholesale Natural Pet Products Supplier | VietPaw.
+- Manufacturer: Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw.
+- Contact giữ H1 “Talk to VietPaw About Your Next Product” và “VietPaw sales contact”; thêm ngay trong nội dung câu “VietPaw is the international B2B/export brand of WINVN INT CO., LTD.”.
+- Title, Open Graph và Twitter dùng VietPaw; WINVN được giữ ở phần pháp nhân/nhà sản xuất. Thêm kiểm tra chặn title WINVN và đường dẫn canonical index.html khi tạo trang.
+- Kiểm tra trực tiếp mới nhất đã mở rộng tới 14 cặp URL: mỗi cặp trả cùng nội dung, cả hai đều 200, không có 301. Tất cả title kiểm tra trực tiếp đều dùng VietPaw. Các trích dẫn cũ từ kết quả tìm kiếm không đại diện cho phản hồi hiện tại. Bằng chứng: _source/review/brand_url_live_audit.json.
+- Cấu hình 301 đã chuẩn bị trong _source/hosting/, nhưng CHƯA kích hoạt. GitHub Pages đang phục vụ cả URL sạch và tên tệp index.html. Không xóa index.html vì đó là tệp cung cấp nội dung cho URL sạch. Không dùng JavaScript hoặc meta refresh để giả lập HTTP 301.
+- Cần lựa chọn và quyền quản lý lớp chuyển hướng (ví dụ Cloudflare trước GitHub Pages) để hoàn tất 301. Chưa thay DNS, chưa đẩy bản cập nhật này lên hosting và chưa thao tác Search Console.
+- Kiểm tra bổ sung: python -B _source/test_brand_urls.py .
+
 Thư mục chính: D:\1. Vietpaw\my-website. Thực hiện theo tệp audit mới do chủ website cung cấp; các bản trước là lịch sử.
 
 ## Đã sửa trong mã nguồn

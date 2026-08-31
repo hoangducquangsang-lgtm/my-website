@@ -12,7 +12,8 @@ BASE_URL = f"https://{DOMAIN}"
 BRAND = "VietPaw"
 LEGAL_NAME = "WINVN INT CO., LTD."
 BRAND_TAGLINE = f"by {LEGAL_NAME}"
-BRAND_RELATIONSHIP = f"{BRAND} is the international B2B/export brand of {LEGAL_NAME}, a Vietnamese pet-product manufacturer."
+BRAND_ENTITY_STATEMENT = f"{BRAND} is the international B2B/export brand of {LEGAL_NAME}"
+BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, a Vietnamese pet-product manufacturer."
 BRAND_INTRO = f"{BRAND} brings natural-material pet toys from Vietnam to international brands, wholesalers and retailers."
 # Current audit brief: VietPaw is the site brand; the manufacturer is identified in legal contexts.
 CONTRACT_NOTICE = f"Contracting manufacturer: {LEGAL_NAME} Confirm the registered details, payment beneficiary and agreed terms in your quotation, invoice and contract before placing an order."
@@ -130,6 +131,11 @@ def brand_schema():
 
 def page(title, meta_description, path, content, active_top="", schemas=None,
          og_image="/assets/img/winvn-natural-toy-assortment.png", noindex=False):
+    # VietPaw is the public site brand; WINVN is identified in manufacturer/legal data.
+    if re.search(r"\bWINVN\b", title, re.I) or not re.search(r"\bVietPaw\b", title):
+        raise ValueError(f"Public page title must use VietPaw, not WINVN: {title}")
+    if not path.startswith("/") or not path.endswith("/") or "index.html" in path or "?" in path or "#" in path:
+        raise ValueError(f"Page path must be a clean canonical directory URL: {path}")
     canonical = BASE_URL+path
     content = responsive_markup(content)
     og_image = optimized_url(og_image)

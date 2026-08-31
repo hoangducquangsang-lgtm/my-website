@@ -4,7 +4,7 @@ from content_helpers import publish, section, p, ul, table, cards, terms, trust_
 from content_products import product_cards
 
 def build(root):
-    publish(root,"/pet-toys-manufacturer-vietnam/","Vietnam Production & Sourcing for Pet Brands | VietPaw",
+    publish(root,"/pet-toys-manufacturer-vietnam/","Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
         "Source natural pet toys through VietPaw. Review Vietnam production, OEM/ODM, quality control, samples and order-specific manufacturing information.",
         "Natural Pet Toy Manufacturer in Vietnam for B2B Brands",
         "Source coffee wood, coconut fiber, hemp and loofah pet toys through VietPaw with product specifications, production checks and order-specific documentation.",
@@ -123,7 +123,7 @@ def build(root):
         faqs=[("Is there a universal wholesale price list?", "Request current pricing for the actual product, quantities and pack. Catalogue examples are not binding quotations."),
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
-    publish(root,"/factory/","Factory Review & Production Checks for Buyers | VietPaw",
+    publish(root,"/factory/","Pet Toy Factory Vietnam | VietPaw",
         "Explore Vietnam production for the VietPaw range, including coffee wood processing, factory information and order-specific records.",
         "Factory Review for Your VietPaw Order",
         "Understand where and how your selected product is made. Use the supplier information below to prepare a current, product-specific factory review.",
@@ -149,7 +149,7 @@ def build(root):
         active="Manufacturing",image="/assets/img/process-raw-sticks.jpg",
         faqs=[("Is annual capacity a guaranteed order lead time?", "No. Capacity depends on the product mix, material availability, packing work and production schedule."),
               ("Can I arrange a factory visit?", "Request the current site address, contact, scope and appointment before traveling. Confirm whether a third-party inspection is needed.")])
-    publish(root,"/quality-control/","Pet Toy Quality Control | Inspection Workflow | VietPaw",
+    publish(root,"/quality-control/","Pet Toy Quality Control | VietPaw",
         "Coffee wood follows a six-stage drying/quality protocol with five QC checkpoints. Review batch moisture below 14% before packing and inspection records.",
         "Quality Control for Natural Pet Toy Orders",
         "Coffee wood follows a "+QC_PROTOCOL+". Use an approved sample, agreed acceptance criteria and batch-linked records to review your order.",

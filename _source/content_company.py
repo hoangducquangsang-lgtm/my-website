@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS
+from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, BRAND_ENTITY_STATEMENT, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS
 from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
 from content_materials import MATERIALS
 from forms import quote_form, catalogue_form
@@ -141,7 +141,7 @@ def build(root):
         "Contact Sarah at VietPaw for natural pet toy samples, wholesale quotations, private-label packaging and OEM/ODM projects in Vietnam.",
         "Talk to VietPaw About Your Next Product",
         "Share the product, destination and expected order quantity. Add your branding, packaging and timing requirements so we can respond to the right brief.",
-        [section("VietPaw sales contact",p(BRAND_INTRO)+p(CONTRACT_NOTICE)+
+        [section("VietPaw sales contact",p(BRAND_ENTITY_STATEMENT)+p(BRAND_INTRO)+p(CONTRACT_NOTICE)+
             ul([f'Email: <a href="mailto:{EMAIL}">{EMAIL}</a>',f'Phone: <a href="tel:{PHONE_TEL}">{PHONE}</a>',
                 f'WhatsApp: <a href="https://wa.me/{PHONE_TEL[1:]}">Open a conversation</a>',"Registered head office: "+ADDRESS])+
             p("Your contact: Sarah. Share your destination market, product selection and quantities so we can prepare the right sample and quotation options.")),
