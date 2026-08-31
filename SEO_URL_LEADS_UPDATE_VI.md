@@ -3,7 +3,7 @@
 ## Bổ sung theo yêu cầu title và canonical mới nhất
 
 - Materials: Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw.
-- Factory: Pet Toy Factory Vietnam | VietPaw.
+- Factory (yêu cầu mới nhất): Pet Toy Factory Vietnam | Process & Verification | VietPaw.
 - Quality Control: Pet Toy Quality Control | VietPaw.
 - Wholesale: Wholesale Natural Pet Products Supplier | VietPaw.
 - Manufacturer: Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw.

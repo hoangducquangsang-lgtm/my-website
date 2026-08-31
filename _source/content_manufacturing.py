@@ -123,7 +123,7 @@ def build(root):
         faqs=[("Is there a universal wholesale price list?", "Request current pricing for the actual product, quantities and pack. Catalogue examples are not binding quotations."),
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
-    publish(root,"/factory/","Pet Toy Factory Vietnam | VietPaw",
+    publish(root,"/factory/","Pet Toy Factory Vietnam | Process & Verification | VietPaw",
         "Explore Vietnam production for the VietPaw range, including coffee wood processing, factory information and order-specific records.",
         "Factory Review for Your VietPaw Order",
         "Understand where and how your selected product is made. Use the supplier information below to prepare a current, product-specific factory review.",

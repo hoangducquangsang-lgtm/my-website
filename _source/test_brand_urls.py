@@ -13,7 +13,7 @@ from validate_site import Document
 
 EXPECTED_TITLES = {
     "/materials/": "Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw",
-    "/factory/": "Pet Toy Factory Vietnam | VietPaw",
+    "/factory/": "Pet Toy Factory Vietnam | Process & Verification | VietPaw",
     "/quality-control/": "Pet Toy Quality Control | VietPaw",
     "/services/wholesale-pet-products/": "Wholesale Natural Pet Products Supplier | VietPaw",
     "/pet-toys-manufacturer-vietnam/": "Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
