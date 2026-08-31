@@ -82,7 +82,7 @@ def terms(moq=MOQ):
         ("Shipping","Confirm destination, Incoterm with named place, transport mode, carton data and the shipment-specific document list. Freight is not included unless stated.")])
 
 def trust_links():
-    return p(f'Review <a href="/factory/">factory and production information</a>, the coffee wood <a href="/quality-control/">{QC_PROTOCOL}</a>, <a href="/certifications/">testing and export-document scope</a> and the <a href="/proof/">Proof document register</a> before approving your order.')
+    return p(f'Review <a href="/factory/">factory and production information</a>, the coffee wood <a href="/quality-control/">{QC_PROTOCOL}</a> and <a href="/certifications/">testing and export-document scope</a> before approving your order.')
 
 def publish(root,path,title,description,h1,lede,sections,active="",image=None,faqs=(),trail=None,noindex=False,product=None,schemas=()):
     bc,bs=breadcrumb_html(trail or [("Home","/"),(h1,None)])

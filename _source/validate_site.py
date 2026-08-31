@@ -14,6 +14,7 @@ import xml.etree.ElementTree as ET
 from urllib.request import urlopen
 from datetime import date
 from guide_dates import GUIDE_UPDATED_DATES, updated_time
+from retired_content import assert_retired_files_absent, is_retired_path
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
@@ -88,16 +89,20 @@ def html_target(source, link):
     return target/"index.html" if target.is_dir() else target
 
 def run():
+    assert_retired_files_absent(ROOT)
     errors=[]
     warnings=[]
     docs={}
     manifest=json.loads((ROOT/"_source/page_manifest.json").read_text(encoding="utf-8"))
+    assert "/proof/" not in manifest, "Proof must remain removed from the page manifest"
     def check(ok,message):
         if not ok: errors.append(message)
     for file in sorted(ROOT.rglob("index.html")):
         if "_source" in file.parts: continue
         d=Document()
         html=file.read_text(encoding="utf-8")
+        check(not re.search(r"(?:^|[ /])proof/|proof-(?:co-form-vj|fumigation-2021|phytosanitary-specimen|surrendered-bl-2022)", html, re.I),
+              f"{file}: retired Proof link or scan is referenced")
         try: d.feed(html)
         except Exception as exc:
             errors.append(f"{file}: parse/schema error {exc}")
@@ -275,6 +280,8 @@ def run():
                 prefix=ROOT.name+"/"
                 if not norm.startswith(prefix): continue
                 rel=norm[len(prefix):]
+                if is_retired_path(rel):
+                    continue
                 if rel.endswith("index.html"):
                     old_routes.add(rel)
                     check((ROOT/rel).exists(),"Existing URL deleted: "+rel)

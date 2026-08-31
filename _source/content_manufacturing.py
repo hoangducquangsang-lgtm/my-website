@@ -145,7 +145,7 @@ def build(root):
             "Quality checkpoints, measuring equipment and sample/lot identification.",
             "Subcontracting disclosure and arrangements for buyer or independent inspection.",
             "Authorized, appropriately redacted shipment examples where relevant."])+
-            p('<a href="/quality-control/">Review the quality-control workflow</a>, <a href="/certifications/">document scope</a> and the <a href="/proof/">Proof document register</a> before agreeing the inspection brief.'),True)],
+            p('<a href="/quality-control/">Review the quality-control workflow</a> and <a href="/certifications/">document scope</a> before agreeing the inspection brief.'),True)],
         active="Manufacturing",image="/assets/img/process-raw-sticks.jpg",
         faqs=[("Is annual capacity a guaranteed order lead time?", "No. Capacity depends on the product mix, material availability, packing work and production schedule."),
               ("Can I arrange a factory visit?", "Request the current site address, contact, scope and appointment before traveling. Confirm whether a third-party inspection is needed.")])

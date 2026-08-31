@@ -65,7 +65,7 @@ def build(root):
             ("Website / site name",BRAND),("Commercial / export brand",BRAND),
             ("Contracting manufacturer",LEGAL_NAME),("Manufacturing base","Vietnam"),("Manufacturer registered in Vietnam",REGISTRATION_DATE),
             ("VietPaw sales email",EMAIL),("VietPaw sales phone",PHONE),("Registered head office",ADDRESS)])+
-            p(CONTRACT_NOTICE)+p('VietPaw handles the commercial range and export enquiries. Corporate history, company registration and the complete manufacturing range are presented on the <a href="https://www.winvnint.com/">manufacturer’s corporate website</a>. Historical document examples do not replace current company verification.')+p('<a href="/proof/">Review the Proof document register</a> and request records relevant to your order.'),True),
+            p(CONTRACT_NOTICE)+p('VietPaw handles the commercial range and export enquiries. Corporate history, company registration and the complete manufacturing range are presented on the <a href="https://www.winvnint.com/">manufacturer’s corporate website</a>.')+p('Contact us to request current company and shipment records relevant to your order.'),True),
          section("What we support",cards([
             ("Manufacturing review","Locations, process and a capacity discussion for your SKU mix.","/factory/"),
             ("Quality planning","An approved reference sample; coffee wood follows a "+QC_PROTOCOL+".","/quality-control/"),

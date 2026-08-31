@@ -15,7 +15,7 @@ Yêu cầu mới trong tệp audit thay thế quy tắc “chỉ hai tagline” 
 - assets/local-preview.js chỉ đổi liên kết khi mở bằng file://, giúp xem offline. Trên HTTP(S), script không đổi liên kết và không giả lập 301.
 - Form báo giá: 5 trường bắt buộc; tùy chọn số lượng, sourcing, WhatsApp, message và 1 tệp tối đa 5 MB. CTA **Get Samples & Pricing**. Nhận tệp thật phụ thuộc gói/cấu hình Formspree.
 - Catalogue vẫn tải ngay; form bảng giá bên cạnh là tùy chọn, không đăng ký newsletter.
-- Proof vẫn không có trong menu Manufacturing; trang, ảnh và ghi chú giới hạn được giữ.
+- Proof đã được gỡ hoàn toàn theo yêu cầu mới nhất: không còn trang, bộ tạo trang, liên kết nội bộ, mục sitemap hoặc 4 PNG/24 WebP chứng từ trên website. Bản sao lưu nằm ngoài thư mục website.
 - Chỉ chuẩn bị cấu hình 301, chưa thay đổi DNS/CDN/hosting, chưa gửi Google lập chỉ mục.
 
 Báo cáo hiện hành: **SEO_URL_LEADS_UPDATE_VI.md**. Những báo cáo/quy tắc nhận diện bên dưới là lịch sử, không được ghi đè yêu cầu mới nhất.
@@ -24,24 +24,24 @@ Báo cáo hiện hành: **SEO_URL_LEADS_UPDATE_VI.md**. Những báo cáo/quy t�
 
 Mở `index.html` hoặc chạy một static server tại thư mục này. HTML/ảnh/liên kết nội bộ dùng đường dẫn tương đối để giữ cách xem offline. Trang có canonical theo `https://vietpaw.com/`.
 
-Xem **VIETPAW_BRAND_PROOF_UPDATE_VI.md** cho nhận diện thương hiệu–pháp nhân và lịch sử bổ sung trang **Proof**. Liên kết Proof trong menu Manufacturing đã được gỡ theo yêu cầu mới nhất. **COMMERCIAL_POLICY_UPDATE_VI.md** ghi điều kiện thương mại vẫn áp dụng: đăng ký năm 2019, bỏ claim biodegradable, MOQ private label 500, mẫu, lead time, độ ẩm, QC và địa chỉ pháp lý. Những báo cáo trước đó được giữ làm lịch sử, không dùng quy ước thương hiệu cũ để ghi đè cấu trúc hiện hành.
+Trang Proof và ảnh chứng từ đã được rút khỏi website. **VIETPAW_BRAND_PROOF_UPDATE_VI.md** chỉ là lịch sử của lần công khai trước, không còn là yêu cầu hiện hành. **COMMERCIAL_POLICY_UPDATE_VI.md** ghi điều kiện thương mại vẫn áp dụng: đăng ký năm 2019, bỏ claim biodegradable, MOQ private label 500, mẫu, lead time, độ ẩm, QC và địa chỉ pháp lý. Không dùng báo cáo lịch sử để khôi phục nội dung đã gỡ.
 
 ## Quy mô
 
-- **68 trang HTML**, gồm trang Proof mới tại `/proof/`; các URL đã có được giữ nguyên.
+- **67 trang HTML**; chỉ trang `/proof/` bị gỡ, các trang còn lại được giữ nguyên.
 - 20 guide, 6 sản phẩm, 4 collection vật liệu, 6 giải pháp khách hàng.
-- 66 URL trong sitemap; `/case-studies/` và `/request-a-quote/thank-you/` dùng `noindex,follow`.
+- 65 URL trong sitemap; `/case-studies/` và `/request-a-quote/thank-you/` dùng `noindex,follow`.
 - Cấu trúc SEO hiện hành: Brand/WebSite dùng VietPaw; Organization/legalName/manufacturer dùng WINVN INT CO., LTD. theo audit mới. BreadcrumbList, Product và Article được đồng bộ. Không tự tạo giá, rating, GTIN hay chứng nhận.
 - Đã thay mọi tham chiếu tới 8 ảnh nền đen bằng ảnh trong thư mục được cung cấp; ảnh kiểm tra độ ẩm dùng đúng `Bản sao của kiem_go_9.jpg`.
 - 20 bài Guides được viết lại và ghi tác giả Sarah trong nội dung lẫn metadata.
 - Chân trang theo nội dung chủ website yêu cầu, gồm 40+ countries và email `sarah@vietpaw.com`.
-- Header/footer, tiêu đề và metadata trên 68 trang được đồng bộ theo audit mới. Giữ đăng ký tại Việt Nam năm 2019, địa chỉ pháp lý đầy đủ và không quảng cáo “biodegradable”.
+- Header/footer, tiêu đề và metadata trên 67 trang được đồng bộ theo audit mới. Giữ đăng ký tại Việt Nam năm 2019, địa chỉ pháp lý đầy đủ và không quảng cáo “biodegradable”.
 - 31 bảng điều kiện đặt hàng dùng chung đã đồng bộ MOQ, 3 mẫu miễn phí/khách trả courier, thời gian sản xuất theo quy mô và chứng từ theo yêu cầu sản phẩm/thị trường.
 - Bốn collection là phạm vi pet toys/chews của website, không phải toàn bộ catalogue WINVN; đã ghi rõ dòng Pet Beds trong catalogue rộng hơn.
 - 30 tài nguyên cũ vẫn còn để phục hồi/giữ liên kết cũ, nhưng ảnh nền đen không còn được trang nào gọi. Ảnh mới giữ nguyên dữ liệu ảnh gốc.
 - Biểu mẫu 5 trường và nút **Send Enquiry** được khôi phục từ folder cũ; gửi đến điểm nhận Formspree có sẵn `https://formspree.io/f/mvkpbvlb`. Chưa kiểm tra gửi/nhận email thật hoặc trạng thái tài khoản nhận.
-- 26 ảnh nội dung/chia sẻ có 155 phiên bản WebP trong `assets/img/webp/`; 89 vị trí ảnh dùng `srcset`, `sizes` và kích thước nội tại. Gồm bốn ảnh Proof mới. Ảnh gốc và favicon PNG cũ được giữ để phục hồi; website dùng favicon chữ VP mới.
-- Theo yêu cầu công khai mới nhất của chủ website, Proof hiển thị bốn bản scan với ảnh xem trước WebP và liên kết mở/tải PNG gốc trong `assets/img/proof/`. Các ghi chú hồ sơ lịch sử/tài liệu mẫu và khác biệt pháp nhân vẫn được giữ; không đặt chúng làm chứng nhận hiện hành của WINVN INT CO., LTD.
+- 22 ảnh nội dung/chia sẻ có 131 phiên bản WebP trong `assets/img/webp/`; 85 vị trí ảnh dùng `srcset`, `sizes` và kích thước nội tại. Các ảnh sản phẩm và quy trình không thay đổi.
+- Không phục vụ 4 PNG và 24 WebP chứng từ của Proof. Bản sao giữ trong `D:\1. Vietpaw\_VietPaw_backups\Website-before-remove-Proof-20260831.zip`, ngoài thư mục website và không được xuất bản.
 - Menu chỉ mở một nhóm tại một thời điểm; đóng khi bấm ra ngoài, chọn liên kết, nhấn Esc hoặc chuyển tiêu điểm ra ngoài menu.
 - 20 ngày hiển thị trong Guides cách nhau 3–4 ngày, từ 25/06 đến 30/08/2026, theo thứ tự thẻ bài. Đây là lịch hiển thị do chủ website yêu cầu, không phải lịch sử sửa tệp được xác minh.
 
@@ -56,8 +56,9 @@ python _source/build.py
 python _source/validate_site.py --raw-materials "<thu-muc-anh-nguon>"
 node _source/test_rfq.cjs
 node _source/test_navigation.cjs
-python _source/test_responsive_images.py "../_VietPaw_backups/Website-before-VietPaw-export-brand-20260831-090828.zip"
-python _source/test_seo_leads.py "<backup-ngay-truoc-audit-URL.zip>"
+python _source/test_proof_removal.py "<backup-truoc-khi-go-Proof.zip>"
+python _source/test_seo_leads.py "<backup-truoc-khi-go-Proof.zip>"
+python _source/test_brand_urls.py "."
 node _source/test_local_preview.cjs
 python _source/package_public.py "<duong-dan-zip-moi-ben-ngoai-website>"
 ```
@@ -68,7 +69,7 @@ Nếu có local server tại 127.0.0.1:8765, có thể thêm `--http` vào lện
 
 Ngày Guides được lưu cố định theo từng đường dẫn trong `_source/guide_dates.py`, không tự thay theo ngày chạy build. Menu dùng `assets/navigation.js`; ảnh hai sản phẩm hemp được chọn trong `_source/content_products.py` và tự đồng bộ sang thẻ sản phẩm, ảnh chia sẻ, dữ liệu cấu trúc.
 
-Thông tin pháp lý và nhận diện dùng chung nằm trong `_source/common.py`; MOQ, mẫu, lead time, QC, độ ẩm và chứng từ dùng chung nằm trong `_source/content_helpers.py`. Nội dung Proof nằm trong `_source/content_proof.py`. Không đổi tên pháp nhân trên ảnh chứng từ. Bộ kiểm tra lịch sử `test_brand_consistency.py` kiểm tra mỗi trang có đúng hai tagline chứa tên nhà sản xuất, không còn tên này trong nội dung/metadata, không có Proof trong menu và bảo toàn ảnh/biểu mẫu/Guides cùng 31 bảng thương mại. `test_brand_proof.py` giữ lại để đối chiếu snapshot VietPaw/Proof trước khi gỡ mục menu; không dùng kỳ vọng menu lịch sử để kiểm tra bản hiện tại. `test_commercial_policy.py` và chế độ `--legacy-editorial-copy` chỉ dành cho các snapshot lịch sử tương ứng, không phải toàn bộ site hiện tại đã thêm Proof.
+Thông tin pháp lý và nhận diện dùng chung nằm trong `_source/common.py`; MOQ, mẫu, lead time, QC, độ ẩm và chứng từ dùng chung nằm trong `_source/content_helpers.py`. `content_proof.py` và bộ kiểm tra tích hợp Proof cũ đã được gỡ. `retired_content.py` ngăn việc build/đóng gói khi trang hoặc ảnh Proof bị đưa lại vào website. `test_proof_removal.py` kiểm tra nội dung đã rút và bảo toàn các trang, ảnh, form, ngày Guides, bảng thương mại còn lại. Các bài kiểm tra snapshot lịch sử như `test_brand_consistency.py`, `test_responsive_images.py`, `test_commercial_policy.py` không phải tiêu chí chấp nhận cho bản hiện hành; không phục hồi trang/ảnh Proof để đáp ứng kỳ vọng cũ.
 
 ## Hồ sơ nội bộ
 
@@ -79,7 +80,7 @@ Thông tin pháp lý và nhận diện dùng chung nằm trong `_source/common.p
 - `_source/review/responsive_images.json`: nguồn gốc, kích thước và dung lượng từng bản WebP.
 - `_source/review/webp_validation.json`: kiểm tra bảo toàn ảnh/nội dung và ước tính dung lượng theo màn hình.
 - `_source/review/commercial_policy_validation.json`: kiểm tra điều kiện thương mại mới và bảo toàn ảnh, menu, form, URL, tác giả/ngày Guides.
-- `_source/review/brand_proof_validation.json`: kiểm tra nhận diện hiện hành, Proof và đối chiếu hash bốn PNG công khai với tài liệu nguồn.
+- `_source/review/brand_proof_validation.json`: hồ sơ lịch sử trước khi rút Proof; không phản ánh trạng thái công khai hiện hành.
 - Backup trước khi sửa: `../_VietPaw_backups/VietPaw-before-SEO-2026-08-30.zip`.
 - Backup trước đợt đổi thương hiệu: `../_VietPaw_backups/Website-before-WINVN-2026-08-30.zip`.
 - Backup trước đợt biểu mẫu/WebP: `../_VietPaw_backups/Website-before-form-webp-20260830-203740.zip`.
@@ -96,6 +97,6 @@ Chưa có thao tác xuất bản trong lần chỉnh này. Tên miền canonical
 
 Kiểm tra trước khi public: địa điểm sản xuất/công suất, size hiện hành, điều khoản theo từng đơn hàng, đổi trả và hồ sơ testing. Claim biodegradable đã bị xóa khỏi footer; bài giáo dục giải thích điều kiện chứng minh claim được giữ, không phải quảng cáo sản phẩm đã được kiểm nghiệm. Bộ Proof có tài liệu tên công ty khác và mẫu DRAFT; không dùng như chứng chỉ đã xác minh.
 
-Khi triển khai, chỉ đưa các trang HTML, assets cần thiết, robots.txt và sitemap.xml vào gói public. Bốn PNG tại `assets/img/proof/` và bản WebP dẫn xuất đã được chủ website cho phép hiển thị/tải công khai. **Không đưa `_source/`, các báo cáo nội bộ, tài liệu nghiên cứu PDF ở root hoặc backup lên public.** robots.txt không phải cơ chế bảo mật. Bản catalogue đang được liên kết có tên `winvn-wholesale-catalogue.pdf`, nội dung giữ nguyên tài liệu WINVN đã cung cấp.
+Khi triển khai, chỉ đưa các trang HTML, assets cần thiết, robots.txt và sitemap.xml vào gói public. **Không xuất bản lại trang hoặc ảnh Proof**; quyền công khai trước đây đã được thay thế bằng yêu cầu gỡ hoàn toàn. **Không đưa `_source/`, các báo cáo nội bộ, tài liệu nghiên cứu PDF ở root hoặc backup lên public.** robots.txt không phải cơ chế bảo mật. Bản catalogue đang được liên kết có tên `winvn-wholesale-catalogue.pdf`, nội dung giữ nguyên tài liệu WINVN đã cung cấp. Việc gỡ tệp khỏi bản hiện hành không xóa lịch sử Git; muốn xóa lịch sử cần một thao tác riêng được cho phép.
 
 Điểm nhận Formspree cũ đã được khôi phục trong mã, nhưng cần chủ website kiểm tra tài khoản, hộp thư nhận, giới hạn tên miền và gửi một yêu cầu thật trên tên miền triển khai. Không tự động nhập lại mã Google Analytics từ bản cũ. Việc kết nối CRM, đăng lên server/domain hiện hành, GSC và kiểm tra Core Web Vitals cần một bước triển khai riêng được cho phép. Không có điểm SEO hoặc kết quả ranking được đo trong lần này.

@@ -55,7 +55,6 @@
     "/products/hemp-fiber-ball/",
     "/products/hemp-rope-dog-toy/",
     "/products/loofah-cat-toy/",
-    "/proof/",
     "/quality-control/",
     "/request-a-quote/",
     "/request-a-quote/thank-you/",
@@ -72,7 +71,7 @@
     "/sustainability/",
     "/wholesale-catalogue/"
   ],
-  "index_redirects": 272,
+  "index_redirects": 268,
   "preserve_query_string": true,
   "notes": [
     "GitHub Pages does not execute this CSV or Cloudflare rules.",

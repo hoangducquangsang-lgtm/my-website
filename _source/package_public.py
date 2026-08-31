@@ -5,6 +5,7 @@ import json
 import sys
 import zipfile
 from validate_site import Document, ROOT
+from retired_content import assert_retired_files_absent, is_retired_path
 
 def strings(value):
     if isinstance(value, dict):
@@ -15,6 +16,7 @@ def strings(value):
         yield value
 
 def package(destination):
+    assert_retired_files_absent(ROOT)
     target=Path(destination).resolve()
     if target.exists() or target.is_relative_to(ROOT):
         raise ValueError("Choose a new ZIP outside the website folder")
@@ -37,6 +39,8 @@ def package(destination):
     target.parent.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(target,"x",zipfile.ZIP_DEFLATED) as archive:
         for source in sorted(included):
+            if is_retired_path(source.relative_to(ROOT)):
+                raise ValueError("Retired Proof content cannot be packaged")
             archive.write(source,source.relative_to(ROOT).as_posix())
         archive.writestr(".nojekyll","")
     report={"zip":str(target),"files":len(included)+1,"html_pages":len(manifest),

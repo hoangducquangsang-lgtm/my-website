@@ -66,7 +66,7 @@ def build(root):
             ("Inspection report","Agree who inspects, which lot, when, and against what criteria."),
             ("Other material or forestry records","Request where relevant to the selected product and applicable requirements.")])+
             p("A standard paperwork bundle cannot guarantee customs clearance. Use the destination, product construction and shipment details to agree the required list with your broker.")+
-            p('<a href="/proof/">See the Proof document register</a> for the scope and limitations of the supplied reference files; they are not current shipment certificates.'),True),
+            p('Request documents for your specific order and confirm the issuing party, dates, product scope and shipment details before relying on them.'),True),
          section("Product testing is scoped, not implied",
             p("Third-party testing can be discussed against the requirements applicable to your target market, retailer, product construction and buyer specification. Confirm the laboratory, sample identification, test method, report date, result and limits of the assessment.")+
             p(f'<a href="{CPSC}">CPSC toy-safety guidance</a> addresses children’s toys; do not assume every pet toy needs a children’s-product certificate. <a href="{ECHA}">REACH restrictions</a> can apply to substances in articles; natural materials do not automatically establish compliance.')+

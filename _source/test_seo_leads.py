@@ -7,11 +7,13 @@ import re
 import sys
 import zipfile
 from validate_site import Document, ROOT
+from retired_content import assert_retired_files_absent, is_retired_path
 
 def parse(html):
     d=Document();d.feed(html);return d
 
 def run(backup):
+    assert_retired_files_absent(ROOT)
     baseline={};assets=0
     with zipfile.ZipFile(backup) as archive:
         names={name.replace("\\","/"):name for name in archive.namelist()}
@@ -20,14 +22,17 @@ def run(backup):
         for name,original in names.items():
             if not name.startswith(prefix): continue
             relative=name[len(prefix):]
+            if is_retired_path(relative):
+                assert not (ROOT/relative).is_file(), "Retired Proof file remains"
+                continue
             if relative.endswith("index.html"):baseline[relative]=archive.read(original).decode("utf-8")
             if relative.startswith("assets/") and not relative.endswith("/") and relative not in ("assets/style.css","assets/rfq.js"):
                 assert (ROOT/relative).read_bytes()==archive.read(original),"Asset changed: "+relative
                 assets+=1
-            if relative in ("_source/guide_dates.py","robots.txt","sitemap.xml"):
+            if relative in ("_source/guide_dates.py","robots.txt"):
                 assert (ROOT/relative).read_bytes()==archive.read(original),"Unrequested route/date change"
     pages={p.relative_to(ROOT).as_posix():p.read_text(encoding="utf-8") for p in ROOT.rglob("index.html") if "_source" not in p.parts}
-    assert set(pages)==set(baseline) and len(pages)==68
+    assert set(pages)==set(baseline) and len(pages)==67
     photos=guides=tables=products=clean_links=0
     for relative,html in pages.items():
         d=parse(html);old=parse(baseline[relative])
@@ -73,7 +78,7 @@ def run(backup):
             if relative!="guides/index.html":
                 guides+=1
                 assert next(s for s in d.schemas if s.get("@type")=="Article")==next(s for s in old.schemas if s.get("@type")=="Article")
-    assert (guides,products,photos,tables)==(20,6,89,31)
+    assert (guides,products,photos,tables)==(20,6,85,31)
     quote=parse(pages["request-a-quote/index.html"])
     assert {f["name"] for f in quote.fields if "required" in f}=={"name","email","company","country","products"}
     assert 'enctype="multipart/form-data"' in pages["request-a-quote/index.html"]
@@ -83,9 +88,9 @@ def run(backup):
     assert {f["name"] for f in catalogue_doc.fields if "required" in f}=={"email","country"}
     download=re.search(r'<a[^>]+href="[^"]+\.pdf"[^>]*>Download Catalogue \(PDF\)</a>',catalogue).group()
     assert download and download not in re.search(r"<form\b.*?</form>",catalogue,re.S).group()
-    assert len(re.findall(r'download="proof-[^"]+\.png"',pages["proof/index.html"]))==4
+    assert "proof/index.html" not in pages
     with (ROOT/"_source/hosting/redirect-map.csv").open(encoding="utf-8",newline="") as file:redirects=list(csv.DictReader(file))
-    assert len(redirects)==272
+    assert len(redirects)==268
     for row in redirects:
         assert row["source_url"].endswith("/index.html") and row["status_code"]=="301"
         assert row["target_url"].startswith("https://vietpaw.com/") and row["target_url"].endswith("/")
@@ -93,7 +98,7 @@ def run(backup):
         relative=urlsplit(row["target_url"]).path.strip("/")
         assert (ROOT/relative/"index.html").is_file()
         assert urlsplit(row["source_url"]).path.removesuffix("index.html")==urlsplit(row["target_url"]).path
-    report={"pages":len(pages),"sitemap_urls":66,"clean_internal_links":clean_links,
+    report={"pages":len(pages),"sitemap_urls":65,"clean_internal_links":clean_links,
             "guides_and_dates_preserved":guides,"photos_preserved":photos,"unchanged_assets":assets,
             "commercial_tables_preserved":tables,"products_with_brand_and_manufacturer":products,
             "quote_required_fields":5,"optional_catalogue_capture":True,

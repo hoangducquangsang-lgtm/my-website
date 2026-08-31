@@ -11,13 +11,17 @@ from responsive_images import save_manifest
 ROOT = Path(__file__).resolve().parent.parent
 MODULES = [
     "content_home_about", "content_company", "content_materials", "content_categories",
-    "content_products", "content_solutions", "content_manufacturing", "content_guides", "content_proof",
+    "content_products", "content_solutions", "content_manufacturing", "content_guides",
 ]
 
 def build():
+    from retired_content import assert_retired_files_absent
+    assert_retired_files_absent(ROOT)
     PAGES.clear()
     for module in MODULES:
         importlib.import_module(module).build(str(ROOT))
+    if "/proof/" in PAGES:
+        raise ValueError("The retired Proof route must not be published again.")
     shutil.copyfile(ROOT/"_source"/"style.css", ROOT/"assets"/"style.css")
     urls = "\n".join(f"  <url><loc>{escape(BASE_URL+path)}</loc></url>"
                      for path,data in sorted(PAGES.items()) if data["indexable"])
