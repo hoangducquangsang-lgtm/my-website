@@ -1,12 +1,12 @@
 {
   "/": {
-    "title": "Natural Pet Products by WINVN INT CO., LTD | VietPaw",
-    "description": "VietPaw is the commercial/export brand of WINVN INT CO., LTD. Natural pet toys from Vietnam for wholesale, private label and OEM/ODM.",
+    "title": "Natural Pet Products from Vietnam | VietPaw",
+    "description": "Explore VietPaw natural pet toys from Vietnam: coffee wood, coconut fiber, hemp and loofah for wholesale, private label and OEM/ODM.",
     "indexable": true
   },
   "/about/": {
     "title": "About VietPaw | Natural Pet Toys Made in Vietnam",
-    "description": "Meet VietPaw, the commercial/export brand of WINVN INT CO., LTD, the legal manufacturer registered in Vietnam in 2019.",
+    "description": "Meet VietPaw and explore our natural pet toy range, Vietnam manufacturing, materials and sourcing support for international buyers.",
     "indexable": true
   },
   "/capabilities/": {
@@ -201,7 +201,7 @@
   },
   "/pet-toys-manufacturer-vietnam/": {
     "title": "Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
-    "description": "Source through VietPaw, the commercial/export brand of legal manufacturer WINVN INT CO., LTD. Review Vietnam production, OEM/ODM, QC and samples.",
+    "description": "Source natural pet toys through VietPaw. Review Vietnam production, OEM/ODM, quality control, samples and order-specific manufacturing information.",
     "indexable": true
   },
   "/services/oem-odm-pet-toy-manufacturing/": {
@@ -221,7 +221,7 @@
   },
   "/factory/": {
     "title": "Pet Toy Factory Vietnam | Process & Verification | VietPaw",
-    "description": "Explore production by WINVN INT CO., LTD, the legal manufacturer behind VietPaw, and review coffee wood processing and order-specific factory records.",
+    "description": "Explore Vietnam production for the VietPaw range, including coffee wood processing, factory information and order-specific records.",
     "indexable": true
   },
   "/quality-control/": {
@@ -336,7 +336,7 @@
   },
   "/proof/": {
     "title": "Proof & Export Document References | VietPaw",
-    "description": "View and download supplied export-document examples, read their scope, and request current records for VietPaw orders manufactured by WINVN INT CO., LTD.",
+    "description": "View and download supplied export-document examples, read their scope, and request current manufacturer and shipment records for your VietPaw order.",
     "indexable": true
   }
 }

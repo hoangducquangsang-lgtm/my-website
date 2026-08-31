@@ -12,7 +12,7 @@ LEAD = "Production lead time: 5–7 days for orders under 500 pcs; 60–80 days 
 QC_PROTOCOL = "six-stage drying/quality protocol with five QC checkpoints"
 MOISTURE = "Coffee wood moisture is checked on every batch: below 14% before packing. Batch moisture readings are available on request."
 EXPORT_DOCS = "Certificate of Origin (CO), Fumigation Certificate, Phytosanitary Certificate, Packing List, Commercial Invoice and Bill of Lading (B/L), subject to destination/product requirements. Batch moisture readings are available on request."
-RANGE_SCOPE = 'VietPaw focuses on pet toys and chews across four material collections. The legal manufacturer, WINVN INT CO., LTD, has a broader five-line catalogue that also includes Pet Beds; <a href="https://www.winvnint.com/">see the manufacturer’s full range</a> or ask Sarah about bed options.'
+RANGE_SCOPE = 'VietPaw focuses on pet toys and chews across four material collections. Our manufacturer has a broader five-line catalogue that also includes Pet Beds; <a href="https://www.winvnint.com/">see the manufacturer’s full range</a> or ask Sarah about bed options.'
 SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items. Hard chews can damage teeth; seek veterinary advice for puppies, dental conditions or forceful chewing."
 SOURCE_OEM = "https://www.winvnint.com/"
 SOURCE_COMPANY = "https://www.winvnint.com/"

@@ -255,7 +255,7 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
         p("VietPaw offers product customization, engraving and packaging support. Describe which of these you need, then ask for a quotation that separates them. You will have a clearer project budget and fewer surprises when the design changes."))],
     ("Discuss OEM and ODM pet toy development","/services/oem-odm-pet-toy-manufacturing/"),
     related=[("Private-label services","/services/private-label-pet-toys/"),("Sample and order process","/how-to-order/")],
-    sources=[("WINVN INT CO., LTD: customization and packaging","https://www.winvnint.com/")],
+    sources=[("Manufacturer guidance: customization and packaging","https://www.winvnint.com/")],
     image="process-laser-engraving.jpg")
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
@@ -273,7 +273,7 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
         p("Ask which approval starts the clock and what could change the schedule. Work backwards from the date stock must be available for sale, allowing time to receive and inspect it. A launch plan needs that final stage just as much as it needs a factory completion date."))],
     ("Prepare a product and pricing enquiry","/request-a-quote/"),
     related=[("Wholesale service","/services/wholesale-pet-products/"),("First-order planning","/guides/sourcing-eco-pet-toys-vietnam/")],
-    sources=[("WINVN INT CO., LTD: order minimums and lead times","https://www.winvnint.com/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
+    sources=[("Manufacturer guidance: order minimums and lead times","https://www.winvnint.com/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
     image="export-carton-labels.jpg")
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from common import page, write_page, breadcrumb_html, BRAND, LEGAL_NAME, BRAND_RELATIONSHIP, PHONE, PHONE_TEL, EMAIL, ADDRESS
+from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS
 from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
 from content_materials import MATERIALS
 
@@ -21,7 +21,7 @@ def build(root):
             "Product tags, size labels, paper/kraft boxes and pack artwork.",
             "Wood-and-rope combinations, rope geometry and loofah shapes, subject to feasibility.",
             "Product photography or video support by agreement; scope and cost depend on the project."])+
-            p(f'WINVN INT CO., LTD describes these services in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
+            p(f'The manufacturer describes these services in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
          section("Before approving a sample",ul([
             "Agree materials, dimensions, tolerances and intended pet/use.",
             "List every component, including thread, cores, adhesive and packaging film.",
@@ -54,7 +54,7 @@ def build(root):
             ("Product/material test report","Named samples, methods, tested substances or physical properties","Blanket certification of every product and future batch"),
             ("QC / inspection record","Checks against an agreed specification for a sample or lot","Automatic legal approval in every country"),
             ("Export / shipment document","Origin, movement or treatment of specified goods","A universal pet-safety or sustainability certification")])),
-         section("Confirm documents for your shipment",p("VietPaw’s export-document offer covers: "+EXPORT_DOCS)+table(["Document","How to scope it"],[
+         section("Confirm documents for your shipment",p(CONTRACT_NOTICE)+p("VietPaw’s export-document offer covers: "+EXPORT_DOCS)+table(["Document","How to scope it"],[
             ("Commercial invoice and packing list","Confirm product description, quantities, packages and contracting parties."),
             ("Certificate of Origin (CO)","Confirm the applicable form, issuing details and origin/destination requirements."),
             ("Fumigation Certificate","Confirm treatment applicability, covered goods, certificate details and destination requirements."),
@@ -119,7 +119,7 @@ def build(root):
             "<strong>Ship and receive.</strong> Review the packing list and shipment documents, then follow the agreed receiving and claim process."],True)),
          section("MOQ, samples and production timing",terms()+p("Sample preparation, custom prototyping, artwork revisions, outside testing and transport are separate stages. The production estimate starts only after the required approvals and commercial conditions are met."),True),
          section("Shipping and payment are order-specific",
-            p("Ask for transport mode, named origin/destination, packed dimensions and weight before comparing shipping quotes. Air, courier and sea services are not interchangeable; there is no single worldwide freight timeline.")+
+            p(CONTRACT_NOTICE)+p("Ask for transport mode, named origin/destination, packed dimensions and weight before comparing shipping quotes. Air, courier and sea services are not interchangeable; there is no single worldwide freight timeline.")+
             p("EXW, FOB or CIF can be discussed with your forwarder, but the named place/port and the applicable version of the terms must be stated. Destination duties, taxes, clearance and local delivery should be itemized rather than assumed to be included.")+
             p("Payment schedule, inspection acceptance and handling of defective goods belong in the written order agreement. This page does not set an automatic credit, refund or replacement entitlement.")),
          section("For reorders",p("Keep the approved sample/version, product codes, artwork, carton configuration and inspection criteria together. Confirm material or packaging changes before repeat production. Share a rolling forecast with required delivery dates rather than relying on an annual capacity headline.")+
@@ -128,10 +128,10 @@ def build(root):
     publish(root,"/wholesale-catalogue/","VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
         "Download the manufacturer’s supplied pet toy catalogue and contact VietPaw for current specifications, prices, MOQ and private-label terms.",
         "Wholesale Pet Toy Catalogue",
-        "VietPaw is the commercial/export brand of WINVN INT CO., LTD. Use the manufacturer’s catalogue as a visual reference, then confirm the current range and terms with Sarah.",
+        "Explore the VietPaw range. Use the manufacturer’s catalogue as a visual reference, then confirm the current range and terms with Sarah.",
         [section("Download the supplied catalogue",
             '<p><a class="btn btn-primary" href="/assets/downloads/winvn-wholesale-catalogue.pdf">Download Manufacturer Catalogue (PDF)</a></p>'+
-            p("This download is the original supplied manufacturer catalogue from WINVN INT CO., LTD; its artwork has not been rebranded as VietPaw. It is not a newly certified product specification or live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
+            p("This download is the original supplied manufacturer catalogue; its artwork has not been rebranded as VietPaw. It is not a newly certified product specification or live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
             p("The PDF is available directly. Downloading it does not subscribe you to a mailing list or send us your contact details.")),
          section("Send the product references you want quoted",p("Include the catalogue item or photo reference, dimensions, quantity per SKU, destination and packaging requirements. The approved sample and written quote take precedence over catalogue examples.")+
             p('<a href="/products/coffee-wood-dog-chew/">Coffee wood reference specifications</a> · <a href="/collections/hemp-fiber/">Hemp collection</a> · <a href="/request-a-quote/">Request current pricing</a>'),True)],active="Company")
@@ -140,7 +140,7 @@ def build(root):
         "Contact Sarah at VietPaw for natural pet toy samples, wholesale quotations, private-label packaging and OEM/ODM projects in Vietnam.",
         "Talk to VietPaw About Your Next Product",
         "Share the product, destination and expected order quantity. Add your branding, packaging and timing requirements so we can respond to the right brief.",
-        [section("VietPaw sales contact",p(BRAND_RELATIONSHIP)+
+        [section("VietPaw sales contact",p(BRAND_INTRO)+p(CONTRACT_NOTICE)+
             ul([f'Email: <a href="mailto:{EMAIL}">{EMAIL}</a>',f'Phone: <a href="tel:{PHONE_TEL}">{PHONE}</a>',
                 f'WhatsApp: <a href="https://wa.me/{PHONE_TEL[1:]}">Open a conversation</a>',"Registered head office: "+ADDRESS])+
             p("Your contact: Sarah. Share your destination market, product selection and quantities so we can prepare the right sample and quotation options.")),
@@ -170,6 +170,7 @@ def build_rfq(root):
 </form>
 <div><h2>What happens next</h2><p>We review your brief and confirm product availability, MOQ, sample terms and an indicative timeline. New development or testing may need a separate feasibility discussion.</p>
 {ul(["Starting MOQ from 50 pcs on selected standard products; confirm each line.",SAMPLES+" "+SAMPLE_DISPATCH,PRIVATE_LABEL,LEAD,EXPORT_DOCS])}
+<h3>Company details for your order</h3>{p(CONTRACT_NOTICE)}
 <h3>Contact sales directly</h3><p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></p>
 <p class="small">Do not include payment-card information or confidential designs in this first enquiry. Request an agreed confidentiality process if needed.</p>
 {trust_links()}</div></div></section>

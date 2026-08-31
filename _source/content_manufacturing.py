@@ -5,11 +5,11 @@ from content_products import product_cards
 
 def build(root):
     publish(root,"/pet-toys-manufacturer-vietnam/","Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
-        "Source through VietPaw, the commercial/export brand of legal manufacturer WINVN INT CO., LTD. Review Vietnam production, OEM/ODM, QC and samples.",
+        "Source natural pet toys through VietPaw. Review Vietnam production, OEM/ODM, quality control, samples and order-specific manufacturing information.",
         "Natural Pet Toy Manufacturer in Vietnam for B2B Brands",
-        "VietPaw is the commercial/export brand; WINVN INT CO., LTD is the legal manufacturer. Source coffee wood, coconut fiber, hemp and loofah pet toys with product specifications, production checks and order-specific documentation.",
+        "Source coffee wood, coconut fiber, hemp and loofah pet toys through VietPaw with product specifications, production checks and order-specific documentation.",
         [section("A Vietnam manufacturing brief, not just a product list",
-            p("WINVN INT CO., LTD manufactures natural pet products in Vietnam for wholesale and private-label customers. Coffee wood sourcing is centered on the Central Highlands, with export coordination through Ho Chi Minh City. Our product range also includes coconut fiber, hemp fiber and loofah.")+
+            p("Our manufacturer produces natural pet products in Vietnam for wholesale and private-label customers. Coffee wood sourcing is centered on the Central Highlands, with export coordination through Ho Chi Minh City. Our product range also includes coconut fiber, hemp fiber and loofah.")+
             p("For your order, confirm the actual production location, the approved product specification and the company named in the contract. A manufacturer description should lead to verifiable project details, not replace them.")),
          section("Natural materials we manufacture",cards([
             ("Coffee wood dog chews","Standard sticks and specification-led wood/rope combinations.","/collections/coffee-wood/"),
@@ -45,7 +45,7 @@ def build(root):
             "Coconut fiber: ball dimensions, winding or other coir constructions.",
             "Hemp: rope geometry, knots, balls and connection details.",
             "Loofah: silhouette, dimensions, stitching and optional fillings."])+
-            p(f'WINVN INT CO., LTD outlines design and packaging options in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand for these enquiries. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
+            p(f'The manufacturer outlines design and packaging options in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand for these enquiries. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
          section("The development and approval sequence",ul([
             "<strong>Brief review:</strong> target pet, play context, destination, intended claims and indicative volume.",
             "<strong>Feasibility:</strong> material availability, workable dimensions, manufacturing method and cost drivers.",
@@ -124,11 +124,11 @@ def build(root):
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
     publish(root,"/factory/","Pet Toy Factory Vietnam | Process & Verification | VietPaw",
-        "Explore production by WINVN INT CO., LTD, the legal manufacturer behind VietPaw, and review coffee wood processing and order-specific factory records.",
+        "Explore Vietnam production for the VietPaw range, including coffee wood processing, factory information and order-specific records.",
         "Pet Toy Factory & Production in Vietnam",
         "Understand where and how your selected product is made. Use the supplier information below to prepare a current, product-specific factory review.",
         [section("Production locations and capacity: what the sources say",
-            p("WINVN INT CO., LTD is the legal manufacturer behind the VietPaw commercial/export brand. The supplied manufacturer planning materials describe a three-factory network and indicative capacity of 5–6 million units per year. These are supplier-reported planning figures, not an audited measurement of current output or the capacity reserved for your order.")+
+            p("VietPaw connects buyers with natural pet toy production in Vietnam. The supplied manufacturer planning materials describe a three-factory network and indicative capacity of 5–6 million units per year. These are supplier-reported planning figures, not an audited measurement of current output or the capacity reserved for your order.")+
             p("Company sources describe Central Highlands production and sourcing, together with southern warehousing/export operations. Published location descriptions differ between documents and webpages. Confirm the exact site, current address and manufacturing role for your selected SKU before a visit or audit.")+
             p("Do not equate an office, warehouse, partner workshop and owned production facility. Ask which stages happen at each location and whether any work is subcontracted.")),
          section("Coffee wood drying and quality protocol",

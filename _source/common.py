@@ -10,9 +10,11 @@ from responsive_images import responsive_markup, optimized_url, optimize_schema
 DOMAIN = "vietpaw.com"
 BASE_URL = f"https://{DOMAIN}"
 BRAND = "VietPaw"
-LEGAL_NAME = "WINVN INT CO., LTD"
-BRAND_TAGLINE = "Natural Pet Products by WINVN INT CO., LTD."
-BRAND_RELATIONSHIP = "VietPaw is the commercial/export brand of WINVN INT CO., LTD, the legal manufacturer."
+LEGAL_NAME = "WINVN INT CO., LTD."
+BRAND_TAGLINE = f"Natural Pet Products by {LEGAL_NAME}"
+BRAND_INTRO = f"{BRAND} brings natural-material pet toys from Vietnam to international brands, wholesalers and retailers."
+# The legal name is displayed only in the header and footer brand signatures.
+CONTRACT_NOTICE = "Invoices and contracts identify the legal entity, registered details and payment beneficiary for your order. Confirm these details before placing an order."
 # Contact and export reach supplied directly by the site owner on 2026-08-30.
 PHONE = "+84 906 111 016"
 PHONE_TEL = "+84906111016"
@@ -45,8 +47,7 @@ NAV = [
         ("OEM / ODM", "/services/oem-odm-pet-toy-manufacturing/"),
         ("Private Label", "/services/private-label-pet-toys/"),
         ("Wholesale", "/services/wholesale-pet-products/"),
-        ("Testing & Export Documents", "/certifications/"),
-        ("Proof", "/proof/")]),
+        ("Testing & Export Documents", "/certifications/")]),
     ("Solutions", "/solutions/", [
         ("All Buyer Solutions", "/solutions/"), ("Amazon Sellers", "/solutions/amazon-sellers/"),
         ("Wholesalers & Distributors", "/solutions/wholesalers/"),
@@ -63,8 +64,7 @@ FOOTER_LINKS = [
     ("Manufacturing", [
         ("Vietnam Manufacturer", "/pet-toys-manufacturer-vietnam/"), ("Our Factory", "/factory/"),
         ("Quality Control", "/quality-control/"), ("OEM / ODM", "/services/oem-odm-pet-toy-manufacturing/"),
-        ("Private Label", "/services/private-label-pet-toys/"), ("Wholesale", "/services/wholesale-pet-products/"),
-        ("Proof", "/proof/")]),
+        ("Private Label", "/services/private-label-pet-toys/"), ("Wholesale", "/services/wholesale-pet-products/")]),
     ("Buyer Resources", [
         ("Solutions", "/solutions/"), ("Guides", "/guides/"), ("How to Order", "/how-to-order/"),
         ("Testing & Documents", "/certifications/"), ("Sustainability", "/sustainability/")]),
@@ -93,12 +93,11 @@ def footer_html():
 <div class="wrap footer-grid">
 <div class="footer-brand"><div class="footer-logo">{BRAND}</div>
 <p class="footer-brand-tagline"><em>{BRAND_TAGLINE}</em></p>
-<p class="footer-legal">{BRAND_RELATIONSHIP}</p>
-<p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. {LEGAL_NAME}, registered in Vietnam in {REGISTERED_YEAR}. Exporting to {COUNTRIES} countries.</p>
+<p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. Our manufacturer was registered in Vietnam in {REGISTERED_YEAR}. Exporting to {COUNTRIES} countries.</p>
 <ul class="footer-contact"><li>{ADDRESS}</li><li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
 <li><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp: {PHONE}</a></li>
 <li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>{cols}</div>
-<div class="wrap footer-bottom"><p>&copy; 2026 {LEGAL_NAME}. All rights reserved. Product specifications and order terms are confirmed in your quotation.</p></div>
+<div class="wrap footer-bottom"><p>&copy; 2026 {BRAND}. All rights reserved. Product specifications and order terms are confirmed in your quotation.</p></div>
 </footer>"""
 
 def rfq_bar(text="Ready to evaluate a sample for your range?", cta="Request Sample Options"):
@@ -117,15 +116,15 @@ def breadcrumb_html(trail):
 
 def organization_schema():
     return {"@context":"https://schema.org","@type":"Organization","@id":BASE_URL+"/#organization",
-            "name":LEGAL_NAME,"legalName":LEGAL_NAME,"url":BASE_URL+"/",
+            "name":BRAND,"url":BASE_URL+"/",
             "brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
-            "description":f"{BRAND_RELATIONSHIP} {LEGAL_NAME}, registered in Vietnam in {REGISTERED_YEAR}. Natural-material pet toys for wholesale, OEM/ODM and private label.",
+            "description":BRAND_INTRO,
             "telephone":PHONE,"email":EMAIL,
             "address":{"@type":"PostalAddress","streetAddress":ADDRESS,"addressCountry":"VN"}}
 
 def brand_schema():
     return {"@context":"https://schema.org","@type":"Brand","@id":BASE_URL+"/#brand",
-            "name":BRAND,"slogan":BRAND_TAGLINE,"description":BRAND_RELATIONSHIP,"url":BASE_URL+"/"}
+            "name":BRAND,"slogan":"Natural Pet Products","description":BRAND_INTRO,"url":BASE_URL+"/"}
 
 def page(title, meta_description, path, content, active_top="", schemas=None,
          og_image="/assets/img/winvn-natural-toy-assortment.png", noindex=False):
@@ -160,7 +159,7 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}{og_image}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title,quote=True)}">
 <meta name="twitter:description" content="{escape(meta_description,quote=True)}"><meta name="twitter:image" content="{BASE_URL}{og_image}">
-<link rel="stylesheet" href="/assets/style.css?v=20260831-proof-images"><link rel="icon" type="image/svg+xml" href="/assets/vietpaw-favicon.svg">
+<link rel="stylesheet" href="/assets/style.css?v=20260831-brand-consistency"><link rel="icon" type="image/svg+xml" href="/assets/vietpaw-favicon.svg">
 {schema_tags}</head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">

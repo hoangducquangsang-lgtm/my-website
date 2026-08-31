@@ -1,0 +1,20 @@
+{
+  "site_root": "D:\\1. Vietpaw\\my-website",
+  "backup": "D:\\1. Vietpaw\\outputs\\Website-before-two-taglines-20260831-101024.zip",
+  "pages": 68,
+  "consistent_header_footer_pages": 68,
+  "proof_removed_from_navigation": true,
+  "proof_page_and_four_public_scans_preserved": true,
+  "all_assets_unchanged": 279,
+  "inline_photos_preserved": 89,
+  "webp_variants_verified": 155,
+  "guides_and_dates_preserved": 20,
+  "products_without_repeated_manufacturer": 6,
+  "commercial_tables_preserved": 31,
+  "pages_with_exactly_two_manufacturer_signatures": 68,
+  "visible_manufacturer_name_in_body": false,
+  "manufacturer_name_in_search_metadata": false,
+  "live_deployment": false,
+  "browser_visual_tested": false,
+  "errors": []
+}

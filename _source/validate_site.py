@@ -17,7 +17,7 @@ from guide_dates import GUIDE_UPDATED_DATES, updated_time
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
-EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. WINVN INT CO., LTD, registered in Vietnam in 2019. Exporting to 40+ countries."
+EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. Our manufacturer was registered in Vietnam in 2019. Exporting to 40+ countries."
 EXPECTED_ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
 
 class Document(HTMLParser):
@@ -100,12 +100,19 @@ def run():
             continue
         route=route_for(file)
         docs[route]=(file,d)
-        # VietPaw is the commercial/export brand; WINVN INT CO., LTD is the legal manufacturer.
+        # The legal name is displayed only in the two shared brand signatures.
         check("VietPaw" in d.title,f"{route}: commercial brand missing from title")
         check("VietPaw INT CO., LTD" not in html,f"{route}: brand incorrectly used as legal company name")
-        check(not re.search(r"\bWINVN\b",html.replace("WINVN INT CO., LTD","")),f"{route}: standalone former brand outside the legal manufacturer name")
+        signature="Natural Pet Products by WINVN INT CO., LTD."
+        check(html.count(signature)==2,f"{route}: expected exactly two manufacturer signatures")
+        without_signatures=html.replace(signature,"")
+        check(not re.search(r"\bWINVN\s+INT\b",without_signatures,re.I),f"{route}: manufacturer name outside the two signatures")
         check(d.meta.get("og:site_name")=="VietPaw",f"{route}: social site brand mismatch")
+        header=re.search(r'<header\b.*?</header>',html,re.S)
+        check(bool(header) and re.search(r'<a class="brand" href="[^"]+">VietPaw<span',header.group()),f"{route}: visible header brand mismatch")
+        check(bool(header) and not re.search(r'<a\b[^>]*>Proof</a>',header.group()),f"{route}: Proof must not appear in main navigation")
         check('<span class="brand-sub">Natural Pet Products by WINVN INT CO., LTD.</span>' in html,f"{route}: brand signature missing from header")
+        check('<p class="footer-brand-tagline"><em>Natural Pet Products by WINVN INT CO., LTD.</em></p>' in html,f"{route}: brand signature missing from footer")
         check("sarah.winvn@gmail.com" not in html,f"{route}: superseded email")
         check("Exporting to 30+" not in html,f"{route}: superseded export reach")
         footer=re.search(r'<footer class="site-footer">(.*?)</footer>',html,re.S)
@@ -113,9 +120,10 @@ def run():
         if footer:
             plain=" ".join(unescape(re.sub(r"<[^>]+>"," ",footer.group(1))).split())
             check(EXPECTED_TAGLINE in plain,f"{route}: owner-requested footer text differs")
-            for item in ("VietPaw","Natural Pet Products by WINVN INT CO., LTD.","VietPaw is the commercial/export brand of WINVN INT CO., LTD, the legal manufacturer.",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
+            for item in ("VietPaw","Natural Pet Products by WINVN INT CO., LTD.",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
                 check(item in plain,f"{route}: footer field missing {item}")
             check("biodegrad" not in plain.lower(),f"{route}: environmental claim in shared footer")
+            check(not re.search(r'<a\b[^>]*>Proof</a>',footer.group()),f"{route}: Proof must not appear in footer navigation")
         check(d.language=="en",f"{route}: wrong language")
         check(len(d.h1)==1,f"{route}: expected one H1, got {len(d.h1)}")
         check(bool(d.title.strip()),f"{route}: missing title")
@@ -147,7 +155,7 @@ def run():
                 check(all(x.get("item","").startswith(BASE+"/") for x in items),f"{route}: incomplete breadcrumb")
             if schema.get("@type")=="Product":
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: product brand mismatch")
-                check(schema.get("manufacturer",{}).get("name")=="WINVN INT CO., LTD",f"{route}: legal manufacturer mismatch")
+                check("manufacturer" not in schema,f"{route}: manufacturer must not be repeated outside the brand signatures")
                 check(schema.get("image","").startswith(BASE+"/assets/"),f"{route}: product image not absolute")
                 check(bool(schema.get("material")),f"{route}: product material missing")
                 check(not any(k in schema for k in ("offers","aggregateRating","review","gtin")),f"{route}: unsupported commercial schema")
@@ -161,14 +169,14 @@ def run():
                 check(schema.get("image")==d.meta.get("og:image"),f"{route}: article social image mismatch")
                 check(schema.get("dateModified")==GUIDE_UPDATED_DATES.get(route.strip("/").split("/")[-1]),f"{route}: article update date mismatch")
             if schema.get("@type")=="Organization":
-                check(schema.get("name")=="WINVN INT CO., LTD",f"{route}: legal organization mismatch")
-                check(schema.get("legalName")=="WINVN INT CO., LTD",f"{route}: legal name mismatch")
+                check(schema.get("name")=="VietPaw",f"{route}: public organization/trade name mismatch")
+                check("legalName" not in schema,f"{route}: legal name repeated in search metadata")
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: organization brand mismatch")
                 check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
                 check(schema.get("address",{}).get("streetAddress")==EXPECTED_ADDRESS,f"{route}: legal address schema mismatch")
-                check("registered in Vietnam in 2019" in schema.get("description",""),f"{route}: registration year missing from organization description")
+                check(not re.search(r"\bWINVN\b",json.dumps(schema),re.I),f"{route}: legal name outside permitted signatures")
             if schema.get("@type")=="Brand":
-                check(schema.get("name")=="VietPaw" and schema.get("slogan")=="Natural Pet Products by WINVN INT CO., LTD.",f"{route}: brand schema mismatch")
+                check(schema.get("name")=="VietPaw" and schema.get("slogan")=="Natural Pet Products",f"{route}: brand schema mismatch")
         if route.startswith("/guides/") and route!="/guides/":
             check(any(urlsplit(u).path for u in d.main_links),f"{route}: missing contextual links")
             check('<span class="author-name">Sarah</span>' in html,f"{route}: visible Sarah byline missing")
@@ -216,7 +224,10 @@ def run():
             check(incoming[route]>0,f"{route}: orphaned indexable URL")
     check("Sitemap: "+BASE+"/sitemap.xml" in (ROOT/"robots.txt").read_text(),"robots sitemap missing")
     replacements=json.loads((ROOT/"_source/review/image_replacements.json").read_text(encoding="utf-8"))
+    # A relocated site may keep its original source-photo archive in another folder.
     raw_root=ROOT.parent/"1. Raw material/1. Hinh anh/HÌNH ẢNH"
+    if "--raw-materials" in sys.argv:
+        raw_root=Path(sys.argv[sys.argv.index("--raw-materials")+1]).resolve()
     for item in replacements:
         source=raw_root/item["source"]
         target=ROOT/"assets/img"/item["asset"]

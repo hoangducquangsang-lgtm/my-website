@@ -31,7 +31,7 @@ img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
 .site-header{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}
 .header-inner{display:flex;align-items:center;gap:28px;padding:14px 24px}
 .brand{font-family:Georgia,serif;font-weight:bold;font-size:1.6rem;color:var(--forest-dark);display:flex;flex-direction:column;line-height:1.1}
-.brand-sub{font-family:'Segoe UI',sans-serif;font-size:.68rem;font-weight:normal;color:var(--ink-soft);letter-spacing:.01em;line-height:1.4;max-width:24ch;margin-top:5px}
+.brand-sub{font-family:'Segoe UI',sans-serif;font-size:.68rem;font-weight:normal;font-style:italic;color:var(--ink-soft);letter-spacing:.01em;line-height:1.4;max-width:24ch;margin-top:5px}
 .brand{flex-shrink:0}
 .main-nav{flex:1}
 .main-nav ul{list-style:none;display:flex;gap:6px;margin:0;padding:0;flex-wrap:wrap}

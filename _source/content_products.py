@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Product specifications grounded in the supplied manufacturer product sheets."""
-from common import BASE_URL, BRAND, LEGAL_NAME
+from common import BASE_URL, BRAND
 from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE
 
 COFFEE_SIZES = [
@@ -12,7 +12,7 @@ COFFEE_SIZES = [
     ("XXL","CC01-XXL","22–23","5.5–7.0","325–450","Over 40 kg"),
 ]
 def coffee_size_table():
-    return table(["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight"],COFFEE_SIZES)+p("Reference: the coffee wood specification supplied by WINVN INT CO., LTD for the VietPaw range. Natural shape and weight vary; confirm the current size sheet and agreed tolerances with your sample. Dog weight is a starting reference, not a veterinary suitability assessment. Older charts use different weight bands; do not combine them.")
+    return table(["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight"],COFFEE_SIZES)+p("Reference: the manufacturer’s coffee wood specification supplied for the VietPaw range. Natural shape and weight vary; confirm the current size sheet and agreed tolerances with your sample. Dog weight is a starting reference, not a veterinary suitability assessment. Older charts use different weight bands; do not combine them.")
 
 PRODUCTS = {
 "coffee-wood-dog-chew":dict(name="Coffee Wood Dog Chew Stick",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
@@ -63,7 +63,7 @@ def build(root):
         path="/products/"+slug+"/"
         image="/assets/img/"+d["image"]
         specifications=table(["Specification","Details"],[
-            ("Commercial / export brand",BRAND),("Legal manufacturer",LEGAL_NAME),
+            ("Commercial / export brand",BRAND),
             ("Material",d["material"]+"; confirm complete component list"),
             ("Sizes",d["size"]),("MOQ",d["moq"]),
             ("Branding","Laser engraving for suitable wood; labels, tags or boxes for fiber products."),
@@ -79,8 +79,7 @@ def build(root):
                 p(f'<a href="/collections/{d["collection"]}/">Explore the {d["group"].lower()} wholesale collection</a> or <a href="/services/wholesale-pet-products/">plan a mixed-product wholesale order</a>.'),True)]
         schema={"@context":"https://schema.org","@type":"Product","@id":BASE_URL+path+"#product",
             "name":d["name"],"description":d["lede"],"url":BASE_URL+path,"image":BASE_URL+image,
-            "material":d["material"],"brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
-            "manufacturer":{"@id":BASE_URL+"/#organization","@type":"Organization","name":LEGAL_NAME}}
+            "material":d["material"],"brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND}}
         publish(root,path,d["name"]+" | Wholesale & Private Label | VietPaw",
             f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.',
             d["name"]+" — Wholesale & Private Label",d["lede"],sections,image=image,product=d["name"],

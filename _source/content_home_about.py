@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from common import BRAND, LEGAL_NAME, BRAND_TAGLINE, BRAND_RELATIONSHIP, ADDRESS, PHONE, EMAIL, BASE_URL, REGISTRATION_DATE, page, write_page, organization_schema
+from common import BRAND, BRAND_INTRO, ADDRESS, PHONE, EMAIL, BASE_URL, REGISTRATION_DATE, page, write_page, organization_schema
 from content_helpers import hero, section, cards, p, ul, table, faq, rfq_bar, trust_links, publish, SAMPLES, SAMPLE_DISPATCH, PRIVATE_LABEL, QC_PROTOCOL, RANGE_SCOPE, LEAD
 from content_products import product_cards
 
 def build(root):
     content=hero("Natural Pet Products for Global Brands",
-        BRAND_TAGLINE+" Made in Vietnam from coffee wood, coconut fiber, hemp and loofah. Wholesale, OEM/ODM and private-label options, with selected standard products starting from 50 pcs per SKU.",
+        "Made in Vietnam from coffee wood, coconut fiber, hemp and loofah. Wholesale, OEM/ODM and private-label options, with selected standard products starting from 50 pcs per SKU.",
         eyebrow="VietPaw · International B2B sourcing", image="/assets/img/winvn-home-thu-cung-3.jpg")
     content+=section("Natural materials. Clear specifications. A practical first order.",
         '<div class="stats"><div><strong>4</strong><span>Core natural materials</span></div><div><strong>50 pcs</strong><span>Starting MOQ on selected standard SKUs</span></div><div><strong>OEM / ODM</strong><span>Specification-led development</span></div><div><strong>Private label</strong><span>Product and packaging support</span></div></div>'+
@@ -25,7 +25,7 @@ def build(root):
         ("Source a wholesale assortment","Plan quantities per SKU, pack configuration and repeat orders across the range.","/services/wholesale-pet-products/")])+
         p('<a href="/capabilities/">Compare all manufacturing services</a> and choose the level of customization your launch needs.'),True)
     content+=section("Meet the manufacturing partner behind your range",
-        '<div class="grid grid-2"><div>'+p(BRAND_RELATIONSHIP)+p("WINVN INT CO., LTD, registered in Vietnam in 2019, manufactures natural pet products and supplies customers in 40+ countries. Our toy collections combine coffee wood from the Central Highlands with coconut fiber, hemp fiber and loofah, with wholesale, private-label and OEM/ODM options for international buyers.")+
+        '<div class="grid grid-2"><div>'+p(BRAND_INTRO)+p("Our manufacturer, registered in Vietnam in 2019, makes natural pet products and supplies customers in 40+ countries. Our toy collections combine coffee wood from the Central Highlands with coconut fiber, hemp fiber and loofah, with wholesale, private-label and OEM/ODM options for international buyers.")+
         p('For a factory-focused sourcing review, start with our <a href="/pet-toys-manufacturer-vietnam/">pet toy manufacturer in Vietnam</a> page. Review production locations, order planning and the evidence to request before placing a purchase order.')+
         trust_links()+'</div><figure><img src="/assets/img/winvn-moisture-check-kiem-go-9.jpg" alt="Coffee wood moisture-check process reference" loading="lazy"><figcaption>Process reference from the supplied asset library; request current batch records for your order.</figcaption></figure></div>')
     content+=section("Built for how your business buys",cards([
@@ -51,21 +51,21 @@ def build(root):
         ("Are all natural toys suitable for every pet?", "No. Size, construction, chewing behavior and dental health matter. These products are not food and require supervision and replacement when damaged.")])
     content+=rfq_bar("Tell us your product, destination and first-order quantity.","Request Samples & a Quote")
     schemas=[organization_schema(),{"@context":"https://schema.org","@type":"WebSite","@id":BASE_URL+"/#website","name":BRAND,"url":BASE_URL+"/"}]
-    write_page(root,"/",page("Natural Pet Products by WINVN INT CO., LTD | VietPaw",
-        "VietPaw is the commercial/export brand of WINVN INT CO., LTD. Natural pet toys from Vietnam for wholesale, private label and OEM/ODM.",
+    write_page(root,"/",page("Natural Pet Products from Vietnam | VietPaw",
+        "Explore VietPaw natural pet toys from Vietnam: coffee wood, coconut fiber, hemp and loofah for wholesale, private label and OEM/ODM.",
         "/",content,schemas=schemas,og_image="/assets/img/winvn-home-thu-cung-3.jpg"))
     publish(root,"/about/","About VietPaw | Natural Pet Toys Made in Vietnam",
-        "Meet VietPaw, the commercial/export brand of WINVN INT CO., LTD, the legal manufacturer registered in Vietnam in 2019.",
+        "Meet VietPaw and explore our natural pet toy range, Vietnam manufacturing, materials and sourcing support for international buyers.",
         "VietPaw: Natural Materials, Made for Global Brands",
-        BRAND_TAGLINE+" "+BRAND_RELATIONSHIP+" The manufacturer is registered in Vietnam in 2019 and supplies customers in 40+ countries.",
+        BRAND_INTRO+" Our manufacturer was registered in Vietnam in 2019 and supplies customers in 40+ countries.",
         [section("The materials behind the story",
             p("Our toy collections bring together coffee wood, coconut fiber, hemp fiber and loofah. Coffee wood is linked to Vietnam's Central Highlands, with preparation and finishing that turn mature timber into a defined product format.")+p(RANGE_SCOPE)+
             p("The next step for a buyer is practical: evaluate the sample, check who produces it, review the construction and confirm what will appear on the invoice and shipment documents.")),
          section("Brand, company and sales contact",table(["Role","Information"],[
-            ("Commercial / export brand",BRAND),("Legal manufacturer",LEGAL_NAME),
-            ("Registered in Vietnam",REGISTRATION_DATE),
+            ("Website / site name",BRAND),("Commercial / export brand",BRAND),
+            ("Manufacturing base","Vietnam"),("Manufacturer registered in Vietnam",REGISTRATION_DATE),
             ("VietPaw sales email",EMAIL),("VietPaw sales phone",PHONE),("Registered head office",ADDRESS)])+
-            p("VietPaw is the name used for the commercial range and export enquiries; WINVN INT CO., LTD is the legal manufacturer. Confirm the contracting entity, registered details and payment beneficiary in your order documents. Historical samples do not replace current company verification.")+p('<a href="/proof/">Review the Proof document register</a> and request records relevant to your order.'),True),
+            p("VietPaw is the name used for the commercial range and export enquiries. Confirm the contracting entity, registered details and payment beneficiary in your order documents. Historical samples do not replace current company verification.")+p('<a href="/proof/">Review the Proof document register</a> and request records relevant to your order.'),True),
          section("What we support",cards([
             ("Manufacturing review","Locations, process and a capacity discussion for your SKU mix.","/factory/"),
             ("Quality planning","An approved reference sample; coffee wood follows a "+QC_PROTOCOL+".","/quality-control/"),
