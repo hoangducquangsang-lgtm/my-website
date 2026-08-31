@@ -3,7 +3,7 @@ from content_helpers import publish, section, p, ul, table, cards, terms, trust_
 from content_products import product_cards
 
 SOLUTIONS = [
-("amazon-sellers","Amazon Sellers","Amazon FBA Pet Product Supplier | Private Label | WINVN",
+("amazon-sellers","Amazon Sellers","Amazon FBA Pet Product Supplier | Private Label | VietPaw",
  "Private-Label Natural Pet Toys for Amazon FBA Sellers",
  "Develop a natural-material range with pack dimensions, buyer-supplied barcode artwork and a marketplace-specific preparation brief. Confirm the product, costs and shipment plan before production.",
  "warehouse-winvn-boxes.jpg",
@@ -17,7 +17,7 @@ SOLUTIONS = [
  ("Sales costs","Advertising, returns, refunds and promotion assumptions")],
  "A single-item SKU and an assortment box have different retail prices, fulfillment costs and conversion behavior. Test contribution margin and sell-through, not average order value alone. A higher order value is not proof of higher profit or a reason to remove a two-pack without testing.",
  "private-label-pet-toys"),
-("wholesalers","Wholesalers & Distributors","Natural Pet Toy Supply for Distributors | WINVN",
+("wholesalers","Wholesalers & Distributors","Natural Pet Toy Supply for Distributors | VietPaw",
  "Natural Pet Toy Supply for Wholesalers & Distributors",
  "Plan a repeatable assortment with clear specifications, product-level minimums, carton data and rolling demand. Quote the mix you will actually reorder.",
  "export-packed-box.jpg",
@@ -31,7 +31,7 @@ SOLUTIONS = [
  ("Governance","Version control, material changes and receiving-quality process")],
  "The supplied company material quotes indicative annual capacity, but that does not reserve a production slot. Ask for a plan against your product mix and schedule. Territory or product exclusivity is a separate negotiation and should never be inferred from a volume order.",
  "wholesale-pet-products"),
-("startup-brands","Startup Brands","Low-MOQ Pet Toys for Startup Brands | WINVN",
+("startup-brands","Startup Brands","Low-MOQ Pet Toys for Startup Brands | VietPaw",
  "Launch Your First Natural Pet Toy SKU",
  "Start with a manageable product brief and a physical sample. Separate product minimums from branded packaging, then plan the first run around your available capital and sales channel.",
  "dog-lifestyle-chew-1.jpg",
@@ -43,9 +43,9 @@ SOLUTIONS = [
  ("Pilot quantity","Minimum per SKU and a separate box/print minimum"),
  ("Launch assets","Logo, label copy, photos and usage rights"),
  ("Timeline","Sample, artwork, production, transport and launch buffer")],
- "Selected standard products start from 50 pcs per SKU, while printed boxes or custom constructions may require more. Do not assume a free starter package, a fixed number of free images or a guaranteed sample-shipping refund. Ask for an itemized first-order quote before choosing the packaging.",
+ "Selected standard products start from 50 pcs per SKU. Private-label runs, custom hang tags, labels and printed boxes start at 500 pcs; laser engraving on suitable coffee wood surfaces is available separately from 50 pcs. 3 free samples. Buyer covers courier. Ask for an itemized quote for custom development, media and packaging before committing your launch budget.",
  "private-label-pet-toys"),
-("eco-pet-shops","Eco Pet Shops","Natural Pet Toys for Eco Retailers | WINVN",
+("eco-pet-shops","Eco Pet Shops","Natural Pet Toys for Eco Retailers | VietPaw",
  "A Natural-Material Range with Specific, Supportable Claims",
  "Build a shelf story around what the product actually contains. Choose natural-material formats, check the entire pack and confirm which sourcing statements you can support.",
  "winvn-loofah-growing.png",
@@ -59,7 +59,7 @@ SOLUTIONS = [
  ("Shelf information","Product identity, dimensions, instructions and responsible disposal wording")],
  "Plant-derived, renewable, reused and biodegradable are not interchangeable descriptions. Do not promise a decomposition time or carbon saving without a defined assessment. Natural charcoal as a desiccant does not establish plastic-free wrapping, and a kraft-colored pack may still have coatings.",
  "wholesale-pet-products"),
-("pet-brands","Pet Brands","Natural Pet Toy Manufacturing for Pet Brands | WINVN",
+("pet-brands","Pet Brands","Natural Pet Toy Manufacturing for Pet Brands | VietPaw",
  "A Manufacturing Brief Built Around Your Pet Brand",
  "Develop a natural-material line with defined construction, artwork and approval stages. Protect consistency by treating the sample and specification as part of the brand.",
  "process-laser-engraving.jpg",
@@ -73,7 +73,7 @@ SOLUTIONS = [
  ("Repeat production","Change notices, approved versions and forecast")],
  "Discuss confidentiality before sharing sensitive designs. A request for exclusivity or ownership is not automatically accepted because a product is private labeled. Put the relevant rights, scope, territory and duration in an agreement appropriate to the project.",
  "oem-odm-pet-toy-manufacturing"),
-("retail-chains","Retail Chains","Natural Pet Toy Supplier for Retail Chains | WINVN",
+("retail-chains","Retail Chains","Natural Pet Toy Supplier for Retail Chains | VietPaw",
  "Natural Pet Toy Supply for Retail-Chain Rollouts",
  "Prepare a consistent product and vendor information pack before expanding store distribution. Align carton configuration, labeling and delivery windows with the chain's requirements.",
  "warehouse-winvn-boxes.jpg",
@@ -90,8 +90,8 @@ SOLUTIONS = [
 ]
 
 def build(root):
-    publish(root,"/solutions/","Sourcing Solutions for Pet Product Buyers | WINVN",
-        "WINVN sourcing plans for Amazon sellers, distributors, startup brands, pet brands, eco shops and retail chains.",
+    publish(root,"/solutions/","Sourcing Solutions for Pet Product Buyers | VietPaw",
+        "VietPaw sourcing plans for Amazon sellers, distributors, startup brands, pet brands, eco shops and retail chains.",
         "Sourcing Plans for the Way Your Business Buys",
         "The same material can serve different business models. Choose the buyer route that matches your launch, assortment or replenishment needs.",
         [section("Choose your buying context",cards([(label,lede,"/solutions/"+slug+"/") for slug,label,title,h1,lede,img,features,brief,extra,service in SOLUTIONS])),
@@ -107,7 +107,7 @@ def build(root):
             sections.insert(3,section("Compare pack economics using your own data",
                 p(f'Referral, FBA, storage and advertising costs vary by marketplace, category, packaged dimensions and fulfillment program. Use the current <a href="{AMAZON}">Amazon pricing information</a> and the tools for your selling account; this page does not apply one global fee percentage.')+
                 p("Compare net sales less product/pack cost, inbound logistics, marketplace charges, advertising and returns. Keep the measurement period, currency, order definition and seller population consistent.")+
-                p("An earlier version of this page described a third-party example in our planning material as our own AOV data. It is not presented here as a verified WINVN client result. The period, marketplace and underlying order export were not supplied.")+
+                p("An earlier version of this page described a third-party example in our planning material as our own AOV data. It is not presented here as a verified VietPaw client result. The period, marketplace and underlying order export were not supplied.")+
                 p("For FBA preparation, you provide the current shipment plan and labeling instructions. We discuss packing and forwarding support against that brief; this does not imply Amazon endorsement, guaranteed acceptance or a guaranteed direct-delivery route."),True))
         if slug=="eco-pet-shops":
             sections.insert(3,section("Review the claim before it goes on a shelf",
@@ -118,7 +118,7 @@ def build(root):
             faqs=[("Can I request a sample before deciding the range?", "Yes. Tell us which product, size and pack you want to evaluate. Availability, sample terms and courier costs are confirmed first."),
                   ("What should I send for a useful quote?", "Send quantities per SKU, destination, required timing and the packaging or development brief. Attach the applicable retailer or marketplace requirements if available.")])
     # A review-ready hub, deliberately excluded from indexing until a real case is authorized.
-    publish(root,"/case-studies/","Case Study Evidence: Publication Checklist | WINVN",
+    publish(root,"/case-studies/","Case Study Evidence: Publication Checklist | VietPaw",
         "Pre-publication case study framework. No verified customer result or performance metric is asserted on this draft page.",
         "Case Studies — Evidence Before Publication",
         "This section is prepared for future, authorized buyer case studies. No verified customer outcome is currently published here.",

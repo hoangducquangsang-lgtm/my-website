@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from common import page, write_page, breadcrumb_html, BRAND, LEGAL_NAME, PHONE, PHONE_TEL, EMAIL, ADDRESS
-from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, LEAD, SOURCE_OEM, FTC, CPSC, ECHA
+from common import page, write_page, breadcrumb_html, BRAND, LEGAL_NAME, BRAND_RELATIONSHIP, PHONE, PHONE_TEL, EMAIL, ADDRESS
+from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
 from content_materials import MATERIALS
 
 def build(root):
-    publish(root,"/capabilities/","OEM, ODM & Private-Label Capabilities | WINVN",
-        "Compare WINVN wholesale, OEM/ODM and private-label pet toy services. Choose the right route for standard products, custom development and branded packaging.",
+    publish(root,"/capabilities/","OEM, ODM & Private-Label Capabilities | VietPaw",
+        "Compare VietPaw wholesale, OEM/ODM and private-label pet toy services. Choose the right route for standard products, custom development and branded packaging.",
         "OEM, ODM & Private-Label Pet Toy Manufacturing in Vietnam",
         "Choose an existing design, build to your specification or develop a new construction. We separate the product brief, sample approval and packaging decisions so your quote is clear.",
         [section("Choose the right manufacturing service",cards([
@@ -21,7 +21,7 @@ def build(root):
             "Product tags, size labels, paper/kraft boxes and pack artwork.",
             "Wood-and-rope combinations, rope geometry and loofah shapes, subject to feasibility.",
             "Product photography or video support by agreement; scope and cost depend on the project."])+
-            p(f'WINVN describes these services on its <a href="{SOURCE_OEM}">OEM/ODM service page</a>. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
+            p(f'WINVN INT CO., LTD describes these services in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
          section("Before approving a sample",ul([
             "Agree materials, dimensions, tolerances and intended pet/use.",
             "List every component, including thread, cores, adhesive and packaging film.",
@@ -30,8 +30,8 @@ def build(root):
          section("Order planning",terms(),True)],
         active="Manufacturing",image="/assets/img/process-laser-engraving.jpg",
         faqs=[("Is every customization included in the standard price?", "No. Engraving, printing, box production, new tooling, tests and media work must be itemized where applicable."),
-              ("Does a small product MOQ also apply to printed boxes?", "Not necessarily. WINVN's service page describes custom box minimums around 200 pieces per design, subject to confirmation.")])
-    publish(root,"/materials/","Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | WINVN",
+              ("Does a small product MOQ also apply to printed boxes?", "No. Selected standard products and suitable coffee wood engraving start at 50 pcs. "+PRIVATE_LABEL)])
+    publish(root,"/materials/","Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw",
         "Compare coffee wood, coconut fiber, hemp and loofah for wholesale pet toys. Review product formats, component declarations and sourcing questions.",
         "Four Natural Materials for Your Pet Toy Range",
         "Start with the material and intended play type, then verify the complete construction. A natural ingredient is the beginning of a sourcing decision, not a finished-product certification.",
@@ -39,29 +39,33 @@ def build(root):
             ("Coffee Wood","Mature coffee-tree timber for shaped chew sticks.","/collections/coffee-wood/","/assets/img/winvn-coffee-wood-single.jpg"),
             ("Coconut Fiber","Coconut-husk fiber for textured balls and coir formats.","/collections/coconut-fiber/","/assets/img/product-coconut-fiber-raw.jpg"),
             ("Hemp Fiber","Plant fiber used in wound balls and rope constructions.","/collections/hemp-fiber/","/assets/img/winvn-hemp-wood-assortment.jpg"),
-            ("Loofah","Dried gourd fiber cut and shaped for lightweight toys.","/collections/loofah/","/assets/img/winvn-loofah-growing.png")],4)),
+            ("Loofah","Dried gourd fiber cut and shaped for lightweight toys.","/collections/loofah/","/assets/img/winvn-loofah-growing.png")],4)+p(RANGE_SCOPE)),
          section("Read the full bill of materials",p("Request the primary material, core, binding thread, adhesive, filling, decoration and any surface treatment for the selected product. A wood stick with a rope is not the same construction as a plain stick, and a loofah shape with filling is not the same as a plain cut piece.")+
             p("The retail pack needs its own material list. Paper boxes can include coatings or windows; vacuum bags are not automatically plastic-free.")+
             p('<a href="/sustainability/">Read the material-claim approach</a> and <a href="/certifications/">testing/document scope</a>.'),True),
          section("From material to commercial brief",p("Choose the product, target pet, use, dimensions and first-order quantity. Then decide whether to use a standard wholesale design, add private-label packaging, or develop a new construction.")+
             p('<a href="/capabilities/">Compare manufacturing options</a> or <a href="/services/wholesale-pet-products/">plan a mixed-material wholesale order</a>.'))],
         active="Materials")
-    publish(root,"/certifications/","Pet Toy Testing & Export Documentation | WINVN",
-        "Understand product testing, inspection and shipment documents for WINVN pet toys. Confirm report scope and destination requirements before ordering.",
+    publish(root,"/certifications/","Pet Toy Testing & Export Documentation | VietPaw",
+        "Understand product testing, inspection and shipment documents for VietPaw pet toys. Confirm report scope and destination requirements before ordering.",
         "Pet Toy Testing, Quality Records & Export Documents",
         "A test report, a factory inspection and a shipment certificate answer different questions. Agree the evidence your buyer, importer and destination require before production.",
         [section("Three different types of evidence",table(["Evidence","What it addresses","What it does not establish"],[
             ("Product/material test report","Named samples, methods, tested substances or physical properties","Blanket certification of every product and future batch"),
             ("QC / inspection record","Checks against an agreed specification for a sample or lot","Automatic legal approval in every country"),
             ("Export / shipment document","Origin, movement or treatment of specified goods","A universal pet-safety or sustainability certification")])),
-         section("Confirm documents for your shipment",table(["Document","How to scope it"],[
+         section("Confirm documents for your shipment",p("VietPaw’s export-document offer covers: "+EXPORT_DOCS)+table(["Document","How to scope it"],[
             ("Commercial invoice and packing list","Confirm product description, quantities, packages and contracting parties."),
-            ("Certificate of Origin","Ask which form is applicable and available for the origin and destination."),
+            ("Certificate of Origin (CO)","Confirm the applicable form, issuing details and origin/destination requirements."),
+            ("Fumigation Certificate","Confirm treatment applicability, covered goods, certificate details and destination requirements."),
+            ("Phytosanitary Certificate","Confirm plant-material requirements for the selected product and destination."),
+            ("Bill of Lading (B/L)","For sea shipments, check shipper, consignee, ports and cargo details against the invoice and packing list. Agree the transport document for other modes."),
+            ("Batch moisture reading — on request","For coffee wood, request the batch-linked reading showing below 14% before packing. This is a QC record, not a customs certificate."),
             ("Preferential origin evidence, including EUR.1 where applicable","Have the importer or broker verify origin rules and tariff eligibility; preference is not automatic."),
-            ("Phytosanitary / treatment documents","Confirm applicability for the product, material, destination and treatment route."),
             ("Inspection report","Agree who inspects, which lot, when, and against what criteria."),
             ("Other material or forestry records","Request where relevant to the selected product and applicable requirements.")])+
-            p("A standard paperwork bundle cannot guarantee customs clearance. Use the destination, product construction and shipment details to agree the required list with your broker."),True),
+            p("A standard paperwork bundle cannot guarantee customs clearance. Use the destination, product construction and shipment details to agree the required list with your broker.")+
+            p('<a href="/proof/">See the Proof document register</a> for the scope and limitations of the supplied reference files; they are not current shipment certificates.'),True),
          section("Product testing is scoped, not implied",
             p("Third-party testing can be discussed against the requirements applicable to your target market, retailer, product construction and buyer specification. Confirm the laboratory, sample identification, test method, report date, result and limits of the assessment.")+
             p(f'<a href="{CPSC}">CPSC toy-safety guidance</a> addresses children’s toys; do not assume every pet toy needs a children’s-product certificate. <a href="{ECHA}">REACH restrictions</a> can apply to substances in articles; natural materials do not automatically establish compliance.')+
@@ -76,8 +80,8 @@ def build(root):
         faqs=[("Does every order automatically include every certificate?", "No. Document applicability, availability, cost and timing are confirmed for the shipment."),
               ("Can I arrange an independent factory or shipment inspection?", "Discuss the proposed scope, inspector, access and schedule with us before production or dispatch."),
               ("Are historical sample documents proof for my order?", "No. Verify the entity, product scope, dates and shipment linkage; examples and templates are not current certificates.")])
-    publish(root,"/sustainability/","Natural Materials & Responsible Product Claims | WINVN",
-        "Review WINVN material sourcing and packaging options without blanket green claims. Separate reuse, plant origin and disposal evidence for each product.",
+    publish(root,"/sustainability/","Natural Materials & Responsible Product Claims | VietPaw",
+        "Review VietPaw material sourcing and packaging options without blanket green claims. Separate reuse, plant origin and disposal evidence for each product.",
         "Natural Materials, Specific Claims, Clear Evidence",
         "We focus on coffee wood, coconut fiber, hemp and loofah. Responsible sourcing copy should explain what the selected product contains and what evidence supports each claim.",
         [section("Different materials, different sourcing stories",table(["Material","Supported starting description","Evidence to request"],[
@@ -90,6 +94,7 @@ def build(root):
             p("Review every component: wood or fiber, internal core, thread, glue, filling, paint, ink, coating, tag and wrapping. Packaging can be discussed in bulk, individual or paper/kraft formats. Vacuum film, laminated paper and coated boxes should not be described as plastic-free without confirmation.")+
             p("Charcoal and silica gel are different desiccants; replacing the contents of a sachet does not establish that its outer packet or the shipment is plastic-free. Agree moisture protection on performance and the actual packaging specification."),True),
          section("Biodegradability requires conditions and scope",
+            p("VietPaw does not publish biodegradability claims without appropriate evidence for the finished product and its disposal conditions.")+
             p(f'Material origin does not by itself substantiate a whole-product disposal claim. Define the component, disposal environment, time period and test evidence before using biodegradability or compostability language. See the <a href="{FTC}">FTC environmental-claims guidance</a>.')+
             p("No product-wide compostability certificate or fixed decomposition time is asserted here. Do not instruct customers to bury toys or dispose of them in a compost stream unless the exact construction and local acceptance support that instruction.")),
          section("What buyers can build into a sourcing brief",ul([
@@ -101,8 +106,8 @@ def build(root):
             p("Community-impact claims, beneficiary numbers, recycled percentages and comparative environmental advantages need their own records. They are not inferred from the location of a workshop.")+
             p('<a href="/solutions/eco-pet-shops/">Plan an eco-retail assortment</a> or <a href="/services/private-label-pet-toys/">review private-label packaging</a>.'),True)],
         active="Company",image="/assets/img/process-coffeewood-styled.jpg")
-    publish(root,"/how-to-order/","How to Order Pet Toys: Samples, MOQ & Lead Time | WINVN",
-        "Plan your WINVN sample and wholesale order: product brief, MOQ, artwork approval, production, inspection and destination-specific shipping.",
+    publish(root,"/how-to-order/","How to Order Pet Toys: Samples, MOQ & Lead Time | VietPaw",
+        "Plan your VietPaw sample and wholesale order: product brief, MOQ, artwork approval, production, inspection and destination-specific shipping.",
         "From Product Brief to Sample-Approved Order",
         "Make the first order manageable by agreeing the product, pack and responsibilities before paying for production.",
         [section("The ordering sequence",ul([
@@ -120,24 +125,24 @@ def build(root):
          section("For reorders",p("Keep the approved sample/version, product codes, artwork, carton configuration and inspection criteria together. Confirm material or packaging changes before repeat production. Share a rolling forecast with required delivery dates rather than relying on an annual capacity headline.")+
             p('<a href="/solutions/wholesalers/">Distributor reorder planning</a> · <a href="/solutions/retail-chains/">Retail-chain supply preparation</a>'),True)],
         active="Company")
-    publish(root,"/wholesale-catalogue/","WINVN Wholesale Pet Toy Catalogue (PDF) | WINVN",
-        "Download the supplied WINVN pet toy catalogue and request current WINVN specifications, prices, MOQ and private-label terms.",
+    publish(root,"/wholesale-catalogue/","VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
+        "Download the manufacturer’s supplied pet toy catalogue and contact VietPaw for current specifications, prices, MOQ and private-label terms.",
         "Wholesale Pet Toy Catalogue",
-        "Use the WINVN catalogue as a visual range reference, then confirm current specifications and commercial terms with WINVN.",
+        "VietPaw is the commercial/export brand of WINVN INT CO., LTD. Use the manufacturer’s catalogue as a visual reference, then confirm the current range and terms with Sarah.",
         [section("Download the supplied catalogue",
-            '<p><a class="btn btn-primary" href="/assets/downloads/winvn-wholesale-catalogue.pdf">Download WINVN Catalogue (PDF)</a></p>'+
-            p("This download is the original supplied WINVN catalogue, not a newly certified product specification or live price list. Older safety, size or environmental wording in the PDF should not be copied into your packaging without review.")+
+            '<p><a class="btn btn-primary" href="/assets/downloads/winvn-wholesale-catalogue.pdf">Download Manufacturer Catalogue (PDF)</a></p>'+
+            p("This download is the original supplied manufacturer catalogue from WINVN INT CO., LTD; its artwork has not been rebranded as VietPaw. It is not a newly certified product specification or live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
             p("The PDF is available directly. Downloading it does not subscribe you to a mailing list or send us your contact details.")),
          section("Send the product references you want quoted",p("Include the catalogue item or photo reference, dimensions, quantity per SKU, destination and packaging requirements. The approved sample and written quote take precedence over catalogue examples.")+
             p('<a href="/products/coffee-wood-dog-chew/">Coffee wood reference specifications</a> · <a href="/collections/hemp-fiber/">Hemp collection</a> · <a href="/request-a-quote/">Request current pricing</a>'),True)],active="Company")
     build_rfq(root)
-    publish(root,"/contact/","Contact WINVN | Samples & Wholesale Enquiries",
-        "Contact Sarah at WINVN for natural pet toy samples, wholesale quotations, private-label packaging and OEM/ODM projects in Vietnam.",
-        "Talk to WINVN About Your Next Product",
+    publish(root,"/contact/","Contact VietPaw | Samples & Wholesale Enquiries",
+        "Contact Sarah at VietPaw for natural pet toy samples, wholesale quotations, private-label packaging and OEM/ODM projects in Vietnam.",
+        "Talk to VietPaw About Your Next Product",
         "Share the product, destination and expected order quantity. Add your branding, packaging and timing requirements so we can respond to the right brief.",
-        [section("WINVN sales contact",p(f'<strong>{BRAND}</strong> · {LEGAL_NAME}')+
+        [section("VietPaw sales contact",p(BRAND_RELATIONSHIP)+
             ul([f'Email: <a href="mailto:{EMAIL}">{EMAIL}</a>',f'Phone: <a href="tel:{PHONE_TEL}">{PHONE}</a>',
-                f'WhatsApp: <a href="https://wa.me/{PHONE_TEL[1:]}">Open a conversation</a>',"Office contact address: "+ADDRESS])+
+                f'WhatsApp: <a href="https://wa.me/{PHONE_TEL[1:]}">Open a conversation</a>',"Registered head office: "+ADDRESS])+
             p("Your contact: Sarah. Share your destination market, product selection and quantities so we can prepare the right sample and quotation options.")),
          section("Prepare for a manufacturing review",p('For production locations and inspection arrangements, see <a href="/factory/">Factory & Production</a>. Please arrange visits in advance and confirm the current site address and contact for your product line.')+
             p('<a href="/request-a-quote/">Prepare a structured enquiry</a> or <a href="/wholesale-catalogue/">download the catalogue</a>.'),True)],active="Company")
@@ -145,11 +150,11 @@ def build(root):
 def build_rfq(root):
     bc,bs=breadcrumb_html([("Home","/"),("Request a Quote",None)])
     content=bc+hero("Request a Quote or Product Sample",
-        "Tell us the product and destination first. Add what you know about quantities, branding and launch timing; you do not need a finished technical brief.",eyebrow="WINVN B2B enquiries",ctas=False)
+        "Tell us the product and destination first. Add what you know about quantities, branding and launch timing; you do not need a finished technical brief.",eyebrow="VietPaw B2B enquiries",ctas=False)
     content+=f"""
 <section class="section"><div class="wrap grid grid-2">
 <form id="rfq-form" class="card" action="https://formspree.io/f/mvkpbvlb" method="post" data-success-url="/request-a-quote/thank-you/">
-<input type="hidden" name="_subject" value="New enquiry from WINVN website">
+<input type="hidden" name="_subject" value="New enquiry from VietPaw website">
 <div hidden aria-hidden="true"><label for="rfq-gotcha">Don't fill this out if you're human</label><input id="rfq-gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
 <h2>Tell us about your project</h2>
 <p class="small">Fill in the form and we'll reply with pricing, lead time and sample availability — usually within one business day. Prefer email? Write to us directly, or use WhatsApp/phone below.</p>
@@ -164,13 +169,13 @@ def build_rfq(root):
 <p id="form-error" class="small form-error" role="alert" tabindex="-1" hidden>Something went wrong. Please email us at <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </form>
 <div><h2>What happens next</h2><p>We review your brief and confirm product availability, MOQ, sample terms and an indicative timeline. New development or testing may need a separate feasibility discussion.</p>
-{ul(["Starting MOQ from 50 pcs on selected standard products; confirm each line.","Free standard sample options, with terms and shipping agreed before dispatch.","OEM/ODM and private-label packaging by quotation.","Shipment documents scoped to the destination and selected product."])}
+{ul(["Starting MOQ from 50 pcs on selected standard products; confirm each line.",SAMPLES+" "+SAMPLE_DISPATCH,PRIVATE_LABEL,LEAD,EXPORT_DOCS])}
 <h3>Contact sales directly</h3><p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></p>
 <p class="small">Do not include payment-card information or confidential designs in this first enquiry. Request an agreed confidentiality process if needed.</p>
 {trust_links()}</div></div></section>
 <script src="/assets/rfq.js?v=20260830-form" defer></script>"""
-    write_page(root,"/request-a-quote/",page("Request Pet Toy Samples & Wholesale Quote | WINVN",
-        "Request a quote or product sample from WINVN. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",
+    write_page(root,"/request-a-quote/",page("Request Pet Toy Samples & Wholesale Quote | VietPaw",
+        "Request a quote or product sample from VietPaw. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",
         "/request-a-quote/",content,schemas=[bs]))
     bc,bs=breadcrumb_html([("Home","/"),("Request a Quote","/request-a-quote/"),("Thank You",None)])
     thanks=bc+hero("Thank you — we've got your enquiry",
@@ -179,6 +184,6 @@ def build_rfq(root):
     thanks+=section("Stay in touch",p(f'<a class="btn btn-primary" href="https://wa.me/{PHONE_TEL[1:]}">Contact us on WhatsApp</a>')+
         p(f'<a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="tel:{PHONE_TEL}">{PHONE}</a>')+
         p('<a href="/wholesale-catalogue/">Browse the catalogue</a> or <a href="/">return to the homepage</a>.'))
-    write_page(root,"/request-a-quote/thank-you/",page("Thank You for Your Enquiry | WINVN",
-        "Thank you for contacting WINVN. Our team will review your pet toy enquiry and reply with pricing, sample availability and lead time.",
+    write_page(root,"/request-a-quote/thank-you/",page("Thank You for Your Enquiry | VietPaw",
+        "Thank you for contacting VietPaw. Our team will review your pet toy enquiry and reply with pricing, sample availability and lead time.",
         "/request-a-quote/thank-you/",thanks,schemas=[bs],noindex=True))

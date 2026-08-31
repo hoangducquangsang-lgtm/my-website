@@ -1,8 +1,37 @@
-# Sổ nguồn và điều kiện sử dụng nội dung WINVN
+# Sổ nguồn VietPaw / WINVN INT CO., LTD
 
-Ngày đối chiếu: 30/08/2026. Tài liệu này dành cho chủ website và biên tập viên, không phải nội dung public. “Có trong nguồn” không đồng nghĩa với đã kiểm toán, đã kiểm nghiệm hoặc còn hiệu lực cho mọi đơn hàng.
+Ngày đối chiếu mới nhất: 31/08/2026. Tài liệu này dành cho chủ website và biên tập viên, không phải nội dung public. “Có trong nguồn” không đồng nghĩa với đã kiểm toán, đã kiểm nghiệm hoặc còn hiệu lực cho mọi đơn hàng.
 
-## Chỉ định mới của chủ website — ưu tiên hơn quy ước cũ
+## Chỉ định nhận diện mới nhất — VietPaw / WINVN INT CO., LTD
+
+- Theo yêu cầu mới nhất của chủ website: **VietPaw = commercial/export brand; WINVN INT CO., LTD = legal manufacturer**. Chữ ký: **Natural Pet Products by WINVN INT CO., LTD.** Quy ước này thay thế yêu cầu “chỉ WINVN” trong hồ sơ lịch sử.
+- Phân vai được thể hiện ở header/footer, trang About/Contact, sản phẩm và dữ liệu Brand/Organization/Product. Tên pháp nhân không được đổi thành “VietPaw INT CO., LTD”.
+- Đã xem trực tiếp bốn ảnh trong `7. Proof`: CO và B/L dùng tên WYNVN INT CO., LTD; Phytosanitary dùng công ty mẫu ABC; Fumigation là tham chiếu lô hàng năm 2021, không thể hiện WINVN như exporter. Không tự suy quan hệ pháp lý giữa WYNVN và WINVN hoặc tính xác thực của con dấu/chữ ký.
+- **Chỉ định tiếp theo của chủ website: “Hãy công khai ảnh cho tôi.”** `/proof/` hiện hiển thị cả bốn ảnh gốc được cung cấp, với WebP xem trước và liên kết mở/tải PNG. Bốn PNG được copy nguyên byte vào `assets/img/proof/`; không tái tạo, sửa tên, chữ ký, con dấu hoặc thêm/xóa vùng che trên ảnh. Quyết định này thay thế việc chưa công khai ảnh ở đợt trước. Giữ rõ giới hạn pháp nhân/tài liệu mẫu; việc công khai không chứng minh tính xác thực hay hiệu lực hiện hành.
+- Hash nguồn và kiểm tra hiện tại: `brand_proof_validation.json`. Báo cáo bàn giao: `VIETPAW_BRAND_PROOF_UPDATE_VI.md` ở root website. Các điều kiện thương mại dưới đây giữ nguyên.
+
+## Chính sách đang áp dụng — cập nhật 31/08/2026
+
+Phần này và `COMMERCIAL_POLICY_UPDATE_VI.md` ở root website thay thế dữ liệu thương mại cũ trong hồ sơ ngày 30/08 bên dưới. Không lấy các mức cũ trong phần lịch sử để tạo lại website.
+
+- Ưu tiên yêu cầu sửa mới của chủ website, đối chiếu [trang chủ WINVNINT](https://www.winvnint.com/) và [coffee wood hiện hành](https://www.winvnint.com/coffeewoodchew/).
+- Công ty đăng ký tại Việt Nam ngày 12 November 2019. Dùng “registered in Vietnam in 2019”; không gán năm 2018 làm năm hoạt động của pháp nhân.
+- Không quảng cáo sản phẩm là biodegradable. Giữ các bài giải thích về bằng chứng, phạm vi và điều kiện của claim.
+- Private label 500 pcs; hang tags/labels/printed boxes từ 500 pcs. Khắc laser trên gỗ phù hợp là tùy chọn riêng từ 50 pcs.
+- Sản xuất đơn dưới 500 pcs: 5–7 days; full container: 60–80 days. Không đổi thành working days. Các quy mô ở giữa, hàng hỗn hợp và phát triển mới cần lịch riêng; vận chuyển/tạo mẫu mới/testing là thời gian riêng.
+- “3 free samples. Buyer covers courier.” Mẫu tiêu chuẩn có thể gửi trong 1 working day sau khi chốt lựa chọn và courier. Không đưa chính sách hoàn/credit courier cũ lên web.
+- Coffee wood: below 14% before packing, kiểm tra từng batch, cung cấp reading theo yêu cầu; không có lower bound 12%.
+- Six-stage drying/quality protocol with five QC checkpoints. Nguồn không công khai thông số/quy trình chi tiết; không tự gán tên sáu bước hoặc vị trí chính xác của năm checkpoints.
+- Địa chỉ: Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam.
+- Catalogue rộng hơn có Pet Beds; bốn collection trên website chỉ là phạm vi toys/chews.
+- Chứng từ: CO, Fumigation Certificate, Phytosanitary Certificate, Packing List, Commercial Invoice, B/L; subject to destination/product requirements. Moisture reading theo yêu cầu.
+- Giữ contact Sarah, số điện thoại và domain do chủ website chỉ định. Không lấy số liên hệ khác từ WINVNINT để thay tự động.
+- Trang OEM không dấu slash được trả về dưới dạng nội dung cũ trong lần đối chiếu; các đường dẫn OEM/Wholesale/Story/Pet Bed có dấu slash không tải được qua công cụ. Những dữ liệu mới ở trên được kiểm chứng từ homepage và trang coffee wood hiện hành, không suy từ trang cũ.
+- Bảng CC01 XS–XXL của tài liệu người dùng khác dòng Gorilla S–XL hiện được WINVNINT trình bày. Không trộn hai dòng hoặc tự đổi bảng size trong yêu cầu cập nhật thương mại này.
+
+## Hồ sơ lịch sử 30/08/2026 — không dùng điều khoản cũ bên dưới làm chính sách hiện hành
+
+### Chỉ định của chủ website tại thời điểm 30/08
 
 - Chỉ dùng WINVN làm thương hiệu hiển thị; bỏ cách giới thiệu hai thương hiệu.
 - Tác giả 20 Guides: Sarah. Không tự thêm chức danh, bằng cấp, thâm niên hoặc trải nghiệm cá nhân.

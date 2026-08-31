@@ -5,10 +5,16 @@ from urllib.parse import urlencode
 from common import page, write_page, breadcrumb_html, rfq_bar, BRAND
 
 MOQ = "From 50 pcs per SKU on selected standard products; format, size and packaging minimums are confirmed in the quote."
-SAMPLES = "Free standard samples may be available. Ask us to confirm the selection, preparation time, courier cost and any first-order shipping credit before dispatch."
-LEAD = "Indicative production: 15–20 working days for standard orders and 25–30 for OEM/ODM, after sample, artwork and order approval. Development, testing and freight are additional."
+PRIVATE_LABEL = "Private-label runs start at 500 pcs. Custom hang tags, labels and printed boxes start at 500 pcs; confirm the quantity per SKU and artwork in your quote."
+SAMPLES = "3 free samples. Buyer covers courier."
+SAMPLE_DISPATCH = "Standard samples can be dispatched within 1 working day once the selection and courier arrangements are confirmed. Custom prototype timing is quoted separately."
+LEAD = "Production lead time: 5–7 days for orders under 500 pcs; 60–80 days for a full container. Orders of 500 pcs or more below container volume, mixed orders and custom development need a project-specific schedule. Confirm the production start date after sample, artwork and order approval. Development, testing and freight are additional; production time is not an arrival date."
+QC_PROTOCOL = "six-stage drying/quality protocol with five QC checkpoints"
+MOISTURE = "Coffee wood moisture is checked on every batch: below 14% before packing. Batch moisture readings are available on request."
+EXPORT_DOCS = "Certificate of Origin (CO), Fumigation Certificate, Phytosanitary Certificate, Packing List, Commercial Invoice and Bill of Lading (B/L), subject to destination/product requirements. Batch moisture readings are available on request."
+RANGE_SCOPE = 'VietPaw focuses on pet toys and chews across four material collections. The legal manufacturer, WINVN INT CO., LTD, has a broader five-line catalogue that also includes Pet Beds; <a href="https://www.winvnint.com/">see the manufacturer’s full range</a> or ask Sarah about bed options.'
 SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items. Hard chews can damage teeth; seek veterinary advice for puppies, dental conditions or forceful chewing."
-SOURCE_OEM = "https://www.winvnint.com/oem"
+SOURCE_OEM = "https://www.winvnint.com/"
 SOURCE_COMPANY = "https://www.winvnint.com/"
 FTC = "https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides"
 CPSC = "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Toy-Safety"
@@ -17,7 +23,7 @@ AAHA = "https://www.aaha.org/resources/dont-chew-on-this/"
 AMAZON = "https://sell.amazon.com/pricing"
 IMAGE_DESCRIPTIONS = {
     "winvn-home-thu-cung-3.jpg": "A small dog holding a coffee wood chew stick indoors",
-    "winvn-natural-toy-assortment.png": "WINVN loofah play shapes and coffee wood stick displayed in a basket",
+    "winvn-natural-toy-assortment.png": "VietPaw loofah play shapes and coffee wood stick displayed in a basket",
     "winvn-coffee-wood-single.jpg": "Finished coffee wood chew stick on a light background",
     "winvn-coffee-wood-sizes.png": "Six coffee wood chew stick sizes on a light background",
     "winvn-coconut-fiber-balls.jpg": "Coconut-fiber balls held outdoors against green foliage",
@@ -68,13 +74,15 @@ def faq(items):
 
 def terms(moq=MOQ):
     return table(["Order detail","Planning information"],[
-        ("MOQ",moq),("Samples",SAMPLES),("Production lead time",LEAD),
-        ("Branding","Laser engraving on suitable wood surfaces; labels, tags and packaging for other materials. Custom work is quoted separately."),
-        ("Packaging","Bulk bags, individual packs and paper/kraft boxes are options. Custom printed boxes may require around 200 pcs per design; confirm the current minimum."),
+        ("Product MOQ",moq),("Private label",PRIVATE_LABEL),
+        ("Samples",SAMPLES+" "+SAMPLE_DISPATCH),("Production lead time",LEAD),
+        ("Branding","Laser engraving on suitable coffee wood surfaces starts at 50 pcs. This is separate from the 500-pc private-label packaging minimum. Custom development is quoted separately."),
+        ("Packaging","Bulk bags, individual packs and paper/kraft boxes are options. Custom hang tags, labels and printed boxes start at 500 pcs."),
+        ("Export documents",EXPORT_DOCS),
         ("Shipping","Confirm destination, Incoterm with named place, transport mode, carton data and the shipment-specific document list. Freight is not included unless stated.")])
 
 def trust_links():
-    return p('Review <a href="/factory/">factory and production information</a>, the <a href="/quality-control/">five-stage QC workflow</a> and <a href="/certifications/">testing and export-document scope</a> before approving your order.')
+    return p(f'Review <a href="/factory/">factory and production information</a>, the coffee wood <a href="/quality-control/">{QC_PROTOCOL}</a>, <a href="/certifications/">testing and export-document scope</a> and the <a href="/proof/">Proof document register</a> before approving your order.')
 
 def publish(root,path,title,description,h1,lede,sections,active="",image=None,faqs=(),trail=None,noindex=False,product=None,schemas=()):
     bc,bs=breadcrumb_html(trail or [("Home","/"),(h1,None)])

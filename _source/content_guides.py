@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""WINVN editorial guides. Author attribution supplied by the website owner."""
+"""VietPaw editorial guides. Author attribution supplied by the website owner."""
 from common import BASE_URL, BRAND, page, write_page, breadcrumb_html
 from guide_dates import GUIDE_UPDATED_DATES, updated_time
 from content_helpers import section, p, ul, table, cards, rfq_bar, FTC, CPSC, ECHA, AAHA
@@ -22,7 +22,7 @@ add("natural-dog-chew-toys-guide","Natural chew toys",
     ("Build the range around use, not a toughness ranking",p("Hardness is not a universal quality score. AAHA cautions that very hard chews can damage teeth. A heavy dog is not automatically a suitable customer for a hard chew, and a small stick is not automatically suitable for a puppy. When dental condition or forceful chewing is a concern, individual veterinary advice matters more than the catalogue size label.")),
     ("Make the first order teach you something",p("Record quantities by SKU and size, rather than only the total number of toys. Agree the pack count, barcode placement and carton marks before production. At receiving, separate manufacturing defects from transit damage and keep the batch reference with each issue.")+
         p("After launch, review which sizes sell, which questions customers ask and why products are returned. That information gives the second order a sounder basis. A broad promise such as suitable for all dogs does not."))],
-    ("Explore WINVN's natural dog toy range","/dog-toys/"),
+    ("Explore VietPaw's natural dog toy range","/dog-toys/"),
     related=[("Coffee wood sizing","/guides/coffee-wood-chew-size-guide/"),("Wholesale ordering","/services/wholesale-pet-products/")],
     sources=[("AAHA guidance on hard chews",AAHA)],
     image="winvn-coffee-wood-sizes.png")
@@ -39,7 +39,7 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     ("Supervision includes knowing when to stop",p("Check the chew before and during use. Remove loose pieces, and take the product away if it cracks, becomes damaged or wears down to a size the dog could swallow. If the dog is trying to break off and swallow chunks, discontinue that product rather than waiting for it to wear out.")+
         p("The pack should make clear that the product is not food. Avoid statements suggesting that every fiber or fragment is harmless to swallow. Suspected swallowing of a substantial piece or signs of injury need veterinary attention, not a recommendation to keep using the chew.")),
     ("What buyers should put on the label",p("Keep the advice short enough to be read: intended pet, size selection, supervised use, inspection and replacement. Put the same guidance on the product page and the pack. A sales claim such as splinter-free or safe for all dogs can undo that care by creating a false expectation.")+
-        p("WINVN's size reference is useful for comparing products. Use it alongside the actual dimensions and a suitability decision, not as a substitute for either."))],
+        p("VietPaw's size reference is useful for comparing products. Use it alongside the actual dimensions and a suitability decision, not as a substitute for either."))],
     ("Coffee wood product specifications","/products/coffee-wood-dog-chew/"),
     related=[("Size guide","/guides/coffee-wood-chew-size-guide/"),("Quality-control workflow","/quality-control/")],
     sources=[("AAHA: hard-chew risks",AAHA)],
@@ -130,7 +130,7 @@ add("are-dog-toys-biodegradable","Materials & claims",
         p("The FTC's Green Guides are a useful starting point for understanding why unqualified degradability claims can mislead. For a particular market and label, have the proposed wording reviewed against the applicable requirements.")),
     ("Keep a claim file, not just a certificate folder",p("Save the final wording, the supporting evidence, the approved bill of materials and the artwork version together. Record who reviewed the claim and what changes would require another review. This is especially useful for repeat orders, when a packaging substitution can otherwise pass unnoticed.")+
         p("If the evidence does not support the desired claim, use a narrower description of the actual material. Customers can understand a clear material story without being given an unsupported disposal promise."))],
-    ("Explore WINVN's material collections","/materials/"),
+    ("Explore VietPaw's material collections","/materials/"),
     related=[("Plastic-free buying brief","/guides/plastic-free-biodegradable-pet-toys-guide/"),("Sustainability and packaging","/sustainability/")],
     sources=[("FTC guidance on degradable claims",FTC)],
     image="winvn-loofah-growing.png")
@@ -165,7 +165,7 @@ add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
         p("A report for one material does not establish that every finished toy is non-toxic under every condition. Retailer requirements may also be more specific than the information supplied with a standard catalogue. Resolve that difference before approving artwork.")),
     ("Prepare the product for the store and the home",p("Show the intended play type and supervision advice clearly. Explain when damaged toys or loose components should be removed. Keep warnings readable on a small pack; reducing the type size until everything fits is not a useful solution.")+
         p("For wholesale orders, define whether a set is one saleable unit or several individually labeled items. That decision affects barcodes, pack counts and how a shop replaces a damaged unit. A well-specified cat range works for the receiving team as well as the customer."))],
-    ("Browse WINVN's natural cat toys","/cat-toys/"),
+    ("Browse VietPaw's natural cat toys","/cat-toys/"),
     related=[("Loofah product details","/products/loofah-cat-toy/"),("Testing and documentation","/certifications/")],
     image="winvn-loofah-play-shapes.png")
 
@@ -174,7 +174,7 @@ add("sustainable-pet-toy-materials-compared","Materials & claims",
     "Compare four natural pet toy materials by construction, product format, quality-control priorities and packaging requirements.",
     "The best material decision begins with the product you want to make. A shaped wood stick, a wound ball and a lightweight loofah figure do different jobs. Comparing them with a single eco score hides the design and purchasing decisions that will determine whether the finished item works for your range.",
     [
-    ("Four materials, four different briefs",table(["Material","Typical format in the WINVN range","Priority at sample approval"],[
+    ("Four materials, four different briefs",table(["Material","Typical format in the VietPaw range","Priority at sample approval"],[
         ("Coffee wood","Finished chew sticks and wood-and-rope combinations","Dimensions, surface finish, cracks and drying controls"),
         ("Coconut fiber / coir","Textured balls and fiber constructions","Winding, loose ends, complete construction and finished weight"),
         ("Hemp fiber","Rope, wound balls and knotted assemblies","Fiber declaration, rope diameter, knots and attachments"),
@@ -186,7 +186,7 @@ add("sustainable-pet-toy-materials-compared","Materials & claims",
         p("Review moisture protection and storage alongside the shelf appearance. The right answer may differ between a local retail delivery and a longer international shipment. The quotation should identify the proposed packing materials rather than simply calling them eco packaging.")),
     ("Use a sample range to make the decision",p("Choose a few products that have distinct uses and clear specifications. Compare their construction, how easily the label explains them and how they fit your intended retail price after landed costs. Avoid launching several near-identical variants before learning which size and format customers actually need.")+
         p("For a repeatable range, keep one approved file per SKU: component list, dimensions, sample photographs, packing details and label wording. That file is the link between a compelling material story and a product the factory can reproduce."))],
-    ("Explore the four WINVN material collections","/materials/"),
+    ("Explore the four VietPaw material collections","/materials/"),
     related=[("Private-label development","/services/private-label-pet-toys/"),("Material and packaging claims","/sustainability/")])
 
 add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
@@ -202,7 +202,7 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
         p("A photograph from a previous order can show a process. It cannot replace inspection information for the lot you are purchasing. Your order needs an identifiable reference from sample approval through receiving.")),
     ("Work backwards from the date you need stock",p("Separate development, sample delivery, artwork approval, production, testing, freight and receiving. Ask when each stage can start and which approvals it depends on. A factory completion date is not a warehouse delivery date.")+
         p("Before dispatch, have your forwarder or broker review the product description, destination requirements and document list. Confirm the named delivery point, carton dimensions, gross weight and shipment responsibilities. When the first shipment arrives, record any differences while the cartons and batch markings are still available. That receiving report is the foundation of a better repeat order."))],
-    ("See the WINVN ordering process","/how-to-order/"),
+    ("See the VietPaw ordering process","/how-to-order/"),
     related=[("Manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),("MOQ, pricing and lead times","/guides/pet-toy-moq-fob-pricing-lead-times/")],
     image="export-packed-box.jpg")
 
@@ -217,9 +217,9 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
         p("For a developing range, discuss the repeat order as well as the first order. Can the supplier retain the approved reference and reproduce the same pack? What notice is needed for a change in quantity or size mix? Those answers matter to a retailer that cannot keep relabeling stock.")),
     ("Put the sample beside the specification",p("Natural materials will not look identical piece for piece. Set acceptable ranges for dimensions, weight and appearance, and distinguish them from defects. A knot in the grain and a damaged edge should not be grouped together as natural variation.")+
         p("Use the same principle for complete construction. If the sample uses one rope material, a similar-looking substitute still requires approval. Keep the component list and packaging details with the sample, so consistency does not depend on one person's memory.")),
-    ("What to ask WINVN",p("WINVN's range covers coffee wood, coconut fiber, hemp fiber and loofah. For a manufacturing discussion, send the product references, destination, quantities and level of customization. Request current production-location information and a walkthrough or inspection arrangement relevant to that product.")+
+    ("What to ask VietPaw",p("VietPaw's range covers coffee wood, coconut fiber, hemp fiber and loofah. For a manufacturing discussion, send the product references, destination, quantities and level of customization. Request current production-location information and a walkthrough or inspection arrangement relevant to that product.")+
         p("Finish the review with a written quote and an agreed approval sequence. Knowing who answers product, quality and shipping questions is just as important as knowing the address of a production site."))],
-    ("WINVN pet toy manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),
+    ("VietPaw pet toy manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),
     related=[("Factory and production","/factory/"),("Supplier due diligence","/guides/how-to-vet-an-eco-pet-toy-supplier/")],
     image="process-raw-sticks.jpg")
 
@@ -235,8 +235,8 @@ add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     ("Look at the carton while there is still time to change it",p("Ask for the number of retail units per carton, outer dimensions and gross weight. Fiber balls can occupy more space than their weight suggests, especially in rigid display packaging. Your forwarder needs the packed data, not the dimensions of one loose ball.")+
         p("Agree clean, dry packing and storage requirements with the supplier. At receiving, inspect the product and packaging condition together. Keep photographs of carton damage, affected units and identifying marks so a transport issue can be distinguished from a production defect.")),
     ("Use the first order to establish the reorder",p("A sensible trial is large enough to assess the chosen sizes and presentation, but narrow enough to review carefully. Track sales and returns by SKU. If customers favor one size or a pack creates confusion, revise that detail before expanding the range.")+
-        p("When requesting a WINVN quote, include your destination, quantity per size and preferred pack. Selected standard lines may support a small starting order; product and printed-packaging minimums still need to be confirmed separately."))],
-    ("WINVN coconut-fiber cat ball specifications","/products/coconut-fiber-cat-ball/"),
+        p("When requesting a VietPaw quote, include your destination, quantity per size and preferred pack. Selected standard lines may support a small starting order; product and printed-packaging minimums still need to be confirmed separately."))],
+    ("VietPaw coconut-fiber cat ball specifications","/products/coconut-fiber-cat-ball/"),
     related=[("Coconut-fiber material guide","/guides/what-is-coconut-fiber-pet-toys/"),("Wholesale supply","/services/wholesale-pet-products/")],
     image="winvn-coconut-fiber-balls.jpg")
 
@@ -252,10 +252,10 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
     ("A design developed with the manufacturer",p("For a new concept, decide who provides the initial design, who develops prototypes and who approves the final construction. Record development charges, tooling if applicable, revision rounds and the ownership or usage rights you have agreed. Do not assume that a private-label order creates exclusive rights to a standard design.")+
         p("Allow separate time for development and production. A quote for making approved goods does not necessarily include the time spent refining a concept or revising artwork.")),
     ("Use clear approval gates",ul(["Product brief agreed: construction, market, target quantity and packaging route.","Prototype or sample approved: dimensions, components and appearance recorded.","Artwork approved: logo, warnings, barcode and pack contents checked.","Production released: price, schedule, inspection and shipment responsibilities confirmed."])+
-        p("WINVN offers product customization, engraving and packaging support. Describe which of these you need, then ask for a quotation that separates them. You will have a clearer project budget and fewer surprises when the design changes."))],
+        p("VietPaw offers product customization, engraving and packaging support. Describe which of these you need, then ask for a quotation that separates them. You will have a clearer project budget and fewer surprises when the design changes."))],
     ("Discuss OEM and ODM pet toy development","/services/oem-odm-pet-toy-manufacturing/"),
     related=[("Private-label services","/services/private-label-pet-toys/"),("Sample and order process","/how-to-order/")],
-    sources=[("WINVN customization and packaging services","https://www.winvnint.com/oem")],
+    sources=[("WINVN INT CO., LTD: customization and packaging","https://www.winvnint.com/")],
     image="process-laser-engraving.jpg")
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
@@ -263,17 +263,17 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     "Understand pet toy minimum orders, packaging costs, FOB and FCA delivery terms, and the difference between production time and arrival date.",
     "A useful quotation should let both parties describe the same order without filling in the gaps. Which SKU? Which pack? How many saleable units? Delivered where, and when? If those answers are missing, a low unit price can be expensive to interpret later.",
     [
-    ("There may be more than one minimum",p("Product production, engraving, printed labels and custom boxes can each have their own minimum. WINVN's starting point of 50 pieces applies to selected standard products, not every design or packaging option. Its public service information also describes custom printed boxes at around 200 pieces per design; confirm the current minimum for your brief.")+
+    ("There may be more than one minimum",p("VietPaw’s starting point of 50 pcs applies to selected standard products. Laser engraving on suitable coffee wood surfaces also starts at 50 pcs, but a private-label run starts at 500 pcs. Custom hang tags, labels and printed boxes start at 500 pcs. An engraving-only order and a fully branded retail pack therefore need different budgets.")+
         p("Ask whether sizes may be mixed and whether the minimum applies per SKU, size, artwork or total order. If the pack minimum exceeds the product quantity, agree who pays for the balance, who stores it and whether it can be used on the next order.")),
     ("Compare the complete saleable unit",p("Separate the toy, customization, retail pack, master carton and any agreed testing or inspection charges. Confirm the currency, quotation validity and payment schedule. A one-off artwork or development charge should not disappear inside a unit price that you later expect on reorders.")+
         p("For an internal landed-cost estimate, add the applicable origin charges, freight, insurance, import charges and destination handling to the goods cost. Allocate them across the saleable units you expect to receive. Use actual forwarder and broker inputs; freight and duty estimates are not factory product prices.")),
     ("FOB needs a named port and the right transport arrangement",p("Under Incoterms® 2020, FOB is a sea and inland-waterway rule, with delivery and risk transfer when goods are on board at the named shipment port. It is not shorthand for delivery to your warehouse. For container goods handed to a carrier before vessel loading, ICC guidance points buyers toward considering FCA instead.")+
         p("Agree the rule, named place or port and edition with the supplier and forwarder. Then identify any quoted services beyond that rule. Incoterms do not replace the product specification, payment agreement or inspection plan.")),
-    ("Put dates against the approval sequence",p("WINVN's planning references indicate 15–20 working days for standard production and 25–30 for OEM/ODM after the relevant sample, artwork and order approvals. These are indicative production windows, not a guaranteed arrival date. Development, testing and transport need their own allowances.")+
+    ("Put dates against the approval sequence",p("VietPaw’s published production lead times are 5–7 days for orders under 500 pcs and 60–80 days for a full container. Do not apply the small-order window to a 500-pc private-label launch. Quantities between those bands, mixed orders and custom development need a project-specific schedule. Development, testing and transport need their own allowances; production completion is not an arrival date.")+
         p("Ask which approval starts the clock and what could change the schedule. Work backwards from the date stock must be available for sale, allowing time to receive and inspect it. A launch plan needs that final stage just as much as it needs a factory completion date."))],
     ("Prepare a product and pricing enquiry","/request-a-quote/"),
     related=[("Wholesale service","/services/wholesale-pet-products/"),("First-order planning","/guides/sourcing-eco-pet-toys-vietnam/")],
-    sources=[("WINVN MOQ and packaging options","https://www.winvnint.com/oem"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
+    sources=[("WINVN INT CO., LTD: order minimums and lead times","https://www.winvnint.com/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
     image="export-carton-labels.jpg")
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
@@ -289,7 +289,7 @@ add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
         p("Keep the reviewed evidence with the SKU and artwork version. Shipment records, such as origin or treatment documents, serve different purposes and should not be presented as substitutes for a product assessment.")),
     ("Agree responsibilities before production",p("Identify who determines applicable requirements, who arranges testing, who pays and what happens if the result does not meet the agreed criteria. Put the required timing into the order plan so the shipment is not waiting on an unresolved assessment.")+
         p("CPSIA and REACH are not a complete worldwide compliance checklist. Requirements depend on destination, product and sales channel and can change. The importer and its qualified advisers should confirm the current position before approving the product and its claims."))],
-    ("WINVN testing and export-document information","/certifications/"),
+    ("VietPaw testing and export-document information","/certifications/"),
     related=[("Planning a safety assessment","/guides/pet-toy-safety-testing-requirements/"),("Quality-control workflow","/quality-control/")],
     sources=[("CPSC toy-safety business guidance",CPSC),("ECHA: REACH restrictions",ECHA)])
 
@@ -299,7 +299,7 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
     "A country-level cost comparison can point a buyer in a direction, but it cannot select a supplier. Two factories in the same country may have very different skills, packaging options and production schedules. The useful comparison is between suppliers quoting the same finished order.",
     [
     ("Use one specification for both quotations",p("Send the same dimensions, component list, quantity, pack and inspection requirements. Make clear whether you are comparing standard products or a newly developed design. Otherwise, the lowest price may simply refer to less work, a different material or a simpler pack.")+
-        p("For WINVN's natural-material range, the relevant comparison is coffee wood, coir, hemp or loofah production for your chosen construction. A supplier's strength in another product category does not establish its ability to reproduce that item.")),
+        p("For VietPaw's natural-material range, the relevant comparison is coffee wood, coir, hemp or loofah production for your chosen construction. A supplier's strength in another product category does not establish its ability to reproduce that item.")),
     ("Build the landed-cost comparison line by line",table(["Cost or condition","Comparison basis"],[
         ("Product and customization","Same SKU, quantity, components and approved finish"),
         ("Retail and transit packaging","Same saleable unit and carton requirements"),
@@ -311,7 +311,7 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
         p("Also assess how the supplier responds to a precise technical question. Can it explain a size tolerance, identify a packaging change and provide an updated drawing or sample? Clear answers during sampling are useful evidence of how a reorder may be managed.")),
     ("Make a second source genuinely usable",p("If diversification is the objective, qualify the alternative product rather than only adding another supplier name to a spreadsheet. Natural materials can differ in appearance and handling. Retest the retail presentation, label information and receiving specification for the alternative source.")+
         p("Choose on the basis of product fit, total cost and repeatability. Neither Vietnam nor China is automatically the better answer for every construction, order size or sales channel."))],
-    ("Review WINVN's Vietnam manufacturing capabilities","/pet-toys-manufacturer-vietnam/"),
+    ("Review VietPaw's Vietnam manufacturing capabilities","/pet-toys-manufacturer-vietnam/"),
     related=[("Supplier qualification","/guides/how-to-vet-an-eco-pet-toy-supplier/"),("Pricing and delivery terms","/guides/pet-toy-moq-fob-pricing-lead-times/")],
     sources=[("European Commission: importing into the EU","https://policy.trade.ec.europa.eu/help-exporters-and-importers/importing-eu_en")],
     image="warehouse-winvn-boxes.jpg")
@@ -329,8 +329,8 @@ add("pet-toy-safety-testing-requirements","Compliance & risk",
         p("Do not treat a report for one size or component as automatic coverage for the full range. Agree how variants will be grouped and assessed with the responsible specialist. Keep that rationale in the product file so the next buyer or quality manager can follow it.")),
     ("Plan the response to a failed check",p("Before production, decide who receives results, who approves corrective action and whether retesting or reinspection is needed. Allow time for that work in the launch schedule. It is much harder to resolve an ambiguous result when a freight booking is about to expire.")+
         p("At release, the file should connect the approved sample, current specification, relevant assessments and inspection decision. Keep shipment or treatment documents alongside it, but label them for their actual purpose. A document supporting movement of goods is not evidence for every product-safety claim."))],
-    ("Discuss testing and documentation with WINVN","/certifications/"),
-    related=[("Five-stage quality control","/quality-control/"),("CPSIA and REACH scope","/guides/pet-toy-safety-compliance-cpsia-reach/")],
+    ("Discuss testing and documentation with VietPaw","/certifications/"),
+    related=[("Six-stage drying/quality protocol and five QC checkpoints","/quality-control/"),("CPSIA and REACH scope","/guides/pet-toy-safety-compliance-cpsia-reach/")],
     image="winvn-moisture-check-kiem-go-9.jpg")
 
 add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
@@ -346,13 +346,13 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
         p("The goal is to understand who controls the work and how a problem will be traced. A warehouse image can show stock or packing, but it does not answer every question about production equipment, ownership or available capacity.")),
     ("Test the claims against their evidence",p("For a material claim, review the component list. For a test claim, review the sample and report scope. For an environmental claim, identify exactly what product or packaging it covers. A confident supplier should be able to distinguish what is documented from what still needs assessment.")+
         p("Finish with an order plan: approval stages, quality criteria, inspection timing, shipment responsibilities and a written process for non-conforming goods. The first delivery then becomes a measurable review of what was agreed, not a debate over what either party thought the catalogue implied."))],
-    ("Review WINVN factory and production information","/factory/"),
+    ("Review VietPaw factory and production information","/factory/"),
     related=[("Testing and documents","/certifications/"),("Wholesale order planning","/services/wholesale-pet-products/")],
     image="warehouse-winvn-boxes.jpg")
 
 add("coffee-wood-chew-size-guide","Natural chew toys",
-    "Coffee Wood Chew Sizes: WINVN's XS–XXL Reference",
-    "Compare WINVN CC01 coffee wood chew dimensions and reference weight bands, with advice on sample approval, labels and size selection.",
+    "Coffee Wood Chew Sizes: VietPaw's XS–XXL Reference",
+    "Compare VietPaw CC01 coffee wood chew dimensions and reference weight bands, with advice on sample approval, labels and size selection.",
     "An M label is convenient for ordering, but it is not a measurement. When comparing coffee wood chews, use length, diameter and weight together. For pet suitability, the dog's mouth size, chewing behavior and dental condition still matter; the weight band is only a starting reference.",
     [
     ("The CC01 size reference",coffee_size_table()),
@@ -376,7 +376,7 @@ def build(root):
     hub=bc+'<section class="hero"><div class="wrap"><h1>Pet Product &amp; Sourcing Guides</h1>'+p("Written by Sarah for pet brands, retailers and importers. Practical guidance on choosing natural toys, evaluating samples and managing an international order from the first brief to receiving.")+'</div></section>'
     for cluster,articles in clusters.items():
         hub+=section(cluster,cards([(a["title"],a["description"]+f'<span class="guide-updated">Updated {updated_time(a["slug"])}</span>',"/guides/"+a["slug"]+"/") for a in articles]))
-    write_page(root,"/guides/",page("Guides & Resources | Natural Pet Toy Sourcing | WINVN",
+    write_page(root,"/guides/",page("Guides & Resources | Natural Pet Toy Sourcing | VietPaw",
         "Buyer guides to natural pet toy materials, sizes, supplier verification, wholesale ordering and product-specific compliance planning.",
         "/guides/",hub+rfq_bar(),"Guides",[bs]))
     for a in ARTICLES:
@@ -389,11 +389,11 @@ def build(root):
             body+="<h2>Further reading</h2>"+ul([f'<a href="{u}">{t}</a>' for t,u in a["related"]])
         if a["sources"]:
             body+='<div class="source-note"><h2>Reference guidance</h2>'+ul([f'<a href="{u}">{t}</a>' for t,u in a["sources"]])+'</div>'
-        content=bc+f'<article class="section"><div class="wrap article"><p class="tag">{a["cluster"]}</p><h1>{a["title"]}</h1><p class="meta article-byline">By <span class="author-name">Sarah</span> · WINVN · Updated {updated_time(a["slug"])}</p>{body}</div></article>'
+        content=bc+f'<article class="section"><div class="wrap article"><p class="tag">{a["cluster"]}</p><h1>{a["title"]}</h1><p class="meta article-byline">By <span class="author-name">Sarah</span> · VietPaw · Updated {updated_time(a["slug"])}</p>{body}</div></article>'
         schema={"@context":"https://schema.org","@type":"Article","@id":BASE_URL+path+"#article",
             "headline":a["title"],"description":a["description"],"dateModified":GUIDE_UPDATED_DATES[a["slug"]],
             "mainEntityOfPage":BASE_URL+path,"image":BASE_URL+"/assets/img/"+a["image"],
             "author":{"@type":"Person","name":"Sarah"},
             "publisher":{"@id":BASE_URL+"/#organization"}}
-        write_page(root,path,page(a["title"]+" | WINVN",a["description"],path,content+rfq_bar(),
+        write_page(root,path,page(a["title"]+" | VietPaw",a["description"],path,content+rfq_bar(),
             "Guides",[bs,schema],og_image="/assets/img/"+a["image"]))

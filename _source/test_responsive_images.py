@@ -54,7 +54,7 @@ def slot(image, viewport):
     return content
 
 
-def run(backup):
+def run(backup, *, check_legacy_copy=False):
     manifest = json.loads((ROOT / "_source/review/responsive_images.json").read_text(encoding="utf-8"))["images"]
     variants = {}
     for original, info in manifest.items():
@@ -113,14 +113,18 @@ def run(backup):
             if relative.startswith("assets/img/") and not name.endswith("/"):
                 assert archive.read(name) == (ROOT / relative).read_bytes(), "Original image changed: " + relative
                 preserved_assets += 1
-    assert len(old_docs) == 67, "Use the backup immediately before the menu/hemp/date update"
+    assert set(old_docs).issubset(docs), "An existing route was removed"
+    assert set(docs)-set(old_docs) <= {"proof/index.html"}, "Unrequested new route"
     preserved_pages = 0
     approved_image_changes = 0
     for relative, before in old_docs.items():
         after = docs[relative]
-        assert unchanged_copy(old_html[relative],relative) == unchanged_copy((ROOT/relative).read_text(encoding="utf-8"),relative), "Unrelated copy changed: " + relative
-        assert before.title == after.title and before.meta["description"] == after.meta["description"]
-        preserved_pages += 1
+        # Optional historical test for the menu/photo/date-only update. The commercial
+        # revision intentionally changes copy; test_commercial_policy.py covers it.
+        if check_legacy_copy:
+            assert unchanged_copy(old_html[relative],relative) == unchanged_copy((ROOT/relative).read_text(encoding="utf-8"),relative), "Unrelated copy changed: " + relative
+            assert before.title == after.title and before.meta["description"] == after.meta["description"]
+            preserved_pages += 1
         assert len(before.images) == len(after.images), "Image added or removed: " + relative
         for a, b in zip(before.images, after.images):
             original, _, _ = variants[local_path(ROOT / relative, b["src"])]
@@ -130,7 +134,7 @@ def run(backup):
                 assert b["alt"] == IMAGE_DESCRIPTIONS[Path(original).name]
                 approved_image_changes += 1
             else:
-                assert a["alt"] == b["alt"], "Unrequested photo description change"
+                assert a["alt"].replace("WINVN", "VietPaw") == b["alt"], "Unrequested photo description change"
         if relative in HEMP_IMAGES:
             assert variants[local_path(ROOT / relative, after.images[0]["src"])][0] == HEMP_IMAGES[relative], "Wrong photo for hemp product"
             assert variants[local_path(ROOT / relative, after.meta["og:image"])][0] == HEMP_IMAGES[relative]
@@ -165,7 +169,9 @@ def run(backup):
         "existing_image_files_preserved_against_backup": preserved_assets,
         "source_images_optimized": len(manifest), "webp_files_verified": len(variants),
         "inline_images_verified": inline_count, "pages_checked": len(docs),
-        "pages_copy_preserved_except_requested_dates_and_caption": preserved_pages,
+        "legacy_editorial_copy_check_enabled": check_legacy_copy,
+        "pages_copy_preserved_except_requested_dates_and_caption": preserved_pages if check_legacy_copy else None,
+        "commercial_copy_test": "Run test_brand_proof.py with the pre-branding backup; it verifies unchanged commercial terms as well as the new identity and Proof route.",
         "approved_hemp_image_positions_changed": approved_image_changes,
         "legacy_form_content_and_fields_match": True,
         "homepage_current_photos_original_bytes": original_bytes,
@@ -178,4 +184,4 @@ def run(backup):
 
 
 if __name__ == "__main__":
-    run(Path(sys.argv[1]))
+    run(Path(sys.argv[1]), check_legacy_copy="--legacy-editorial-copy" in sys.argv)

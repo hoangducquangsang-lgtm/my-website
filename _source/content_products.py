@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Product specifications grounded in the supplied WINVN product sheets."""
+"""Product specifications grounded in the supplied manufacturer product sheets."""
 from common import BASE_URL, BRAND, LEGAL_NAME
-from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SAFETY
+from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE
 
 COFFEE_SIZES = [
     ("XS","CC01-XS","10","1.5–2.0","23–30","Under 5 kg"),
@@ -12,15 +12,15 @@ COFFEE_SIZES = [
     ("XXL","CC01-XXL","22–23","5.5–7.0","325–450","Over 40 kg"),
 ]
 def coffee_size_table():
-    return table(["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight"],COFFEE_SIZES)+p("Reference: WINVN coffee wood product specification supplied for this website. Natural shape and weight vary; confirm the current size sheet and agreed tolerances with your sample. Dog weight is a starting reference, not a veterinary suitability assessment. Older charts use different weight bands; do not combine them.")
+    return table(["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight"],COFFEE_SIZES)+p("Reference: the coffee wood specification supplied by WINVN INT CO., LTD for the VietPaw range. Natural shape and weight vary; confirm the current size sheet and agreed tolerances with your sample. Dog weight is a starting reference, not a veterinary suitability assessment. Older charts use different weight bands; do not combine them.")
 
 PRODUCTS = {
 "coffee-wood-dog-chew":dict(name="Coffee Wood Dog Chew Stick",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
  image="winvn-coffee-wood-sizes.png",size="XS–XXL; six reference sizes",moq="From 50 pcs per SKU on standard coffee wood sticks.",
  lede="Source a coffee wood chew stick cut, shaped, dried and surface-finished in Vietnam. Compare six reference sizes, agree the finished sample, and add laser engraving or your own packaging.",
- overview="The standard stick is described in the WINVN product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
+ overview="The standard stick is described in the manufacturer's product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
  options=["Standard stick sizes XS–XXL; natural grain, outline and shade vary.","Laser-engraved brand mark on an agreed area of the wood, with placement approved on a sample.","Coffee wood combined with cotton or hemp rope is a separate construction; specify the rope material rather than describing the whole toy as single-ingredient."],
- checks=["Confirm size, diameter and weight bands against the approved reference sample.","Inspect edges, surface finish and visible cracks; agree unacceptable defects before production.","Agree drying, storage and packing requirements. The supplier describes a 12–14% wood moisture target; request the method and batch record rather than treating it as a guarantee."]),
+ checks=["Confirm size, diameter and weight bands against the approved reference sample.","Inspect edges, surface finish and visible cracks; agree unacceptable defects before production.",MOISTURE+" Agree drying, storage and packing requirements, including the measurement method and batch record."]),
 "coconut-fiber-cat-ball":dict(name="Coconut Fiber Cat Ball",material="Coconut fiber",collection="coconut-fiber",group="Coconut Fiber",
  image="winvn-coconut-fiber-balls.jpg",size="Size and diameter selected by sample",moq="Request the current per-size minimum; selected standard lines start from 50 pcs.",
  lede="A textured coconut-husk fiber ball for supervised batting and chasing. Build a cat-focused assortment with sample-approved dimensions, secure construction and private-label tags.",
@@ -36,19 +36,19 @@ PRODUCTS = {
 "hemp-fiber-ball":dict(name="Hemp Fiber Rope Ball",material="Hemp fiber",collection="hemp-fiber",group="Hemp Fiber",
  image="winvn-hemp-fiber-rope-ball.png",size="S: 4–5 cm; M: 6–7 cm; L: 8–9 cm (catalogue reference)",moq="Confirm MOQ by size; selected standard hemp products start from 50 pcs.",
  lede="A wound hemp-fiber ball for supervised interactive play. Compare three catalogue diameter bands and agree fiber composition, knot construction and packaging before ordering.",
- overview="The 2026 WINVN catalogue lists hemp balls in three sizes. A ball without a handle and a ball-with-rope are different products: identify the exact construction in the quote. Fiber identity, any blend and all binding components should be declared for the selected item.",
+ overview="The manufacturer's supplied 2026 catalogue lists hemp balls in three sizes. A ball without a handle and a ball-with-rope are different products: identify the exact construction in the quote. Fiber identity, any blend and all binding components should be declared for the selected item.",
  options=["Catalogue reference diameters: S 4–5 cm, M 6–7 cm, L 8–9 cm; confirm current tolerances.","Choose the standalone ball or discuss a separately specified rope-handle version.","Use branded tags and paper packaging; do not laser-engrave loose fiber as though it were wood."],
  checks=["Compare diameter, finished weight, winding and knots with the approved sample.","Agree an appropriate pull/attachment check for the specific construction; request results if numerical strength is claimed.","Inspect for strand shedding and provide supervised-use instructions."]),
 "loofah-cat-toy":dict(name="Loofah Cat Toy",material="Loofah",collection="loofah",group="Loofah",
  image="winvn-loofah-play-shapes.png",size="Dimensions confirmed per shape",moq="Quoted per shape; ask about small trial quantities and mixed-shape feasibility.",
  lede="Lightweight loofah-gourd fiber shaped for supervised cat play. Choose the shape, dimensions and attachments, then approve your sample and private-label packaging.",
- overview="Loofah is the fibrous interior of a dried gourd. WINVN's product sheet describes cutting and shaping this material into play forms. Dimensions differ by design, so a fish, mouse or plain roll must each have a specification rather than a single universal size range.",
+ overview="Loofah is the fibrous interior of a dried gourd. The manufacturer's product sheet describes cutting and shaping this material into play forms. Dimensions differ by design, so a fish, mouse or plain roll must each have a specification rather than a single universal size range.",
  options=["Request available shapes and a dimensioned sample for each chosen SKU.","Specify stitching, decorative parts and any filling as separate components.","Catnip inclusion is an optional development request, not standard contents; confirm source, amount and labeling for the target market."],
  checks=["Check surface cleanliness, dryness, shape consistency and seam or attachment security.","Agree the full component list before describing a finished toy as all-natural or plastic-free.","Match pack warnings to the selected species and construction; this cat page does not establish suitability for every small animal."]),
 "hemp-rope-dog-toy":dict(name="Hemp Rope Dog Toy",material="Hemp fiber",collection="hemp-fiber",group="Hemp Fiber",
  image="winvn-hemp-rope-dog-toy.jpg",size="Length, rope diameter and knot format quoted by design",moq="Project-specific; discuss a trial run and separate packaging minimum.",
  lede="Develop a knotted hemp rope or ball-with-rope toy for supervised tug play. Specify finished length, rope diameter, knot geometry and branding instead of ordering from appearance alone.",
- overview="WINVN's supplied product materials describe knotted hemp ropes and hemp ball-with-rope formats. This page covers those rope-based constructions, distinct from the standalone hemp ball. The image is a range reference; your approved physical sample defines the supplied design.",
+ overview="The manufacturer's supplied product materials describe knotted hemp ropes and hemp ball-with-rope formats. This page covers those rope-based constructions, distinct from the standalone hemp ball. The image is a range reference; your approved physical sample defines the supplied design.",
  options=["Define overall length, strand or rope diameter, handle opening and knot count.","Choose an all-fiber format or a coffee wood combination with every component listed.","Discuss tag attachment, printed sleeves, assortment packs and custom design feasibility."],
  checks=["Agree knot security and an attachment/pull-check method relevant to the intended play.","Check for loose long strands and unintended loops or attachments.","Do not advertise a tensile rating, reinforcement or lifetime durability without design-specific evidence."]),
 }
@@ -63,6 +63,7 @@ def build(root):
         path="/products/"+slug+"/"
         image="/assets/img/"+d["image"]
         specifications=table(["Specification","Details"],[
+            ("Commercial / export brand",BRAND),("Legal manufacturer",LEGAL_NAME),
             ("Material",d["material"]+"; confirm complete component list"),
             ("Sizes",d["size"]),("MOQ",d["moq"]),
             ("Branding","Laser engraving for suitable wood; labels, tags or boxes for fiber products."),
@@ -78,9 +79,9 @@ def build(root):
                 p(f'<a href="/collections/{d["collection"]}/">Explore the {d["group"].lower()} wholesale collection</a> or <a href="/services/wholesale-pet-products/">plan a mixed-product wholesale order</a>.'),True)]
         schema={"@context":"https://schema.org","@type":"Product","@id":BASE_URL+path+"#product",
             "name":d["name"],"description":d["lede"],"url":BASE_URL+path,"image":BASE_URL+image,
-            "material":d["material"],"brand":{"@type":"Brand","name":BRAND},
-            "manufacturer":{"@type":"Organization","name":LEGAL_NAME}}
-        publish(root,path,d["name"]+" | Wholesale & Private Label | WINVN",
+            "material":d["material"],"brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
+            "manufacturer":{"@id":BASE_URL+"/#organization","@type":"Organization","name":LEGAL_NAME}}
+        publish(root,path,d["name"]+" | Wholesale & Private Label | VietPaw",
             f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.',
             d["name"]+" — Wholesale & Private Label",d["lede"],sections,image=image,product=d["name"],
             trail=[("Home","/"),(d["group"],"/collections/"+d["collection"]+"/"),(d["name"],None)],

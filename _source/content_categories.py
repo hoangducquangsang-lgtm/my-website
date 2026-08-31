@@ -100,7 +100,7 @@ def build(root):
                  p("Send quantities per SKU, destination country, intended sales channel and required launch date. Standard designs with your branding are quoted differently from new constructions. Separate product quantity from the minimum for printed boxes.")+
                  p('Explore <a href="/services/private-label-pet-toys/">private-label options</a> or <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development</a>. For recurring assortments, use our <a href="/services/wholesale-pet-products/">wholesale service</a>.')+trust_links()),
                section("Clear use instructions belong on every pack",p(SAFETY)+p('Review <a href="/guides/pet-toy-safety-testing-requirements/">how to scope product testing</a> and <a href="/sustainability/">how material claims are qualified</a>.'),True)]
-        publish(root,path,h1+" | WINVN",lede,h1,lede,parts,active=active,image="/assets/img/"+img,
+        publish(root,path,h1+" | VietPaw",lede,h1,lede,parts,active=active,image="/assets/img/"+img,
             faqs=[("Can I start with a small mixed order?", "Ask for a line-by-line quote. A minimum starting from 50 pcs applies only to selected standard products, not automatically to the whole assortment or every custom design."),
                   ("Can the products carry my brand?", "Yes, discuss labels, tags, packaging and wood engraving where suitable. Approve artwork and the physical sample before production."),
                   ("What does the quotation need to include?", "Product references, dimensions, quantities per SKU, branding, packaging, destination, timing and any buyer testing or document requirements.")])

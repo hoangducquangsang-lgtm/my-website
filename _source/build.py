@@ -11,7 +11,7 @@ from responsive_images import save_manifest
 ROOT = Path(__file__).resolve().parent.parent
 MODULES = [
     "content_home_about", "content_company", "content_materials", "content_categories",
-    "content_products", "content_solutions", "content_manufacturing", "content_guides",
+    "content_products", "content_solutions", "content_manufacturing", "content_guides", "content_proof",
 ]
 
 def build():

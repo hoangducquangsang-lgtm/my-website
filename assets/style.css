@@ -31,7 +31,8 @@ img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
 .site-header{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}
 .header-inner{display:flex;align-items:center;gap:28px;padding:14px 24px}
 .brand{font-family:Georgia,serif;font-weight:bold;font-size:1.6rem;color:var(--forest-dark);display:flex;flex-direction:column;line-height:1.1}
-.brand-sub{font-family:'Segoe UI',sans-serif;font-size:.62rem;font-weight:normal;color:var(--ink-soft);letter-spacing:.03em}
+.brand-sub{font-family:'Segoe UI',sans-serif;font-size:.68rem;font-weight:normal;color:var(--ink-soft);letter-spacing:.01em;line-height:1.4;max-width:24ch;margin-top:5px}
+.brand{flex-shrink:0}
 .main-nav{flex:1}
 .main-nav ul{list-style:none;display:flex;gap:6px;margin:0;padding:0;flex-wrap:wrap}
 .main-nav > ul > li{position:relative}
@@ -75,6 +76,12 @@ img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
 @media(max-width:600px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .card h3{margin-top:0}
+.proof-scan{margin:16px -24px}
+.proof-scan img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:0;background:#fff}
+.proof-scan a{display:block}
+.proof-scan figcaption{padding:0 24px}
+.proof-actions{margin:16px 0;gap:10px}
+@media(max-width:600px){.proof-scan{margin-left:-20px;margin-right:-20px}.proof-scan figcaption{padding:0 20px}}
 .card-img{border-radius:var(--radius) var(--radius) 0 0;margin:-24px -24px 16px}
 .card-img img{border-radius:var(--radius) var(--radius) 0 0;width:100%;aspect-ratio:4/3;object-fit:cover}
 .card-img img[src*="winvn-coffee-wood"],.card-img img[src*="winvn-hemp-wood"],.card-img img[src*="winvn-loofah-play"],.card-img img[src*="winvn-natural-toy"]{object-fit:contain;background:#f7f8f4}
@@ -121,6 +128,7 @@ th{background:var(--kraft);color:var(--forest-dark)}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:28px;padding:48px 24px 32px}
 .footer-logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:bold;color:#fff;margin-bottom:10px}
 .footer-tagline{font-size:.88rem;opacity:.85}
+.footer-brand-tagline{font-size:.88rem;color:#fff;line-height:1.5}
 .footer-legal{font-size:.82rem;opacity:.75}
 .footer-contact{list-style:none;padding:0;margin:10px 0 0;font-size:.85rem;opacity:.9}
 .footer-contact li{margin-bottom:6px}

@@ -1,0 +1,42 @@
+{
+  "pages": 68,
+  "sitemap_urls": 66,
+  "brand_and_legal_entity_pages": 68,
+  "new_proof_route": "/proof/",
+  "proof_records": [
+    {
+      "file": "CO.png",
+      "sha256": "80e7459af15f149f7f17c7d8c7097ea44e61a69afd4e3a1d3ac13af49cbae411",
+      "status": "Historical reference · 2022",
+      "public_scan": true
+    },
+    {
+      "file": "Fumigation Certificate.png",
+      "sha256": "8c5d3d82b49a8d37391c869078ed54c4110497f5989dcae4ae8ab633872dbd37",
+      "status": "Historical reference · December 2021",
+      "public_scan": true
+    },
+    {
+      "file": "Phytosanitary.png",
+      "sha256": "6e3c3792c5d5c0a5ce5488c22b2ae8d47bfea30c66d24fc2e01232abb11dee4e",
+      "status": "Illustrative specimen · not shipment proof",
+      "public_scan": true
+    },
+    {
+      "file": "Surrendered.png",
+      "sha256": "5bd47091f61cc9f156d19823d270669b12c23cc405b577150ee6b66c32eb6f1a",
+      "status": "Historical reference · August 2022",
+      "public_scan": true
+    }
+  ],
+  "existing_assets_unchanged_except_stylesheet": 175,
+  "existing_photo_positions_preserved": 85,
+  "commercial_tables_unchanged": 31,
+  "product_brand_manufacturer_pairs": 6,
+  "guides_authors_and_dates_preserved": 20,
+  "legacy_form_preserved_except_brand_subject": true,
+  "original_proof_scans_public": true,
+  "browser_visual_tested": false,
+  "live_form_submission_tested": false,
+  "errors": []
+}

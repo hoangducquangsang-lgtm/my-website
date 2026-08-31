@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Shared layout and portable static-page writer. Content reviewed 2026-08-30."""
+"""Shared layout and portable static-page writer. Company details reviewed 2026-08-31."""
 import json
 import os
 import re
@@ -9,14 +9,18 @@ from responsive_images import responsive_markup, optimized_url, optimize_schema
 
 DOMAIN = "vietpaw.com"
 BASE_URL = f"https://{DOMAIN}"
-BRAND = "WINVN"
+BRAND = "VietPaw"
 LEGAL_NAME = "WINVN INT CO., LTD"
+BRAND_TAGLINE = "Natural Pet Products by WINVN INT CO., LTD."
+BRAND_RELATIONSHIP = "VietPaw is the commercial/export brand of WINVN INT CO., LTD, the legal manufacturer."
 # Contact and export reach supplied directly by the site owner on 2026-08-30.
 PHONE = "+84 906 111 016"
 PHONE_TEL = "+84906111016"
 EMAIL = "sarah@vietpaw.com"
-ADDRESS = "70 St. 10, Van Phuc City, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
-FOUNDED = "2018"
+# Legal details confirmed against WINVNINT and the owner's correction on 2026-08-31.
+ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
+REGISTERED_YEAR = "2019"
+REGISTRATION_DATE = "12 November 2019"
 COUNTRIES = "40+"
 CAPACITY = "5–6 million units/year"
 REVIEW_DATE = "2026-08-30"
@@ -41,7 +45,8 @@ NAV = [
         ("OEM / ODM", "/services/oem-odm-pet-toy-manufacturing/"),
         ("Private Label", "/services/private-label-pet-toys/"),
         ("Wholesale", "/services/wholesale-pet-products/"),
-        ("Testing & Export Documents", "/certifications/")]),
+        ("Testing & Export Documents", "/certifications/"),
+        ("Proof", "/proof/")]),
     ("Solutions", "/solutions/", [
         ("All Buyer Solutions", "/solutions/"), ("Amazon Sellers", "/solutions/amazon-sellers/"),
         ("Wholesalers & Distributors", "/solutions/wholesalers/"),
@@ -49,7 +54,7 @@ NAV = [
         ("Startup Brands", "/solutions/startup-brands/"),
         ("Pet Brands", "/solutions/pet-brands/"), ("Retail Chains", "/solutions/retail-chains/")]),
     ("Company", "/about/", [
-        ("About WINVN", "/about/"), ("Sustainability", "/sustainability/"),
+        ("About VietPaw", "/about/"), ("Sustainability", "/sustainability/"),
         ("How to Order", "/how-to-order/"), ("Contact", "/contact/")]),
     ("Guides", "/guides/", []),
 ]
@@ -58,7 +63,8 @@ FOOTER_LINKS = [
     ("Manufacturing", [
         ("Vietnam Manufacturer", "/pet-toys-manufacturer-vietnam/"), ("Our Factory", "/factory/"),
         ("Quality Control", "/quality-control/"), ("OEM / ODM", "/services/oem-odm-pet-toy-manufacturing/"),
-        ("Private Label", "/services/private-label-pet-toys/"), ("Wholesale", "/services/wholesale-pet-products/")]),
+        ("Private Label", "/services/private-label-pet-toys/"), ("Wholesale", "/services/wholesale-pet-products/"),
+        ("Proof", "/proof/")]),
     ("Buyer Resources", [
         ("Solutions", "/solutions/"), ("Guides", "/guides/"), ("How to Order", "/how-to-order/"),
         ("Testing & Documents", "/certifications/"), ("Sustainability", "/sustainability/")]),
@@ -86,7 +92,9 @@ def footer_html():
 <footer class="site-footer">
 <div class="wrap footer-grid">
 <div class="footer-brand"><div class="footer-logo">{BRAND}</div>
-<p class="footer-tagline">Natural, biodegradable pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. {LEGAL_NAME}, manufacturing natural pet products since {FOUNDED}. Exporting to {COUNTRIES} countries.</p>
+<p class="footer-brand-tagline"><em>{BRAND_TAGLINE}</em></p>
+<p class="footer-legal">{BRAND_RELATIONSHIP}</p>
+<p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. {LEGAL_NAME}, registered in Vietnam in {REGISTERED_YEAR}. Exporting to {COUNTRIES} countries.</p>
 <ul class="footer-contact"><li>{ADDRESS}</li><li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
 <li><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp: {PHONE}</a></li>
 <li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>{cols}</div>
@@ -109,10 +117,15 @@ def breadcrumb_html(trail):
 
 def organization_schema():
     return {"@context":"https://schema.org","@type":"Organization","@id":BASE_URL+"/#organization",
-            "name":BRAND,"legalName":LEGAL_NAME,"url":BASE_URL+"/",
-            "description":"Natural-material pet toys for wholesale, OEM/ODM and private label.",
+            "name":LEGAL_NAME,"legalName":LEGAL_NAME,"url":BASE_URL+"/",
+            "brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
+            "description":f"{BRAND_RELATIONSHIP} {LEGAL_NAME}, registered in Vietnam in {REGISTERED_YEAR}. Natural-material pet toys for wholesale, OEM/ODM and private label.",
             "telephone":PHONE,"email":EMAIL,
             "address":{"@type":"PostalAddress","streetAddress":ADDRESS,"addressCountry":"VN"}}
+
+def brand_schema():
+    return {"@context":"https://schema.org","@type":"Brand","@id":BASE_URL+"/#brand",
+            "name":BRAND,"slogan":BRAND_TAGLINE,"description":BRAND_RELATIONSHIP,"url":BASE_URL+"/"}
 
 def page(title, meta_description, path, content, active_top="", schemas=None,
          og_image="/assets/img/winvn-natural-toy-assortment.png", noindex=False):
@@ -122,6 +135,8 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
     schemas = optimize_schema(list(schemas or []))
     if not any(s.get("@type")=="Organization" for s in schemas):
         schemas.append(organization_schema())
+    if not any(s.get("@type")=="Brand" for s in schemas):
+        schemas.append(brand_schema())
     for s in schemas:
         if s.get("@type")=="BreadcrumbList":
             s["itemListElement"][-1]["item"] = canonical
@@ -139,16 +154,17 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="{'noindex,follow' if noindex else 'index,follow'}">
 <meta property="og:title" content="{escape(title,quote=True)}">
+<meta property="og:site_name" content="{BRAND}">
 <meta property="og:description" content="{escape(meta_description,quote=True)}">
 <meta property="og:type" content="{'article' if path.startswith('/guides/') and path!='/guides/' else 'website'}">
 <meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}{og_image}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title,quote=True)}">
 <meta name="twitter:description" content="{escape(meta_description,quote=True)}"><meta name="twitter:image" content="{BASE_URL}{og_image}">
-<link rel="stylesheet" href="/assets/style.css?v=20260830-menu-hemp"><link rel="icon" href="/assets/img/logo-icon.png">
+<link rel="stylesheet" href="/assets/style.css?v=20260831-proof-images"><link rel="icon" type="image/svg+xml" href="/assets/vietpaw-favicon.svg">
 {schema_tags}</head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
-<a class="brand" href="/">{BRAND}<span class="brand-sub">Natural Pet Products</span></a>
+<a class="brand" href="/">{BRAND}<span class="brand-sub">{BRAND_TAGLINE}</span></a>
 <nav class="main-nav" aria-label="Main"><ul>{nav_html(active_top)}</ul></nav>
 <a class="btn btn-primary btn-header" href="/request-a-quote/">Request a Quote</a>
 </div></header><main id="main">{content}</main>{footer_html()}{sticky}<script src="/assets/navigation.js?v=20260830-exclusive" defer></script></body></html>

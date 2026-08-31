@@ -17,7 +17,8 @@ from guide_dates import GUIDE_UPDATED_DATES, updated_time
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
-EXPECTED_TAGLINE = "Natural, biodegradable pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. WINVN INT CO., LTD, manufacturing natural pet products since 2018. Exporting to 40+ countries."
+EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. WINVN INT CO., LTD, registered in Vietnam in 2019. Exporting to 40+ countries."
+EXPECTED_ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
 
 class Document(HTMLParser):
     def __init__(self):
@@ -99,8 +100,12 @@ def run():
             continue
         route=route_for(file)
         docs[route]=(file,d)
-        # The domain and owner-requested email are retained; displayed branding is WINVN only.
-        check(not re.search(r"vietpaw",html.replace("vietpaw.com",""),re.I),f"{route}: obsolete brand outside retained domain/email")
+        # VietPaw is the commercial/export brand; WINVN INT CO., LTD is the legal manufacturer.
+        check("VietPaw" in d.title,f"{route}: commercial brand missing from title")
+        check("VietPaw INT CO., LTD" not in html,f"{route}: brand incorrectly used as legal company name")
+        check(not re.search(r"\bWINVN\b",html.replace("WINVN INT CO., LTD","")),f"{route}: standalone former brand outside the legal manufacturer name")
+        check(d.meta.get("og:site_name")=="VietPaw",f"{route}: social site brand mismatch")
+        check('<span class="brand-sub">Natural Pet Products by WINVN INT CO., LTD.</span>' in html,f"{route}: brand signature missing from header")
         check("sarah.winvn@gmail.com" not in html,f"{route}: superseded email")
         check("Exporting to 30+" not in html,f"{route}: superseded export reach")
         footer=re.search(r'<footer class="site-footer">(.*?)</footer>',html,re.S)
@@ -108,8 +113,9 @@ def run():
         if footer:
             plain=" ".join(unescape(re.sub(r"<[^>]+>"," ",footer.group(1))).split())
             check(EXPECTED_TAGLINE in plain,f"{route}: owner-requested footer text differs")
-            for item in ("WINVN","70 St. 10, Van Phuc City, Hiep Binh Ward, Ho Chi Minh City, Vietnam","+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
+            for item in ("VietPaw","Natural Pet Products by WINVN INT CO., LTD.","VietPaw is the commercial/export brand of WINVN INT CO., LTD, the legal manufacturer.",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
                 check(item in plain,f"{route}: footer field missing {item}")
+            check("biodegrad" not in plain.lower(),f"{route}: environmental claim in shared footer")
         check(d.language=="en",f"{route}: wrong language")
         check(len(d.h1)==1,f"{route}: expected one H1, got {len(d.h1)}")
         check(bool(d.title.strip()),f"{route}: missing title")
@@ -140,7 +146,8 @@ def run():
                 check(items[-1].get("item")==BASE+route,f"{route}: final breadcrumb target missing")
                 check(all(x.get("item","").startswith(BASE+"/") for x in items),f"{route}: incomplete breadcrumb")
             if schema.get("@type")=="Product":
-                check(schema.get("brand",{}).get("name")=="WINVN",f"{route}: product brand mismatch")
+                check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: product brand mismatch")
+                check(schema.get("manufacturer",{}).get("name")=="WINVN INT CO., LTD",f"{route}: legal manufacturer mismatch")
                 check(schema.get("image","").startswith(BASE+"/assets/"),f"{route}: product image not absolute")
                 check(bool(schema.get("material")),f"{route}: product material missing")
                 check(not any(k in schema for k in ("offers","aggregateRating","review","gtin")),f"{route}: unsupported commercial schema")
@@ -154,8 +161,14 @@ def run():
                 check(schema.get("image")==d.meta.get("og:image"),f"{route}: article social image mismatch")
                 check(schema.get("dateModified")==GUIDE_UPDATED_DATES.get(route.strip("/").split("/")[-1]),f"{route}: article update date mismatch")
             if schema.get("@type")=="Organization":
-                check(schema.get("name")=="WINVN",f"{route}: organization brand mismatch")
+                check(schema.get("name")=="WINVN INT CO., LTD",f"{route}: legal organization mismatch")
+                check(schema.get("legalName")=="WINVN INT CO., LTD",f"{route}: legal name mismatch")
+                check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: organization brand mismatch")
                 check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
+                check(schema.get("address",{}).get("streetAddress")==EXPECTED_ADDRESS,f"{route}: legal address schema mismatch")
+                check("registered in Vietnam in 2019" in schema.get("description",""),f"{route}: registration year missing from organization description")
+            if schema.get("@type")=="Brand":
+                check(schema.get("name")=="VietPaw" and schema.get("slogan")=="Natural Pet Products by WINVN INT CO., LTD.",f"{route}: brand schema mismatch")
         if route.startswith("/guides/") and route!="/guides/":
             check(any(urlsplit(u).path for u in d.main_links),f"{route}: missing contextual links")
             check('<span class="author-name">Sarah</span>' in html,f"{route}: visible Sarah byline missing")
@@ -234,7 +247,9 @@ def run():
         for value in ("CC01-XS","CC01-XXL","Under 5 kg","Over 40 kg"):
             check(value in text,f"{route}: current reference size data missing {value}")
         check("3–5kg" not in text and "12–20kg" not in text,f"{route}: obsolete size bands")
-    forbidden=("minimum 15% / $0.30","What our own AOV data shows","EWX","Trial Box of 3–5","Every material we use is biodegradable","safe when swallowed","no questions asked")
+    forbidden=("minimum 15% / $0.30","What our own AOV data shows","EWX","Trial Box of 3–5","Every material we use is biodegradable","safe when swallowed","no questions asked",
+        "since 2018","200 pieces per design","200 pcs per design","12–14%","15–20 working days","25–30 for OEM/ODM",
+        "five-stage QC workflow","five-stage inspection workflow","five stages of inspection","Free standard samples may be available","first-order shipping credit")
     for route,(_,d) in docs.items():
         text=" ".join(d.main_text)
         for phrase in forbidden: check(phrase.lower() not in text.lower(),f"{route}: obsolete claim {phrase}")
