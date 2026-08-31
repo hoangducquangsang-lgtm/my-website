@@ -25,6 +25,8 @@ def build():
     (ROOT/"robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /_source/\n\nSitemap: "+BASE_URL+"/sitemap.xml\n",encoding="utf-8")
     (ROOT/"_source"/"page_manifest.json").write_text(json.dumps(PAGES,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     save_manifest()
+    from deployment import write_redirect_plan
+    write_redirect_plan(ROOT, PAGES)
     print(f"Built {len(PAGES)} HTML pages; {sum(p['indexable'] for p in PAGES.values())} sitemap URLs. Existing assets preserved.")
 
 if __name__ == "__main__":

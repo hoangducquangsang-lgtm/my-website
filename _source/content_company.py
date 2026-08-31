@@ -2,6 +2,7 @@
 from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS
 from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
 from content_materials import MATERIALS
+from forms import quote_form, catalogue_form
 
 def build(root):
     publish(root,"/capabilities/","OEM, ODM & Private-Label Capabilities | VietPaw",
@@ -129,10 +130,10 @@ def build(root):
         "Download the manufacturer’s supplied pet toy catalogue and contact VietPaw for current specifications, prices, MOQ and private-label terms.",
         "Wholesale Pet Toy Catalogue",
         "Explore the VietPaw range. Use the manufacturer’s catalogue as a visual reference, then confirm the current range and terms with Sarah.",
-        [section("Download the supplied catalogue",
-            '<p><a class="btn btn-primary" href="/assets/downloads/winvn-wholesale-catalogue.pdf">Download Manufacturer Catalogue (PDF)</a></p>'+
+        [section("Download instantly. Ask for pricing when you need it.",
+            '<div class="grid grid-2"><div><p><a class="btn btn-primary" href="/assets/downloads/winvn-wholesale-catalogue.pdf">Download Catalogue (PDF)</a></p>'+
             p("This download is the original supplied manufacturer catalogue; its artwork has not been rebranded as VietPaw. It is not a newly certified product specification or live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
-            p("The PDF is available directly. Downloading it does not subscribe you to a mailing list or send us your contact details.")),
+            p("No email is required to download. If you would like current MOQ and pricing, use the optional form alongside the catalogue. We use those details to reply to your request, not to subscribe you to a newsletter.")+'</div><div>'+catalogue_form()+'</div></div>'),
          section("Send the product references you want quoted",p("Include the catalogue item or photo reference, dimensions, quantity per SKU, destination and packaging requirements. The approved sample and written quote take precedence over catalogue examples.")+
             p('<a href="/products/coffee-wood-dog-chew/">Coffee wood reference specifications</a> · <a href="/collections/hemp-fiber/">Hemp collection</a> · <a href="/request-a-quote/">Request current pricing</a>'),True)],active="Company")
     build_rfq(root)
@@ -153,28 +154,14 @@ def build_rfq(root):
         "Tell us the product and destination first. Add what you know about quantities, branding and launch timing; you do not need a finished technical brief.",eyebrow="VietPaw B2B enquiries",ctas=False)
     content+=f"""
 <section class="section"><div class="wrap grid grid-2">
-<form id="rfq-form" class="card" action="https://formspree.io/f/mvkpbvlb" method="post" data-success-url="/request-a-quote/thank-you/">
-<input type="hidden" name="_subject" value="New enquiry from VietPaw website">
-<div hidden aria-hidden="true"><label for="rfq-gotcha">Don't fill this out if you're human</label><input id="rfq-gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
-<h2>Tell us about your project</h2>
-<p class="small">Fill in the form and we'll reply with pricing, lead time and sample availability — usually within one business day. Prefer email? Write to us directly, or use WhatsApp/phone below.</p>
-<label for="rfq-name">Full name</label><input id="rfq-name" name="name" autocomplete="name" required maxlength="120">
-<label for="rfq-company">Company &amp; role</label><input id="rfq-company" name="company" autocomplete="organization" maxlength="180">
-<label for="rfq-email">Email</label><input id="rfq-email" name="email" type="email" autocomplete="email" required maxlength="254">
-<label for="rfq-buyer">I am a...</label><select id="rfq-buyer" name="segment">
-<option>Startup brand</option><option>Amazon seller</option><option>Eco pet shop (EU)</option><option>Wholesaler / distributor</option><option>Other</option></select>
-<label for="rfq-products">Products of interest</label><textarea id="rfq-products" name="products" rows="3" maxlength="2500" placeholder="e.g. Coffee wood chew stick, private label, MOQ 500"></textarea>
-<div class="hero-ctas"><button class="btn btn-primary" type="submit">Send Enquiry</button></div>
-<p id="rfq-status" class="small" role="status" aria-live="polite"></p>
-<p id="form-error" class="small form-error" role="alert" tabindex="-1" hidden>Something went wrong. Please email us at <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
-</form>
+{quote_form()}
 <div><h2>What happens next</h2><p>We review your brief and confirm product availability, MOQ, sample terms and an indicative timeline. New development or testing may need a separate feasibility discussion.</p>
 {ul(["Starting MOQ from 50 pcs on selected standard products; confirm each line.",SAMPLES+" "+SAMPLE_DISPATCH,PRIVATE_LABEL,LEAD,EXPORT_DOCS])}
 <h3>Company details for your order</h3>{p(CONTRACT_NOTICE)}
 <h3>Contact sales directly</h3><p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></p>
 <p class="small">Do not include payment-card information or confidential designs in this first enquiry. Request an agreed confidentiality process if needed.</p>
 {trust_links()}</div></div></section>
-<script src="/assets/rfq.js?v=20260830-form" defer></script>"""
+"""
     write_page(root,"/request-a-quote/",page("Request Pet Toy Samples & Wholesale Quote | VietPaw",
         "Request a quote or product sample from VietPaw. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",
         "/request-a-quote/",content,schemas=[bs]))

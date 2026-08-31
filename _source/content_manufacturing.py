@@ -4,7 +4,7 @@ from content_helpers import publish, section, p, ul, table, cards, terms, trust_
 from content_products import product_cards
 
 def build(root):
-    publish(root,"/pet-toys-manufacturer-vietnam/","Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
+    publish(root,"/pet-toys-manufacturer-vietnam/","Vietnam Production & Sourcing for Pet Brands | VietPaw",
         "Source natural pet toys through VietPaw. Review Vietnam production, OEM/ODM, quality control, samples and order-specific manufacturing information.",
         "Natural Pet Toy Manufacturer in Vietnam for B2B Brands",
         "Source coffee wood, coconut fiber, hemp and loofah pet toys through VietPaw with product specifications, production checks and order-specific documentation.",
@@ -123,12 +123,12 @@ def build(root):
         faqs=[("Is there a universal wholesale price list?", "Request current pricing for the actual product, quantities and pack. Catalogue examples are not binding quotations."),
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
-    publish(root,"/factory/","Pet Toy Factory Vietnam | Process & Verification | VietPaw",
+    publish(root,"/factory/","Factory Review & Production Checks for Buyers | VietPaw",
         "Explore Vietnam production for the VietPaw range, including coffee wood processing, factory information and order-specific records.",
-        "Pet Toy Factory & Production in Vietnam",
+        "Factory Review for Your VietPaw Order",
         "Understand where and how your selected product is made. Use the supplier information below to prepare a current, product-specific factory review.",
         [section("Production locations and capacity: what the sources say",
-            p("VietPaw connects buyers with natural pet toy production in Vietnam. The supplied manufacturer planning materials describe a three-factory network and indicative capacity of 5–6 million units per year. These are supplier-reported planning figures, not an audited measurement of current output or the capacity reserved for your order.")+
+            p("VietPaw helps buyers plan product-specific production and factory checks. Corporate history, company registration and the complete manufacturing range are presented on the manufacturer’s <a href=\"https://www.winvnint.com/\">corporate website</a>. The supplied manufacturer planning materials describe a three-factory network and indicative capacity of 5–6 million units per year. These are supplier-reported planning figures, not an audited measurement of current output or the capacity reserved for your order.")+
             p("Company sources describe Central Highlands production and sourcing, together with southern warehousing/export operations. Published location descriptions differ between documents and webpages. Confirm the exact site, current address and manufacturing role for your selected SKU before a visit or audit.")+
             p("Do not equate an office, warehouse, partner workshop and owned production facility. Ask which stages happen at each location and whether any work is subcontracted.")),
          section("Coffee wood drying and quality protocol",

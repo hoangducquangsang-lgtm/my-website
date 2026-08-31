@@ -2,18 +2,23 @@
 
 Bản nhận diện mới nhất ngày **31/08/2026**: **VietPaw là commercial/export brand; WINVN INT CO., LTD là legal manufacturer.** Đây là chỉ định mới, thay thế yêu cầu chỉ dùng WINVN trước đó. Website tĩnh tiếng Anh dành cho buyer quốc tế, đã sửa trong thư mục local; chưa đăng lên website live. Những điều kiện thương mại đã đồng bộ trước đó được giữ nguyên.
 
-## Quy ước đang áp dụng — chỉ hiển thị tên nhà sản xuất ở hai tagline
+## Quy ước đang áp dụng — audit URL và B2B leads, 31/08/2026
 
-Yêu cầu mới nhất ngày **31/08/2026** thay thế cách lặp tên pháp nhân trong nội dung từ lần chỉnh trước.
+Yêu cầu mới trong tệp audit thay thế quy tắc “chỉ hai tagline” của lần sửa trước.
 
-- Thư mục website chính: `D:\1. Vietpaw\my-website`. Không lưu các lần chỉnh sửa website tiếp theo vào thư mục OneDrive cũ.
-- Site name và commercial/export brand: **VietPaw**.
-- Tên **WINVN INT CO., LTD.** chỉ xuất hiện trong **Natural Pet Products by WINVN INT CO., LTD.** dưới logo VietPaw ở header và footer.
-- Không lặp tên này trong nội dung trang, bảng thông số, tiêu đề, mô tả tìm kiếm/chia sẻ, dữ liệu cấu trúc, câu quan hệ thương hiệu hoặc copyright.
-- Dùng “the manufacturer” khi cần phân biệt vai trò sản xuất; không thay tên pháp nhân bằng “VietPaw INT CO., LTD.” và không gán năm đăng ký của nhà sản xuất cho thương hiệu.
-- Đã bỏ Proof khỏi nhóm Manufacturing ở menu đầu trang và footer. Trang `/proof/`, ảnh và liên kết trong nội dung vẫn được giữ.
-- Ảnh chứng từ/catalogue gốc và địa chỉ liên kết được bảo toàn, không chỉnh sửa tên đã in trong tài liệu. Quy tắc hai tagline áp dụng cho nội dung website được tạo bằng HTML, không phải việc tẩy tên trên chứng từ.
-- Giữ nguyên giao diện, ảnh, thông tin liên hệ, chính sách thương mại, tác giả và lịch ngày Guides.
+- Thư mục chính: D:\1. Vietpaw\my-website. Không lưu website vào thư mục OneDrive cũ.
+- Header: **VietPaw** / *by WINVN INT CO., LTD.*
+- Footer: **VietPaw is the international B2B/export brand of WINVN INT CO., LTD., a Vietnamese pet-product manufacturer.**
+- Giao dịch, hóa đơn và pháp nhân: **Contracting manufacturer: WINVN INT CO., LTD.**
+- VietPaw ưu tiên wholesale, private label, OEM và giải pháp buyer; website công ty nhận liên kết có ngữ cảnh về lịch sử, đăng ký và toàn bộ danh mục.
+- Liên kết nội bộ trong HTML, canonical, breadcrumb, sitemap và dữ liệu cấu trúc dùng URL sạch kết thúc bằng /. index.html vẫn là tệp vật lý phục vụ URL đó; không xóa tệp và không thêm noindex để xử lý trùng URL.
+- assets/local-preview.js chỉ đổi liên kết khi mở bằng file://, giúp xem offline. Trên HTTP(S), script không đổi liên kết và không giả lập 301.
+- Form báo giá: 5 trường bắt buộc; tùy chọn số lượng, sourcing, WhatsApp, message và 1 tệp tối đa 5 MB. CTA **Get Samples & Pricing**. Nhận tệp thật phụ thuộc gói/cấu hình Formspree.
+- Catalogue vẫn tải ngay; form bảng giá bên cạnh là tùy chọn, không đăng ký newsletter.
+- Proof vẫn không có trong menu Manufacturing; trang, ảnh và ghi chú giới hạn được giữ.
+- Chỉ chuẩn bị cấu hình 301, chưa thay đổi DNS/CDN/hosting, chưa gửi Google lập chỉ mục.
+
+Báo cáo hiện hành: **SEO_URL_LEADS_UPDATE_VI.md**. Những báo cáo/quy tắc nhận diện bên dưới là lịch sử, không được ghi đè yêu cầu mới nhất.
 
 ## Xem kết quả
 
@@ -26,11 +31,11 @@ Xem **VIETPAW_BRAND_PROOF_UPDATE_VI.md** cho nhận diện thương hiệu–ph�
 - **68 trang HTML**, gồm trang Proof mới tại `/proof/`; các URL đã có được giữ nguyên.
 - 20 guide, 6 sản phẩm, 4 collection vật liệu, 6 giải pháp khách hàng.
 - 66 URL trong sitemap; `/case-studies/` và `/request-a-quote/thank-you/` dùng `noindex,follow`.
-- Cấu trúc SEO: Brand, Organization (tên giao dịch công khai) và WebSite dùng VietPaw; không lặp legalName/manufacturer hoặc tagline chứa tên nhà sản xuất trong dữ liệu tìm kiếm. BreadcrumbList, Product và Article được đồng bộ. Không tự tạo giá, rating, GTIN hay chứng nhận.
+- Cấu trúc SEO hiện hành: Brand/WebSite dùng VietPaw; Organization/legalName/manufacturer dùng WINVN INT CO., LTD. theo audit mới. BreadcrumbList, Product và Article được đồng bộ. Không tự tạo giá, rating, GTIN hay chứng nhận.
 - Đã thay mọi tham chiếu tới 8 ảnh nền đen bằng ảnh trong thư mục được cung cấp; ảnh kiểm tra độ ẩm dùng đúng `Bản sao của kiem_go_9.jpg`.
 - 20 bài Guides được viết lại và ghi tác giả Sarah trong nội dung lẫn metadata.
 - Chân trang theo nội dung chủ website yêu cầu, gồm 40+ countries và email `sarah@vietpaw.com`.
-- Header/footer, tiêu đề và metadata trên 68 trang được đồng bộ theo quy tắc hai tagline. Giữ đăng ký tại Việt Nam năm 2019, địa chỉ pháp lý đầy đủ và không quảng cáo “biodegradable”.
+- Header/footer, tiêu đề và metadata trên 68 trang được đồng bộ theo audit mới. Giữ đăng ký tại Việt Nam năm 2019, địa chỉ pháp lý đầy đủ và không quảng cáo “biodegradable”.
 - 31 bảng điều kiện đặt hàng dùng chung đã đồng bộ MOQ, 3 mẫu miễn phí/khách trả courier, thời gian sản xuất theo quy mô và chứng từ theo yêu cầu sản phẩm/thị trường.
 - Bốn collection là phạm vi pet toys/chews của website, không phải toàn bộ catalogue WINVN; đã ghi rõ dòng Pet Beds trong catalogue rộng hơn.
 - 30 tài nguyên cũ vẫn còn để phục hồi/giữ liên kết cũ, nhưng ảnh nền đen không còn được trang nào gọi. Ảnh mới giữ nguyên dữ liệu ảnh gốc.
@@ -52,7 +57,9 @@ python _source/validate_site.py --raw-materials "<thu-muc-anh-nguon>"
 node _source/test_rfq.cjs
 node _source/test_navigation.cjs
 python _source/test_responsive_images.py "../_VietPaw_backups/Website-before-VietPaw-export-brand-20260831-090828.zip"
-python _source/test_brand_consistency.py "<backup-ngay-truoc-dot-chinh-sua-nay.zip>"
+python _source/test_seo_leads.py "<backup-ngay-truoc-audit-URL.zip>"
+node _source/test_local_preview.cjs
+python _source/package_public.py "<duong-dan-zip-moi-ben-ngoai-website>"
 ```
 
 Nếu có local server tại 127.0.0.1:8765, có thể thêm `--http` vào lệnh kiểm tra. Không dùng lệnh build cũ trỏ tới `/tmp/site_build`: đã thay bằng đường dẫn dựa trên vị trí project. Build không xóa thư mục, không ghi lại ảnh gốc/catalogue; các bản WebP được tạo hoặc tái sử dụng khi nguồn chưa thay đổi. Chỉnh quy tắc ảnh trong `_source/responsive_images.py`; khi đổi cách mã hóa, tăng `SETTINGS.version` để tạo lại các bản dẫn xuất.
@@ -61,7 +68,7 @@ Nếu có local server tại 127.0.0.1:8765, có thể thêm `--http` vào lện
 
 Ngày Guides được lưu cố định theo từng đường dẫn trong `_source/guide_dates.py`, không tự thay theo ngày chạy build. Menu dùng `assets/navigation.js`; ảnh hai sản phẩm hemp được chọn trong `_source/content_products.py` và tự đồng bộ sang thẻ sản phẩm, ảnh chia sẻ, dữ liệu cấu trúc.
 
-Thông tin pháp lý và nhận diện dùng chung nằm trong `_source/common.py`; MOQ, mẫu, lead time, QC, độ ẩm và chứng từ dùng chung nằm trong `_source/content_helpers.py`. Nội dung Proof nằm trong `_source/content_proof.py`. Không đổi tên pháp nhân trên ảnh chứng từ. Bộ kiểm tra hiện hành `test_brand_consistency.py` kiểm tra mỗi trang có đúng hai tagline chứa tên nhà sản xuất, không còn tên này trong nội dung/metadata, không có Proof trong menu và bảo toàn ảnh/biểu mẫu/Guides cùng 31 bảng thương mại. `test_brand_proof.py` giữ lại để đối chiếu snapshot VietPaw/Proof trước khi gỡ mục menu; không dùng kỳ vọng menu lịch sử để kiểm tra bản hiện tại. `test_commercial_policy.py` và chế độ `--legacy-editorial-copy` chỉ dành cho các snapshot lịch sử tương ứng, không phải toàn bộ site hiện tại đã thêm Proof.
+Thông tin pháp lý và nhận diện dùng chung nằm trong `_source/common.py`; MOQ, mẫu, lead time, QC, độ ẩm và chứng từ dùng chung nằm trong `_source/content_helpers.py`. Nội dung Proof nằm trong `_source/content_proof.py`. Không đổi tên pháp nhân trên ảnh chứng từ. Bộ kiểm tra lịch sử `test_brand_consistency.py` kiểm tra mỗi trang có đúng hai tagline chứa tên nhà sản xuất, không còn tên này trong nội dung/metadata, không có Proof trong menu và bảo toàn ảnh/biểu mẫu/Guides cùng 31 bảng thương mại. `test_brand_proof.py` giữ lại để đối chiếu snapshot VietPaw/Proof trước khi gỡ mục menu; không dùng kỳ vọng menu lịch sử để kiểm tra bản hiện tại. `test_commercial_policy.py` và chế độ `--legacy-editorial-copy` chỉ dành cho các snapshot lịch sử tương ứng, không phải toàn bộ site hiện tại đã thêm Proof.
 
 ## Hồ sơ nội bộ
 

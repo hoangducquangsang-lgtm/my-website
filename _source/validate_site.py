@@ -83,6 +83,10 @@ def route_for(path):
     parent=path.relative_to(ROOT).parent.as_posix()
     return "/" if parent=="." else "/"+parent+"/"
 
+def html_target(source, link):
+    target=(source.parent/unquote(urlsplit(link).path)).resolve()
+    return target/"index.html" if target.is_dir() else target
+
 def run():
     errors=[]
     warnings=[]
@@ -100,19 +104,14 @@ def run():
             continue
         route=route_for(file)
         docs[route]=(file,d)
-        # The legal name is displayed only in the two shared brand signatures.
         check("VietPaw" in d.title,f"{route}: commercial brand missing from title")
-        check("VietPaw INT CO., LTD" not in html,f"{route}: brand incorrectly used as legal company name")
-        signature="Natural Pet Products by WINVN INT CO., LTD."
-        check(html.count(signature)==2,f"{route}: expected exactly two manufacturer signatures")
-        without_signatures=html.replace(signature,"")
-        check(not re.search(r"\bWINVN\s+INT\b",without_signatures,re.I),f"{route}: manufacturer name outside the two signatures")
+        check("VietPaw INT CO., LTD" not in html,f"{route}: incorrect legal company name")
         check(d.meta.get("og:site_name")=="VietPaw",f"{route}: social site brand mismatch")
         header=re.search(r'<header\b.*?</header>',html,re.S)
-        check(bool(header) and re.search(r'<a class="brand" href="[^"]+">VietPaw<span',header.group()),f"{route}: visible header brand mismatch")
-        check(bool(header) and not re.search(r'<a\b[^>]*>Proof</a>',header.group()),f"{route}: Proof must not appear in main navigation")
-        check('<span class="brand-sub">Natural Pet Products by WINVN INT CO., LTD.</span>' in html,f"{route}: brand signature missing from header")
-        check('<p class="footer-brand-tagline"><em>Natural Pet Products by WINVN INT CO., LTD.</em></p>' in html,f"{route}: brand signature missing from footer")
+        check(bool(header) and re.search(r'<a class="brand" href="[^"]+">VietPaw<span',header.group()),f"{route}: header brand mismatch")
+        check(bool(header) and not re.search(r'<a\b[^>]*>Proof</a>',header.group()),f"{route}: Proof must stay out of main navigation")
+        check('<span class="brand-sub">by WINVN INT CO., LTD.</span>' in html,f"{route}: manufacturer byline missing")
+        check('VietPaw is the international B2B/export brand of WINVN INT CO., LTD., a Vietnamese pet-product manufacturer.' in html,f"{route}: footer brand relationship missing")
         check("sarah.winvn@gmail.com" not in html,f"{route}: superseded email")
         check("Exporting to 30+" not in html,f"{route}: superseded export reach")
         footer=re.search(r'<footer class="site-footer">(.*?)</footer>',html,re.S)
@@ -120,7 +119,7 @@ def run():
         if footer:
             plain=" ".join(unescape(re.sub(r"<[^>]+>"," ",footer.group(1))).split())
             check(EXPECTED_TAGLINE in plain,f"{route}: owner-requested footer text differs")
-            for item in ("VietPaw","Natural Pet Products by WINVN INT CO., LTD.",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
+            for item in ("VietPaw","Natural Pet Products",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
                 check(item in plain,f"{route}: footer field missing {item}")
             check("biodegrad" not in plain.lower(),f"{route}: environmental claim in shared footer")
             check(not re.search(r'<a\b[^>]*>Proof</a>',footer.group()),f"{route}: Proof must not appear in footer navigation")
@@ -155,7 +154,7 @@ def run():
                 check(all(x.get("item","").startswith(BASE+"/") for x in items),f"{route}: incomplete breadcrumb")
             if schema.get("@type")=="Product":
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: product brand mismatch")
-                check("manufacturer" not in schema,f"{route}: manufacturer must not be repeated outside the brand signatures")
+                check(schema.get("manufacturer",{}).get("name")=="WINVN INT CO., LTD.",f"{route}: legal manufacturer mismatch")
                 check(schema.get("image","").startswith(BASE+"/assets/"),f"{route}: product image not absolute")
                 check(bool(schema.get("material")),f"{route}: product material missing")
                 check(not any(k in schema for k in ("offers","aggregateRating","review","gtin")),f"{route}: unsupported commercial schema")
@@ -169,12 +168,12 @@ def run():
                 check(schema.get("image")==d.meta.get("og:image"),f"{route}: article social image mismatch")
                 check(schema.get("dateModified")==GUIDE_UPDATED_DATES.get(route.strip("/").split("/")[-1]),f"{route}: article update date mismatch")
             if schema.get("@type")=="Organization":
-                check(schema.get("name")=="VietPaw",f"{route}: public organization/trade name mismatch")
-                check("legalName" not in schema,f"{route}: legal name repeated in search metadata")
+                check(schema.get("name")=="WINVN INT CO., LTD.",f"{route}: legal organization mismatch")
+                check(schema.get("legalName")=="WINVN INT CO., LTD.",f"{route}: legal organization name mismatch")
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: organization brand mismatch")
                 check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
                 check(schema.get("address",{}).get("streetAddress")==EXPECTED_ADDRESS,f"{route}: legal address schema mismatch")
-                check(not re.search(r"\bWINVN\b",json.dumps(schema),re.I),f"{route}: legal name outside permitted signatures")
+                check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: commercial brand mismatch")
             if schema.get("@type")=="Brand":
                 check(schema.get("name")=="VietPaw" and schema.get("slogan")=="Natural Pet Products",f"{route}: brand schema mismatch")
         if route.startswith("/guides/") and route!="/guides/":
@@ -242,15 +241,17 @@ def run():
         route="/guides/"+article["slug"]+"/"
         source_file,d=docs[route]
         target=(ROOT/article["commercial"][1].strip("/")/"index.html").resolve()
-        targets={(source_file.parent/unquote(urlsplit(link).path)).resolve() for link in d.main_links
+        targets={html_target(source_file,link) for link in d.main_links
                  if not urlsplit(link).scheme and not urlsplit(link).netloc and urlsplit(link).path}
         check(target in targets,f"{route}: expected contextual commercial link missing")
     for field in rfq.fields:
         if field.get("type")=="hidden": continue
         check(field.get("id") in rfq.labels,"RFQ field has no label: "+str(field))
     names={f.get("name") for f in rfq.fields}
-    check(names=={"name","company","email","segment","products","_subject","_gotcha"},"RFQ must match the legacy five-field form, subject and honeypot")
-    check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email"},"RFQ must require name and email only, as in the supplied old form")
+    check(names=={"name","company","email","country","products","quantity","service","whatsapp","message","attachment","enquiry_type","_subject","_gotcha"},"RFQ fields differ from the current B2B brief")
+    check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email","company","country","products"},"RFQ must require five B2B essentials")
+    catalogue=docs["/wholesale-catalogue/"][1]
+    check({f.get("name") for f in catalogue.fields if "required" in f}=={"email","country"},"Catalogue pricing requires email and destination")
     check(any(key=="action" and link=="https://formspree.io/f/mvkpbvlb" for _,key,link in rfq.links),"Legacy Formspree destination missing")
     check(docs["/request-a-quote/thank-you/"][1].meta.get("robots")=="noindex,follow","Thank-you page must be noindex")
     for route in ("/products/coffee-wood-dog-chew/","/guides/coffee-wood-chew-size-guide/"):

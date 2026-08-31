@@ -11,10 +11,11 @@ DOMAIN = "vietpaw.com"
 BASE_URL = f"https://{DOMAIN}"
 BRAND = "VietPaw"
 LEGAL_NAME = "WINVN INT CO., LTD."
-BRAND_TAGLINE = f"Natural Pet Products by {LEGAL_NAME}"
+BRAND_TAGLINE = f"by {LEGAL_NAME}"
+BRAND_RELATIONSHIP = f"{BRAND} is the international B2B/export brand of {LEGAL_NAME}, a Vietnamese pet-product manufacturer."
 BRAND_INTRO = f"{BRAND} brings natural-material pet toys from Vietnam to international brands, wholesalers and retailers."
-# The legal name is displayed only in the header and footer brand signatures.
-CONTRACT_NOTICE = "Invoices and contracts identify the legal entity, registered details and payment beneficiary for your order. Confirm these details before placing an order."
+# Current audit brief: VietPaw is the site brand; the manufacturer is identified in legal contexts.
+CONTRACT_NOTICE = f"Contracting manufacturer: {LEGAL_NAME} Confirm the registered details, payment beneficiary and agreed terms in your quotation, invoice and contract before placing an order."
 # Contact and export reach supplied directly by the site owner on 2026-08-30.
 PHONE = "+84 906 111 016"
 PHONE_TEL = "+84906111016"
@@ -92,7 +93,8 @@ def footer_html():
 <footer class="site-footer">
 <div class="wrap footer-grid">
 <div class="footer-brand"><div class="footer-logo">{BRAND}</div>
-<p class="footer-brand-tagline"><em>{BRAND_TAGLINE}</em></p>
+<p class="footer-brand-tagline"><em>Natural Pet Products</em></p>
+<p class="footer-legal">{BRAND_RELATIONSHIP}</p>
 <p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. Our manufacturer was registered in Vietnam in {REGISTERED_YEAR}. Exporting to {COUNTRIES} countries.</p>
 <ul class="footer-contact"><li>{ADDRESS}</li><li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
 <li><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp: {PHONE}</a></li>
@@ -116,9 +118,9 @@ def breadcrumb_html(trail):
 
 def organization_schema():
     return {"@context":"https://schema.org","@type":"Organization","@id":BASE_URL+"/#organization",
-            "name":BRAND,"url":BASE_URL+"/",
+            "name":LEGAL_NAME,"legalName":LEGAL_NAME,"url":BASE_URL+"/",
             "brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
-            "description":BRAND_INTRO,
+            "description":BRAND_RELATIONSHIP,
             "telephone":PHONE,"email":EMAIL,
             "address":{"@type":"PostalAddress","streetAddress":ADDRESS,"addressCountry":"VN"}}
 
@@ -143,6 +145,7 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
     article_author = next((s.get("author",{}).get("name") for s in schemas if s.get("@type")=="Article"),None)
     author_meta = f'<meta name="author" content="{escape(article_author,quote=True)}">' if article_author else ""
     PAGES[path] = {"title":title,"description":meta_description,"indexable":not noindex}
+    form_script = '<script src="/assets/rfq.js?v=20260831-b2b-leads" defer></script>' if "data-enquiry-form" in content else ""
     sticky = "" if path=="/request-a-quote/" else f'<aside class="sticky-contact" aria-label="Contact sales"><a class="btn btn-primary" href="/request-a-quote/?request=sample">Request Sample</a><a class="btn btn-outline desktop-contact" href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></aside>'
     return f"""<!DOCTYPE html>
 <html lang="en"><head>
@@ -159,28 +162,28 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}{og_image}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title,quote=True)}">
 <meta name="twitter:description" content="{escape(meta_description,quote=True)}"><meta name="twitter:image" content="{BASE_URL}{og_image}">
-<link rel="stylesheet" href="/assets/style.css?v=20260831-brand-consistency"><link rel="icon" type="image/svg+xml" href="/assets/vietpaw-favicon.svg">
+<link rel="stylesheet" href="/assets/style.css?v=20260831-b2b-leads"><link rel="icon" type="image/svg+xml" href="/assets/vietpaw-favicon.svg">
 {schema_tags}</head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="/">{BRAND}<span class="brand-sub">{BRAND_TAGLINE}</span></a>
 <nav class="main-nav" aria-label="Main"><ul>{nav_html(active_top)}</ul></nav>
 <a class="btn btn-primary btn-header" href="/request-a-quote/">Request a Quote</a>
-</div></header><main id="main">{content}</main>{footer_html()}{sticky}<script src="/assets/navigation.js?v=20260830-exclusive" defer></script></body></html>
+</div></header><main id="main">{content}</main>{footer_html()}{sticky}<script src="/assets/local-preview.js?v=20260831-clean-urls" defer></script>{form_script}<script src="/assets/navigation.js?v=20260830-exclusive" defer></script></body></html>
 """
 
 def write_page(root, path, html):
     target = os.path.join(root, path.strip("/"), "index.html")
     os.makedirs(os.path.dirname(target), exist_ok=True)
-    # Keep the original offline-friendly delivery: relative HTML, assets and query strings.
+    # Public links use clean directory URLs; local-preview.js adapts file:// navigation only.
     def relative_url(url):
         if url.startswith("//"):
             return url
         parts = urlsplit(url)
         dest = os.path.join(root, parts.path.lstrip("/"))
-        if parts.path.endswith("/"):
-            dest = os.path.join(dest, "index.html")
         rel = os.path.relpath(dest, os.path.dirname(target)).replace(os.sep,"/")
+        if parts.path.endswith("/"):
+            rel = rel.rstrip("/") + "/"
         if parts.query: rel += "?"+parts.query
         if parts.fragment: rel += "#"+parts.fragment
         return rel

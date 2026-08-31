@@ -1,0 +1,327 @@
+{
+  "checked_at_utc": "2026-08-31T09:18:02.903113+00:00",
+  "pairs": [
+    {
+      "route": "/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/about/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/materials/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/certifications/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/collections/coffee-wood/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/products/coffee-wood-dog-chew/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/solutions/wholesalers/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/factory/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/contact/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/wholesale-catalogue/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    },
+    {
+      "route": "/sustainability/",
+      "clean_status": 200,
+      "index_status": 200,
+      "identical_body": true,
+      "index_redirects_to_clean": false
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://vietpaw.com/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-6d8f\"",
+      "sha256": "b5533882aae65e663143e6375b192768da7fe53f05c5b857ef5eff67641c9b14",
+      "title": "Natural Pet Products from Vietnam | VietPaw",
+      "canonical": "https://vietpaw.com/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-6d8f\"",
+      "sha256": "b5533882aae65e663143e6375b192768da7fe53f05c5b857ef5eff67641c9b14",
+      "title": "Natural Pet Products from Vietnam | VietPaw",
+      "canonical": "https://vietpaw.com/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/about/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-384a\"",
+      "sha256": "ca3af86b6254d8fed1707aeb0820a41f47a4ce1c02d5f1179e844db463d3a846",
+      "title": "About VietPaw | Natural Pet Toys Made in Vietnam",
+      "canonical": "https://vietpaw.com/about/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/about/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-384a\"",
+      "sha256": "ca3af86b6254d8fed1707aeb0820a41f47a4ce1c02d5f1179e844db463d3a846",
+      "title": "About VietPaw | Natural Pet Toys Made in Vietnam",
+      "canonical": "https://vietpaw.com/about/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/materials/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-3d25\"",
+      "sha256": "61325b96dd8dd3ad810bf7e9d57dc2fcdcffd0dd0aee975b90173a5f7a0a850d",
+      "title": "Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw",
+      "canonical": "https://vietpaw.com/materials/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/materials/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-3d25\"",
+      "sha256": "61325b96dd8dd3ad810bf7e9d57dc2fcdcffd0dd0aee975b90173a5f7a0a850d",
+      "title": "Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw",
+      "canonical": "https://vietpaw.com/materials/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/certifications/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-4326\"",
+      "sha256": "6ee7910b10f54655cd79c09be14b8af12702ea2e3150702fd969742f4e87c525",
+      "title": "Pet Toy Testing & Export Documentation | VietPaw",
+      "canonical": "https://vietpaw.com/certifications/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/certifications/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-4326\"",
+      "sha256": "6ee7910b10f54655cd79c09be14b8af12702ea2e3150702fd969742f4e87c525",
+      "title": "Pet Toy Testing & Export Documentation | VietPaw",
+      "canonical": "https://vietpaw.com/certifications/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/collections/coffee-wood/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-4adc\"",
+      "sha256": "c2a522d3f9a8e586a9fbdc311698cb6a015dd494a13f68be03beae59d53a89fb",
+      "title": "Coffee Wood Dog Chew Manufacturer | Wholesale | VietPaw",
+      "canonical": "https://vietpaw.com/collections/coffee-wood/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/collections/coffee-wood/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-4adc\"",
+      "sha256": "c2a522d3f9a8e586a9fbdc311698cb6a015dd494a13f68be03beae59d53a89fb",
+      "title": "Coffee Wood Dog Chew Manufacturer | Wholesale | VietPaw",
+      "canonical": "https://vietpaw.com/collections/coffee-wood/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/products/coffee-wood-dog-chew/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-50e8\"",
+      "sha256": "9a31a0abd1dfe564890186d9df4c926dee9ccc0c71bb2d394935827471c172a5",
+      "title": "Coffee Wood Dog Chew Stick | Wholesale & Private Label | VietPaw",
+      "canonical": "https://vietpaw.com/products/coffee-wood-dog-chew/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/products/coffee-wood-dog-chew/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-50e8\"",
+      "sha256": "9a31a0abd1dfe564890186d9df4c926dee9ccc0c71bb2d394935827471c172a5",
+      "title": "Coffee Wood Dog Chew Stick | Wholesale & Private Label | VietPaw",
+      "canonical": "https://vietpaw.com/products/coffee-wood-dog-chew/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/solutions/wholesalers/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-425b\"",
+      "sha256": "859e8bb23029929166c3034aeb250e14c1b229541711f692bc3dc89355b875c7",
+      "title": "Natural Pet Toy Supply for Distributors | VietPaw",
+      "canonical": "https://vietpaw.com/solutions/wholesalers/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/solutions/wholesalers/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-425b\"",
+      "sha256": "859e8bb23029929166c3034aeb250e14c1b229541711f692bc3dc89355b875c7",
+      "title": "Natural Pet Toy Supply for Distributors | VietPaw",
+      "canonical": "https://vietpaw.com/solutions/wholesalers/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/factory/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-420e\"",
+      "sha256": "776287f93be2de8b53ad7892e780b516f8d469f4d2ff35112abdcf248d300769",
+      "title": "Pet Toy Factory Vietnam | Process & Verification | VietPaw",
+      "canonical": "https://vietpaw.com/factory/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/factory/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-420e\"",
+      "sha256": "776287f93be2de8b53ad7892e780b516f8d469f4d2ff35112abdcf248d300769",
+      "title": "Pet Toy Factory Vietnam | Process & Verification | VietPaw",
+      "canonical": "https://vietpaw.com/factory/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/contact/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-2da8\"",
+      "sha256": "c58276f796316573d258617e88b281e2a02d7f06018426cf92e3b2eb8c2289d3",
+      "title": "Contact VietPaw | Samples & Wholesale Enquiries",
+      "canonical": "https://vietpaw.com/contact/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/contact/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-2da8\"",
+      "sha256": "c58276f796316573d258617e88b281e2a02d7f06018426cf92e3b2eb8c2289d3",
+      "title": "Contact VietPaw | Samples & Wholesale Enquiries",
+      "canonical": "https://vietpaw.com/contact/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/wholesale-catalogue/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-2d9e\"",
+      "sha256": "adadfd01ad2d6006a6effe358a76ac03987d6f6d9af3b636b2d25f8e90f81389",
+      "title": "VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
+      "canonical": "https://vietpaw.com/wholesale-catalogue/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/wholesale-catalogue/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-2d9e\"",
+      "sha256": "adadfd01ad2d6006a6effe358a76ac03987d6f6d9af3b636b2d25f8e90f81389",
+      "title": "VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
+      "canonical": "https://vietpaw.com/wholesale-catalogue/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/sustainability/",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-3a50\"",
+      "sha256": "33dcc81ea05efeb828cb5ea688278e406450ecb93cd7e64eb3fe09e5d7a2c8ef",
+      "title": "Natural Materials & Responsible Product Claims | VietPaw",
+      "canonical": "https://vietpaw.com/sustainability/",
+      "obsolete_phrases": []
+    },
+    {
+      "url": "https://vietpaw.com/sustainability/index.html",
+      "status": 200,
+      "location": null,
+      "server": "GitHub.com",
+      "etag": "\"6a94f467-3a50\"",
+      "sha256": "33dcc81ea05efeb828cb5ea688278e406450ecb93cd7e64eb3fe09e5d7a2c8ef",
+      "title": "Natural Materials & Responsible Product Claims | VietPaw",
+      "canonical": "https://vietpaw.com/sustainability/",
+      "obsolete_phrases": []
+    }
+  ],
+  "warning": "Live content may differ from the edited local build until deployment. Search caches are not current HTTP evidence."
+}

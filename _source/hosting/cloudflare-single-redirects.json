@@ -1,0 +1,37 @@
+{
+  "description": "VietPaw canonical URLs — proposed rules; review in the existing zone before applying",
+  "kind": "zone",
+  "phase": "http_request_dynamic_redirect",
+  "rules": [
+    {
+      "description": "Index documents to their clean canonical URLs (GET/HEAD only)",
+      "expression": "(http.host in {\"vietpaw.com\" \"www.vietpaw.com\"} and http.request.method in {\"GET\" \"HEAD\"} and ends_with(http.request.uri.path, \"/index.html\"))",
+      "action": "redirect",
+      "action_parameters": {
+        "from_value": {
+          "status_code": 301,
+          "preserve_query_string": true,
+          "target_url": {
+            "expression": "concat(\"https://vietpaw.com\", wildcard_replace(http.request.uri.path, \"*/index.html\", \"${1}/\"))"
+          }
+        }
+      },
+      "enabled": true
+    },
+    {
+      "description": "Other page requests to HTTPS and non-www",
+      "expression": "(http.host in {\"vietpaw.com\" \"www.vietpaw.com\"} and http.request.method in {\"GET\" \"HEAD\"} and (http.host eq \"www.vietpaw.com\" or not ssl))",
+      "action": "redirect",
+      "action_parameters": {
+        "from_value": {
+          "status_code": 301,
+          "preserve_query_string": true,
+          "target_url": {
+            "expression": "concat(\"https://vietpaw.com\", http.request.uri.path)"
+          }
+        }
+      },
+      "enabled": true
+    }
+  ]
+}

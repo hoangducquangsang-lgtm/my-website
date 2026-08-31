@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Product specifications grounded in the supplied manufacturer product sheets."""
-from common import BASE_URL, BRAND
+from common import BASE_URL, BRAND, LEGAL_NAME
 from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE
 
 COFFEE_SIZES = [
@@ -79,7 +79,8 @@ def build(root):
                 p(f'<a href="/collections/{d["collection"]}/">Explore the {d["group"].lower()} wholesale collection</a> or <a href="/services/wholesale-pet-products/">plan a mixed-product wholesale order</a>.'),True)]
         schema={"@context":"https://schema.org","@type":"Product","@id":BASE_URL+path+"#product",
             "name":d["name"],"description":d["lede"],"url":BASE_URL+path,"image":BASE_URL+image,
-            "material":d["material"],"brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND}}
+            "material":d["material"],"brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
+            "manufacturer":{"@id":BASE_URL+"/#organization","@type":"Organization","name":LEGAL_NAME}}
         publish(root,path,d["name"]+" | Wholesale & Private Label | VietPaw",
             f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.',
             d["name"]+" — Wholesale & Private Label",d["lede"],sections,image=image,product=d["name"],

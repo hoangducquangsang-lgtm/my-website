@@ -218,3 +218,20 @@ figcaption{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
   .desktop-contact{display:none}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* B2B enquiries: required essentials first; optional detail stays compact. */
+.enquiry-form .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.enquiry-form .field{min-width:0}
+.enquiry-form .field-full{grid-column:1/-1}
+.enquiry-form .field label{display:block;margin:0 0 5px}
+.enquiry-form input,.enquiry-form select,.enquiry-form textarea{width:100%;min-width:0}
+.enquiry-form input[type=file]{padding:10px;background:var(--cream)}
+.enquiry-form .required-note{margin-bottom:18px}
+.form-details{border:1px solid var(--line);border-radius:10px;margin:20px 0;padding:14px}
+.form-details summary{cursor:pointer;font-weight:600;color:var(--forest-dark)}
+.form-details[open] summary{margin-bottom:16px}
+.enquiry-form .form-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.enquiry-form .form-privacy{margin-top:12px}
+.enquiry-form [data-form-error]{margin-top:12px}
+.enquiry-form [data-without-attachment]{white-space:normal;margin-top:10px}
+@media(max-width:680px){.enquiry-form .form-grid{grid-template-columns:1fr}.enquiry-form .btn{white-space:normal;width:100%}.form-details{padding:12px}}

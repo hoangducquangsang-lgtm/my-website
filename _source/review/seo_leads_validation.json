@@ -1,0 +1,17 @@
+{
+  "pages": 68,
+  "sitemap_urls": 66,
+  "clean_internal_links": 4498,
+  "guides_and_dates_preserved": 20,
+  "photos_preserved": 89,
+  "unchanged_assets": 277,
+  "commercial_tables_preserved": 31,
+  "products_with_brand_and_manufacturer": 6,
+  "quote_required_fields": 5,
+  "optional_catalogue_capture": true,
+  "redirect_rows_prepared": 272,
+  "live_301_applied": false,
+  "real_form_submission_tested": false,
+  "browser_visual_tested": false,
+  "errors": []
+}
