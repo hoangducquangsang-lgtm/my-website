@@ -9,6 +9,16 @@ from responsive_images import responsive_markup, optimized_url, optimize_schema
 
 DOMAIN = "vietpaw.com"
 BASE_URL = f"https://{DOMAIN}"
+GOOGLE_TAG_ID = "G-XTXJ45XN8B"
+GOOGLE_TAG_HTML = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GOOGLE_TAG_ID}');
+</script>"""
 BRAND = "VietPaw"
 LEGAL_NAME = "WINVN INT CO., LTD."
 BRAND_TAGLINE = f"by {LEGAL_NAME}"
@@ -155,6 +165,7 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
     sticky = "" if path=="/request-a-quote/" else f'<aside class="sticky-contact" aria-label="Contact sales"><a class="btn btn-primary" href="/request-a-quote/?request=sample">Request Sample</a><a class="btn btn-outline desktop-contact" href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></aside>'
     return f"""<!DOCTYPE html>
 <html lang="en"><head>
+{GOOGLE_TAG_HTML}
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(meta_description,quote=True)}">

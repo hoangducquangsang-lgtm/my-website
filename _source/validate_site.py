@@ -18,6 +18,7 @@ from retired_content import assert_retired_files_absent, is_retired_path
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
+GOOGLE_TAG_ID = "G-XTXJ45XN8B"
 EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. Our manufacturer was registered in Vietnam in 2019. Exporting to 40+ countries."
 EXPECTED_ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
 
@@ -107,6 +108,13 @@ def run():
         except Exception as exc:
             errors.append(f"{file}: parse/schema error {exc}")
             continue
+        check(html.count(f'https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG_ID}') == 1,
+              f"{file}: Google tag loader must appear exactly once")
+        check(html.count(f"gtag('config', '{GOOGLE_TAG_ID}');") == 1,
+              f"{file}: Google tag configuration must appear exactly once")
+        check(bool(re.search(rf'<head>\s*<!-- Google tag \(gtag\.js\) -->\s*<script async src="https://www\.googletagmanager\.com/gtag/js\?id={GOOGLE_TAG_ID}"></script>',
+                             html)),
+              f"{file}: Google tag must be immediately after the opening head")
         route=route_for(file)
         docs[route]=(file,d)
         check("VietPaw" in d.title,f"{route}: commercial brand missing from title")
