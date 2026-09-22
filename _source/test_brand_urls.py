@@ -44,7 +44,7 @@ for route, data in manifest.items():
     assert doc.canonicals == [BASE_URL + route] and doc.meta["og:url"] == BASE_URL + route, route
     assert not any("WINVN" in heading for heading in doc.h1), route
     assert not re.search(r"Talk to WINVN|WINVN sales contact", html, re.I), route
-    assert '<a class="brand"' in html and '>VietPaw<span class="brand-sub">by WINVN INT CO., LTD.</span>' in html, route
+    assert '<a class="brand"' in html and '>VietPaw</a>' in html and 'brand-sub' not in html, route
     for tag, attr, href in doc.links:
         url = urlsplit(urljoin(BASE_URL + route, href))
         if tag == "a" and url.hostname == "vietpaw.com":
@@ -56,8 +56,9 @@ for route, data in manifest.items():
     if route in EXPECTED_TITLES:
         assert doc.title == EXPECTED_TITLES[route], (route, doc.title)
     if route == "/contact/":
-        assert doc.h1 == ["Talk to VietPaw About Your Next Product"]
-        assert BRAND_ENTITY_STATEMENT in " ".join(doc.main_text)
+        assert doc.h1 == ["Contact VietPaw"]
+        # The manufacturer relationship is stated in the footer legal line, not in page copy.
+        assert BRAND_ENTITY_STATEMENT in html
         contact = doc.h1[0]
 sitemap = ET.parse(ROOT / "sitemap.xml")
 urls = [item.text for item in sitemap.findall(".//{*}loc")]

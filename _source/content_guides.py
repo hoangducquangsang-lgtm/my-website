@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 """VietPaw editorial guides. Author attribution supplied by the website owner."""
+import re
 from common import BASE_URL, BRAND, page, write_page, breadcrumb_html
 from guide_dates import GUIDE_UPDATED_DATES, updated_time
-from content_helpers import section, p, ul, table, cards, rfq_bar, FTC, CPSC, ECHA, AAHA
+from content_helpers import (section, p, ul, table, cards, rfq_bar, FTC, CPSC, ECHA, AAHA,
+                             answer, fit, steps, spec_table, figure, SAFETY)
 from content_products import coffee_size_table
 
 ARTICLES=[]
-def add(slug,cluster,title,description,intro,sections,commercial,related=(),sources=(),image="winvn-natural-toy-assortment.png"):
+def add(slug,cluster,title,description,intro,sections,commercial,related=(),sources=(),
+        image="winvn-natural-toy-assortment.png",faqs=(),h1=None):
     ARTICLES.append(dict(slug=slug,cluster=cluster,title=title,description=description,intro=intro,
-        sections=sections,commercial=commercial,related=related,sources=sources,image=image))
+        sections=sections,commercial=commercial,related=related,sources=sources,image=image,
+        faqs=faqs,h1=h1 or title))
 
 add("natural-dog-chew-toys-guide","Natural chew toys",
     "Natural Dog Chew Toys: Building a Range That Makes Sense",
@@ -85,20 +89,120 @@ add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
 
 add("how-long-do-coffee-wood-chews-last","Natural chew toys",
     "How Long Do Coffee Wood Chews Last?",
-    "Why coffee wood chew lifespan varies, when a worn chew needs replacing and how retailers can collect useful product feedback.",
-    "A fixed promise of days or weeks sounds helpful until two customers use the same stick very differently. One dog may carry it and chew occasionally; another may work on it intensely. Without knowing the dog, the dimensions and the pattern of use, a lifespan figure says very little.",
+    "There is no published lifespan for a coffee wood chew, and this explains why: what actually drives wear, how to answer the question on a product page, and when a chew must be replaced.",
+    "It is the question every customer asks and the one no honest supplier can answer with a number. We do not publish a figure in days or weeks, and this page sets out why, what determines the answer for an individual dog, and what to write on your product page instead of a promise you cannot keep.",
     [
-    ("The starting size is only one part of the story",p("Length, diameter and natural variation affect the amount of material in a stick. Chewing behavior and the time spent using it affect wear. Storage and moisture exposure also belong in the product record. Comparing two sticks only by their S or M labels can hide substantial differences.")+
-        p("When choosing samples, keep the dimensions and weight with each SKU. That makes later feedback more useful: you can distinguish a size-selection problem from a construction or quality issue.")),
-    ("Replacement is a condition decision",p("A chew is not suitable for continued use merely because some wood remains. Remove it if it cracks, becomes damaged or wears down to a size that could be swallowed. Loose pieces need to be removed promptly. Do not ask an owner to continue using a damaged item to achieve an advertised number of days.")+
-        p("The product is not food. If a dog is trying to break off and swallow pieces, stop using that chew and discuss a more suitable choice with a veterinarian.")),
-    ("Collect feedback that can actually be compared",p("For ordinary customer-service records, note the product, size, batch, dog's approximate size, reported pattern of use and reason for replacement. These are observations, not a controlled study. They can still reveal useful patterns, especially when paired with photographs.")+
-        p("Keep receipt-condition complaints in a separate category. A crack found when opening a carton and a worn stick after use need different investigations. Mixing them into one durability score makes both harder to understand.")),
-    ("Write a better answer for the product page",p("Explain that lifespan varies, state the dimensions and show clear replacement guidance. If a brand later wants to publish an average or compare its product with another, it needs a defined method, relevant data and appropriate animal-welfare safeguards. A few enthusiastic reviews do not establish a general performance claim.")+
-        p("For buyers, repeatability matters more than a dramatic lifespan promise. Agree the specification, retain a reference sample and give the factory precise feedback. That is the practical route to a more consistent product."))],
-    ("Coffee wood sizes and wholesale specifications","/products/coffee-wood-dog-chew/"),
-    related=[("Inspection and quality control","/quality-control/"),("Size selection","/guides/coffee-wood-chew-size-guide/")],
-    image="winvn-coffee-wood-single.jpg")
+    ("The short answer",
+      answer("Anywhere from a few days to several months, and the dog decides. A light gnawer may keep a size M "
+             "stick for two or three months; a determined chewer can reduce the same piece in under a week. There "
+             "is no published lifespan figure for coffee wood from us or from any other supplier, because "
+             "durability testing for chew toys would mean testing on animals and nobody in this category has "
+             "done it.")
+      + p("That is an unsatisfying answer for a product page, so the rest of this guide is about what to say "
+          "instead \u2014 and it turns out that a specific, honest answer converts better than a vague confident one, "
+          "because customers who buy on a lifespan promise are the ones who come back to complain.")),
+
+    ("What actually drives the difference",
+      p("Four variables account for most of the spread, and only two of them are under your control as a buyer.")
+      + spec_table(["Variable","Effect on lifespan","Under your control?"],[
+          ("Chewing style","The largest single factor. A dog that gnaws and shreds works through material slowly; a dog that bites down to crack things can split a stick in one session.","No \u2014 but you can advise on it at the point of sale"),
+          ("Size relative to the dog","A stick too small for the dog disappears fast and becomes a swallowing risk; a correctly sized one lasts far longer. Material volume rises sharply with diameter, so an XL holds much more wood than an L.","Yes \u2014 this is the sizing decision"),
+          ("Time actually spent with it","A chew left down all day wears in a fraction of the calendar time of one offered for twenty minutes a session.","Partly \u2014 through your use instructions"),
+          ("Moisture and storage","Wood packed and stored dry stays hard. Wood that picks up moisture in a damp warehouse softens and works down faster.","Yes \u2014 through packing spec and warehouse conditions"),
+        ], caption="Two of these \u2014 sizing and storage \u2014 are yours to get right. The other two belong to the customer, which is why the instruction on the pack matters as much as the product in it.")
+      + p("The manufacturing side contributes one thing that is measurable: moisture at packing, held below 14% and "
+          "read with a pin-type meter on each finished batch. That is not a lifespan guarantee \u2014 it is the reason "
+          "a stick arrives hard rather than soft, and a soft stick has a short life whatever the dog does with it.")),
+
+    ("What to write on your product page",
+      p("The pattern that works is: set the expectation as a range, name the variable that drives it, and give the "
+        "replacement rule. Something close to this:")
+      + ('<div class="callout"><p><em>\u201cHow long it lasts depends on your dog. Gentle chewers often keep a '
+         'stick for weeks or months; determined chewers get through one much faster. Choose the size that matches '
+         'your dog\u2019s weight, supervise chewing, and replace the chew when it cracks, splinters or wears down '
+         'small enough to swallow.\u201d</em></p></div>')
+      + p("Then publish the dimensions. A customer who can see that a size L is 19\u201320 cm long, 3.5\u20134.5 cm across and "
+          "120\u2013180 g can judge the value themselves, and a specific number builds more confidence than a vague "
+          "superlative. The full table is on the "
+          '<a href="/products/coffee-wood-dog-chew/">coffee wood chew product page</a>.')
+      + p("Avoid three things specifically: a lifespan in days, the word \u201cindestructible\u201d or \u201clongest-lasting\u201d "
+          "without a comparison you can evidence, and \u201csplinter-free\u201d \u2014 no supplier in this category has test data "
+          "behind that phrase, and an independent trainer has documented a coffee wood stick breaking into hard "
+          "pieces during use.")),
+
+    ("When the chew has to be replaced",
+      p("This is the part that matters more than lifespan, and it is a condition judgement rather than a calendar one.")
+      + fit(["The stick is intact, still comfortably larger than the dog\u2019s mouth, and the surface is worn smooth.",
+             "The dog is gnawing and shredding rather than trying to crack the piece.",
+             "Chewing is supervised and the chew is put away between sessions."],
+            ["It has cracked, split lengthwise or started breaking into hard pieces \u2014 remove it immediately.",
+             "It has worn down to a size the dog could swallow whole.",
+             "The dog has begun biting down to break pieces off rather than gnawing.",
+             "Any piece has come loose, or the dog is trying to swallow fragments rather than chew them."],
+            suit_head="Fine to keep in use", less_head="Replace it now")
+      + figure("/assets/img/coffee-wood-chew-sizes-in-hand.jpg",
+               "Hand holding four coffee wood chew sticks of increasing size for scale comparison",
+               "Judge the replacement point against the dog\u2019s mouth, not against the original size. A stick that "
+               "has worn down to something swallowable has to go, however much wood is left.")
+      + p("A chew is not suitable for continued use just because wood remains. Never ask a customer to keep using a "
+          "damaged item to reach an advertised number of days \u2014 which is one more reason not to advertise one.")
+      + p(SAFETY)),
+
+    ("Collecting feedback you can actually act on",
+      p("If you want a real answer for your own range, the way to get it is customer-service records rather than a "
+        "durability claim borrowed from a supplier.")
+      + steps([
+          ("Record five fields, not a star rating",
+           "Product and size, batch reference, the dog\u2019s approximate weight, the reported pattern of use, and the reason for replacement.",
+           "Data you can group, instead of a score you cannot interpret."),
+          ("Separate arrival condition from wear",
+           "Keep a crack found on opening a carton in a different category from a stick worn down after a month of use.",
+           "Two distinct investigations \u2014 one for the factory, one for the sizing advice.",
+           "Mixing them into a single durability figure makes both impossible to diagnose."),
+          ("Send the factory specifics, not impressions",
+           "Batch reference, photographs and the measured dimensions of the piece in question.",
+           "A grading or moisture record that can actually be checked against your complaint."),
+          ("Revisit the size mix after one season",
+           "Look at which sizes sold, which generated complaints and what the dog weights in those complaints were.",
+           "A second order sized to your customers rather than to the supplier\u2019s size chart."),
+        ])
+      + p("These are observations, not a controlled study, and they should not be published as one. If you ever want "
+          "to state an average or make a comparative claim, that needs a defined method, relevant data and proper "
+          "animal-welfare safeguards. A handful of enthusiastic reviews does not establish a performance claim.")),
+    ],
+    ("Coffee wood sizes, weights and full specification","/products/coffee-wood-dog-chew/"),
+    related=[("Choosing the right chew size","/guides/coffee-wood-chew-size-guide/"),
+             ("Coffee wood vs antler, nylon and rawhide","/guides/coffee-wood-vs-antler-nylon-rawhide/"),
+             ("Are coffee wood chews safe for dogs?","/guides/are-coffee-wood-chews-safe-for-dogs/"),
+             ("Inspection and quality control","/quality-control/")],
+    sources=[("AAHA guidance on hard chews",AAHA)],
+    image="coffee-wood-chew-grain-detail.jpg",
+    faqs=[
+      ("How long does a coffee wood chew last on average?",
+       "We do not publish an average, because the spread between a gentle chewer and a determined one is wider than any "
+       "average would be useful for \u2014 days at one end, months at the other. Publish the dimensions and the replacement "
+       "rule instead; customers can judge value from a real specification."),
+      ("Does a bigger size last longer?",
+       "Usually yes, and by more than the length suggests. Material volume rises with the square of the diameter, so an "
+       "XL at 4.5\u20135.5 cm across holds considerably more wood than an L at 3.5\u20134.5 cm even though they differ by only "
+       "2\u20133 cm in length. Size up only if the dog\u2019s weight supports it \u2014 an oversized chew is awkward rather than "
+       "better."),
+      ("Why does one stick last much longer than another of the same size?",
+       "Coffee wood is a natural material and density varies from stem to stem, so two sticks in the same size band are "
+       "not identical pieces. Grading controls the diameter band and the crack limit; it does not make every piece the "
+       "same density. Storage matters too: a stick that has picked up moisture works down faster."),
+      ("Can I advertise that these last longer than rawhide?",
+       "Only with a comparison you can evidence, and we are not aware of published data supporting it for this material. "
+       "What you can say factually is that coffee wood does not soften, swell or develop an odour as it is worked, which "
+       "is a different \u2014 and defensible \u2014 statement about how it behaves."),
+      ("When exactly should a customer throw the chew away?",
+       "When it cracks or splits, when it starts breaking into hard pieces, when it has worn down small enough to swallow "
+       "whole, or when the dog switches from gnawing to trying to crack pieces off. Condition decides, not the calendar."),
+      ("Does the moisture level affect how long it lasts?",
+       "Yes. Chews are packed below 14% moisture and that is why they arrive hard. Wood that picks up moisture in a damp "
+       "warehouse softens and wears faster, so keep bags sealed until they go out, store on pallets away from exterior "
+       "walls and roller shutters, and aim for around 25\u201328 \u00b0C with air circulation."),
+    ])
 
 add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
     "Plastic-Free Pet Toys: What Belongs in the Buying Brief?",
@@ -255,7 +359,7 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
         p("VietPaw offers product customization, engraving and packaging support. Describe which of these you need, then ask for a quotation that separates them. You will have a clearer project budget and fewer surprises when the design changes."))],
     ("Discuss OEM and ODM pet toy development","/services/oem-odm-pet-toy-manufacturing/"),
     related=[("Private-label services","/services/private-label-pet-toys/"),("Sample and order process","/how-to-order/")],
-    sources=[("Manufacturer guidance: customization and packaging","https://www.winvnint.com/")],
+    sources=[("VietPaw private-label and packaging options","/services/private-label-pet-toys/")],
     image="process-laser-engraving.jpg")
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
@@ -273,7 +377,7 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
         p("Ask which approval starts the clock and what could change the schedule. Work backwards from the date stock must be available for sale, allowing time to receive and inspect it. A launch plan needs that final stage just as much as it needs a factory completion date."))],
     ("Prepare a product and pricing enquiry","/request-a-quote/"),
     related=[("Wholesale service","/services/wholesale-pet-products/"),("First-order planning","/guides/sourcing-eco-pet-toys-vietnam/")],
-    sources=[("Manufacturer guidance: order minimums and lead times","https://www.winvnint.com/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
+    sources=[("VietPaw order minimums and lead times","/how-to-order/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
     image="export-carton-labels.jpg")
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
@@ -373,27 +477,82 @@ def build(root):
     for a in ARTICLES:
         clusters.setdefault(a["cluster"],[]).append(a)
     bc,bs=breadcrumb_html([("Home","/"),("Guides",None)])
-    hub=bc+'<section class="hero"><div class="wrap"><h1>Pet Product &amp; Sourcing Guides</h1>'+p("Written by Sarah for pet brands, retailers and importers. Practical guidance on choosing natural toys, evaluating samples and managing an international order from the first brief to receiving.")+'</div></section>'
+    hub = bc + ('<section class="hero"><div class="wrap">'
+        '<p class="hero-eyebrow">VietPaw \u00b7 Buyer guides</p>'
+        '<h1>Sourcing Guides for Natural Pet Toys</h1>'
+        '<p class="hero-lede">Written by Sarah for pet brands, retailers, distributors and importers. '
+        'Specifications, sourcing decisions and the claims this category gets wrong \u2014 written from the '
+        'supply side, including the parts that do not help us sell.</p></div></section>')
+    hub += section("Start here",
+        answer("If you are new to sourcing natural pet toys, three questions decide most of the rest: which "
+               "material suits the chewing style you are selling to, what the minimum order and lead time "
+               "actually are, and which claims you can legally put on the pack. One guide below covers each.")
+        + cards([
+            ("Which material for which dog",
+             "Chewing style, not material name, decides what works. Start here before choosing a range.",
+             "/guides/natural-dog-chew-toys-guide/","/assets/img/shiba-inu-chewing-coffee-wood-stick.jpg"),
+            ("MOQ, pricing and lead times",
+             "What the numbers mean, where the hidden minimums sit and how production time differs from arrival date.",
+             "/guides/pet-toy-moq-fob-pricing-lead-times/","/assets/img/export-cartons-stacked-for-loading.jpg"),
+            ("What you can and cannot claim",
+             "Biodegradable, non-toxic, splinter-free, dental benefit \u2014 which of these survive scrutiny.",
+             "/guides/plastic-free-biodegradable-pet-toys-guide/","/assets/img/bagged-chews-with-desiccant.jpg"),
+          ])
+        + p("Looking for specifications rather than guidance? Sizes, weights and carton data are on the "
+            '<a href="/products/coffee-wood-dog-chew/">coffee wood product page</a>, and material detail is '
+            'under <a href="/collections/coffee-wood/">coffee wood</a>, '
+            '<a href="/collections/coconut-fiber/">coconut fiber</a>, '
+            '<a href="/collections/hemp-fiber/">hemp fiber</a> and '
+            '<a href="/collections/loofah/">loofah</a>.'))
+    CLUSTER_NOTE = {
+      "Natural chew toys": "Sizing, safety limits, lifespan and honest comparisons against rawhide, antler and nylon.",
+      "Materials & claims": "What each material is, what it is not, and which environmental and safety claims can actually be supported.",
+      "Sourcing & trade": "Minimums, pricing structures, lead times, private label versus OEM, and sourcing from Vietnam in practice.",
+      "Compliance & risk": "Testing scope, CPSIA and REACH, and how to check a supplier before the first container.",
+    }
     for cluster,articles in clusters.items():
-        hub+=section(cluster,cards([(a["title"],a["description"]+f'<span class="guide-updated">Updated {updated_time(a["slug"])}</span>',"/guides/"+a["slug"]+"/") for a in articles]))
-    write_page(root,"/guides/",page("Guides & Resources | Natural Pet Toy Sourcing | VietPaw",
-        "Buyer guides to natural pet toy materials, sizes, supplier verification, wholesale ordering and product-specific compliance planning.",
+        hub += section(cluster,
+            (p(CLUSTER_NOTE[cluster]) if cluster in CLUSTER_NOTE else "")
+            + cards([(a["title"],
+                      a["description"]+f'<span class="guide-updated">Updated {updated_time(a["slug"])}</span>',
+                      "/guides/"+a["slug"]+"/") for a in articles]),
+            alt=(list(clusters).index(cluster) % 2 == 1))
+    hub += section("How these guides are written",
+        ul(["Figures are labelled as reference specifications or as supplier-reported planning numbers, never presented as audited measurements.",
+            "Where no data exists \u2014 chew lifespan, coffee wood hardness, rope tensile ratings \u2014 we say so rather than estimating.",
+            "Claims we will not support are named explicitly, including ones that would help us sell.",
+            "External guidance is linked at the foot of the guide that relies on it."])
+        + p("Guides are updated as specifications change; each carries its own update date. If something here "
+            'conflicts with a quotation, the quotation governs \u2014 <a href="/contact/">tell us</a> and we will fix '
+            'the page.'), True)
+    write_page(root,"/guides/",page("Pet Toy Sourcing Guides | Specs, MOQ & Claims | VietPaw",
+        "Buyer guides to natural pet toy materials, chew sizing, supplier verification, MOQ and lead times, and "
+        "which product claims can actually be supported. Written from the supply side.",
         "/guides/",hub+rfq_bar(),"Guides",[bs]))
     for a in ARTICLES:
         path="/guides/"+a["slug"]+"/"
         bc,bs=breadcrumb_html([("Home","/"),("Guides","/guides/"),(a["title"],None)])
         body=p(a["intro"])+"".join("<h2>"+h+"</h2>"+body for h,body in a["sections"])
+        if a["faqs"]:
+            body+="<h2>Frequently asked</h2>"+"".join(
+                f'<div class="faq-item"><h3>{q}</h3><p>{ans}</p></div>' for q,ans in a["faqs"])
         anchor,url=a["commercial"]
         body+=f'<div class="callout"><a href="{url}">{anchor}</a></div>'
         if a["related"]:
             body+="<h2>Further reading</h2>"+ul([f'<a href="{u}">{t}</a>' for t,u in a["related"]])
         if a["sources"]:
             body+='<div class="source-note"><h2>Reference guidance</h2>'+ul([f'<a href="{u}">{t}</a>' for t,u in a["sources"]])+'</div>'
-        content=bc+f'<article class="section"><div class="wrap article"><p class="tag">{a["cluster"]}</p><h1>{a["title"]}</h1><p class="meta article-byline">By <span class="author-name">Sarah</span> · VietPaw · Updated {updated_time(a["slug"])}</p>{body}</div></article>'
+        content=bc+f'<article class="section"><div class="wrap article"><p class="tag">{a["cluster"]}</p><h1>{a["h1"]}</h1><p class="meta article-byline">By <span class="author-name">Sarah</span> · VietPaw · Updated {updated_time(a["slug"])}</p>{body}</div></article>'
         schema={"@context":"https://schema.org","@type":"Article","@id":BASE_URL+path+"#article",
             "headline":a["title"],"description":a["description"],"dateModified":GUIDE_UPDATED_DATES[a["slug"]],
             "mainEntityOfPage":BASE_URL+path,"image":BASE_URL+"/assets/img/"+a["image"],
             "author":{"@type":"Person","name":"Sarah"},
             "publisher":{"@id":BASE_URL+"/#organization"}}
+        extra=[]
+        if a["faqs"]:
+            extra.append({"@context":"https://schema.org","@type":"FAQPage","@id":BASE_URL+path+"#faq",
+                "mainEntity":[{"@type":"Question","name":q,
+                               "acceptedAnswer":{"@type":"Answer","text":re.sub(r"<[^>]+>","",ans)}}
+                              for q,ans in a["faqs"]]})
         write_page(root,path,page(a["title"]+" | VietPaw",a["description"],path,content+rfq_bar(),
-            "Guides",[bs,schema],og_image="/assets/img/"+a["image"]))
+            "Guides",[bs,schema,*extra],og_image="/assets/img/"+a["image"]))

@@ -10,7 +10,7 @@ import re
 import sys
 import zipfile
 from PIL import Image
-from common import BRAND, LEGAL_NAME, BRAND_TAGLINE, BRAND_INTRO, CONTRACT_NOTICE
+from common import BRAND, LEGAL_NAME, BRAND_INTRO, CONTRACT_NOTICE, BRAND_RELATIONSHIP
 from validate_site import Document, ROOT
 
 def plain(value):
@@ -35,7 +35,7 @@ def doc(value):
 def run(backup):
     assert BRAND == "VietPaw"
     assert LEGAL_NAME == "WINVN INT CO., LTD."
-    assert BRAND_TAGLINE == "Natural Pet Products by WINVN INT CO., LTD."
+    assert BRAND_RELATIONSHIP.startswith("VietPaw is the international B2B/export brand of")
     assert "WINVN" not in BRAND_INTRO
     baseline = {}
     assets = 0
@@ -67,11 +67,12 @@ def run(backup):
         header = re.search(r"<header\b.*?</header>", html, re.S).group()
         footer = re.search(r"<footer\b.*?</footer>", html, re.S).group()
         assert re.search(r'<a class="brand" href="[^"]+">VietPaw<span', header)
-        assert BRAND_TAGLINE in plain(header) and BRAND_TAGLINE in plain(footer)
+        assert 'VietPaw' in plain(header)
+        assert LEGAL_NAME in plain(footer)
         assert '<p class="footer-legal">' not in footer
-        header_signature = f'<span class="brand-sub">{BRAND_TAGLINE}</span>'
-        footer_signature = f'<p class="footer-brand-tagline"><em>{BRAND_TAGLINE}</em></p>'
-        assert html.count(BRAND_TAGLINE) == 2
+        header_signature = '<a class="brand"'
+        footer_signature = '<p class="footer-brand-tagline">'
+        assert 'brand-sub' not in html
         assert header_signature in header and footer_signature in footer
         remaining = html.replace(header_signature, "").replace(footer_signature, "")
         assert not re.search(r"\bWINVN\s+INT\b", remaining, re.I), relative

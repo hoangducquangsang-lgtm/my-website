@@ -14,6 +14,56 @@
     "method": 6
   },
   "images": {
+    "assets/img/bagged-chews-with-desiccant.jpg": {
+      "sha256": "d70c8e49e22a516b896d4026f2ca10bc477c739abd81a798a2e23f860c855ea1",
+      "width": 1500,
+      "height": 2000,
+      "bytes": 500541,
+      "variants": [
+        {
+          "path": "assets/img/webp/bagged-chews-with-desiccant-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 23472
+        },
+        {
+          "path": "assets/img/webp/bagged-chews-with-desiccant-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 43158
+        },
+        {
+          "path": "assets/img/webp/bagged-chews-with-desiccant-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 67030
+        },
+        {
+          "path": "assets/img/webp/bagged-chews-with-desiccant-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 91906
+        },
+        {
+          "path": "assets/img/webp/bagged-chews-with-desiccant-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 114886
+        },
+        {
+          "path": "assets/img/webp/bagged-chews-with-desiccant-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 152364
+        },
+        {
+          "path": "assets/img/webp/bagged-chews-with-desiccant-jpg-1500w.webp",
+          "width": 1500,
+          "height": 2000,
+          "bytes": 204674
+        }
+      ]
+    },
     "assets/img/cat-loofah-toys-lifestyle.jpg": {
       "sha256": "157f969b7b8452c4e4dd8ae599170522a6da7bf2bb794a29ff03dcc84d7500ee",
       "width": 709,
@@ -43,6 +93,488 @@
           "width": 709,
           "height": 543,
           "bytes": 55510
+        }
+      ]
+    },
+    "assets/img/coffee-stem-diameter-caliper-check.jpg": {
+      "sha256": "919ac701348797139f3d2d473faca192b2586bb7d7ed77c15de1393cd5374560",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 250478,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-stem-diameter-caliper-check-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 39586
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-diameter-caliper-check-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 67526
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-diameter-caliper-check-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 91530
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-diameter-caliper-check-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 119864
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-diameter-caliper-check-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 144490
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-diameter-caliper-check-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 167512
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chew-finishing-bench.jpg": {
+      "sha256": "4d4d12969cca741c460822e2975862d6fa9a35c5b32cfd2bd89d2d51a4db5ed6",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 1031388,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chew-finishing-bench-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33582
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-finishing-bench-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 64728
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-finishing-bench-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 102422
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-finishing-bench-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 144790
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-finishing-bench-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 188466
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-finishing-bench-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 251918
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-finishing-bench-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 382132
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chew-grain-detail.jpg": {
+      "sha256": "fec6d7c2e4be882522c10d16d6cb51d21e1d44e0433fd9701a064477969e3ae3",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 182451,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chew-grain-detail-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 4752
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-grain-detail-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 11768
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-grain-detail-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 29308
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-grain-detail-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 54944
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-grain-detail-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 82676
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-grain-detail-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 111802
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chew-size-range-xs-to-xxl.jpg": {
+      "sha256": "5d1e75d3b87a5e50e10211200b2608c7109644c8e832add460041654ceae9ee9",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 308450,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 10052
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 18134
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 27002
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 36626
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 46420
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 65114
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 97730
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chew-sizes-in-hand.jpg": {
+      "sha256": "4dd5fe5064d9242d708a495ed0d64f7148a75bfcaea252e594453d014dc5ed2a",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 134726,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 11054
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 19964
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 30384
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 41732
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 54886
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 70170
+        }
+      ]
+    },
+    "assets/img/coffee-wood-cotton-rope-tug-pair.jpg": {
+      "sha256": "aebbeb368b83d9e2eaff9d0e2df73035f833172f71d20a5fd70c3b7884e7e04b",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 420858,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-cotton-rope-tug-pair-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 7628
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-cotton-rope-tug-pair-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14632
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-cotton-rope-tug-pair-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 24442
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-cotton-rope-tug-pair-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 36326
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-cotton-rope-tug-pair-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 52428
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-cotton-rope-tug-pair-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 85510
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-cotton-rope-tug-pair-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 157870
+        }
+      ]
+    },
+    "assets/img/coffee-wood-drying-rack-rows.jpg": {
+      "sha256": "220263ad1bf534cc4623f058c0b45da548040c2b2aaade05b0eb43a76a4a819d",
+      "width": 2000,
+      "height": 1500,
+      "bytes": 527753,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-drying-rack-rows-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 26624
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-drying-rack-rows-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 44554
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-drying-rack-rows-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 61508
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-drying-rack-rows-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 79356
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-drying-rack-rows-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 97502
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-drying-rack-rows-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 129102
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-drying-rack-rows-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 179142
+        }
+      ]
+    },
+    "assets/img/coffee-wood-seasoning-racks.jpg": {
+      "sha256": "7abff72f5e4c5b0a165c9da11595fda9b42c7eb700cc3b0cbe4ca1cb213c93fe",
+      "width": 2000,
+      "height": 1500,
+      "bytes": 458658,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-seasoning-racks-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 19198
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-seasoning-racks-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 31754
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-seasoning-racks-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 44048
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-seasoning-racks-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 57176
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-seasoning-racks-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 70920
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-seasoning-racks-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 92682
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-seasoning-racks-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 133926
+        }
+      ]
+    },
+    "assets/img/coffee-wood-workshop-stacked-billets.jpg": {
+      "sha256": "57759f9cd3bbe8f786ae9fd75e6d464da30ce225837adaed79b90f36fd7793e7",
+      "width": 2000,
+      "height": 1125,
+      "bytes": 522545,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-workshop-stacked-billets-jpg-320w.webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 16714
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-workshop-stacked-billets-jpg-480w.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 31784
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-workshop-stacked-billets-jpg-640w.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 50362
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-workshop-stacked-billets-jpg-800w.webp",
+          "width": 800,
+          "height": 450,
+          "bytes": 70260
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-workshop-stacked-billets-jpg-960w.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 90596
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-workshop-stacked-billets-jpg-1200w.webp",
+          "width": 1200,
+          "height": 675,
+          "bytes": 125796
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-workshop-stacked-billets-jpg-1600w.webp",
+          "width": 1600,
+          "height": 900,
+          "bytes": 181758
+        }
+      ]
+    },
+    "assets/img/cotton-rope-coffee-wood-dumbbell.jpg": {
+      "sha256": "5c481eae2cdae936a5c0f25abe58ebcf239823844c0e6ecc6c517b889c6747e6",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 257318,
+      "variants": [
+        {
+          "path": "assets/img/webp/cotton-rope-coffee-wood-dumbbell-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 4418
+        },
+        {
+          "path": "assets/img/webp/cotton-rope-coffee-wood-dumbbell-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 8416
+        },
+        {
+          "path": "assets/img/webp/cotton-rope-coffee-wood-dumbbell-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 13644
+        },
+        {
+          "path": "assets/img/webp/cotton-rope-coffee-wood-dumbbell-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 19386
+        },
+        {
+          "path": "assets/img/webp/cotton-rope-coffee-wood-dumbbell-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 27570
+        },
+        {
+          "path": "assets/img/webp/cotton-rope-coffee-wood-dumbbell-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 43852
+        },
+        {
+          "path": "assets/img/webp/cotton-rope-coffee-wood-dumbbell-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 78570
         }
       ]
     },
@@ -198,6 +730,50 @@
         }
       ]
     },
+    "assets/img/export-cartons-stacked-for-loading.jpg": {
+      "sha256": "bc2ba04a7a75f6014cbe6b61fbdf7189879c6ea2930b9d67fabcb305cc65c0a3",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144159,
+      "variants": [
+        {
+          "path": "assets/img/webp/export-cartons-stacked-for-loading-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 15154
+        },
+        {
+          "path": "assets/img/webp/export-cartons-stacked-for-loading-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 25440
+        },
+        {
+          "path": "assets/img/webp/export-cartons-stacked-for-loading-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 35570
+        },
+        {
+          "path": "assets/img/webp/export-cartons-stacked-for-loading-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 47164
+        },
+        {
+          "path": "assets/img/webp/export-cartons-stacked-for-loading-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 59574
+        },
+        {
+          "path": "assets/img/webp/export-cartons-stacked-for-loading-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 71352
+        }
+      ]
+    },
     "assets/img/export-packed-box.jpg": {
       "sha256": "6cbeffd4d2c3bb24a64f042408f8b0b7e37b24cca23b027f3200886bfbff326d",
       "width": 1080,
@@ -239,6 +815,432 @@
           "width": 1080,
           "height": 1350,
           "bytes": 234768
+        }
+      ]
+    },
+    "assets/img/french-bulldog-chewing-coffee-wood.jpg": {
+      "sha256": "22d6978c878868d15dd2fc44b8ebdaaee2218c4acf5413634541c59b12eafac4",
+      "width": 1980,
+      "height": 2000,
+      "bytes": 737881,
+      "variants": [
+        {
+          "path": "assets/img/webp/french-bulldog-chewing-coffee-wood-jpg-320w.webp",
+          "width": 320,
+          "height": 323,
+          "bytes": 19962
+        },
+        {
+          "path": "assets/img/webp/french-bulldog-chewing-coffee-wood-jpg-480w.webp",
+          "width": 480,
+          "height": 485,
+          "bytes": 37342
+        },
+        {
+          "path": "assets/img/webp/french-bulldog-chewing-coffee-wood-jpg-640w.webp",
+          "width": 640,
+          "height": 646,
+          "bytes": 57346
+        },
+        {
+          "path": "assets/img/webp/french-bulldog-chewing-coffee-wood-jpg-800w.webp",
+          "width": 800,
+          "height": 808,
+          "bytes": 80022
+        },
+        {
+          "path": "assets/img/webp/french-bulldog-chewing-coffee-wood-jpg-960w.webp",
+          "width": 960,
+          "height": 970,
+          "bytes": 108106
+        },
+        {
+          "path": "assets/img/webp/french-bulldog-chewing-coffee-wood-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1212,
+          "bytes": 148868
+        },
+        {
+          "path": "assets/img/webp/french-bulldog-chewing-coffee-wood-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1616,
+          "bytes": 232716
+        }
+      ]
+    },
+    "assets/img/golden-retriever-chewing-coffee-wood.jpg": {
+      "sha256": "c7898ffb6face54af841153cd862da324338ff5b175149728e8998b4a734f620",
+      "width": 1980,
+      "height": 2000,
+      "bytes": 694929,
+      "variants": [
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-jpg-320w.webp",
+          "width": 320,
+          "height": 323,
+          "bytes": 19742
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-jpg-480w.webp",
+          "width": 480,
+          "height": 485,
+          "bytes": 34674
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-jpg-640w.webp",
+          "width": 640,
+          "height": 646,
+          "bytes": 51646
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-jpg-800w.webp",
+          "width": 800,
+          "height": 808,
+          "bytes": 70902
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-jpg-960w.webp",
+          "width": 960,
+          "height": 970,
+          "bytes": 90248
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1212,
+          "bytes": 123248
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1616,
+          "bytes": 190808
+        }
+      ]
+    },
+    "assets/img/grading-chews-before-packing.jpg": {
+      "sha256": "76f9f050efe9cb4fdac8529315cff3dfa4ce81b257d296e1141696fe132ae293",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 254114,
+      "variants": [
+        {
+          "path": "assets/img/webp/grading-chews-before-packing-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 27504
+        },
+        {
+          "path": "assets/img/webp/grading-chews-before-packing-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 53552
+        },
+        {
+          "path": "assets/img/webp/grading-chews-before-packing-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 81300
+        },
+        {
+          "path": "assets/img/webp/grading-chews-before-packing-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 112310
+        },
+        {
+          "path": "assets/img/webp/grading-chews-before-packing-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 141668
+        },
+        {
+          "path": "assets/img/webp/grading-chews-before-packing-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 169574
+        }
+      ]
+    },
+    "assets/img/hemp-rope-double-knot-wood-block.jpg": {
+      "sha256": "7accf5a254539c54268d4e324f4564a9eff2ef89c632a47b071e70ff4eb22346",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 316454,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 8436
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 17150
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 28334
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 42092
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 58432
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 86410
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 137352
+        }
+      ]
+    },
+    "assets/img/hemp-rope-loop-coffee-wood-toy.jpg": {
+      "sha256": "6d35bf175e47f06acaef75137e160baa05d5a08088c99fbdd27cc67c7b972ab8",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 260301,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-loop-coffee-wood-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 4802
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-coffee-wood-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 8928
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-coffee-wood-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 14056
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-coffee-wood-toy-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 20412
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-coffee-wood-toy-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 27326
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-coffee-wood-toy-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 41778
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-coffee-wood-toy-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 72952
+        }
+      ]
+    },
+    "assets/img/laser-engraving-coffee-wood-chew.jpg": {
+      "sha256": "e392b3ee0f930911dc7f22332b66e9986ae80902ce3389c8c537352be2b403a1",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 151219,
+      "variants": [
+        {
+          "path": "assets/img/webp/laser-engraving-coffee-wood-chew-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 19310
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-coffee-wood-chew-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 32494
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-coffee-wood-chew-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 44460
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-coffee-wood-chew-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 57788
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-coffee-wood-chew-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 70370
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-coffee-wood-chew-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 82622
+        }
+      ]
+    },
+    "assets/img/loofah-duck-cat-toy.jpg": {
+      "sha256": "6d89a5cd7afb398c90b6a23ee9741487bab7d822280d269d3814f9650bd60d6a",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 511369,
+      "variants": [
+        {
+          "path": "assets/img/webp/loofah-duck-cat-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 10674
+        },
+        {
+          "path": "assets/img/webp/loofah-duck-cat-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 23682
+        },
+        {
+          "path": "assets/img/webp/loofah-duck-cat-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 41158
+        },
+        {
+          "path": "assets/img/webp/loofah-duck-cat-toy-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 60782
+        },
+        {
+          "path": "assets/img/webp/loofah-duck-cat-toy-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 80934
+        },
+        {
+          "path": "assets/img/webp/loofah-duck-cat-toy-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 111118
+        },
+        {
+          "path": "assets/img/webp/loofah-duck-cat-toy-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 163138
+        }
+      ]
+    },
+    "assets/img/loofah-gourd-on-the-vine.jpg": {
+      "sha256": "f074baac480fa7ed0f0e5c5a2bbad69cd3d56bbcd4bc9cbe0616cb33d4b03779",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 479788,
+      "variants": [
+        {
+          "path": "assets/img/webp/loofah-gourd-on-the-vine-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 53516
+        },
+        {
+          "path": "assets/img/webp/loofah-gourd-on-the-vine-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 105356
+        },
+        {
+          "path": "assets/img/webp/loofah-gourd-on-the-vine-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 160974
+        },
+        {
+          "path": "assets/img/webp/loofah-gourd-on-the-vine-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 211762
+        },
+        {
+          "path": "assets/img/webp/loofah-gourd-on-the-vine-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 265696
+        },
+        {
+          "path": "assets/img/webp/loofah-gourd-on-the-vine-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 312570
+        }
+      ]
+    },
+    "assets/img/moisture-reading-before-packing.jpg": {
+      "sha256": "e0339245e071093a407b7028d0baef77a3174e1b31f85d5f3780371f3eef8de3",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 136848,
+      "variants": [
+        {
+          "path": "assets/img/webp/moisture-reading-before-packing-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16236
+        },
+        {
+          "path": "assets/img/webp/moisture-reading-before-packing-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 26250
+        },
+        {
+          "path": "assets/img/webp/moisture-reading-before-packing-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 37214
+        },
+        {
+          "path": "assets/img/webp/moisture-reading-before-packing-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 48604
+        },
+        {
+          "path": "assets/img/webp/moisture-reading-before-packing-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 61230
+        },
+        {
+          "path": "assets/img/webp/moisture-reading-before-packing-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 72812
         }
       ]
     },
@@ -421,6 +1423,150 @@
           "width": 877,
           "height": 414,
           "bytes": 46240
+        }
+      ]
+    },
+    "assets/img/puppy-with-rope-and-fiber-ball.jpg": {
+      "sha256": "38dde33c61f92b8bb0236ad43baa7366305b5f9a8736e7d913b38b56e3f84230",
+      "width": 1500,
+      "height": 2000,
+      "bytes": 668512,
+      "variants": [
+        {
+          "path": "assets/img/webp/puppy-with-rope-and-fiber-ball-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 21812
+        },
+        {
+          "path": "assets/img/webp/puppy-with-rope-and-fiber-ball-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 44894
+        },
+        {
+          "path": "assets/img/webp/puppy-with-rope-and-fiber-ball-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 77008
+        },
+        {
+          "path": "assets/img/webp/puppy-with-rope-and-fiber-ball-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 114342
+        },
+        {
+          "path": "assets/img/webp/puppy-with-rope-and-fiber-ball-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 153464
+        },
+        {
+          "path": "assets/img/webp/puppy-with-rope-and-fiber-ball-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 217326
+        },
+        {
+          "path": "assets/img/webp/puppy-with-rope-and-fiber-ball-jpg-1500w.webp",
+          "width": 1500,
+          "height": 2000,
+          "bytes": 328094
+        }
+      ]
+    },
+    "assets/img/sealed-bag-pressed-into-export-carton.jpg": {
+      "sha256": "d85fecd319c19033e7bee1fdb29a312dfbfc49d264af58dbc2321777ab98a45a",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 328595,
+      "variants": [
+        {
+          "path": "assets/img/webp/sealed-bag-pressed-into-export-carton-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 33370
+        },
+        {
+          "path": "assets/img/webp/sealed-bag-pressed-into-export-carton-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 70672
+        },
+        {
+          "path": "assets/img/webp/sealed-bag-pressed-into-export-carton-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 116272
+        },
+        {
+          "path": "assets/img/webp/sealed-bag-pressed-into-export-carton-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 162814
+        },
+        {
+          "path": "assets/img/webp/sealed-bag-pressed-into-export-carton-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 209106
+        },
+        {
+          "path": "assets/img/webp/sealed-bag-pressed-into-export-carton-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 247744
+        }
+      ]
+    },
+    "assets/img/shiba-inu-chewing-coffee-wood-stick.jpg": {
+      "sha256": "556345ac47f43d6add9e4fb4aa211b9013699a81be8f84875cd378089a2b494a",
+      "width": 1500,
+      "height": 2000,
+      "bytes": 1052045,
+      "variants": [
+        {
+          "path": "assets/img/webp/shiba-inu-chewing-coffee-wood-stick-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 33690
+        },
+        {
+          "path": "assets/img/webp/shiba-inu-chewing-coffee-wood-stick-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 79948
+        },
+        {
+          "path": "assets/img/webp/shiba-inu-chewing-coffee-wood-stick-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 145816
+        },
+        {
+          "path": "assets/img/webp/shiba-inu-chewing-coffee-wood-stick-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 230646
+        },
+        {
+          "path": "assets/img/webp/shiba-inu-chewing-coffee-wood-stick-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 331648
+        },
+        {
+          "path": "assets/img/webp/shiba-inu-chewing-coffee-wood-stick-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 503048
+        },
+        {
+          "path": "assets/img/webp/shiba-inu-chewing-coffee-wood-stick-jpg-1500w.webp",
+          "width": 1500,
+          "height": 2000,
+          "bytes": 771556
         }
       ]
     },
@@ -741,50 +1887,6 @@
           "width": 1600,
           "height": 1600,
           "bytes": 327516
-        }
-      ]
-    },
-    "assets/img/winvn-home-thu-cung-3.jpg": {
-      "sha256": "23941576ba783782d23bfa2b55ca10de9c49477ef13d1743833007c43bf8719e",
-      "width": 1080,
-      "height": 1350,
-      "bytes": 217675,
-      "variants": [
-        {
-          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-320w.webp",
-          "width": 320,
-          "height": 400,
-          "bytes": 25906
-        },
-        {
-          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-480w.webp",
-          "width": 480,
-          "height": 600,
-          "bytes": 49086
-        },
-        {
-          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-640w.webp",
-          "width": 640,
-          "height": 800,
-          "bytes": 77326
-        },
-        {
-          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-800w.webp",
-          "width": 800,
-          "height": 1000,
-          "bytes": 108936
-        },
-        {
-          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-960w.webp",
-          "width": 960,
-          "height": 1200,
-          "bytes": 137038
-        },
-        {
-          "path": "assets/img/webp/winvn-home-thu-cung-3-jpg-1080w.webp",
-          "width": 1080,
-          "height": 1350,
-          "bytes": 168698
         }
       ]
     },

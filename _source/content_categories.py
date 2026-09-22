@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from content_helpers import publish, section, p, ul, cards, table, terms, trust_links, SAFETY
+from content_helpers import (publish, section, p, ul, cards, table, terms, trust_links, SAFETY,
+                             answer, fit, steps, spec_table, figure, media)
 from content_products import product_cards
 
 CATEGORIES = [
@@ -88,8 +89,138 @@ CATEGORIES = [
  "Natural, renewable, upcycled and biodegradable describe different properties. Coffee wood and coconut husks can support specific reuse stories; hemp and loofah should not automatically be called waste-derived. Whole-product disposal claims need evidence for the selected construction and conditions."),
 ]
 
+
+IMG = "/assets/img/"
+
+DOG_TOYS_LEDE = ("Coffee wood chews, coconut fiber balls and hemp rope toys, made in Vietnam. Compare the "
+                 "materials by chewing style, size the range to the dogs your customers own, and take the "
+                 "specification rather than the photograph.")
+
+def dog_toys_sections():
+    return [
+    section("What VietPaw makes for dogs",
+      answer("Three materials cover the dog range: coffee wood for hard chewing, coconut fiber for fetch and "
+             "carry, and hemp or cotton rope for tug and interactive play. Wood and rope are also combined into "
+             "multi-component toys. Everything is supervised-play product \u2014 none of it is edible, and none of it "
+             "is sold with a dental or digestibility claim.")
+      + p("The useful question for a buyer is not which material is best, but which chewing style each one "
+          "actually serves. A range that puts a hard wood chew in front of a power chewer and a fraying rope in "
+          "front of a strand-swallower will generate returns whatever the material story says.")
+      + spec_table(["Material", "Chewing style it suits", "How lifespan behaves", "Main thing to check"], [
+          ("Coffee wood", "Persistent gnawing and shredding", "Long \u2014 weeks to months for a moderate chewer; days for a determined one", "Size against the dog, and the tooth-fracture risk of any hard chew"),
+          ("Coconut fiber (coir)", "Fetch, carry and light mouthing", "Moderate; set by winding density more than diameter", "Shedding fiber, and what sits under the winding \u2014 core, thread, adhesive"),
+          ("Hemp / cotton rope", "Tug and interactive play with a person", "Short to moderate; frays by design", "The join, not the cord \u2014 rope toys fail where components meet"),
+          ("Wood and rope combined", "Mixed chew and tug", "Set by whichever component goes first", "Three approvals: the wood, the cord and the connection"),
+        ], caption="Lifespan is genuinely dog-dependent and no supplier in this category publishes a figure. "
+                   "These are relative descriptions for planning an assortment, not a durability claim.")),
+
+    section("Browse by play type", cards([
+        ("Chew toys", "Coffee wood stick specifications and honest chew-range planning.", "/dog-toys/chew-toys/", IMG+"coffee-wood-chew-size-range-xs-to-xxl.jpg"),
+        ("Rope & tug toys", "Cord geometry, knot construction and attachment checks.", "/dog-toys/rope-toys/", IMG+"hemp-rope-double-knot-wood-block.jpg"),
+        ("Fetch & balls", "Diameter, winding density, pack format.", "/dog-toys/fetch-toys/", IMG+"puppy-with-rope-and-fiber-ball.jpg"),
+        ("Enrichment", "Texture-led formats and development briefs.", "/dog-toys/puzzle-toys/", IMG+"hemp-rope-loop-coffee-wood-toy.jpg")], 4), True),
+
+    section("Sizing the range to real dogs",
+      media(p("Most first orders in this category buy too many sizes. Six coffee wood sizes look thorough on a "
+              "spreadsheet, but two of them usually carry the sell-through while the rest tie up stock. Start "
+              "with the dogs your customers actually own \u2014 for most European and North American pet retail that "
+              "is the 5\u201320 kg band, which is sizes S and M \u2014 then add the extremes once you have sell-through "
+              "data rather than before.")
+            + p("The reference dog weights below are a starting point for picking a size, not a veterinary "
+                "suitability assessment. A 25 kg dog that chews gently and a 25 kg dog that cracks things need "
+                "different products, and no weight chart captures that.")
+            + p('Full lengths, diameters, weights and carton counts are on the '
+                '<a href="/products/coffee-wood-dog-chew/">coffee wood product page</a>; sizing by behaviour is '
+                'covered in the <a href="/guides/coffee-wood-chew-size-guide/">chew size guide</a>.'),
+            IMG+"coffee-wood-chew-sizes-in-hand.jpg",
+            "Hand holding four coffee wood chew sticks of increasing size for scale comparison",
+            "Four sizes in one hand. Scale is easier to judge on a sample than on a size chart.")),
+
+    section("Where each material stops being the right answer",
+      fit(["A range that needs a long-lasting hard chew and can carry a supervision instruction \u2014 coffee wood.",
+           "Fetch and carry play where texture matters more than bounce \u2014 coconut fiber.",
+           "Interactive tug that a person takes part in \u2014 hemp or cotton rope.",
+           "A natural-material story you can substantiate: coffee stem and coconut husk are by-products of existing agriculture."],
+          ["The dog is a determined power chewer that cracks hard objects \u2014 the risk is a fractured tooth, and no natural material removes it.",
+           "The dog swallows strands \u2014 rope is the wrong category for that animal, whatever the fiber.",
+           "The customer wants an edible or digestible chew \u2014 none of this is food.",
+           "The listing needs certified biodegradability, dental benefit or \u201csplinter-free\u201d \u2014 none of those can be supported here."])
+      + p(SAFETY), True),
+
+    section("Product references for your brief", product_cards(["coffee-wood-dog-chew","coconut-fiber-dog-ball","hemp-rope-dog-toy"])
+      + p('Planning a young-dog range? Review <a href="/collections/teething-puppies/">puppy-toy sourcing and '
+          'suitability considerations</a> \u2014 a hard wood stick is not a teething product.')),
+
+    section("Building the first order",
+      steps([
+        ("Pick three products, not thirty",
+         "One hard chew, one fetch item, one interactive rope, each in the one or two sizes that match your customer base.",
+         "An assortment with a clear role per SKU at shelf, and a manageable first order.",
+         "Breadth is easy to add after sell-through data. It is expensive to add before."),
+        ("Approve a sample of each and keep one",
+         "Measure it, check the components a photo does not show, and retain a piece as your reference.",
+         "A physical standard to check the next delivery against."),
+        ("Write the warnings to match the construction",
+         "Name the actual failure modes: hard-chew tooth risk for wood, loose fiber for coir, long strands and loops for rope.",
+         "Pack copy that holds up, instead of generic boilerplate."),
+        ("Settle pack format before artwork",
+         "Bulk, single bag, vacuum pack or retail box \u2014 and singles or sets.",
+         "A carton count and pack weight you can use for freight and listings.",
+         "Pack format changes pieces per carton, so artwork sized before this usually has to be redone."),
+      ])),
+
+    section("Wholesale terms: MOQ, samples and lead time", terms() + trust_links(), True),
+
+    section("Private label and development",
+      p("Laser engraving on suitable coffee wood surfaces starts at 50 pcs and is separate from the 500 pcs per "
+        "SKU minimum for printed tags, labels and boxes. That gap is useful: it lets you run a small engraved "
+        "trial before committing to printed packaging.")
+      + p('Explore <a href="/services/private-label-pet-toys/">private-label options</a> for branding an approved '
+          'design, or <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development</a> when the '
+          'construction itself changes. For recurring assortments, see '
+          '<a href="/services/wholesale-pet-products/">wholesale ordering</a>.')
+      + p('Review <a href="/guides/pet-toy-safety-testing-requirements/">how to scope product testing</a> and '
+          '<a href="/sustainability/">how material claims are qualified</a> before printing anything.')),
+    ]
+
+DOG_TOYS_FAQ = [
+  ("Which natural dog toy lasts longest?",
+   "Coffee wood, for most dogs \u2014 but lifespan is set by the dog rather than the material. A moderate gnawer may "
+   "keep a size M stick for months while a determined chewer reduces the same piece in days. We do not publish a "
+   "figure in days or weeks, because any number we gave you would be wrong for half your customers."),
+  ("Are natural dog toys safe for aggressive chewers?",
+   "Not automatically, and hard is not the same as safe. A determined power chewer that cracks hard objects risks a "
+   "fractured tooth on any hard chew, wood included. For those dogs we would rather steer you to a softer format and "
+   "a supervision instruction than sell you a stick that fails in the wrong way."),
+  ("Can dogs swallow pieces of these toys?",
+   "Pieces can break off any chew, and rope frays into strands. None of these materials is digestible. Every pack "
+   "should carry a supervised-use instruction and a replace-when-damaged instruction, and customers should be told to "
+   "remove loose fiber and strands rather than leave them with the animal."),
+  ("How many sizes should I stock?",
+   "Two or three. Six coffee wood sizes look comprehensive and usually tie up stock \u2014 the 5\u201320 kg band, sizes S and "
+   "M, carries most of the sell-through in general pet retail. Add the extremes once your own data supports it."),
+  ("Can I mix materials in one order?",
+   "Yes, and it is a sensible way to build a first assortment. Each SKU, size and packaging format still needs its own "
+   "confirmed minimum and price \u2014 a mixed carton does not automatically satisfy the minimum for every line inside it."),
+  ("Do these toys carry a safety certification?",
+   "There is no universal pet-toy safety certification to carry. Test reports have a defined scope covering specific "
+   "substances or methods for a specific product, so ask for the report that matches your SKU and your destination "
+   "market rather than a general reassurance."),
+  ("What is the difference between wholesale, private label and OEM?",
+   "Wholesale is an approved standard specification shipped as-is. Private label is that same approved design with your "
+   "engraving, tags or printed box. OEM/ODM is a new construction built from your drawing or brief, through feasibility "
+   "and prototype. They have different minimums, lead times and approval paths."),
+]
+
 def build(root):
     for path,h1,active,img,lede,products,subcategories,comparison,notes in CATEGORIES:
+        if path=="/dog-toys/":
+            publish(root,path,"Wholesale Natural Dog Toys from Vietnam | Coffee Wood, Coir & Rope | VietPaw",
+                "Coffee wood chews, coconut fiber balls and hemp rope dog toys from Vietnam. Compare materials by "
+                "chewing style, see sizes and carton data, and order wholesale or private label from 50 pcs.",
+                "Natural Dog Toys, Wholesale from Vietnam", DOG_TOYS_LEDE, dog_toys_sections(),
+                active=active, image=IMG+"french-bulldog-chewing-coffee-wood.jpg", faqs=DOG_TOYS_FAQ)
+            continue
         puppy_link=p('Planning a young-dog range? Review <a href="/collections/teething-puppies/">puppy-toy sourcing and suitability considerations</a>.') if path=="/dog-toys/" else ""
         references=product_cards(products) if products else p('No puppy-specific SKU has been confirmed in the supplied specification. Use the <a href="/materials/">material overview</a> to discuss a dedicated design; do not relabel a cat toy or hard wood stick as puppy-safe.')
         parts=[section("Plan the assortment",p(notes)+(cards(subcategories,2) if subcategories else "")+puppy_link),

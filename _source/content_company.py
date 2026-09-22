@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, BRAND_ENTITY_STATEMENT, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS
+from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, BRAND_ENTITY_STATEMENT, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS, social_html
+from content_helpers import answer, fit, steps, spec_table, figure, media  # noqa: F401
 from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
 from content_materials import MATERIALS
 from forms import quote_form, catalogue_form
@@ -137,16 +138,79 @@ def build(root):
          section("Send the product references you want quoted",p("Include the catalogue item or photo reference, dimensions, quantity per SKU, destination and packaging requirements. The approved sample and written quote take precedence over catalogue examples.")+
             p('<a href="/products/coffee-wood-dog-chew/">Coffee wood reference specifications</a> · <a href="/collections/hemp-fiber/">Hemp collection</a> · <a href="/request-a-quote/">Request current pricing</a>'),True)],active="Company")
     build_rfq(root)
-    publish(root,"/contact/","Contact VietPaw | Samples & Wholesale Enquiries",
-        "Contact Sarah at VietPaw for natural pet toy samples, wholesale quotations, private-label packaging and OEM/ODM projects in Vietnam.",
-        "Talk to VietPaw About Your Next Product",
-        "Share the product, destination and expected order quantity. Add your branding, packaging and timing requirements so we can respond to the right brief.",
-        [section("VietPaw sales contact",p(BRAND_ENTITY_STATEMENT)+p(BRAND_INTRO)+p(CONTRACT_NOTICE)+
-            ul([f'Email: <a href="mailto:{EMAIL}">{EMAIL}</a>',f'Phone: <a href="tel:{PHONE_TEL}">{PHONE}</a>',
-                f'WhatsApp: <a href="https://wa.me/{PHONE_TEL[1:]}">Open a conversation</a>',"Registered head office: "+ADDRESS])+
-            p("Your contact: Sarah. Share your destination market, product selection and quantities so we can prepare the right sample and quotation options.")),
-         section("Prepare for a manufacturing review",p('For production locations and inspection arrangements, see <a href="/factory/">Factory & Production</a>. Please arrange visits in advance and confirm the current site address and contact for your product line.')+
-            p('<a href="/request-a-quote/">Prepare a structured enquiry</a> or <a href="/wholesale-catalogue/">download the catalogue</a>.'),True)],active="Company")
+    contact_sections=[
+      section("How to reach VietPaw",
+        answer("Email <a href=\"mailto:"+EMAIL+"\">"+EMAIL+"</a> or message +84 906 111 016 on WhatsApp. "
+               "Your contact is Sarah, who handles export enquiries directly \u2014 you are not writing to a shared "
+               "inbox. Enquiries are normally answered within one business day, Vietnam time (UTC+7).")
+        + '<div class="grid grid-2"><div>'
+        + spec_table(["Channel","Detail","Best for"],[
+            ('Email','<a href="mailto:'+EMAIL+'">'+EMAIL+'</a>','Specifications, artwork, quotations and anything you want in writing'),
+            ('WhatsApp','<a href="https://wa.me/'+PHONE_TEL[1:]+'">+84 906 111 016</a>','Quick questions, sample follow-ups and production updates'),
+            ('Phone','<a href="tel:'+PHONE_TEL+'">'+PHONE+'</a>','Scheduled calls \u2014 Vietnam is UTC+7, so morning in Europe is late afternoon here'),
+            ('Structured enquiry','<a href="/request-a-quote/">Request a quote or sample</a>','A first enquiry, if you would rather answer prompts than write an email'),
+            ('Office',ADDRESS,'Registered head office. Arrange any visit in advance'),
+          ], caption="Vietnam runs UTC+7. A message sent at the end of a European working day is usually answered the following Vietnamese morning.")
+        + '</div><div class="contact-social">'+social_html("Follow VietPaw","h3")
+        + p('<span class="small">Product photos, factory footage and new formats go out on these channels first.</span>')
+        + '</div></div>'),
+
+      section("What to put in a first enquiry",
+        p("The difference between a same-day quotation and a week of back-and-forth is usually four lines of "
+          "information. You do not need a finished technical brief \u2014 just enough for us to price the right thing.")
+        + spec_table(["Tell us","Why it changes the answer"],[
+            ("The product and size","A size M coffee wood stick and a size XL are different prices, different carton counts and sometimes different lead times"),
+            ("Quantity per SKU","This decides whether you are at the 50 pcs standard minimum or the 500 pcs private-label minimum, and which lead-time band applies"),
+            ("Destination country","It sets the certificate list, the transit time and whether phytosanitary and fumigation documents need booking"),
+            ("Branding, if any","Engraving and printed packaging have separate minimums and separate approval paths"),
+            ("Timing","Production time is not an arrival date; if you have a shelf date, say so early"),
+          ], caption="Optional but useful: your sales channel, any testing your buyer requires, and whether you have a competitor product you want matched or beaten.")
+        + p('<span class="small">Please do not send payment-card details or confidential designs in a first '
+            'message. If you need a confidentiality agreement in place first, ask and we will arrange it.</span>'), True),
+
+      section("What happens after you write",
+        steps([
+          ("We reply with questions or a quotation",
+           "If the brief is complete we quote; if not, we come back with the two or three things still missing.",
+           "A quotation you can compare against another supplier\u2019s, normally within one business day."),
+          ("You approve a sample",
+           "Three free samples with courier at your cost; standard samples dispatch within one working day once the selection and courier are confirmed.",
+           "A physical reference you have measured and retained."),
+          ("We confirm terms and documents",
+           "Incoterm with named place, carton data, payment terms and the certificate list for your customs entry.",
+           "A booking with its paperwork attached rather than chased afterwards."),
+        ])
+        + p('For production locations and inspection arrangements, see <a href="/factory/">factory and '
+            'production</a>. Buyer-arranged inspection is welcome; please arrange visits in advance and confirm '
+            'the current site and contact for your product line.')
+        + p(CONTRACT_NOTICE)),
+    ]
+    publish(root,"/contact/","Contact VietPaw | Samples, Quotes & Wholesale Enquiries",
+        "Email sarah@vietpaw.com or message us on WhatsApp for natural pet toy samples, wholesale quotations, "
+        "private label and OEM/ODM from Vietnam. Replies normally within one business day.",
+        "Contact VietPaw",
+        "Email, WhatsApp or a structured enquiry \u2014 and the four lines of information that turn a first message "
+        "into a same-day quotation.",
+        contact_sections, active="Company", image="/assets/img/coffee-wood-chew-sizes-in-hand.jpg",
+        faqs=[
+          ("How quickly will I get a reply?",
+           "Normally within one business day. Vietnam is UTC+7, so a message sent at the end of a European working day is "
+           "usually answered the following Vietnamese morning. If something is urgent, WhatsApp reaches us faster than email."),
+          ("Who will I be dealing with?",
+           "Sarah, who handles export enquiries directly. You are not writing into a shared inbox and you will not be passed "
+           "between account handlers between the enquiry and the shipment."),
+          ("Can I get samples before committing to an order?",
+           "Yes \u2014 three free samples, with courier at your cost. Standard samples dispatch within one working day once the "
+           "selection and courier arrangements are confirmed. Custom prototypes are quoted separately on timing."),
+          ("Do you work with small buyers and new brands?",
+           "Yes. Selected standard SKUs start at 50 pcs, and laser engraving also starts at 50 pcs, so a small branded trial "
+           "is possible before committing to the 500 pcs printed-packaging minimum."),
+          ("Can I visit the factory?",
+           "Yes, by arrangement. Confirm the current site and the contact for your product line in advance. Buyer-appointed "
+           "third-party inspection is also welcome and we would encourage it for a first container."),
+          ("What languages do you work in?",
+           "English and Vietnamese."),
+        ])
 
 def build_rfq(root):
     bc,bs=breadcrumb_html([("Home","/"),("Request a Quote",None)])

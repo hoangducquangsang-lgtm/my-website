@@ -1,12 +1,12 @@
 {
   "/": {
-    "title": "Wholesale Natural Pet Toys & Private Label | VietPaw",
-    "description": "Explore VietPaw natural pet toys from Vietnam: coffee wood, coconut fiber, hemp and loofah for wholesale, private label and OEM/ODM.",
+    "title": "Wholesale Natural Pet Toys from Vietnam | Specs & Private Label | VietPaw",
+    "description": "Coffee wood, coconut fiber, hemp and loofah pet toys made in Vietnam. Published sizes and carton data, moisture below 14%, five QC checkpoints. Wholesale, private label and OEM/ODM from 50 pcs.",
     "indexable": true
   },
   "/about/": {
-    "title": "About VietPaw | Natural Pet Toys Made in Vietnam",
-    "description": "Meet VietPaw and explore our natural pet toy range, Vietnam manufacturing, materials and sourcing support for international buyers.",
+    "title": "About VietPaw | Natural Pet Toy Supplier in Vietnam",
+    "description": "Who VietPaw is, what we specify, where the materials come from and which claims we will not make. Natural pet toys from Vietnam for wholesale, private label and OEM/ODM.",
     "indexable": true
   },
   "/capabilities/": {
@@ -50,23 +50,23 @@
     "indexable": false
   },
   "/contact/": {
-    "title": "Contact VietPaw | Samples & Wholesale Enquiries",
-    "description": "Contact Sarah at VietPaw for natural pet toy samples, wholesale quotations, private-label packaging and OEM/ODM projects in Vietnam.",
+    "title": "Contact VietPaw | Samples, Quotes & Wholesale Enquiries",
+    "description": "Email sarah@vietpaw.com or message us on WhatsApp for natural pet toy samples, wholesale quotations, private label and OEM/ODM from Vietnam. Replies normally within one business day.",
     "indexable": true
   },
   "/collections/coffee-wood/": {
-    "title": "Coffee Wood Dog Chew Manufacturer | Wholesale | VietPaw",
-    "description": "Build a coffee wood range with a Vietnam manufacturing partner: standard chew sticks, custom wood-and-rope constructions and private-label packaging for international buyers.",
+    "title": "Coffee Wood Dog Chews — Material, Process & Wholesale | VietPaw",
+    "description": "Seasoned Robusta coffee stem from Vietnam's Central Highlands, graded into six sizes and packed below 14% moisture. What the material is, how it is processed, and what it cannot be claimed to do.",
     "indexable": true
   },
   "/collections/coconut-fiber/": {
-    "title": "Coconut Fiber Pet Toys Manufacturer & Wholesale | VietPaw",
-    "description": "Source coconut-husk fiber balls and discuss rope constructions for a textured natural-material range. Separate cat and dog specifications, then approve winding, dimensions and packaging.",
+    "title": "Coconut Fiber (Coir) Pet Toys — Material & Wholesale | VietPaw",
+    "description": "Coir from the coconut husk, wound into textured balls for cats and dogs. What the material gives you, what has to be declared beyond the fiber, and how to specify a ball you can reorder.",
     "indexable": true
   },
   "/collections/hemp-fiber/": {
-    "title": "Hemp Pet Toy Manufacturer | Rope & Balls Wholesale | VietPaw",
-    "description": "Develop a hemp-fiber assortment with standalone balls, knotted ropes and mixed-material designs. Match construction to supervised play and document the approved specification.",
+    "title": "Hemp Fiber Rope & Ball Pet Toys — Material & Wholesale | VietPaw",
+    "description": "Wound hemp balls, knotted rope and wood-and-rope constructions. How to specify a rope toy by geometry and knot rather than by appearance, and what a fiber name does and does not tell you.",
     "indexable": true
   },
   "/collections/loofah/": {
@@ -75,8 +75,8 @@
     "indexable": true
   },
   "/dog-toys/": {
-    "title": "Wholesale Natural Dog Toys from Vietnam | VietPaw",
-    "description": "Build a wholesale dog-toy assortment around coffee wood, coconut fiber and hemp. Compare play types, sample-approved sizes and private-label packaging with a Vietnam manufacturer.",
+    "title": "Wholesale Natural Dog Toys from Vietnam | Coffee Wood, Coir & Rope | VietPaw",
+    "description": "Coffee wood chews, coconut fiber balls and hemp rope dog toys from Vietnam. Compare materials by chewing style, see sizes and carton data, and order wholesale or private label from 50 pcs.",
     "indexable": true
   },
   "/dog-toys/chew-toys/": {
@@ -130,8 +130,8 @@
     "indexable": true
   },
   "/products/coffee-wood-dog-chew/": {
-    "title": "Coffee Wood Dog Chew Stick | Wholesale & Private Label | VietPaw",
-    "description": "Source coffee wood dog chew stick from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.",
+    "title": "Coffee Wood Dog Chew — Sizes, Specification & Wholesale | VietPaw",
+    "description": "Six sizes XS–XXL with lengths, diameters, weights and carton counts. Packed below 14% moisture, ±3 mm length tolerance, five QC checkpoints. Wholesale and private label from Vietnam.",
     "indexable": true
   },
   "/products/coconut-fiber-cat-ball/": {
@@ -230,8 +230,8 @@
     "indexable": true
   },
   "/guides/": {
-    "title": "Guides & Resources | Natural Pet Toy Sourcing | VietPaw",
-    "description": "Buyer guides to natural pet toy materials, sizes, supplier verification, wholesale ordering and product-specific compliance planning.",
+    "title": "Pet Toy Sourcing Guides | Specs, MOQ & Claims | VietPaw",
+    "description": "Buyer guides to natural pet toy materials, chew sizing, supplier verification, MOQ and lead times, and which product claims can actually be supported. Written from the supply side.",
     "indexable": true
   },
   "/guides/natural-dog-chew-toys-guide/": {
@@ -256,7 +256,7 @@
   },
   "/guides/how-long-do-coffee-wood-chews-last/": {
     "title": "How Long Do Coffee Wood Chews Last? | VietPaw",
-    "description": "Why coffee wood chew lifespan varies, when a worn chew needs replacing and how retailers can collect useful product feedback.",
+    "description": "There is no published lifespan for a coffee wood chew, and this explains why: what actually drives wear, how to answer the question on a product page, and when a chew must be replaced.",
     "indexable": true
   },
   "/guides/plastic-free-biodegradable-pet-toys-guide/": {

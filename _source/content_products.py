@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """Product specifications grounded in the supplied manufacturer product sheets."""
 from common import BASE_URL, BRAND, LEGAL_NAME
-from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE
+from content_helpers import (publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE,
+                             answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT)
 
 COFFEE_SIZES = [
     ("XS","CC01-XS","10","1.5–2.0","23–30","Under 5 kg"),
@@ -12,12 +13,50 @@ COFFEE_SIZES = [
     ("XXL","CC01-XXL","22–23","5.5–7.0","325–450","Over 40 kg"),
 ]
 def coffee_size_table():
-    return table(["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight"],COFFEE_SIZES)+p("Reference: the manufacturer’s coffee wood specification supplied for the VietPaw range. Natural shape and weight vary; confirm the current size sheet and agreed tolerances with your sample. Dog weight is a starting reference, not a veterinary suitability assessment. Older charts use different weight bands; do not combine them.")
+    return spec_table(
+        ["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight","Pcs per export carton"],
+        [(a,b,c,d,e,f,g) for (a,b,c,d,e,f),g in zip(COFFEE_SIZES,COFFEE_CARTON)],
+        caption="Reference specification supplied for the VietPaw range. Coffee wood is a natural material: outline, grain and mass vary within each band. Dog weight is a starting reference for choosing a size, not a veterinary suitability assessment. Carton counts are for bulk-packed sticks; retail-packed and multi-piece sets fit fewer units per carton. Confirm the current size sheet, tolerances and carton data against your approved sample.")
+
+COFFEE_CARTON = ["On request","512","224","126","85","On request"]
+
+COFFEE_TOLERANCE = [
+    ("Finished moisture","Below 14% before packing","Pin-type meter reading taken on the finished batch and again before the container is sealed. Ask for the reading filed against your lot."),
+    ("Length tolerance","±3 mm on the stick line","Applies to the cut length. Diameter follows the natural stem and is controlled by grading into the bands above, not by machining."),
+    ("Crack limit","Pieces cracked beyond 2 mm are rejected at grading","Checked on the graded piece, not on a sampled average."),
+    ("Reported reject rate","Roughly one piece in five across the whole process","Supplier-reported figure, concentrated at the seasoning-rack stage. It explains why lead time is driven by graded output rather than raw intake."),
+    ("Quality checkpoints","Five, between raw stem and sealed carton","Intake, after seasoning, after shaping, at grading and at the packing bench."),
+    ("Reported monthly output","Around 100,000 coffee wood pieces","Supplier-reported planning figure for the coffee wood line, not capacity reserved for your order."),
+]
+
+COFFEE_STEPS = [
+    ("Choose the sizes, not the range",
+     "Pick two or three sizes that match the dogs your customers actually own, using the reference weight column as a starting point.",
+     "A short size list you can quote, photograph and reorder, instead of a six-size range that ties up stock.",
+     "Buyers who launch with all six sizes usually find two of them carry most of the sell-through."),
+    ("Approve a physical sample per size",
+     "Request the sample, then measure length, diameter and weight yourself and keep one piece as the retained reference.",
+     "An agreed physical standard that a later delivery can be checked against.",
+     "Photographs show natural variation but are not a specification."),
+    ("Fix the pack format before artwork",
+     "Decide bulk bag, single poly bag, vacuum pack or retail box, and whether sticks ship singly or in sets.",
+     "A carton count and a pack weight you can use for freight and marketplace listings.",
+     "Pack format changes the pieces per carton, so artwork sized before this step usually has to be redone."),
+    ("Agree the moisture and grading record",
+     "Ask for the finished-batch moisture reading and confirm what counts as a rejectable crack or surface defect.",
+     "A written acceptance standard attached to the order rather than an informal expectation.",
+     None),
+    ("Confirm documents and the sailing",
+     "List the destination, Incoterm with named place, and the certificates your customs entry needs.",
+     "A document set booked with the shipment instead of chased after arrival.",
+     "Phytosanitary and fumigation certificates are issued per shipment; they cannot be produced retrospectively."),
+]
+
 
 PRODUCTS = {
 "coffee-wood-dog-chew":dict(name="Coffee Wood Dog Chew Stick",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
  image="winvn-coffee-wood-sizes.png",size="XS–XXL; six reference sizes",moq="From 50 pcs per SKU on standard coffee wood sticks.",
- lede="Source a coffee wood chew stick cut, shaped, dried and surface-finished in Vietnam. Compare six reference sizes, agree the finished sample, and add laser engraving or your own packaging.",
+ lede="Six graded sizes of seasoned Robusta coffee stem, packed below 14% moisture with a \u00b13 mm length tolerance. Full specification, carton data and the limits we will not claim \u2014 before you request a sample.",
  overview="The standard stick is described in the manufacturer's product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
  options=["Standard stick sizes XS–XXL; natural grain, outline and shade vary.","Laser-engraved brand mark on an agreed area of the wood, with placement approved on a sample.","Coffee wood combined with cotton or hemp rope is a separate construction; specify the rope material rather than describing the whole toy as single-ingredient."],
  checks=["Confirm size, diameter and weight bands against the approved reference sample.","Inspect edges, surface finish and visible cracks; agree unacceptable defects before production.",MOISTURE+" Agree drying, storage and packing requirements, including the measurement method and batch record."]),
@@ -53,6 +92,134 @@ PRODUCTS = {
  checks=["Agree knot security and an attachment/pull-check method relevant to the intended play.","Check for loose long strands and unintended loops or attachments.","Do not advertise a tensile rating, reinforcement or lifetime durability without design-specific evidence."]),
 }
 
+
+IMG = "/assets/img/"
+
+def coffee_wood_sections(specifications):
+    return [
+    section("What a coffee wood dog chew actually is",
+        answer("A coffee wood dog chew is a length of seasoned coffee-tree stem, cut to size, shaped and surface-finished into a chew. It contains no coffee beans, no caffeine-bearing cherry, no added flavouring, glue, coating or colouring — the piece your customer opens is one plant material and nothing else.")
+        +p("The wood comes from mature Robusta coffee stems in Vietnam's Central Highlands. Coffee plantations rejuvenate by cutting back old stems so the plant regrows; those stems are a by-product of that agricultural cycle rather than felled forest timber. Because coffee is a crop and not a commercial timber species, it has no entry in standard timber databases, so there is no published Janka hardness or density figure for it. Anyone quoting one is estimating.")
+        +p("Density and grain vary from stem to stem, which is why the size bands below are graded rather than machined, and why two sticks of the same size will not weigh exactly the same. That variation is inherent to the material, not a defect.")
+        +media(ul([
+            "<strong>One material.</strong> No glue, coating, preservative or colouring in the standard stick.",
+            "<strong>A by-product stream.</strong> Stems come from plantation rejuvenation cutting, not from clearing trees for wood.",
+            "<strong>Graded, not machined.</strong> Diameter follows the stem; sizes are sorted into bands.",
+            "<strong>Not a food.</strong> It is a chew toy for supervised use, with no nutritional or dental claim attached.",
+        ]), IMG+"coffee-wood-chew-grain-detail.jpg",
+        "Close-up of a finished coffee wood chew stick showing natural grain and surface finish",
+        "Finished surface on a single stick. Grain, colour and outline vary between pieces of the same size.")),
+
+    section("Specification",
+        specifications+coffee_size_table()
+        +"<h3>Measured limits and process figures</h3>"
+        +spec_table(["Parameter","Figure","What it means in practice"],COFFEE_TOLERANCE,
+            caption="Process figures reported by the manufacturing partner for the coffee wood line. They describe how the line is run, not a guarantee for an individual piece. Ask for the records filed against your own lot.")
+        +figure(IMG+"coffee-wood-chew-size-range-xs-to-xxl.jpg",
+            "Six coffee wood chew sticks laid out from XS to XXL with size labels",
+            "The six reference sizes side by side. Use the weight column in the table above as a starting point, then confirm the fit on a sample.")
+        ,True),
+
+    section("How the chew is made",
+        p("Five checkpoints sit between a raw stem and a sealed carton. The sequence below is the part of the process the factory publishes; drying temperatures, cycle times and the order of the drying stages are treated as proprietary and are not disclosed.")
+        +steps([
+            ("Intake and seasoning",
+             "Stems arrive by trailer from scattered plots across a collection season and are held before processing — roughly a year, until green, flexible wood has become pale, light and hard.",
+             "Stock that has already lost most of its free moisture before any cutting happens."),
+            ("Cutting and shaping",
+             "Stems are cross-cut to the length band, bark is removed and the surface is worked back.",
+             "Pieces within the ±3 mm length tolerance, with the surface finish the sample was approved on."),
+            ("Controlled drying",
+             "Shaped pieces go onto racks for the drying stages.",
+             "Finished moisture below 14%.",
+             "Most rejections happen here, as pieces that were going to crack do so on the rack rather than in a carton."),
+            ("Grading",
+             "Pieces are sorted into diameter bands and anything cracked beyond 2 mm is pulled out.",
+             "Graded stock per size, with roughly one piece in five removed across the whole process."),
+            ("Moisture check and packing",
+             "A pin-type meter reading is taken and photographed for the batch, then pieces are bagged with a desiccant sachet and packed.",
+             "A sealed carton with a moisture record attached to the lot.",
+             "A second reading is taken before the container is sealed, because the container voyage — not the factory — is where most mould claims originate."),
+        ])
+        +'<div class="grid grid-3">'
+        +figure(IMG+"coffee-wood-seasoning-racks.jpg","Rows of coffee wood sticks seasoning on factory drying racks","Drying racks. Pieces that will crack usually crack here.")
+        +figure(IMG+"moisture-reading-before-packing.jpg","Pin-type moisture meter held against a coffee wood stick above a carton","Pin-type meter reading taken on the finished batch. Ask for the reading filed against your lot.")
+        +figure(IMG+"grading-chews-before-packing.jpg","Hand holding a coffee wood stick above a crate of graded pieces","Grading. Pieces cracked beyond 2 mm are removed at this bench.")
+        +"</div>"),
+
+    section("Is it the right chew for this dog?",
+        answer("Coffee wood suits moderate, persistent chewers that work at a chew rather than trying to crack it. It is a hard chew, and hard chews carry a real risk of tooth fracture — that risk does not disappear because the material is natural.")
+        +fit(
+          ["Dogs that gnaw and shred rather than bite down hard, where a chew is expected to last weeks.",
+           "Customers who want a single-material, plastic-free chew and will read a supervision instruction.",
+           "Ranges that already sell rawhide alternatives and need something that does not soften or swell.",
+           "Retailers who can stock two or three sizes and advise on sizing at the till."],
+          ["The dog is a determined power chewer that cracks hard objects — the risk is a fractured tooth, not just a short-lived toy.",
+           "The dog has existing dental disease, is a senior, or is a puppy still changing teeth.",
+           "The customer wants an edible or digestible chew; this is a toy and is not digestible.",
+           "Nobody will be supervising, or the piece is small enough to be swallowed whole."])
+        +p("Two limits are worth stating plainly to your customers, because neither supplier in this category can support the opposite. <strong>Nobody has published test data showing coffee wood cannot splinter</strong> — an independent trainer has documented a stick that began breaking into hard pieces — so \"splinter-free\" is not a claim we make or support. And there is no evidence that the chew cleans teeth, prevents disease or is digestible.")
+        +p(SAFETY),True),
+
+    section("How to specify and order",
+        steps(COFFEE_STEPS)
+        +p('Comparing it against what you already stock? See <a href="/guides/coffee-wood-vs-antler-nylon-rawhide/">coffee wood versus antler, nylon and rawhide</a>, <a href="/guides/coffee-wood-chew-size-guide/">how to size a chew to the dog</a> and <a href="/guides/how-long-do-coffee-wood-chews-last/">how long a chew actually lasts</a>.')),
+
+    section("Branding and packaging",
+        media(p("Laser engraving burns your mark into the wood surface. There is no ink, no label and nothing to peel off, which is why it survives a chew better than a printed sleeve. Engraving needs a reasonably flat area, so placement is approved on a sample per size rather than assumed.")
+              +ul(["Engraving on suitable wood surfaces starts at 50 pcs and is separate from the packaging minimum.",
+                   "Custom hang tags, printed labels and printed boxes start at 500 pcs per SKU.",
+                   "Bulk bag, single poly bag, vacuum pack and paper or kraft box formats are all available.",
+                   "Every pack carries a desiccant sachet; confirm the desiccant type in writing if your market restricts it."]),
+              IMG+"laser-engraving-coffee-wood-chew.jpg",
+              "Laser engraving head marking a brand logo onto a coffee wood chew stick",
+              "Engraving is burned into the surface, so there is no label to peel away during chewing.")
+        +p('Pricing for engraving and printed packaging is quoted with your order — we do not publish a per-piece figure here. See <a href="/services/private-label-pet-toys/">private label</a> for branding an approved design, or <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM</a> if the construction itself changes.'),True),
+
+    section("Packing, cartons and shipping",
+        p(CARTON)+p(SEA_TRANSIT)
+        +spec_table(["Shipping detail","Reference"],[
+            ("HS code","4421.99 — confirm the classification your own customs broker will use."),
+            ("Master carton","51 × 31 × 39 cm, 0.062 m³"),
+            ("Per pallet / 20 ft / 40 ft","30 cartons / 429 cartons / 850 cartons"),
+            ("Port of loading","Cat Lai, Ho Chi Minh City"),
+            ("Transit reference","30–35 days port to port, EU or US"),
+            ("Incoterms","EXW, CIF and DAP are quoted; name the place with the term."),
+            ("Documents","Certificate of Origin, fumigation certificate, phytosanitary certificate, packing list, commercial invoice and bill of lading, subject to destination requirements. Batch moisture readings on request."),
+        ], caption="Planning references. Carton counts assume bulk-packed sticks; confirm the figures for your own packed SKU before booking freight.")
+        +p("<strong>The most common mistake in this category is moisture, and it happens at sea rather than at the factory.</strong> A sealed container cools overnight, water condenses on the steel and drips onto the top layers of cargo. Damage concentrated on the top layer and toward the doors points to condensation in transit; bloom spread evenly through the stack, including the middle and bottom, points to goods that were packed wet. Hanging desiccant in the container is inexpensive relative to a claim and is the single most useful addition for a monsoon-season sailing.")
+        +media(ul(["Keep one sealed bag per lot and open it at month six — it tells you whether a later problem came from the shipment or from your own warehouse.",
+                   "Store on pallets away from exterior walls and roller shutters, out of direct sun and away from metal-roofed structures.",
+                   "Leave bags sealed until the goods go out, and finish an opened bag the same day.",
+                   "Around 25–28 °C with air circulation is a workable warehouse target."]),
+               IMG+"sealed-bag-pressed-into-export-carton.jpg",
+               "Hand pressing a sealed bag of coffee wood chews into an export carton with a desiccant sachet",
+               "Bagged and packed with a desiccant sachet. Most mould claims trace back to the voyage, not the bench.")),
+
+    section("Order terms",terms("From 50 pcs per SKU on standard coffee wood sticks. Engraving, rope combinations and custom boxes are quoted separately.")
+        +trust_links(),True),
+    ]
+
+
+COFFEE_FAQ = [
+ ("Is coffee wood safe for dogs?",
+  "It is safe in the sense that the standard stick is a single untreated plant material with no glue, coating, preservative or colouring, and it contains no coffee bean and no caffeine. It is not safe in the sense of being risk-free: it is a hard chew, hard chews can fracture teeth, and any chew can break into pieces that should not be swallowed. Sell it with a supervision instruction and a replace-when-damaged instruction, and size it to the dog."),
+ ("Does coffee wood splinter?",
+  "It can. Neither we nor any other supplier in this category has published test data showing that it cannot, and an independent dog trainer has documented a stick that began breaking into hard pieces during use. We do not use the phrase \u201csplinter-free\u201d and we would advise you not to print it either. What the process does control is cracking: pieces cracked beyond 2 mm are removed at grading."),
+ ("How long does one chew last?",
+  "There is no published figure, because lifespan is set by the dog rather than by the material \u2014 a light gnawer may keep a size M stick for months while a determined chewer reduces the same piece in days. Size, moisture and how much time the dog actually spends with it all move the answer. Our guide on chew lifespan sets out what to tell customers instead of quoting a number."),
+ ("Can coffee wood chews be private labelled?",
+  "Yes, in two ways. Laser engraving burns your mark into the wood and starts at 50 pcs on suitable surfaces. Printed packaging \u2014 hang tags, labels, boxes \u2014 starts at 500 pcs per SKU. The two minimums are separate, so a small engraved trial run is possible before you commit to printed packaging."),
+ ("What moisture level are the chews packed at, and how do I verify it?",
+  "Below 14%, measured with a pin-type meter on the finished batch and photographed, then read again before the container is sealed. Ask for the reading filed against your lot number, and if the shipment matters, have a third party witness the moisture reading, measure a sample, photograph the carton marks and witness stuffing before the doors close."),
+ ("How many pieces fit in a carton and a container?",
+  "For bulk-packed sticks: 512 (S), 224 (M), 126 (L) and 85 (XL) per master carton of 51 \u00d7 31 \u00d7 39 cm. A carton is 0.062 m\u00b3, a pallet takes 30 cartons, a 20 ft container 429 and a 40 ft 850. Retail-packed and multi-piece sets fit noticeably fewer units per carton, so confirm the count for your own pack format before you cost the freight."),
+ ("What documents come with the shipment?",
+  "Certificate of Origin, fumigation certificate, phytosanitary certificate, packing list, commercial invoice and bill of lading, subject to what the destination requires. Batch moisture readings are available on request. Phytosanitary and fumigation certificates are issued per shipment and cannot be produced after the fact, so list them with the booking."),
+ ("Coffee wood or olive wood \u2014 what is the practical difference?",
+  "Olive wood has published timber data (roughly 980 kg/m\u00b3 dried, Janka around 2,710 lbf) because it is a commercial timber; coffee is a crop, so no equivalent figures exist. For an EU buyer the bigger difference is usually logistics: EU-sourced olive wood needs no customs entry, no duty and no phytosanitary certificate and can be reordered in small quantities, while coffee wood is a 30\u201335 day sea shipment with an import entry. Neither material can support digestibility or dental-benefit claims."),
+]
+
 def product_cards(slugs):
     return cards([(PRODUCTS[s]["name"],
         PRODUCTS[s]["material"]+" · "+PRODUCTS[s]["size"]+". "+PRODUCTS[s]["moq"]+" Private-label options available.",
@@ -69,9 +236,12 @@ def build(root):
             ("Branding","Laser engraving for suitable wood; labels, tags or boxes for fiber products."),
             ("Sample","Request a sample of this exact product and chosen packaging."),
             ("OEM / ODM","Custom construction is subject to feasibility, sample approval and separate quotation.")])
-        sections=[
+        if slug=="coffee-wood-dog-chew":
+            sections=coffee_wood_sections(specifications)
+        else:
+            sections=[
             section("Product overview",p(d["overview"])),
-            section("Product specifications",specifications+(coffee_size_table() if slug=="coffee-wood-dog-chew" else ""),True),
+            section("Product specifications",specifications,True),
             section("Sizes, formats and private-label options",ul(d["options"])+p('For branding an existing item, see <a href="/services/private-label-pet-toys/">private-label pet toys</a>. For structural changes, use our <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development service</a>.')),
             section("Quality control and use instructions",ul(d["checks"])+p(SAFETY)+trust_links(),True),
             section("Packaging, samples and export planning",terms(d["moq"])+p("Natural-material products are not interchangeable with their packaging. Confirm the bag film, paper coating, inks, adhesive and desiccant separately, especially for a plastic-free retail brief.")),
@@ -81,11 +251,17 @@ def build(root):
             "name":d["name"],"description":d["lede"],"url":BASE_URL+path,"image":BASE_URL+image,
             "material":d["material"],"brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
             "manufacturer":{"@id":BASE_URL+"/#organization","@type":"Organization","name":LEGAL_NAME}}
-        publish(root,path,d["name"]+" | Wholesale & Private Label | VietPaw",
-            f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.',
-            d["name"]+" — Wholesale & Private Label",d["lede"],sections,image=image,product=d["name"],
+        coffee = slug=="coffee-wood-dog-chew"
+        publish(root,path,
+            "Coffee Wood Dog Chew — Sizes, Specification & Wholesale | VietPaw" if coffee
+              else d["name"]+" | Wholesale & Private Label | VietPaw",
+            ("Six sizes XS–XXL with lengths, diameters, weights and carton counts. Packed below 14% moisture, ±3 mm length tolerance, five QC checkpoints. Wholesale and private label from Vietnam."
+             if coffee else
+             f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.'),
+            "Coffee Wood Dog Chew Sticks" if coffee else d["name"]+" — Wholesale & Private Label",
+            d["lede"],sections,image=image,product=d["name"],
             trail=[("Home","/"),(d["group"],"/collections/"+d["collection"]+"/"),(d["name"],None)],
-            faqs=[("Can I order this exact sample?", "Yes, request the product, size and packaging combination. We confirm availability, any sample charge and courier cost before dispatch."),
+            faqs=COFFEE_FAQ if slug=="coffee-wood-dog-chew" else [("Can I order this exact sample?", "Yes, request the product, size and packaging combination. We confirm availability, any sample charge and courier cost before dispatch."),
                   ("Are the photos and dimensions a binding specification?", "No. Photos show the range and natural variation. The agreed sample, drawing and purchase-order specification define the supplied product."),
                   ("Is private labeling available?", "Discuss the artwork, packaging and order quantity with us. New shapes, printed boxes and special finishes may have separate minimums and costs.")],
             schemas=[schema])

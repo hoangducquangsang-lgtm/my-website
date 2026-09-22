@@ -12,10 +12,10 @@ LEAD = "Production lead time: 5–7 days for orders under 500 pcs; 60–80 days 
 QC_PROTOCOL = "six-stage drying/quality protocol with five QC checkpoints"
 MOISTURE = "Coffee wood moisture is checked on every batch: below 14% before packing. Batch moisture readings are available on request."
 EXPORT_DOCS = "Certificate of Origin (CO), Fumigation Certificate, Phytosanitary Certificate, Packing List, Commercial Invoice and Bill of Lading (B/L), subject to destination/product requirements. Batch moisture readings are available on request."
-RANGE_SCOPE = 'VietPaw focuses on pet toys and chews across four material collections. Our manufacturer has a broader five-line catalogue that also includes Pet Beds; <a href="https://www.winvnint.com/">see the manufacturer’s full range</a> or ask Sarah about bed options.'
+RANGE_SCOPE = 'VietPaw sells pet toys and chews across four material collections. The factory behind our range also produces pet beds, hammocks and mats, which sit outside the VietPaw catalogue; ask Sarah if you need those quoted alongside your toy order.'
 SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items. Hard chews can damage teeth; seek veterinary advice for puppies, dental conditions or forceful chewing."
-SOURCE_OEM = "https://www.winvnint.com/"
-SOURCE_COMPANY = "https://www.winvnint.com/"
+SOURCE_OEM = "/services/oem-odm-pet-toy-manufacturing/"
+SOURCE_COMPANY = "/about/"
 FTC = "https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides"
 CPSC = "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Toy-Safety"
 ECHA = "https://echa.europa.eu/en/regulations/reach/restriction"
@@ -34,6 +34,43 @@ IMAGE_DESCRIPTIONS = {
     "winvn-loofah-growing.png": "A green loofah gourd growing on its vine",
     "winvn-moisture-check-kiem-go-9.jpg": "Moisture meter checking a coffee wood stick above a carton of sticks",
 }
+
+
+CARTON = "Export master carton 51 × 31 × 39 cm (0.062 m³), 30 cartons per pallet, 429 cartons in a 20 ft container and 850 in a 40 ft. Treat these as planning references and confirm the carton data for your packed SKU before booking."
+SEA_TRANSIT = "Sea transit from Cat Lai, Ho Chi Minh City, is commonly quoted at 30–35 days port to port for the EU and the US. Inland legs, customs clearance and any consolidation are additional."
+
+def answer(text):
+    """The direct answer a reader (or an AI assistant) should be able to lift verbatim."""
+    return f'<div class="answer-box"><p>{text}</p></div>'
+
+def fit(suitable, less_suitable, suit_head="Suitable for", less_head="Less suitable when"):
+    return ('<div class="fit-grid">'
+            f'<div><h3>{suit_head}</h3>'+ul(suitable)+'</div>'
+            f'<div><h3>{less_head}</h3>'+ul(less_suitable)+'</div></div>')
+
+def steps(items):
+    """Step - action - result, the shape buyers and assistants can both follow."""
+    out = []
+    for i,(name,action,result,*note) in enumerate(items,1):
+        extra = f'<p class="small"><strong>Note:</strong> {note[0]}</p>' if note else ""
+        out.append(f'<li><strong>{name}</strong><br><em>Action:</em> {action}<br><em>Result:</em> {result}{extra}</li>')
+    return '<ol class="steps">'+"".join(out)+"</ol>"
+
+def spec_table(headers, rows, caption=None):
+    cap = f'<caption>{caption}</caption>' if caption else ""
+    return ('<div class="table-scroll" tabindex="0" role="region" aria-label="'+escape(" / ".join(headers))+
+            '"><table class="spec-table">'+cap+'<thead><tr>'+''.join('<th scope="col">'+x+'</th>' for x in headers)+
+            '</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+str(x)+'</td>' for x in row)+'</tr>' for row in rows)+
+            '</tbody></table></div>')
+
+def figure(src, alt, caption, lazy=True):
+    load = ' loading="lazy"' if lazy else ' loading="eager"'
+    return f'<figure><img src="{src}" alt="{escape(alt, quote=True)}"{load}><figcaption>{caption}</figcaption></figure>'
+
+def media(body, src, alt, caption, reverse=False):
+    fig = figure(src, alt, caption)
+    return ('<div class="grid grid-2">'+fig+'<div>'+body+'</div></div>') if reverse else \
+           ('<div class="grid grid-2"><div>'+body+'</div>'+fig+'</div>')
 
 def image_description(src, fallback):
     return IMAGE_DESCRIPTIONS.get(src.rsplit("/",1)[-1], fallback)

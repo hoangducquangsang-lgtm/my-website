@@ -36,7 +36,7 @@ def run(backup):
     photos=guides=tables=products=clean_links=0
     for relative,html in pages.items():
         d=parse(html);old=parse(baseline[relative])
-        assert '<span class="brand-sub">by WINVN INT CO., LTD.</span>' in html
+        assert 'brand-sub' not in html and '<a class="brand" href="' in html
         assert "VietPaw is the international B2B/export brand of WINVN INT CO., LTD., a Vietnamese pet-product manufacturer." in html
         assert d.meta["og:site_name"]=="VietPaw" and "VietPaw" in d.title
         assert d.canonicals==old.canonicals and all(not u.endswith("index.html") for u in d.canonicals)

@@ -23,7 +23,7 @@ def build(root):
 
     faqs = [
         ("Are you a real pet toy manufacturer or a trading company?",
-         "We are the export and private-label brand of WINVN INT CO., LTD, a real manufacturer running three factories in Vietnam (Gia Lai, Dak Lak and Ho Chi Minh City) with 5–6 million units/year capacity. All export documents and certificates are issued under WINVN INT CO., LTD, so you can verify us independently before ordering."),
+         "VietPaw is an export and private-label brand working with an established Vietnamese manufacturer. The supplied planning materials describe a three-factory network in Gia Lai, Dak Lak and Ho Chi Minh City with an indicative 5–6 million units per year; these are supplier-reported figures, not audited output. Export documents and certificates are issued under the contracting manufacturer named in your quotation, so you can verify the supply chain independently before ordering."),
         ("What is your minimum order quantity (MOQ)?",
          "MOQ starts at 50 pcs per SKU, kept deliberately low so new brands can pilot before scaling. We also offer a Trial Box of 3–5 free samples (you cover shipping, refunded on your first order)."),
         ("Do you offer OEM, ODM and private label?",
