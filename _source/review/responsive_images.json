@@ -64,6 +64,50 @@
         }
       ]
     },
+    "assets/img/carton-quality-check.jpg": {
+      "sha256": "46a8a76889f34526b90777266860ddc76f547f6e9c5480dc21296e707ec612ae",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 188078,
+      "variants": [
+        {
+          "path": "assets/img/webp/carton-quality-check-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 20720
+        },
+        {
+          "path": "assets/img/webp/carton-quality-check-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 36822
+        },
+        {
+          "path": "assets/img/webp/carton-quality-check-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 52440
+        },
+        {
+          "path": "assets/img/webp/carton-quality-check-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 70052
+        },
+        {
+          "path": "assets/img/webp/carton-quality-check-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 86430
+        },
+        {
+          "path": "assets/img/webp/carton-quality-check-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 106250
+        }
+      ]
+    },
     "assets/img/cat-loofah-toys-lifestyle.jpg": {
       "sha256": "157f969b7b8452c4e4dd8ae599170522a6da7bf2bb794a29ff03dcc84d7500ee",
       "width": 709,
@@ -93,6 +137,56 @@
           "width": 709,
           "height": 543,
           "bytes": 55510
+        }
+      ]
+    },
+    "assets/img/cat-playing-with-loofah-shape.jpg": {
+      "sha256": "76bde722b0e9ca65dd5d7ae3ec2cad96568298e4db7683fa33e134db5453e085",
+      "width": 2000,
+      "height": 1500,
+      "bytes": 401103,
+      "variants": [
+        {
+          "path": "assets/img/webp/cat-playing-with-loofah-shape-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 8978
+        },
+        {
+          "path": "assets/img/webp/cat-playing-with-loofah-shape-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 16074
+        },
+        {
+          "path": "assets/img/webp/cat-playing-with-loofah-shape-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 23978
+        },
+        {
+          "path": "assets/img/webp/cat-playing-with-loofah-shape-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 33212
+        },
+        {
+          "path": "assets/img/webp/cat-playing-with-loofah-shape-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 42572
+        },
+        {
+          "path": "assets/img/webp/cat-playing-with-loofah-shape-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 58496
+        },
+        {
+          "path": "assets/img/webp/cat-playing-with-loofah-shape-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 90136
         }
       ]
     },
@@ -234,97 +328,53 @@
         }
       ]
     },
-    "assets/img/coffee-wood-chew-size-range-xs-to-xxl.jpg": {
-      "sha256": "5d1e75d3b87a5e50e10211200b2608c7109644c8e832add460041654ceae9ee9",
+    "assets/img/coffee-wood-chew-size-row.jpg": {
+      "sha256": "e537e8aa1c5aeb15bc55e1190a9dc8579713565dcc748e0b175ca6412b90432c",
       "width": 2000,
       "height": 2000,
-      "bytes": 308450,
+      "bytes": 461676,
       "variants": [
         {
-          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-320w.webp",
+          "path": "assets/img/webp/coffee-wood-chew-size-row-jpg-320w.webp",
           "width": 320,
           "height": 320,
-          "bytes": 10052
+          "bytes": 8882
         },
         {
-          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-480w.webp",
+          "path": "assets/img/webp/coffee-wood-chew-size-row-jpg-480w.webp",
           "width": 480,
           "height": 480,
-          "bytes": 18134
+          "bytes": 15976
         },
         {
-          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-640w.webp",
+          "path": "assets/img/webp/coffee-wood-chew-size-row-jpg-640w.webp",
           "width": 640,
           "height": 640,
-          "bytes": 27002
+          "bytes": 23656
         },
         {
-          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-800w.webp",
+          "path": "assets/img/webp/coffee-wood-chew-size-row-jpg-800w.webp",
           "width": 800,
           "height": 800,
-          "bytes": 36626
+          "bytes": 32144
         },
         {
-          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-960w.webp",
+          "path": "assets/img/webp/coffee-wood-chew-size-row-jpg-960w.webp",
           "width": 960,
           "height": 960,
-          "bytes": 46420
+          "bytes": 42552
         },
         {
-          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-1200w.webp",
+          "path": "assets/img/webp/coffee-wood-chew-size-row-jpg-1200w.webp",
           "width": 1200,
           "height": 1200,
-          "bytes": 65114
+          "bytes": 58714
         },
         {
-          "path": "assets/img/webp/coffee-wood-chew-size-range-xs-to-xxl-jpg-1600w.webp",
+          "path": "assets/img/webp/coffee-wood-chew-size-row-jpg-1600w.webp",
           "width": 1600,
           "height": 1600,
-          "bytes": 97730
-        }
-      ]
-    },
-    "assets/img/coffee-wood-chew-sizes-in-hand.jpg": {
-      "sha256": "4dd5fe5064d9242d708a495ed0d64f7148a75bfcaea252e594453d014dc5ed2a",
-      "width": 1080,
-      "height": 1350,
-      "bytes": 134726,
-      "variants": [
-        {
-          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-320w.webp",
-          "width": 320,
-          "height": 400,
-          "bytes": 11054
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-480w.webp",
-          "width": 480,
-          "height": 600,
-          "bytes": 19964
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-640w.webp",
-          "width": 640,
-          "height": 800,
-          "bytes": 30384
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-800w.webp",
-          "width": 800,
-          "height": 1000,
-          "bytes": 41732
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-960w.webp",
-          "width": 960,
-          "height": 1200,
-          "bytes": 54886
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chew-sizes-in-hand-jpg-1080w.webp",
-          "width": 1080,
-          "height": 1350,
-          "bytes": 70170
+          "bytes": 84758
         }
       ]
     },
@@ -528,6 +578,138 @@
         }
       ]
     },
+    "assets/img/container-loading-forklift.jpg": {
+      "sha256": "79ece391605635628bf44470d8a9809cff8c99855d4c581f5962091f01eeb187",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 215319,
+      "variants": [
+        {
+          "path": "assets/img/webp/container-loading-forklift-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 26974
+        },
+        {
+          "path": "assets/img/webp/container-loading-forklift-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 47422
+        },
+        {
+          "path": "assets/img/webp/container-loading-forklift-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 66124
+        },
+        {
+          "path": "assets/img/webp/container-loading-forklift-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 87340
+        },
+        {
+          "path": "assets/img/webp/container-loading-forklift-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 108160
+        },
+        {
+          "path": "assets/img/webp/container-loading-forklift-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 129734
+        }
+      ]
+    },
+    "assets/img/container-seal-applied.jpg": {
+      "sha256": "0f2287dadad3697d1af5a9d5b2dfff7f13d479ebcefef31b40a64b914467fc4e",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 201118,
+      "variants": [
+        {
+          "path": "assets/img/webp/container-seal-applied-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18308
+        },
+        {
+          "path": "assets/img/webp/container-seal-applied-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 34830
+        },
+        {
+          "path": "assets/img/webp/container-seal-applied-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 53252
+        },
+        {
+          "path": "assets/img/webp/container-seal-applied-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 76384
+        },
+        {
+          "path": "assets/img/webp/container-seal-applied-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 97924
+        },
+        {
+          "path": "assets/img/webp/container-seal-applied-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 121022
+        }
+      ]
+    },
+    "assets/img/container-wall-of-cartons.jpg": {
+      "sha256": "b6e4d47c56c09b64c43f9a6925c81e82426a4e234589acb6b597cac68915b917",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 179004,
+      "variants": [
+        {
+          "path": "assets/img/webp/container-wall-of-cartons-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 21656
+        },
+        {
+          "path": "assets/img/webp/container-wall-of-cartons-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 38200
+        },
+        {
+          "path": "assets/img/webp/container-wall-of-cartons-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 52968
+        },
+        {
+          "path": "assets/img/webp/container-wall-of-cartons-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 68936
+        },
+        {
+          "path": "assets/img/webp/container-wall-of-cartons-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 85048
+        },
+        {
+          "path": "assets/img/webp/container-wall-of-cartons-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 102038
+        }
+      ]
+    },
     "assets/img/cotton-rope-coffee-wood-dumbbell.jpg": {
       "sha256": "5c481eae2cdae936a5c0f25abe58ebcf239823844c0e6ecc6c517b889c6747e6",
       "width": 2000,
@@ -686,50 +868,6 @@
         }
       ]
     },
-    "assets/img/export-carton-labels.jpg": {
-      "sha256": "fa70b7989f589b8ce5aa6a75d98e250560a5e8a524c5af75fdfab3c7a9844185",
-      "width": 1080,
-      "height": 1350,
-      "bytes": 271774,
-      "variants": [
-        {
-          "path": "assets/img/webp/export-carton-labels-jpg-320w.webp",
-          "width": 320,
-          "height": 400,
-          "bytes": 27102
-        },
-        {
-          "path": "assets/img/webp/export-carton-labels-jpg-480w.webp",
-          "width": 480,
-          "height": 600,
-          "bytes": 54408
-        },
-        {
-          "path": "assets/img/webp/export-carton-labels-jpg-640w.webp",
-          "width": 640,
-          "height": 800,
-          "bytes": 90668
-        },
-        {
-          "path": "assets/img/webp/export-carton-labels-jpg-800w.webp",
-          "width": 800,
-          "height": 1000,
-          "bytes": 131374
-        },
-        {
-          "path": "assets/img/webp/export-carton-labels-jpg-960w.webp",
-          "width": 960,
-          "height": 1200,
-          "bytes": 176404
-        },
-        {
-          "path": "assets/img/webp/export-carton-labels-jpg-1080w.webp",
-          "width": 1080,
-          "height": 1350,
-          "bytes": 222190
-        }
-      ]
-    },
     "assets/img/export-cartons-stacked-for-loading.jpg": {
       "sha256": "bc2ba04a7a75f6014cbe6b61fbdf7189879c6ea2930b9d67fabcb305cc65c0a3",
       "width": 1080,
@@ -771,6 +909,50 @@
           "width": 1080,
           "height": 1350,
           "bytes": 71352
+        }
+      ]
+    },
+    "assets/img/export-container-exterior.jpg": {
+      "sha256": "65a829f75dd237495f2d1015c25a4a5c3cc1f116f50b22e98de1654336799fad",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 276967,
+      "variants": [
+        {
+          "path": "assets/img/webp/export-container-exterior-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 33510
+        },
+        {
+          "path": "assets/img/webp/export-container-exterior-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 62300
+        },
+        {
+          "path": "assets/img/webp/export-container-exterior-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 90216
+        },
+        {
+          "path": "assets/img/webp/export-container-exterior-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 120958
+        },
+        {
+          "path": "assets/img/webp/export-container-exterior-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 153052
+        },
+        {
+          "path": "assets/img/webp/export-container-exterior-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 178214
         }
       ]
     },
@@ -962,56 +1144,6 @@
         }
       ]
     },
-    "assets/img/hemp-rope-double-knot-wood-block.jpg": {
-      "sha256": "7accf5a254539c54268d4e324f4564a9eff2ef89c632a47b071e70ff4eb22346",
-      "width": 2000,
-      "height": 2000,
-      "bytes": 316454,
-      "variants": [
-        {
-          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-320w.webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 8436
-        },
-        {
-          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-480w.webp",
-          "width": 480,
-          "height": 480,
-          "bytes": 17150
-        },
-        {
-          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-640w.webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 28334
-        },
-        {
-          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-800w.webp",
-          "width": 800,
-          "height": 800,
-          "bytes": 42092
-        },
-        {
-          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-960w.webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 58432
-        },
-        {
-          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-1200w.webp",
-          "width": 1200,
-          "height": 1200,
-          "bytes": 86410
-        },
-        {
-          "path": "assets/img/webp/hemp-rope-double-knot-wood-block-jpg-1600w.webp",
-          "width": 1600,
-          "height": 1600,
-          "bytes": 137352
-        }
-      ]
-    },
     "assets/img/hemp-rope-loop-coffee-wood-toy.jpg": {
       "sha256": "6d35bf175e47f06acaef75137e160baa05d5a08088c99fbdd27cc67c7b972ab8",
       "width": 2000,
@@ -1062,6 +1194,94 @@
         }
       ]
     },
+    "assets/img/inspection-documents-at-pallets.jpg": {
+      "sha256": "969c41efb4469a9fe9ed877e732717435aee7f8d4e15aba67017f5a887b9be8d",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 181411,
+      "variants": [
+        {
+          "path": "assets/img/webp/inspection-documents-at-pallets-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 21886
+        },
+        {
+          "path": "assets/img/webp/inspection-documents-at-pallets-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 36634
+        },
+        {
+          "path": "assets/img/webp/inspection-documents-at-pallets-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 53150
+        },
+        {
+          "path": "assets/img/webp/inspection-documents-at-pallets-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 69420
+        },
+        {
+          "path": "assets/img/webp/inspection-documents-at-pallets-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 86528
+        },
+        {
+          "path": "assets/img/webp/inspection-documents-at-pallets-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 104244
+        }
+      ]
+    },
+    "assets/img/inspector-checking-cartons-clipboard.jpg": {
+      "sha256": "df44e9a9048416aaac194095a369e51ffe57b5045875cfae200d1171e29394b1",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 189194,
+      "variants": [
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-clipboard-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 21496
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-clipboard-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 38716
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-clipboard-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 55632
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-clipboard-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 73678
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-clipboard-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 91548
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-clipboard-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 109016
+        }
+      ]
+    },
     "assets/img/laser-engraving-coffee-wood-chew.jpg": {
       "sha256": "e392b3ee0f930911dc7f22332b66e9986ae80902ce3389c8c537352be2b403a1",
       "width": 1080,
@@ -1103,6 +1323,100 @@
           "width": 1080,
           "height": 1350,
           "bytes": 82622
+        }
+      ]
+    },
+    "assets/img/loofah-bear-shape-cat-toy.jpg": {
+      "sha256": "7ae405cca22b04c282c69827a9730cb96c71206e211743295863f251d58b7c91",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 625244,
+      "variants": [
+        {
+          "path": "assets/img/webp/loofah-bear-shape-cat-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12086
+        },
+        {
+          "path": "assets/img/webp/loofah-bear-shape-cat-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 28176
+        },
+        {
+          "path": "assets/img/webp/loofah-bear-shape-cat-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48966
+        },
+        {
+          "path": "assets/img/webp/loofah-bear-shape-cat-toy-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 73690
+        },
+        {
+          "path": "assets/img/webp/loofah-bear-shape-cat-toy-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 100236
+        },
+        {
+          "path": "assets/img/webp/loofah-bear-shape-cat-toy-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 141740
+        },
+        {
+          "path": "assets/img/webp/loofah-bear-shape-cat-toy-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 210998
+        }
+      ]
+    },
+    "assets/img/loofah-drying-under-greenhouse-cover.jpg": {
+      "sha256": "4e22cbadc9c52fc0125b10300b31614d45fa359662952d9ade60a7cf15d3e64e",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 323231,
+      "variants": [
+        {
+          "path": "assets/img/webp/loofah-drying-under-greenhouse-cover-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 31190
+        },
+        {
+          "path": "assets/img/webp/loofah-drying-under-greenhouse-cover-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 54888
+        },
+        {
+          "path": "assets/img/webp/loofah-drying-under-greenhouse-cover-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 81066
+        },
+        {
+          "path": "assets/img/webp/loofah-drying-under-greenhouse-cover-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 107056
+        },
+        {
+          "path": "assets/img/webp/loofah-drying-under-greenhouse-cover-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 132868
+        },
+        {
+          "path": "assets/img/webp/loofah-drying-under-greenhouse-cover-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 154814
         }
       ]
     },
@@ -1200,6 +1514,94 @@
         }
       ]
     },
+    "assets/img/marking-cartons-warehouse.jpg": {
+      "sha256": "bf4bc9b6452de912b220818898f10fb2c855899c0a5c06b80ed263b457b3ab57",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 179927,
+      "variants": [
+        {
+          "path": "assets/img/webp/marking-cartons-warehouse-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 16994
+        },
+        {
+          "path": "assets/img/webp/marking-cartons-warehouse-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 31738
+        },
+        {
+          "path": "assets/img/webp/marking-cartons-warehouse-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 47618
+        },
+        {
+          "path": "assets/img/webp/marking-cartons-warehouse-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 63604
+        },
+        {
+          "path": "assets/img/webp/marking-cartons-warehouse-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 83074
+        },
+        {
+          "path": "assets/img/webp/marking-cartons-warehouse-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 100970
+        }
+      ]
+    },
+    "assets/img/moisture-meter-on-the-line.jpg": {
+      "sha256": "529b3620e35e0b3175db57a3f609e816368b8260715293d886a02d45d6f4571e",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144789,
+      "variants": [
+        {
+          "path": "assets/img/webp/moisture-meter-on-the-line-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 17784
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-on-the-line-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 29462
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-on-the-line-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 40662
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-on-the-line-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 54538
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-on-the-line-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 68430
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-on-the-line-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 81408
+        }
+      ]
+    },
     "assets/img/moisture-reading-before-packing.jpg": {
       "sha256": "e0339245e071093a407b7028d0baef77a3174e1b31f85d5f3780371f3eef8de3",
       "width": 1080,
@@ -1241,6 +1643,50 @@
           "width": 1080,
           "height": 1350,
           "bytes": 72812
+        }
+      ]
+    },
+    "assets/img/pallet-stack-inspection.jpg": {
+      "sha256": "fcc65ca1d7d1ac9306b9f69c105d4943ade16eaf87bd3f2de326a4f69be0d543",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 150618,
+      "variants": [
+        {
+          "path": "assets/img/webp/pallet-stack-inspection-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18582
+        },
+        {
+          "path": "assets/img/webp/pallet-stack-inspection-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 29688
+        },
+        {
+          "path": "assets/img/webp/pallet-stack-inspection-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 40782
+        },
+        {
+          "path": "assets/img/webp/pallet-stack-inspection-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 53096
+        },
+        {
+          "path": "assets/img/webp/pallet-stack-inspection-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 66182
+        },
+        {
+          "path": "assets/img/webp/pallet-stack-inspection-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 79148
         }
       ]
     },
@@ -1426,6 +1872,56 @@
         }
       ]
     },
+    "assets/img/puppy-holding-coffee-wood-chew.jpg": {
+      "sha256": "a088705b4031e4bcc9aae76af6201b73b89ff147b88b1b8889fc32362b358780",
+      "width": 2000,
+      "height": 2000,
+      "bytes": 456779,
+      "variants": [
+        {
+          "path": "assets/img/webp/puppy-holding-coffee-wood-chew-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12646
+        },
+        {
+          "path": "assets/img/webp/puppy-holding-coffee-wood-chew-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 21204
+        },
+        {
+          "path": "assets/img/webp/puppy-holding-coffee-wood-chew-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 31766
+        },
+        {
+          "path": "assets/img/webp/puppy-holding-coffee-wood-chew-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 42682
+        },
+        {
+          "path": "assets/img/webp/puppy-holding-coffee-wood-chew-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 53902
+        },
+        {
+          "path": "assets/img/webp/puppy-holding-coffee-wood-chew-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 72488
+        },
+        {
+          "path": "assets/img/webp/puppy-holding-coffee-wood-chew-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 106508
+        }
+      ]
+    },
     "assets/img/puppy-with-rope-and-fiber-ball.jpg": {
       "sha256": "38dde33c61f92b8bb0236ad43baa7366305b5f9a8736e7d913b38b56e3f84230",
       "width": 1500,
@@ -1570,511 +2066,549 @@
         }
       ]
     },
-    "assets/img/warehouse-winvn-boxes.jpg": {
-      "sha256": "e3669f793eb37c3494e635844493493de6c7f5e2cf5242b13dd8682c1acaa14c",
+    "assets/img/stacking-cartons-in-container.jpg": {
+      "sha256": "f300a0658ec40e9be9f0a54a43e177f84d3abaff78dec8f525243d6e91e981db",
       "width": 1080,
       "height": 1350,
-      "bytes": 221174,
+      "bytes": 194156,
       "variants": [
         {
-          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-320w.webp",
+          "path": "assets/img/webp/stacking-cartons-in-container-jpg-320w.webp",
           "width": 320,
           "height": 400,
-          "bytes": 22982
+          "bytes": 21748
         },
         {
-          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-480w.webp",
+          "path": "assets/img/webp/stacking-cartons-in-container-jpg-480w.webp",
           "width": 480,
           "height": 600,
-          "bytes": 43464
+          "bytes": 38306
         },
         {
-          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-640w.webp",
+          "path": "assets/img/webp/stacking-cartons-in-container-jpg-640w.webp",
           "width": 640,
           "height": 800,
-          "bytes": 68638
+          "bytes": 53524
         },
         {
-          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-800w.webp",
+          "path": "assets/img/webp/stacking-cartons-in-container-jpg-800w.webp",
           "width": 800,
           "height": 1000,
-          "bytes": 97296
+          "bytes": 70936
         },
         {
-          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-960w.webp",
+          "path": "assets/img/webp/stacking-cartons-in-container-jpg-960w.webp",
           "width": 960,
           "height": 1200,
-          "bytes": 128176
+          "bytes": 88336
         },
         {
-          "path": "assets/img/webp/warehouse-winvn-boxes-jpg-1080w.webp",
+          "path": "assets/img/webp/stacking-cartons-in-container-jpg-1080w.webp",
           "width": 1080,
           "height": 1350,
-          "bytes": 155322
+          "bytes": 107020
         }
       ]
     },
-    "assets/img/winvn-coconut-fiber-balls.jpg": {
+    "assets/img/two-inspectors-container-check.jpg": {
+      "sha256": "d5362760c8e22ccb4eef3a83d6362f0cfb7d75e8eca5d47e24e6e58afc78009d",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 196499,
+      "variants": [
+        {
+          "path": "assets/img/webp/two-inspectors-container-check-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 22968
+        },
+        {
+          "path": "assets/img/webp/two-inspectors-container-check-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 40938
+        },
+        {
+          "path": "assets/img/webp/two-inspectors-container-check-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 57078
+        },
+        {
+          "path": "assets/img/webp/two-inspectors-container-check-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 75528
+        },
+        {
+          "path": "assets/img/webp/two-inspectors-container-check-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 91950
+        },
+        {
+          "path": "assets/img/webp/two-inspectors-container-check-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 110626
+        }
+      ]
+    },
+    "assets/img/vietpaw-coconut-fiber-balls.jpg": {
       "sha256": "946985142dfe8cee06f687be58f1b1984496e3679ba34cc17e285114eb6a856f",
       "width": 1086,
       "height": 1448,
       "bytes": 236552,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-320w.webp",
+          "path": "assets/img/webp/vietpaw-coconut-fiber-balls-jpg-320w.webp",
           "width": 320,
           "height": 427,
           "bytes": 31064
         },
         {
-          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-480w.webp",
+          "path": "assets/img/webp/vietpaw-coconut-fiber-balls-jpg-480w.webp",
           "width": 480,
           "height": 640,
           "bytes": 58946
         },
         {
-          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-640w.webp",
+          "path": "assets/img/webp/vietpaw-coconut-fiber-balls-jpg-640w.webp",
           "width": 640,
           "height": 853,
           "bytes": 94704
         },
         {
-          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-800w.webp",
+          "path": "assets/img/webp/vietpaw-coconut-fiber-balls-jpg-800w.webp",
           "width": 800,
           "height": 1067,
           "bytes": 132436
         },
         {
-          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-960w.webp",
+          "path": "assets/img/webp/vietpaw-coconut-fiber-balls-jpg-960w.webp",
           "width": 960,
           "height": 1280,
           "bytes": 169840
         },
         {
-          "path": "assets/img/webp/winvn-coconut-fiber-balls-jpg-1086w.webp",
+          "path": "assets/img/webp/vietpaw-coconut-fiber-balls-jpg-1086w.webp",
           "width": 1086,
           "height": 1448,
           "bytes": 208068
         }
       ]
     },
-    "assets/img/winvn-coffee-wood-single.jpg": {
-      "sha256": "4dae33ca3794b1044a73617a4257d4f18f262d94cf7653ba09dfdaeb7b0b2cf3",
-      "width": 2000,
-      "height": 2000,
-      "bytes": 141812,
-      "variants": [
-        {
-          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-320w.webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 3388
-        },
-        {
-          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-480w.webp",
-          "width": 480,
-          "height": 480,
-          "bytes": 6028
-        },
-        {
-          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-640w.webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 9140
-        },
-        {
-          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-800w.webp",
-          "width": 800,
-          "height": 800,
-          "bytes": 12836
-        },
-        {
-          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-960w.webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 17018
-        },
-        {
-          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-1200w.webp",
-          "width": 1200,
-          "height": 1200,
-          "bytes": 25004
-        },
-        {
-          "path": "assets/img/webp/winvn-coffee-wood-single-jpg-1600w.webp",
-          "width": 1600,
-          "height": 1600,
-          "bytes": 40436
-        }
-      ]
-    },
-    "assets/img/winvn-coffee-wood-sizes.png": {
+    "assets/img/vietpaw-coffee-wood-sizes.png": {
       "sha256": "82b8e733c0d819db2090cf7a5f1e725571f75584d814de2ef94ad85baa8f4269",
       "width": 2000,
       "height": 2000,
       "bytes": 3473253,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-320w.webp",
+          "path": "assets/img/webp/vietpaw-coffee-wood-sizes-png-320w.webp",
           "width": 320,
           "height": 320,
           "bytes": 8994
         },
         {
-          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-480w.webp",
+          "path": "assets/img/webp/vietpaw-coffee-wood-sizes-png-480w.webp",
           "width": 480,
           "height": 480,
           "bytes": 16014
         },
         {
-          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-640w.webp",
+          "path": "assets/img/webp/vietpaw-coffee-wood-sizes-png-640w.webp",
           "width": 640,
           "height": 640,
           "bytes": 23480
         },
         {
-          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-800w.webp",
+          "path": "assets/img/webp/vietpaw-coffee-wood-sizes-png-800w.webp",
           "width": 800,
           "height": 800,
           "bytes": 32302
         },
         {
-          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-960w.webp",
+          "path": "assets/img/webp/vietpaw-coffee-wood-sizes-png-960w.webp",
           "width": 960,
           "height": 960,
           "bytes": 42086
         },
         {
-          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-1200w.webp",
+          "path": "assets/img/webp/vietpaw-coffee-wood-sizes-png-1200w.webp",
           "width": 1200,
           "height": 1200,
           "bytes": 58294
         },
         {
-          "path": "assets/img/webp/winvn-coffee-wood-sizes-png-1600w.webp",
+          "path": "assets/img/webp/vietpaw-coffee-wood-sizes-png-1600w.webp",
           "width": 1600,
           "height": 1600,
           "bytes": 85728
         }
       ]
     },
-    "assets/img/winvn-hemp-fiber-rope-ball.png": {
+    "assets/img/vietpaw-hemp-fiber-rope-ball.png": {
       "sha256": "7653b92c0a5fccb2880655d1b16ae6ccbdc2326531615603d0c4d0843abb90ae",
       "width": 902,
       "height": 637,
       "bytes": 701175,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-320w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-fiber-rope-ball-png-320w.webp",
           "width": 320,
           "height": 226,
           "bytes": 10790
         },
         {
-          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-480w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-fiber-rope-ball-png-480w.webp",
           "width": 480,
           "height": 339,
           "bytes": 18060
         },
         {
-          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-640w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-fiber-rope-ball-png-640w.webp",
           "width": 640,
           "height": 452,
           "bytes": 26182
         },
         {
-          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-800w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-fiber-rope-ball-png-800w.webp",
           "width": 800,
           "height": 565,
           "bytes": 33992
         },
         {
-          "path": "assets/img/webp/winvn-hemp-fiber-rope-ball-png-902w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-fiber-rope-ball-png-902w.webp",
           "width": 902,
           "height": 637,
           "bytes": 38766
         }
       ]
     },
-    "assets/img/winvn-hemp-rope-dog-toy.jpg": {
+    "assets/img/vietpaw-hemp-rope-dog-toy.jpg": {
       "sha256": "296e88e79fabe67aa594f64312a8eaac571ee9140b708f3feee8e4c4c397fa33",
       "width": 1080,
       "height": 1350,
       "bytes": 80824,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-320w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-rope-dog-toy-jpg-320w.webp",
           "width": 320,
           "height": 400,
           "bytes": 6586
         },
         {
-          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-480w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-rope-dog-toy-jpg-480w.webp",
           "width": 480,
           "height": 600,
           "bytes": 12404
         },
         {
-          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-640w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-rope-dog-toy-jpg-640w.webp",
           "width": 640,
           "height": 800,
           "bytes": 19258
         },
         {
-          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-800w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-rope-dog-toy-jpg-800w.webp",
           "width": 800,
           "height": 1000,
           "bytes": 27624
         },
         {
-          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-960w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-rope-dog-toy-jpg-960w.webp",
           "width": 960,
           "height": 1200,
           "bytes": 36428
         },
         {
-          "path": "assets/img/webp/winvn-hemp-rope-dog-toy-jpg-1080w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-rope-dog-toy-jpg-1080w.webp",
           "width": 1080,
           "height": 1350,
           "bytes": 46438
         }
       ]
     },
-    "assets/img/winvn-hemp-wood-assortment.jpg": {
+    "assets/img/vietpaw-hemp-wood-assortment.jpg": {
       "sha256": "12b306986531601b00d1f34ff3eb242c66addce1936471aaecbc9fb611e5d67e",
       "width": 2000,
       "height": 2000,
       "bytes": 587421,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-320w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-wood-assortment-jpg-320w.webp",
           "width": 320,
           "height": 320,
           "bytes": 28858
         },
         {
-          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-480w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-wood-assortment-jpg-480w.webp",
           "width": 480,
           "height": 480,
           "bytes": 56108
         },
         {
-          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-640w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-wood-assortment-jpg-640w.webp",
           "width": 640,
           "height": 640,
           "bytes": 85460
         },
         {
-          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-800w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-wood-assortment-jpg-800w.webp",
           "width": 800,
           "height": 800,
           "bytes": 121346
         },
         {
-          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-960w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-wood-assortment-jpg-960w.webp",
           "width": 960,
           "height": 960,
           "bytes": 158840
         },
         {
-          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-1200w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-wood-assortment-jpg-1200w.webp",
           "width": 1200,
           "height": 1200,
           "bytes": 217158
         },
         {
-          "path": "assets/img/webp/winvn-hemp-wood-assortment-jpg-1600w.webp",
+          "path": "assets/img/webp/vietpaw-hemp-wood-assortment-jpg-1600w.webp",
           "width": 1600,
           "height": 1600,
           "bytes": 327516
         }
       ]
     },
-    "assets/img/winvn-loofah-growing.png": {
+    "assets/img/vietpaw-loofah-growing.png": {
       "sha256": "906966e81c23580072df768a981e440ce05a2bcb2075a5bdfa6b3996bf743bfc",
       "width": 1080,
       "height": 1350,
       "bytes": 4150172,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-loofah-growing-png-320w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-growing-png-320w.webp",
           "width": 320,
           "height": 400,
           "bytes": 53890
         },
         {
-          "path": "assets/img/webp/winvn-loofah-growing-png-480w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-growing-png-480w.webp",
           "width": 480,
           "height": 600,
           "bytes": 105944
         },
         {
-          "path": "assets/img/webp/winvn-loofah-growing-png-640w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-growing-png-640w.webp",
           "width": 640,
           "height": 800,
           "bytes": 161416
         },
         {
-          "path": "assets/img/webp/winvn-loofah-growing-png-800w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-growing-png-800w.webp",
           "width": 800,
           "height": 1000,
           "bytes": 214560
         },
         {
-          "path": "assets/img/webp/winvn-loofah-growing-png-960w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-growing-png-960w.webp",
           "width": 960,
           "height": 1200,
           "bytes": 268488
         },
         {
-          "path": "assets/img/webp/winvn-loofah-growing-png-1080w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-growing-png-1080w.webp",
           "width": 1080,
           "height": 1350,
           "bytes": 311456
         }
       ]
     },
-    "assets/img/winvn-loofah-play-shapes.png": {
+    "assets/img/vietpaw-loofah-play-shapes.png": {
       "sha256": "0afc84c98c06877ceaf1f149d6fd12a78c218bf5a3db028698da6d4d3e6ec89f",
       "width": 2048,
       "height": 1536,
       "bytes": 4903511,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-loofah-play-shapes-png-320w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-play-shapes-png-320w.webp",
           "width": 320,
           "height": 240,
           "bytes": 18782
         },
         {
-          "path": "assets/img/webp/winvn-loofah-play-shapes-png-480w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-play-shapes-png-480w.webp",
           "width": 480,
           "height": 360,
           "bytes": 40118
         },
         {
-          "path": "assets/img/webp/winvn-loofah-play-shapes-png-640w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-play-shapes-png-640w.webp",
           "width": 640,
           "height": 480,
           "bytes": 69212
         },
         {
-          "path": "assets/img/webp/winvn-loofah-play-shapes-png-800w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-play-shapes-png-800w.webp",
           "width": 800,
           "height": 600,
           "bytes": 104550
         },
         {
-          "path": "assets/img/webp/winvn-loofah-play-shapes-png-960w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-play-shapes-png-960w.webp",
           "width": 960,
           "height": 720,
           "bytes": 145370
         },
         {
-          "path": "assets/img/webp/winvn-loofah-play-shapes-png-1200w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-play-shapes-png-1200w.webp",
           "width": 1200,
           "height": 900,
           "bytes": 211736
         },
         {
-          "path": "assets/img/webp/winvn-loofah-play-shapes-png-1600w.webp",
+          "path": "assets/img/webp/vietpaw-loofah-play-shapes-png-1600w.webp",
           "width": 1600,
           "height": 1200,
           "bytes": 335992
         }
       ]
     },
-    "assets/img/winvn-moisture-check-kiem-go-9.jpg": {
+    "assets/img/vietpaw-moisture-check.jpg": {
       "sha256": "d66d406d41b2ffbd766c641e64cde9ccbf461f1d57fa8b15bc199741017725b0",
       "width": 1080,
       "height": 1350,
       "bytes": 131974,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-320w.webp",
+          "path": "assets/img/webp/vietpaw-moisture-check-jpg-320w.webp",
           "width": 320,
           "height": 400,
           "bytes": 18734
         },
         {
-          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-480w.webp",
+          "path": "assets/img/webp/vietpaw-moisture-check-jpg-480w.webp",
           "width": 480,
           "height": 600,
           "bytes": 30610
         },
         {
-          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-640w.webp",
+          "path": "assets/img/webp/vietpaw-moisture-check-jpg-640w.webp",
           "width": 640,
           "height": 800,
           "bytes": 43144
         },
         {
-          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-800w.webp",
+          "path": "assets/img/webp/vietpaw-moisture-check-jpg-800w.webp",
           "width": 800,
           "height": 1000,
           "bytes": 56098
         },
         {
-          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-960w.webp",
+          "path": "assets/img/webp/vietpaw-moisture-check-jpg-960w.webp",
           "width": 960,
           "height": 1200,
           "bytes": 70802
         },
         {
-          "path": "assets/img/webp/winvn-moisture-check-kiem-go-9-jpg-1080w.webp",
+          "path": "assets/img/webp/vietpaw-moisture-check-jpg-1080w.webp",
           "width": 1080,
           "height": 1350,
           "bytes": 81276
         }
       ]
     },
-    "assets/img/winvn-natural-toy-assortment.png": {
+    "assets/img/vietpaw-natural-toy-assortment.png": {
       "sha256": "9821e186f07f5b1e78c711009f8ef73b8719ac9162da8b6bb78ed429ed2b1b66",
       "width": 2048,
       "height": 1536,
       "bytes": 4577601,
       "variants": [
         {
-          "path": "assets/img/webp/winvn-natural-toy-assortment-png-320w.webp",
+          "path": "assets/img/webp/vietpaw-natural-toy-assortment-png-320w.webp",
           "width": 320,
           "height": 240,
           "bytes": 15466
         },
         {
-          "path": "assets/img/webp/winvn-natural-toy-assortment-png-480w.webp",
+          "path": "assets/img/webp/vietpaw-natural-toy-assortment-png-480w.webp",
           "width": 480,
           "height": 360,
           "bytes": 33464
         },
         {
-          "path": "assets/img/webp/winvn-natural-toy-assortment-png-640w.webp",
+          "path": "assets/img/webp/vietpaw-natural-toy-assortment-png-640w.webp",
           "width": 640,
           "height": 480,
           "bytes": 57470
         },
         {
-          "path": "assets/img/webp/winvn-natural-toy-assortment-png-800w.webp",
+          "path": "assets/img/webp/vietpaw-natural-toy-assortment-png-800w.webp",
           "width": 800,
           "height": 600,
           "bytes": 88120
         },
         {
-          "path": "assets/img/webp/winvn-natural-toy-assortment-png-960w.webp",
+          "path": "assets/img/webp/vietpaw-natural-toy-assortment-png-960w.webp",
           "width": 960,
           "height": 720,
           "bytes": 124526
         },
         {
-          "path": "assets/img/webp/winvn-natural-toy-assortment-png-1200w.webp",
+          "path": "assets/img/webp/vietpaw-natural-toy-assortment-png-1200w.webp",
           "width": 1200,
           "height": 900,
           "bytes": 187528
         },
         {
-          "path": "assets/img/webp/winvn-natural-toy-assortment-png-1600w.webp",
+          "path": "assets/img/webp/vietpaw-natural-toy-assortment-png-1600w.webp",
           "width": 1600,
           "height": 1200,
           "bytes": 309316
+        }
+      ]
+    },
+    "assets/img/warehouse-inspection-clipboard.jpg": {
+      "sha256": "6c37ad59acb245c247d013e98c9290c93565d7644777d3ba6d7e02faf141112f",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149156,
+      "variants": [
+        {
+          "path": "assets/img/webp/warehouse-inspection-clipboard-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 17862
+        },
+        {
+          "path": "assets/img/webp/warehouse-inspection-clipboard-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 28700
+        },
+        {
+          "path": "assets/img/webp/warehouse-inspection-clipboard-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 38976
+        },
+        {
+          "path": "assets/img/webp/warehouse-inspection-clipboard-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 51620
+        },
+        {
+          "path": "assets/img/webp/warehouse-inspection-clipboard-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 63918
+        },
+        {
+          "path": "assets/img/webp/warehouse-inspection-clipboard-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 76376
         }
       ]
     }

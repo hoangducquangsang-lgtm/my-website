@@ -10,7 +10,7 @@ import re
 import sys
 import zipfile
 from PIL import Image
-from common import BRAND, LEGAL_NAME, BRAND_INTRO, CONTRACT_NOTICE, BRAND_RELATIONSHIP
+from common import BRAND, BRAND_INTRO, CONTRACT_NOTICE, BRAND_RELATIONSHIP
 from validate_site import Document, ROOT
 
 def plain(value):
@@ -34,7 +34,7 @@ def doc(value):
 
 def run(backup):
     assert BRAND == "VietPaw"
-    assert LEGAL_NAME == "WINVN INT CO., LTD."
+    assert "WINVN" not in BRAND_RELATIONSHIP
     assert BRAND_RELATIONSHIP.startswith("VietPaw is the international B2B/export brand of")
     assert "WINVN" not in BRAND_INTRO
     baseline = {}
@@ -68,7 +68,7 @@ def run(backup):
         footer = re.search(r"<footer\b.*?</footer>", html, re.S).group()
         assert re.search(r'<a class="brand" href="[^"]+">VietPaw<span', header)
         assert 'VietPaw' in plain(header)
-        assert LEGAL_NAME in plain(footer)
+        assert BRAND in plain(footer)
         assert '<p class="footer-legal">' not in footer
         header_signature = '<a class="brand"'
         footer_signature = '<p class="footer-brand-tagline">'

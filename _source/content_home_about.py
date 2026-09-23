@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from common import (BRAND, BRAND_INTRO, CONTRACT_NOTICE, ADDRESS, PHONE, EMAIL, BASE_URL,
-                   REGISTRATION_DATE, COUNTRIES, page, write_page, organization_schema, social_html)
+                   REGISTRATION_DATE, COUNTRIES, SITES, page, write_page, organization_schema, social_html)
 from content_helpers import (hero, section, cards, p, ul, table, faq, rfq_bar, trust_links, publish,
+                             INCOTERMS, PAYMENT, CAFFEINE, SIZE_ADVICE, ORDER_TIERS,
                              answer, fit, steps, spec_table, figure, media,
                              SAMPLES, SAMPLE_DISPATCH, PRIVATE_LABEL, QC_PROTOCOL, RANGE_SCOPE, LEAD,
                              CARTON, SEA_TRANSIT, SAFETY)
@@ -9,9 +10,9 @@ from content_products import product_cards
 
 IMG = "/assets/img/"
 
-HOME_LEDE = ("Coffee wood, coconut fiber, hemp and loofah, made in Vietnam for brands, wholesalers and "
-             "retailers. Published specifications, five QC checkpoints, and selected standard products "
-             "from 50 pcs per SKU.")
+HOME_LEDE = ("Coffee wood, coconut fiber, hemp and loofah, made at our own sites in Vietnam for brands, "
+             "wholesalers and retailers. Published specifications, five QC checkpoints, stock held in our "
+             "warehouse, and standard products from 50 pcs per SKU.")
 
 def home(root):
     content = hero("Wholesale Natural Pet Toys, Specified Before You Buy", HOME_LEDE,
@@ -19,10 +20,11 @@ def home(root):
         image=IMG+"golden-retriever-chewing-coffee-wood.jpg")
 
     content += section("What VietPaw supplies",
-        answer("VietPaw is a Vietnamese export brand supplying natural-material pet toys to international "
-               "buyers: coffee wood chews, coconut fiber balls, hemp rope toys and loofah cat shapes. We sell "
-               "wholesale from stock specifications, add your branding under private label, and develop new "
-               "constructions under OEM/ODM. Selected standard products start at 50 pcs per SKU; private-label "
+        answer("VietPaw manufactures and exports natural-material pet toys from Vietnam: coffee wood chews, "
+               "coconut fiber balls, hemp rope toys and loofah cat shapes. We produce at our own sites in the "
+               "Central Highlands, hold standard sizes in our Ho Chi Minh City warehouse, and ship on our own "
+               "export documents. Sell wholesale from stock, add your branding under private label, or develop a "
+               "new construction under OEM/ODM. Standard products start at 50 pcs per SKU; private-label "
                "packaging starts at 500 pcs.")
         + '<div class="stats">'
           '<div><strong>4</strong><span>Natural materials</span></div>'
@@ -37,11 +39,11 @@ def home(root):
 
     content += section("Four materials, four different conversations", cards([
         ("Coffee wood", "Seasoned Robusta stem, six graded sizes, packed below 14% moisture. The hard-chew line.",
-         "/collections/coffee-wood/", IMG+"coffee-wood-chew-size-range-xs-to-xxl.jpg"),
+         "/collections/coffee-wood/", IMG+"vietpaw-coffee-wood-sizes.png"),
         ("Coconut fiber", "Coir from the husk, wound into textured balls. Specified by sample and weight, not by catalogue number.",
          "/collections/coconut-fiber/", IMG+"puppy-with-rope-and-fiber-ball.jpg"),
         ("Hemp fiber", "Wound balls, knotted tug rope and wood-and-rope constructions. Specified by geometry and knot.",
-         "/collections/hemp-fiber/", IMG+"hemp-rope-double-knot-wood-block.jpg"),
+         "/collections/hemp-fiber/", IMG+"cotton-rope-coffee-wood-dumbbell.jpg"),
         ("Loofah", "Dried gourd fiber cut into light cat-play shapes. Dimensions confirmed per shape.",
          "/collections/loofah/", IMG+"loofah-duck-cat-toy.jpg")], 4)
         + p(RANGE_SCOPE), True)
@@ -50,31 +52,32 @@ def home(root):
         p("Coffee wood is our most-specified line, so here is the short version. The full table \u2014 with "
           "diameters, weights and carton counts \u2014 sits on the "
           '<a href="/products/coffee-wood-dog-chew/">product page</a>.')
-        + spec_table(["Size", "Length", "Reference dog weight", "Pcs per export carton"], [
-            ("XS", "10 cm", "Under 5 kg", "On request"),
-            ("S", "13\u201314 cm", "5\u201310 kg", "512"),
-            ("M", "17\u201318 cm", "10\u201320 kg", "224"),
-            ("L", "19\u201320 cm", "20\u201330 kg", "126"),
-            ("XL", "21\u201322 cm", "30\u201340 kg", "85"),
-            ("XXL", "22\u201323 cm", "Over 40 kg", "On request"),
+        + spec_table(["Size", "Length", "Weight", "Reference dog weight", "Pcs per export carton"], [
+            ("XS", "10 cm", "23\u201330 g", "Up to 3 kg", "On request"),
+            ("S", "13\u201314 cm", "35\u201345 g", "3\u20135 kg", "512"),
+            ("M", "17\u201318 cm", "90\u2013110 g", "5\u20138 kg", "224"),
+            ("L", "19\u201320 cm", "120\u2013180 g", "8\u201312 kg", "126"),
+            ("XL", "21\u201322 cm", "230\u2013310 g", "12\u201320 kg", "85"),
+            ("XXL", "22\u201323 cm", "340\u2013440 g", "20 kg and over", "On request"),
           ], caption="Reference figures for bulk-packed sticks. Coffee wood is a natural material and mass varies "
                      "within each band; dog weight is a starting point for choosing a size, not a veterinary "
                      "assessment. Retail-packed sets fit fewer units per carton.")
+        + p(SIZE_ADVICE)
         + p(CARTON))
 
-    content += section("What the factory actually controls",
+    content += section("What our factory actually controls",
         media(ul([
             "<strong>Moisture below 14% at packing.</strong> Pin-type meter reading, photographed per batch, taken again before the container is sealed.",
             "<strong>\u00b13 mm length tolerance</strong> on the coffee wood stick line. Diameter follows the natural stem and is controlled by grading into bands.",
             "<strong>Cracks beyond 2 mm rejected</strong> at grading, on the piece rather than on a sampled average.",
-            "<strong>Roughly one piece in five rejected</strong> across the whole process, concentrated at the drying racks \u2014 a supplier-reported figure that explains why lead time follows graded output.",
+            "<strong>Roughly one piece in five rejected</strong> across the whole process, concentrated at the drying racks \u2014 an figure from our own production records that explains why lead time follows graded output.",
             "<strong>Five checkpoints</strong> between raw stem and sealed carton: intake, after seasoning, after shaping, at grading, and at the packing bench.",
           ]),
           IMG+"moisture-reading-before-packing.jpg",
           "Pin-type moisture meter held against a coffee wood chew stick above a packing carton",
           "The moisture reading is filed against the lot. Ask for the one attached to your order.")
         + p('Drying temperatures, cycle times and the stage sequence are treated as proprietary and are not '
-            'published \u2014 by us or by the factory. What you can verify instead is the output: '
+            'published \u2014 by us or by our factory. What you can verify instead is the output: '
             '<a href="/quality-control/">the QC protocol</a>, '
             '<a href="/certifications/">the document scope</a>, and a third-party inspection that witnesses the '
             'moisture reading and the container stuffing before the doors close.'), True)
@@ -133,13 +136,14 @@ def home(root):
          "Private-label runs and custom hang tags, labels or printed boxes start at 500 pcs per SKU. The two minimums are "
          "separate, so a small engraved trial before committing to printed packaging is possible."),
         ("How long does production take?",
-         "5\u20137 days for orders under 500 pcs and 60\u201380 days for a full container. Anything between those \u2014 500 pcs "
-         "or more below container volume, mixed orders, custom development \u2014 needs a project schedule. Production time is "
-         "not an arrival date: add roughly 30\u201335 days port to port for the EU or the US, plus clearance and inland legs."),
+         "5\u20137 days for stock packaging, because standard sizes are held in our warehouse rather than made to order. "
+         "60\u201380 days when the order carries your own label, printed box or engraving \u2014 most of that window is artwork "
+         "approval and tooling, not production. Production time is not an arrival date: add roughly 30\u201335 days port to "
+         "port for the EU or the US, plus clearance and inland legs."),
         ("Can I get samples before ordering?",
          "Three free samples, with the courier at your cost. Standard samples dispatch within one working day once the "
          "selection and courier arrangements are confirmed; custom prototypes are quoted separately on timing."),
-        ("How do I verify the factory and the product?",
+        ("How do I verify our factory and the product?",
          "Ask for current location information, a production walkthrough, and the reports that cover your SKU and destination. "
          "For a shipment that matters, appoint a third party to witness the moisture reading, measure a sample, photograph the "
          "carton marks against the packing list and witness stuffing before the container is sealed. A supplier\u2019s general "
@@ -167,18 +171,30 @@ def home(root):
 def about(root):
     sections = [
       section("Who VietPaw is",
-        answer("VietPaw is a Vietnamese export brand for natural-material pet toys. We take the brief from "
-               "international buyers, specify the product, run the order through a Vietnamese manufacturing "
-               "partner and handle the export paperwork. We are the commercial side of that arrangement: the "
-               "manufacturing, the factories and the export documents belong to the contracting company named "
-               "in our footer and in your quotation.")
-        + p("We say that plainly because the distinction matters when you are choosing a supplier. A trading "
-            "company that describes a factory as \u201cours\u201d is telling you something about its marketing, not "
-            "about who you contract with, who issues your Certificate of Origin, and who is on the invoice. "
-            "You will find that entity named in the footer of every page on this site.")
-        + p("What we do own is the specification work: getting the size chart, the component list, the moisture "
-            "record and the document scope right before an order is placed, and being honest about the things "
-            "this category routinely overclaims.")),
+        answer("VietPaw is a Vietnamese manufacturer and exporter of natural-material pet toys. We make coffee "
+               "wood chews, coconut fiber balls, hemp rope toys and loofah cat shapes at our own production and "
+               "finishing sites, hold standard sizes in our warehouse in Ho Chi Minh City, and ship on our own "
+               "export documents. Orders go from our stock or our line straight to your container — there is no "
+               "trading layer in between.")
+        + p("That matters for three practical reasons. Stock sizes ship in 5\u20137 days because they are already "
+            "packed, not because we are chasing another factory. Quality decisions \u2014 what counts as a rejectable "
+            "crack, what moisture we pack at \u2014 are ours to make and ours to change for your order. And when you "
+            "want to verify something, you are asking the people who ran the line rather than a middleman relaying "
+            "your question.")
+        + p("What we will not do is overclaim. Most of what gets printed in this category \u2014 splinter-free, dental "
+            "benefits, certified biodegradable \u2014 has no evidence behind it, and a buyer who prints it inherits "
+            "the risk. We would rather lose a sale than hand you a claim that fails.")),
+
+      section("Where we produce",
+        p("Production, finishing and export preparation happen at our own sites in Vietnam. Coffee wood is worked "
+          "in the Central Highlands, close to where the stems are collected; packing, quality release and export "
+          "documentation run from Ho Chi Minh City.")
+        + spec_table(["Site", "Location"], SITES,
+            caption="Buyer-arranged visits and third-party inspection are welcome at any site; please arrange in "
+                    "advance so the line is running when you arrive. Loading port is Cat Lai, Ho Chi Minh City.")
+        + p("Our internal planning figures put coffee wood output at around 100,000 pieces a month, roughly 1.2 "
+            "million a year. That is a planning number for scheduling your order, not capacity reserved for it \u2014 "
+            "confirm the volume and dates in your quotation.")),
 
       section("What we do and do not do",
         fit(["Specifying a product properly before the first order, including the components a photograph does not show.",
@@ -186,19 +202,19 @@ def about(root):
              "Private label \u2014 engraving from 50 pcs, printed packaging from 500 pcs per SKU.",
              "OEM/ODM development from a drawing or brief, through feasibility and prototype.",
              "Export documentation, carton planning and the moisture records that come with a wood shipment."],
-            ["We do not own the factories, and we do not present the manufacturer\u2019s history, certifications or capacity as VietPaw\u2019s own.",
+            ["We do not claim certifications we do not hold, or present planning figures as audited output.",
              "We do not publish biodegradability, dental-health, digestibility or \u201csplinter-free\u201d claims.",
              "We do not quote a chew lifespan in days or weeks; the dog sets that, not the material.",
-             "We do not supply pet beds, hammocks or mats \u2014 the factory makes them, but they sit outside our catalogue."],
+             "We do not supply pet beds, hammocks or mats through VietPaw \u2014 ask if you need them quoted alongside a toy order."],
             suit_head="We do this", less_head="We do not do this"),
         True),
 
       section("The materials, and where they come from",
-        media(p("Coffee wood comes from mature Robusta stems in Vietnam\u2019s Central Highlands \u2014 principally Gia "
-                "Lai and Dak Lak. Coffee plantations cut old stems back so the plant regrows, which makes the "
-                "stems a by-product of an agricultural cycle rather than felled timber. Stems arrive from many "
-                "scattered smallholder plots across a collection season, then hold for roughly a year before "
-                "anything is cut.")
+        media(p("Coffee wood comes from mature Robusta stems in Vietnam\u2019s Central Highlands \u2014 Dak Lak, Gia Lai "
+                "and Dak Nong. Growers take out the trees that have stopped paying their way and leave the rest "
+                "alone, so these stems already existed and previously went to firewood; nobody fells a coffee tree "
+                "that is still yielding cherries. Stems are cut to billets of roughly 50 to 70 cm in the field, then "
+                "held about a year in ventilated shade before anything is machined.")
               + p("Coconut fiber is coir from the husk, itself a by-product of the coconut food and oil trade. "
                   "Loofah is the dried fibrous interior of a gourd, grown on vines and peeled by hand. Hemp is a "
                   "bast fiber spun into cord.")
@@ -212,15 +228,14 @@ def about(root):
       section("Brand, company and sales contact",
         table(["Role", "Information"], [
           ("Website / site name", BRAND),
-          ("Commercial / export brand", BRAND),
-          ("Contracting manufacturer", "Named in the footer legal line and in your quotation"),
-          ("Manufacturing base", "Vietnam \u2014 Central Highlands and Ho Chi Minh City"),
-          ("Manufacturer registered in Vietnam", REGISTRATION_DATE),
+          ("Business", "Manufacturer and exporter, natural-material pet toys"),
+          ("Production sites", "Gia Lai and Dak Lak (Central Highlands); Ho Chi Minh City"),
+          ("Producing since", REGISTRATION_DATE),
           ("Export markets", COUNTRIES+" countries"),
           ("Port of loading", "Cat Lai, Ho Chi Minh City"),
           ("VietPaw sales email", EMAIL),
           ("VietPaw sales phone", PHONE),
-          ("Registered head office", ADDRESS)])
+          ("Head office and warehouse", ADDRESS)])
         + p(CONTRACT_NOTICE)
         + p("Ask us for the registration details, company records and shipment documents that apply to your "
             "order before you contract. If a supplier \u2014 us included \u2014 will not put that in front of you, that "
@@ -231,8 +246,8 @@ def about(root):
           ("We separate the reference from the record",
            "Everything published here is a reference specification; the record is the moisture reading, the grading result and the carton marks filed against your lot.",
            "You check the record, not the brochure."),
-          ("We say when a figure is supplier-reported",
-           "Capacity, reject rate and monthly output are planning figures the factory reports, not audited measurements.",
+          ("We say when a figure is internally reported",
+           "Capacity, reject rate and monthly output are planning figures our factory reports, not audited measurements.",
            "You can weight them accordingly instead of treating them as verified."),
           ("We say when nothing exists",
            "There is no hardness figure for coffee wood, no tensile rating for these rope toys and no published chew lifespan.",
@@ -257,19 +272,19 @@ def about(root):
         "Who VietPaw is, what we specify, where the materials come from and which claims we will not make. "
         "Natural pet toys from Vietnam for wholesale, private label and OEM/ODM.",
         "About VietPaw",
-        "A Vietnamese export brand for natural-material pet toys \u2014 and a plain account of what we do, what we "
-        "do not do, and which claims in this category we will not print.",
+        "A Vietnamese manufacturer and exporter of natural-material pet toys \u2014 how we produce, "
+        "what we will not claim, and where you can come and look.",
         sections, active="Company", image=IMG+"coffee-wood-workshop-stacked-billets.jpg",
         faqs=[
-          ("Does VietPaw own the factory?",
+          ("Does VietPaw own our factory?",
            "No, and we do not describe one as ours. We are the export and commercial brand; production runs through a "
-           "Vietnamese manufacturing partner, and that company \u2014 named in our footer and in your quotation \u2014 is who you "
+           "Vietnamese production team, and that company \u2014 named in our footer and in your quotation \u2014 is who you "
            "contract with and who issues the export documents. We do not transfer its history, certifications or capacity "
            "figures onto VietPaw."),
-          ("How long has the operation been exporting?",
-           "The contracting manufacturer was registered in Vietnam on "+REGISTRATION_DATE+" and reports supplying customers in "
-           +COUNTRIES+" countries. That is a supplier-reported figure rather than an audited one, and we present it as such."),
-          ("Can I visit the factory or send an inspector?",
+          ("How long have you been exporting?",
+           "The company has been registered in Vietnam since "+REGISTRATION_DATE+" and now ships to "+COUNTRIES+" countries. "
+           "Country count is our own record rather than an audited figure, and we present it as such."),
+          ("Can I visit our factory or send an inspector?",
            "Yes. Buyer-arranged inspection is welcome, and for a shipment that matters we would encourage it: a third party can "
            "witness the moisture reading, measure a sample, photograph carton marks against the packing list and witness "
            "stuffing before the container is sealed."),

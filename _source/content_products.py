@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
-"""Product specifications grounded in the supplied manufacturer product sheets."""
-from common import BASE_URL, BRAND, LEGAL_NAME
+"""Product specifications grounded in our product sheets."""
+from common import BASE_URL, BRAND
 from content_helpers import (publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE,
-                             answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT)
+                             answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT,
+                             INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE, ORDER_TIERS)
 
 COFFEE_SIZES = [
-    ("XS","CC01-XS","10","1.5–2.0","23–30","Under 5 kg"),
-    ("S","CC01-S","13–14","2.0–2.5","35–45","5–10 kg"),
-    ("M","CC01-M","17–18","2.5–3.5","90–110","10–20 kg"),
-    ("L","CC01-L","19–20","3.5–4.5","110–150","20–30 kg"),
-    ("XL","CC01-XL","21–22","4.5–5.5","150–225","30–40 kg"),
-    ("XXL","CC01-XXL","22–23","5.5–7.0","325–450","Over 40 kg"),
+    ("XS","CC01XS","10","1.5–2.0","23–30","Up to 3 kg"),
+    ("S","CC01S","13–14","2.0–2.5","35–45","3–5 kg"),
+    ("M","CC01M","17–18","2.5–3.5","90–110","5–8 kg"),
+    ("L","CC01L","19–20","3.5–4.5","120–180","8–12 kg"),
+    ("XL","CC01XL","21–22","4.5–5.5","230–310","12–20 kg"),
+    ("XXL","CC01XXL","22–23","5.5–7.0","340–440","20 kg and over"),
 ]
 def coffee_size_table():
     return spec_table(
@@ -24,9 +25,9 @@ COFFEE_TOLERANCE = [
     ("Finished moisture","Below 14% before packing","Pin-type meter reading taken on the finished batch and again before the container is sealed. Ask for the reading filed against your lot."),
     ("Length tolerance","±3 mm on the stick line","Applies to the cut length. Diameter follows the natural stem and is controlled by grading into the bands above, not by machining."),
     ("Crack limit","Pieces cracked beyond 2 mm are rejected at grading","Checked on the graded piece, not on a sampled average."),
-    ("Reported reject rate","Roughly one piece in five across the whole process","Supplier-reported figure, concentrated at the seasoning-rack stage. It explains why lead time is driven by graded output rather than raw intake."),
+    ("Reported reject rate","Roughly one piece in five across the whole process","Internally reported figure, concentrated at the seasoning-rack stage. It explains why lead time is driven by graded output rather than raw intake."),
     ("Quality checkpoints","Five, between raw stem and sealed carton","Intake, after seasoning, after shaping, at grading and at the packing bench."),
-    ("Reported monthly output","Around 100,000 coffee wood pieces","Supplier-reported planning figure for the coffee wood line, not capacity reserved for your order."),
+    ("Reported monthly output","Around 100,000 coffee wood pieces","Internal planning figure for the coffee wood line, not capacity reserved for your order."),
 ]
 
 COFFEE_STEPS = [
@@ -55,13 +56,13 @@ COFFEE_STEPS = [
 
 PRODUCTS = {
 "coffee-wood-dog-chew":dict(name="Coffee Wood Dog Chew Stick",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
- image="winvn-coffee-wood-sizes.png",size="XS–XXL; six reference sizes",moq="From 50 pcs per SKU on standard coffee wood sticks.",
+ image="vietpaw-coffee-wood-sizes.png",size="XS–XXL; six reference sizes",moq="From 50 pcs per SKU on standard coffee wood sticks.",
  lede="Six graded sizes of seasoned Robusta coffee stem, packed below 14% moisture with a \u00b13 mm length tolerance. Full specification, carton data and the limits we will not claim \u2014 before you request a sample.",
- overview="The standard stick is described in the manufacturer's product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
+ overview="The standard stick is described in our product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
  options=["Standard stick sizes XS–XXL; natural grain, outline and shade vary.","Laser-engraved brand mark on an agreed area of the wood, with placement approved on a sample.","Coffee wood combined with cotton or hemp rope is a separate construction; specify the rope material rather than describing the whole toy as single-ingredient."],
  checks=["Confirm size, diameter and weight bands against the approved reference sample.","Inspect edges, surface finish and visible cracks; agree unacceptable defects before production.",MOISTURE+" Agree drying, storage and packing requirements, including the measurement method and batch record."]),
 "coconut-fiber-cat-ball":dict(name="Coconut Fiber Cat Ball",material="Coconut fiber",collection="coconut-fiber",group="Coconut Fiber",
- image="winvn-coconut-fiber-balls.jpg",size="Size and diameter selected by sample",moq="Request the current per-size minimum; selected standard lines start from 50 pcs.",
+ image="vietpaw-coconut-fiber-balls.jpg",size="Size and diameter selected by sample",moq="Request the current per-size minimum; selected standard lines start from 50 pcs.",
  lede="A textured coconut-husk fiber ball for supervised batting and chasing. Build a cat-focused assortment with sample-approved dimensions, secure construction and private-label tags.",
  overview="This product uses coconut husk fiber as its headline material. Confirm the full construction, including any core, binding thread, adhesive or decorative attachment, before approving composition and environmental claims. Cat and dog versions should not be treated as interchangeable just because a photo looks similar.",
  options=["Choose the diameter and finished weight for the cat range; no dog-size chart is reused here.","Approve winding, surface texture and any internal or binding components.","Use a branded tag or small paper box; define whether units are sold singly or as a set."],
@@ -73,21 +74,21 @@ PRODUCTS = {
  options=["Specify S, M or L only together with measurable dimensions and an approved sample.","Choose individual, multi-pack or assortment presentation; quote each component of a mixed box.","Private-label tags and box artwork can carry your handling instructions and product identification."],
  checks=["Check diameter, mass, winding consistency and loose fiber against the agreed sample.","Confirm there are no unapproved changes to the core or binding materials.","Review labeling, carton count and moisture protection before shipment."]),
 "hemp-fiber-ball":dict(name="Hemp Fiber Rope Ball",material="Hemp fiber",collection="hemp-fiber",group="Hemp Fiber",
- image="winvn-hemp-fiber-rope-ball.png",size="S: 4–5 cm; M: 6–7 cm; L: 8–9 cm (catalogue reference)",moq="Confirm MOQ by size; selected standard hemp products start from 50 pcs.",
+ image="vietpaw-hemp-fiber-rope-ball.png",size="S: 4–5 cm; M: 6–7 cm; L: 8–9 cm (catalogue reference)",moq="Confirm MOQ by size; selected standard hemp products start from 50 pcs.",
  lede="A wound hemp-fiber ball for supervised interactive play. Compare three catalogue diameter bands and agree fiber composition, knot construction and packaging before ordering.",
- overview="The manufacturer's supplied 2026 catalogue lists hemp balls in three sizes. A ball without a handle and a ball-with-rope are different products: identify the exact construction in the quote. Fiber identity, any blend and all binding components should be declared for the selected item.",
+ overview="Our supplied 2026 catalogue lists hemp balls in three sizes. A ball without a handle and a ball-with-rope are different products: identify the exact construction in the quote. Fiber identity, any blend and all binding components should be declared for the selected item.",
  options=["Catalogue reference diameters: S 4–5 cm, M 6–7 cm, L 8–9 cm; confirm current tolerances.","Choose the standalone ball or discuss a separately specified rope-handle version.","Use branded tags and paper packaging; do not laser-engrave loose fiber as though it were wood."],
  checks=["Compare diameter, finished weight, winding and knots with the approved sample.","Agree an appropriate pull/attachment check for the specific construction; request results if numerical strength is claimed.","Inspect for strand shedding and provide supervised-use instructions."]),
 "loofah-cat-toy":dict(name="Loofah Cat Toy",material="Loofah",collection="loofah",group="Loofah",
- image="winvn-loofah-play-shapes.png",size="Dimensions confirmed per shape",moq="Quoted per shape; ask about small trial quantities and mixed-shape feasibility.",
+ image="vietpaw-loofah-play-shapes.png",size="Dimensions confirmed per shape",moq="Quoted per shape; ask about small trial quantities and mixed-shape feasibility.",
  lede="Lightweight loofah-gourd fiber shaped for supervised cat play. Choose the shape, dimensions and attachments, then approve your sample and private-label packaging.",
- overview="Loofah is the fibrous interior of a dried gourd. The manufacturer's product sheet describes cutting and shaping this material into play forms. Dimensions differ by design, so a fish, mouse or plain roll must each have a specification rather than a single universal size range.",
+ overview="Loofah is the fibrous interior of a dried gourd. Our product sheet describes cutting and shaping this material into play forms. Dimensions differ by design, so a fish, mouse or plain roll must each have a specification rather than a single universal size range.",
  options=["Request available shapes and a dimensioned sample for each chosen SKU.","Specify stitching, decorative parts and any filling as separate components.","Catnip inclusion is an optional development request, not standard contents; confirm source, amount and labeling for the target market."],
  checks=["Check surface cleanliness, dryness, shape consistency and seam or attachment security.","Agree the full component list before describing a finished toy as all-natural or plastic-free.","Match pack warnings to the selected species and construction; this cat page does not establish suitability for every small animal."]),
 "hemp-rope-dog-toy":dict(name="Hemp Rope Dog Toy",material="Hemp fiber",collection="hemp-fiber",group="Hemp Fiber",
- image="winvn-hemp-rope-dog-toy.jpg",size="Length, rope diameter and knot format quoted by design",moq="Project-specific; discuss a trial run and separate packaging minimum.",
+ image="vietpaw-hemp-rope-dog-toy.jpg",size="Length, rope diameter and knot format quoted by design",moq="Project-specific; discuss a trial run and separate packaging minimum.",
  lede="Develop a knotted hemp rope or ball-with-rope toy for supervised tug play. Specify finished length, rope diameter, knot geometry and branding instead of ordering from appearance alone.",
- overview="The manufacturer's supplied product materials describe knotted hemp ropes and hemp ball-with-rope formats. This page covers those rope-based constructions, distinct from the standalone hemp ball. The image is a range reference; your approved physical sample defines the supplied design.",
+ overview="Our product materials describe knotted hemp ropes and hemp ball-with-rope formats. This page covers those rope-based constructions, distinct from the standalone hemp ball. The image is a range reference; your approved physical sample defines the supplied design.",
  options=["Define overall length, strand or rope diameter, handle opening and knot count.","Choose an all-fiber format or a coffee wood combination with every component listed.","Discuss tag attachment, printed sleeves, assortment packs and custom design feasibility."],
  checks=["Agree knot security and an attachment/pull-check method relevant to the intended play.","Check for loose long strands and unintended loops or attachments.","Do not advertise a tensile rating, reinforcement or lifetime durability without design-specific evidence."]),
 }
@@ -98,14 +99,15 @@ IMG = "/assets/img/"
 def coffee_wood_sections(specifications):
     return [
     section("What a coffee wood dog chew actually is",
-        answer("A coffee wood dog chew is a length of seasoned coffee-tree stem, cut to size, shaped and surface-finished into a chew. It contains no coffee beans, no caffeine-bearing cherry, no added flavouring, glue, coating or colouring — the piece your customer opens is one plant material and nothing else.")
-        +p("The wood comes from mature Robusta coffee stems in Vietnam's Central Highlands. Coffee plantations rejuvenate by cutting back old stems so the plant regrows; those stems are a by-product of that agricultural cycle rather than felled forest timber. Because coffee is a crop and not a commercial timber species, it has no entry in standard timber databases, so there is no published Janka hardness or density figure for it. Anyone quoting one is estimating.")
+        answer("A coffee wood dog chew is a length of seasoned coffee-tree stem, cut to size, shaped and surface-finished into a chew. It is cut from the stem wood — not the bean, not the cherry — with no added flavouring, glue, coating, preservative or colouring. The piece your customer opens is one plant material and nothing else.")
+        +p("The wood comes from mature Robusta coffee stems in Vietnam's Central Highlands — Dak Lak, Gia Lai and Dak Nong. Growers take out the trees that have stopped paying their way and leave the rest alone, so these stems are material that already existed and previously went to firewood. Nobody fells a coffee tree that is still yielding cherries. Because coffee is a crop and not a commercial timber species, it has no entry in standard timber databases, so there is no published Janka hardness or density figure for it. Anyone quoting one is estimating.")
+        +p(CAFFEINE)
         +p("Density and grain vary from stem to stem, which is why the size bands below are graded rather than machined, and why two sticks of the same size will not weigh exactly the same. That variation is inherent to the material, not a defect.")
         +media(ul([
             "<strong>One material.</strong> No glue, coating, preservative or colouring in the standard stick.",
-            "<strong>A by-product stream.</strong> Stems come from plantation rejuvenation cutting, not from clearing trees for wood.",
+            "<strong>A by-product stream.</strong> Stems come from trees taken out at the end of their yielding life, not from clearing land for wood.",
             "<strong>Graded, not machined.</strong> Diameter follows the stem; sizes are sorted into bands.",
-            "<strong>Not a food.</strong> It is a chew toy for supervised use, with no nutritional or dental claim attached.",
+            "<strong>Not a food.</strong> It is a chew toy for supervised use, with no nutritional, dental or caffeine claim attached.",
         ]), IMG+"coffee-wood-chew-grain-detail.jpg",
         "Close-up of a finished coffee wood chew stick showing natural grain and surface finish",
         "Finished surface on a single stick. Grain, colour and outline vary between pieces of the same size.")),
@@ -114,14 +116,15 @@ def coffee_wood_sections(specifications):
         specifications+coffee_size_table()
         +"<h3>Measured limits and process figures</h3>"
         +spec_table(["Parameter","Figure","What it means in practice"],COFFEE_TOLERANCE,
-            caption="Process figures reported by the manufacturing partner for the coffee wood line. They describe how the line is run, not a guarantee for an individual piece. Ask for the records filed against your own lot.")
-        +figure(IMG+"coffee-wood-chew-size-range-xs-to-xxl.jpg",
+            caption="Process figures reported by our production team for the coffee wood line. They describe how the line is run, not a guarantee for an individual piece. Ask for the records filed against your own lot.")
+        +p(SIZE_ADVICE)
+        +figure(IMG+"vietpaw-coffee-wood-sizes.png",
             "Six coffee wood chew sticks laid out from XS to XXL with size labels",
             "The six reference sizes side by side. Use the weight column in the table above as a starting point, then confirm the fit on a sample.")
         ,True),
 
     section("How the chew is made",
-        p("Five checkpoints sit between a raw stem and a sealed carton. The sequence below is the part of the process the factory publishes; drying temperatures, cycle times and the order of the drying stages are treated as proprietary and are not disclosed.")
+        p("Five checkpoints sit between a raw stem and a sealed carton. The sequence below is the part of the process we publish; drying temperatures, cycle times and the order of the drying stages are treated as proprietary and are not disclosed.")
         +steps([
             ("Intake and seasoning",
              "Stems arrive by trailer from scattered plots across a collection season and are held before processing — roughly a year, until green, flexible wood has become pale, light and hard.",
@@ -139,7 +142,7 @@ def coffee_wood_sections(specifications):
             ("Moisture check and packing",
              "A pin-type meter reading is taken and photographed for the batch, then pieces are bagged with a desiccant sachet and packed.",
              "A sealed carton with a moisture record attached to the lot.",
-             "A second reading is taken before the container is sealed, because the container voyage — not the factory — is where most mould claims originate."),
+             "A second reading is taken before the container is sealed, because the container voyage — not our factory — is where most mould claims originate."),
         ])
         +'<div class="grid grid-3">'
         +figure(IMG+"coffee-wood-seasoning-racks.jpg","Rows of coffee wood sticks seasoning on factory drying racks","Drying racks. Pieces that will crack usually crack here.")
@@ -158,11 +161,13 @@ def coffee_wood_sections(specifications):
            "The dog has existing dental disease, is a senior, or is a puppy still changing teeth.",
            "The customer wants an edible or digestible chew; this is a toy and is not digestible.",
            "Nobody will be supervising, or the piece is small enough to be swallowed whole."])
-        +p("Two limits are worth stating plainly to your customers, because neither supplier in this category can support the opposite. <strong>Nobody has published test data showing coffee wood cannot splinter</strong> — an independent trainer has documented a stick that began breaking into hard pieces — so \"splinter-free\" is not a claim we make or support. And there is no evidence that the chew cleans teeth, prevents disease or is digestible.")
+        +p(WEAR_BEHAVIOUR)
+        +p("There is also no evidence that the chew cleans teeth, prevents disease or is digestible, so we make none of those claims either.")
         +p(SAFETY),True),
 
     section("How to specify and order",
         steps(COFFEE_STEPS)
+        +p(ORDER_TIERS)
         +p('Comparing it against what you already stock? See <a href="/guides/coffee-wood-vs-antler-nylon-rawhide/">coffee wood versus antler, nylon and rawhide</a>, <a href="/guides/coffee-wood-chew-size-guide/">how to size a chew to the dog</a> and <a href="/guides/how-long-do-coffee-wood-chews-last/">how long a chew actually lasts</a>.')),
 
     section("Branding and packaging",
@@ -184,10 +189,11 @@ def coffee_wood_sections(specifications):
             ("Per pallet / 20 ft / 40 ft","30 cartons / 429 cartons / 850 cartons"),
             ("Port of loading","Cat Lai, Ho Chi Minh City"),
             ("Transit reference","30–35 days port to port, EU or US"),
-            ("Incoterms","EXW, CIF and DAP are quoted; name the place with the term."),
+            ("Incoterms",INCOTERMS),
+            ("Payment",PAYMENT),
             ("Documents","Certificate of Origin, fumigation certificate, phytosanitary certificate, packing list, commercial invoice and bill of lading, subject to destination requirements. Batch moisture readings on request."),
         ], caption="Planning references. Carton counts assume bulk-packed sticks; confirm the figures for your own packed SKU before booking freight.")
-        +p("<strong>The most common mistake in this category is moisture, and it happens at sea rather than at the factory.</strong> A sealed container cools overnight, water condenses on the steel and drips onto the top layers of cargo. Damage concentrated on the top layer and toward the doors points to condensation in transit; bloom spread evenly through the stack, including the middle and bottom, points to goods that were packed wet. Hanging desiccant in the container is inexpensive relative to a claim and is the single most useful addition for a monsoon-season sailing.")
+        +p("<strong>The most common mistake in this category is moisture, and it happens at sea rather than at our factory.</strong> A sealed container cools overnight, water condenses on the steel and drips onto the top layers of cargo. Damage concentrated on the top layer and toward the doors points to condensation in transit; bloom spread evenly through the stack, including the middle and bottom, points to goods that were packed wet. Hanging desiccant in the container is inexpensive relative to a claim and is the single most useful addition for a monsoon-season sailing.")
         +media(ul(["Keep one sealed bag per lot and open it at month six — it tells you whether a later problem came from the shipment or from your own warehouse.",
                    "Store on pallets away from exterior walls and roller shutters, out of direct sun and away from metal-roofed structures.",
                    "Leave bags sealed until the goods go out, and finish an opened bag the same day.",
@@ -203,7 +209,7 @@ def coffee_wood_sections(specifications):
 
 COFFEE_FAQ = [
  ("Is coffee wood safe for dogs?",
-  "It is safe in the sense that the standard stick is a single untreated plant material with no glue, coating, preservative or colouring, and it contains no coffee bean and no caffeine. It is not safe in the sense of being risk-free: it is a hard chew, hard chews can fracture teeth, and any chew can break into pieces that should not be swallowed. Sell it with a supervision instruction and a replace-when-damaged instruction, and size it to the dog."),
+  "It is safe in the sense that the standard stick is a single untreated plant material with no glue, coating, preservative or colouring, cut from stem wood rather than from the bean or cherry. It is not safe in the sense of being risk-free: it is a hard chew, hard chews can fracture teeth, and any chew can break into pieces that should not be swallowed. Sell it with a supervision instruction and a replace-when-damaged instruction, and size it to the dog."),
  ("Does coffee wood splinter?",
   "It can. Neither we nor any other supplier in this category has published test data showing that it cannot, and an independent dog trainer has documented a stick that began breaking into hard pieces during use. We do not use the phrase \u201csplinter-free\u201d and we would advise you not to print it either. What the process does control is cracking: pieces cracked beyond 2 mm are removed at grading."),
  ("How long does one chew last?",
@@ -250,7 +256,7 @@ def build(root):
         schema={"@context":"https://schema.org","@type":"Product","@id":BASE_URL+path+"#product",
             "name":d["name"],"description":d["lede"],"url":BASE_URL+path,"image":BASE_URL+image,
             "material":d["material"],"brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
-            "manufacturer":{"@id":BASE_URL+"/#organization","@type":"Organization","name":LEGAL_NAME}}
+            "manufacturer":{"@id":BASE_URL+"/#organization","@type":"Organization","name":BRAND}}
         coffee = slug=="coffee-wood-dog-chew"
         publish(root,path,
             "Coffee Wood Dog Chew — Sizes, Specification & Wholesale | VietPaw" if coffee

@@ -36,3 +36,27 @@
   window.addEventListener("pageshow", () => closeMenus());
   closeMenus();
 })();
+
+/* Mobile menu toggle: collapsed by default under 1050px so the hero is visible. */
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    nav.classList.toggle('is-open', open);
+  }
+  btn.addEventListener('click', function () {
+    setOpen(btn.getAttribute('aria-expanded') !== 'true');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setOpen(false); btn.focus(); }
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 1050) setOpen(false);
+  });
+})();

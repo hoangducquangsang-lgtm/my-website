@@ -35,6 +35,8 @@ function setup() {
   });
   nav.querySelectorAll = () => menus;
   document.querySelector = selector => selector === ".main-nav" ? nav : null;
+  document.getElementById = () => null;
+  document.addEventListener = document.addEventListener || (() => {});
   vm.runInNewContext(source, { document, window });
   function flush() {
     let limit = 30;
@@ -99,5 +101,5 @@ state.menus[4].open = true;
 state.flush();
 assert.deepEqual(state.open(), [4], "Programmatic toggles use the same exclusivity rule");
 assert.ok(!/window\.open|location\s*=|preventDefault\(\).*click/.test(source));
-vm.runInNewContext(source, { document: { querySelector: () => null } });
+vm.runInNewContext(source, { document: { querySelector: () => null, getElementById: () => null, addEventListener: () => {} }, window: { addEventListener: () => {} } });
 console.log("PASS: exclusive menus, repeated/rapid activation, links, outside clicks, Escape/focus return, keyboard focus, programmatic changes and Back navigation; no browser invoked.");

@@ -19,7 +19,7 @@ from retired_content import assert_retired_files_absent, is_retired_path
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
 GOOGLE_TAG_ID = "G-XTXJ45XN8B"
-EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. Our manufacturer was registered in Vietnam in 2019. Exporting to 40+ countries."
+EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. Producing since 2019 and exporting to 40+ countries."
 EXPECTED_ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
 
 class Document(HTMLParser):
@@ -134,7 +134,7 @@ def run():
         seo_fields += re.findall(r'<meta property="og:(?:title|description)" content="([^"]*)"',html)
         seo_fields += re.findall(r'\salt="([^"]*)"',html)
         check(not any('WINVN' in f.upper() for f in seo_fields),f"{route}: WINVN in SEO title, description or image alt")
-        check('VietPaw is the international B2B/export brand of WINVN INT CO., LTD., a Vietnamese pet-product manufacturer.' in html,f"{route}: footer brand relationship missing")
+        check('WINVN' not in html.upper(),f"{route}: WINVN must not appear anywhere on the page")
         check("sarah.winvn@gmail.com" not in html,f"{route}: superseded email")
         check("Exporting to 30+" not in html,f"{route}: superseded export reach")
         footer=re.search(r'<footer class="site-footer">(.*?)</footer>',html,re.S)
@@ -177,7 +177,7 @@ def run():
                 check(all(x.get("item","").startswith(BASE+"/") for x in items),f"{route}: incomplete breadcrumb")
             if schema.get("@type")=="Product":
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: product brand mismatch")
-                check(schema.get("manufacturer",{}).get("name")=="WINVN INT CO., LTD.",f"{route}: legal manufacturer mismatch")
+                check(schema.get("manufacturer",{}).get("name")=="VietPaw",f"{route}: product manufacturer must be VietPaw")
                 check(schema.get("image","").startswith(BASE+"/assets/"),f"{route}: product image not absolute")
                 check(bool(schema.get("material")),f"{route}: product material missing")
                 check(not any(k in schema for k in ("offers","aggregateRating","review","gtin")),f"{route}: unsupported commercial schema")
@@ -191,8 +191,8 @@ def run():
                 check(schema.get("image")==d.meta.get("og:image"),f"{route}: article social image mismatch")
                 check(schema.get("dateModified")==GUIDE_UPDATED_DATES.get(route.strip("/").split("/")[-1]),f"{route}: article update date mismatch")
             if schema.get("@type")=="Organization":
-                check(schema.get("name")=="WINVN INT CO., LTD.",f"{route}: legal organization mismatch")
-                check(schema.get("legalName")=="WINVN INT CO., LTD.",f"{route}: legal organization name mismatch")
+                check(schema.get("name")=="VietPaw",f"{route}: organization name must be VietPaw")
+                check("legalName" not in schema,f"{route}: schema must not carry a separate legal name")
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: organization brand mismatch")
                 check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
                 check(schema.get("address",{}).get("streetAddress")==EXPECTED_ADDRESS,f"{route}: legal address schema mismatch")
@@ -279,7 +279,7 @@ def run():
     check(docs["/request-a-quote/thank-you/"][1].meta.get("robots")=="noindex,follow","Thank-you page must be noindex")
     for route in ("/products/coffee-wood-dog-chew/","/guides/coffee-wood-chew-size-guide/"):
         text=" ".join(docs[route][1].main_text)
-        for value in ("CC01-XS","CC01-XXL","Under 5 kg","Over 40 kg"):
+        for value in ("CC01XS","CC01XXL","Up to 3 kg","20 kg and over"):
             check(value in text,f"{route}: current reference size data missing {value}")
         check("3–5kg" not in text and "12–20kg" not in text,f"{route}: obsolete size bands")
     forbidden=("minimum 15% / $0.30","What our own AOV data shows","EWX","Trial Box of 3–5","Every material we use is biodegradable","safe when swallowed","no questions asked",

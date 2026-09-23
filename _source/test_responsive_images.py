@@ -13,8 +13,8 @@ from responsive_images import SIZES
 from content_helpers import IMAGE_DESCRIPTIONS
 
 HEMP_IMAGES = {
-    "products/hemp-fiber-ball/index.html": "assets/img/winvn-hemp-fiber-rope-ball.png",
-    "products/hemp-rope-dog-toy/index.html": "assets/img/winvn-hemp-rope-dog-toy.jpg",
+    "products/hemp-fiber-ball/index.html": "assets/img/vietpaw-hemp-fiber-rope-ball.png",
+    "products/hemp-rope-dog-toy/index.html": "assets/img/vietpaw-hemp-rope-dog-toy.jpg",
 }
 
 
@@ -130,7 +130,7 @@ def run(backup, *, check_legacy_copy=False):
             original, _, _ = variants[local_path(ROOT / relative, b["src"])]
             old_original, _, _ = variants[local_path(ROOT / relative, a["src"])]
             if old_original != original:
-                assert old_original == "assets/img/winvn-hemp-wood-assortment.jpg" and original in HEMP_IMAGES.values(), "Unrequested photo change"
+                assert old_original == "assets/img/vietpaw-hemp-wood-assortment.jpg" and original in HEMP_IMAGES.values(), "Unrequested photo change"
                 assert b["alt"] == IMAGE_DESCRIPTIONS[Path(original).name]
                 approved_image_changes += 1
             else:

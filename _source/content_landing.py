@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Commercial landing pages (head-keyword money pages)."""
-from common import page, write_page, rfq_bar, breadcrumb_html, BRAND, BASE_URL, LEGAL_NAME
+from common import page, write_page, rfq_bar, breadcrumb_html, BRAND, BASE_URL
 
 def faq_schema(pairs):
     return {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -23,7 +23,7 @@ def build(root):
 
     faqs = [
         ("Are you a real pet toy manufacturer or a trading company?",
-         "VietPaw is an export and private-label brand working with an established Vietnamese manufacturer. The supplied planning materials describe a three-factory network in Gia Lai, Dak Lak and Ho Chi Minh City with an indicative 5–6 million units per year; these are supplier-reported figures, not audited output. Export documents and certificates are issued under the contracting manufacturer named in your quotation, so you can verify the supply chain independently before ordering."),
+         "VietPaw is an export and private-label brand working with an established Vietnamese manufacturer. The supplied planning materials describe a three-factory network in Gia Lai, Dak Lak and Ho Chi Minh City with an indicative 5–6 million units per year; these are internally reported figures, not audited output. Export documents and certificates are issued under VietPaw named in your quotation, so you can verify the supply chain independently before ordering."),
         ("What is your minimum order quantity (MOQ)?",
          "MOQ starts at 50 pcs per SKU, kept deliberately low so new brands can pilot before scaling. We also offer a Trial Box of 3–5 free samples (you cover shipping, refunded on your first order)."),
         ("Do you offer OEM, ODM and private label?",
@@ -41,7 +41,6 @@ def build(root):
         "@type": "Organization",
         "additionalType": "https://schema.org/Manufacturer",
         "name": "VietPaw",
-        "legalName": LEGAL_NAME,
         "url": f"{BASE_URL}{path}",
         "description": desc,
         "foundingDate": "2018",
@@ -83,7 +82,7 @@ def build(root):
       <p class="eyebrow">A real manufacturer, not a trading middleman</p>
       <h2>Manufacturing natural pet toys in Vietnam since 2018</h2>
     </div>
-    <p>Choosing a pet toys manufacturer is a decision about trust as much as price. VietPaw is the export and private-label brand of <strong>{LEGAL_NAME}</strong>, a Vietnamese natural pet products manufacturer operating three factories in the Central Highlands and Ho Chi Minh City. Because we own production, we control quality, customisation and lead times end to end — and we can prove it with a factory address you can verify, export documents issued under our legal entity, and buyer-arranged audits welcome at any time. If you are sourcing a <strong>natural pet toys manufacturer in Vietnam</strong> for wholesale, OEM/ODM or private label, this page explains exactly what we make, how we work, and how to start.</p>
+    <p>Choosing a pet toys manufacturer is a decision about trust as much as price. VietPaw is a Vietnamese natural pet products manufacturer operating production and finishing sites in the Central Highlands and Ho Chi Minh City. Because we own production, we control quality, customisation and lead times end to end — and we can prove it with a factory address you can verify, export documents issued in our own name, and buyer-arranged audits welcome at any time. If you are sourcing a <strong>natural pet toys manufacturer in Vietnam</strong> for wholesale, OEM/ODM or private label, this page explains exactly what we make, how we work, and how to start.</p>
   </div>
 </section>
 

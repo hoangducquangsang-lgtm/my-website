@@ -6,7 +6,7 @@ SOLUTIONS = [
 ("amazon-sellers","Amazon Sellers","Amazon FBA Pet Product Supplier | Private Label | VietPaw",
  "Private-Label Natural Pet Toys for Amazon FBA Sellers",
  "Develop a natural-material range with pack dimensions, buyer-supplied barcode artwork and a marketplace-specific preparation brief. Confirm the product, costs and shipment plan before production.",
- "warehouse-winvn-boxes.jpg",
+ "pallet-stack-inspection.jpg",
  [("A differentiated assortment","Compare coffee wood, coir, hemp and loofah around a defined use and customer, not a guaranteed ranking or profit claim."),
  ("A measured retail pack","Confirm unit dimensions and weight after packaging, not just the bare toy."),
  ("Shipment preparation","Provide the current marketplace, unit/set rules, barcode files, carton labels and assigned destination."),
@@ -48,7 +48,7 @@ SOLUTIONS = [
 ("eco-pet-shops","Eco Pet Shops","Natural Pet Toys for Eco Retailers | VietPaw",
  "A Natural-Material Range with Specific, Supportable Claims",
  "Build a shelf story around what the product actually contains. Choose natural-material formats, check the entire pack and confirm which sourcing statements you can support.",
- "winvn-loofah-growing.png",
+ "vietpaw-loofah-growing.png",
  [("Specific material stories","Describe coffee wood or coconut-husk fiber without applying an upcycled claim to every product."),
  ("Packaging transparency","Check paper coatings, bag film, inks, thread and adhesives before saying plastic-free."),
  ("Product suitability","Match the design to the intended pet and use; avoid claims that natural means harmless."),
@@ -76,7 +76,7 @@ SOLUTIONS = [
 ("retail-chains","Retail Chains","Natural Pet Toy Supplier for Retail Chains | VietPaw",
  "Natural Pet Toy Supply for Retail-Chain Rollouts",
  "Prepare a consistent product and vendor information pack before expanding store distribution. Align carton configuration, labeling and delivery windows with the chain's requirements.",
- "warehouse-winvn-boxes.jpg",
+ "pallet-stack-inspection.jpg",
  [("Vendor onboarding","Confirm contracting entity, contacts and the retailer's required document set."),
  ("Retail-unit consistency","Control size, packaging dimensions, warnings and barcode artwork."),
  ("Distribution-center handling","Agree master-carton marks, quantities and any required pallet configuration."),
@@ -89,13 +89,15 @@ SOLUTIONS = [
  "wholesale-pet-products"),
 ]
 
+IMG = "/assets/img/"
+
 def build(root):
     publish(root,"/solutions/","Sourcing Solutions for Pet Product Buyers | VietPaw",
         "VietPaw sourcing plans for Amazon sellers, distributors, startup brands, pet brands, eco shops and retail chains.",
         "Sourcing Plans for the Way Your Business Buys",
         "The same material can serve different business models. Choose the buyer route that matches your launch, assortment or replenishment needs.",
         [section("Choose your buying context",cards([(label,lede,"/solutions/"+slug+"/") for slug,label,title,h1,lede,img,features,brief,extra,service in SOLUTIONS])),
-         section("Keep the product specification at the center",p("Every route begins with a product sample, measurable specification and clear commercial scope. Marketplace, importer and retailer requirements should be part of the brief rather than added after production.")+trust_links(),True)],active="Solutions")
+         section("Keep the product specification at the center",p("Every route begins with a product sample, measurable specification and clear commercial scope. Marketplace, importer and retailer requirements should be part of the brief rather than added after production.")+trust_links(),True)],active="Solutions",image=IMG+"warehouse-inspection-clipboard.jpg")
     for slug,label,title,h1,lede,img,features,brief,extra,service in SOLUTIONS:
         sections=[
             section("What your sourcing plan needs to address",cards([(name,desc,"/services/"+service+"/") for name,desc in features],2)),
@@ -127,6 +129,6 @@ def build(root):
             "Project period, destination, product specification and scope of the supplied work.",
             "Sample, production, inspection and shipment evidence linked to the same project.",
             "Measurement definitions and source records for any numerical result.",
-            "Limitations, including factors not controlled by the manufacturer."])),
+            "Limitations, including factors not controlled by our production team."])),
          section("Available now",p('Review <a href="/factory/">production information</a>, <a href="/quality-control/">quality planning</a> and <a href="/certifications/">document scope</a>. Discuss appropriate project references directly with the sales team.'))],
         noindex=True)

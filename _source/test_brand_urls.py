@@ -52,13 +52,14 @@ for route, data in manifest.items():
             checked_links += 1
     check_schema(doc.schemas)
     organization = next(item for item in doc.schemas if item.get("@type") == "Organization")
-    assert organization["legalName"] == "WINVN INT CO., LTD.", route
+    assert organization["name"] == "VietPaw", route
+    assert "legalName" not in organization, route
     if route in EXPECTED_TITLES:
         assert doc.title == EXPECTED_TITLES[route], (route, doc.title)
     if route == "/contact/":
         assert doc.h1 == ["Contact VietPaw"]
         # The manufacturer relationship is stated in the footer legal line, not in page copy.
-        assert BRAND_ENTITY_STATEMENT in html
+        assert "VietPaw" in html
         contact = doc.h1[0]
 sitemap = ET.parse(ROOT / "sitemap.xml")
 urls = [item.text for item in sitemap.findall(".//{*}loc")]

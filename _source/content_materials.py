@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 from content_helpers import (publish, section, p, ul, table, terms, trust_links, SAFETY, MOISTURE,
-                             answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT)
+                             answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT,
+                             INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE)
 from content_products import product_cards
 
 MATERIALS = {
 "coffee-wood":dict(
  title="Coffee Wood Dog Chew Manufacturer | Wholesale | VietPaw",
  h1="Coffee Wood Dog Chews — Wholesale from Vietnam",
- lede="Build a coffee wood range with a Vietnam manufacturing partner: standard chew sticks, custom wood-and-rope constructions and private-label packaging for international buyers.",
- image="winvn-coffee-wood-single.jpg",products=["coffee-wood-dog-chew"],
+ lede="Build a coffee wood range with our own factory in Vietnam: standard chew sticks, custom wood-and-rope constructions and private-label packaging for international buyers.",
+ image="coffee-wood-chew-grain-detail.jpg",products=["coffee-wood-dog-chew"],
  what="Coffee wood chews are shaped pieces of coffee-tree timber, not coffee beans or edible treats. VietPaw's product information identifies mature coffee wood from Gia Lai and describes cutting, bark removal, surface finishing and drying.",
  applications=[("Standard sticks","Start with a focused size assortment using the CC01 reference specification. Each size is a separate ordering decision."),
  ("Wood-and-rope designs","Discuss cotton or hemp rope variants, component declarations and connection checks; they are not single-material sticks."),
@@ -36,7 +37,7 @@ MATERIALS = {
  title="Hemp Pet Toy Manufacturer | Rope & Balls Wholesale | VietPaw",
  h1="Hemp Fiber Pet Toys — Wholesale Rope & Ball Formats",
  lede="Develop a hemp-fiber assortment with standalone balls, knotted ropes and mixed-material designs. Match construction to supervised play and document the approved specification.",
- image="winvn-hemp-wood-assortment.jpg",products=["hemp-fiber-ball","hemp-rope-dog-toy"],
+ image="vietpaw-hemp-wood-assortment.jpg",products=["hemp-fiber-ball","hemp-rope-dog-toy"],
  what="Hemp fiber is a plant fiber used for wound balls and rope constructions in VietPaw's product range. Catalogues identify ball diameter bands, while rope length and knot details are design-specific. Fiber identity and any blends need to be confirmed for the chosen product.",
  applications=[("Standalone balls","The catalogue lists S 4–5 cm, M 6–7 cm and L 8–9 cm diameter bands; confirm current dimensions."),
  ("Tug formats","Define rope length, diameter, handle opening and knot construction on the sample."),
@@ -50,8 +51,8 @@ MATERIALS = {
  title="Loofah Pet Toy Manufacturer | Cat Toys Wholesale | VietPaw",
  h1="Loofah Pet Toys for Wholesale & Private Label",
  lede="Create a lightweight cat-toy range from dried loofah-gourd fiber. Choose shapes, define attachments and approve packaging for your own retail or marketplace brand.",
- image="winvn-loofah-growing.png",products=["loofah-cat-toy"],
- what="Loofah is the fibrous interior of a mature gourd, not a sea sponge. The manufacturer's supplied product sheet describes drying, cutting and shaping the fiber into toy forms. Shape, stitching and filling determine the finished specification.",
+ image="vietpaw-loofah-growing.png",products=["loofah-cat-toy"],
+ what="Loofah is the fibrous interior of a mature gourd, not a sea sponge. Our supplied product sheet describes drying, cutting and shaping the fiber into toy forms. Shape, stitching and filling determine the finished specification.",
  applications=[("Cat play shapes","Discuss fish, mouse or other available shapes, with each design measured separately."),
  ("Brand-specific designs","Provide a drawing, target dimensions and attachment restrictions for an OEM/ODM feasibility review."),
  ("Catnip or other filling","Treat filling as an optional, separately specified component with its own source and labeling needs.")],
@@ -73,14 +74,14 @@ DEEP["coffee-wood"] = dict(
  title="Coffee Wood Dog Chews — Material, Process & Wholesale | VietPaw",
  h1="Coffee Wood for Dog Chews",
  lede="Seasoned Robusta coffee stem from Vietnam's Central Highlands, graded into six sizes and packed below 14% moisture. What the material is, how it is processed, and what it cannot be claimed to do.",
- image=IMG+"coffee-wood-chew-size-range-xs-to-xxl.jpg",
+ image=IMG+"vietpaw-coffee-wood-sizes.png",
  blocks=lambda: [
   section("What coffee wood is",
-    answer("Coffee wood is the woody stem of the coffee plant — in our case mature Robusta grown in Vietnam's Central Highlands. It is not coffee bean, not cherry, and carries no caffeine into the finished chew. Coffee plantations cut old stems back so the plant regrows, and those stems are the raw material, which makes this a by-product of an agricultural cycle rather than harvested forest timber.")
+    answer("Coffee wood is the woody stem of the coffee plant — in our case mature Robusta grown in Vietnam's Central Highlands, principally Dak Lak, Gia Lai and Dak Nong. Growers take out the trees that have stopped paying their way and leave the rest alone, so the stems reaching us are material that already existed and previously had a low-value use as firewood. Nobody fells a coffee tree that is still yielding cherries, and no forest is cleared for this product.")
     +p("One consequence matters for anyone writing product copy: coffee is a crop, not a commercial timber species, so it has no entry in the timber databases that publish density and Janka hardness. Olive wood, by contrast, has both (roughly 980 kg/m³ dried and around 2,710 lbf). If you see a hardness figure quoted for coffee wood, it is an estimate rather than a measurement.")
     +media(p("What we can describe is what the material does on the line. Green stems are heavy, dark and flexible; after their holding period — roughly a year — the same stems are pale, light and hard. Density still varies stem to stem, which is why sizes are graded into bands rather than machined to a number, and why two sticks of the same size will not weigh the same.")
            +ul(["Single untreated plant material in the standard stick: no glue, coating, preservative or colouring.",
-                "Sourced from Gia Lai and Dak Lak in the Central Highlands.",
+                "Sourced from Dak Lak, Gia Lai and Dak Nong in the Central Highlands.",
                 "Graded into six diameter bands, XS to XXL.",
                 "Packed below 14% moisture, with the reading recorded per batch."]),
            IMG+"coffee-stem-diameter-caliper-check.jpg",
@@ -88,7 +89,7 @@ DEEP["coffee-wood"] = dict(
            "Stem diameter is checked at source. It sets which size band a piece can become — the stem decides, not the machine.")),
 
   section("From plantation to sealed carton",
-    p("Five checkpoints sit between a raw stem and a sealed carton. The factory publishes the sequence but treats drying temperatures, cycle times and the order of the drying stages as proprietary, so those are not stated here or anywhere else.")
+    p("Five checkpoints sit between a raw stem and a sealed carton. We publish the sequence but treats drying temperatures, cycle times and the order of the drying stages as proprietary, so those are not stated here or anywhere else.")
     +steps([
       ("Collection and holding",
        "Stems are lifted by hand onto trailers at the plantation edge and arrive from many scattered plots across a collection season.",
@@ -103,14 +104,14 @@ DEEP["coffee-wood"] = dict(
        "Most of the process rejection happens here — pieces that were going to crack crack on the rack."),
       ("Grading",
        "Pieces are sorted into diameter bands; anything cracked beyond 2 mm is pulled.",
-       "Graded stock per size, with a supplier-reported reject rate of roughly one piece in five overall."),
+       "Graded stock per size, with an internally reported reject rate of roughly one piece in five overall."),
       ("Moisture check and packing",
        "A pin-type meter reading is taken and photographed for the batch, pieces are bagged with a desiccant sachet, and carton marks are checked against the packing list.",
        "A sealed carton whose marks and moisture record match the paperwork."),
     ])
     +'<div class="grid grid-3">'
     +figure(IMG+"coffee-wood-workshop-stacked-billets.jpg","Workshop interior with stacked coffee wood billets and a worker at a bench","Seasoned billets waiting to be cut. The holding period is roughly a year.")
-    +figure(IMG+"coffee-wood-chew-finishing-bench.jpg","Row of workers shaping and finishing coffee wood chew sticks at benches","Shaping and surface finishing. The factory does not publish machine or timing detail.")
+    +figure(IMG+"coffee-wood-chew-finishing-bench.jpg","Row of workers shaping and finishing coffee wood chew sticks at benches","Shaping and surface finishing. We do not publish machine or timing detail.")
     +figure(IMG+"coffee-wood-drying-rack-rows.jpg","Rows of coffee wood sticks laid out on drying racks","Drying racks, where most rejections occur.")
     +"</div>",True),
 
@@ -133,19 +134,21 @@ DEEP["coffee-wood"] = dict(
          "The brief calls for an edible or digestible chew; this is a toy.",
          "You need small, frequent reorders into the EU — that is where a locally sourced wood has a genuine logistics advantage.",
          "The listing needs a certified biodegradability or dental-health claim, which no supplier in this category can currently support."])
-    +p("Two claims circulate in this category that we will not print. <strong>\"Splinter-free\"</strong> has no test data behind it from any supplier, and an independent trainer has documented a coffee wood stick breaking into hard pieces in use. <strong>Dental and digestibility benefits</strong> have no evidence for this material either. What the process does control is cracking at grading and moisture at packing, and those are the things we can show you records for.")
+    +p(WEAR_BEHAVIOUR)
+    +p("<strong>Dental and digestibility benefits</strong> have no evidence for this material and we publish neither. What the process does control is cracking at grading and moisture at packing, and those are records we can show you.")
+    +p(CAFFEINE)
     +p(SAFETY),True),
 
   section("Shipping this material",
     p(CARTON)+p(SEA_TRANSIT)
-    +p("Wood ships with moisture risk attached, and the risk is concentrated in the container rather than in the factory. A sealed box cools overnight, water condenses on the steel and drips onto the top of the cargo. Damage on the top layer and toward the doors points to condensation in transit; bloom spread evenly through the stack points to goods packed wet. Hanging desiccant is cheap relative to a claim and is the single most useful addition for a monsoon-season sailing.")
+    +p("Wood ships with moisture risk attached, and the risk is concentrated in the container rather than in our factory. A sealed box cools overnight, water condenses on the steel and drips onto the top of the cargo. Damage on the top layer and toward the doors points to condensation in transit; bloom spread evenly through the stack points to goods packed wet. Hanging desiccant is cheap relative to a claim and is the single most useful addition for a monsoon-season sailing.")
     +p('The HS code commonly used is 4421.99 — confirm the classification with your own broker. Per-shipment documents cover Certificate of Origin, fumigation and phytosanitary certificates; these are issued against the shipment and cannot be produced afterwards. See <a href="/certifications/">testing and export documents</a>.')),
  ],
  faqs=[
   ("Is coffee wood a sustainable material?",
-   "It is a by-product of plantation rejuvenation: coffee growers cut old stems back so the plant regrows, and those stems become the raw material. That is a genuine material-reuse story and it is the one we tell. It is not the same as a certified biodegradability claim or a carbon claim, and we do not publish either — the finished toy, the bag, the box and any ink would all have to be assessed together for that."),
+   "It is a by-product of replanting: growers take out the coffee trees that have stopped paying their way, and those stems — which previously went to firewood or were burned off — become our raw material. Nobody fells a tree that is still yielding cherries and no forest is cleared, so the material-reuse story is a real one and it is the one we tell. It is not the same as a certified biodegradability claim or a carbon claim, and we publish neither: the finished toy, the bag, the box and any ink would all have to be assessed together for that."),
   ("Where does the wood come from?",
-   "Mature Robusta coffee stems from Vietnam's Central Highlands, principally Gia Lai and Dak Lak. Stems arrive by trailer from many scattered smallholder plots across a collection season rather than in container loads, which is why availability follows the agricultural calendar."),
+   "Mature Robusta coffee stems from Vietnam's Central Highlands — principally Dak Lak, Gia Lai and Dak Nong. Stems are cut to billets of roughly 50 to 70 cm in the field, then held for about a year in ventilated shade before machining. They arrive by trailer from many scattered smallholder plots across a collection season rather than in container loads, which is why availability follows the agricultural calendar."),
   ("What moisture content is the wood at?",
    "Below 14% before packing, measured with a pin-type meter and photographed per batch, then read again before the container is sealed. Below roughly 20% is the general threshold under which common mould and decay organisms cannot establish in timber, so the packing figure carries real margin — provided the goods stay dry in transit."),
   ("Why is diameter given as a range rather than a number?",
@@ -160,7 +163,7 @@ DEEP["coconut-fiber"] = dict(
  title="Coconut Fiber (Coir) Pet Toys — Material & Wholesale | VietPaw",
  h1="Coconut Fiber for Pet Toys",
  lede="Coir from the coconut husk, wound into textured balls for cats and dogs. What the material gives you, what has to be declared beyond the fiber, and how to specify a ball you can reorder.",
- image="/assets/img/winvn-coconut-fiber-balls.jpg",
+ image="/assets/img/vietpaw-coconut-fiber-balls.jpg",
  blocks=lambda: [
   section("What coconut fiber is",
     answer("Coconut fiber — coir — is the coarse fiber from the husk that surrounds a coconut. For pet toys it is cleaned, dried and wound into a dense textured ball. It is a by-product of coconut processing: the husk is waste from the food and oil trade, so the fiber is a genuine reuse stream rather than a crop grown for toys.")
@@ -234,7 +237,7 @@ DEEP["hemp-fiber"] = dict(
  title="Hemp Fiber Rope & Ball Pet Toys — Material & Wholesale | VietPaw",
  h1="Hemp Fiber for Rope and Ball Toys",
  lede="Wound hemp balls, knotted rope and wood-and-rope constructions. How to specify a rope toy by geometry and knot rather than by appearance, and what a fiber name does and does not tell you.",
- image=IMG+"hemp-rope-double-knot-wood-block.jpg",
+ image=IMG+"cotton-rope-coffee-wood-dumbbell.jpg",
  blocks=lambda: [
   section("What hemp fiber is",
     answer("Hemp fiber is the bast fiber from the stem of the industrial hemp plant, spun into cord and then wound into balls or knotted into rope toys. It is a textile fiber, not a CBD product, not an antimicrobial treatment and not a dental product — the finished toy carries none of those properties and we do not claim them.")
@@ -249,7 +252,7 @@ DEEP["hemp-fiber"] = dict(
       ("Wood and rope","A coffee wood block joined to rope","Every component listed separately: wood size, rope fiber and diameter, and the connection itself."),
     ], caption="A photograph shows the silhouette. These four are separate products with separate specifications, minimums and approval paths.")
     +'<div class="grid grid-3">'
-    +figure(IMG+"hemp-rope-double-knot-wood-block.jpg","Coffee wood block with knotted hemp rope at both ends on a light background","Wood and rope: three things to approve — the wood, the cord and the join.")
+    +figure(IMG+"cotton-rope-coffee-wood-dumbbell.jpg","Coffee wood block with knotted hemp rope at both ends on a light background","Wood and rope: three things to approve — the wood, the cord and the join.")
     +figure(IMG+"hemp-rope-loop-coffee-wood-toy.jpg","Knotted rope loop attached to a coffee wood block","A rope loop changes the play pattern and the failure point.")
     +figure(IMG+"cotton-rope-coffee-wood-dumbbell.jpg","Coffee wood cylinder with white cotton rope knots at each end","Cotton cord, not hemp. This is exactly the distinction a listing has to get right.")
     +"</div>",True),

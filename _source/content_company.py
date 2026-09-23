@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, BRAND_ENTITY_STATEMENT, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS, social_html
 from content_helpers import answer, fit, steps, spec_table, figure, media  # noqa: F401
+IMG = "/assets/img/"
 from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
 from content_materials import MATERIALS
 from forms import quote_form, catalogue_form
@@ -23,7 +24,7 @@ def build(root):
             "Product tags, size labels, paper/kraft boxes and pack artwork.",
             "Wood-and-rope combinations, rope geometry and loofah shapes, subject to feasibility.",
             "Product photography or video support by agreement; scope and cost depend on the project."])+
-            p(f'The manufacturer describes these services in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
+            p(f'Our production team describes these services in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
          section("Before approving a sample",ul([
             "Agree materials, dimensions, tolerances and intended pet/use.",
             "List every component, including thread, cores, adhesive and packaging film.",
@@ -38,10 +39,10 @@ def build(root):
         "Four Natural Materials for Your Pet Toy Range",
         "Start with the material and intended play type, then verify the complete construction. A natural ingredient is the beginning of a sourcing decision, not a finished-product certification.",
         [section("Explore the material collections",cards([
-            ("Coffee Wood","Mature coffee-tree timber for shaped chew sticks.","/collections/coffee-wood/","/assets/img/winvn-coffee-wood-single.jpg"),
+            ("Coffee Wood","Mature coffee-tree timber for shaped chew sticks.","/collections/coffee-wood/","/assets/img/coffee-wood-chew-grain-detail.jpg"),
             ("Coconut Fiber","Coconut-husk fiber for textured balls and coir formats.","/collections/coconut-fiber/","/assets/img/product-coconut-fiber-raw.jpg"),
-            ("Hemp Fiber","Plant fiber used in wound balls and rope constructions.","/collections/hemp-fiber/","/assets/img/winvn-hemp-wood-assortment.jpg"),
-            ("Loofah","Dried gourd fiber cut and shaped for lightweight toys.","/collections/loofah/","/assets/img/winvn-loofah-growing.png")],4)+p(RANGE_SCOPE)),
+            ("Hemp Fiber","Plant fiber used in wound balls and rope constructions.","/collections/hemp-fiber/","/assets/img/vietpaw-hemp-wood-assortment.jpg"),
+            ("Loofah","Dried gourd fiber cut and shaped for lightweight toys.","/collections/loofah/","/assets/img/vietpaw-loofah-growing.png")],4)+p(RANGE_SCOPE)),
          section("Read the full bill of materials",p("Request the primary material, core, binding thread, adhesive, filling, decoration and any surface treatment for the selected product. A wood stick with a rope is not the same construction as a plain stick, and a loofah shape with filling is not the same as a plain cut piece.")+
             p("The retail pack needs its own material list. Paper boxes can include coatings or windows; vacuum bags are not automatically plastic-free.")+
             p('<a href="/sustainability/">Read the material-claim approach</a> and <a href="/certifications/">testing/document scope</a>.'),True),
@@ -78,7 +79,7 @@ def build(root):
             "Report number, date and issuing organization, plus permission to verify the report.",
             "A shipment-linked document checklist, with responsibility for obtaining each item.",
             "Written claim-handling, inspection and acceptance terms rather than an assumed blanket replacement promise."])+trust_links(),True)],
-        active="Manufacturing",image="/assets/img/export-packed-box.jpg",
+        active="Manufacturing",image=IMG+"container-seal-applied.jpg",
         faqs=[("Does every order automatically include every certificate?", "No. Document applicability, availability, cost and timing are confirmed for the shipment."),
               ("Can I arrange an independent factory or shipment inspection?", "Discuss the proposed scope, inspector, access and schedule with us before production or dispatch."),
               ("Are historical sample documents proof for my order?", "No. Verify the entity, product scope, dates and shipment linkage; examples and templates are not current certificates.")])
@@ -126,17 +127,17 @@ def build(root):
             p("Payment schedule, inspection acceptance and handling of defective goods belong in the written order agreement. This page does not set an automatic credit, refund or replacement entitlement.")),
          section("For reorders",p("Keep the approved sample/version, product codes, artwork, carton configuration and inspection criteria together. Confirm material or packaging changes before repeat production. Share a rolling forecast with required delivery dates rather than relying on an annual capacity headline.")+
             p('<a href="/solutions/wholesalers/">Distributor reorder planning</a> · <a href="/solutions/retail-chains/">Retail-chain supply preparation</a>'),True)],
-        active="Company")
+        active="Company",image=IMG+"inspection-documents-at-pallets.jpg")
     publish(root,"/wholesale-catalogue/","VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
-        "Download the manufacturer’s supplied pet toy catalogue and contact VietPaw for current specifications, prices, MOQ and private-label terms.",
+        "Download the VietPaw pet toy catalogue and contact us for current specifications, prices, MOQ and private-label terms.",
         "Wholesale Pet Toy Catalogue",
-        "Explore the VietPaw range. Use the manufacturer’s catalogue as a visual reference, then confirm the current range and terms with Sarah.",
+        "Explore the VietPaw range. Use the catalogue as a visual reference, then confirm current specifications and terms with Sarah.",
         [section("Download instantly. Ask for pricing when you need it.",
-            '<div class="grid grid-2"><div><p><a class="btn btn-primary" href="/assets/downloads/winvn-wholesale-catalogue.pdf">Download Catalogue (PDF)</a></p>'+
-            p("This download is the original supplied manufacturer catalogue; its artwork has not been rebranded as VietPaw. It is not a newly certified product specification or live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
+            '<div class="grid grid-2"><div><p><a class="btn btn-primary" href="/assets/downloads/vietpaw-wholesale-catalogue.pdf">Download Catalogue (PDF)</a></p>'+
+            p("This catalogue is a visual reference, not a certified product specification or a live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
             p("No email is required to download. If you would like current MOQ and pricing, use the optional form alongside the catalogue. We use those details to reply to your request, not to subscribe you to a newsletter.")+'</div><div>'+catalogue_form()+'</div></div>'),
          section("Send the product references you want quoted",p("Include the catalogue item or photo reference, dimensions, quantity per SKU, destination and packaging requirements. The approved sample and written quote take precedence over catalogue examples.")+
-            p('<a href="/products/coffee-wood-dog-chew/">Coffee wood reference specifications</a> · <a href="/collections/hemp-fiber/">Hemp collection</a> · <a href="/request-a-quote/">Request current pricing</a>'),True)],active="Company")
+            p('<a href="/products/coffee-wood-dog-chew/">Coffee wood reference specifications</a> · <a href="/collections/hemp-fiber/">Hemp collection</a> · <a href="/request-a-quote/">Request current pricing</a>'),True)],active="Company",image=IMG+"container-wall-of-cartons.jpg")
     build_rfq(root)
     contact_sections=[
       section("How to reach VietPaw",
@@ -191,7 +192,7 @@ def build(root):
         "Contact VietPaw",
         "Email, WhatsApp or a structured enquiry \u2014 and the four lines of information that turn a first message "
         "into a same-day quotation.",
-        contact_sections, active="Company", image="/assets/img/coffee-wood-chew-sizes-in-hand.jpg",
+        contact_sections, active="Company", image="/assets/img/coffee-wood-chew-size-row.jpg",
         faqs=[
           ("How quickly will I get a reply?",
            "Normally within one business day. Vietnam is UTC+7, so a message sent at the end of a European working day is "
@@ -205,7 +206,7 @@ def build(root):
           ("Do you work with small buyers and new brands?",
            "Yes. Selected standard SKUs start at 50 pcs, and laser engraving also starts at 50 pcs, so a small branded trial "
            "is possible before committing to the 500 pcs printed-packaging minimum."),
-          ("Can I visit the factory?",
+          ("Can I visit our factory?",
            "Yes, by arrangement. Confirm the current site and the contact for your product line in advance. Buyer-appointed "
            "third-party inspection is also welcome and we would encourage it for a first container."),
           ("What languages do you work in?",

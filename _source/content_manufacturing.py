@@ -9,7 +9,7 @@ def build(root):
         "Natural Pet Toy Manufacturer in Vietnam for B2B Brands",
         "Source coffee wood, coconut fiber, hemp and loofah pet toys through VietPaw with product specifications, production checks and order-specific documentation.",
         [section("A Vietnam manufacturing brief, not just a product list",
-            p("Our manufacturer produces natural pet products in Vietnam for wholesale and private-label customers. Coffee wood sourcing is centered on the Central Highlands, with export coordination through Ho Chi Minh City. Our product range also includes coconut fiber, hemp fiber and loofah.")+
+            p("Our operation, produces natural pet products in Vietnam for wholesale and private-label customers. Coffee wood sourcing is centered on the Central Highlands, with export coordination through Ho Chi Minh City. Our product range also includes coconut fiber, hemp fiber and loofah.")+
             p("For your order, confirm the actual production location, the approved product specification and the company named in the contract. A manufacturer description should lead to verifiable project details, not replace them.")),
          section("Natural materials we manufacture",cards([
             ("Coffee wood dog chews","Standard sticks and specification-led wood/rope combinations.","/collections/coffee-wood/"),
@@ -29,7 +29,7 @@ def build(root):
             p('<a href="/how-to-order/">Review the order sequence</a> and <a href="/request-a-quote/">send a manufacturing enquiry</a>.'))],
         active="Manufacturing",image="/assets/img/process-raw-sticks.jpg",
         faqs=[("Do you serve international brands and importers?", "The offer is designed for wholesale buyers, pet brands, retailers and marketplace sellers. Quote the destination and product requirements for your order."),
-              ("Where can I verify the factory?", "Use the factory page as an overview, then request current site details, a walkthrough and project-specific inspection arrangements."),
+              ("Where can I verify our factory?", "Use our factory page as an overview, then request current site details, a walkthrough and project-specific inspection arrangements."),
               ("What is the starting MOQ?", "Selected standard products start from 50 pcs per SKU. Custom constructions, dimensions and packaging minimums are confirmed separately.")])
     publish(root,"/services/oem-odm-pet-toy-manufacturing/","OEM & ODM Pet Toy Manufacturing in Vietnam | VietPaw",
         "Develop custom natural pet toys with VietPaw: specification review, prototypes, material selection, packaging and production approval in Vietnam.",
@@ -37,7 +37,7 @@ def build(root):
         "Turn a drawing or product idea into an agreed manufacturing specification. Start with intended use, materials and dimensions, then work through prototype and production approval.",
         [section("OEM or ODM: define the scope first",table(["Route","Starting point","Approval focus"],[
             ("OEM","Your defined design/specification","Feasibility, tolerances and conformance to your brief"),
-            ("ODM","A design developed or adapted with the manufacturer","Prototype, construction, ownership and final specification"),
+            ("ODM","A design developed or adapted with our production team","Prototype, construction, ownership and final specification"),
             ("Private label","An existing approved design","Branding and packaging rather than structural development")])+
             p("These terms are used differently by suppliers. The written scope, deliverables and approvals matter more than the label.")),
          section("Natural-material development options",ul([
@@ -45,7 +45,7 @@ def build(root):
             "Coconut fiber: ball dimensions, winding or other coir constructions.",
             "Hemp: rope geometry, knots, balls and connection details.",
             "Loofah: silhouette, dimensions, stitching and optional fillings."])+
-            p(f'The manufacturer outlines design and packaging options in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand for these enquiries. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
+            p(f'Our production team outlines design and packaging options in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand for these enquiries. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
          section("The development and approval sequence",ul([
             "<strong>Brief review:</strong> target pet, play context, destination, intended claims and indicative volume.",
             "<strong>Feasibility:</strong> material availability, workable dimensions, manufacturing method and cost drivers.",
@@ -119,7 +119,7 @@ def build(root):
             p("Volume pricing depends on product mix and packaging efficiency. Ask for relevant quantity breaks rather than assuming the same discount tiers for wood sticks, hand-shaped loofah and printed boxes.")+
             p('<a href="/solutions/wholesalers/">Distributor supply planning</a> and <a href="/solutions/retail-chains/">retail-chain preparation</a> address recurring orders and rollout needs.')),
          section("Samples and repeat orders",terms()+p("Keep an approved sample, artwork version and carton configuration for reorders. A production change should be reviewed before it becomes a receiving-quality problem.")+trust_links(),True)],
-        active="Manufacturing",image="/assets/img/warehouse-winvn-boxes.jpg",
+        active="Manufacturing",image="/assets/img/pallet-stack-inspection.jpg",
         faqs=[("Is there a universal wholesale price list?", "Request current pricing for the actual product, quantities and pack. Catalogue examples are not binding quotations."),
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
@@ -128,15 +128,15 @@ def build(root):
         "Factory Review for Your VietPaw Order",
         "Understand where and how your selected product is made. Use the supplier information below to prepare a current, product-specific factory review.",
         [section("Production locations and capacity: what the sources say",
-            p("VietPaw helps buyers plan product-specific production and factory checks. Registration details of the contracting manufacturer are confirmed in your quotation and export documents. The supplied manufacturer planning materials describe a three-factory network and indicative capacity of 5–6 million units per year. These are supplier-reported planning figures, not an audited measurement of current output or the capacity reserved for your order.")+
+            p("VietPaw helps buyers plan product-specific production and factory checks. Registration details of VietPaw are confirmed in your quotation and export documents. Our internal planning figures describe a three-factory network and indicative capacity of 5–6 million units per year. These are internal planning figures, not an audited measurement of current output or the capacity reserved for your order.")+
             p("Company sources describe Central Highlands production and sourcing, together with southern warehousing/export operations. Published location descriptions differ between documents and webpages. Confirm the exact site, current address and manufacturing role for your selected SKU before a visit or audit.")+
             p("Do not equate an office, warehouse, partner workshop and owned production facility. Ask which stages happen at each location and whether any work is subcontracted.")),
          section("Coffee wood drying and quality protocol",
             p("Coffee wood follows a "+QC_PROTOCOL+". The six stages describe the drying/quality protocol; the five checkpoints are inspection controls within that process, not a separate five-stage manufacturing sequence.")+
             p(MOISTURE)+
-            p('The factory keeps its operating parameters confidential; the published figure is the finished-batch moisture threshold, not the drying recipe. Ask for the moisture record linked to your order; no drying temperature, cycle time or unpublished stage sequence is asserted here.'),True),
+            p('We keep its operating parameters confidential; the published figure is the finished-batch moisture threshold, not the drying recipe. Ask for the moisture record linked to your order; no drying temperature, cycle time or unpublished stage sequence is asserted here.'),True),
          section("Process and warehouse references",
-            '<div class="grid grid-3"><figure><img src="/assets/img/process-raw-sticks.jpg" alt="Raw coffee wood preparation reference" loading="lazy"><figcaption>Raw material reference.</figcaption></figure><figure><img src="/assets/img/winvn-moisture-check-kiem-go-9.jpg" alt="Coffee wood moisture measurement reference" loading="lazy"><figcaption>Moisture-check reference.</figcaption></figure><figure><img src="/assets/img/warehouse-winvn-boxes.jpg" alt="Packed VietPaw carton reference" loading="lazy"><figcaption>Packed-carton reference.</figcaption></figure></div>'+
+            '<div class="grid grid-3"><figure><img src="/assets/img/process-raw-sticks.jpg" alt="Raw coffee wood preparation reference" loading="lazy"><figcaption>Raw material reference.</figcaption></figure><figure><img src="/assets/img/vietpaw-moisture-check.jpg" alt="Coffee wood moisture measurement reference" loading="lazy"><figcaption>Moisture-check reference.</figcaption></figure><figure><img src="/assets/img/pallet-stack-inspection.jpg" alt="Packed VietPaw carton reference" loading="lazy"><figcaption>Packed-carton reference.</figcaption></figure></div>'+
             p("Images are from the supplied website asset library and show process/range references. They are not dated evidence of current capacity, equipment ownership or the status of a particular order.")),
          section("What to request in a factory verification pack",ul([
             "Current company registration and site details matching the proposed contract.",
@@ -150,7 +150,7 @@ def build(root):
         faqs=[("Is annual capacity a guaranteed order lead time?", "No. Capacity depends on the product mix, material availability, packing work and production schedule."),
               ("Can I arrange a factory visit?", "Request the current site address, contact, scope and appointment before traveling. Confirm whether a third-party inspection is needed.")])
     publish(root,"/quality-control/","Pet Toy Quality Control | VietPaw",
-        "Coffee wood follows a six-stage drying/quality protocol with five QC checkpoints. Review batch moisture below 14% before packing and inspection records.",
+        "Coffee wood follows our drying and quality protocol with five QC checkpoints. Review batch moisture below 14% before packing and inspection records.",
         "Quality Control for Natural Pet Toy Orders",
         "Coffee wood follows a "+QC_PROTOCOL+". Use an approved sample, agreed acceptance criteria and batch-linked records to review your order.",
         [section("Six process stages and five QC checkpoints",
@@ -162,7 +162,7 @@ def build(root):
             ("Semi-finished","Dimensions, assembly and consistency before final work","Intermediate measurements and correction record"),
             ("Final product","Finish, attachment security, sample match and packaging","Finished-product inspection results"),
             ("Pre-shipment","Order count, labels, cartons and shipment-document match","Release check and agreed shipment inspection")])+
-            p("These are buyer review areas, not a disclosure of the six-stage protocol or the exact placement of its five checkpoints. Adapt the checklist to wood, coir, hemp or loofah and confirm the inspection plan for the chosen product.")),
+            p("These are buyer review areas, not a disclosure of the drying sequence or the exact placement of the five checkpoints. Adapt the checklist to wood, coir, hemp or loofah and confirm the inspection plan for the chosen product.")),
          section("Material-specific checks",table(["Product","Priority checks"],[
             ("Coffee wood sticks","Dimension bands, visible cracks, edge finish and agreed moisture measurement"),
             ("Coir balls","Winding, diameter, loose fiber, core and binding components"),
@@ -180,4 +180,4 @@ def build(root):
             "Hold/rework/rejection process and written receiving/claim terms."])+
             p("Do not use the phrase SGS-certified as a substitute for a report with a named product, method, date and scope. Inspection, laboratory testing and shipment documentation serve different purposes.")+
             p('<a href="/certifications/">Understand testing and export documents</a> or <a href="/services/oem-odm-pet-toy-manufacturing/">include QC in an OEM brief</a>.'),True)],
-        active="Manufacturing",image="/assets/img/winvn-moisture-check-kiem-go-9.jpg")
+        active="Manufacturing",image="/assets/img/vietpaw-moisture-check.jpg")

@@ -20,16 +20,21 @@ GOOGLE_TAG_HTML = f"""<!-- Google tag (gtag.js) -->
   gtag('config', '{GOOGLE_TAG_ID}');
 </script>"""
 BRAND = "VietPaw"
-LEGAL_NAME = "WINVN INT CO., LTD."
-BRAND_TAGLINE = f"by {LEGAL_NAME}"
-BRAND_ENTITY_STATEMENT = f"{BRAND} is the international B2B/export brand of {LEGAL_NAME}"
-BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, a Vietnamese pet-product manufacturer."
-BRAND_INTRO = f"{BRAND} brings natural-material pet toys from Vietnam to international brands, wholesalers and retailers."
-# Current audit brief: VietPaw is the site brand; the manufacturer is identified in legal contexts.
+BRAND_TAGLINE = "Natural Pet Products"
+BRAND_ENTITY_STATEMENT = f"{BRAND} is a Vietnamese manufacturer and exporter of natural-material pet toys"
+BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, producing and shipping from its own facilities in Vietnam."
+BRAND_INTRO = f"{BRAND} manufactures natural-material pet toys in Vietnam and exports them to brands, wholesalers and retailers worldwide."
+# Production and finishing sites. Street addresses are published only where confirmed.
+SITES = [
+    ("Head office, warehouse and export preparation",
+     "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"),
+    ("Coffee wood production and finishing", "Gia Lai province, Central Highlands, Vietnam"),
+    ("Coffee wood production and finishing", "Dak Lak province, Central Highlands, Vietnam"),
+]
+# Current audit brief: VietPaw is the site brand; our production team is identified in legal contexts.
 # The contracting entity is named once per page, in the footer legal line.
-CONTRACT_NOTICE = ("Orders are contracted with the Vietnamese manufacturing company named in the footer of this site. "
-                   "Confirm its registered details, the payment beneficiary and the agreed terms in your quotation, "
-                   "invoice and contract before placing an order.")
+CONTRACT_NOTICE = ("Company registration details, the payment beneficiary and the agreed terms are set out in your "
+                   "quotation, invoice and contract. Ask for them in writing before placing an order — with any supplier.")
 # Contact and export reach supplied directly by the site owner on 2026-08-30.
 PHONE = "+84 906 111 016"
 PHONE_TEL = "+84906111016"
@@ -129,8 +134,7 @@ def footer_html():
 <div class="wrap footer-grid">
 <div class="footer-brand"><div class="footer-logo">{BRAND}</div>
 <p class="footer-brand-tagline"><em>Natural Pet Products</em></p>
-<p class="footer-legal">{BRAND_RELATIONSHIP}</p>
-<p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. Our manufacturer was registered in Vietnam in {REGISTERED_YEAR}. Exporting to {COUNTRIES} countries.</p>
+<p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. Producing since {REGISTERED_YEAR} and exporting to {COUNTRIES} countries.</p>
 <ul class="footer-contact"><li>{ADDRESS}</li><li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
 <li><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp: {PHONE}</a></li>
 <li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul>
@@ -154,7 +158,7 @@ def breadcrumb_html(trail):
 
 def organization_schema():
     return {"@context":"https://schema.org","@type":"Organization","@id":BASE_URL+"/#organization",
-            "name":LEGAL_NAME,"legalName":LEGAL_NAME,"url":BASE_URL+"/",
+            "name":BRAND,"url":BASE_URL+"/",
             "brand":{"@id":BASE_URL+"/#brand","@type":"Brand","name":BRAND},
             "description":BRAND_RELATIONSHIP,
             "telephone":PHONE,"email":EMAIL,
@@ -165,7 +169,7 @@ def brand_schema():
             "name":BRAND,"slogan":"Natural Pet Products","description":BRAND_INTRO,"url":BASE_URL+"/"}
 
 def page(title, meta_description, path, content, active_top="", schemas=None,
-         og_image="/assets/img/winvn-natural-toy-assortment.png", noindex=False):
+         og_image="/assets/img/vietpaw-natural-toy-assortment.png", noindex=False):
     # VietPaw is the public site brand; WINVN is identified in manufacturer/legal data.
     if re.search(r"\bWINVN\b", title, re.I) or not re.search(r"\bVietPaw\b", title):
         raise ValueError(f"Public page title must use VietPaw, not WINVN: {title}")
@@ -209,7 +213,8 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="/">{BRAND}</a>
-<nav class="main-nav" aria-label="Main"><ul>{nav_html(active_top)}</ul></nav>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
+<nav class="main-nav" id="main-nav" aria-label="Main"><ul>{nav_html(active_top)}</ul></nav>
 <a class="btn btn-primary btn-header" href="/request-a-quote/">Request a Quote</a>
 </div></header><main id="main">{content}</main>{footer_html()}{sticky}<script src="/assets/local-preview.js?v=20260831-clean-urls" defer></script>{form_script}<script src="/assets/navigation.js?v=20260830-exclusive" defer></script></body></html>
 """

@@ -9,10 +9,10 @@ from content_products import coffee_size_table
 
 ARTICLES=[]
 def add(slug,cluster,title,description,intro,sections,commercial,related=(),sources=(),
-        image="winvn-natural-toy-assortment.png",faqs=(),h1=None):
+        image="vietpaw-natural-toy-assortment.png",faqs=(),h1=None,figures=()):
     ARTICLES.append(dict(slug=slug,cluster=cluster,title=title,description=description,intro=intro,
         sections=sections,commercial=commercial,related=related,sources=sources,image=image,
-        faqs=faqs,h1=h1 or title))
+        faqs=faqs,h1=h1 or title,figures=figures))
 
 add("natural-dog-chew-toys-guide","Natural chew toys",
     "Natural Dog Chew Toys: Building a Range That Makes Sense",
@@ -29,7 +29,8 @@ add("natural-dog-chew-toys-guide","Natural chew toys",
     ("Explore VietPaw's natural dog toy range","/dog-toys/"),
     related=[("Coffee wood sizing","/guides/coffee-wood-chew-size-guide/"),("Wholesale ordering","/services/wholesale-pet-products/")],
     sources=[("AAHA guidance on hard chews",AAHA)],
-    image="winvn-coffee-wood-sizes.png")
+    image="vietpaw-coffee-wood-sizes.png",
+    figures=[('shiba-inu-chewing-coffee-wood-stick.jpg','A Shiba Inu lying on the floor gnawing a coffee wood chew stick',"Gnawing rather than cracking. Chewing style decides which material suits a dog, more than the dog's weight does."),('puppy-with-rope-and-fiber-ball.jpg','Puppy nosing a natural fiber ball with a rope loop on a tiled floor','Fetch and carry is a different job from chewing — give each product one role in the range.')])
 
 add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     "Are Coffee Wood Chews Safe for Dogs?",
@@ -39,7 +40,7 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     ("Consider the dog before the stick",p("A dog that gnaws slowly places different demands on a chew from one that clamps down and tries to break pieces off. Existing dental problems, age and chewing behavior all affect the decision. For puppies, dogs with dental concerns or forceful chewers, ask a veterinarian whether a hard chew is appropriate before choosing a size.")+
         p("AAHA's warning about tooth damage from hard chewing objects is relevant here. Making a chew larger may reduce the chance of swallowing it whole, but it does not make the material softer or remove dental risk.")),
     ("What a finished product should tell you",p("The sample and label should identify the material, size and intended use. Examine the surface and ends for damage, sharp projections or developing cracks. Natural grain patterns are expected; a split that could release a piece needs attention. Do not sell a received item with visible damage as an acceptable natural variation.")+
-        p("Ask the manufacturer about drying and inspection records. These are useful production controls, but neither a moisture-meter photograph nor a smooth finish proves that a chew is safe for every dog.")),
+        p("Ask our production team about drying and inspection records. These are useful production controls, but neither a moisture-meter photograph nor a smooth finish proves that a chew is safe for every dog.")),
     ("Supervision includes knowing when to stop",p("Check the chew before and during use. Remove loose pieces, and take the product away if it cracks, becomes damaged or wears down to a size the dog could swallow. If the dog is trying to break off and swallow chunks, discontinue that product rather than waiting for it to wear out.")+
         p("The pack should make clear that the product is not food. Avoid statements suggesting that every fiber or fragment is harmless to swallow. Suspected swallowing of a substantial piece or signs of injury need veterinary attention, not a recommendation to keep using the chew.")),
     ("What buyers should put on the label",p("Keep the advice short enough to be read: intended pet, size selection, supervised use, inspection and replacement. Put the same guidance on the product page and the pack. A sales claim such as splinter-free or safe for all dogs can undo that care by creating a false expectation.")+
@@ -47,7 +48,8 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     ("Coffee wood product specifications","/products/coffee-wood-dog-chew/"),
     related=[("Size guide","/guides/coffee-wood-chew-size-guide/"),("Quality-control workflow","/quality-control/")],
     sources=[("AAHA: hard-chew risks",AAHA)],
-    image="winvn-coffee-wood-single.jpg")
+    image="coffee-wood-chew-grain-detail.jpg",
+    figures=[('coffee-wood-chew-grain-detail.jpg','Close-up of a finished coffee wood chew stick showing grain and surface finish','One untreated plant material: no glue, coating, preservative or colouring.'),('grading-chews-before-packing.jpg','Hand holding a coffee wood stick above a crate of graded pieces','Grading. Pieces cracked beyond 2 mm are pulled out at this bench.')])
 
 add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
     "Coffee Wood, Antler, Nylon or Rawhide: What Are You Comparing?",
@@ -62,13 +64,14 @@ add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
         p("Do not borrow the feeding directions of one category for another. Product classification and import documentation should follow the actual article being shipped, not the shelf on which a retailer plans to display it.")),
     ("Harder does not settle the choice",p("Coffee wood, antler and hard synthetic products should not be ranked by hardness alone. A product that resists wear can still be unsuitable for a particular dog's teeth or chewing style. Rawhide raises a different discussion about the specific product, consumption and use instructions. None of these labels establishes a universal winner.")+
         p("Retailers need a clear way to explain those differences without making a medical promise. Describe the material and intended use, then give the owner the relevant supervision and replacement guidance.")),
-    ("Compare the quote at the same point in the supply chain",p("A loose stick quoted at the factory and a boxed, barcoded item delivered to your warehouse are not comparable prices. Match the specification, saleable unit, packaging, quantity and delivery basis. Then include inspection, testing, transport, duties and handling where applicable.")+
+    ("Compare the quote at the same point in the supply chain",p("A loose stick quoted at our factory and a boxed, barcoded item delivered to your warehouse are not comparable prices. Match the specification, saleable unit, packaging, quantity and delivery basis. Then include inspection, testing, transport, duties and handling where applicable.")+
         p("Also consider what the product asks of the retail operation. Will staff need a size explanation? Does each variant require a separate barcode? Can damaged packaging be replaced locally, or is the complete unit unsaleable? These details can outweigh a small saving in purchase price.")),
     ("Keep material and disposal claims separate",p("Wood has a different origin story from nylon, but the environmental statement still needs a defined scope. A wood-and-rope combination may contain several components; a paper-looking pack may include a film window. Describe what is in the product before deciding which disposal claims belong on the label.")+
         p("Choose the product you can specify, explain and reorder consistently. A comparison based on those three points is more useful than a table of unsupported safety scores."))],
     ("Compare coffee wood wholesale options","/collections/coffee-wood/"),
     related=[("Coffee wood safety considerations","/guides/are-coffee-wood-chews-safe-for-dogs/"),("Natural material comparison","/guides/sustainable-pet-toy-materials-compared/")],
-    image="winvn-coffee-wood-sizes.png")
+    image="vietpaw-coffee-wood-sizes.png",
+    figures=[('coffee-wood-chew-size-row.jpg','Six coffee wood chew sticks laid out in increasing size on a light background','Coffee wood does not soften, swell or develop an odour as it is worked — a factual difference from rawhide.'),('french-bulldog-chewing-coffee-wood.jpg','French bulldog chewing a coffee wood stick on a wooden table','A powerful chewer can still break a piece off any hard chew.')])
 
 add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
     "Choosing Natural Toys for Strong Chewers",
@@ -85,7 +88,8 @@ add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
         p("For a new range, order a manageable assortment and train the sales team on intended use. Fewer, clearly explained products are easier to recommend responsibly than a long ladder of increasingly strong claims."))],
     ("Strong-chewer product selection","/collections/aggressive-chewers/"),
     related=[("Hemp rope constructions","/products/hemp-rope-dog-toy/"),("Coffee wood safety","/guides/are-coffee-wood-chews-safe-for-dogs/")],
-    image="winvn-hemp-wood-assortment.jpg")
+    image="vietpaw-hemp-wood-assortment.jpg",
+    figures=[('golden-retriever-chewing-coffee-wood.jpg','Golden retriever chewing a coffee wood stick surrounded by other chews','Hard is not the same as safe: a determined chewer risks a fractured tooth on any hard material.'),('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Sizing up is usually safer than sizing down for a strong chewer.')])
 
 add("how-long-do-coffee-wood-chews-last","Natural chew toys",
     "How Long Do Coffee Wood Chews Last?",
@@ -140,7 +144,7 @@ add("how-long-do-coffee-wood-chews-last","Natural chew toys",
              "The dog has begun biting down to break pieces off rather than gnawing.",
              "Any piece has come loose, or the dog is trying to swallow fragments rather than chew them."],
             suit_head="Fine to keep in use", less_head="Replace it now")
-      + figure("/assets/img/coffee-wood-chew-sizes-in-hand.jpg",
+      + figure("/assets/img/coffee-wood-chew-size-row.jpg",
                "Hand holding four coffee wood chew sticks of increasing size for scale comparison",
                "Judge the replacement point against the dog\u2019s mouth, not against the original size. A stick that "
                "has worn down to something swallowable has to go, however much wood is left.")
@@ -157,9 +161,9 @@ add("how-long-do-coffee-wood-chews-last","Natural chew toys",
            "Data you can group, instead of a score you cannot interpret."),
           ("Separate arrival condition from wear",
            "Keep a crack found on opening a carton in a different category from a stick worn down after a month of use.",
-           "Two distinct investigations \u2014 one for the factory, one for the sizing advice.",
+           "Two distinct investigations \u2014 one for our factory, one for the sizing advice.",
            "Mixing them into a single durability figure makes both impossible to diagnose."),
-          ("Send the factory specifics, not impressions",
+          ("Send our factory specifics, not impressions",
            "Batch reference, photographs and the measured dimensions of the piece in question.",
            "A grading or moisture record that can actually be checked against your complaint."),
           ("Revisit the size mix after one season",
@@ -202,16 +206,17 @@ add("how-long-do-coffee-wood-chews-last","Natural chew toys",
        "Yes. Chews are packed below 14% moisture and that is why they arrive hard. Wood that picks up moisture in a damp "
        "warehouse softens and wears faster, so keep bags sealed until they go out, store on pallets away from exterior "
        "walls and roller shutters, and aim for around 25\u201328 \u00b0C with air circulation."),
-    ])
+    ],
+    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Material volume rises sharply with diameter — an XL holds far more wood than an L.')])
 
 add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
     "Plastic-Free Pet Toys: What Belongs in the Buying Brief?",
     "Specify plastic-free pet toys and packaging clearly, with separate decisions on materials, components and end-of-life claims.",
-    "A toy can look entirely natural on a shelf and still contain synthetic binding thread, an internal core or a laminated tag. If plastic-free is part of your brand promise, those small components belong in the first conversation with the manufacturer, not in a discussion after the packaging has been printed.",
+    "A toy can look entirely natural on a shelf and still contain synthetic binding thread, an internal core or a laminated tag. If plastic-free is part of your brand promise, those small components belong in the first conversation with our production team, not in a discussion after the packaging has been printed.",
     [
     ("Define the boundary of the promise",p("Decide whether you mean the toy, the retail pack or the complete delivered unit. These are different briefs. A wood stick in a plastic bag is not a plastic-free retail unit, even if the stick itself contains no plastic. Equally, a paper sleeve does not tell you what holds an assembled fiber toy together.")+
         p("Use a component list that follows the product from the inside out: body, core, rope, sewing thread, adhesive, finish and decoration. Then list the bag, sleeve, label, window and any protective insert. This turns a broad ambition into something a supplier can quote and inspect.")),
-    ("Choose packaging with the journey in mind",p("The retail display is only one part of the journey. The product also has to survive packing, transport, unloading and storage. Ask the factory to explain its proposed protection against moisture and damage, then review the materials used for that protection.")+
+    ("Choose packaging with the journey in mind",p("The retail display is only one part of the journey. The product also has to survive packing, transport, unloading and storage. Ask our factory to explain its proposed protection against moisture and damage, then review the materials used for that protection.")+
         p("Vacuum packing is a method, not a material description. Kraft-colored paper may be coated or laminated. If your brief excludes these options, resolve the alternative before approving the sample. Removing a bag without considering the rest of the packing plan can create a different problem at receiving.")),
     ("Keep biodegradability out of the material shortcut",p("Plastic-free describes composition. Biodegradable describes breakdown under particular conditions; compostable adds another set of questions. One claim does not establish the others. FTC guidance emphasizes evidence and qualification for environmental claims, including the conditions relevant to disposal.")+
         p("Ask exactly which article was assessed and whether the evidence covers the finished construction. Do not transfer a claim about raw fiber to a toy with additional components or to the package around it.")),
@@ -219,7 +224,8 @@ add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
         p("Where evidence is limited, precise language is still useful: coffee wood stick, coconut-fiber outer surface or paper sleeve. A customer should be able to understand exactly what the statement covers."))],
     ("Plan a plastic-free product range","/collections/plastic-free/"),
     related=[("Material and packaging approach","/sustainability/"),("Biodegradability explained","/guides/are-dog-toys-biodegradable/")],
-    sources=[("FTC environmental-claims guidance",FTC)])
+    sources=[("FTC environmental-claims guidance",FTC)],
+    figures=[('bagged-chews-with-desiccant.jpg','Coffee wood chews in a sealed bag with a desiccant sachet','The toy, the bag, the box and any ink are four separate claims, not one.'),('loofah-duck-cat-toy.jpg','Loofah gourd fibre cut into a duck-shaped cat toy','Plant-derived is not the same as certified compostable.')])
 
 add("are-dog-toys-biodegradable","Materials & claims",
     "Are Dog Toys Biodegradable? Read the Claim Closely",
@@ -237,7 +243,8 @@ add("are-dog-toys-biodegradable","Materials & claims",
     ("Explore VietPaw's material collections","/materials/"),
     related=[("Plastic-free buying brief","/guides/plastic-free-biodegradable-pet-toys-guide/"),("Sustainability and packaging","/sustainability/")],
     sources=[("FTC guidance on degradable claims",FTC)],
-    image="winvn-loofah-growing.png")
+    image="vietpaw-loofah-growing.png",
+    figures=[('loofah-gourd-on-the-vine.jpg','A green loofah gourd hanging from its vine','Loofah is grown as a crop, so we do not describe it as agricultural waste.'),('marking-cartons-warehouse.jpg','Worker marking export cartons in a warehouse','Disposal claims need evidence for the finished assembly under stated conditions.')])
 
 add("what-is-coconut-fiber-pet-toys","Materials & claims",
     "Coconut Fiber in Pet Toys: Texture, Construction and Quality",
@@ -254,7 +261,8 @@ add("what-is-coconut-fiber-pet-toys","Materials & claims",
         p("For repeat orders, retain the product and packing references together. Consistency at receiving depends on both."))],
     ("Coconut fiber wholesale collection","/collections/coconut-fiber/"),
     related=[("Cat ball specifications","/products/coconut-fiber-cat-ball/"),("Dog ball specifications","/products/coconut-fiber-dog-ball/")],
-    image="winvn-coconut-fiber-balls.jpg")
+    image="vietpaw-coconut-fiber-balls.jpg",
+    figures=[('vietpaw-coconut-fiber-balls.jpg','Hand holding several wound coconut fiber balls outdoors','Coir from the husk — a by-product of the coconut food and oil trade.'),('puppy-with-rope-and-fiber-ball.jpg','Puppy with a natural fiber ball and rope loop','Specify diameter and finished weight together; diameter alone hides a loosely wound batch.')])
 
 add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
     "Buying Natural Cat Toys: What to Check Beyond Non-Toxic",
@@ -271,7 +279,8 @@ add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
         p("For wholesale orders, define whether a set is one saleable unit or several individually labeled items. That decision affects barcodes, pack counts and how a shop replaces a damaged unit. A well-specified cat range works for the receiving team as well as the customer."))],
     ("Browse VietPaw's natural cat toys","/cat-toys/"),
     related=[("Loofah product details","/products/loofah-cat-toy/"),("Testing and documentation","/certifications/")],
-    image="winvn-loofah-play-shapes.png")
+    image="vietpaw-loofah-play-shapes.png",
+    figures=[('cat-loofah-toys-lifestyle.jpg','Cat playing with loofah toys on a rug','There is no universal pet-safety certification to carry — ask for the report that covers your SKU.'),('loofah-bear-shape-cat-toy.jpg','Loofah fibre cut into a bear-shaped cat toy','Confirm thread, filling and attachments before printing a composition claim.')])
 
 add("sustainable-pet-toy-materials-compared","Materials & claims",
     "Coffee Wood, Coir, Hemp and Loofah: Choosing the Right Material",
@@ -289,16 +298,17 @@ add("sustainable-pet-toy-materials-compared","Materials & claims",
     ("Compare the finished packed unit",p("Material choice affects size, weight and pack design. A light item in a bulky display box may use more shipping space than its weight suggests. Ask for the packed dimensions and carton arrangement while the design can still be changed.")+
         p("Review moisture protection and storage alongside the shelf appearance. The right answer may differ between a local retail delivery and a longer international shipment. The quotation should identify the proposed packing materials rather than simply calling them eco packaging.")),
     ("Use a sample range to make the decision",p("Choose a few products that have distinct uses and clear specifications. Compare their construction, how easily the label explains them and how they fit your intended retail price after landed costs. Avoid launching several near-identical variants before learning which size and format customers actually need.")+
-        p("For a repeatable range, keep one approved file per SKU: component list, dimensions, sample photographs, packing details and label wording. That file is the link between a compelling material story and a product the factory can reproduce."))],
+        p("For a repeatable range, keep one approved file per SKU: component list, dimensions, sample photographs, packing details and label wording. That file is the link between a compelling material story and a product our factory can reproduce."))],
     ("Explore the four VietPaw material collections","/materials/"),
-    related=[("Private-label development","/services/private-label-pet-toys/"),("Material and packaging claims","/sustainability/")])
+    related=[("Private-label development","/services/private-label-pet-toys/"),("Material and packaging claims","/sustainability/")],
+    figures=[('loofah-drying-under-greenhouse-cover.jpg','Rows of loofah gourds drying under a greenhouse cover','Each material has a different, and differently provable, origin story.'),('coffee-wood-seasoning-racks.jpg','Rows of coffee wood sticks seasoning on factory drying racks','Coffee stem and coconut husk have genuine by-product stories. Hemp and loofah are grown crops.')])
 
 add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
     "Sourcing Natural Pet Toys from Vietnam: The First Order",
     "Plan a first natural pet toy order from Vietnam, covering the buying brief, samples, packaging, quality checks and shipment preparation.",
     "A first order becomes much easier to manage when the buyer and factory are looking at the same product, the same pack and the same delivery point. Most of the useful work happens before the purchase order: narrowing the assortment, approving a sample and deciding what must be ready before the goods leave Vietnam.",
     [
-    ("Send a brief the factory can price",p("Include your destination country, sales channel, product references, sizes and quantity per SKU. Explain whether you want standard wholesale goods, your logo on an existing item or a change to the construction. Attach a reference image where it helps, but add measurements; a picture alone cannot define a product.")+
+    ("Send a brief we can price",p("Include your destination country, sales channel, product references, sizes and quantity per SKU. Explain whether you want standard wholesale goods, your logo on an existing item or a change to the construction. Attach a reference image where it helps, but add measurements; a picture alone cannot define a product.")+
         p("For a coffee wood range, decide which sizes you want to test first. For loofah shapes or fiber balls, specify whether the saleable unit is one toy or a set. That choice affects the price, the packaging minimum and the carton arrangement.")),
     ("Approve the retail pack as carefully as the toy",p("Request a sample of the proposed pack, including label placement, barcode area and any protective wrapping. Check how the product sits inside it and whether the important instructions remain readable. A product sample in a plain courier bag does not approve a future printed retail box.")+
         p("Keep the sample reference, agreed dimensions and artwork version together. Identify who can approve a change. This avoids a familiar problem: a factory waiting for artwork while the buyer believes the production clock has already started.")),
@@ -308,7 +318,8 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
         p("Before dispatch, have your forwarder or broker review the product description, destination requirements and document list. Confirm the named delivery point, carton dimensions, gross weight and shipment responsibilities. When the first shipment arrives, record any differences while the cartons and batch markings are still available. That receiving report is the foundation of a better repeat order."))],
     ("See the VietPaw ordering process","/how-to-order/"),
     related=[("Manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),("MOQ, pricing and lead times","/guides/pet-toy-moq-fob-pricing-lead-times/")],
-    image="export-packed-box.jpg")
+    image="export-packed-box.jpg",
+    figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.')])
 
 add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     "Choosing a Natural Dog Toy Manufacturer in Vietnam",
@@ -321,11 +332,12 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
         p("For a developing range, discuss the repeat order as well as the first order. Can the supplier retain the approved reference and reproduce the same pack? What notice is needed for a change in quantity or size mix? Those answers matter to a retailer that cannot keep relabeling stock.")),
     ("Put the sample beside the specification",p("Natural materials will not look identical piece for piece. Set acceptable ranges for dimensions, weight and appearance, and distinguish them from defects. A knot in the grain and a damaged edge should not be grouped together as natural variation.")+
         p("Use the same principle for complete construction. If the sample uses one rope material, a similar-looking substitute still requires approval. Keep the component list and packaging details with the sample, so consistency does not depend on one person's memory.")),
-    ("What to ask VietPaw",p("VietPaw's range covers coffee wood, coconut fiber, hemp fiber and loofah. For a manufacturing discussion, send the product references, destination, quantities and level of customization. Request current production-location information and a walkthrough or inspection arrangement relevant to that product.")+
+    ("What to ask us",p("VietPaw's range covers coffee wood, coconut fiber, hemp fiber and loofah. For a manufacturing discussion, send the product references, destination, quantities and level of customization. Request current production-location information and a walkthrough or inspection arrangement relevant to that product.")+
         p("Finish the review with a written quote and an agreed approval sequence. Knowing who answers product, quality and shipping questions is just as important as knowing the address of a production site."))],
     ("VietPaw pet toy manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),
     related=[("Factory and production","/factory/"),("Supplier due diligence","/guides/how-to-vet-an-eco-pet-toy-supplier/")],
-    image="process-raw-sticks.jpg")
+    image="process-raw-sticks.jpg",
+    figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing on our own line in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.')])
 
 add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     "Sourcing Coconut-Fiber Cat Toys for Wholesale",
@@ -342,7 +354,8 @@ add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
         p("When requesting a VietPaw quote, include your destination, quantity per size and preferred pack. Selected standard lines may support a small starting order; product and printed-packaging minimums still need to be confirmed separately."))],
     ("VietPaw coconut-fiber cat ball specifications","/products/coconut-fiber-cat-ball/"),
     related=[("Coconut-fiber material guide","/guides/what-is-coconut-fiber-pet-toys/"),("Wholesale supply","/services/wholesale-pet-products/")],
-    image="winvn-coconut-fiber-balls.jpg")
+    image="vietpaw-coconut-fiber-balls.jpg",
+    figures=[('cat-playing-with-loofah-shape.jpg','Grey cat reaching for a loofah play shape on a table','Write a cat specification, not a scaled-down dog one.'),('vietpaw-loofah-play-shapes.png','Loofah cat play shapes arranged in a basket','Each shape is measured separately — one size range does not cover the collection.')])
 
 add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
     "Private Label, OEM or ODM? Define the Work First",
@@ -351,16 +364,17 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
     [
     ("An existing product with your branding",p("Private label is often the most direct route when the existing construction already fits your range. The project centers on the selected SKU, logo placement, labels and retail packaging. On suitable coffee wood surfaces, that may include laser engraving; on loose-fiber products, a tag or printed pack is usually the relevant discussion.")+
         p("Approve the branding on a physical sample. An engraving can look different across natural grain, and a logo that is clear on a screen may be too small on a narrow stick. A new printed box can also have a separate minimum from the product inside it.")),
-    ("A change to the construction",p("Adding a rope, changing a join or altering dimensions creates more work than a packaging update. The manufacturer needs to review feasibility, materials and the way the assembled product will be inspected. A sample of the old design does not approve the new one.")+
+    ("A change to the construction",p("Adding a rope, changing a join or altering dimensions creates more work than a packaging update. Our production team needs to review feasibility, materials and the way the assembled product will be inspected. A sample of the old design does not approve the new one.")+
         p("Put the intended pet and play type in the brief. A change that looks attractive in a photograph can affect the handle opening, loose ends or attachment security. Agree the revised specification and any relevant assessment before committing to bulk production.")),
-    ("A design developed with the manufacturer",p("For a new concept, decide who provides the initial design, who develops prototypes and who approves the final construction. Record development charges, tooling if applicable, revision rounds and the ownership or usage rights you have agreed. Do not assume that a private-label order creates exclusive rights to a standard design.")+
+    ("A design developed with our production team",p("For a new concept, decide who provides the initial design, who develops prototypes and who approves the final construction. Record development charges, tooling if applicable, revision rounds and the ownership or usage rights you have agreed. Do not assume that a private-label order creates exclusive rights to a standard design.")+
         p("Allow separate time for development and production. A quote for making approved goods does not necessarily include the time spent refining a concept or revising artwork.")),
     ("Use clear approval gates",ul(["Product brief agreed: construction, market, target quantity and packaging route.","Prototype or sample approved: dimensions, components and appearance recorded.","Artwork approved: logo, warnings, barcode and pack contents checked.","Production released: price, schedule, inspection and shipment responsibilities confirmed."])+
         p("VietPaw offers product customization, engraving and packaging support. Describe which of these you need, then ask for a quotation that separates them. You will have a clearer project budget and fewer surprises when the design changes."))],
     ("Discuss OEM and ODM pet toy development","/services/oem-odm-pet-toy-manufacturing/"),
     related=[("Private-label services","/services/private-label-pet-toys/"),("Sample and order process","/how-to-order/")],
     sources=[("VietPaw private-label and packaging options","/services/private-label-pet-toys/")],
-    image="process-laser-engraving.jpg")
+    image="process-laser-engraving.jpg",
+    figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('bagged-chews-with-desiccant.jpg','Bagged coffee wood chews with a desiccant sachet ready for packing','Printed tags, labels and boxes start at 500 pcs per SKU — a separate minimum from engraving.')])
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     "Pet Toy MOQ, FOB Pricing and Lead Times: Reading the Quote",
@@ -373,12 +387,13 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
         p("For an internal landed-cost estimate, add the applicable origin charges, freight, insurance, import charges and destination handling to the goods cost. Allocate them across the saleable units you expect to receive. Use actual forwarder and broker inputs; freight and duty estimates are not factory product prices.")),
     ("FOB needs a named port and the right transport arrangement",p("Under Incoterms® 2020, FOB is a sea and inland-waterway rule, with delivery and risk transfer when goods are on board at the named shipment port. It is not shorthand for delivery to your warehouse. For container goods handed to a carrier before vessel loading, ICC guidance points buyers toward considering FCA instead.")+
         p("Agree the rule, named place or port and edition with the supplier and forwarder. Then identify any quoted services beyond that rule. Incoterms do not replace the product specification, payment agreement or inspection plan.")),
-    ("Put dates against the approval sequence",p("VietPaw’s published production lead times are 5–7 days for orders under 500 pcs and 60–80 days for a full container. Do not apply the small-order window to a 500-pc private-label launch. Quantities between those bands, mixed orders and custom development need a project-specific schedule. Development, testing and transport need their own allowances; production completion is not an arrival date.")+
+    ("Put dates against the approval sequence",p("VietPaw’s published production lead times are 5–7 days for stock packaging and 60–80 days when the order carries your own label, printed box or engraving — most of that longer window is artwork approval and tooling rather than production. Do not apply the stock window to a private-label launch. Mixed orders and custom development need a project-specific schedule, and development, testing and transport need their own allowances. Production completion is not an arrival date: add 30–35 days port to port.")+
         p("Ask which approval starts the clock and what could change the schedule. Work backwards from the date stock must be available for sale, allowing time to receive and inspect it. A launch plan needs that final stage just as much as it needs a factory completion date."))],
     ("Prepare a product and pricing enquiry","/request-a-quote/"),
     related=[("Wholesale service","/services/wholesale-pet-products/"),("First-order planning","/guides/sourcing-eco-pet-toys-vietnam/")],
     sources=[("VietPaw order minimums and lead times","/how-to-order/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
-    image="export-carton-labels.jpg")
+    image="container-wall-of-cartons.jpg",
+    figures=[('container-wall-of-cartons.jpg','A full wall of export cartons loaded and netted inside a shipping container','429 cartons in a 20 ft, 850 in a 40 ft. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Stock sizes ship in 5–7 days; printed packaging is the part that takes 60–80.')])
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
     "CPSIA, REACH and Pet Toys: Ask the Right Compliance Question",
@@ -395,7 +410,8 @@ add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
         p("CPSIA and REACH are not a complete worldwide compliance checklist. Requirements depend on destination, product and sales channel and can change. The importer and its qualified advisers should confirm the current position before approving the product and its claims."))],
     ("VietPaw testing and export-document information","/certifications/"),
     related=[("Planning a safety assessment","/guides/pet-toy-safety-testing-requirements/"),("Quality-control workflow","/quality-control/")],
-    sources=[("CPSC toy-safety business guidance",CPSC),("ECHA: REACH restrictions",ECHA)])
+    sources=[("CPSC toy-safety business guidance",CPSC),("ECHA: REACH restrictions",ECHA)],
+    figures=[('inspection-documents-at-pallets.jpg','Two staff reviewing inspection documents beside stacked pallets','Compliance is decided per SKU and per destination, not per supplier.'),('export-container-exterior.jpg','Worker beside a green export container being loaded at a warehouse','Customs and marketplace checks are separate gates with separate paperwork.')])
 
 add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
     "Vietnam or China for Pet Toys? Compare the Order, Not the Flag",
@@ -418,7 +434,8 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
     ("Review VietPaw's Vietnam manufacturing capabilities","/pet-toys-manufacturer-vietnam/"),
     related=[("Supplier qualification","/guides/how-to-vet-an-eco-pet-toy-supplier/"),("Pricing and delivery terms","/guides/pet-toy-moq-fob-pricing-lead-times/")],
     sources=[("European Commission: importing into the EU","https://policy.trade.ec.europa.eu/help-exporters-and-importers/importing-eu_en")],
-    image="warehouse-winvn-boxes.jpg")
+    image="pallet-stack-inspection.jpg",
+    figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.')])
 
 add("pet-toy-safety-testing-requirements","Compliance & risk",
     "Pet Toy Safety Testing: Build a Product-Specific Plan",
@@ -434,8 +451,9 @@ add("pet-toy-safety-testing-requirements","Compliance & risk",
     ("Plan the response to a failed check",p("Before production, decide who receives results, who approves corrective action and whether retesting or reinspection is needed. Allow time for that work in the launch schedule. It is much harder to resolve an ambiguous result when a freight booking is about to expire.")+
         p("At release, the file should connect the approved sample, current specification, relevant assessments and inspection decision. Keep shipment or treatment documents alongside it, but label them for their actual purpose. A document supporting movement of goods is not evidence for every product-safety claim."))],
     ("Discuss testing and documentation with VietPaw","/certifications/"),
-    related=[("Six-stage drying/quality protocol and five QC checkpoints","/quality-control/"),("CPSIA and REACH scope","/guides/pet-toy-safety-compliance-cpsia-reach/")],
-    image="winvn-moisture-check-kiem-go-9.jpg")
+    related=[("Drying and quality protocol with five QC checkpoints","/quality-control/"),("CPSIA and REACH scope","/guides/pet-toy-safety-compliance-cpsia-reach/")],
+    image="vietpaw-moisture-check.jpg",
+    figures=[('carton-quality-check.jpg','Worker examining corrugated board quality in a packing area','Test reports have a defined scope. Ask for the one covering your SKU and your destination.'),('moisture-meter-on-the-line.jpg','Pin-type moisture meter reading taken on coffee wood sticks','A moisture record is order-specific evidence; a general description is not.')])
 
 add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
     "How to Vet a Natural Pet Toy Supplier Before the First Order",
@@ -444,15 +462,16 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
     [
     ("Establish who you will contract with",p("Confirm the current legal entity, company information and payment beneficiary. Understand the relationship between the trading name, production site and exporter where they differ. Resolve inconsistent names or addresses before placing the order, rather than assuming a historical document explains the current arrangement.")+
         p("If payment details change, verify the change through a trusted contact route already established with the company. Keep the confirmed details with the purchase order. This is basic transaction discipline, including when the product sample is excellent.")),
-    ("Ask questions tied to one real SKU",p("Choose a product and request its full construction, dimensions, packing and production sequence. Ask what natural variation the factory expects and which defects it rejects. A supplier that can explain those distinctions gives you something concrete to inspect later.")+
-        p("Keep a reference sample and ask how it will be retained at the factory. Confirm that substitutions in fiber, adhesive, finish or packaging need approval. A look-alike replacement may change the product or its claims even when it seems commercially convenient.")),
+    ("Ask questions tied to one real SKU",p("Choose a product and request its full construction, dimensions, packing and production sequence. Ask what natural variation our factory expects and which defects it rejects. A supplier that can explain those distinctions gives you something concrete to inspect later.")+
+        p("Keep a reference sample and ask how it will be retained at our factory. Confirm that substitutions in fiber, adhesive, finish or packaging need approval. A look-alike replacement may change the product or its claims even when it seems commercially convenient.")),
     ("Make the production review specific",p("Request current location information and a walkthrough or inspection arrangement for the relevant process. Ask which stages involve other producers. Discuss order-specific scheduling rather than relying only on a large annual-capacity figure.")+
         p("The goal is to understand who controls the work and how a problem will be traced. A warehouse image can show stock or packing, but it does not answer every question about production equipment, ownership or available capacity.")),
     ("Test the claims against their evidence",p("For a material claim, review the component list. For a test claim, review the sample and report scope. For an environmental claim, identify exactly what product or packaging it covers. A confident supplier should be able to distinguish what is documented from what still needs assessment.")+
         p("Finish with an order plan: approval stages, quality criteria, inspection timing, shipment responsibilities and a written process for non-conforming goods. The first delivery then becomes a measurable review of what was agreed, not a debate over what either party thought the catalogue implied."))],
     ("Review VietPaw factory and production information","/factory/"),
     related=[("Testing and documents","/certifications/"),("Wholesale order planning","/services/wholesale-pet-products/")],
-    image="warehouse-winvn-boxes.jpg")
+    image="pallet-stack-inspection.jpg",
+    figures=[('inspector-checking-cartons-clipboard.jpg','Inspector in a hi-vis vest checking export cartons against a printed document','Ask for the carton marks to be photographed against the packing list before the container is sealed.'),('container-seal-applied.jpg','Hands fitting a numbered plastic seal to a shipping container door','The seal number belongs on your paperwork. It is the cheapest verification step there is.')])
 
 add("coffee-wood-chew-size-guide","Natural chew toys",
     "Coffee Wood Chew Sizes: VietPaw's XS–XXL Reference",
@@ -460,7 +479,7 @@ add("coffee-wood-chew-size-guide","Natural chew toys",
     "An M label is convenient for ordering, but it is not a measurement. When comparing coffee wood chews, use length, diameter and weight together. For pet suitability, the dog's mouth size, chewing behavior and dental condition still matter; the weight band is only a starting reference.",
     [
     ("The CC01 size reference",coffee_size_table()),
-    ("Measure the product you are approving",p("Natural sticks do not have perfectly cylindrical outlines. Agree how length and diameter will be measured, what variation is acceptable and which reference identifies the size. Include the finished weight band in the specification so the factory and receiving team are using the same definition.")+
+    ("Measure the product you are approving",p("Natural sticks do not have perfectly cylindrical outlines. Agree how length and diameter will be measured, what variation is acceptable and which reference identifies the size. Include the finished weight band in the specification so our factory and receiving team are using the same definition.")+
         p("For a first order, request the sizes you intend to sell and compare them side by side. Keep one approved reference per SKU. A photograph of the whole range is helpful for presentation but cannot replace individual measurements.")),
     ("Do not let a weight chart make the entire decision",p("A dog should not be able to swallow the chew whole. Beyond that basic dimension check, consider how it chews and whether a hard product is appropriate. Increasing the size does not remove the possibility of tooth damage or make a hard chew suitable for every strong chewer.")+
         p("For puppies, dogs with dental concerns or dogs that try to break off pieces, seek individual veterinary advice before using a hard chew. Do not treat XS as a puppy designation simply because it is the smallest product in the table.")),
@@ -470,7 +489,8 @@ add("coffee-wood-chew-size-guide","Natural chew toys",
         p("Put that advice near the size information. Owners need to understand both how to select a product and when the product they selected is no longer suitable for use."))],
     ("Coffee wood product specifications and sample options","/products/coffee-wood-dog-chew/"),
     related=[("Coffee wood suitability","/guides/are-coffee-wood-chews-safe-for-dogs/"),("Private-label pack development","/services/private-label-pet-toys/")],
-    image="winvn-coffee-wood-sizes.png")
+    image="vietpaw-coffee-wood-sizes.png",
+    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks laid out from smallest to largest','Six graded sizes. Length is cut to ±3 mm; diameter follows the natural stem and is graded into bands.'),('puppy-holding-coffee-wood-chew.jpg','Golden retriever puppy holding a coffee wood chew in its mouth',"Judge the fit against the dog's mouth, not against the size label.")])
 
 def build(root):
     clusters={}
@@ -518,7 +538,7 @@ def build(root):
                       "/guides/"+a["slug"]+"/") for a in articles]),
             alt=(list(clusters).index(cluster) % 2 == 1))
     hub += section("How these guides are written",
-        ul(["Figures are labelled as reference specifications or as supplier-reported planning numbers, never presented as audited measurements.",
+        ul(["Figures are labelled as reference specifications or as internally reported planning numbers, never presented as audited measurements.",
             "Where no data exists \u2014 chew lifespan, coffee wood hardness, rope tensile ratings \u2014 we say so rather than estimating.",
             "Claims we will not support are named explicitly, including ones that would help us sell.",
             "External guidance is linked at the foot of the guide that relies on it."])
@@ -532,7 +552,14 @@ def build(root):
     for a in ARTICLES:
         path="/guides/"+a["slug"]+"/"
         bc,bs=breadcrumb_html([("Home","/"),("Guides","/guides/"),(a["title"],None)])
-        body=p(a["intro"])+"".join("<h2>"+h+"</h2>"+body for h,body in a["sections"])
+        figs=list(a.get("figures") or ())
+        blocks=[]
+        for i,(h,sec) in enumerate(a["sections"]):
+            blocks.append("<h2>"+h+"</h2>"+sec)
+            if figs:
+                blocks.append(figure("/assets/img/"+figs[0][0], figs[0][1], figs[0][2]))
+                figs.pop(0)
+        body=p(a["intro"])+"".join(blocks)
         if a["faqs"]:
             body+="<h2>Frequently asked</h2>"+"".join(
                 f'<div class="faq-item"><h3>{q}</h3><p>{ans}</p></div>' for q,ans in a["faqs"])
