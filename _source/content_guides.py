@@ -207,7 +207,7 @@ add("how-long-do-coffee-wood-chews-last","Natural chew toys",
        "warehouse softens and wears faster, so keep bags sealed until they go out, store on pallets away from exterior "
        "walls and roller shutters, and aim for around 25\u201328 \u00b0C with air circulation."),
     ],
-    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Material volume rises sharply with diameter — an XL holds far more wood than an L.')])
+    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Material volume rises sharply with diameter — an XL holds far more wood than an L.'),('coffee-wood-chew-grain-detail.jpg','Close-up of a coffee wood chew surface showing the grain','In normal chewing the surface wears into soft fibres; replace the chew once it is small enough to swallow.')])
 
 add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
     "Plastic-Free Pet Toys: What Belongs in the Buying Brief?",
@@ -492,6 +492,32 @@ add("coffee-wood-chew-size-guide","Natural chew toys",
     image="vietpaw-coffee-wood-sizes.png",
     figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks laid out from smallest to largest','Six graded sizes. Length is cut to ±3 mm; diameter follows the natural stem and is graded into bands.'),('puppy-holding-coffee-wood-chew.jpg','Golden retriever puppy holding a coffee wood chew in its mouth',"Judge the fit against the dog's mouth, not against the size label.")])
 
+
+# Owner request 2026-09-24: a content-matched lead image on every guide (served as responsive WebP).
+# Each lead image differs from the in-text figures of the same guide. Displayed dates are unchanged.
+FEATURE = {
+    "natural-dog-chew-toys-guide": ("vietpaw-hemp-wood-assortment.jpg", "Woven basket holding hemp rope toys and coffee wood chews", "Wood, rope and fiber: the chewing style decides which one fits the dog."),
+    "are-coffee-wood-chews-safe-for-dogs": ("dog-chewing-coffeewood.jpg", "Golden retriever lying on a rug chewing a coffee wood stick", "Supervised chewing with a size the dog cannot swallow whole."),
+    "coffee-wood-vs-antler-nylon-rawhide": ("vietpaw-home-lifestyle.jpg", "Small dog at home holding a coffee wood chew in its mouth", "A plant-based hard chew, compared honestly with antler, nylon and rawhide."),
+    "best-natural-chews-for-aggressive-chewers": ("process-raw-sticks.jpg", "Thick coffee wood chew sticks of different diameters on a white surface", "For strong chewers, diameter matters more than length — size up when in doubt."),
+    "how-long-do-coffee-wood-chews-last": ("dog-lifestyle-chew-1.jpg", "Small white dog lying on the floor gnawing a coffee wood chew", "How long a chew lasts depends on the dog, not on the calendar."),
+    "coffee-wood-chew-size-guide": ("coffee-stem-diameter-caliper-check.jpg", "Digital caliper measuring the diameter of a coffee wood stem", "Diameter follows the natural stem and is graded into size bands."),
+    "plastic-free-biodegradable-pet-toys-guide": ("vietpaw-natural-toy-assortment.png", "Basket of loofah shapes and coffee wood chews", "Plastic-free is a claim about every component, including the pack."),
+    "are-dog-toys-biodegradable": ("peeling-dried-loofah-gourd.jpg", "Hands peeling the skin from a dried loofah gourd to expose the fiber", "Plant fiber at the start — but a biodegradability claim covers the finished toy."),
+    "what-is-coconut-fiber-pet-toys": ("dog-coconut-balls-lifestyle.jpg", "Corgi lying beside three wound coconut fiber balls", "Coir from the coconut husk, wound into textured balls."),
+    "non-toxic-cat-toys-wholesale-buying-guide": ("vietpaw-loofah-play-shapes.png", "Loofah cat play shapes arranged on a light surface", "Light loofah shapes for batting and carrying — specified for cats, not scaled-down dog toys."),
+    "sustainable-pet-toy-materials-compared": ("product-hemp-rope-trio.jpg", "Three knotted coconut fiber rope toys beside a split coconut", "Coconut, hemp, loofah and coffee wood each have a different origin story."),
+    "sourcing-eco-pet-toys-vietnam": ("coffee-wood-stem-cross-cutting.jpg", "Worker cross-cutting coffee wood stems with a saw in a Vietnamese workshop", "Cutting coffee wood stems to length at our factory."),
+    "natural-dog-toy-manufacturer-vietnam": ("coffee-wood-drying-rack-rows.jpg", "Rows of coffee wood chew sticks laid out on drying racks", "Chews drying in rows before grading — our own line."),
+    "wholesale-coconut-fiber-cat-toys-supplier": ("vietpaw-coconut-fiber-balls.jpg", "Hand holding several wound coconut fiber balls outdoors", "Coconut fiber balls: specify diameter and winding for cats separately."),
+    "private-label-oem-eco-pet-toys-explained": ("coffee-wood-cotton-rope-tug-pair.jpg", "Two coffee wood and cotton rope tug toys on a white background", "A changed construction is an OEM project, not a label swap."),
+    "pet-toy-moq-fob-pricing-lead-times": ("export-cartons-stacked-for-loading.jpg", "Export cartons stacked on pallets in a warehouse ready for loading", "Carton count and pack format drive the landed cost per piece."),
+    "pet-toy-safety-compliance-cpsia-reach": ("vacuum-bagged-chews-stacked.jpg", "Vacuum-bagged coffee wood chews stacked with size labels", "Labels, warnings and pack materials are part of the compliance question."),
+    "sourcing-pet-toys-vietnam-vs-china": ("pallet-stack-inspection.jpg", "Stacked export cartons on pallets being inspected", "Ask the same verification questions of every origin."),
+    "pet-toy-safety-testing-requirements": ("moisture-reading-before-packing.jpg", "Moisture meter reading taken on a coffee wood chew before packing", "A production check, not a lab test — know which one you are looking at."),
+    "how-to-vet-an-eco-pet-toy-supplier": ("coffee-wood-moisture-meter-check.jpg", "Hand holding a moisture meter against a coffee wood chew", "Ask for the record behind the claim — here, the moisture reading on your lot."),
+}
+
 def build(root):
     clusters={}
     for a in ARTICLES:
@@ -535,7 +561,7 @@ def build(root):
             (p(CLUSTER_NOTE[cluster]) if cluster in CLUSTER_NOTE else "")
             + cards([(a["title"],
                       a["description"]+f'<span class="guide-updated">Updated {updated_time(a["slug"])}</span>',
-                      "/guides/"+a["slug"]+"/") for a in articles]),
+                      "/guides/"+a["slug"]+"/","/assets/img/"+FEATURE[a["slug"]][0]) for a in articles]),
             alt=(list(clusters).index(cluster) % 2 == 1))
     hub += section("How these guides are written",
         ul(["Figures are labelled as reference specifications or as internally reported planning numbers, never presented as audited measurements.",
@@ -559,7 +585,9 @@ def build(root):
             if figs:
                 blocks.append(figure("/assets/img/"+figs[0][0], figs[0][1], figs[0][2]))
                 figs.pop(0)
-        body=p(a["intro"])+"".join(blocks)
+        lead=FEATURE[a["slug"]]
+        assert lead[0] not in [f[0] for f in (a.get("figures") or ())], a["slug"]
+        body=figure("/assets/img/"+lead[0],lead[1],lead[2],lazy=False)+p(a["intro"])+"".join(blocks)
         if a["faqs"]:
             body+="<h2>Frequently asked</h2>"+"".join(
                 f'<div class="faq-item"><h3>{q}</h3><p>{ans}</p></div>' for q,ans in a["faqs"])
@@ -572,7 +600,7 @@ def build(root):
         content=bc+f'<article class="section"><div class="wrap article"><p class="tag">{a["cluster"]}</p><h1>{a["h1"]}</h1><p class="meta article-byline">By <span class="author-name">Sarah</span> · VietPaw · Updated {updated_time(a["slug"])}</p>{body}</div></article>'
         schema={"@context":"https://schema.org","@type":"Article","@id":BASE_URL+path+"#article",
             "headline":a["title"],"description":a["description"],"dateModified":GUIDE_UPDATED_DATES[a["slug"]],
-            "mainEntityOfPage":BASE_URL+path,"image":BASE_URL+"/assets/img/"+a["image"],
+            "mainEntityOfPage":BASE_URL+path,"image":BASE_URL+"/assets/img/"+FEATURE[a["slug"]][0],
             "author":{"@type":"Person","name":"Sarah"},
             "publisher":{"@id":BASE_URL+"/#organization"}}
         extra=[]
@@ -582,4 +610,4 @@ def build(root):
                                "acceptedAnswer":{"@type":"Answer","text":re.sub(r"<[^>]+>","",ans)}}
                               for q,ans in a["faqs"]]})
         write_page(root,path,page(a["title"]+" | VietPaw",a["description"],path,content+rfq_bar(),
-            "Guides",[bs,schema,*extra],og_image="/assets/img/"+a["image"]))
+            "Guides",[bs,schema,*extra],og_image="/assets/img/"+FEATURE[a["slug"]][0]))

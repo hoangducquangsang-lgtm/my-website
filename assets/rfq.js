@@ -8,11 +8,23 @@
     const button = form.querySelector('button[type="submit"]');
     const without = form.querySelector("[data-without-attachment]");
     const attachment = form.querySelector("[data-attachment]");
-    const products = form.querySelector("[data-product-interest]");
+    const productGroup = form.querySelector("[data-product-interest]");
+    const productBoxes = productGroup ? Array.from(productGroup.querySelectorAll("[data-product-option]")) : [];
     const idleLabel = button.textContent;
     const params = new URLSearchParams(window.location.search);
-    const product = params.get("product");
-    if (products && product && !products.value) products.value = product.slice(0, products.maxLength);
+    const product = (params.get("product") || "").toLowerCase();
+    const matches = { coffee: "Coffee wood chew", coconut: "Coconut", hemp: "Hemp", loofah: "Loofah" };
+    if (product) Object.keys(matches).forEach(key => {
+      if (!product.includes(key)) return;
+      productBoxes.forEach(box => { if (box.value === matches[key]) box.checked = true; });
+    });
+    const checkProducts = () => {
+      if (!productBoxes.length) return true;
+      const ok = productBoxes.some(box => box.checked);
+      productBoxes[0].setCustomValidity(ok ? "" : "Select at least one product.");
+      return ok;
+    };
+    productBoxes.forEach(box => box.addEventListener("change", checkProducts));
     let sending = false;
     const showError = message => {
       errorText.textContent = message;
@@ -29,6 +41,7 @@
     });
     form.addEventListener("submit", async event => {
       event.preventDefault();
+      checkProducts();
       if (sending || !form.reportValidity()) return;
       error.hidden = true;
       if (without) without.hidden = true;

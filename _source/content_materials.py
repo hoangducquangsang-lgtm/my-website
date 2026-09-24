@@ -27,11 +27,11 @@ MATERIALS = {
  what="Coconut fiber, also called coir, comes from the coconut husk. The supplied product material describes preparation, drying and shaping for pet-toy formats. A finished ball may have additional components that must be declared before a whole-product claim is made.",
  applications=[("Dog balls","Specify diameter, finished weight and the intended fetch/carry use; evaluate the actual sample."),
  ("Cat balls","Create a separate cat-range specification and check for detachable or loose components."),
- ("Rope and other coir products","Ask about current designs. Substrate and bedding are separate uses and are not assumed to have the same specification as toys.")],
+ ("Rope and other coir toys","Ask about current designs; each construction is specified on its own sample.")],
  approval=["Ask how the fiber is prepared and dried, including any treatment that must be declared.",
  "Check binding, core construction, strand shedding and natural variation against the sample.",
  "Agree packing dryness and storage instructions; no universal moisture number is claimed for every coir design."],
- caution="Coir toys are not dietary fiber or a hairball treatment. Loose fiber and damaged pieces should not be encouraged for ingestion. Do not transfer a toy specification to animal bedding or substrate.",
+ caution="Coir toys are not dietary fiber or a hairball treatment. Loose fiber and damaged pieces should not be encouraged for ingestion.",
  moq="Request MOQ per ball size or rope format. Selected standard products start from 50 pcs; mixed-product orders still need line-by-line confirmation."),
 "hemp-fiber":dict(
  title="Hemp Pet Toy Manufacturer | Rope & Balls Wholesale | VietPaw",
@@ -214,9 +214,8 @@ DEEP["coconut-fiber"] = dict(
          "Mixed natural-material boxes sold alongside loofah and rope."],
         ["Your customer expects the durability of a moulded rubber fetch toy.",
          "Shedding fiber would be a problem for the listing or the return rate.",
-         "You need a published performance specification; none exists for wound coir.",
-         "The same item has to serve as animal bedding or substrate — that is a different product with a different specification."])
-    +p('Coir also appears as mats, substrate and rope. Those are separate uses: do not assume a toy specification transfers to bedding, or the other way round. See the <a href="/collections/loofah/">loofah collection</a> for the lighter cat-play material and the <a href="/collections/hemp-fiber/">hemp collection</a> for rope constructions.'),True),
+         "You need a published performance specification; none exists for wound coir."])
+    +p('See the <a href="/collections/loofah/">loofah collection</a> for the lighter cat-play material and the <a href="/collections/hemp-fiber/">hemp collection</a> for rope constructions.'),True),
  ],
  faqs=[
   ("Is coconut fiber safe if my dog swallows some?",
@@ -229,8 +228,6 @@ DEEP["coconut-fiber"] = dict(
    "We would not recommend listing it that way. Diameter, winding density and attachment tolerance differ between the two, and a size that is a batting toy for a cat can be a swallowing hazard for a dog, or too light to interest one. Specify each separately."),
   ("What MOQ applies?",
    "Selected standard lines start from 50 pcs per SKU. Each size and construction needs its own confirmed minimum — a mixed carton does not automatically satisfy the minimum for every SKU inside it. Private-label packaging starts at 500 pcs."),
-  ("Can you supply coir in other forms?",
-   "Mats, substrate and rope are produced, but they sit outside the VietPaw toy catalogue and are quoted as a separate conversation. Ask and we will tell you what is currently available rather than listing it as though it were stock."),
  ])
 
 DEEP["hemp-fiber"] = dict(

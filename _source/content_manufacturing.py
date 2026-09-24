@@ -2,6 +2,7 @@
 """Distinct commercial intents: manufacturer, service routes, factory and QC."""
 from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SOURCE_OEM, LEAD, PRIVATE_LABEL, SAMPLES, SAMPLE_DISPATCH, QC_PROTOCOL, MOISTURE, RANGE_SCOPE
 from content_products import product_cards
+from common import SITES
 
 def build(root):
     publish(root,"/pet-toys-manufacturer-vietnam/","Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
@@ -9,7 +10,7 @@ def build(root):
         "Natural Pet Toy Manufacturer in Vietnam for B2B Brands",
         "Source coffee wood, coconut fiber, hemp and loofah pet toys through VietPaw with product specifications, production checks and order-specific documentation.",
         [section("A Vietnam manufacturing brief, not just a product list",
-            p("Our operation, produces natural pet products in Vietnam for wholesale and private-label customers. Coffee wood sourcing is centered on the Central Highlands, with export coordination through Ho Chi Minh City. Our product range also includes coconut fiber, hemp fiber and loofah.")+
+            p("VietPaw manufactures natural pet products ourselves, in our own three factories in Dak Lak, Gia Lai and Binh Duong, with a production capacity of 100,000 pieces a month. Coffee wood is sourced in the Central Highlands; export coordination runs through Ho Chi Minh City. Our range covers coffee wood, coconut fiber, hemp fiber and loofah.")+
             p("For your order, confirm the actual production location, the approved product specification and the company named in the contract. A manufacturer description should lead to verifiable project details, not replace them.")),
          section("Natural materials we manufacture",cards([
             ("Coffee wood dog chews","Standard sticks and specification-led wood/rope combinations.","/collections/coffee-wood/"),
@@ -45,7 +46,7 @@ def build(root):
             "Coconut fiber: ball dimensions, winding or other coir constructions.",
             "Hemp: rope geometry, knots, balls and connection details.",
             "Loofah: silhouette, dimensions, stitching and optional fillings."])+
-            p(f'Our production team outlines design and packaging options in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand for these enquiries. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
+            p(f'We develop designs and packaging in our own factories — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
          section("The development and approval sequence",ul([
             "<strong>Brief review:</strong> target pet, play context, destination, intended claims and indicative volume.",
             "<strong>Feasibility:</strong> material availability, workable dimensions, manufacturing method and cost drivers.",
@@ -124,31 +125,33 @@ def build(root):
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
     publish(root,"/factory/","Pet Toy Factory Vietnam | Process & Verification | VietPaw",
-        "Explore Vietnam production for the VietPaw range, including coffee wood processing, factory information and order-specific records.",
-        "Factory Review for Your VietPaw Order",
-        "Understand where and how your selected product is made. Use the supplier information below to prepare a current, product-specific factory review.",
-        [section("Production locations and capacity: what the sources say",
-            p("VietPaw helps buyers plan product-specific production and factory checks. Registration details of VietPaw are confirmed in your quotation and export documents. Our internal planning figures describe a three-factory network and indicative capacity of 5–6 million units per year. These are internal planning figures, not an audited measurement of current output or the capacity reserved for your order.")+
-            p("Company sources describe Central Highlands production and sourcing, together with southern warehousing/export operations. Published location descriptions differ between documents and webpages. Confirm the exact site, current address and manufacturing role for your selected SKU before a visit or audit.")+
-            p("Do not equate an office, warehouse, partner workshop and owned production facility. Ask which stages happen at each location and whether any work is subcontracted.")),
+        "VietPaw manufactures in its own three factories in Dak Lak, Gia Lai and Binh Duong, Vietnam — 100,000 pieces a month. Process, quality control and factory visits.",
+        "Our Factories in Vietnam",
+        "We manufacture ourselves, in three factories we operate in Dak Lak, Gia Lai and Binh Duong, with a production capacity of 100,000 pieces a month.",
+        [section("Three factories, one production team",
+            p("VietPaw manufactures its own products. We operate three factories in Vietnam — Dak Lak and Gia Lai in the Central Highlands, close to where the coffee wood is collected, and Binh Duong in the south — with packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")+
+            table(["Site","Location"],SITES)+
+            p("<strong>Production capacity: 100,000 pieces a month</strong> across our three factories. Volume and dates for your order are confirmed in your quotation.")+
+            p("Buyer visits and third-party inspection are welcome at any of our factories; please arrange in advance so the line is running when you arrive.")),
          section("Coffee wood drying and quality protocol",
-            p("Coffee wood follows a "+QC_PROTOCOL+". The six stages describe the drying/quality protocol; the five checkpoints are inspection controls within that process, not a separate five-stage manufacturing sequence.")+
+            p("Coffee wood follows a "+QC_PROTOCOL+". The five checkpoints are inspection controls within that process.")+
             p(MOISTURE)+
             p('We keep its operating parameters confidential; the published figure is the finished-batch moisture threshold, not the drying recipe. Ask for the moisture record linked to your order; no drying temperature, cycle time or unpublished stage sequence is asserted here.'),True),
          section("Process and warehouse references",
             '<div class="grid grid-3"><figure><img src="/assets/img/process-raw-sticks.jpg" alt="Raw coffee wood preparation reference" loading="lazy"><figcaption>Raw material reference.</figcaption></figure><figure><img src="/assets/img/vietpaw-moisture-check.jpg" alt="Coffee wood moisture measurement reference" loading="lazy"><figcaption>Moisture-check reference.</figcaption></figure><figure><img src="/assets/img/pallet-stack-inspection.jpg" alt="Packed VietPaw carton reference" loading="lazy"><figcaption>Packed-carton reference.</figcaption></figure></div>'+
-            p("Images are from the supplied website asset library and show process/range references. They are not dated evidence of current capacity, equipment ownership or the status of a particular order.")),
+            p("Images show our process and range. Ask for dated photos or a video walkthrough for your specific order.")),
          section("What to request in a factory verification pack",ul([
             "Current company registration and site details matching the proposed contract.",
             "A dated walkthrough identifying the product line and stages handled there.",
             "Production slot and capacity calculation for the actual SKU mix and pack.",
             "Quality checkpoints, measuring equipment and sample/lot identification.",
-            "Subcontracting disclosure and arrangements for buyer or independent inspection.",
+            "Arrangements for buyer or independent inspection at our factories.",
             "Authorized, appropriately redacted shipment examples where relevant."])+
             p('<a href="/quality-control/">Review the quality-control workflow</a> and <a href="/certifications/">document scope</a> before agreeing the inspection brief.'),True)],
         active="Manufacturing",image="/assets/img/process-raw-sticks.jpg",
-        faqs=[("Is annual capacity a guaranteed order lead time?", "No. Capacity depends on the product mix, material availability, packing work and production schedule."),
-              ("Can I arrange a factory visit?", "Request the current site address, contact, scope and appointment before traveling. Confirm whether a third-party inspection is needed.")])
+        faqs=[("What is your production capacity?", "100,000 pieces a month across our three factories in Dak Lak, Gia Lai and Binh Duong. Lead time for your order depends on the product mix, packaging and the production schedule, and is confirmed in your quotation."),
+              ("Do you manufacture yourselves?", "Yes. VietPaw manufactures in its own three factories; there is no trading layer between you and the production line."),
+              ("Can I arrange a factory visit?", "Yes. Tell us which factory and product you want to see and we will arrange the appointment and contact before you travel. Third-party inspection is also welcome.")])
     publish(root,"/quality-control/","Pet Toy Quality Control | VietPaw",
         "Coffee wood follows our drying and quality protocol with five QC checkpoints. Review batch moisture below 14% before packing and inspection records.",
         "Quality Control for Natural Pet Toy Orders",

@@ -27,7 +27,7 @@ COFFEE_TOLERANCE = [
     ("Crack limit","Pieces cracked beyond 2 mm are rejected at grading","Checked on the graded piece, not on a sampled average."),
     ("Reported reject rate","Roughly one piece in five across the whole process","Internally reported figure, concentrated at the seasoning-rack stage. It explains why lead time is driven by graded output rather than raw intake."),
     ("Quality checkpoints","Five, between raw stem and sealed carton","Intake, after seasoning, after shaping, at grading and at the packing bench."),
-    ("Reported monthly output","Around 100,000 coffee wood pieces","Internal planning figure for the coffee wood line, not capacity reserved for your order."),
+    ("Production capacity","100,000 pcs/month","Across our own three factories in Dak Lak, Gia Lai and Binh Duong. Volume and dates for your order are confirmed in the quotation."),
 ]
 
 COFFEE_STEPS = [
@@ -236,7 +236,7 @@ def build(root):
         path="/products/"+slug+"/"
         image="/assets/img/"+d["image"]
         specifications=table(["Specification","Details"],[
-            ("Commercial / export brand",BRAND),
+            ("Manufacturer and exporter",BRAND),
             ("Material",d["material"]+"; confirm complete component list"),
             ("Sizes",d["size"]),("MOQ",d["moq"]),
             ("Branding","Laser engraving for suitable wood; labels, tags or boxes for fiber products."),

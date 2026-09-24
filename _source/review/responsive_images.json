@@ -478,6 +478,50 @@
         }
       ]
     },
+    "assets/img/coffee-wood-moisture-meter-check.jpg": {
+      "sha256": "980cc0da1cff91900a4f5cbff2fbff19378b1e40f41e00fcfc48cb25e4653120",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 147463,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-check-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 17682
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-check-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 29276
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-check-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 40394
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-check-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 54034
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-check-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 68186
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-check-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 80696
+        }
+      ]
+    },
     "assets/img/coffee-wood-seasoning-racks.jpg": {
       "sha256": "7abff72f5e4c5b0a165c9da11595fda9b42c7eb700cc3b0cbe4ca1cb213c93fe",
       "width": 2000,
@@ -525,6 +569,26 @@
           "width": 1600,
           "height": 1200,
           "bytes": 133926
+        }
+      ]
+    },
+    "assets/img/coffee-wood-stem-cross-cutting.jpg": {
+      "sha256": "8d27b0e305bc7d158ac06623f45f5984f0f65eaed826a4077b35afd081644589",
+      "width": 395,
+      "height": 296,
+      "bytes": 31363,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-stem-cross-cutting-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 12376
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-stem-cross-cutting-jpg-395w.webp",
+          "width": 395,
+          "height": 296,
+          "bytes": 17266
         }
       ]
     },
@@ -1690,6 +1754,50 @@
         }
       ]
     },
+    "assets/img/peeling-dried-loofah-gourd.jpg": {
+      "sha256": "d0e547b4b646c4c759a201381779ed9cf6a410508ab374eb09f4b7a35bf08223",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 239179,
+      "variants": [
+        {
+          "path": "assets/img/webp/peeling-dried-loofah-gourd-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 19288
+        },
+        {
+          "path": "assets/img/webp/peeling-dried-loofah-gourd-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 33966
+        },
+        {
+          "path": "assets/img/webp/peeling-dried-loofah-gourd-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 51094
+        },
+        {
+          "path": "assets/img/webp/peeling-dried-loofah-gourd-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 69436
+        },
+        {
+          "path": "assets/img/webp/peeling-dried-loofah-gourd-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 88098
+        },
+        {
+          "path": "assets/img/webp/peeling-dried-loofah-gourd-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 105464
+        }
+      ]
+    },
     "assets/img/process-coffeewood-styled.jpg": {
       "sha256": "38bd7036ed0cbb1747775c14410f115b1aad426e279c78acad27644d8fab9dd4",
       "width": 1400,
@@ -1869,6 +1977,38 @@
           "width": 877,
           "height": 414,
           "bytes": 46240
+        }
+      ]
+    },
+    "assets/img/product-hemp-rope-trio.jpg": {
+      "sha256": "650442a5dec3996a560b62b991f4502ea23f07054b8331b46b93b592cff23379",
+      "width": 665,
+      "height": 368,
+      "bytes": 27796,
+      "variants": [
+        {
+          "path": "assets/img/webp/product-hemp-rope-trio-jpg-320w.webp",
+          "width": 320,
+          "height": 177,
+          "bytes": 9654
+        },
+        {
+          "path": "assets/img/webp/product-hemp-rope-trio-jpg-480w.webp",
+          "width": 480,
+          "height": 266,
+          "bytes": 18000
+        },
+        {
+          "path": "assets/img/webp/product-hemp-rope-trio-jpg-640w.webp",
+          "width": 640,
+          "height": 354,
+          "bytes": 26038
+        },
+        {
+          "path": "assets/img/webp/product-hemp-rope-trio-jpg-665w.webp",
+          "width": 665,
+          "height": 368,
+          "bytes": 26760
         }
       ]
     },
@@ -2154,6 +2294,56 @@
         }
       ]
     },
+    "assets/img/vacuum-bagged-chews-stacked.jpg": {
+      "sha256": "5043ffae8f875f310525798e92467dc4c8f55e3b2d7c8e3063b41be8e2e2a5d5",
+      "width": 1500,
+      "height": 2000,
+      "bytes": 608459,
+      "variants": [
+        {
+          "path": "assets/img/webp/vacuum-bagged-chews-stacked-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 30916
+        },
+        {
+          "path": "assets/img/webp/vacuum-bagged-chews-stacked-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 56032
+        },
+        {
+          "path": "assets/img/webp/vacuum-bagged-chews-stacked-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 85830
+        },
+        {
+          "path": "assets/img/webp/vacuum-bagged-chews-stacked-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 119392
+        },
+        {
+          "path": "assets/img/webp/vacuum-bagged-chews-stacked-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 155986
+        },
+        {
+          "path": "assets/img/webp/vacuum-bagged-chews-stacked-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 205234
+        },
+        {
+          "path": "assets/img/webp/vacuum-bagged-chews-stacked-jpg-1500w.webp",
+          "width": 1500,
+          "height": 2000,
+          "bytes": 275498
+        }
+      ]
+    },
     "assets/img/vietpaw-coconut-fiber-balls.jpg": {
       "sha256": "946985142dfe8cee06f687be58f1b1984496e3679ba34cc17e285114eb6a856f",
       "width": 1086,
@@ -2377,6 +2567,50 @@
           "width": 1600,
           "height": 1600,
           "bytes": 327516
+        }
+      ]
+    },
+    "assets/img/vietpaw-home-lifestyle.jpg": {
+      "sha256": "23941576ba783782d23bfa2b55ca10de9c49477ef13d1743833007c43bf8719e",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 217675,
+      "variants": [
+        {
+          "path": "assets/img/webp/vietpaw-home-lifestyle-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 25906
+        },
+        {
+          "path": "assets/img/webp/vietpaw-home-lifestyle-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 49086
+        },
+        {
+          "path": "assets/img/webp/vietpaw-home-lifestyle-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 77326
+        },
+        {
+          "path": "assets/img/webp/vietpaw-home-lifestyle-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 108936
+        },
+        {
+          "path": "assets/img/webp/vietpaw-home-lifestyle-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 137038
+        },
+        {
+          "path": "assets/img/webp/vietpaw-home-lifestyle-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 168698
         }
       ]
     },

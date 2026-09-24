@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Reusable editorial components, not unverified sales claims."""
+import re
 from html import escape
 from urllib.parse import urlencode
 from common import page, write_page, breadcrumb_html, rfq_bar, BRAND
@@ -18,7 +19,7 @@ EXPORT_DOCS = ("Seven documents ship with every order: Commercial Invoice, Packi
                "Batch moisture readings are available on request. We do not issue veterinary certificates (this is a wood "
                "article, not an animal by-product) or FSC certification (coffee is an agricultural crop, outside its scope); "
                "laboratory testing is arranged separately on request.")
-RANGE_SCOPE = 'VietPaw sells pet toys and chews across four material collections. Our factory behind our range also produces pet beds, hammocks and mats, which sit outside the VietPaw catalogue; ask Sarah if you need those quoted alongside your toy order.'
+RANGE_SCOPE = 'VietPaw manufactures and sells pet toys and chews across four material collections: coffee wood, coconut fiber, hemp and loofah.'
 SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items. Hard chews can damage teeth; seek veterinary advice for puppies, dental conditions or forceful chewing."
 SOURCE_OEM = "/services/oem-odm-pet-toy-manufacturing/"
 SOURCE_COMPANY = "/about/"
@@ -62,11 +63,18 @@ def steps(items):
         out.append(f'<li><strong>{name}</strong><br><em>Action:</em> {action}<br><em>Result:</em> {result}{extra}</li>')
     return '<ol class="steps">'+"".join(out)+"</ol>"
 
+def _cells(headers, row):
+    return ''.join('<td data-label="'+escape(re.sub(r"<[^>]+>","",str(h)),quote=True)+'">'+str(x)+'</td>' for h,x in zip(headers,row))
+
+def _wrap_class(headers):
+    # Up to 4 columns: stack into labelled cards on phones. Wider tables scroll with a hint.
+    return "table-scroll stack" if len(headers) <= 4 else "table-scroll wide"
+
 def spec_table(headers, rows, caption=None):
     cap = f'<caption>{caption}</caption>' if caption else ""
-    return ('<div class="table-scroll" tabindex="0" role="region" aria-label="'+escape(" / ".join(headers))+
+    return ('<div class="'+_wrap_class(headers)+'" tabindex="0" role="region" aria-label="'+escape(" / ".join(headers))+
             '"><table class="spec-table">'+cap+'<thead><tr>'+''.join('<th scope="col">'+x+'</th>' for x in headers)+
-            '</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+str(x)+'</td>' for x in row)+'</tr>' for row in rows)+
+            '</tr></thead><tbody>'+''.join('<tr>'+_cells(headers,row)+'</tr>' for row in rows)+
             '</tbody></table></div>')
 
 def figure(src, alt, caption, lazy=True):
@@ -110,7 +118,7 @@ def ul(items, ordered=False):
     return f'<{tag}>'+"".join("<li>"+i+"</li>" for i in items)+f"</{tag}>"
 
 def table(headers, rows):
-    return '<div class="table-scroll" tabindex="0" role="region" aria-label="'+escape(" / ".join(headers))+'"><table><thead><tr>'+''.join('<th scope="col">'+x+'</th>' for x in headers)+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+str(x)+'</td>' for x in row)+'</tr>' for row in rows)+'</tbody></table></div>'
+    return '<div class="'+_wrap_class(headers)+'" tabindex="0" role="region" aria-label="'+escape(" / ".join(headers))+'"><table><thead><tr>'+''.join('<th scope="col">'+x+'</th>' for x in headers)+'</tr></thead><tbody>'+''.join('<tr>'+_cells(headers,row)+'</tr>' for row in rows)+'</tbody></table></div>'
 
 def section(title, body, alt=False):
     return f'<section class="section{" section-alt" if alt else ""}"><div class="wrap"><h2>{title}</h2>{body}</div></section>'

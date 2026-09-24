@@ -24,7 +24,7 @@ def build(root):
             "Product tags, size labels, paper/kraft boxes and pack artwork.",
             "Wood-and-rope combinations, rope geometry and loofah shapes, subject to feasibility.",
             "Product photography or video support by agreement; scope and cost depend on the project."])+
-            p(f'Our production team describes these services in its <a href="{SOURCE_OEM}">official manufacturing and order information</a>. VietPaw is the commercial/export brand. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
+            p(f'We run these services in our own factories — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
          section("Before approving a sample",ul([
             "Agree materials, dimensions, tolerances and intended pet/use.",
             "List every component, including thread, cores, adhesive and packaging film.",
@@ -129,11 +129,11 @@ def build(root):
             p('<a href="/solutions/wholesalers/">Distributor reorder planning</a> · <a href="/solutions/retail-chains/">Retail-chain supply preparation</a>'),True)],
         active="Company",image=IMG+"inspection-documents-at-pallets.jpg")
     publish(root,"/wholesale-catalogue/","VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
-        "Download the VietPaw pet toy catalogue and contact us for current specifications, prices, MOQ and private-label terms.",
+        "Download the VietPaw 2026 pet toy catalogue (PDF) and contact us for current specifications, prices, MOQ and private-label terms.",
         "Wholesale Pet Toy Catalogue",
         "Explore the VietPaw range. Use the catalogue as a visual reference, then confirm current specifications and terms with Sarah.",
         [section("Download instantly. Ask for pricing when you need it.",
-            '<div class="grid grid-2"><div><p><a class="btn btn-primary" href="/assets/downloads/vietpaw-wholesale-catalogue.pdf">Download Catalogue (PDF)</a></p>'+
+            '<div class="grid grid-2"><div><p><a class="btn btn-primary" href="/assets/downloads/vietpaw-catalogue-2026.pdf">Download Catalogue (PDF)</a></p>'+
             p("This catalogue is a visual reference, not a certified product specification or a live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
             p("No email is required to download. If you would like current MOQ and pricing, use the optional form alongside the catalogue. We use those details to reply to your request, not to subscribe you to a newsletter.")+'</div><div>'+catalogue_form()+'</div></div>'),
          section("Send the product references you want quoted",p("Include the catalogue item or photo reference, dimensions, quantity per SKU, destination and packaging requirements. The approved sample and written quote take precedence over catalogue examples.")+

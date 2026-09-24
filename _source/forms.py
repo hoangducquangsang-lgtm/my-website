@@ -16,29 +16,31 @@ def hidden_fields(prefix, subject, kind):
 <input type="hidden" name="enquiry_type" value="{kind}">
 <div hidden aria-hidden="true"><label for="{prefix}-gotcha">Leave this field empty</label><input id="{prefix}-gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>'''
 
+BUYER_TYPES = ("Amazon seller", "Startup", "Eco shop", "Business owner", "Wholesale", "Importer", "Sourcing", "Other")
+PRODUCT_INTERESTS = (("coffee_wood_chew", "Coffee wood chew"), ("coconut", "Coconut"), ("hemp", "Hemp"), ("loofah", "Loofah"))
+
 def quote_form():
-    return f'''<form id="rfq-form" class="card enquiry-form" data-enquiry-form="quote" action="{ENDPOINT}" method="post" enctype="multipart/form-data" data-success-url="/request-a-quote/thank-you/">
+    buyer_options = "".join(f'<option value="{b}">{b}</option>' for b in BUYER_TYPES)
+    product_boxes = "".join(
+        f'<label class="check-option" for="rfq-product-{key}"><input type="checkbox" id="rfq-product-{key}" name="products" value="{label}" data-product-option> <span>{label}</span></label>'
+        for key, label in PRODUCT_INTERESTS)
+    return f'''<form id="rfq-form" class="card enquiry-form" data-enquiry-form="quote" action="{ENDPOINT}" method="post" data-success-url="/request-a-quote/thank-you/">
 {hidden_fields("rfq", "VietPaw — samples and pricing enquiry", "samples_and_pricing")}
 <h2>Tell us about your project</h2>
-<p class="small required-note">Start with the five required fields. We usually reply within one business day with sample options, pricing and production timing. Fields marked * are required.</p>
+<p class="small required-note">We usually reply within one business day with sample options, pricing and production timing. Fields marked * are required.</p>
 <div class="form-grid">
 <div class="field"><label for="rfq-name">Full name *</label><input id="rfq-name" name="name" autocomplete="name" required maxlength="120"></div>
 <div class="field"><label for="rfq-email">Business email *</label><input id="rfq-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
-<div class="field"><label for="rfq-company">Company *</label><input id="rfq-company" name="company" autocomplete="organization" required maxlength="180"></div>
+<div class="field"><label for="rfq-phone">Phone / WhatsApp *</label><input id="rfq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="40" placeholder="Include country code, e.g. +49 …"></div>
+<div class="field"><label for="rfq-company">Company</label><input id="rfq-company" name="company" autocomplete="organization" maxlength="180"></div>
 <div class="field"><label for="rfq-country">Country / destination *</label><input id="rfq-country" name="country" autocomplete="country-name" required maxlength="100" placeholder="e.g. Germany"></div>
-<div class="field field-full"><label for="rfq-products">Product interest *</label><textarea id="rfq-products" name="products" data-product-interest rows="3" maxlength="2500" required placeholder="Product name, material, size or catalogue reference"></textarea></div>
+<div class="field"><label for="rfq-buyer">I am a… *</label><select id="rfq-buyer" name="buyer_type" required><option value="">Select one</option>{buyer_options}</select></div>
+<fieldset class="field field-full check-group" data-product-interest><legend>Product interest * <span class="small">(select one or more)</span></legend>
+<div class="check-options">{product_boxes}</div></fieldset>
 </div>
-<details class="form-details"><summary>Optional project details</summary>
-<div class="form-grid">
-<div class="field"><label for="rfq-quantity">Estimated quantity</label><select id="rfq-quantity" name="quantity"><option value="">Not decided</option><option value="50-499">50–499</option><option value="500-4999">500–4,999</option><option value="5000+">5,000+</option></select></div>
-<div class="field"><label for="rfq-service">Sourcing option</label><select id="rfq-service" name="service"><option value="">Please advise</option><option value="wholesale">Wholesale</option><option value="private_label">Private Label</option><option value="oem_odm">OEM / ODM</option></select></div>
-<div class="field field-full"><label for="rfq-whatsapp">WhatsApp (including country code)</label><input id="rfq-whatsapp" name="whatsapp" type="tel" autocomplete="tel" maxlength="40" placeholder="+49 …"></div>
-<div class="field field-full"><label for="rfq-message">Message</label><textarea id="rfq-message" name="message" rows="3" maxlength="4000" placeholder="Branding, packaging, target launch date or other requirements"></textarea></div>
-<div class="field field-full"><label for="rfq-reference">Upload reference / design</label><input id="rfq-reference" name="attachment" type="file" data-attachment accept=".pdf,.jpg,.jpeg,.png,.webp" aria-describedby="rfq-file-note"><p id="rfq-file-note" class="small">One PDF, JPG, PNG or WebP file, up to 5 MB. Share only files you are authorized to send; please email confidential designs after agreeing a confidentiality process.</p></div>
-</div></details>
 <div class="form-actions"><button class="btn btn-primary" type="submit">Get Samples &amp; Pricing</button></div>
 <p class="small form-privacy">We use your details to respond to this enquiry. This does not subscribe you to a newsletter.</p>
-{feedback("rfq", attachments=True)}
+{feedback("rfq")}
 </form>'''
 
 def catalogue_form():

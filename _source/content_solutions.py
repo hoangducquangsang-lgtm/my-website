@@ -29,7 +29,7 @@ SOLUTIONS = [
  ("Forecast","Confirmed orders separated from non-binding demand estimates"),
  ("Delivery","Required dates, transport mode and destination responsibilities"),
  ("Governance","Version control, material changes and receiving-quality process")],
- "The supplied company material quotes indicative annual capacity, but that does not reserve a production slot. Ask for a plan against your product mix and schedule. Territory or product exclusivity is a separate negotiation and should never be inferred from a volume order.",
+ "Our three factories produce up to 100,000 pieces a month, but that does not reserve a production slot. Ask for a plan against your product mix and schedule. Territory or product exclusivity is a separate negotiation and should never be inferred from a volume order.",
  "wholesale-pet-products"),
 ("startup-brands","Startup Brands","Low-MOQ Pet Toys for Startup Brands | VietPaw",
  "Launch Your First Natural Pet Toy SKU",

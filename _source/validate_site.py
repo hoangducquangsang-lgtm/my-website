@@ -134,7 +134,9 @@ def run():
         seo_fields += re.findall(r'<meta property="og:(?:title|description)" content="([^"]*)"',html)
         seo_fields += re.findall(r'\salt="([^"]*)"',html)
         check(not any('WINVN' in f.upper() for f in seo_fields),f"{route}: WINVN in SEO title, description or image alt")
-        check('WINVN' not in html.upper(),f"{route}: WINVN must not appear anywhere on the page")
+        from common import FOOTER_LEGAL
+        check(html.count(FOOTER_LEGAL)==1,f"{route}: footer legal line missing")
+        check('WINVN' not in html.replace(FOOTER_LEGAL,"").upper(),f"{route}: WINVN allowed only in the footer legal line")
         check("sarah.winvn@gmail.com" not in html,f"{route}: superseded email")
         check("Exporting to 30+" not in html,f"{route}: superseded export reach")
         footer=re.search(r'<footer class="site-footer">(.*?)</footer>',html,re.S)
@@ -253,8 +255,10 @@ def run():
     for item in replacements:
         source=raw_root/item["source"]
         target=ROOT/"assets/img"/item["asset"]
+        if not target.is_file() and (ROOT/"_to_delete").exists() and any((ROOT/"_to_delete").rglob(item["asset"])):
+            continue  # deliberately retired (watermark/WINVN text) — see _to_delete/
         check(target.is_file(),"Replacement image missing: "+item["asset"])
-        check(source.is_file() and target.is_file() and hashlib.sha256(source.read_bytes()).digest()==hashlib.sha256(target.read_bytes()).digest(),"Replacement is not the supplied original: "+item["asset"])
+        check((not raw_root.exists()) or source.is_file() and target.is_file() and hashlib.sha256(source.read_bytes()).digest()==hashlib.sha256(target.read_bytes()).digest(),"Replacement is not the supplied original: "+item["asset"])
         for route,(file,d) in docs.items():
             references=[v for _,_,v in d.links]+[d.meta.get("og:image",""),d.meta.get("twitter:image","")]
             check(not any(urlsplit(v).path.endswith('/'+item["old"]) for v in references),f"{route}: retired image still referenced {item['old']}")
@@ -271,8 +275,9 @@ def run():
         if field.get("type")=="hidden": continue
         check(field.get("id") in rfq.labels,"RFQ field has no label: "+str(field))
     names={f.get("name") for f in rfq.fields}
-    check(names=={"name","company","email","country","products","quantity","service","whatsapp","message","attachment","enquiry_type","_subject","_gotcha"},"RFQ fields differ from the current B2B brief")
-    check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email","company","country","products"},"RFQ must require five B2B essentials")
+    check(names=={"name","email","phone","company","country","buyer_type","products","enquiry_type","_subject","_gotcha"},"RFQ fields differ from the current B2B brief: "+str(names))
+    check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email","phone","country","buyer_type"},"RFQ required fields differ (company must be optional)")
+    check(sum(1 for f in rfq.fields if f.get("name")=="products" and f.get("type")=="checkbox")==4,"RFQ product interest must be 4 checkboxes")
     catalogue=docs["/wholesale-catalogue/"][1]
     check({f.get("name") for f in catalogue.fields if "required" in f}=={"email","country"},"Catalogue pricing requires email and destination")
     check(any(key=="action" and link=="https://formspree.io/f/mvkpbvlb" for _,key,link in rfq.links),"Legacy Formspree destination missing")

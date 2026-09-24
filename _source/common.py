@@ -22,14 +22,17 @@ GOOGLE_TAG_HTML = f"""<!-- Google tag (gtag.js) -->
 BRAND = "VietPaw"
 BRAND_TAGLINE = "Natural Pet Products"
 BRAND_ENTITY_STATEMENT = f"{BRAND} is a Vietnamese manufacturer and exporter of natural-material pet toys"
-BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, producing and shipping from its own facilities in Vietnam."
+BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, manufacturing in its own three factories in Vietnam."
 BRAND_INTRO = f"{BRAND} manufactures natural-material pet toys in Vietnam and exports them to brands, wholesalers and retailers worldwide."
 # Production and finishing sites. Street addresses are published only where confirmed.
+# Owner instruction 2026-09-24: three own factories in Dak Lak, Gia Lai and Binh Duong; 100,000 pcs/month.
+FACTORY_LOCATIONS = "Dak Lak, Gia Lai and Binh Duong"
 SITES = [
+    ("Factory — Dak Lak", "Dak Lak province, Central Highlands, Vietnam"),
+    ("Factory — Gia Lai", "Gia Lai province, Central Highlands, Vietnam"),
+    ("Factory — Binh Duong", "Binh Duong, southern Vietnam"),
     ("Head office, warehouse and export preparation",
      "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"),
-    ("Coffee wood production and finishing", "Gia Lai province, Central Highlands, Vietnam"),
-    ("Coffee wood production and finishing", "Dak Lak province, Central Highlands, Vietnam"),
 ]
 # Current audit brief: VietPaw is the site brand; our production team is identified in legal contexts.
 # The contracting entity is named once per page, in the footer legal line.
@@ -44,8 +47,10 @@ ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Bin
 REGISTERED_YEAR = "2019"
 REGISTRATION_DATE = "12 November 2019"
 COUNTRIES = "40+"
-CAPACITY = "5–6 million units/year"
+CAPACITY = "100,000 pcs/month"
 REVIEW_DATE = "2026-08-30"
+# Owner instruction 2026-09-24: the only place the legal company is named on the site.
+FOOTER_LEGAL = "VietPaw is an international B2B brand of Winvnint CO., LTD."
 PAGES = {}
 
 NAV = [
@@ -139,7 +144,7 @@ def footer_html():
 <li><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp: {PHONE}</a></li>
 <li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul>
 <div class="footer-social">{social_html("Follow VietPaw")}</div></div>{cols}</div>
-<div class="wrap footer-bottom"><p>&copy; 2026 {BRAND}. All rights reserved. Product specifications and order terms are confirmed in your quotation.</p></div>
+<div class="wrap footer-bottom"><p class="footer-legal">{FOOTER_LEGAL}</p><p>&copy; 2026 {BRAND}. All rights reserved. Product specifications and order terms are confirmed in your quotation.</p></div>
 </footer>"""
 
 def rfq_bar(text="Ready to evaluate a sample for your range?", cta="Request Sample Options"):
@@ -190,7 +195,7 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
     article_author = next((s.get("author",{}).get("name") for s in schemas if s.get("@type")=="Article"),None)
     author_meta = f'<meta name="author" content="{escape(article_author,quote=True)}">' if article_author else ""
     PAGES[path] = {"title":title,"description":meta_description,"indexable":not noindex}
-    form_script = '<script src="/assets/rfq.js?v=20260831-b2b-leads" defer></script>' if "data-enquiry-form" in content else ""
+    form_script = '<script src="/assets/rfq.js?v=20260924-form" defer></script>' if "data-enquiry-form" in content else ""
     sticky = "" if path=="/request-a-quote/" else f'<aside class="sticky-contact" aria-label="Contact sales"><a class="btn btn-primary" href="/request-a-quote/?request=sample">Request Sample</a><a class="btn btn-outline desktop-contact" href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></aside>'
     return f"""<!DOCTYPE html>
 <html lang="en"><head>
