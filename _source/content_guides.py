@@ -35,20 +35,88 @@ add("natural-dog-chew-toys-guide","Natural chew toys",
 add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     "Are Coffee Wood Chews Safe for Dogs?",
     "A practical look at coffee wood chew suitability, hard-chew risks, product inspection and the instructions retailers should give owners.",
-    "There is no honest yes-or-no answer that applies to every dog. Coffee wood is a hard, non-edible chew material. Its plant origin tells you where it comes from; it does not tell you whether it suits a particular dog's teeth, mouth size or way of chewing.",
+    answer("<strong>Short answer:</strong> coffee wood chews can suit many adult dogs that gnaw rather than crack, when the chew is the "
+           "right size, used under supervision and replaced once it cracks or wears small. They are not safe for every dog. Like antler "
+           "and nylon, coffee wood is hard enough to fracture a tooth in a forceful chewer, and it is a toy, not food — pieces should not "
+           "be swallowed."),
     [
-    ("Consider the dog before the stick",p("A dog that gnaws slowly places different demands on a chew from one that clamps down and tries to break pieces off. Existing dental problems, age and chewing behavior all affect the decision. For puppies, dogs with dental concerns or forceful chewers, ask a veterinarian whether a hard chew is appropriate before choosing a size.")+
-        p("AAHA's warning about tooth damage from hard chewing objects is relevant here. Making a chew larger may reduce the chance of swallowing it whole, but it does not make the material softer or remove dental risk.")),
-    ("What a finished product should tell you",p("The sample and label should identify the material, size and intended use. Examine the surface and ends for damage, sharp projections or developing cracks. Natural grain patterns are expected; a split that could release a piece needs attention. Do not sell a received item with visible damage as an acceptable natural variation.")+
-        p("Ask our production team about drying and inspection records. These are useful production controls, but neither a moisture-meter photograph nor a smooth finish proves that a chew is safe for every dog.")),
-    ("Supervision includes knowing when to stop",p("Check the chew before and during use. Remove loose pieces, and take the product away if it cracks, becomes damaged or wears down to a size the dog could swallow. If the dog is trying to break off and swallow chunks, discontinue that product rather than waiting for it to wear out.")+
-        p("The pack should make clear that the product is not food. Avoid statements suggesting that every fiber or fragment is harmless to swallow. Suspected swallowing of a substantial piece or signs of injury need veterinary attention, not a recommendation to keep using the chew.")),
-    ("What buyers should put on the label",p("Keep the advice short enough to be read: intended pet, size selection, supervised use, inspection and replacement. Put the same guidance on the product page and the pack. A sales claim such as splinter-free or safe for all dogs can undo that care by creating a false expectation.")+
-        p("VietPaw's size reference is useful for comparing products. Use it alongside the actual dimensions and a suitability decision, not as a substitute for either."))],
+    ("What a coffee wood chew is",
+      p("A <dfn>coffee wood chew</dfn> is a stick cut from the stem wood of the coffee tree, seasoned, dried and shaped into a non-edible "
+        "chew toy. VietPaw chews are one untreated plant material: no glue, coating, preservative or colouring. Every batch is dried to "
+        "below 14% moisture before packing, and any cracked piece is removed at grading.")
+      + p("The stick comes from the stem, not from the bean or the cherry. We do not publish a caffeine-free claim: no laboratory result has "
+          "been produced for this material, and we would rather say so than print a figure nobody has measured.")
+      + p("Its plant origin tells you where the chew comes from. It does not tell you whether it suits a particular dog’s teeth, mouth size "
+          "or way of chewing — that is the real safety question.")),
+
+    ("The risks, one by one",
+      spec_table(["Risk","What can happen","How to reduce it"],[
+        ("Tooth fracture","A dog that clamps down hard on any hard object can break a tooth — coffee wood, antler and nylon alike.","Offer it to gnawers, not crackers; ask a vet first for puppies, seniors and dogs with dental problems."),
+        ("Swallowing whole","A stick that is too small, or worn down small, can be swallowed or lodge in the throat.","Choose by the weight band and go up one size when in doubt; replace before it is swallowable."),
+        ("Breaking off pieces","A powerful chewer can split a stick and swallow hard fragments.","Remove the chew at the first crack or split; stop using it if the dog tries to break pieces off."),
+        ("Splinters","No supplier in this category has test data behind “splinter-free”.","In normal gnawing the surface wears into soft fibres; supervision covers the exceptions."),
+        ("Softening in storage","Wood that picks up moisture softens and wears faster.","Keep bags sealed and store dry; chews are packed below 14% moisture."),
+      ], caption="Hard is not the same as safe. The chew’s size and the dog’s chewing style decide most of the outcome.")
+      + p("AAHA’s guidance on hard chews is relevant here: making a chew larger may reduce the chance of swallowing it whole, but it does not make "
+          "the material softer or remove dental risk.")),
+
+    ("Which dogs it suits — and which it does not",
+      fit(["Adult dogs that gnaw and shred slowly.",
+           "Dogs that settle with a chew for a supervised session.",
+           "Owners who will check the chew and replace it when it cracks or wears small."],
+          ["The dog is a determined power chewer that cracks hard objects.",
+           "The dog has dental disease, is a senior, or is a puppy still changing teeth.",
+           "The owner wants an edible or digestible chew — this is not food.",
+           "Nobody will be supervising, or the piece is small enough to swallow."],
+          suit_head="Usually a reasonable choice", less_head="Choose something else when")),
+
+    ("Using a coffee wood chew safely, step by step",
+      steps([
+        ("Choose the size","Start from the dog’s weight band, then go up one size for a dog at the top of the band or a keen chewer.","A chew that stays larger than the dog’s mouth for longer."),
+        ("Inspect it before the first use","Look along the stick and at both ends for cracks, splits or sharp projections.","A damaged piece never reaches the dog."),
+        ("Supervise the first sessions","Watch how the dog chews: gnawing and shredding, or biting down to crack.","You know within a few sessions whether this product suits the dog."),
+        ("Check it before every session","Look for new cracks and compare its size with the dog’s mouth.","Wear is caught before it becomes a hazard."),
+        ("Replace it on condition, not on the calendar","Remove it if it cracks, splits, breaks into hard pieces or wears small enough to swallow.","No damaged chew stays in use to reach a number of days."),
+      ])
+      + p(SAFETY)),
+
+    ("VietPaw size reference",
+      coffee_size_table()
+      + p("When a dog sits at the top of a band, or is known to be a determined chewer, go up one size. The consequence of being one size too "
+          "large is a chew that lasts longer; the consequence of being one size too small is the thing everybody is trying to avoid.")),
+
+    ("What buyers should put on the label",
+      p("Keep the advice short enough to be read: intended pet, size selection, supervised use, inspection and replacement. Put the same "
+        "guidance on the product page and the pack.")
+      + ul(["Say: not food; choose the size by weight; supervise; replace when cracked, split or worn small.",
+            "Avoid: “safe for all dogs”, “splinter-free”, “indestructible”, “cleans teeth” and any lifespan in days.",
+            "Refer: puppies, seniors and dogs with dental problems to a vet before using a hard chew."])
+      + p("A sales claim can undo that care by creating a false expectation. The headline is remembered; the small print may not be.")),
+    ],
     ("Coffee wood product specifications","/products/coffee-wood-dog-chew/"),
-    related=[("Size guide","/guides/coffee-wood-chew-size-guide/"),("Quality-control workflow","/quality-control/")],
+    related=[("Size guide","/guides/coffee-wood-chew-size-guide/"),("How long coffee wood chews last","/guides/how-long-do-coffee-wood-chews-last/"),
+             ("Coffee wood vs antler, nylon and rawhide","/guides/coffee-wood-vs-antler-nylon-rawhide/"),("Quality-control workflow","/quality-control/")],
     sources=[("AAHA: hard-chew risks",AAHA)],
     image="coffee-wood-chew-grain-detail.jpg",
+    faqs=[
+      ("Are coffee wood chews safe for puppies?",
+       "Ask a vet first. Puppies are still changing teeth, and a hard chew can damage them. If a vet agrees, choose a size the puppy cannot "
+       "swallow and supervise every session."),
+      ("Can dogs eat coffee wood?",
+       "No. A coffee wood chew is a toy, not food. In normal gnawing the surface wears into soft fibres; hard pieces or chunks should not be "
+       "swallowed, and a chew that breaks into pieces should be removed."),
+      ("Do coffee wood chews contain caffeine?",
+       "The chew is cut from the stem wood, not the bean or cherry. We do not publish a caffeine-free claim because no laboratory result has "
+       "been produced for this material; ask us if your market requires a test."),
+      ("Do coffee wood chews splinter?",
+       "They usually wear into soft frayed fibres rather than sharp splinters, but that is an observation, not a guarantee. A powerful chewer "
+       "can break a piece off, and no supplier in this category has test data behind “splinter-free”."),
+      ("Can a coffee wood chew break a dog’s tooth?",
+       "Yes, it can in a dog that bites down hard, as antler and nylon can. That is why it suits gnawers rather than crackers."),
+      ("What if my dog swallows a piece?",
+       "Contact a vet, especially if the piece was large or the dog shows discomfort, vomiting or changes in appetite. Do not keep using a chew "
+       "that is breaking apart."),
+    ],
     figures=[('coffee-wood-chew-grain-detail.jpg','Close-up of a finished coffee wood chew stick showing grain and surface finish','One untreated plant material: no glue, coating, preservative or colouring.'),('grading-chews-before-packing.jpg','Hand holding a coffee wood stick above a crate of graded pieces','Grading. Any cracked piece is pulled out at this bench.')])
 
 add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
@@ -76,19 +144,87 @@ add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
 add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
     "Choosing Natural Toys for Strong Chewers",
     "How retailers can respond to strong-chewer requests without confusing hardness, size or an aggressive-chewer label with guaranteed suitability.",
-    "When a customer asks for the toughest chew you sell, the next question should be how the dog uses its toys. Does it gnaw, tear at seams, unravel rope or bite through solid objects? Strong chewer is a useful opening description, but it is not a product specification.",
+    answer("<strong>Short answer:</strong> for a strong chewer, the most durable natural option is usually a coffee wood chew chosen one size "
+           "above the weight chart and given under supervision. Rope, coir and loofah toys are made for tug, fetch or batting and can be pulled "
+           "apart, so they are not chew toys for power chewers. No natural chew is indestructible, and a dog that cracks hard objects can "
+           "fracture a tooth on any hard material."),
     [
-    ("Match the activity before recommending a material",p("A rope toy can be intended for short, owner-led tug sessions without being suitable for prolonged chewing. A ball designed for carrying and fetch should not become an unattended chew simply because the dog enjoys holding it. Give each product a stated purpose and merchandise it accordingly.")+
-        p("If a dog repeatedly breaks off pieces, the solution is not automatically a harder version of the same item. Hard materials bring their own dental concerns. A veterinarian can help an owner decide what type of product is appropriate for that individual dog.")),
-    ("Look for the way a design can come apart",p("On a rope assembly, examine the knots, ends, handle and joins between materials. On a wood chew, look at the narrow sections, ends and visible cracks. A larger overall measurement does not explain the weakest part of an assembled toy.")+
-        p("For procurement, write down the construction you approved: rope diameter, knot arrangement, component dimensions and attachment method. If you need a pull or attachment test, agree its method and acceptance criteria. A number quoted without a method is difficult to use when inspecting a later batch.")),
-    ("Give replacement advice a prominent place",p("Owners should supervise play, remove loose pieces or long frayed strands and replace damaged or worn items. Do not bury this advice beneath an indestructible headline. The headline is likely to be remembered; the small print may not be.")+
-        p("Dog-weight bands are only a starting point for selecting dimensions. They do not measure bite force or dental condition. Going up a size should never be presented as a guarantee that a hard chew is suitable.")),
-    ("Use returns to refine the range",p("Ask for the SKU, size, batch reference, a photograph and a description of use. Keep breakage on arrival separate from damage during play. If complaints cluster around one join or one size, that gives the supplier a specific design question to investigate.")+
-        p("For a new range, order a manageable assortment and train the sales team on intended use. Fewer, clearly explained products are easier to recommend responsibly than a long ladder of increasingly strong claims."))],
+    ("What “strong chewer” actually means",
+      p("A <dfn>strong chewer</dfn> — also called an aggressive or power chewer — is a dog that destroys toys quickly. That covers several "
+        "different behaviours, and each one needs a different product:")
+      + ul(["<strong>Gnawers</strong> work a chew slowly with the back teeth, wearing it down over time.",
+            "<strong>Shredders</strong> tear at fibres, seams and rope ends.",
+            "<strong>Crackers</strong> clamp down hard to break a solid object — the behaviour most likely to damage teeth.",
+            "<strong>Swallowers</strong> try to gulp pieces rather than chew them."])
+      + p("When a customer asks for the toughest chew you sell, the next question should be which of these the dog does. “Strong chewer” is a "
+          "useful opening description, but it is not a product specification.")),
+
+    ("Natural materials for strong chewers compared",
+      spec_table(["Material","Made for","Fit for a strong chewer","Main risk"],[
+        ("Coffee wood","Gnawing","The best natural fit for gnawers, sized up","Tooth damage in crackers; swallowing a worn piece"),
+        ("Hemp rope","Owner-led tug and carry","Supervised tug only — not left to chew","Swallowed strands"),
+        ("Coconut coir ball","Fetch and carry","Not recommended for chewing","Unwinding; swallowed fibre"),
+        ("Loofah","Light play, mainly cats","Not recommended","Breaks into small pieces"),
+        ("Wood-and-rope combination","Tug and chew","Check the join as much as the materials","The join or knot coming apart"),
+      ], caption="Match the product to the behaviour, not to the word “tough”.")
+      + p("If a dog repeatedly breaks off pieces, the answer is not automatically a harder version of the same item. Hard materials bring their "
+          "own dental concerns, and a vet can help the owner decide what suits that individual dog.")),
+
+    ("Matching a product to a strong chewer, step by step",
+      steps([
+        ("Identify the behaviour","Ask whether the dog gnaws, shreds, cracks or swallows.","A product type, not just a toughness level."),
+        ("Rule out what does not fit","Crackers and swallowers need a vet’s view before any hard chew; shredders should not be left alone with rope or coir.","Fewer returns and fewer injuries."),
+        ("Size up","Choose from the weight band, then go one size larger for a keen chewer.","A chew that stays bigger than the dog’s mouth for longer."),
+        ("Supervise the first sessions","Watch how the dog actually uses the product.","Early confirmation — or an early switch to something else."),
+        ("Replace on condition","Remove the item when it cracks, splits, frays badly or wears small enough to swallow.","The weakest point is caught before it fails."),
+      ])),
+
+    ("Coffee wood sizes for strong chewers",
+      coffee_size_table()
+      + p("For a strong chewer, read the weight column as a floor, not a target: a 12 kg dog that chews hard is usually better on an XL "
+          "(4.5–5.5 cm across) than an L. Diameter matters more than length, because the material volume rises sharply with it.")
+      + p("Weight bands do not measure bite force or dental condition. Going up a size should never be presented as a guarantee that a hard chew "
+          "is suitable.")),
+
+    ("Look for the way a design can come apart",
+      p("On a rope assembly, examine the knots, ends, handle and joins between materials. On a wood chew, look at the narrow sections, ends and "
+        "any crack — at VietPaw, any cracked piece is removed at grading. A larger overall measurement does not explain the weakest part of an "
+        "assembled toy.")
+      + p("For procurement, write down the construction you approved: rope diameter, knot arrangement, component dimensions and attachment "
+          "method. If you need a pull or attachment test, agree its method and acceptance criteria; a number quoted without a method is hard to "
+          "use when inspecting a later batch.")),
+
+    ("Give replacement advice a prominent place",
+      p("Owners should supervise play, remove loose pieces or long frayed strands and replace damaged or worn items. Do not bury this advice "
+        "beneath an “indestructible” headline — the headline is remembered; the small print may not be.")
+      + p("Use returns to refine the range. Ask for the SKU, size, batch reference, a photograph and a description of use, and keep breakage on "
+          "arrival separate from damage during play. If complaints cluster around one join or one size, that gives the supplier a specific "
+          "question to investigate.")
+      + p(SAFETY)),
+    ],
     ("Strong-chewer product selection","/collections/aggressive-chewers/"),
-    related=[("Hemp rope constructions","/products/hemp-rope-dog-toy/"),("Coffee wood safety","/guides/are-coffee-wood-chews-safe-for-dogs/")],
+    related=[("Hemp rope constructions","/products/hemp-rope-dog-toy/"),("Are coffee wood chews safe?","/guides/are-coffee-wood-chews-safe-for-dogs/"),
+             ("Coffee wood size guide","/guides/coffee-wood-chew-size-guide/"),("How long coffee wood chews last","/guides/how-long-do-coffee-wood-chews-last/")],
+    sources=[("AAHA guidance on hard chews",AAHA)],
     image="vietpaw-hemp-wood-assortment.jpg",
+    faqs=[
+      ("What is the best natural chew for an aggressive chewer?",
+       "For a dog that gnaws, a coffee wood chew one size above the weight chart, used under supervision. For a dog that cracks hard objects, "
+       "ask a vet before offering any hard chew."),
+      ("Are coffee wood chews indestructible?",
+       "No. They are dense and usually wear into soft fibres, but a powerful chewer can split a stick or break a piece off. Nothing in this "
+       "category is indestructible."),
+      ("Are rope toys safe for power chewers?",
+       "Only for supervised, owner-led tug. Left alone, a strong chewer can shred rope and swallow strands."),
+      ("What size chew should a strong chewer have?",
+       "Start from the weight band and go up one size. For example, a 12 kg dog that chews hard is usually better on an XL (21–22 cm, "
+       "4.5–5.5 cm across) than an L."),
+      ("Can a hard natural chew damage a dog’s teeth?",
+       "Yes. Coffee wood, antler and nylon are all hard enough to fracture a tooth in a dog that bites down forcefully. Gnawing is the "
+       "behaviour hard chews suit."),
+      ("When should a strong chewer’s toy be replaced?",
+       "When it cracks, splits, frays badly, loses pieces or wears small enough to swallow — on condition, not on a calendar."),
+    ],
     figures=[('golden-retriever-chewing-coffee-wood.jpg','Golden retriever chewing a coffee wood stick surrounded by other chews','Hard is not the same as safe: a determined chewer risks a fractured tooth on any hard material.'),('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Sizing up is usually safer than sizing down for a strong chewer.')])
 
 add("how-long-do-coffee-wood-chews-last","Natural chew toys",
@@ -230,38 +366,182 @@ add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
 add("are-dog-toys-biodegradable","Materials & claims",
     "Are Dog Toys Biodegradable? Read the Claim Closely",
     "What a biodegradable dog toy claim should cover, and how to check the product, test scope and disposal instructions before printing it.",
-    "The important word in a biodegradability claim is often the one that is missing. Which part of the product? Under what conditions? Over what period? Without those details, the same label can mean very different things to a manufacturer, a retailer and the person disposing of the toy.",
+    answer("<strong>Short answer:</strong> some dog toy <em>materials</em> are biodegradable, but very few finished dog toys can honestly "
+           "be sold as biodegradable. Plant materials such as wood, coconut coir, hemp and loofah break down under the right conditions; "
+           "nylon, TPR and most plastics do not in normal disposal. A biodegradable claim has to cover the whole finished toy and its pack, "
+           "name the disposal conditions and time period, and be backed by test evidence for that product."),
     [
-    ("Follow the claim to the actual article",p("A plain wood stick is not the same article as a wood stick joined to a rope, decorated with a label and sealed in film. Likewise, information about coconut husk fiber does not automatically describe a finished ball with binding or internal components. Begin with the complete construction of the SKU you intend to sell.")+
-        p("The packaging needs its own review. Customers may discard the tag and bag immediately but keep the toy for much longer. Combining their disposal advice into one green symbol can leave both instructions unclear.")),
-    ("What useful evidence looks like",p("A report should let your reviewer identify the tested sample, method, conditions, result and limitations. The product description or photograph should be specific enough to link the report to your order. A material supplier's general brochure is not the same as evidence covering your assembled product.")+
-        p("If the report relates to a different size, color, adhesive or construction, ask whether that difference affects its applicability. This is a question for a competent reviewer or the testing body, not something to settle by changing the name on the cover page.")),
-    ("Disposal conditions are part of the claim",p("Landfill, home composting and industrial composting are not interchangeable environments. A customer should not be told to bury a toy or put it into a local compost collection simply because its main material comes from a plant. Local acceptance and the evidence supporting the instruction both matter.")+
-        p("The FTC's Green Guides are a useful starting point for understanding why unqualified degradability claims can mislead. For a particular market and label, have the proposed wording reviewed against the applicable requirements.")),
-    ("Keep a claim file, not just a certificate folder",p("Save the final wording, the supporting evidence, the approved bill of materials and the artwork version together. Record who reviewed the claim and what changes would require another review. This is especially useful for repeat orders, when a packaging substitution can otherwise pass unnoticed.")+
-        p("If the evidence does not support the desired claim, use a narrower description of the actual material. Customers can understand a clear material story without being given an unsupported disposal promise."))],
+    ("Biodegradable, compostable, degradable: what the words mean",
+      p("<dfn>Biodegradable</dfn> means microorganisms break a material down into water, carbon dioxide (or methane) and biomass. The word says "
+        "nothing about how long that takes or where, which is why an unqualified claim is so easy to misread.")
+      + p("<dfn>Compostable</dfn> means the material breaks down in a composting process within a defined time and leaves no harmful residue. "
+          "<em>Industrial</em> composting runs hotter and faster than a <em>home</em> compost heap, and the two are tested to different standards.")
+      + p("<dfn>Degradable</dfn> or <dfn>oxo-degradable</dfn> usually means a plastic fragments into smaller pieces. Fragmenting is not "
+          "biodegrading, and oxo-degradable plastics are restricted in the EU.")),
+
+    ("Dog toy materials compared",
+      spec_table(["Material","Origin","Breaks down in normal disposal?","What a claim still needs"],[
+        ("Coffee wood","Stem wood of the coffee tree","Wood decomposes, slowly, depending on conditions","Evidence for the finished chew and stated conditions"),
+        ("Coconut coir","Husk fibre, a coconut by-product","Plant fibre decomposes; coir is known to be slow","A full component list — core, binding thread, adhesive"),
+        ("Hemp fibre","Plant-derived fibre","Plant fibre decomposes","Fibre identity, blends and any synthetic thread"),
+        ("Loofah","Dried gourd fibre","Plant fibre decomposes","Complete toy construction and any attachments"),
+        ("Natural rubber","Latex from rubber trees","Very slowly; depends on additives","Formulation and test evidence"),
+        ("Nylon, TPR, most plastics","Fossil-based polymers","No — they persist and fragment","Not a biodegradable product"),
+      ], caption="General material behaviour, not a claim about any finished VietPaw product.")
+      + p("The important word in a biodegradability claim is often the one that is missing. Which part of the product? Under what conditions? "
+          "Over what period? Without those details, the same label means very different things to a manufacturer, a retailer and the person "
+          "disposing of the toy.")),
+
+    ("What the rules require",
+      spec_table(["Market","Rule","What it means for a dog toy"],[
+        ("United States","FTC Green Guides (16 CFR 260.8)","An unqualified degradable claim needs evidence that the entire item fully decomposes within a reasonably short time — the FTC says one year — after customary disposal. Items usually landfilled should not carry unqualified degradable claims."),
+        ("European Union","Directive (EU) 2024/825, applying from 27 September 2026","Generic environmental claims such as “eco-friendly” or “biodegradable” are banned unless the trader can show recognised excellent environmental performance relevant to the claim."),
+        ("Composting standards","EN 13432 (industrial); home-compost schemes such as OK compost HOME","A compostable claim should name the standard and whether it means industrial or home composting."),
+      ], caption="Summary for orientation. Have the final wording for your market reviewed before printing.")),
+
+    ("How to check a biodegradable claim before you print it",
+      steps([
+        ("List every component","Toy, core, thread, adhesive, dye, tag, bag, window film and insert.","You know exactly what the claim would have to cover."),
+        ("Split the product from the pack","Customers throw away the bag on day one and the toy months later.","Two separate claims, each with its own evidence."),
+        ("Match the evidence to your SKU","A report should identify the sample, method, conditions, result and limitations.","Evidence that covers your construction — not a brochure about the raw fibre."),
+        ("Name the disposal route","Landfill, home compost and industrial compost are different environments.","An instruction customers can follow and local systems accept."),
+        ("Have the wording reviewed","Check it against the rules for each market you sell in.","A claim you can defend if a regulator or competitor asks."),
+        ("Keep a claim file","Save the wording, evidence, approved bill of materials and artwork version together.","Repeat orders do not silently change what the claim covers."),
+      ])),
+
+    ("What VietPaw can and cannot state",
+      spec_table(["Statement","Can we support it?","Why"],[
+        ("Made from coffee wood, coconut coir, hemp or loofah","Yes","Material identity, per approved sample"),
+        ("Coffee wood chews are untreated — no glue, coating, preservative or colouring","Yes","One material, no additives"),
+        ("Full component list for your SKU","Yes, on request","Part of the approved specification"),
+        ("“Biodegradable” or “compostable” finished toy","No","No finished-product test or certificate is published"),
+        ("A decomposition time in days or months","No","No test evidence for the finished product"),
+      ])
+      + p("Customers can understand a clear material story without being given an unsupported disposal promise. If the evidence does not "
+          "support the claim you want, use a narrower description of the actual material.")),
+
+    ("Disposal conditions are part of the claim",
+      p("A customer should not be told to bury a toy or put it into a local compost collection simply because its main material comes from a "
+        "plant. Local acceptance and the evidence supporting the instruction both matter.")
+      + p("The packaging needs its own review. Combining the disposal advice for toy and pack into one green symbol can leave both instructions "
+          "unclear.")),
+    ],
     ("Explore VietPaw's material collections","/materials/"),
-    related=[("Plastic-free buying brief","/guides/plastic-free-biodegradable-pet-toys-guide/"),("Sustainability and packaging","/sustainability/")],
-    sources=[("FTC guidance on degradable claims",FTC)],
+    related=[("Plastic-free buying brief","/guides/plastic-free-biodegradable-pet-toys-guide/"),("Sustainability and packaging","/sustainability/"),
+             ("Natural materials compared","/guides/sustainable-pet-toy-materials-compared/")],
+    sources=[("FTC guidance on degradable claims",FTC),
+             ("EU Directive 2024/825 on empowering consumers for the green transition","https://eur-lex.europa.eu/eli/dir/2024/825/oj")],
     image="vietpaw-loofah-growing.png",
+    faqs=[
+      ("Are natural dog toys biodegradable?",
+       "Their plant materials — wood, coir, hemp, loofah — decompose under the right conditions. Whether a finished toy can be called "
+       "biodegradable depends on every component, the disposal conditions and test evidence for that product."),
+      ("Can I label a coffee wood chew as biodegradable?",
+       "Not without evidence for the finished chew under stated disposal conditions. You can say what it is made of: untreated coffee wood, with "
+       "no glue, coating, preservative or colouring."),
+      ("Are coconut fiber toys biodegradable?",
+       "Coir is a plant fibre, but a coir ball may also contain a core, binding thread or adhesive. The claim has to cover all of them."),
+      ("Is compostable the same as biodegradable?",
+       "No. Compostable means breaking down within a defined time in a composting process, tested to a named standard such as EN 13432 for "
+       "industrial composting. Home and industrial composting are different."),
+      ("How long does a natural dog toy take to break down?",
+       "There is no reliable general figure. It depends on the material, construction, size and conditions; VietPaw does not publish a "
+       "decomposition time."),
+      ("Can I still use “eco-friendly” in the EU?",
+       "From 27 September 2026, generic environmental claims like “eco-friendly” are banned in the EU unless you can show recognised excellent "
+       "environmental performance. Specific, evidenced statements about the material are the safer route."),
+    ],
     figures=[('loofah-gourd-on-the-vine.jpg','A green loofah gourd hanging from its vine','Loofah is grown as a crop, so we do not describe it as agricultural waste.'),('marking-cartons-warehouse.jpg','Worker marking export cartons in a warehouse','Disposal claims need evidence for the finished assembly under stated conditions.')])
 
 add("what-is-coconut-fiber-pet-toys","Materials & claims",
     "Coconut Fiber in Pet Toys: Texture, Construction and Quality",
     "Understand coconut coir pet toys, including ball construction, winding consistency, loose fiber and wholesale packing considerations.",
-    "Coconut fiber, also called coir, comes from the husk around the coconut. In pet toys, its recognizable feature is the coarse, textured surface. That texture can be part of a product's appeal, but the material name alone tells a buyer surprisingly little about how a finished ball or rope is put together.",
+    answer("<strong>Short answer:</strong> coconut fiber, or coir, is the coarse fibre from the husk around a coconut. In pet toys it is "
+           "cleaned, dried and wound into textured balls — or twisted into rope — for fetch, carrying and batting play. It is a by-product "
+           "of the coconut food and oil trade, it sheds short fibres as it is worked, and it is a play toy, not a chew for forceful chewers."),
     [
-    ("Look beyond the outer layer",p("Two coir balls of the same diameter can differ in weight, winding and internal construction. One may have a core or additional binding that is not visible in the sales photograph. Ask for a full component description and, where useful, a construction sample that shows how the layers are assembled.")+
-        p("Do not use coconut fiber and hemp interchangeably. They are different materials, even when both have a brown, rustic appearance. A material declaration is more reliable than matching the color of a rope to a catalogue image.")),
-    ("A cat ball is not simply the smallest dog ball",p("Specify the intended pet and type of play. For a cat range, consider the dimensions, finished weight, surface construction and any added decoration. For a dog range, the same features still need review, but the intended carrying or fetch use may lead to a different design. Neither becomes suitable for forceful chewing just because it is labeled natural.")+
-        p("The instructions should call for supervised play and removal of loose strands or damaged parts. If a design includes a bell, tail or other attachment, that component deserves its own inspection rather than being treated as a cosmetic extra.")),
-    ("What to compare across a sample set",ul(["Diameter and finished weight, measured consistently rather than judged from a photograph.","Winding density and whether the shape holds consistently across the sample set.","Loose fiber, protruding ends and the security of any attachment.","Odor, visible contamination and the condition of the packing."])+
-        p("Agree which natural differences are acceptable and which are defects. A range of brown shades is a different issue from an unapproved core or a poorly secured join.")),
-    ("Think in cartons as well as individual balls",p("A loosely packed assortment and a retail multi-pack can have very different carton volumes. Confirm units per pack, packs per carton, carton dimensions and gross weight before comparing freight quotations. If several sizes share a carton, make the assortment visible on the packing list and carton marks.")+
-        p("For repeat orders, retain the product and packing references together. Consistency at receiving depends on both."))],
+    ("What coconut fiber is",
+      p("<dfn>Coir</dfn> is the fibre between the hard shell of the coconut and its outer skin. The husk is a by-product of the food and oil "
+        "trade, so the fibre is a reuse stream rather than a crop grown for toys. Brown coir, from mature coconuts, is the coarse, stiff fibre "
+        "used for textured pet toys; white coir, from green husks, is finer and softer.")
+      + p("The texture is what buyers are purchasing. Coir has a springy, fibrous surface that feels different from moulded rubber or plastic in "
+          "the mouth, and it sheds short fibres as it is worked. That shedding is normal for the material and is the main expectation to set on "
+          "a product listing.")
+      + p("What coir does not give you is an engineering spec. There is no published density, tensile or durability standard for a wound coir "
+          "ball. It is a material you specify by approved sample and measured dimensions.")),
+
+    ("Coconut fiber compared with other toy materials",
+      spec_table(["","Coconut coir","Hemp rope","Loofah","Rubber / TPR"],[
+        ("Feel","Coarse, springy, textured","Firm, twisted fibre","Light, open, spongy","Smooth, elastic"),
+        ("Typical play","Fetch, carry, cat batting","Tug and carry","Cat batting and carrying","Chewing and fetch"),
+        ("Sheds with use","Short fibres","Strands if frayed","Small pieces","Chunks if bitten through"),
+        ("Main check","Winding, core, loose ends","Knots, ends, joins","Attachments, crumbling","Formulation, bite-through"),
+        ("Strong chewers","Not recommended","Owner-led tug only","Not recommended","Depends on the product"),
+      ], caption="General material behaviour; the approved sample decides the specification.")
+      + p("Do not use coconut fiber and hemp interchangeably. They are different materials, even when both look brown and rustic. A material "
+          "declaration is more reliable than matching the colour of a rope to a catalogue image.")),
+
+    ("How a coir ball is put together",
+      steps([
+        ("Separate and clean the fibre","Fibre is separated from the husk, cleaned and dried.","Dry, clean fibre that will not turn musty in the carton."),
+        ("Wind the ball","Fibre is wound around itself or around a core to the target diameter.","The ball’s size and density — the step that varies most between makers."),
+        ("Secure the ends","The start and finish of the winding are tucked, bound or fixed.","Fewer loose ends at play; a component to declare if thread or adhesive is used."),
+        ("Trim and shape","Protruding fibres are trimmed and the shape checked.","A consistent outline across the batch."),
+        ("Inspect","Diameter, weight, loose strands, odour and any attachment are checked.","Musty, contaminated or poorly wound units are removed."),
+        ("Pack","Single, multi-pack or assortment, with the agreed tag or box.","Units per pack and per carton match the order."),
+      ], )
+      + p("Ask how your sample was built. Two coir balls of the same diameter can differ in weight, winding and internal construction, and a "
+          "core or binding may not be visible in the sales photograph.")),
+
+    ("VietPaw coconut fiber range at a glance",
+      spec_table(["Item","Detail"],[
+        ("Products","Coconut fiber cat ball; coconut fiber dog ball (S / M / L references)"),
+        ("Sizes","Diameter and finished weight set by the approved sample"),
+        ("Minimum order","Selected standard lines from 50 pcs; per-size minimum confirmed in the quote"),
+        ("Branding","Hang tags, labels or small boxes; printed items from 500 pcs per SKU"),
+        ("Samples","3 free samples; you cover the courier"),
+        ("Production","Three own factories in Vietnam; 100,000 pcs a month across the range"),
+      ])),
+
+    ("A cat ball is not simply the smallest dog ball",
+      p("Specify the intended pet and type of play. For a cat range, consider dimensions, finished weight, surface construction and any "
+        "decoration. For dogs, the fetch or carry use may lead to a different design. Neither becomes suitable for forceful chewing just "
+        "because it is labelled natural.")
+      + p("Instructions should call for supervised play and removal of loose strands or damaged parts. A bell, tail or other attachment deserves "
+          "its own inspection rather than being treated as a cosmetic extra.")),
+
+    ("What to compare across a sample set",
+      ul(["Diameter and finished weight, measured consistently rather than judged from a photograph.",
+          "Winding density and whether the shape holds across the sample set.",
+          "Loose fibre, protruding ends and the security of any attachment.",
+          "Odour, visible contamination and the condition of the packing."])
+      + p("Agree which natural differences are acceptable and which are defects. A range of brown shades is a different issue from an "
+          "unapproved core or a poorly secured join. For freight, confirm units per pack, packs per carton, carton dimensions and gross weight — "
+          "a loose assortment and a retail multi-pack can have very different carton volumes.")),
+    ],
     ("Coconut fiber wholesale collection","/collections/coconut-fiber/"),
-    related=[("Cat ball specifications","/products/coconut-fiber-cat-ball/"),("Dog ball specifications","/products/coconut-fiber-dog-ball/")],
+    related=[("Cat ball specifications","/products/coconut-fiber-cat-ball/"),("Dog ball specifications","/products/coconut-fiber-dog-ball/"),
+             ("Coconut-fiber cat toys for wholesale","/guides/wholesale-coconut-fiber-cat-toys-supplier/"),("Natural materials compared","/guides/sustainable-pet-toy-materials-compared/")],
     image="vietpaw-coconut-fiber-balls.jpg",
+    faqs=[
+      ("Is coconut fiber the same as coir?",
+       "Yes. Coir is the name for coconut husk fibre. Brown coir from mature coconuts is the coarse type used in textured pet toys."),
+      ("Are coconut fiber toys safe for dogs?",
+       "They are designed for supervised fetch and carry play, not for forceful chewing. Choose a size that cannot be swallowed, remove loose "
+       "strands and replace the toy when it starts to come apart."),
+      ("Do coir toys shed?",
+       "Yes, short fibres come away as the toy is worked. That is normal for the material; a toy that unwinds or loses large clumps should be "
+       "replaced."),
+      ("Can coconut fiber toys get wet?",
+       "Coir tolerates moisture better than many plant fibres, but a toy should be dried thoroughly after it gets wet. Store stock dry; musty "
+       "units are rejected at inspection."),
+      ("Is coconut fiber good for cats?",
+       "A light, textured coir ball suits batting and chasing. Specify the cat version separately — diameter, weight and any attachment — rather "
+       "than using the smallest dog ball."),
+      ("What is the minimum order for coconut fiber toys?",
+       "Selected standard lines start from 50 pcs; the per-size minimum is confirmed in the quote. Printed tags, labels and boxes start at "
+       "500 pcs per SKU."),
+    ],
     figures=[('vietpaw-coconut-fiber-balls.jpg','Hand holding several wound coconut fiber balls outdoors','Coir from the husk — a by-product of the coconut food and oil trade.'),('puppy-with-rope-and-fiber-ball.jpg','Puppy with a natural fiber ball and rope loop','Specify diameter and finished weight together; diameter alone hides a loosely wound batch.')])
 
 add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
