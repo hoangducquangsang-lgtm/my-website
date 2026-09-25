@@ -69,7 +69,7 @@ def home(root):
         media(ul([
             "<strong>Moisture below 14% at packing.</strong> Pin-type meter reading, photographed per batch, taken again before the container is sealed.",
             "<strong>\u00b13 mm length tolerance</strong> on the coffee wood stick line. Diameter follows the natural stem and is controlled by grading into bands.",
-            "<strong>Cracks beyond 2 mm rejected</strong> at grading, on the piece rather than on a sampled average.",
+            "<strong>Any cracked piece rejected</strong> at grading, checked piece by piece rather than on a sampled average.",
             "<strong>Roughly one piece in five rejected</strong> across the whole process, concentrated at the drying racks \u2014 an figure from our own production records that explains why lead time follows graded output.",
             "<strong>Five checkpoints</strong> between raw stem and sealed carton: intake, after seasoning, after shaping, at grading, and at the packing bench.",
           ]),

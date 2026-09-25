@@ -103,7 +103,7 @@ DEEP["coffee-wood"] = dict(
        "Finished moisture below 14%.",
        "Most of the process rejection happens here — pieces that were going to crack crack on the rack."),
       ("Grading",
-       "Pieces are sorted into diameter bands; anything cracked beyond 2 mm is pulled.",
+       "Pieces are sorted into diameter bands; any cracked piece is pulled.",
        "Graded stock per size, with an internally reported reject rate of roughly one piece in five overall."),
       ("Moisture check and packing",
        "A pin-type meter reading is taken and photographed for the batch, pieces are bagged with a desiccant sachet, and carton marks are checked against the packing list.",

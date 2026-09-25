@@ -117,7 +117,7 @@ def build(root):
         publish(root,"/solutions/"+slug+"/",title,lede,h1,lede,sections,
             active="Solutions",image="/assets/img/"+img,
             trail=[("Home","/"),("Solutions","/solutions/"),(label,None)],
-            faqs=[("Can I request a sample before deciding the range?", "Yes. Tell us which product, size and pack you want to evaluate. Availability, sample terms and courier costs are confirmed first."),
+            faqs=[("Can I request a sample before deciding the range?", "Yes. Tell us which product, size and pack you want to evaluate. Up to 3 samples are free; you cover the courier. Availability and the courier cost are confirmed first."),
                   ("What should I send for a useful quote?", "Send quantities per SKU, destination, required timing and the packaging or development brief. Attach the applicable retailer or marketplace requirements if available.")])
     # A review-ready hub, deliberately excluded from indexing until a real case is authorized.
     publish(root,"/case-studies/","Case Study Evidence: Publication Checklist | VietPaw",

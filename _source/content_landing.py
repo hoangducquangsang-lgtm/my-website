@@ -25,7 +25,7 @@ def build(root):
         ("Are you a real pet toy manufacturer or a trading company?",
          "VietPaw is an export and private-label brand working with an established Vietnamese manufacturer. The supplied planning materials describe a three-factory network in Gia Lai, Dak Lak and Ho Chi Minh City with an indicative 5–6 million units per year; these are internally reported figures, not audited output. Export documents and certificates are issued under VietPaw named in your quotation, so you can verify the supply chain independently before ordering."),
         ("What is your minimum order quantity (MOQ)?",
-         "MOQ starts at 50 pcs per SKU, kept deliberately low so new brands can pilot before scaling. We also offer a Trial Box of 3–5 free samples (you cover shipping, refunded on your first order)."),
+         "MOQ starts at 50 pcs per SKU, kept deliberately low so new brands can pilot before scaling. Samples are free — 3 per request; you cover shipping."),
         ("Do you offer OEM, ODM and private label?",
          "Yes. We provide full OEM/ODM and private-label service: laser logo engraving, custom labels and packaging, and new product-shape development, typically with a ready-to-test prototype in days."),
         ("Which markets do you export to?",
@@ -122,7 +122,7 @@ def build(root):
       <div class="card"><h3>Private label pet toys</h3><p>Laser-engraved logos, custom kraft labels and retail-ready packaging so the product ships under your brand. <a href="/capabilities/">See capabilities &rarr;</a></p></div>
       <div class="card"><h3>OEM / ODM development</h3><p>New shapes, sizes and material combinations developed to your spec, with a fast prototype before you commit to bulk.</p></div>
       <div class="card"><h3>Wholesale &amp; bulk</h3><p>From a 50-piece pilot to full containers, with consistent quality across reorders and 5–6M units/year capacity behind you.</p></div>
-      <div class="card"><h3>Low, flexible MOQ</h3><p>Start from 50 pcs per SKU with a Trial Box of 3–5 free samples, refunded on your first order.</p></div>
+      <div class="card"><h3>Low, flexible MOQ</h3><p>Start from 50 pcs per SKU. 3 free samples; you cover shipping.</p></div>
       <div class="card"><h3>Export compliance</h3><p>Certificate of Origin (incl. EUR1), phytosanitary, fumigation and inspection reports on every order. <a href="/certifications/">See certifications &rarr;</a></p></div>
       <div class="card"><h3>Direct-to-FBA logistics</h3><p>Forwarders already routing to Amazon FBA, with FBA-compliant barcodes and warning labels built in.</p></div>
     </div>

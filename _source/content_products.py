@@ -24,7 +24,7 @@ COFFEE_CARTON = ["On request","512","224","126","85","On request"]
 COFFEE_TOLERANCE = [
     ("Finished moisture","Below 14% before packing","Pin-type meter reading taken on the finished batch and again before the container is sealed. Ask for the reading filed against your lot."),
     ("Length tolerance","±3 mm on the stick line","Applies to the cut length. Diameter follows the natural stem and is controlled by grading into the bands above, not by machining."),
-    ("Crack limit","Pieces cracked beyond 2 mm are rejected at grading","Checked on the graded piece, not on a sampled average."),
+    ("Cracks","Any cracked piece is rejected at grading","Checked on the graded piece, not on a sampled average."),
     ("Reported reject rate","Roughly one piece in five across the whole process","Internally reported figure, concentrated at the seasoning-rack stage. It explains why lead time is driven by graded output rather than raw intake."),
     ("Quality checkpoints","Five, between raw stem and sealed carton","Intake, after seasoning, after shaping, at grading and at the packing bench."),
     ("Production capacity","100,000 pcs/month","Across our own three factories in Dak Lak, Gia Lai and Binh Duong. Volume and dates for your order are confirmed in the quotation."),
@@ -137,7 +137,7 @@ def coffee_wood_sections(specifications):
              "Finished moisture below 14%.",
              "Most rejections happen here, as pieces that were going to crack do so on the rack rather than in a carton."),
             ("Grading",
-             "Pieces are sorted into diameter bands and anything cracked beyond 2 mm is pulled out.",
+             "Pieces are sorted into diameter bands and any cracked piece is pulled out.",
              "Graded stock per size, with roughly one piece in five removed across the whole process."),
             ("Moisture check and packing",
              "A pin-type meter reading is taken and photographed for the batch, then pieces are bagged with a desiccant sachet and packed.",
@@ -147,7 +147,7 @@ def coffee_wood_sections(specifications):
         +'<div class="grid grid-3">'
         +figure(IMG+"coffee-wood-seasoning-racks.jpg","Rows of coffee wood sticks seasoning on factory drying racks","Drying racks. Pieces that will crack usually crack here.")
         +figure(IMG+"moisture-reading-before-packing.jpg","Pin-type moisture meter held against a coffee wood stick above a carton","Pin-type meter reading taken on the finished batch. Ask for the reading filed against your lot.")
-        +figure(IMG+"grading-chews-before-packing.jpg","Hand holding a coffee wood stick above a crate of graded pieces","Grading. Pieces cracked beyond 2 mm are removed at this bench.")
+        +figure(IMG+"grading-chews-before-packing.jpg","Hand holding a coffee wood stick above a crate of graded pieces","Grading. Any cracked piece is removed at this bench.")
         +"</div>"),
 
     section("Is it the right chew for this dog?",
@@ -211,7 +211,7 @@ COFFEE_FAQ = [
  ("Is coffee wood safe for dogs?",
   "It is safe in the sense that the standard stick is a single untreated plant material with no glue, coating, preservative or colouring, cut from stem wood rather than from the bean or cherry. It is not safe in the sense of being risk-free: it is a hard chew, hard chews can fracture teeth, and any chew can break into pieces that should not be swallowed. Sell it with a supervision instruction and a replace-when-damaged instruction, and size it to the dog."),
  ("Does coffee wood splinter?",
-  "It can. Neither we nor any other supplier in this category has published test data showing that it cannot, and an independent dog trainer has documented a stick that began breaking into hard pieces during use. We do not use the phrase \u201csplinter-free\u201d and we would advise you not to print it either. What the process does control is cracking: pieces cracked beyond 2 mm are removed at grading."),
+  "It can. Neither we nor any other supplier in this category has published test data showing that it cannot, and an independent dog trainer has documented a stick that began breaking into hard pieces during use. We do not use the phrase \u201csplinter-free\u201d and we would advise you not to print it either. What the process does control is cracking: any cracked piece is removed at grading."),
  ("How long does one chew last?",
   "There is no published figure, because lifespan is set by the dog rather than by the material \u2014 a light gnawer may keep a size M stick for months while a determined chewer reduces the same piece in days. Size, moisture and how much time the dog actually spends with it all move the answer. Our guide on chew lifespan sets out what to tell customers instead of quoting a number."),
  ("Can coffee wood chews be private labelled?",
@@ -267,7 +267,7 @@ def build(root):
             "Coffee Wood Dog Chew Sticks" if coffee else d["name"]+" — Wholesale & Private Label",
             d["lede"],sections,image=image,product=d["name"],
             trail=[("Home","/"),(d["group"],"/collections/"+d["collection"]+"/"),(d["name"],None)],
-            faqs=COFFEE_FAQ if slug=="coffee-wood-dog-chew" else [("Can I order this exact sample?", "Yes, request the product, size and packaging combination. We confirm availability, any sample charge and courier cost before dispatch."),
+            faqs=COFFEE_FAQ if slug=="coffee-wood-dog-chew" else [("Can I order this exact sample?", "Yes, request the product, size and packaging combination. Samples are free — up to 3 per request; you cover the courier. We confirm availability and the courier cost before dispatch."),
                   ("Are the photos and dimensions a binding specification?", "No. Photos show the range and natural variation. The agreed sample, drawing and purchase-order specification define the supplied product."),
                   ("Is private labeling available?", "Discuss the artwork, packaging and order quantity with us. New shapes, printed boxes and special finishes may have separate minimums and costs.")],
             schemas=[schema])

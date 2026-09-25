@@ -49,7 +49,7 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     related=[("Size guide","/guides/coffee-wood-chew-size-guide/"),("Quality-control workflow","/quality-control/")],
     sources=[("AAHA: hard-chew risks",AAHA)],
     image="coffee-wood-chew-grain-detail.jpg",
-    figures=[('coffee-wood-chew-grain-detail.jpg','Close-up of a finished coffee wood chew stick showing grain and surface finish','One untreated plant material: no glue, coating, preservative or colouring.'),('grading-chews-before-packing.jpg','Hand holding a coffee wood stick above a crate of graded pieces','Grading. Pieces cracked beyond 2 mm are pulled out at this bench.')])
+    figures=[('coffee-wood-chew-grain-detail.jpg','Close-up of a finished coffee wood chew stick showing grain and surface finish','One untreated plant material: no glue, coating, preservative or colouring.'),('grading-chews-before-packing.jpg','Hand holding a coffee wood stick above a crate of graded pieces','Grading. Any cracked piece is pulled out at this bench.')])
 
 add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
     "Coffee Wood, Antler, Nylon or Rawhide: What Are You Comparing?",
@@ -446,7 +446,7 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
         ("Season the billets","Billets are held for about a year in ventilated shade.","Wood that is dry through before shaping."),
         ("Dry to the protocol","The drying and quality protocol runs with five QC checkpoints.","Moisture below 14% on every batch before packing."),
         ("Size and finish","Sticks are cut to the size bands and the surface is finished on our line.","Pieces within the size band for each SKU."),
-        ("Grade","Pieces with cracks beyond 2 mm are removed at the grading bench.","Only graded pieces go to packing."),
+        ("Grade","Any piece with a crack is removed at the grading bench.","Only graded pieces go to packing."),
         ("Pack and release","Packed to the approved pack, marked and released from Ho Chi Minh City.","Batch reference and moisture reading available for your lot."),
       ])
       + p("We keep the protocol’s operating parameters confidential; the published figure is the finished-batch moisture threshold, not the "
