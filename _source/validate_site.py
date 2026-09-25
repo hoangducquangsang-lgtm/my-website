@@ -121,7 +121,7 @@ def run():
         check("VietPaw INT CO., LTD" not in html,f"{route}: incorrect legal company name")
         check(d.meta.get("og:site_name")=="VietPaw",f"{route}: social site brand mismatch")
         header=re.search(r'<header\b.*?</header>',html,re.S)
-        check(bool(header) and re.search(r'<a class="brand" href="[^"]+">VietPaw</a>',header.group()),f"{route}: header brand mismatch")
+        check(bool(header) and re.search(r'<a class="brand" href="[^"]+">(?:<span class="brand-logo" aria-hidden="true"></span>)?VietPaw</a>',header.group()),f"{route}: header brand mismatch")
         check(bool(header) and not re.search(r'<a\b[^>]*>Proof</a>',header.group()),f"{route}: Proof must stay out of main navigation")
         check('brand-sub' not in html,f"{route}: retired manufacturer byline still present")
         # WINVN belongs to the footer legal line and structured data only: never in

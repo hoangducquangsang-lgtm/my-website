@@ -62,6 +62,7 @@ PRODUCTS = {
  overview="The standard stick is described in our product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
  options=["Standard stick sizes XS–XXL; natural grain, outline and shade vary.","Laser-engraved brand mark on an agreed area of the wood, with placement approved on a sample.","Coffee wood combined with cotton or hemp rope is a separate construction; specify the rope material rather than describing the whole toy as single-ingredient."],
  checks=["Confirm size, diameter and weight bands against the approved reference sample.","Inspect edges, surface finish and visible cracks; agree unacceptable defects before production.",MOISTURE+" Agree drying, storage and packing requirements, including the measurement method and batch record."]),
+"gorilla-coffee-wood-dog-chew":None,
 "coconut-fiber-cat-ball":dict(name="Coconut Fiber Cat Ball",material="Coconut fiber",collection="coconut-fiber",group="Coconut Fiber",
  image="vietpaw-coconut-fiber-balls.jpg",size="Size and diameter selected by sample",moq="Request the current per-size minimum; selected standard lines start from 50 pcs.",
  lede="A textured coconut-husk fiber ball for supervised batting and chasing. Build a cat-focused assortment with sample-approved dimensions, secure construction and private-label tags.",
@@ -228,6 +229,9 @@ COFFEE_FAQ = [
   "Olive wood has published timber data (roughly 980 kg/m\u00b3 dried, Janka around 2,710 lbf) because it is a commercial timber; coffee is a crop, so no equivalent figures exist. For an EU buyer the bigger difference is usually logistics: EU-sourced olive wood needs no customs entry, no duty and no phytosanitary certificate and can be reordered in small quantities, while coffee wood is a 30\u201335 day sea shipment with an import entry. Neither material can support digestibility or dental-benefit claims."),
 ]
 
+from content_gorilla import GORILLA_ENTRY, gorilla_sections, GORILLA_FAQ
+PRODUCTS["gorilla-coffee-wood-dog-chew"]=GORILLA_ENTRY
+
 def product_cards(slugs):
     return cards([(PRODUCTS[s]["name"],
         PRODUCTS[s]["material"]+" · "+PRODUCTS[s]["size"]+". "+PRODUCTS[s]["moq"]+" Private-label options available.",
@@ -244,7 +248,16 @@ def build(root):
             ("Branding","Laser engraving for suitable wood; labels, tags or boxes for fiber products."),
             ("Sample","Request a sample of this exact product and chosen packaging."),
             ("OEM / ODM","Custom construction is subject to feasibility, sample approval and separate quotation.")])
-        if slug=="coffee-wood-dog-chew":
+        gorilla = slug=="gorilla-coffee-wood-dog-chew"
+        if gorilla:
+            specifications=table(["Specification","Details"],[
+                ("Manufacturer and exporter",BRAND),("Material","Coffee wood, untreated"),
+                ("Sizes",d["size"]),("MOQ",d["moq"]),
+                ("Branding","Laser engraving on the wood, or your own label, hang tag or printed box."),
+                ("Sample","3 free samples; buyer covers courier."),
+                ("Lead time","5–7 days stock packaging; 60–80 days with your own label, box or engraving.")])
+            sections=gorilla_sections(specifications)
+        elif slug=="coffee-wood-dog-chew":
             sections=coffee_wood_sections(specifications)
         else:
             sections=[
@@ -261,15 +274,17 @@ def build(root):
             "manufacturer":{"@id":BASE_URL+"/#organization","@type":"Organization","name":BRAND}}
         coffee = slug=="coffee-wood-dog-chew"
         publish(root,path,
+            "Gorilla Coffee Wood Chew for Strong Chewers — Wholesale | VietPaw" if gorilla else
             "Coffee Wood Dog Chew — Sizes, Specification & Wholesale | VietPaw" if coffee
               else d["name"]+" | Wholesale & Private Label | VietPaw",
-            ("Six sizes XS–XXL with lengths, diameters, weights and carton counts. Packed below 14% moisture, ±3 mm length tolerance, five QC checkpoints. Wholesale and private label from Vietnam."
+            ("Thick-cut coffee wood chews for strong chewers: GRLS–GRLXL, 155–900 g, carton data, FBA notes. From 50 pcs per SKU; private label from 500." if gorilla else
+             "Six sizes XS–XXL with lengths, diameters, weights and carton counts. Packed below 14% moisture, ±3 mm length tolerance, five QC checkpoints. Wholesale and private label from Vietnam."
              if coffee else
              f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.'),
-            "Coffee Wood Dog Chew Sticks" if coffee else d["name"]+" — Wholesale & Private Label",
+            "Gorilla Coffee Wood Chew for Strong Chewers" if gorilla else "Coffee Wood Dog Chew Sticks" if coffee else d["name"]+" — Wholesale & Private Label",
             d["lede"],sections,image=image,product=d["name"],
             trail=[("Home","/"),(d["group"],"/collections/"+d["collection"]+"/"),(d["name"],None)],
-            faqs=COFFEE_FAQ if slug=="coffee-wood-dog-chew" else [("Can I order this exact sample?", "Yes, request the product, size and packaging combination. Samples are free — up to 3 per request; you cover the courier. We confirm availability and the courier cost before dispatch."),
+            faqs=GORILLA_FAQ if gorilla else COFFEE_FAQ if slug=="coffee-wood-dog-chew" else [("Can I order this exact sample?", "Yes, request the product, size and packaging combination. Samples are free — up to 3 per request; you cover the courier. We confirm availability and the courier cost before dispatch."),
                   ("Are the photos and dimensions a binding specification?", "No. Photos show the range and natural variation. The agreed sample, drawing and purchase-order specification define the supplied product."),
                   ("Is private labeling available?", "Discuss the artwork, packaging and order quantity with us. New shapes, printed boxes and special finishes may have separate minimums and costs.")],
             schemas=[schema])

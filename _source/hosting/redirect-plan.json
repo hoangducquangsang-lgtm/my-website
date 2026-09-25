@@ -52,6 +52,7 @@
     "/products/coconut-fiber-cat-ball/",
     "/products/coconut-fiber-dog-ball/",
     "/products/coffee-wood-dog-chew/",
+    "/products/gorilla-coffee-wood-dog-chew/",
     "/products/hemp-fiber-ball/",
     "/products/hemp-rope-dog-toy/",
     "/products/loofah-cat-toy/",
@@ -71,7 +72,7 @@
     "/sustainability/",
     "/wholesale-catalogue/"
   ],
-  "index_redirects": 268,
+  "index_redirects": 272,
   "preserve_query_string": true,
   "notes": [
     "GitHub Pages does not execute this CSV or Cloudflare rules.",

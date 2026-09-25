@@ -171,7 +171,7 @@ GORILLA_SIZES = [
     ("L","GRLL","8–10 × 12","350–480"),
     ("XL","GRLXL","10–12 × 15","550–900"),
 ]
-GORILLA = ("For strong chewers we make the Gorilla line: thick-cut coffee wood chews in four sizes, from GRLS "
+GORILLA = ("For strong chewers we make the <a href=\"/products/gorilla-coffee-wood-dog-chew/\">Gorilla line</a>: thick-cut coffee wood chews in four sizes, from GRLS "
            "(155–230 g) to GRLXL (550–900 g), with far more wood per piece than a standard stick of similar length.")
 
 def gorilla_table():

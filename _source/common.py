@@ -50,12 +50,13 @@ COUNTRIES = "40+"
 CAPACITY = "100,000 pcs/month"
 REVIEW_DATE = "2026-08-30"
 # Owner instruction 2026-09-24: the only place the legal company is named on the site.
-FOOTER_LEGAL = "VietPaw is an international B2B brand of Winvnint CO., LTD."
+FOOTER_LEGAL = "VietPaw is an international B2B brand of WINVN INT CO., LTD"
 PAGES = {}
 
 NAV = [
     ("Dog Toys", "/dog-toys/", [
         ("All Dog Toys", "/dog-toys/"), ("Chew Toys", "/dog-toys/chew-toys/"),
+        ("Gorilla Chews for Strong Chewers", "/products/gorilla-coffee-wood-dog-chew/"),
         ("Rope & Tug Toys", "/dog-toys/rope-toys/"), ("Fetch & Ball Toys", "/dog-toys/fetch-toys/"),
         ("Enrichment Toys", "/dog-toys/puzzle-toys/")]),
     ("Cat Toys", "/cat-toys/", [
@@ -137,14 +138,15 @@ def footer_html():
     return f"""
 <footer class="site-footer">
 <div class="wrap footer-grid">
-<div class="footer-brand"><div class="footer-logo">{BRAND}</div>
+<div class="footer-brand"><div class="footer-logo"><span class="brand-logo" aria-hidden="true"></span>{BRAND}</div>
+<p class="footer-legal">{FOOTER_LEGAL}</p>
 <p class="footer-brand-tagline"><em>Natural Pet Products</em></p>
 <p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. Producing since {REGISTERED_YEAR} and exporting to {COUNTRIES} countries.</p>
 <ul class="footer-contact"><li>{ADDRESS}</li><li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
 <li><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp: {PHONE}</a></li>
 <li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul>
 <div class="footer-social">{social_html("Follow VietPaw")}</div></div>{cols}</div>
-<div class="wrap footer-bottom"><p class="footer-legal">{FOOTER_LEGAL}</p><p>&copy; 2026 {BRAND}. All rights reserved. Product specifications and order terms are confirmed in your quotation.</p></div>
+<div class="wrap footer-bottom"><p>&copy; 2026 {BRAND}. All rights reserved. Product specifications and order terms are confirmed in your quotation.</p></div>
 </footer>"""
 
 def rfq_bar(text="Ready to evaluate a sample for your range?", cta="Request Sample Options"):
@@ -213,11 +215,11 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}{og_image}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title,quote=True)}">
 <meta name="twitter:description" content="{escape(meta_description,quote=True)}"><meta name="twitter:image" content="{BASE_URL}{og_image}">
-<link rel="stylesheet" href="/assets/style.css?v=20260831-b2b-leads"><link rel="icon" type="image/svg+xml" href="/assets/vietpaw-favicon.svg">
+<link rel="stylesheet" href="/assets/style.css?v=20260925-palette"><link rel="icon" type="image/svg+xml" href="/assets/vietpaw-favicon.svg">
 {schema_tags}</head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
-<a class="brand" href="/">{BRAND}</a>
+<a class="brand" href="/"><span class="brand-logo" aria-hidden="true"></span>{BRAND}</a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
 <nav class="main-nav" id="main-nav" aria-label="Main"><ul>{nav_html(active_top)}</ul></nav>
 <a class="btn btn-primary btn-header" href="/request-a-quote/">Request a Quote</a>

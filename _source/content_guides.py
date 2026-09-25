@@ -93,7 +93,7 @@ add("natural-dog-chew-toys-guide","Natural chew toys",
       ("Can I mix materials in one order?",
        "Yes. Minimums are confirmed per product and size in the quotation, and samples can cover several lines."),
     ],
-    figures=[('shiba-inu-chewing-coffee-wood-stick.jpg','A Shiba Inu lying on the floor gnawing a coffee wood chew stick',"Gnawing rather than cracking. Chewing style decides which material suits a dog, more than the dog's weight does."),('puppy-with-rope-and-fiber-ball.jpg','Puppy nosing a natural fiber ball with a rope loop on a tiled floor','Fetch and carry is a different job from chewing — give each product one role in the range.')])
+    figures=[('shiba-inu-chewing-coffee-wood-stick.jpg','A Shiba Inu lying on the floor gnawing a coffee wood chew stick',"Gnawing rather than cracking. Chewing style decides which material suits a dog, more than the dog's weight does."),('puppy-with-rope-and-fiber-ball.jpg','Puppy nosing a natural fiber ball with a rope loop on a tiled floor','Fetch and carry is a different job from chewing — give each product one role in the range.'),('coconut-fiber-balls-and-rope-toy.jpg','Two coconut fiber balls of different sizes and a knotted rope toy','Balls and rope from the same coir line — one material, three formats.'),('catalogue-dog-with-hemp-ball.jpg','Golden retriever holding a hemp rope ball','Catalogue image: hemp rope balls for carrying and fetch.'),('catalogue-coffee-wood-six-sizes.jpg','Six coffee wood chew sizes from XS to XXL on a cream background','Catalogue image: the six standard CC01 sizes, XS to XXL.')])
 
 add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     "Are Coffee Wood Chews Safe for Dogs?",
@@ -180,7 +180,7 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
        "Contact a vet, especially if the piece was large or the dog shows discomfort, vomiting or changes in appetite. Do not keep using a chew "
        "that is breaking apart."),
     ],
-    figures=[('coffee-wood-chew-grain-detail.jpg','Close-up of a finished coffee wood chew stick showing grain and surface finish','One untreated plant material: no glue, coating, preservative or colouring.'),('grading-chews-before-packing.jpg','Hand holding a coffee wood stick above a crate of graded pieces','Grading. Any cracked piece is pulled out at this bench.')])
+    figures=[('coffee-wood-chew-grain-detail.jpg','Close-up of a finished coffee wood chew stick showing grain and surface finish','One untreated plant material: no glue, coating, preservative or colouring.'),('grading-chews-before-packing.jpg','Hand holding a coffee wood stick above a crate of graded pieces','Grading. Any cracked piece is pulled out at this bench.'),('coffee-wood-chews-three-in-vacuum-pack.jpg','Three coffee wood chews sealed in a clear vacuum bag','Vacuum-packed at our warehouse: the bag keeps the wood at its packing moisture until it is opened.'),('catalogue-dog-with-coffee-wood-stick.jpg','Golden retriever chewing a coffee wood stick on a rug','Catalogue image: supervised chewing with a correctly sized stick.')])
 
 add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
     "Coffee Wood, Antler, Nylon or Rawhide: What Are You Comparing?",
@@ -265,7 +265,7 @@ add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
        "Avoid comparative safety claims without evidence. You can say factually that coffee wood does not soften, swell or develop an odour as it "
        "is worked."),
     ],
-    figures=[('coffee-wood-chew-size-row.jpg','Six coffee wood chew sticks laid out in increasing size on a light background','Coffee wood does not soften, swell or develop an odour as it is worked — a factual difference from rawhide.'),('french-bulldog-chewing-coffee-wood.jpg','French bulldog chewing a coffee wood stick on a wooden table','A powerful chewer can still break a piece off any hard chew.')])
+    figures=[('coffee-wood-chew-size-row.jpg','Six coffee wood chew sticks laid out in increasing size on a light background','Coffee wood does not soften, swell or develop an odour as it is worked — a factual difference from rawhide.'),('french-bulldog-chewing-coffee-wood.jpg','French bulldog chewing a coffee wood stick on a wooden table','A powerful chewer can still break a piece off any hard chew.'),('coffee-wood-chews-size-range-packed.jpg','Coffee wood chews in several sizes laid out in their vacuum packs','The size range, packed: each size is graded into its own diameter band.'),('coffee-wood-chews-pair-in-vacuum-pack.jpg','Two coffee wood chews with a desiccant sachet in a vacuum bag','Two sticks per pack with a desiccant sachet — one of the standard retail formats.')])
 
 add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
     "Choosing Natural Toys for Strong Chewers",
@@ -351,7 +351,7 @@ add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
       ("When should a strong chewer’s toy be replaced?",
        "When it cracks, splits, frays badly, loses pieces or wears small enough to swallow — on condition, not on a calendar."),
     ],
-    figures=[('golden-retriever-chewing-coffee-wood.jpg','Golden retriever chewing a coffee wood stick surrounded by other chews','A strong chewer needs a thicker chew — that is what the Gorilla line is for.'),('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Sizing up is usually safer than sizing down for a strong chewer.')])
+    figures=[('golden-retriever-chewing-coffee-wood.jpg','Golden retriever chewing a coffee wood stick surrounded by other chews','A strong chewer needs a thicker chew — that is what the Gorilla line is for.'),('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Sizing up is usually safer than sizing down for a strong chewer.'),('thick-coffee-wood-chews-vacuum-pack.jpg','Three thick, knotted coffee wood pieces in a vacuum bag','Thicker stems give more wood per piece — the idea behind the Gorilla line.'),('catalogue-dog-with-coconut-rope-toy.jpg','Golden retriever with a coconut fiber rope toy','Catalogue image: rope toys are for owner-led tug, not unsupervised chewing.')])
 
 add("how-long-do-coffee-wood-chews-last","Natural chew toys",
     "How Long Do Coffee Wood Chews Last?",
@@ -468,7 +468,7 @@ add("how-long-do-coffee-wood-chews-last","Natural chew toys",
        "warehouse softens and wears faster, so keep bags sealed until they go out, store on pallets away from exterior "
        "walls and roller shutters, and aim for around 25\u201328 \u00b0C with air circulation."),
     ],
-    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Material volume rises sharply with diameter — an XL holds far more wood than an L.'),('coffee-wood-chew-grain-detail.jpg','Close-up of a coffee wood chew surface showing the grain','In normal chewing the surface wears into soft fibres; replace the chew once it is small enough to swallow.')])
+    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Material volume rises sharply with diameter — an XL holds far more wood than an L.'),('coffee-wood-chew-grain-detail.jpg','Close-up of a coffee wood chew surface showing the grain','In normal chewing the surface wears into soft fibres; replace the chew once it is small enough to swallow.'),('coffee-wood-chews-graded-sizes-stacked.jpg','Packs of graded coffee wood chews stacked from small to large','Graded sizes stacked from smallest to largest, ready for cartoning.')])
 
 add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
     "Plastic-Free Pet Toys: What Belongs in the Buying Brief?",
@@ -540,7 +540,7 @@ add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
       ("How do I keep a plastic-free claim true on reorders?",
        "Keep the component list with the approved sample and require written approval for any change of material, thread or packaging."),
     ],
-    figures=[('bagged-chews-with-desiccant.jpg','Coffee wood chews in a sealed bag with a desiccant sachet','The toy, the bag, the box and any ink are four separate claims, not one.'),('loofah-duck-cat-toy.jpg','Loofah gourd fibre cut into a duck-shaped cat toy','Plant-derived is not the same as certified compostable.')])
+    figures=[('bagged-chews-with-desiccant.jpg','Coffee wood chews in a sealed bag with a desiccant sachet','The toy, the bag, the box and any ink are four separate claims, not one.'),('loofah-duck-cat-toy.jpg','Loofah gourd fibre cut into a duck-shaped cat toy','Plant-derived is not the same as certified compostable.'),('coffee-wood-chews-pack-with-desiccant.jpg','Coffee wood chews packed with a labelled desiccant sachet','Moisture protection is part of the pack specification — agree the sachet material as well as the bag.'),('hemp-rope-ball-vacuum-packed-size-l.jpg','Hemp rope ball vacuum-packed with a size L label','Size label on the pack: the same reference should appear on the quote and the packing list.')])
 
 add("are-dog-toys-biodegradable","Materials & claims",
     "Are Dog Toys Biodegradable? Read the Claim Closely",
@@ -630,7 +630,7 @@ add("are-dog-toys-biodegradable","Materials & claims",
        "From 27 September 2026, generic environmental claims like “eco-friendly” are banned in the EU unless you can show recognised excellent "
        "environmental performance. Specific, evidenced statements about the material are the safer route."),
     ],
-    figures=[('loofah-gourd-on-the-vine.jpg','A green loofah gourd hanging from its vine','Loofah is grown as a crop, so we do not describe it as agricultural waste.'),('marking-cartons-warehouse.jpg','Worker marking export cartons in a warehouse','Disposal claims need evidence for the finished assembly under stated conditions.')])
+    figures=[('loofah-gourd-on-the-vine.jpg','A green loofah gourd hanging from its vine','Loofah is grown as a crop, so we do not describe it as agricultural waste.'),('marking-cartons-warehouse.jpg','Worker marking export cartons in a warehouse','Disposal claims need evidence for the finished assembly under stated conditions.'),('coconut-fiber-ball-top-view.jpg','Wound coconut fiber ball seen from above on a marble surface','A wound coir ball: the texture is the product — specify diameter and finished weight with it.'),('catalogue-coconut-fiber-ball-with-coconut.jpg','Coconut fiber ball next to a split coconut','Catalogue image: coir comes from the husk around the coconut.')])
 
 add("what-is-coconut-fiber-pet-toys","Materials & claims",
     "Coconut Fiber in Pet Toys: Texture, Construction and Quality",
@@ -721,7 +721,7 @@ add("what-is-coconut-fiber-pet-toys","Materials & claims",
        "Selected standard lines start from 50 pcs; the per-size minimum is confirmed in the quote. Printed tags, labels and boxes start at "
        "500 pcs per SKU."),
     ],
-    figures=[('vietpaw-coconut-fiber-balls.jpg','Hand holding several wound coconut fiber balls outdoors','Coir from the husk — a by-product of the coconut food and oil trade.'),('puppy-with-rope-and-fiber-ball.jpg','Puppy with a natural fiber ball and rope loop','Specify diameter and finished weight together; diameter alone hides a loosely wound batch.')])
+    figures=[('vietpaw-coconut-fiber-balls.jpg','Hand holding several wound coconut fiber balls outdoors','Coir from the husk — a by-product of the coconut food and oil trade.'),('puppy-with-rope-and-fiber-ball.jpg','Puppy with a natural fiber ball and rope loop','Specify diameter and finished weight together; diameter alone hides a loosely wound batch.'),('coconut-fiber-ball-sizes-with-rope-toy.jpg','Small and large coconut fiber balls beside a coir rope toy','Two ball sizes side by side: size names only mean something with measured diameters.'),('catalogue-coconut-fiber-balls-s-m-l.jpg','Coconut fiber balls in sizes S, M and L','Catalogue image: coconut fiber balls, S, M and L.'),('catalogue-corgi-with-coconut-fiber-balls.jpg','Corgi lying beside coconut fiber balls','Catalogue image: coir balls are made for fetch and carry play.')])
 
 add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
     "Buying Natural Cat Toys: What to Check Beyond Non-Toxic",
@@ -794,7 +794,7 @@ add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
        "Loofah shapes are quoted per shape; selected coconut fiber lines start from 50 pcs. Printed tags, labels and boxes start at 500 pcs per "
        "SKU."),
     ],
-    figures=[('cat-loofah-toys-lifestyle.jpg','Cat playing with loofah toys on a rug','There is no universal pet-safety certification to carry — ask for the report that covers your SKU.'),('loofah-bear-shape-cat-toy.jpg','Loofah fibre cut into a bear-shaped cat toy','Confirm thread, filling and attachments before printing a composition claim.')])
+    figures=[('cat-loofah-toys-lifestyle.jpg','Cat playing with loofah toys on a rug','There is no universal pet-safety certification to carry — ask for the report that covers your SKU.'),('loofah-bear-shape-cat-toy.jpg','Loofah fibre cut into a bear-shaped cat toy','Confirm thread, filling and attachments before printing a composition claim.'),('catalogue-cat-with-loofah-toys.jpg','Tabby cat playing with loofah toys','Catalogue image: loofah shapes for batting and carrying.'),('hemp-rope-ball-small.jpg','Small tightly knotted hemp rope ball','A small hemp rope ball — the knot is the construction to inspect.')])
 
 add("sustainable-pet-toy-materials-compared","Materials & claims",
     "Coffee Wood, Coir, Hemp and Loofah: Choosing the Right Material",
@@ -867,7 +867,7 @@ add("sustainable-pet-toy-materials-compared","Materials & claims",
       ("Can I mix materials in one order?",
        "Yes. Minimums are confirmed per product and size, and one sample request can cover several materials."),
     ],
-    figures=[('loofah-drying-under-greenhouse-cover.jpg','Rows of loofah gourds drying under a greenhouse cover','Each material has a different, and differently provable, origin story.'),('coffee-wood-seasoning-racks.jpg','Rows of coffee wood sticks seasoning on factory drying racks','Coffee stem and coconut husk have genuine by-product stories. Hemp and loofah are grown crops.')])
+    figures=[('loofah-drying-under-greenhouse-cover.jpg','Rows of loofah gourds drying under a greenhouse cover','Each material has a different, and differently provable, origin story.'),('coffee-wood-seasoning-racks.jpg','Rows of coffee wood sticks seasoning on factory drying racks','Coffee stem and coconut husk have genuine by-product stories. Hemp and loofah are grown crops.'),('catalogue-coconut-fiber-rope-toys-with-coconut.jpg','Three coconut fiber rope toys beside a coconut','Catalogue image: coconut fiber rope toys in three sizes.'),('hemp-rope-balls-three-sizes.jpg','Three hemp rope balls in small, medium and large','Three hemp ball sizes: measure each against the approved sample.'),('catalogue-hemp-rope-ball-on-wood.jpg','Hemp rope ball on a wooden slice','Catalogue image: a knotted hemp ball.')])
 
 add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
     "Sourcing Natural Pet Toys from Vietnam: The First Order",
@@ -971,7 +971,7 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
        "Yes. Buyer visits and third-party inspection are welcome at any of our three factories; arrange in advance so the line is running when "
        "you arrive."),
     ],
-    figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.')])
+    figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.'),('coffee-wood-chews-graded-sizes-stacked.jpg','Packs of graded coffee wood chews stacked from small to large','Graded sizes stacked from smallest to largest, ready for cartoning.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
 
 add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     "Choosing a Natural Dog Toy Manufacturer in Vietnam",
@@ -1065,7 +1065,7 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
        "Ask which site makes your specific SKU and request a walkthrough of that line. A manufacturer can show you; a trading company will "
        "usually name, or decline to name, the factories it buys from."),
     ],
-    figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing on our own line in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.')])
+    figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing on our own line in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.'),('hemp-ball-and-loop-toy-set.jpg','Hemp rope balls with a double-ended loop toy','Hemp balls and a loop toy — specify each construction on its own line.'),('coffee-wood-chews-three-in-vacuum-pack.jpg','Three coffee wood chews sealed in a clear vacuum bag','Vacuum-packed at our warehouse: the bag keeps the wood at its packing moisture until it is opened.')])
 
 add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     "Sourcing Coconut-Fiber Cat Toys for Wholesale",
@@ -1142,7 +1142,7 @@ add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
       ("Is a cat ball just a small dog ball?",
        "No. Specify the cat version separately — diameter, weight and any attachment — and keep its instructions separate from dog toys."),
     ],
-    figures=[('cat-playing-with-loofah-shape.jpg','Grey cat reaching for a loofah play shape on a table','Write a cat specification, not a scaled-down dog one.'),('vietpaw-loofah-play-shapes.png','Loofah cat play shapes arranged in a basket','Each shape is measured separately — one size range does not cover the collection.')])
+    figures=[('cat-playing-with-loofah-shape.jpg','Grey cat reaching for a loofah play shape on a table','Write a cat specification, not a scaled-down dog one.'),('vietpaw-loofah-play-shapes.png','Loofah cat play shapes arranged in a basket','Each shape is measured separately — one size range does not cover the collection.'),('coconut-fiber-ball-top-view.jpg','Wound coconut fiber ball seen from above on a marble surface','A wound coir ball: the texture is the product — specify diameter and finished weight with it.'),('catalogue-coconut-fiber-balls-s-m-l.jpg','Coconut fiber balls in sizes S, M and L','Catalogue image: coconut fiber balls, S, M and L.')])
 
 add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
     "Private Label, OEM or ODM? Define the Work First",
@@ -1235,7 +1235,7 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
        "60–80 days of production when the order carries your own label, printed box or engraving, most of it artwork approval and tooling. Add "
        "30–35 days sea transit to the EU or the US. OEM and ODM projects get their own schedule after prototype approval."),
     ],
-    figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('bagged-chews-with-desiccant.jpg','Bagged coffee wood chews with a desiccant sachet ready for packing','Printed tags, labels and boxes start at 500 pcs per SKU — a separate minimum from engraving.')])
+    figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('bagged-chews-with-desiccant.jpg','Bagged coffee wood chews with a desiccant sachet ready for packing','Printed tags, labels and boxes start at 500 pcs per SKU — a separate minimum from engraving.'),('hemp-rope-ball-vacuum-packed-size-l.jpg','Hemp rope ball vacuum-packed with a size L label','Size label on the pack: the same reference should appear on the quote and the packing list.')])
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     "Pet Toy MOQ, FOB Pricing and Lead Times: Reading the Quote",
@@ -1355,7 +1355,7 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
        "A 30% deposit on a stock order or 50% on a branded order, with the balance against shipping documents. Air shipments are paid in full "
        "before the goods are handed over at the airport."),
     ],
-    figures=[('container-wall-of-cartons.jpg','A full wall of export cartons loaded and netted inside a shipping container','429 cartons in a 20 ft, 850 in a 40 ft. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Stock sizes ship in 5–7 days; printed packaging is the part that takes 60–80.')])
+    figures=[('container-wall-of-cartons.jpg','A full wall of export cartons loaded and netted inside a shipping container','429 cartons in a 20 ft, 850 in a 40 ft. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Stock sizes ship in 5–7 days; printed packaging is the part that takes 60–80.'),('coffee-wood-chews-pack-with-desiccant.jpg','Coffee wood chews packed with a labelled desiccant sachet','Moisture protection is part of the pack specification — agree the sachet material as well as the bag.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
     "CPSIA, REACH and Pet Toys: Ask the Right Compliance Question",
@@ -1434,7 +1434,7 @@ add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
       ("Does VietPaw provide test reports?",
        "Laboratory testing is arranged separately on request, scoped to your product and market."),
     ],
-    figures=[('inspection-documents-at-pallets.jpg','Two staff reviewing inspection documents beside stacked pallets','Compliance is decided per SKU and per destination, not per supplier.'),('export-container-exterior.jpg','Worker beside a green export container being loaded at a warehouse','Customs and marketplace checks are separate gates with separate paperwork.')])
+    figures=[('inspection-documents-at-pallets.jpg','Two staff reviewing inspection documents beside stacked pallets','Compliance is decided per SKU and per destination, not per supplier.'),('export-container-exterior.jpg','Worker beside a green export container being loaded at a warehouse','Customs and marketplace checks are separate gates with separate paperwork.'),('hemp-rope-balls-three-sizes.jpg','Three hemp rope balls in small, medium and large','Three hemp ball sizes: measure each against the approved sample.')])
 
 add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
     "Vietnam or China for Pet Toys? Compare the Order, Not the Flag",
@@ -1521,7 +1521,7 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
        "No. VietPaw manufactures four natural-material collections — coffee wood, coconut fiber, hemp and loofah — in its own three factories "
        "in Vietnam."),
     ],
-    figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.')])
+    figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.'),('coconut-fiber-rope-toy-knotted.jpg','Coconut fiber rope toy with a knot at each end','Coconut fiber rope with two knots, for supervised tug and carry.'),('catalogue-hemp-loop-toy-lifestyle.jpg','Hemp rope loop toy with a knotted ball','Catalogue image: hemp loop toy for tug play.')])
 
 add("pet-toy-safety-testing-requirements","Compliance & risk",
     "Pet Toy Safety Testing: Build a Product-Specific Plan",
@@ -1595,7 +1595,7 @@ add("pet-toy-safety-testing-requirements","Compliance & risk",
       ("Can one report cover my whole range?",
        "Only if a specialist agrees the variants can be grouped. A report for one size or material does not automatically cover others."),
     ],
-    figures=[('carton-quality-check.jpg','Worker examining corrugated board quality in a packing area','Test reports have a defined scope. Ask for the one covering your SKU and your destination.'),('moisture-meter-on-the-line.jpg','Pin-type moisture meter reading taken on coffee wood sticks','A moisture record is order-specific evidence; a general description is not.')])
+    figures=[('carton-quality-check.jpg','Worker examining corrugated board quality in a packing area','Test reports have a defined scope. Ask for the one covering your SKU and your destination.'),('moisture-meter-on-the-line.jpg','Pin-type moisture meter reading taken on coffee wood sticks','A moisture record is order-specific evidence; a general description is not.'),('hemp-rope-ball-large.jpg','Large knotted hemp rope ball close up','Large hemp rope ball: look at knot tightness and loose ends on the sample.')])
 
 add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
     "How to Vet a Natural Pet Toy Supplier Before the First Order",
@@ -1680,7 +1680,7 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
        "Small enough to learn from. A stock-packed order from 50 pcs per SKU lets you check receiving quality and sell-through before "
        "committing to private label or container volume."),
     ],
-    figures=[('inspector-checking-cartons-clipboard.jpg','Inspector in a hi-vis vest checking export cartons against a printed document','Ask for the carton marks to be photographed against the packing list before the container is sealed.'),('container-seal-applied.jpg','Hands fitting a numbered plastic seal to a shipping container door','The seal number belongs on your paperwork. It is the cheapest verification step there is.')])
+    figures=[('inspector-checking-cartons-clipboard.jpg','Inspector in a hi-vis vest checking export cartons against a printed document','Ask for the carton marks to be photographed against the packing list before the container is sealed.'),('container-seal-applied.jpg','Hands fitting a numbered plastic seal to a shipping container door','The seal number belongs on your paperwork. It is the cheapest verification step there is.'),('coconut-fiber-balls-and-rope-toy.jpg','Two coconut fiber balls of different sizes and a knotted rope toy','Balls and rope from the same coir line — one material, three formats.'),('hemp-rope-loop-ball-toy.jpg','Hemp rope toy with a loop handle and a knotted ball end','Ball-with-rope: the join between loop and ball is a separate inspection point.')])
 
 add("coffee-wood-chew-size-guide","Natural chew toys",
     "Coffee Wood Chew Sizes: VietPaw's XS–XXL Reference",
@@ -1751,7 +1751,7 @@ add("coffee-wood-chew-size-guide","Natural chew toys",
       ("How many sticks fit in an export carton?",
        "For loose sticks: S 512, M 224, L 126, XL 85; XS and XXL on request. Retail packaging reduces the count."),
     ],
-    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks laid out from smallest to largest','Six graded sizes. Length is cut to ±3 mm; diameter follows the natural stem and is graded into bands.'),('puppy-holding-coffee-wood-chew.jpg','Golden retriever puppy holding a coffee wood chew in its mouth',"Judge the fit against the dog's mouth, not against the size label.")])
+    figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks laid out from smallest to largest','Six graded sizes. Length is cut to ±3 mm; diameter follows the natural stem and is graded into bands.'),('puppy-holding-coffee-wood-chew.jpg','Golden retriever puppy holding a coffee wood chew in its mouth',"Judge the fit against the dog's mouth, not against the size label."),('catalogue-coffee-wood-six-sizes.jpg','Six coffee wood chew sizes from XS to XXL on a cream background','Catalogue image: the six standard CC01 sizes, XS to XXL.'),('coffee-wood-chews-size-range-packed.jpg','Coffee wood chews in several sizes laid out in their vacuum packs','The size range, packed: each size is graded into its own diameter band.')])
 
 
 # Owner request 2026-09-24: a content-matched lead image on every guide (served as responsive WebP).

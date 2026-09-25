@@ -190,6 +190,534 @@
         }
       ]
     },
+    "assets/img/catalogue-cat-with-loofah-toys.jpg": {
+      "sha256": "cd462dc84ab9b446ba502af432c5b30c7fc0f62d4eaf942a6f2263e7853d8bac",
+      "width": 709,
+      "height": 543,
+      "bytes": 76255,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-cat-with-loofah-toys-jpg-320w.webp",
+          "width": 320,
+          "height": 245,
+          "bytes": 15722
+        },
+        {
+          "path": "assets/img/webp/catalogue-cat-with-loofah-toys-jpg-480w.webp",
+          "width": 480,
+          "height": 368,
+          "bytes": 30952
+        },
+        {
+          "path": "assets/img/webp/catalogue-cat-with-loofah-toys-jpg-640w.webp",
+          "width": 640,
+          "height": 490,
+          "bytes": 48614
+        },
+        {
+          "path": "assets/img/webp/catalogue-cat-with-loofah-toys-jpg-709w.webp",
+          "width": 709,
+          "height": 543,
+          "bytes": 56366
+        }
+      ]
+    },
+    "assets/img/catalogue-coconut-fiber-ball-with-coconut.jpg": {
+      "sha256": "33cc8f800cad3b6d6bd404005bbcefb8bbd33be8abc177f15771329ac971f72a",
+      "width": 877,
+      "height": 414,
+      "bytes": 65099,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-ball-with-coconut-jpg-320w.webp",
+          "width": 320,
+          "height": 151,
+          "bytes": 10002
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-ball-with-coconut-jpg-480w.webp",
+          "width": 480,
+          "height": 227,
+          "bytes": 19434
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-ball-with-coconut-jpg-640w.webp",
+          "width": 640,
+          "height": 302,
+          "bytes": 30172
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-ball-with-coconut-jpg-800w.webp",
+          "width": 800,
+          "height": 378,
+          "bytes": 41742
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-ball-with-coconut-jpg-877w.webp",
+          "width": 877,
+          "height": 414,
+          "bytes": 46406
+        }
+      ]
+    },
+    "assets/img/catalogue-coconut-fiber-balls-s-m-l.jpg": {
+      "sha256": "11661681a4c3a2a3c48bb82db756c8a07d961e8ccf8e9bfcc8d2fe21fd391279",
+      "width": 582,
+      "height": 751,
+      "bytes": 39382,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-balls-s-m-l-jpg-320w.webp",
+          "width": 320,
+          "height": 413,
+          "bytes": 7196
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-balls-s-m-l-jpg-480w.webp",
+          "width": 480,
+          "height": 619,
+          "bytes": 15126
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-balls-s-m-l-jpg-582w.webp",
+          "width": 582,
+          "height": 751,
+          "bytes": 21786
+        }
+      ]
+    },
+    "assets/img/catalogue-coconut-fiber-rope-toys-with-coconut.jpg": {
+      "sha256": "35f525affe2ccef5ce17735a4d52c0638d5da6f1738cf7b4b18f5cbbb37ec1ff",
+      "width": 665,
+      "height": 368,
+      "bytes": 42044,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-rope-toys-with-coconut-jpg-320w.webp",
+          "width": 320,
+          "height": 177,
+          "bytes": 9622
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-rope-toys-with-coconut-jpg-480w.webp",
+          "width": 480,
+          "height": 266,
+          "bytes": 17856
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-rope-toys-with-coconut-jpg-640w.webp",
+          "width": 640,
+          "height": 354,
+          "bytes": 26522
+        },
+        {
+          "path": "assets/img/webp/catalogue-coconut-fiber-rope-toys-with-coconut-jpg-665w.webp",
+          "width": 665,
+          "height": 368,
+          "bytes": 26900
+        }
+      ]
+    },
+    "assets/img/catalogue-coffee-wood-six-sizes.jpg": {
+      "sha256": "803fe950e92d7c223ce8c40eb0b8bb5ef339d57a038e874590cc98ea513e4f48",
+      "width": 616,
+      "height": 616,
+      "bytes": 43331,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-coffee-wood-six-sizes-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 6136
+        },
+        {
+          "path": "assets/img/webp/catalogue-coffee-wood-six-sizes-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 11446
+        },
+        {
+          "path": "assets/img/webp/catalogue-coffee-wood-six-sizes-jpg-616w.webp",
+          "width": 616,
+          "height": 616,
+          "bytes": 17708
+        }
+      ]
+    },
+    "assets/img/catalogue-corgi-with-coconut-fiber-balls.jpg": {
+      "sha256": "115e91af01d42ae00f05c9e4d4430731272fc226f32daf71738157ac47ace097",
+      "width": 602,
+      "height": 458,
+      "bytes": 47745,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-corgi-with-coconut-fiber-balls-jpg-320w.webp",
+          "width": 320,
+          "height": 243,
+          "bytes": 12576
+        },
+        {
+          "path": "assets/img/webp/catalogue-corgi-with-coconut-fiber-balls-jpg-480w.webp",
+          "width": 480,
+          "height": 365,
+          "bytes": 22584
+        },
+        {
+          "path": "assets/img/webp/catalogue-corgi-with-coconut-fiber-balls-jpg-602w.webp",
+          "width": 602,
+          "height": 458,
+          "bytes": 29560
+        }
+      ]
+    },
+    "assets/img/catalogue-dog-with-coconut-rope-toy.jpg": {
+      "sha256": "6ddb4d834c545c3e6d63b024f106bacb39e7e1382860fa3a081e92815137e41a",
+      "width": 708,
+      "height": 535,
+      "bytes": 54809,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coconut-rope-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 242,
+          "bytes": 11596
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coconut-rope-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 363,
+          "bytes": 20538
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coconut-rope-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 484,
+          "bytes": 30250
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coconut-rope-toy-jpg-708w.webp",
+          "width": 708,
+          "height": 535,
+          "bytes": 34382
+        }
+      ]
+    },
+    "assets/img/catalogue-dog-with-coffee-wood-stick.jpg": {
+      "sha256": "65bd9fac2eefead69fb2778917f491be221cb02e16752fae23e2a1a89df9851e",
+      "width": 901,
+      "height": 730,
+      "bytes": 83524,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coffee-wood-stick-jpg-320w.webp",
+          "width": 320,
+          "height": 259,
+          "bytes": 12346
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coffee-wood-stick-jpg-480w.webp",
+          "width": 480,
+          "height": 389,
+          "bytes": 22160
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coffee-wood-stick-jpg-640w.webp",
+          "width": 640,
+          "height": 519,
+          "bytes": 33864
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coffee-wood-stick-jpg-800w.webp",
+          "width": 800,
+          "height": 648,
+          "bytes": 45312
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-coffee-wood-stick-jpg-901w.webp",
+          "width": 901,
+          "height": 730,
+          "bytes": 52312
+        }
+      ]
+    },
+    "assets/img/catalogue-dog-with-hemp-ball.jpg": {
+      "sha256": "a8d3f2946b9f40fba890a967e4ad49ea1a31553ceca3ef455dd4eef2f7d5b90d",
+      "width": 771,
+      "height": 588,
+      "bytes": 56460,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-dog-with-hemp-ball-jpg-320w.webp",
+          "width": 320,
+          "height": 244,
+          "bytes": 9940
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-hemp-ball-jpg-480w.webp",
+          "width": 480,
+          "height": 366,
+          "bytes": 18164
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-hemp-ball-jpg-640w.webp",
+          "width": 640,
+          "height": 488,
+          "bytes": 27240
+        },
+        {
+          "path": "assets/img/webp/catalogue-dog-with-hemp-ball-jpg-771w.webp",
+          "width": 771,
+          "height": 588,
+          "bytes": 34222
+        }
+      ]
+    },
+    "assets/img/catalogue-hemp-loop-toy-lifestyle.jpg": {
+      "sha256": "6575d3512e6c307d0829537a330bf896f3769096e8d010542b8b47ba21ce1e9e",
+      "width": 752,
+      "height": 346,
+      "bytes": 41654,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-hemp-loop-toy-lifestyle-jpg-320w.webp",
+          "width": 320,
+          "height": 147,
+          "bytes": 7816
+        },
+        {
+          "path": "assets/img/webp/catalogue-hemp-loop-toy-lifestyle-jpg-480w.webp",
+          "width": 480,
+          "height": 221,
+          "bytes": 14684
+        },
+        {
+          "path": "assets/img/webp/catalogue-hemp-loop-toy-lifestyle-jpg-640w.webp",
+          "width": 640,
+          "height": 294,
+          "bytes": 21304
+        },
+        {
+          "path": "assets/img/webp/catalogue-hemp-loop-toy-lifestyle-jpg-752w.webp",
+          "width": 752,
+          "height": 346,
+          "bytes": 25352
+        }
+      ]
+    },
+    "assets/img/catalogue-hemp-rope-ball-on-wood.jpg": {
+      "sha256": "4aa1372555ab86d4fe9cc53c89a3e7ac0fad3b0baf6be05ec77c558c9a9bec8c",
+      "width": 822,
+      "height": 489,
+      "bytes": 85712,
+      "variants": [
+        {
+          "path": "assets/img/webp/catalogue-hemp-rope-ball-on-wood-jpg-320w.webp",
+          "width": 320,
+          "height": 190,
+          "bytes": 14518
+        },
+        {
+          "path": "assets/img/webp/catalogue-hemp-rope-ball-on-wood-jpg-480w.webp",
+          "width": 480,
+          "height": 286,
+          "bytes": 29044
+        },
+        {
+          "path": "assets/img/webp/catalogue-hemp-rope-ball-on-wood-jpg-640w.webp",
+          "width": 640,
+          "height": 381,
+          "bytes": 45198
+        },
+        {
+          "path": "assets/img/webp/catalogue-hemp-rope-ball-on-wood-jpg-800w.webp",
+          "width": 800,
+          "height": 476,
+          "bytes": 62948
+        },
+        {
+          "path": "assets/img/webp/catalogue-hemp-rope-ball-on-wood-jpg-822w.webp",
+          "width": 822,
+          "height": 489,
+          "bytes": 64916
+        }
+      ]
+    },
+    "assets/img/coconut-fiber-ball-sizes-with-rope-toy.jpg": {
+      "sha256": "cbc80355b55e7fb302b4a642aa36b1b9b4db6e5eb85078beeed461a3c35e2094",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 305445,
+      "variants": [
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-sizes-with-rope-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 19352
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-sizes-with-rope-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 43328
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-sizes-with-rope-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 76322
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-sizes-with-rope-toy-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 115968
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-sizes-with-rope-toy-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 159846
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-sizes-with-rope-toy-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 243204
+        }
+      ]
+    },
+    "assets/img/coconut-fiber-ball-top-view.jpg": {
+      "sha256": "f7c5b4cd5a870f757429f639e5b97efb10371fc947121328fc2879c54a9fd8b4",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 327302,
+      "variants": [
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-top-view-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 18698
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-top-view-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 44194
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-top-view-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 76702
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-top-view-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 118612
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-top-view-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 165282
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-ball-top-view-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 254380
+        }
+      ]
+    },
+    "assets/img/coconut-fiber-balls-and-rope-toy.jpg": {
+      "sha256": "e51a13c09574a6db818f9ea7c6227941aedba4949752f55b5194c4a5f853b3e6",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 277117,
+      "variants": [
+        {
+          "path": "assets/img/webp/coconut-fiber-balls-and-rope-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 17030
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-balls-and-rope-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 37622
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-balls-and-rope-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 66602
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-balls-and-rope-toy-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 101292
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-balls-and-rope-toy-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 135890
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-balls-and-rope-toy-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 206774
+        }
+      ]
+    },
+    "assets/img/coconut-fiber-rope-toy-knotted.jpg": {
+      "sha256": "92d0c15322aa1576879173e188bcd43414e1b29c78d93a35405aafcac3e4f42e",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 221412,
+      "variants": [
+        {
+          "path": "assets/img/webp/coconut-fiber-rope-toy-knotted-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 9682
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-rope-toy-knotted-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 22484
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-rope-toy-knotted-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 40954
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-rope-toy-knotted-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 64608
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-rope-toy-knotted-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 90616
+        },
+        {
+          "path": "assets/img/webp/coconut-fiber-rope-toy-knotted-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 142550
+        }
+      ]
+    },
     "assets/img/coffee-stem-diameter-caliper-check.jpg": {
       "sha256": "919ac701348797139f3d2d473faca192b2586bb7d7ed77c15de1393cd5374560",
       "width": 1080,
@@ -375,6 +903,226 @@
           "width": 1600,
           "height": 1600,
           "bytes": 84758
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chews-graded-sizes-stacked.jpg": {
+      "sha256": "b9dbca8e98d44b211e28e7e578bbc56bae74cddfb5c5f741fd08db029a3b66bf",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 266737,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-graded-sizes-stacked-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 17088
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-graded-sizes-stacked-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 33276
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-graded-sizes-stacked-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 57018
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-graded-sizes-stacked-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 85712
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-graded-sizes-stacked-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 114216
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-graded-sizes-stacked-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 167802
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chews-pack-with-desiccant.jpg": {
+      "sha256": "1674be731ca0df7fe3210df14fdd4c39e7b26e3cf3ca93a3a44747e366bdb150",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 226281,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pack-with-desiccant-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 12550
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pack-with-desiccant-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 26208
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pack-with-desiccant-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 43342
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pack-with-desiccant-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 64606
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pack-with-desiccant-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 87434
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pack-with-desiccant-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 130322
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chews-pair-in-vacuum-pack.jpg": {
+      "sha256": "3e866772a17f036e4cb26d310eabb9160d0eb2b746f9b6a850e15a619961c8a0",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 208754,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pair-in-vacuum-pack-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 9898
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pair-in-vacuum-pack-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 21292
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pair-in-vacuum-pack-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 37818
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pair-in-vacuum-pack-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 57868
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pair-in-vacuum-pack-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 79154
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-pair-in-vacuum-pack-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 121750
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chews-size-range-packed.jpg": {
+      "sha256": "0a02fabb008a2aa7bcf88df4723becec70633dc6622fdd347ab05d2c4c1cced5",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 280886,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-size-range-packed-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 17310
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-size-range-packed-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 34268
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-size-range-packed-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 59292
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-size-range-packed-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 91026
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-size-range-packed-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 124594
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-size-range-packed-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 185004
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chews-three-in-vacuum-pack.jpg": {
+      "sha256": "9f395c6399a984c87d78ce6bd274ddb46c7e5fc041ac43653079f8199d56f236",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 216800,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-three-in-vacuum-pack-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 11236
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-three-in-vacuum-pack-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 23798
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-three-in-vacuum-pack-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 40084
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-three-in-vacuum-pack-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 59022
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-three-in-vacuum-pack-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 80110
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-three-in-vacuum-pack-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 122402
         }
       ]
     },
@@ -1205,6 +1953,314 @@
           "width": 1080,
           "height": 1350,
           "bytes": 169574
+        }
+      ]
+    },
+    "assets/img/hemp-ball-and-loop-toy-set.jpg": {
+      "sha256": "bb2b4fe2116c122770d2a40e4ad92063a7126aabbe43f36d54a2e86effe283ab",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 224984,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-ball-and-loop-toy-set-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 12950
+        },
+        {
+          "path": "assets/img/webp/hemp-ball-and-loop-toy-set-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 27404
+        },
+        {
+          "path": "assets/img/webp/hemp-ball-and-loop-toy-set-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 47416
+        },
+        {
+          "path": "assets/img/webp/hemp-ball-and-loop-toy-set-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 71694
+        },
+        {
+          "path": "assets/img/webp/hemp-ball-and-loop-toy-set-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 98598
+        },
+        {
+          "path": "assets/img/webp/hemp-ball-and-loop-toy-set-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 144522
+        }
+      ]
+    },
+    "assets/img/hemp-rope-ball-large.jpg": {
+      "sha256": "1403781d1e268477d6094756079087318c2357be32c10be9555081a053da1804",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 346057,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-ball-large-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 30500
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-large-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 64018
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-large-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 107510
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-large-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 154144
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-large-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 202310
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-large-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 272544
+        }
+      ]
+    },
+    "assets/img/hemp-rope-ball-packed-size-m.jpg": {
+      "sha256": "efa30f75fe87e231382caa1ff47fcb314a04b66e42cddc97749e8cccc49139b3",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 197951,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-ball-packed-size-m-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 13804
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-packed-size-m-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 27452
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-packed-size-m-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 44726
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-packed-size-m-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 64910
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-packed-size-m-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 83282
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-packed-size-m-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 121456
+        }
+      ]
+    },
+    "assets/img/hemp-rope-ball-small.jpg": {
+      "sha256": "85290e7cdcefa71aa9493f1a9d5dff967a23008d1dd42a5a91151a686976b30d",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 165638,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-ball-small-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 8808
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-small-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 18248
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-small-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 30958
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-small-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 46282
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-small-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 63206
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-small-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 98334
+        }
+      ]
+    },
+    "assets/img/hemp-rope-ball-vacuum-packed-size-l.jpg": {
+      "sha256": "68504cea3929e7b258ff28e51b4ebbdaff9ae18ca5694d0609e4711ccbb01918",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 175385,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-ball-vacuum-packed-size-l-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 11870
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-vacuum-packed-size-l-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 22130
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-vacuum-packed-size-l-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 35704
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-vacuum-packed-size-l-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 51682
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-vacuum-packed-size-l-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 68328
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-ball-vacuum-packed-size-l-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 100546
+        }
+      ]
+    },
+    "assets/img/hemp-rope-balls-three-sizes.jpg": {
+      "sha256": "553ffc55f8fca1b55f269ae252c9168c65d1224506fccc61d949f8cc0666ac4f",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 225066,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-balls-three-sizes-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 15112
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-balls-three-sizes-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 30480
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-balls-three-sizes-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 51660
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-balls-three-sizes-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 76746
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-balls-three-sizes-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 104446
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-balls-three-sizes-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 157960
+        }
+      ]
+    },
+    "assets/img/hemp-rope-loop-ball-toy.jpg": {
+      "sha256": "981bf03737827b9d7ace3a05757ff60518970dd12512485e7243f1ab6222f62c",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 233402,
+      "variants": [
+        {
+          "path": "assets/img/webp/hemp-rope-loop-ball-toy-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 11722
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-ball-toy-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 26978
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-ball-toy-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 48668
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-ball-toy-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 74448
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-ball-toy-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 97544
+        },
+        {
+          "path": "assets/img/webp/hemp-rope-loop-ball-toy-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 149086
         }
       ]
     },
@@ -2247,6 +3303,50 @@
           "width": 1080,
           "height": 1350,
           "bytes": 107020
+        }
+      ]
+    },
+    "assets/img/thick-coffee-wood-chews-vacuum-pack.jpg": {
+      "sha256": "69e0c22deea1208697cba7427957cd471b8afb334f988cea320d55f212c16a51",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 212579,
+      "variants": [
+        {
+          "path": "assets/img/webp/thick-coffee-wood-chews-vacuum-pack-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 10602
+        },
+        {
+          "path": "assets/img/webp/thick-coffee-wood-chews-vacuum-pack-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 22392
+        },
+        {
+          "path": "assets/img/webp/thick-coffee-wood-chews-vacuum-pack-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 39156
+        },
+        {
+          "path": "assets/img/webp/thick-coffee-wood-chews-vacuum-pack-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 57612
+        },
+        {
+          "path": "assets/img/webp/thick-coffee-wood-chews-vacuum-pack-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 77744
+        },
+        {
+          "path": "assets/img/webp/thick-coffee-wood-chews-vacuum-pack-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 121732
         }
       ]
     },
