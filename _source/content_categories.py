@@ -67,12 +67,12 @@ CATEGORIES = [
  ("Custom silhouette","OEM/ODM development","Review detachable parts and feasibility")],
  "Catnip is not included in every toy. State clearly whether a quoted SKU is unfilled or contains catnip, and confirm the amount and source when relevant. A custom shape requires its own sample and component list."),
 ("/collections/aggressive-chewers/","Sourcing Toys for Strong Chewers: Limits & Options","Materials","dog-chewing-coffeewood.jpg",
- "Evaluate strong-chewer requests carefully. No natural toy is indestructible, and hard wood is not automatically suitable for forceful chewing.",
+ "For strong chewers, choose the Gorilla line: thick-cut coffee wood chews in four sizes. No chew is indestructible, so supervise and replace when worn.",
  ["coffee-wood-dog-chew","hemp-rope-dog-toy"],[],
- [("Hard chew","Tooth and fracture risks","Seek veterinary guidance on suitability"),
+ [("Gorilla coffee wood chew","GRLS–GRLXL, 155–900 g","Choose the size against the dog; supervise and replace when worn"),
  ("Rope play","Fraying and ingestion risks","Use only for supervised interaction"),
  ("Claims","No indestructible promise","Describe tested construction, not guaranteed outcomes")],
- "Do not use XL or XXL as a blanket answer for every power chewer. Mouth size, chewing behavior and dental health matter, and increasing size does not remove the risks of hard chewing. Retail copy should acknowledge limits rather than promising safe failure or swallowable fibers."),
+ "For a strong chewer, the Gorilla line is the better answer than stretching the standard CC01 stick to XL or XXL: it is cut much thicker, so there is more wood per piece. Size it against the dog’s mouth, supervise, and replace it when it cracks or wears small. Retail copy should not promise an indestructible chew or swallowable fibers."),
 ("/collections/teething-puppies/","Puppy Toy Sourcing: Size & Material Considerations","Materials","dog-lifestyle-chew-1.jpg",
  "Plan puppy-focused ranges with particular care around developing teeth, detachable parts and size. Small dimensions alone do not make a hard chew puppy-safe.",
  [],[],
@@ -107,7 +107,7 @@ def dog_toys_sections():
           "actually serves. A range that puts a hard wood chew in front of a power chewer and a fraying rope in "
           "front of a strand-swallower will generate returns whatever the material story says.")
       + spec_table(["Material", "Chewing style it suits", "How lifespan behaves", "Main thing to check"], [
-          ("Coffee wood", "Persistent gnawing and shredding", "Long \u2014 weeks to months for a moderate chewer; days for a determined one", "Size against the dog, and the tooth-fracture risk of any hard chew"),
+          ("Coffee wood", "Persistent gnawing and shredding", "Long \u2014 weeks to months for a moderate chewer; days for a determined one", "Size against the dog; strong chewers go to the thicker Gorilla line"),
           ("Coconut fiber (coir)", "Fetch, carry and light mouthing", "Moderate; set by winding density more than diameter", "Shedding fiber, and what sits under the winding \u2014 core, thread, adhesive"),
           ("Hemp / cotton rope", "Tug and interactive play with a person", "Short to moderate; frays by design", "The join, not the cord \u2014 rope toys fail where components meet"),
           ("Wood and rope combined", "Mixed chew and tug", "Set by whichever component goes first", "Three approvals: the wood, the cord and the connection"),
@@ -141,7 +141,7 @@ def dog_toys_sections():
            "Fetch and carry play where texture matters more than bounce \u2014 coconut fiber.",
            "Interactive tug that a person takes part in \u2014 hemp or cotton rope.",
            "A natural-material story you can substantiate: coffee stem and coconut husk are by-products of existing agriculture."],
-          ["The dog is a determined power chewer that cracks hard objects \u2014 the risk is a fractured tooth, and no natural material removes it.",
+          ["The dog is a determined power chewer \u2014 choose the thicker Gorilla line rather than a standard stick.",
            "The dog swallows strands \u2014 rope is the wrong category for that animal, whatever the fiber.",
            "The customer wants an edible or digestible chew \u2014 none of this is food.",
            "The listing needs certified biodegradability, dental benefit or \u201csplinter-free\u201d \u2014 none of those can be supported here."])
@@ -189,9 +189,9 @@ DOG_TOYS_FAQ = [
    "keep a size M stick for months while a determined chewer reduces the same piece in days. We do not publish a "
    "figure in days or weeks, because any number we gave you would be wrong for half your customers."),
   ("Are natural dog toys safe for aggressive chewers?",
-   "Not automatically, and hard is not the same as safe. A determined power chewer that cracks hard objects risks a "
-   "fractured tooth on any hard chew, wood included. For those dogs we would rather steer you to a softer format and "
-   "a supervision instruction than sell you a stick that fails in the wrong way."),
+   "Yes, with the right product. For strong chewers we make the Gorilla line \u2014 thick-cut coffee wood chews "
+   "from GRLS (155\u2013230 g) to GRLXL (550\u2013900 g). No chew is indestructible, so size it to the dog, supervise "
+   "and replace it when it cracks or wears small."),
   ("Can dogs swallow pieces of these toys?",
    "Pieces can break off any chew, and rope frays into strands. None of these materials is digestible. Every pack "
    "should carry a supervised-use instruction and a replace-when-damaged instruction, and customers should be told to "

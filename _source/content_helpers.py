@@ -20,7 +20,7 @@ EXPORT_DOCS = ("Seven documents ship with every order: Commercial Invoice, Packi
                "article, not an animal by-product) or FSC certification (coffee is an agricultural crop, outside its scope); "
                "laboratory testing is arranged separately on request.")
 RANGE_SCOPE = 'VietPaw manufactures and sells pet toys and chews across four material collections: coffee wood, coconut fiber, hemp and loofah.'
-SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items. Hard chews can damage teeth; seek veterinary advice for puppies, dental conditions or forceful chewing."
+SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items. Strong chewers need a larger, thicker chew such as our Gorilla line; seek veterinary advice for puppies and dogs with dental conditions."
 SOURCE_OEM = "/services/oem-odm-pet-toy-manufacturing/"
 SOURCE_COMPANY = "/about/"
 FTC = "https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides"
@@ -162,3 +162,19 @@ def publish(root,path,title,description,h1,lede,sections,active="",image=None,fa
     if faqs: content+=faq(faqs)
     content+=rfq_bar()
     write_page(root,path,page(title,description,path,content,active,[bs,*schemas],og_image=image or "/assets/img/vietpaw-natural-toy-assortment.png",noindex=noindex))
+
+# Owner instruction 2026-09-25: strong chewers are served by the Gorilla line (thick-cut coffee wood).
+# Specification from the owner-confirmed source table; do not merge with the CC01 XS–XXL table.
+GORILLA_SIZES = [
+    ("S","GRLS","5–6 × 8","155–230"),
+    ("M","GRLM","6–8 × 10","260–350"),
+    ("L","GRLL","8–10 × 12","350–480"),
+    ("XL","GRLXL","10–12 × 15","550–900"),
+]
+GORILLA = ("For strong chewers we make the Gorilla line: thick-cut coffee wood chews in four sizes, from GRLS "
+           "(155–230 g) to GRLXL (550–900 g), with far more wood per piece than a standard stick of similar length.")
+
+def gorilla_table():
+    return spec_table(["Size","Reference SKU","Dimensions (cm)","Weight (g)"], GORILLA_SIZES,
+        caption="Gorilla line — thick-cut coffee wood chews for strong chewers. Reference specification; coffee wood is a "
+                "natural material and outline, grain and mass vary within each size. Confirm the size with your sample.")

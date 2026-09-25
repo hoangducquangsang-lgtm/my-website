@@ -3,7 +3,8 @@
 from common import BASE_URL, BRAND
 from content_helpers import (publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE,
                              answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT,
-                             INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE, ORDER_TIERS)
+                             INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE, ORDER_TIERS,
+                             GORILLA, gorilla_table)
 
 COFFEE_SIZES = [
     ("XS","CC01XS","10","1.5–2.0","23–30","Up to 3 kg"),
@@ -114,6 +115,7 @@ def coffee_wood_sections(specifications):
 
     section("Specification",
         specifications+coffee_size_table()
+        +"<h3>Gorilla line for strong chewers</h3>"+p(GORILLA)+gorilla_table()
         +"<h3>Measured limits and process figures</h3>"
         +spec_table(["Parameter","Figure","What it means in practice"],COFFEE_TOLERANCE,
             caption="Process figures reported by our production team for the coffee wood line. They describe how the line is run, not a guarantee for an individual piece. Ask for the records filed against your own lot.")
@@ -151,13 +153,13 @@ def coffee_wood_sections(specifications):
         +"</div>"),
 
     section("Is it the right chew for this dog?",
-        answer("Coffee wood suits moderate, persistent chewers that work at a chew rather than trying to crack it. It is a hard chew, and hard chews carry a real risk of tooth fracture — that risk does not disappear because the material is natural.")
+        answer("Coffee wood suits moderate, persistent chewers that work at a chew rather than trying to crack it. For strong chewers, choose the thicker Gorilla line below rather than a standard stick.")
         +fit(
           ["Dogs that gnaw and shred rather than bite down hard, where a chew is expected to last weeks.",
            "Customers who want a single-material, plastic-free chew and will read a supervision instruction.",
            "Ranges that already sell rawhide alternatives and need something that does not soften or swell.",
            "Retailers who can stock two or three sizes and advise on sizing at the till."],
-          ["The dog is a determined power chewer that cracks hard objects — the risk is a fractured tooth, not just a short-lived toy.",
+          ["The dog is a determined power chewer — use the Gorilla line instead of a standard stick.",
            "The dog has existing dental disease, is a senior, or is a puppy still changing teeth.",
            "The customer wants an edible or digestible chew; this is a toy and is not digestible.",
            "Nobody will be supervising, or the piece is small enough to be swallowed whole."])
@@ -209,7 +211,7 @@ def coffee_wood_sections(specifications):
 
 COFFEE_FAQ = [
  ("Is coffee wood safe for dogs?",
-  "It is safe in the sense that the standard stick is a single untreated plant material with no glue, coating, preservative or colouring, cut from stem wood rather than from the bean or cherry. It is not safe in the sense of being risk-free: it is a hard chew, hard chews can fracture teeth, and any chew can break into pieces that should not be swallowed. Sell it with a supervision instruction and a replace-when-damaged instruction, and size it to the dog."),
+  "It is safe in the sense that the standard stick is a single untreated plant material with no glue, coating, preservative or colouring, cut from stem wood rather than from the bean or cherry. It is not risk-free: any chew can break into pieces that should not be swallowed, and a strong chewer should have the thicker Gorilla line. Sell it with a supervision instruction and a replace-when-damaged instruction, and size it to the dog."),
  ("Does coffee wood splinter?",
   "It can. Neither we nor any other supplier in this category has published test data showing that it cannot, and an independent dog trainer has documented a stick that began breaking into hard pieces during use. We do not use the phrase \u201csplinter-free\u201d and we would advise you not to print it either. What the process does control is cracking: any cracked piece is removed at grading."),
  ("How long does one chew last?",

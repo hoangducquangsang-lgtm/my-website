@@ -6,6 +6,7 @@ from guide_dates import GUIDE_UPDATED_DATES, updated_time
 from content_helpers import (section, p, ul, table, cards, rfq_bar, FTC, CPSC, ECHA, AAHA,
                              answer, fit, steps, spec_table, figure, SAFETY)
 from content_products import coffee_size_table
+from content_helpers import GORILLA, gorilla_table
 
 ARTICLES=[]
 def add(slug,cluster,title,description,intro,sections,commercial,related=(),sources=(),
@@ -17,28 +18,89 @@ def add(slug,cluster,title,description,intro,sections,commercial,related=(),sour
 add("natural-dog-chew-toys-guide","Natural chew toys",
     "Natural Dog Chew Toys: Building a Range That Makes Sense",
     "How to choose natural dog toys for a wholesale range, from chewing behavior and material construction to sample approval and retail packaging.",
-    "A dog that carries a toy around the house and a dog that tries to pull it apart are asking very different things of the same product. That distinction belongs at the beginning of a buying brief. A range built around the word natural, without a clear use for each item, leaves store staff and customers to work out the important details themselves.",
+    answer("<strong>Short answer:</strong> build a natural dog toy range from a few products that each do one job — a thick-cut Gorilla "
+           "coffee wood chew for strong chewers, a standard coffee wood stick for moderate gnawers, a coconut fiber ball for fetch and carry, "
+           "and a hemp rope for owner-led tug. Choose two or three sizes of each, approve a physical sample per SKU, and put the use and "
+           "replacement instructions on every pack."),
     [
-    ("Give each product a job",p("Separate chewing, fetch and owner-led tug play in your assortment. Coffee wood sticks belong in a different conversation from fiber balls and rope toys. Edible chews are another category again: a wooden stick is a non-food product, even if it sits beside treats on a retail shelf.")+
-        p("For a first order, a small number of clearly differentiated products is easier to support than several similar-looking designs. Decide who each item is for, what the owner does during play and when the item should be removed. Those decisions will shape the size range, packaging and instructions.")),
-    ("The sample needs to answer more than one question",p("Handle the product before judging the photograph. With wood, compare the narrowest and widest points, surface finish and visible cracks. With rope or wound fiber, look at knot placement, loose ends and the way components are joined. Request the complete material list; a natural outer layer does not identify a hidden core or binding thread.")+
-        p("Keep an approved sample, but put its important features into writing as well. A photograph cannot settle a later disagreement about diameter or weight. Natural grain and shade can vary; an unapproved change in construction is a different matter.")),
-    ("Build the range around use, not a toughness ranking",p("Hardness is not a universal quality score. AAHA cautions that very hard chews can damage teeth. A heavy dog is not automatically a suitable customer for a hard chew, and a small stick is not automatically suitable for a puppy. When dental condition or forceful chewing is a concern, individual veterinary advice matters more than the catalogue size label.")),
-    ("Make the first order teach you something",p("Record quantities by SKU and size, rather than only the total number of toys. Agree the pack count, barcode placement and carton marks before production. At receiving, separate manufacturing defects from transit damage and keep the batch reference with each issue.")+
-        p("After launch, review which sizes sell, which questions customers ask and why products are returned. That information gives the second order a sounder basis. A broad promise such as suitable for all dogs does not."))],
+    ("What a natural dog chew toy is",
+      p("A <dfn>natural dog chew toy</dfn> is a non-edible toy made mainly from plant material — wood, coir, hemp or loofah — rather than "
+        "rubber, nylon or plastic. It is different from an <em>edible chew</em> such as a treat or rawhide: a wooden stick is a non-food "
+        "product, even when it sits beside treats on a retail shelf.")
+      + p("A dog that carries a toy around the house and a dog that tries to pull it apart are asking very different things of the same product. "
+          "That distinction belongs at the beginning of a buying brief. A range built around the word “natural”, without a clear use for each "
+          "item, leaves store staff and customers to work out the important details themselves.")),
+
+    ("Give each product a job",
+      spec_table(["Product","Job in the range","Best for","Key specification"],[
+        ("Gorilla coffee wood chew","Long, hard chewing","Strong chewers","Thick-cut; GRLS–GRLXL, 155–900 g"),
+        ("Standard coffee wood stick (CC01)","Gnawing","Moderate chewers","XS–XXL by length, diameter and weight"),
+        ("Coconut fiber ball","Fetch and carry","Dogs that carry and mouth","Diameter, finished weight, winding, any core"),
+        ("Hemp rope toy","Owner-led tug","Interactive play with a person","Length, rope diameter, knots and joins"),
+        ("Wood-and-rope combination","Tug plus chew","Dogs that like both","The join between wood and rope"),
+      ], caption="One job per product keeps sizing, packaging and instructions simple.")
+      + p("For a first order, a small number of clearly differentiated products is easier to support than several similar-looking designs. "
+          "Decide who each item is for, what the owner does during play and when it should be removed.")),
+
+    ("Building the range, step by step",
+      steps([
+        ("Map your customers’ dogs","List the sizes and chewing styles you actually sell to — gnawers, strong chewers, fetchers, tuggers.","A short list of jobs the range must cover."),
+        ("Pick one product per job","Use the table above; add strong chewers to the Gorilla line rather than stretching the standard stick.","No overlap between SKUs."),
+        ("Limit the sizes","Two or three sizes per product at launch.","Less stock tied up; clearer shelf advice."),
+        ("Approve samples","Up to 3 free samples; you cover the courier. Measure and keep one reference per SKU.","A physical standard for every repeat order."),
+        ("Agree pack and instructions","Pack count, barcode, supervision and replacement advice on every unit.","Staff and customers get the same message."),
+        ("Review after one season","Sales, questions and returns by SKU and size.","A second order based on data, not on a toughness ranking."),
+      ])),
+
+    ("VietPaw chew and toy references",
+      spec_table(["Line","Sizes","Minimum","Lead time"],[
+        ("Coffee wood CC01","XS, S, M, L, XL, XXL","50 pcs per size; Trial Box 100 / Starting Box 500","5–7 days stock"),
+        ("Coffee wood Gorilla","GRLS, GRLM, GRLL, GRLXL","Confirmed in the quote","Confirmed in the quote"),
+        ("Coconut fiber dog ball","S / M / L references","Selected lines from 50 pcs","Confirmed in the quote"),
+        ("Hemp rope dog toy","Quoted by design","Project-specific","Confirmed in the quote"),
+        ("Private label (any line)","—","500 pcs per SKU","60–80 days"),
+      ], caption="Planning figures; your quotation governs.")),
+
+    ("The sample needs to answer more than one question",
+      p("Handle the product before judging the photograph. With wood, compare the narrowest and widest points, surface finish and any crack — "
+        "any cracked piece should have been removed at grading. With rope or wound fibre, look at knot placement, loose ends and how "
+        "components are joined. Request the complete material list; a natural outer layer does not identify a hidden core or binding thread.")
+      + p("Keep an approved sample, and put its important features into writing as well. A photograph cannot settle a later disagreement about "
+          "diameter or weight. Natural grain and shade can vary; an unapproved change in construction is a different matter.")),
+
+    ("Make the first order teach you something",
+      p("Record quantities by SKU and size, not only the total number of toys. Agree the pack count, barcode placement and carton marks before "
+        "production. At receiving, separate manufacturing defects from transit damage and keep the batch reference with each issue.")
+      + p("After launch, review which sizes sell, which questions customers ask and why products are returned. That gives the second order a "
+          "sounder basis than a broad promise such as “suitable for all dogs”.")),
+    ],
     ("Explore VietPaw's natural dog toy range","/dog-toys/"),
-    related=[("Coffee wood sizing","/guides/coffee-wood-chew-size-guide/"),("Wholesale ordering","/services/wholesale-pet-products/")],
-    sources=[("AAHA guidance on hard chews",AAHA)],
+    related=[("Coffee wood sizing","/guides/coffee-wood-chew-size-guide/"),("Toys for strong chewers","/guides/best-natural-chews-for-aggressive-chewers/"),
+             ("Coconut fiber explained","/guides/what-is-coconut-fiber-pet-toys/"),("Wholesale ordering","/services/wholesale-pet-products/")],
     image="vietpaw-coffee-wood-sizes.png",
+    faqs=[
+      ("What are natural dog chew toys made of?",
+       "Plant materials such as coffee wood, coconut fiber (coir), hemp and loofah, rather than rubber, nylon or plastic."),
+      ("Are natural chew toys edible?",
+       "No. A coffee wood stick or a coir ball is a toy, not food. Pieces and loose fibres should not be swallowed."),
+      ("Which natural chew is best for a strong chewer?",
+       "A thick-cut coffee wood chew from the Gorilla line, in four sizes from GRLS (155–230 g) to GRLXL (550–900 g)."),
+      ("How many products should a first range have?",
+       "Usually three to five, each with a distinct job, in two or three sizes each. It is easier to explain and to reorder than a long list."),
+      ("How do I choose sizes for the range?",
+       "Start from the dogs your customers own. For coffee wood, the CC01 table links each size to a reference dog weight; go up one size for "
+       "keen chewers and use Gorilla for strong chewers."),
+      ("Can I mix materials in one order?",
+       "Yes. Minimums are confirmed per product and size in the quotation, and samples can cover several lines."),
+    ],
     figures=[('shiba-inu-chewing-coffee-wood-stick.jpg','A Shiba Inu lying on the floor gnawing a coffee wood chew stick',"Gnawing rather than cracking. Chewing style decides which material suits a dog, more than the dog's weight does."),('puppy-with-rope-and-fiber-ball.jpg','Puppy nosing a natural fiber ball with a rope loop on a tiled floor','Fetch and carry is a different job from chewing — give each product one role in the range.')])
 
 add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     "Are Coffee Wood Chews Safe for Dogs?",
     "A practical look at coffee wood chew suitability, hard-chew risks, product inspection and the instructions retailers should give owners.",
     answer("<strong>Short answer:</strong> coffee wood chews can suit many adult dogs that gnaw rather than crack, when the chew is the "
-           "right size, used under supervision and replaced once it cracks or wears small. They are not safe for every dog. Like antler "
-           "and nylon, coffee wood is hard enough to fracture a tooth in a forceful chewer, and it is a toy, not food — pieces should not "
-           "be swallowed."),
+           "right size, used under supervision and replaced once it cracks or wears small. For strong chewers, choose the thicker Gorilla line "
+           "rather than a standard stick. Either way it is a toy, not food — pieces should not be swallowed."),
     [
     ("What a coffee wood chew is",
       p("A <dfn>coffee wood chew</dfn> is a stick cut from the stem wood of the coffee tree, seasoned, dried and shaped into a non-edible "
@@ -51,20 +113,20 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
 
     ("The risks, one by one",
       spec_table(["Risk","What can happen","How to reduce it"],[
-        ("Tooth fracture","A dog that clamps down hard on any hard object can break a tooth — coffee wood, antler and nylon alike.","Offer it to gnawers, not crackers; ask a vet first for puppies, seniors and dogs with dental problems."),
+        ("Strong chewing","A dog that bites down hard can wear down or split a standard stick quickly.","Choose the thicker Gorilla line for strong chewers; ask a vet first for puppies, seniors and dogs with dental problems."),
         ("Swallowing whole","A stick that is too small, or worn down small, can be swallowed or lodge in the throat.","Choose by the weight band and go up one size when in doubt; replace before it is swallowable."),
         ("Breaking off pieces","A powerful chewer can split a stick and swallow hard fragments.","Remove the chew at the first crack or split; stop using it if the dog tries to break pieces off."),
         ("Splinters","No supplier in this category has test data behind “splinter-free”.","In normal gnawing the surface wears into soft fibres; supervision covers the exceptions."),
         ("Softening in storage","Wood that picks up moisture softens and wears faster.","Keep bags sealed and store dry; chews are packed below 14% moisture."),
       ], caption="Hard is not the same as safe. The chew’s size and the dog’s chewing style decide most of the outcome.")
-      + p("AAHA’s guidance on hard chews is relevant here: making a chew larger may reduce the chance of swallowing it whole, but it does not make "
-          "the material softer or remove dental risk.")),
+      + p("Size is the control that matters most. A chew that stays comfortably larger than the dog’s mouth is harder to swallow and lasts "
+          "longer; for a dog that chews hard, the Gorilla line adds far more wood per piece than a longer standard stick.")),
 
     ("Which dogs it suits — and which it does not",
       fit(["Adult dogs that gnaw and shred slowly.",
            "Dogs that settle with a chew for a supervised session.",
            "Owners who will check the chew and replace it when it cracks or wears small."],
-          ["The dog is a determined power chewer that cracks hard objects.",
+          ["The dog is a determined power chewer — choose the Gorilla line instead.",
            "The dog has dental disease, is a senior, or is a puppy still changing teeth.",
            "The owner wants an edible or digestible chew — this is not food.",
            "Nobody will be supervising, or the piece is small enough to swallow."],
@@ -83,7 +145,8 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     ("VietPaw size reference",
       coffee_size_table()
       + p("When a dog sits at the top of a band, or is known to be a determined chewer, go up one size. The consequence of being one size too "
-          "large is a chew that lasts longer; the consequence of being one size too small is the thing everybody is trying to avoid.")),
+          "large is a chew that lasts longer; the consequence of being one size too small is the thing everybody is trying to avoid.")
+      + "<h3>Gorilla line for strong chewers</h3>" + p(GORILLA) + gorilla_table()),
 
     ("What buyers should put on the label",
       p("Keep the advice short enough to be read: intended pet, size selection, supervised use, inspection and replacement. Put the same "
@@ -96,7 +159,6 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
     ("Coffee wood product specifications","/products/coffee-wood-dog-chew/"),
     related=[("Size guide","/guides/coffee-wood-chew-size-guide/"),("How long coffee wood chews last","/guides/how-long-do-coffee-wood-chews-last/"),
              ("Coffee wood vs antler, nylon and rawhide","/guides/coffee-wood-vs-antler-nylon-rawhide/"),("Quality-control workflow","/quality-control/")],
-    sources=[("AAHA: hard-chew risks",AAHA)],
     image="coffee-wood-chew-grain-detail.jpg",
     faqs=[
       ("Are coffee wood chews safe for puppies?",
@@ -111,8 +173,9 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
       ("Do coffee wood chews splinter?",
        "They usually wear into soft frayed fibres rather than sharp splinters, but that is an observation, not a guarantee. A powerful chewer "
        "can break a piece off, and no supplier in this category has test data behind “splinter-free”."),
-      ("Can a coffee wood chew break a dog’s tooth?",
-       "Yes, it can in a dog that bites down hard, as antler and nylon can. That is why it suits gnawers rather than crackers."),
+      ("Are coffee wood chews safe for strong chewers?",
+       "Choose the Gorilla line. It is cut much thicker than a standard stick — four sizes from GRLS (155–230 g) to GRLXL (550–900 g) — "
+       "so a strong chewer has far more wood to work through. Supervise and replace it when it cracks or wears small."),
       ("What if my dog swallows a piece?",
        "Contact a vet, especially if the piece was large or the dog shows discomfort, vomiting or changes in appetite. Do not keep using a chew "
        "that is breaking apart."),
@@ -122,69 +185,133 @@ add("are-coffee-wood-chews-safe-for-dogs","Natural chew toys",
 add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
     "Coffee Wood, Antler, Nylon or Rawhide: What Are You Comparing?",
     "Compare coffee wood, antler, nylon and rawhide by intended use, product construction, retail presentation and purchasing requirements.",
-    "These products are often placed in one comparison chart because dogs chew them. For a buyer, that is not enough. A molded toy, a piece of antler, a wood stick and a processed hide chew differ in construction and commercial category. The useful comparison starts with the job you want the product to do.",
+    answer("<strong>Short answer:</strong> coffee wood is a single untreated plant material that does not soften, swell or smell as it is "
+           "chewed. Antler is an animal-derived hard chew, nylon is a synthetic polymer that does not biodegrade in normal disposal, and "
+           "rawhide is an edible processed animal hide that softens as it is chewed. They are four different product categories — compare "
+           "them on origin, what happens during use, import paperwork and how you explain them to customers, not on a single toughness score."),
     [
-    ("Separate the product categories",table(["Format","What the buyer needs to establish"],[
-        ("Coffee wood","Non-edible stick; dimensions, finish, drying and use instructions."),
-        ("Antler","Animal-derived hard chew; source, cut, dimensions and intended use."),
-        ("Nylon","Manufactured polymer product; formulation, design and replacement instructions."),
-        ("Rawhide","Processed animal-hide chew; ingredients, processing, labeling and applicable import category.")])+
-        p("Do not borrow the feeding directions of one category for another. Product classification and import documentation should follow the actual article being shipped, not the shelf on which a retailer plans to display it.")),
-    ("Harder does not settle the choice",p("Coffee wood, antler and hard synthetic products should not be ranked by hardness alone. A product that resists wear can still be unsuitable for a particular dog's teeth or chewing style. Rawhide raises a different discussion about the specific product, consumption and use instructions. None of these labels establishes a universal winner.")+
-        p("Retailers need a clear way to explain those differences without making a medical promise. Describe the material and intended use, then give the owner the relevant supervision and replacement guidance.")),
-    ("Compare the quote at the same point in the supply chain",p("A loose stick quoted at our factory and a boxed, barcoded item delivered to your warehouse are not comparable prices. Match the specification, saleable unit, packaging, quantity and delivery basis. Then include inspection, testing, transport, duties and handling where applicable.")+
-        p("Also consider what the product asks of the retail operation. Will staff need a size explanation? Does each variant require a separate barcode? Can damaged packaging be replaced locally, or is the complete unit unsaleable? These details can outweigh a small saving in purchase price.")),
-    ("Keep material and disposal claims separate",p("Wood has a different origin story from nylon, but the environmental statement still needs a defined scope. A wood-and-rope combination may contain several components; a paper-looking pack may include a film window. Describe what is in the product before deciding which disposal claims belong on the label.")+
-        p("Choose the product you can specify, explain and reorder consistently. A comparison based on those three points is more useful than a table of unsupported safety scores."))],
+    ("What each chew is",
+      p("<dfn>Coffee wood chew</dfn>: a stick cut from the stem wood of the coffee tree, seasoned, dried below 14% moisture and shaped. "
+        "Non-edible; no glue, coating, preservative or colouring.")
+      + p("<dfn>Antler chew</dfn>: a cut piece of naturally shed deer or elk antler. Non-edible in the usual sense; animal-derived.")
+      + p("<dfn>Nylon chew</dfn>: a moulded synthetic polymer toy, often flavoured. Non-edible; made from fossil-based plastic.")
+      + p("<dfn>Rawhide</dfn>: the inner layer of cattle or other animal hides, cleaned, processed and pressed or rolled. Sold as an edible chew "
+          "that softens as the dog works it.")),
+
+    ("Coffee wood vs antler vs nylon vs rawhide",
+      spec_table(["","Coffee wood","Antler","Nylon","Rawhide"],[
+        ("Origin","Plant (coffee tree stem)","Animal (shed antler)","Synthetic polymer","Animal (processed hide)"),
+        ("Edible?","No — a toy","No","No","Yes — a treat"),
+        ("During use","Wears into soft fibres; does not soften, swell or smell","Wears slowly; can chip","Wears into nubs and plastic particles","Softens and becomes pliable"),
+        ("Ingredients to declare","One material, untreated","One material","Polymer, flavouring, colour","Hide plus processing agents, flavours"),
+        ("End of life","Plant material","Natural material","Does not biodegrade in normal disposal","Organic material"),
+        ("Import paperwork","Phytosanitary and fumigation certificates; no veterinary certificate","Animal by-product rules may apply","Standard consumer-product documents","Animal by-product rules and veterinary certification in many markets"),
+        ("Strong-chewer option","Gorilla thick-cut line","Larger pieces","Heavy-duty grades","Pressed or thick rolls"),
+      ], caption="Category comparison for buyers; check requirements for your market with your broker.")),
+
+    ("Choosing between them, step by step",
+      steps([
+        ("Decide edible or non-edible","A treat and a toy sit in different categories, with different labels and customer expectations.","You know whether rawhide is even in the comparison."),
+        ("Decide on the material story","Plant-based, animal-derived or synthetic.","A clear line for your product page and packaging."),
+        ("Check the import route","Animal-derived products often need veterinary documentation; coffee wood ships with plant-health documents.","No surprise at customs."),
+        ("Match strong chewers to a thick product","For coffee wood, that is the Gorilla line rather than a longer standard stick.","Fewer returns from dogs that work through a chew quickly."),
+        ("Compare quotes at the same point in the supply chain","Same spec, saleable unit, pack, quantity and Incoterm.","Prices you can actually compare."),
+      ])),
+
+    ("Coffee wood facts at a glance",
+      spec_table(["Item","Figure"],[
+        ("Material","Coffee tree stem wood; untreated"),
+        ("Moisture at packing","Below 14%, checked on every batch"),
+        ("Cracks","Any cracked piece is rejected at grading"),
+        ("Standard sizes","CC01 XS–XXL, 23–440 g"),
+        ("Strong-chewer line","Gorilla GRLS–GRLXL, 155–900 g"),
+        ("Export documents","Seven, including phytosanitary and fumigation certificates"),
+        ("Minimum order","50 pcs per size"),
+      ])),
+
+    ("Compare the quote at the same point in the supply chain",
+      p("A loose stick quoted at the factory and a boxed, barcoded item delivered to your warehouse are not comparable prices. Match the "
+        "specification, saleable unit, packaging, quantity and delivery basis. Then include inspection, testing, transport, duties and "
+        "handling where applicable.")
+      + p("Also consider what the product asks of the retail operation. Will staff need a size explanation? Does each variant require a separate "
+          "barcode? Can damaged packaging be replaced locally? These details can outweigh a small saving in purchase price.")),
+
+    ("Keep material and disposal claims separate",
+      p("Wood has a different origin story from nylon, but an environmental statement still needs a defined scope. A wood-and-rope combination "
+        "contains several components; a paper-looking pack may include a film window. Describe what is in the product before deciding which "
+        "claims belong on the label.")
+      + p("Retailers need a clear way to explain the differences without making a medical promise. Describe the material and intended use, then "
+          "give the owner the relevant supervision and replacement guidance.")),
+    ],
     ("Compare coffee wood wholesale options","/collections/coffee-wood/"),
-    related=[("Coffee wood safety considerations","/guides/are-coffee-wood-chews-safe-for-dogs/"),("Natural material comparison","/guides/sustainable-pet-toy-materials-compared/")],
+    related=[("Coffee wood safety considerations","/guides/are-coffee-wood-chews-safe-for-dogs/"),("How long coffee wood chews last","/guides/how-long-do-coffee-wood-chews-last/"),
+             ("Natural material comparison","/guides/sustainable-pet-toy-materials-compared/")],
     image="vietpaw-coffee-wood-sizes.png",
+    faqs=[
+      ("Is coffee wood better than antler?",
+       "They suit different buyers. Coffee wood is plant-based and ships with plant-health documents; antler is animal-derived and may fall under "
+       "animal by-product rules. Both are non-edible hard chews."),
+      ("Is coffee wood a good rawhide alternative?",
+       "For buyers who want a non-edible chew that does not soften, swell or develop an odour, yes. It is a toy, not a treat, so it replaces the "
+       "chewing activity rather than the food."),
+      ("Is a nylon chew biodegradable?",
+       "No. Nylon is a synthetic polymer that does not biodegrade in normal disposal."),
+      ("Does coffee wood need a veterinary certificate for export?",
+       "No. It is a wood article, not an animal by-product. It ships with phytosanitary and fumigation certificates among seven export "
+       "documents."),
+      ("Which option is best for strong chewers?",
+       "For coffee wood, the Gorilla line — thick-cut chews from GRLS (155–230 g) to GRLXL (550–900 g)."),
+      ("Can I say coffee wood is safer than rawhide?",
+       "Avoid comparative safety claims without evidence. You can say factually that coffee wood does not soften, swell or develop an odour as it "
+       "is worked."),
+    ],
     figures=[('coffee-wood-chew-size-row.jpg','Six coffee wood chew sticks laid out in increasing size on a light background','Coffee wood does not soften, swell or develop an odour as it is worked — a factual difference from rawhide.'),('french-bulldog-chewing-coffee-wood.jpg','French bulldog chewing a coffee wood stick on a wooden table','A powerful chewer can still break a piece off any hard chew.')])
 
 add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
     "Choosing Natural Toys for Strong Chewers",
     "How retailers can respond to strong-chewer requests without confusing hardness, size or an aggressive-chewer label with guaranteed suitability.",
-    answer("<strong>Short answer:</strong> for a strong chewer, the most durable natural option is usually a coffee wood chew chosen one size "
-           "above the weight chart and given under supervision. Rope, coir and loofah toys are made for tug, fetch or batting and can be pulled "
-           "apart, so they are not chew toys for power chewers. No natural chew is indestructible, and a dog that cracks hard objects can "
-           "fracture a tooth on any hard material."),
+    answer("<strong>Short answer:</strong> for a strong chewer, the best natural option is a thick-cut coffee wood chew — VietPaw’s Gorilla "
+           "line, in four sizes from GRLS (155–230 g) to GRLXL (550–900 g) — given under supervision. Rope, coir and loofah toys are made for "
+           "tug, fetch or batting and can be pulled apart, so they are not chew toys for power chewers. No natural chew is indestructible: "
+           "size it to the dog and replace it when it cracks or wears small."),
     [
     ("What “strong chewer” actually means",
       p("A <dfn>strong chewer</dfn> — also called an aggressive or power chewer — is a dog that destroys toys quickly. That covers several "
         "different behaviours, and each one needs a different product:")
       + ul(["<strong>Gnawers</strong> work a chew slowly with the back teeth, wearing it down over time.",
             "<strong>Shredders</strong> tear at fibres, seams and rope ends.",
-            "<strong>Crackers</strong> clamp down hard to break a solid object — the behaviour most likely to damage teeth.",
+            "<strong>Crackers</strong> clamp down hard to split a solid object — the dogs that need the thickest chew.",
             "<strong>Swallowers</strong> try to gulp pieces rather than chew them."])
       + p("When a customer asks for the toughest chew you sell, the next question should be which of these the dog does. “Strong chewer” is a "
           "useful opening description, but it is not a product specification.")),
 
     ("Natural materials for strong chewers compared",
       spec_table(["Material","Made for","Fit for a strong chewer","Main risk"],[
-        ("Coffee wood","Gnawing","The best natural fit for gnawers, sized up","Tooth damage in crackers; swallowing a worn piece"),
+        ("Gorilla coffee wood (thick-cut)","Strong, persistent chewing","The best natural fit for strong chewers","Swallowing a piece once it wears small"),
+        ("Standard coffee wood stick","Gnawing","Good for moderate chewers, sized up","Worn down quickly by a strong chewer"),
         ("Hemp rope","Owner-led tug and carry","Supervised tug only — not left to chew","Swallowed strands"),
         ("Coconut coir ball","Fetch and carry","Not recommended for chewing","Unwinding; swallowed fibre"),
         ("Loofah","Light play, mainly cats","Not recommended","Breaks into small pieces"),
         ("Wood-and-rope combination","Tug and chew","Check the join as much as the materials","The join or knot coming apart"),
       ], caption="Match the product to the behaviour, not to the word “tough”.")
-      + p("If a dog repeatedly breaks off pieces, the answer is not automatically a harder version of the same item. Hard materials bring their "
-          "own dental concerns, and a vet can help the owner decide what suits that individual dog.")),
+      + p("If a dog repeatedly breaks pieces off a standard stick, move it to the Gorilla line rather than a longer stick of the same "
+          "diameter: thickness, not length, is what gives a strong chewer more wood to work through.")),
 
     ("Matching a product to a strong chewer, step by step",
       steps([
         ("Identify the behaviour","Ask whether the dog gnaws, shreds, cracks or swallows.","A product type, not just a toughness level."),
-        ("Rule out what does not fit","Crackers and swallowers need a vet’s view before any hard chew; shredders should not be left alone with rope or coir.","Fewer returns and fewer injuries."),
-        ("Size up","Choose from the weight band, then go one size larger for a keen chewer.","A chew that stays bigger than the dog’s mouth for longer."),
+        ("Choose the product type","Strong chewers and crackers: the Gorilla line. Gnawers: a standard stick. Shredders: not alone with rope or coir.","Fewer returns and fewer injuries."),
+        ("Choose the size","Pick the Gorilla size against the dog’s mouth — the piece should stay much larger than the mouth throughout use.","A chew that cannot be swallowed and lasts longer."),
         ("Supervise the first sessions","Watch how the dog actually uses the product.","Early confirmation — or an early switch to something else."),
         ("Replace on condition","Remove the item when it cracks, splits, frays badly or wears small enough to swallow.","The weakest point is caught before it fails."),
       ])),
 
-    ("Coffee wood sizes for strong chewers",
-      coffee_size_table()
-      + p("For a strong chewer, read the weight column as a floor, not a target: a 12 kg dog that chews hard is usually better on an XL "
-          "(4.5–5.5 cm across) than an L. Diameter matters more than length, because the material volume rises sharply with it.")
-      + p("Weight bands do not measure bite force or dental condition. Going up a size should never be presented as a guarantee that a hard chew "
-          "is suitable.")),
+    ("Gorilla line sizes",
+      p(GORILLA)
+      + gorilla_table()
+      + p("Thickness is what makes the difference for a strong chewer: material volume rises sharply with diameter, so a Gorilla piece holds "
+          "several times the wood of a standard stick of similar length. For moderate chewers, the standard CC01 range (XS–XXL) is on the "
+          '<a href="/products/coffee-wood-dog-chew/">coffee wood product page</a>; go up one size for a dog at the top of its weight band.')),
 
     ("Look for the way a design can come apart",
       p("On a rope assembly, examine the knots, ends, handle and joins between materials. On a wood chew, look at the narrow sections, ends and "
@@ -205,27 +332,26 @@ add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
     ("Strong-chewer product selection","/collections/aggressive-chewers/"),
     related=[("Hemp rope constructions","/products/hemp-rope-dog-toy/"),("Are coffee wood chews safe?","/guides/are-coffee-wood-chews-safe-for-dogs/"),
              ("Coffee wood size guide","/guides/coffee-wood-chew-size-guide/"),("How long coffee wood chews last","/guides/how-long-do-coffee-wood-chews-last/")],
-    sources=[("AAHA guidance on hard chews",AAHA)],
     image="vietpaw-hemp-wood-assortment.jpg",
     faqs=[
       ("What is the best natural chew for an aggressive chewer?",
-       "For a dog that gnaws, a coffee wood chew one size above the weight chart, used under supervision. For a dog that cracks hard objects, "
-       "ask a vet before offering any hard chew."),
+       "A thick-cut coffee wood chew from VietPaw’s Gorilla line, used under supervision. It comes in four sizes, from GRLS (155–230 g) to "
+       "GRLXL (550–900 g)."),
       ("Are coffee wood chews indestructible?",
        "No. They are dense and usually wear into soft fibres, but a powerful chewer can split a stick or break a piece off. Nothing in this "
        "category is indestructible."),
       ("Are rope toys safe for power chewers?",
        "Only for supervised, owner-led tug. Left alone, a strong chewer can shred rope and swallow strands."),
       ("What size chew should a strong chewer have?",
-       "Start from the weight band and go up one size. For example, a 12 kg dog that chews hard is usually better on an XL (21–22 cm, "
-       "4.5–5.5 cm across) than an L."),
-      ("Can a hard natural chew damage a dog’s teeth?",
-       "Yes. Coffee wood, antler and nylon are all hard enough to fracture a tooth in a dog that bites down forcefully. Gnawing is the "
-       "behaviour hard chews suit."),
+       "A Gorilla piece that stays much larger than the dog’s mouth throughout use. The four sizes run from GRLS (5–6 × 8 cm) to GRLXL "
+       "(10–12 × 15 cm); confirm the choice with a sample."),
+      ("Why not just buy a longer standard stick?",
+       "Length adds little for a strong chewer. Thickness adds far more wood per piece, which is why the Gorilla line is cut much thicker than "
+       "the standard CC01 range."),
       ("When should a strong chewer’s toy be replaced?",
        "When it cracks, splits, frays badly, loses pieces or wears small enough to swallow — on condition, not on a calendar."),
     ],
-    figures=[('golden-retriever-chewing-coffee-wood.jpg','Golden retriever chewing a coffee wood stick surrounded by other chews','Hard is not the same as safe: a determined chewer risks a fractured tooth on any hard material.'),('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Sizing up is usually safer than sizing down for a strong chewer.')])
+    figures=[('golden-retriever-chewing-coffee-wood.jpg','Golden retriever chewing a coffee wood stick surrounded by other chews','A strong chewer needs a thicker chew — that is what the Gorilla line is for.'),('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks in six sizes on a light background','Sizing up is usually safer than sizing down for a strong chewer.')])
 
 add("how-long-do-coffee-wood-chews-last","Natural chew toys",
     "How Long Do Coffee Wood Chews Last?",
@@ -315,7 +441,6 @@ add("how-long-do-coffee-wood-chews-last","Natural chew toys",
              ("Coffee wood vs antler, nylon and rawhide","/guides/coffee-wood-vs-antler-nylon-rawhide/"),
              ("Are coffee wood chews safe for dogs?","/guides/are-coffee-wood-chews-safe-for-dogs/"),
              ("Inspection and quality control","/quality-control/")],
-    sources=[("AAHA guidance on hard chews",AAHA)],
     image="coffee-wood-chew-grain-detail.jpg",
     faqs=[
       ("How long does a coffee wood chew last on average?",
@@ -348,19 +473,73 @@ add("how-long-do-coffee-wood-chews-last","Natural chew toys",
 add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
     "Plastic-Free Pet Toys: What Belongs in the Buying Brief?",
     "Specify plastic-free pet toys and packaging clearly, with separate decisions on materials, components and end-of-life claims.",
-    "A toy can look entirely natural on a shelf and still contain synthetic binding thread, an internal core or a laminated tag. If plastic-free is part of your brand promise, those small components belong in the first conversation with our production team, not in a discussion after the packaging has been printed.",
+    answer("<strong>Short answer:</strong> a pet toy is plastic-free only when every component — body, core, thread, adhesive, finish, tag — "
+           "contains no plastic, and a plastic-free <em>pack</em> is a separate claim covering the bag, sleeve, window and insert. Write both into "
+           "the buying brief as a component list, choose packaging that still protects the goods in transit, and keep “plastic-free” "
+           "separate from “biodegradable”, which is a different claim needing different evidence."),
     [
-    ("Define the boundary of the promise",p("Decide whether you mean the toy, the retail pack or the complete delivered unit. These are different briefs. A wood stick in a plastic bag is not a plastic-free retail unit, even if the stick itself contains no plastic. Equally, a paper sleeve does not tell you what holds an assembled fiber toy together.")+
-        p("Use a component list that follows the product from the inside out: body, core, rope, sewing thread, adhesive, finish and decoration. Then list the bag, sleeve, label, window and any protective insert. This turns a broad ambition into something a supplier can quote and inspect.")),
-    ("Choose packaging with the journey in mind",p("The retail display is only one part of the journey. The product also has to survive packing, transport, unloading and storage. Ask our factory to explain its proposed protection against moisture and damage, then review the materials used for that protection.")+
-        p("Vacuum packing is a method, not a material description. Kraft-colored paper may be coated or laminated. If your brief excludes these options, resolve the alternative before approving the sample. Removing a bag without considering the rest of the packing plan can create a different problem at receiving.")),
-    ("Keep biodegradability out of the material shortcut",p("Plastic-free describes composition. Biodegradable describes breakdown under particular conditions; compostable adds another set of questions. One claim does not establish the others. FTC guidance emphasizes evidence and qualification for environmental claims, including the conditions relevant to disposal.")+
-        p("Ask exactly which article was assessed and whether the evidence covers the finished construction. Do not transfer a claim about raw fiber to a toy with additional components or to the package around it.")),
-    ("Approve the words with the sample",p("Keep the agreed material declaration and final artwork beside the approved sample. A small substitution in thread, coating or packaging may change the claim even when the product looks unchanged. The purchase order should therefore require approval for material changes.")+
-        p("Where evidence is limited, precise language is still useful: coffee wood stick, coconut-fiber outer surface or paper sleeve. A customer should be able to understand exactly what the statement covers."))],
+    ("What plastic-free means",
+      p("<dfn>Plastic-free</dfn> is a statement about composition: no component is made from plastic, including synthetic fibres, plastic "
+        "threads, polymer adhesives, laminates and coatings. It says nothing about how the product breaks down at end of life.")
+      + p("A toy can look entirely natural on a shelf and still contain synthetic binding thread, an internal core or a laminated tag. If "
+          "plastic-free is part of your brand promise, those small components belong in the first conversation with the factory, not in a "
+          "discussion after the packaging has been printed.")),
+
+    ("Where plastic hides in a natural pet toy",
+      spec_table(["Component","Where plastic can appear","Plastic-free option","What to verify"],[
+        ("Toy body","Rarely, if the body is wood, coir, hemp or loofah","Coffee wood, coconut fiber, hemp, loofah","Material identity per approved sample"),
+        ("Core or filling","Foam or plastic core in a wound ball","Fibre-only winding","Cut sample or construction declaration"),
+        ("Thread and binding","Polyester or nylon sewing thread","Natural-fibre thread","Thread type on the component list"),
+        ("Adhesive","Polymer glue at joins or winding ends","Mechanical fixing; no glue","Whether any adhesive is used"),
+        ("Tag and label","Laminated or coated paper; plastic tag fastener","Uncoated paper; cotton or paper tie","Tag stock and fastener"),
+        ("Retail pack","Poly bag, vacuum film, window film","Kraft box or paper sleeve","Coating, lamination, window"),
+        ("Moisture protection","Plastic desiccant sachet, film liner","Paper-based sachet where suitable","Sachet material and performance"),
+      ], caption="VietPaw coffee wood chews are one untreated material — no glue, coating, preservative or colouring.")),
+
+    ("Writing a plastic-free brief, step by step",
+      steps([
+        ("Decide the boundary","Toy only, retail pack, or the complete delivered unit.","One clear promise the supplier can quote."),
+        ("List components inside-out","Body, core, rope, thread, adhesive, finish, decoration — then bag, sleeve, label, window, insert.","A checklist the factory can confirm line by line."),
+        ("Choose packaging for the journey","Ask how the goods will be protected against moisture and damage in transit.","Protection that does not rely on plastic you have excluded."),
+        ("Approve the sample and the pack together","Confirm materials against the component list.","A reference for every repeat order."),
+        ("Lock substitutions","Require approval for any change of thread, coating or packaging.","The claim stays true on reorders."),
+      ])),
+
+    ("VietPaw packaging options",
+      spec_table(["Option","Minimum","Note"],[
+        ("Bulk bag","With the order","Protective bulk packing; confirm material"),
+        ("Individual pack","With the order","Confirm film or paper"),
+        ("Paper or kraft box","With the order","Check coating and window"),
+        ("Printed box, hang tag or label","500 pcs per SKU","Your artwork; specify uncoated stock if required"),
+        ("Laser engraving (coffee wood)","50 pcs","Branding burned into the wood — no label needed on the product"),
+      ])
+      + p("Vacuum packing is a method, not a material description, and kraft-coloured paper may be coated or laminated. If your brief excludes "
+          "these, resolve the alternative before approving the sample.")),
+
+    ("Keep biodegradability out of the material shortcut",
+      p("Plastic-free describes composition. Biodegradable describes breakdown under particular conditions; compostable adds another set of "
+        "questions. One claim does not establish the others, and FTC guidance expects environmental claims to be qualified and supported.")
+      + p("Where evidence is limited, precise language still works: “coffee wood stick”, “coconut-fiber outer surface”, “paper sleeve”. A "
+          "customer should be able to understand exactly what each statement covers.")),
+    ],
     ("Plan a plastic-free product range","/collections/plastic-free/"),
-    related=[("Material and packaging approach","/sustainability/"),("Biodegradability explained","/guides/are-dog-toys-biodegradable/")],
+    related=[("Material and packaging approach","/sustainability/"),("Are dog toys biodegradable?","/guides/are-dog-toys-biodegradable/"),
+             ("Natural materials compared","/guides/sustainable-pet-toy-materials-compared/")],
     sources=[("FTC environmental-claims guidance",FTC)],
+    faqs=[
+      ("What makes a pet toy plastic-free?",
+       "Every component — body, core, thread, adhesive, finish and tag — contains no plastic. The pack is a separate claim."),
+      ("Are coffee wood chews plastic-free?",
+       "The chew itself is one untreated material with no glue, coating, preservative or colouring. Whether the retail unit is plastic-free "
+       "depends on the pack you choose."),
+      ("Is kraft paper packaging always plastic-free?",
+       "No. Kraft-coloured paper can be coated or laminated, and a box may have a film window. Confirm the material specification."),
+      ("Can I call a plastic-free toy biodegradable?",
+       "Not on that basis. Plastic-free is about composition; biodegradable needs evidence for the finished product under stated disposal "
+       "conditions."),
+      ("How do I keep a plastic-free claim true on reorders?",
+       "Keep the component list with the approved sample and require written approval for any change of material, thread or packaging."),
+    ],
     figures=[('bagged-chews-with-desiccant.jpg','Coffee wood chews in a sealed bag with a desiccant sachet','The toy, the bag, the box and any ink are four separate claims, not one.'),('loofah-duck-cat-toy.jpg','Loofah gourd fibre cut into a duck-shaped cat toy','Plant-derived is not the same as certified compostable.')])
 
 add("are-dog-toys-biodegradable","Materials & claims",
@@ -547,40 +726,147 @@ add("what-is-coconut-fiber-pet-toys","Materials & claims",
 add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
     "Buying Natural Cat Toys: What to Check Beyond Non-Toxic",
     "A wholesale guide to cat toy materials, small components, sample inspection, packaging and evidence behind non-toxic claims.",
-    "Non-toxic is easy to put in a product description and difficult to interpret without context. It does not identify the material, explain how an attachment is secured or tell a buyer which substances were assessed. For a cat toy range, those details are more useful than the adjective on its own.",
+    answer("<strong>Short answer:</strong> “non-toxic” is not a defined standard for pet toys, so on its own it tells a buyer very little. "
+           "Check four things instead: the complete component list, how small parts and attachments are secured, test evidence that names your "
+           "product and the substances assessed, and clear play and replacement instructions. Natural cat toys made from loofah or coconut "
+           "fiber still need the same checks."),
     [
-    ("Write down every component",p("A loofah shape may also include sewing thread, eyes, a hanging loop, a wand or a decorative tail. A coconut-fiber ball may contain a core or binding material. Ask for the complete list, including colors, coatings and any fragrance or catnip addition.")+
-        p("Catnip should be specified as an ingredient or feature of a particular SKU, not assumed from a mouse-shaped photograph. The same applies to claims about an undyed or uncoated product: they should match the item and the manufacturing process being quoted.")),
-    ("Inspect the small details that change during play",p("Review seams, knots and attachment points on the sample. Look for loose parts, exposed fastening elements and strands that may come away. A chemical assessment does not answer these physical-construction questions.")+
-        p("Ask the supplier how those features will be checked during production. If an attachment test is part of the requirement, agree its method and acceptance criteria. Keep the approved construction with the reference sample so a later substitution is easy to identify.")),
-    ("Make testing answer a defined question",p("Give the laboratory or compliance reviewer the complete product description and destination market. Ask what assessment is relevant to the actual construction and intended claims. Read the sample identification and report scope before treating a result as applicable to your order.")+
-        p("A report for one material does not establish that every finished toy is non-toxic under every condition. Retailer requirements may also be more specific than the information supplied with a standard catalogue. Resolve that difference before approving artwork.")),
-    ("Prepare the product for the store and the home",p("Show the intended play type and supervision advice clearly. Explain when damaged toys or loose components should be removed. Keep warnings readable on a small pack; reducing the type size until everything fits is not a useful solution.")+
-        p("For wholesale orders, define whether a set is one saleable unit or several individually labeled items. That decision affects barcodes, pack counts and how a shop replaces a damaged unit. A well-specified cat range works for the receiving team as well as the customer."))],
+    ("What “non-toxic” does and does not mean",
+      p("<dfn>Non-toxic</dfn> is a general marketing term. For pet toys there is no single legal definition or certification behind it, so it "
+        "does not identify the material, the substances tested, or how an attachment is secured. Like any product claim, it must be truthful "
+        "and supported by evidence.")
+      + p("A more useful description names what the toy is made of and what was checked: “loofah gourd fibre, uncoloured, no filling”, backed by "
+          "the relevant report where one exists.")),
+
+    ("Natural cat toy materials compared",
+      spec_table(["Material","Typical cat format","What to check","Watch for"],[
+        ("Loofah","Cut shapes: fish, mouse, roll","Shape, thickness, edge finish","Thread, eyes, tails, filling"),
+        ("Coconut fiber (coir)","Textured balls","Diameter, weight, winding","Core, binding, loose fibre"),
+        ("Hemp","Balls and small rope forms","Fibre declaration, knots","Synthetic blends, loose strands"),
+        ("Catnip (optional)","Filling or inclusion","Amount and source per SKU","Assumed from a photo"),
+        ("Dyes and coatings","Colour or finish","Whether any are used","“Undyed” claims that do not match"),
+      ], caption="The approved sample, not the material name, defines the product.")),
+
+    ("Checking a natural cat toy, step by step",
+      steps([
+        ("Get the complete component list","Body, thread, eyes, loop, wand, tail, filling, colour, coating, fragrance, catnip.","Every part you might need to test or declare."),
+        ("Inspect small parts on the sample","Seams, knots and attachment points; look for loose parts and strands.","Physical risks a chemical report does not cover."),
+        ("Define the test question","Give the reviewer the construction, destination market and claims you want to make.","A test plan that answers a specific question."),
+        ("Read the report scope","Sample identity, substances or properties, method, result and limitations.","Evidence you can connect to your SKU."),
+        ("Write the pack instructions","Play type, supervision, and when to remove damaged toys or loose parts.","Readable advice on even a small pack."),
+      ])),
+
+    ("VietPaw cat toy references",
+      spec_table(["Product","Sizes","Minimum","Branding"],[
+        ("Loofah cat toy","Dimensions confirmed per shape","Quoted per shape","Tags, labels or small boxes; printed items from 500 pcs per SKU"),
+        ("Coconut fiber cat ball","Diameter and weight set by sample","Selected lines from 50 pcs","Tags, labels or small boxes; printed items from 500 pcs per SKU"),
+      ])
+      + p("Samples: 3 free, you cover the courier. Catnip is not included in every toy; each quoted SKU states whether it is unfilled or contains "
+          "catnip.")),
+
+    ("Make testing answer a defined question",
+      p("A report for one material does not establish that every finished toy is non-toxic under every condition. Retailer requirements may also "
+        "be more specific than the information supplied with a standard catalogue. Resolve that difference before approving artwork.")
+      + p("Keep the approved construction with the reference sample so a later substitution — a different thread, a new colour — is easy to "
+          "identify and, if needed, re-assessed.")),
+
+    ("Prepare the product for the store and the home",
+      p("Show the intended play type and supervision advice clearly, and explain when damaged toys or loose components should be removed. Keep "
+        "warnings readable on a small pack.")
+      + p("For wholesale, define whether a set is one saleable unit or several individually labelled items. That decision affects barcodes, "
+          "pack counts and how a shop replaces a damaged unit.")),
+    ],
     ("Browse VietPaw's natural cat toys","/cat-toys/"),
-    related=[("Loofah product details","/products/loofah-cat-toy/"),("Testing and documentation","/certifications/")],
+    related=[("Loofah product details","/products/loofah-cat-toy/"),("Coconut-fiber cat toys for wholesale","/guides/wholesale-coconut-fiber-cat-toys-supplier/"),
+             ("Safety testing plan","/guides/pet-toy-safety-testing-requirements/"),("Testing and documentation","/certifications/")],
     image="vietpaw-loofah-play-shapes.png",
+    faqs=[
+      ("Is there a non-toxic certification for cat toys?",
+       "No single one. Ask for test reports that name your product, the substances or properties assessed and the method."),
+      ("Are loofah cat toys safe?",
+       "Loofah is a light plant fibre suited to batting and carrying. Check the complete toy — thread, eyes, tails and any filling — and remove "
+       "it when it is damaged or pieces come loose."),
+      ("Do VietPaw cat toys contain catnip?",
+       "Only where the quoted SKU says so. Catnip is optional, and its amount and source are confirmed per product."),
+      ("Can I print “non-toxic” on the pack?",
+       "Only with evidence that covers the finished toy for the claim you are making. A precise material description is usually more useful."),
+      ("What is the minimum order for natural cat toys?",
+       "Loofah shapes are quoted per shape; selected coconut fiber lines start from 50 pcs. Printed tags, labels and boxes start at 500 pcs per "
+       "SKU."),
+    ],
     figures=[('cat-loofah-toys-lifestyle.jpg','Cat playing with loofah toys on a rug','There is no universal pet-safety certification to carry — ask for the report that covers your SKU.'),('loofah-bear-shape-cat-toy.jpg','Loofah fibre cut into a bear-shaped cat toy','Confirm thread, filling and attachments before printing a composition claim.')])
 
 add("sustainable-pet-toy-materials-compared","Materials & claims",
     "Coffee Wood, Coir, Hemp and Loofah: Choosing the Right Material",
     "Compare four natural pet toy materials by construction, product format, quality-control priorities and packaging requirements.",
-    "The best material decision begins with the product you want to make. A shaped wood stick, a wound ball and a lightweight loofah figure do different jobs. Comparing them with a single eco score hides the design and purchasing decisions that will determine whether the finished item works for your range.",
+    answer("<strong>Short answer:</strong> choose the material by the job the toy has to do. Coffee wood suits hard, long chewing (with the "
+           "thick-cut Gorilla line for strong chewers); coconut coir suits fetch and carry; hemp suits owner-led tug and rope forms; loofah "
+           "suits light cat play. Coffee stem and coconut husk are by-products of existing agriculture, while hemp and loofah are grown crops — "
+           "so each has a different, and differently provable, origin story."),
     [
-    ("Four materials, four different briefs",table(["Material","Typical format in the VietPaw range","Priority at sample approval"],[
-        ("Coffee wood","Finished chew sticks and wood-and-rope combinations","Dimensions, surface finish, cracks and drying controls"),
-        ("Coconut fiber / coir","Textured balls and fiber constructions","Winding, loose ends, complete construction and finished weight"),
-        ("Hemp fiber","Rope, wound balls and knotted assemblies","Fiber declaration, rope diameter, knots and attachments"),
-        ("Loofah","Lightweight cut shapes for cat play","Shape, thickness, edge finish and added components")])+
-        p("The table is a buying guide, not a ranking of safety or durability. Suitability depends on the finished design and the pet, while an environmental comparison needs a defined scope and supporting information.")),
-    ("Separate the origin story from the product claim",p("Coffee-tree wood and coconut husks offer specific material-use stories. Hemp and loofah are plant-derived, but that does not make every supply automatically a waste stream. If you want to say upcycled or waste-derived, ask what was sourced, from whom and at which stage.")+
-        p("The full construction still matters. A hemp rope joined to wood is a mixed-material product, and a loofah shape with thread and decoration contains more than loofah. Describe those combinations accurately instead of extending a single-material claim across the whole toy.")),
-    ("Compare the finished packed unit",p("Material choice affects size, weight and pack design. A light item in a bulky display box may use more shipping space than its weight suggests. Ask for the packed dimensions and carton arrangement while the design can still be changed.")+
-        p("Review moisture protection and storage alongside the shelf appearance. The right answer may differ between a local retail delivery and a longer international shipment. The quotation should identify the proposed packing materials rather than simply calling them eco packaging.")),
-    ("Use a sample range to make the decision",p("Choose a few products that have distinct uses and clear specifications. Compare their construction, how easily the label explains them and how they fit your intended retail price after landed costs. Avoid launching several near-identical variants before learning which size and format customers actually need.")+
-        p("For a repeatable range, keep one approved file per SKU: component list, dimensions, sample photographs, packing details and label wording. That file is the link between a compelling material story and a product our factory can reproduce."))],
+    ("The four materials in one line each",
+      p("<dfn>Coffee wood</dfn>: stem wood from coffee trees, seasoned and dried into hard chew sticks.")
+      + p("<dfn>Coconut fiber (coir)</dfn>: coarse fibre from the coconut husk, wound into textured balls.")
+      + p("<dfn>Hemp fiber</dfn>: plant fibre spun into rope and used for knotted toys and balls.")
+      + p("<dfn>Loofah</dfn>: the dried fibrous interior of a gourd, cut into light shapes.")),
+
+    ("Coffee wood vs coir vs hemp vs loofah",
+      spec_table(["","Coffee wood","Coconut coir","Hemp","Loofah"],[
+        ("Best for","Long, hard chewing","Fetch and carry","Owner-led tug","Light cat play"),
+        ("Strong chewers","Yes — Gorilla line","No","Supervised tug only","No"),
+        ("Feel","Hard, dense","Coarse, springy","Firm, twisted","Light, spongy"),
+        ("Wears into","Soft fibres","Short shed fibres","Strands if frayed","Small pieces"),
+        ("Origin","By-product of coffee farming","By-product of coconut processing","Grown crop","Grown crop"),
+        ("Priority at sample approval","Dimensions, finish, cracks, moisture","Winding, core, loose ends, weight","Fibre declaration, knots, joins","Shape, thickness, edges, attachments"),
+        ("VietPaw formats","CC01 sticks, Gorilla, wood-and-rope","Cat ball, dog ball","Rope toys, balls","Cat shapes"),
+      ], caption="A buying guide, not a ranking of safety or durability.")),
+
+    ("Choosing a material, step by step",
+      steps([
+        ("Name the play type","Chewing, fetch, tug or batting.","One or two materials already stand out."),
+        ("Name the pet and chewing strength","Cat or dog; gentle, moderate or strong.","Strong chewers go to Gorilla coffee wood."),
+        ("List every component","Core, thread, adhesive, rope, attachments, pack.","An accurate composition claim."),
+        ("Check the origin story you can prove","By-product (coffee stem, coconut husk) or grown crop (hemp, loofah).","Claims that match the evidence."),
+        ("Compare the packed unit","Packed dimensions, carton arrangement and landed cost.","A price that reflects shipping space, not just weight."),
+        ("Sample a small set","A few distinct products rather than many near-identical variants.","Sales data before you expand."),
+      ])),
+
+    ("VietPaw material facts",
+      spec_table(["Material","Key figures","Minimum"],[
+        ("Coffee wood","Moisture below 14% at packing; any cracked piece rejected; CC01 XS–XXL, Gorilla GRLS–GRLXL","50 pcs per size"),
+        ("Coconut fiber","Cat ball; dog ball S/M/L; diameter and weight set by sample","Selected lines from 50 pcs"),
+        ("Hemp","Rope and ball formats; length, rope diameter and knots quoted by design","Project-specific"),
+        ("Loofah","Shapes dimensioned per design; catnip optional","Quoted per shape"),
+      ], caption="All four are made in VietPaw’s three factories; printed packaging from 500 pcs per SKU.")),
+
+    ("Separate the origin story from the product claim",
+      p("Coffee-tree wood and coconut husks offer specific material-reuse stories. Hemp and loofah are plant-derived, but that does not make every "
+        "supply a waste stream. If you want to say upcycled or waste-derived, ask what was sourced, from whom and at which stage.")
+      + p("The full construction still matters. A hemp rope joined to wood is a mixed-material product, and a loofah shape with thread and "
+          "decoration contains more than loofah. Describe combinations accurately instead of extending a single-material claim across the toy.")),
+
+    ("Compare the finished packed unit",
+      p("Material choice affects size, weight and pack design. A light item in a bulky display box may use more shipping space than its weight "
+        "suggests. Ask for packed dimensions and carton arrangement while the design can still change, and review moisture protection alongside "
+        "shelf appearance.")
+      + p("For a repeatable range, keep one approved file per SKU: component list, dimensions, sample photographs, packing details and label "
+          "wording.")),
+    ],
     ("Explore the four VietPaw material collections","/materials/"),
-    related=[("Private-label development","/services/private-label-pet-toys/"),("Material and packaging claims","/sustainability/")],
+    related=[("Coconut fiber explained","/guides/what-is-coconut-fiber-pet-toys/"),("Toys for strong chewers","/guides/best-natural-chews-for-aggressive-chewers/"),
+             ("Private-label development","/services/private-label-pet-toys/"),("Material and packaging claims","/sustainability/")],
+    faqs=[
+      ("Which natural material is most durable for dogs?",
+       "Coffee wood. For strong chewers, VietPaw’s thick-cut Gorilla line gives the most wood per piece."),
+      ("Which material is best for cats?",
+       "Loofah shapes and small coconut fiber balls suit batting and carrying."),
+      ("Is hemp the same as coconut fiber?",
+       "No. They are different plant fibres. Hemp is spun into rope; coir is the coarse husk fibre of the coconut."),
+      ("Which materials are by-products?",
+       "Coffee stem wood and coconut husk come from existing agriculture. Hemp and loofah are grown crops, so we do not call them waste."),
+      ("Can I mix materials in one order?",
+       "Yes. Minimums are confirmed per product and size, and one sample request can cover several materials."),
+    ],
     figures=[('loofah-drying-under-greenhouse-cover.jpg','Rows of loofah gourds drying under a greenhouse cover','Each material has a different, and differently provable, origin story.'),('coffee-wood-seasoning-racks.jpg','Rows of coffee wood sticks seasoning on factory drying racks','Coffee stem and coconut husk have genuine by-product stories. Hemp and loofah are grown crops.')])
 
 add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
@@ -784,19 +1070,78 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
 add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     "Sourcing Coconut-Fiber Cat Toys for Wholesale",
     "Build a wholesale coconut-fiber cat toy assortment with clear size specifications, sample checks, pack counts and private-label requirements.",
-    "A coconut-fiber cat ball may look like a simple purchase. The commercial details become more interesting once it is sold as a two-pack, assigned a barcode, packed into a mixed carton and shipped to a retailer. Defining that finished saleable unit early makes supplier quotations much easier to compare.",
+    answer("<strong>Short answer:</strong> to buy coconut-fiber cat toys wholesale, specify the ball (diameter, finished weight, full "
+           "construction), then the saleable unit (single, two-pack or mixed box), then the carton. With VietPaw, selected standard lines start "
+           "from 50 pcs, private-label tags and boxes from 500 pcs per SKU, samples are free (3, you cover the courier), and stock-packed goods "
+           "ship in 5–7 days."),
     [
-    ("Specify the ball before the bundle",p("Ask for diameter, finished weight and full construction. Identify the outer fiber, any core, binding thread and added decoration. If the supplier uses S, M and L, connect those labels to actual measurements. Size names are not standardized between manufacturers.")+
-        p("Order samples of the sizes you intend to sell, not only one attractive catalogue example. Compare winding, shape, loose ends and consistency across the set. Keep the cat range separate from dog-ball size references and use instructions.")),
-    ("Decide how the customer will buy it",p("Will each ball have a tag, or will several balls share one box? Is the assortment fixed, or can sizes be mixed? A retailer needs to know what one unit on the invoice means. The same definition should appear in the quotation, packing list and receiving instructions.")+
-        p("For a private-label pack, approve the label size and attachment. Check that the barcode stays readable and that the customer can see supervision and replacement advice. If a pack is intended to contain several toys, specify its contents rather than accepting a loosely defined mixed assortment.")),
-    ("Look at the carton while there is still time to change it",p("Ask for the number of retail units per carton, outer dimensions and gross weight. Fiber balls can occupy more space than their weight suggests, especially in rigid display packaging. Your forwarder needs the packed data, not the dimensions of one loose ball.")+
-        p("Agree clean, dry packing and storage requirements with the supplier. At receiving, inspect the product and packaging condition together. Keep photographs of carton damage, affected units and identifying marks so a transport issue can be distinguished from a production defect.")),
-    ("Use the first order to establish the reorder",p("A sensible trial is large enough to assess the chosen sizes and presentation, but narrow enough to review carefully. Track sales and returns by SKU. If customers favor one size or a pack creates confusion, revise that detail before expanding the range.")+
-        p("When requesting a VietPaw quote, include your destination, quantity per size and preferred pack. Selected standard lines may support a small starting order; product and printed-packaging minimums still need to be confirmed separately."))],
+    ("Key terms",
+      p("<dfn>Coconut-fiber cat ball</dfn>: a small, light ball of wound coir for batting and chasing — specified for cats, not scaled down from a "
+        "dog ball.")
+      + p("<dfn>Saleable unit</dfn>: what one line on the invoice means — one ball with a tag, a two-pack, or a boxed set. The same definition "
+          "should appear in the quotation, packing list and receiving instructions.")
+      + p("<dfn>Assortment</dfn>: a fixed mix of sizes or products in one pack or carton. It needs its contents written down, not described as "
+          "“mixed”.")),
+
+    ("Pack options compared",
+      spec_table(["Pack option","Suits","Barcode","What to confirm"],[
+        ("Single ball with hang tag","Pet shops, gift displays","One per ball","Tag size, attachment, readable instructions"),
+        ("Two-pack or three-pack","Marketplace listings","One per pack","Pack contents and sizes"),
+        ("Boxed assortment","Gift and seasonal ranges","One per box","Exact contents per box"),
+        ("Bulk, unbranded","Wholesalers who repack","Per carton","Units per carton and carton marks"),
+      ], caption="Printed tags, labels and boxes start at 500 pcs per SKU.")),
+
+    ("Sourcing coconut-fiber cat toys, step by step",
+      steps([
+        ("Specify the ball","Diameter, finished weight, outer fibre, any core, binding thread and decoration.","A product both sides can measure."),
+        ("Sample the sizes you will sell","Up to 3 free samples; you cover the courier.","Winding, shape and loose ends compared across the set."),
+        ("Define the saleable unit","Single, multi-pack or boxed set, with barcode placement.","One meaning for “one unit” on every document."),
+        ("Approve pack and artwork","Label size, attachment, barcode and play instructions.","A pack that works on the shelf and at receiving."),
+        ("Confirm carton data","Units per carton, outer dimensions and gross weight.","Freight quotes based on packed volume, not a loose ball."),
+        ("Place the trial order","Track sales and returns by SKU.","A reorder based on what customers actually bought."),
+      ])),
+
+    ("VietPaw order facts",
+      spec_table(["Item","Detail"],[
+        ("Minimum","Selected standard lines from 50 pcs; per-size minimum in the quote"),
+        ("Private label","Hang tags, labels and printed boxes from 500 pcs per SKU"),
+        ("Samples","3 free; buyer covers courier; dispatched within 1 working day once confirmed"),
+        ("Production","5–7 days stock packaging; 60–80 days with your own label or box"),
+        ("Export master carton","51 × 31 × 39 cm (0.062 m³); 30 cartons per pallet"),
+        ("Sea transit","30–35 days port to port from Cat Lai to the EU or the US"),
+        ("Payment","30% deposit stock / 50% branded; balance against documents"),
+      ])),
+
+    ("Look at the carton while there is still time to change it",
+      p("Fibre balls can take more space than their weight suggests, especially in rigid display packaging. Your forwarder needs the packed data, "
+        "not the dimensions of one loose ball.")
+      + p("Agree clean, dry packing and storage with the supplier; musty units are rejected at inspection. At receiving, inspect product and "
+          "packaging together and photograph any carton damage with its marks, so a transport issue can be told apart from a production "
+          "defect.")),
+
+    ("Use the first order to establish the reorder",
+      p("A sensible trial is large enough to test the chosen sizes and presentation, but narrow enough to review carefully. If customers favour "
+        "one size or a pack creates confusion, revise that detail before expanding the range.")
+      + p("When requesting a quote, include your destination, quantity per size and preferred pack.")),
+    ],
     ("VietPaw coconut-fiber cat ball specifications","/products/coconut-fiber-cat-ball/"),
-    related=[("Coconut-fiber material guide","/guides/what-is-coconut-fiber-pet-toys/"),("Wholesale supply","/services/wholesale-pet-products/")],
+    related=[("Coconut-fiber material guide","/guides/what-is-coconut-fiber-pet-toys/"),("Buying natural cat toys","/guides/non-toxic-cat-toys-wholesale-buying-guide/"),
+             ("MOQ, pricing and lead times","/guides/pet-toy-moq-fob-pricing-lead-times/"),("Wholesale supply","/services/wholesale-pet-products/")],
     image="vietpaw-coconut-fiber-balls.jpg",
+    faqs=[
+      ("What is the minimum order for coconut-fiber cat toys?",
+       "Selected standard lines start from 50 pcs; the per-size minimum is confirmed in the quote. Printed tags, labels and boxes start at "
+       "500 pcs per SKU."),
+      ("Can I get samples first?",
+       "Yes — 3 free samples; you cover the courier. Standard samples are dispatched within 1 working day once confirmed."),
+      ("Can I sell them under my own brand?",
+       "Yes. Private-label hang tags, labels and printed boxes start at 500 pcs per SKU and take 60–80 days, mostly artwork approval and "
+       "printing."),
+      ("How long does delivery take?",
+       "5–7 days to produce stock-packed goods, then 30–35 days by sea from Cat Lai to the EU or the US."),
+      ("Is a cat ball just a small dog ball?",
+       "No. Specify the cat version separately — diameter, weight and any attachment — and keep its instructions separate from dog toys."),
+    ],
     figures=[('cat-playing-with-loofah-shape.jpg','Grey cat reaching for a loofah play shape on a table','Write a cat specification, not a scaled-down dog one.'),('vietpaw-loofah-play-shapes.png','Loofah cat play shapes arranged in a basket','Each shape is measured separately — one size range does not cover the collection.')])
 
 add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
@@ -1015,19 +1360,80 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
     "CPSIA, REACH and Pet Toys: Ask the Right Compliance Question",
     "How pet toy buyers should approach CPSIA and REACH discussions, including product classification, material scope and report relevance.",
-    "A request for a CPSIA or REACH certificate can sound precise while leaving the essential question unanswered: which requirement applies to this particular product in its intended market? The starting point is the finished toy and how it will be sold, not the name of a certificate in a supplier's presentation.",
+    answer("<strong>Short answer:</strong> CPSIA is the US law for <em>children’s</em> products (for children 12 and under), so a toy designed "
+           "and marketed only for pets is not usually a children’s product — though marketing and labelling can change that. REACH is the EU "
+           "chemicals regulation and applies to articles of every kind, pet toys included: restricted substances and Candidate List (SVHC) "
+           "substances above 0.1% still matter. In the EU, pet toys also fall under the General Product Safety Regulation. The right question "
+           "is which requirement applies to this product in this market."),
     [
-    ("Do not classify a product by the word toy alone",p("CPSC's toy-safety business guidance addresses children's toys and the requirements connected with them. A product marketed for pets should not automatically be treated as a children's toy because both use the same everyday word. Equally, calling an item a pet toy does not by itself settle every applicable consumer-product obligation.")+
-        p("Give your compliance reviewer the intended user, materials, design, packaging and marketing. Ask for an applicability review rather than copying a children's-toy compliance statement onto a pet product. Retailers may request particular test methods as a purchasing condition; distinguish that request from the legal classification.")),
-    ("REACH questions follow the material and the article",p("ECHA explains that REACH restrictions can apply to substances in articles, including imported products. A plant-derived material is not a general exemption. Colors, coatings, adhesives and other components may be relevant to the assessment.")+
-        p("Ask the reviewer which restrictions or other obligations need consideration for the actual composition and market. A report described as REACH tested is only useful once you know the sample, substances or requirements assessed, methods, results and limitations. It is not a universal approval for every item in a catalogue.")),
-    ("Connect the evidence to the order",p("Check the report's product identification against the sample and bill of materials you approved. If the toy contains several components, ask which were included. A change in color, adhesive, rope or supplier may require a fresh scope review even when the finished item looks familiar.")+
-        p("Keep the reviewed evidence with the SKU and artwork version. Shipment records, such as origin or treatment documents, serve different purposes and should not be presented as substitutes for a product assessment.")),
-    ("Agree responsibilities before production",p("Identify who determines applicable requirements, who arranges testing, who pays and what happens if the result does not meet the agreed criteria. Put the required timing into the order plan so the shipment is not waiting on an unresolved assessment.")+
-        p("CPSIA and REACH are not a complete worldwide compliance checklist. Requirements depend on destination, product and sales channel and can change. The importer and its qualified advisers should confirm the current position before approving the product and its claims."))],
+    ("CPSIA, REACH and GPSR in one paragraph each",
+      p("<dfn>CPSIA</dfn> (Consumer Product Safety Improvement Act, US, 2008) sets requirements for children’s products — including limits on "
+        "lead and certain phthalates, third-party testing and a Children’s Product Certificate. Whether a product is a children’s product depends "
+        "on who it is designed and marketed for.")
+      + p("<dfn>REACH</dfn> (Regulation (EC) No 1907/2006) controls chemicals in the EU, including substances in imported articles. Annex XVII "
+          "restrictions apply where relevant, and a Substance of Very High Concern on the Candidate List above 0.1% by weight triggers "
+          "information duties to customers.")
+      + p("<dfn>GPSR</dfn> (General Product Safety Regulation (EU) 2023/988, applying since 13 December 2024) covers consumer products without "
+          "their own sector rules — pet toys included. It requires products to be safe, traceable and, when placed on the EU market, linked to "
+          "a responsible economic operator in the EU.")),
+
+    ("Which rule applies to a pet toy?",
+      spec_table(["Rule","Market","Applies to a pet toy?","What to ask for"],[
+        ("CPSIA","United States","Usually not, unless it is designed or marketed for children","An applicability review of the product and its marketing"),
+        ("California Proposition 65","California","Yes, if listed chemicals are present above safe-harbour levels","Whether a warning is needed for the composition"),
+        ("REACH Annex XVII","European Union","Yes — restrictions apply to articles","Which restrictions are relevant to the materials"),
+        ("REACH Candidate List (SVHC)","European Union","Yes — duties above 0.1% w/w in an article","A declaration for the components"),
+        ("GPSR","European Union","Yes — general consumer product safety","Risk assessment, traceability and the EU responsible person"),
+      ], caption="Orientation only. The importer and qualified advisers confirm the current position for each product and market.")),
+
+    ("Getting to the right compliance answer, step by step",
+      steps([
+        ("Describe the finished product","Intended pet, materials, components, colours, coatings, pack and marketing text.","A reviewer can classify the product correctly."),
+        ("Name the markets and channels","Country, retailer or marketplace requirements.","The list of rules that actually apply."),
+        ("Ask for an applicability review","Which requirements apply, and which do not, for this construction.","No children’s-toy statement copied onto a pet product."),
+        ("Scope any testing","Substances or properties, method, sample and pass criteria.","A report that answers a defined question."),
+        ("Link evidence to the order","Match the report to the sample and bill of materials.","A file that survives a component change."),
+        ("Agree responsibilities","Who decides, who tests, who pays, what happens if a result fails.","No shipment waiting on an open question."),
+      ])),
+
+    ("What VietPaw provides",
+      spec_table(["Item","Detail"],[
+        ("Component list","Per approved sample, on request"),
+        ("Coffee wood composition","One untreated material — no glue, coating, preservative or colouring"),
+        ("Laboratory testing","Arranged separately on request"),
+        ("Export documents","Seven with every order, including Certificate of Origin, phytosanitary and fumigation certificates"),
+        ("Not issued","Veterinary certificates (not an animal by-product) and FSC certification (coffee is an agricultural crop)"),
+      ])
+      + p("Shipment documents such as origin or treatment certificates serve different purposes and are not substitutes for a product "
+          "assessment.")),
+
+    ("Connect the evidence to the order",
+      p("Check the report’s product identification against the sample and bill of materials you approved. If the toy contains several components, "
+        "ask which were included. A change in colour, adhesive, rope or supplier may need a fresh scope review even when the item looks the "
+        "same.")
+      + p("Retailers may request particular test methods as a purchasing condition. Keep that commercial request separate from the legal "
+          "classification, and keep the reviewed evidence with the SKU and artwork version.")),
+    ],
     ("VietPaw testing and export-document information","/certifications/"),
-    related=[("Planning a safety assessment","/guides/pet-toy-safety-testing-requirements/"),("Quality-control workflow","/quality-control/")],
-    sources=[("CPSC toy-safety business guidance",CPSC),("ECHA: REACH restrictions",ECHA)],
+    related=[("Planning a safety assessment","/guides/pet-toy-safety-testing-requirements/"),("How to vet a supplier","/guides/how-to-vet-an-eco-pet-toy-supplier/"),
+             ("Quality-control workflow","/quality-control/")],
+    sources=[("CPSC toy-safety business guidance",CPSC),("ECHA: REACH restrictions",ECHA),
+             ("EU General Product Safety Regulation (EU) 2023/988","https://eur-lex.europa.eu/eli/reg/2023/988/oj")],
+    faqs=[
+      ("Do pet toys need CPSIA testing?",
+       "Usually not. CPSIA covers children’s products. A toy designed and marketed only for pets is not normally a children’s product, but "
+       "marketing that appeals to children can change the assessment."),
+      ("Does REACH apply to pet toys?",
+       "Yes. REACH applies to articles sold in the EU, including pet toys. Restricted substances and Candidate List substances above 0.1% by "
+       "weight are the usual questions."),
+      ("What is GPSR and does it cover pet toys?",
+       "The EU General Product Safety Regulation, applying since 13 December 2024. It covers consumer products without their own sector rules, "
+       "including pet toys, and requires a responsible economic operator in the EU."),
+      ("Is there a “REACH certificate”?",
+       "Not as a universal approval. There are test reports and declarations for defined substances and samples; check what each one covers."),
+      ("Does VietPaw provide test reports?",
+       "Laboratory testing is arranged separately on request, scoped to your product and market."),
+    ],
     figures=[('inspection-documents-at-pallets.jpg','Two staff reviewing inspection documents beside stacked pallets','Compliance is decided per SKU and per destination, not per supplier.'),('export-container-exterior.jpg','Worker beside a green export container being loaded at a warehouse','Customs and marketplace checks are separate gates with separate paperwork.')])
 
 add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
@@ -1120,19 +1526,75 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
 add("pet-toy-safety-testing-requirements","Compliance & risk",
     "Pet Toy Safety Testing: Build a Product-Specific Plan",
     "Prepare a useful pet toy assessment brief and distinguish laboratory testing, factory inspection and shipment documentation.",
-    "A useful test plan begins with the ways a product could fail and the requirements of the market in which it will be sold. It does not begin with a request for every certificate the supplier has. The test sample, the approved product and the goods in the carton need to be recognizably the same construction.",
+    answer("<strong>Short answer:</strong> there is no single mandatory safety test for pet toys in the US or the EU. Build a plan for your "
+           "product instead: describe the finished toy, list the markets and retailer requirements, then choose the checks that answer real "
+           "questions — physical construction, chemical content for the materials used, and factory inspection of the production lot. Keep "
+           "laboratory reports, inspection records and shipment documents separate; each answers a different question."),
     [
-    ("Give the reviewer a complete product",p("Provide the dimensions, intended pet and play type, component list and proposed label claims. Include photographs that show joins, knots, seams and attachments, not only a polished front view. Describe any coating, color, adhesive, filling or fragrance.")+
-        p("Add the destination country and the retailer or marketplace requirements you have received. A laboratory can help assess an identified question; it cannot reliably infer your entire commercial brief from the phrase natural pet toy.")),
-    ("Separate the kinds of assessment",p("Physical-construction review may consider edges, loose parts, knots, attachments and breakage. Material or chemical testing addresses specified substances or properties using defined methods. Factory inspection checks whether a production lot matches the agreed specification. These activities complement one another, but they are not interchangeable.")+
-        p("A moisture reading belongs to a defined production-control method. A pull-test result needs its method, sample condition and acceptance limit. Neither number should be turned into a general safe-for-pets claim.")),
-    ("Read the report beyond the result line",p("Check the sample description, report number, testing body, dates, methods and results. Look at exclusions and limitations. If your order adds a different thread, color or attachment, ask the reviewer whether the existing report still covers the changed product.")+
-        p("Do not treat a report for one size or component as automatic coverage for the full range. Agree how variants will be grouped and assessed with the responsible specialist. Keep that rationale in the product file so the next buyer or quality manager can follow it.")),
-    ("Plan the response to a failed check",p("Before production, decide who receives results, who approves corrective action and whether retesting or reinspection is needed. Allow time for that work in the launch schedule. It is much harder to resolve an ambiguous result when a freight booking is about to expire.")+
-        p("At release, the file should connect the approved sample, current specification, relevant assessments and inspection decision. Keep shipment or treatment documents alongside it, but label them for their actual purpose. A document supporting movement of goods is not evidence for every product-safety claim."))],
+    ("Three kinds of evidence",
+      p("<dfn>Laboratory testing</dfn> measures defined substances or properties in a named sample using a stated method — for example heavy "
+        "metals in a dye or phthalates in a plastic part.")
+      + p("<dfn>Physical-construction review</dfn> looks at how the toy could come apart: edges, loose parts, knots, seams and attachments.")
+      + p("<dfn>Factory inspection</dfn> checks whether a production lot matches the approved specification — dimensions, finish, moisture, pack "
+          "and carton marks. <dfn>Shipment documents</dfn>, such as phytosanitary or fumigation certificates, cover the movement of goods, not "
+          "product safety.")),
+
+    ("Checks buyers commonly request",
+      spec_table(["Check","When it is relevant","Evidence"],[
+        ("Heavy metals (e.g. lead, cadmium)","Coloured, coated or printed parts","Lab report with method and limits"),
+        ("Phthalates","Plastic or PVC components","Lab report"),
+        ("Azo dyes / formaldehyde","Dyed textiles, rope or fibre","Lab report"),
+        ("Physical construction","Any toy with knots, seams or attachments","Construction review; pull test with agreed method"),
+        ("Moisture (coffee wood)","Every coffee wood batch","Pin-type meter reading; below 14% before packing"),
+        ("Cracks (coffee wood)","Every coffee wood piece","Grading record; any cracked piece rejected"),
+        ("Lot inspection","Every order","Inspection report against the approved sample"),
+      ], caption="Whether each check applies depends on the construction, market and retailer. Untreated coffee wood has no dye or coating to test.")),
+
+    ("Building a test plan, step by step",
+      steps([
+        ("Describe the product","Dimensions, intended pet and play type, component list, claims, and photos of joins and attachments.","The reviewer sees what can actually go wrong."),
+        ("List markets and buyer requirements","Destination country plus retailer or marketplace rules.","The checks that are required, not just nice to have."),
+        ("Pick the checks","Match each check to a component or a claim.","A short, relevant plan instead of every certificate available."),
+        ("Agree methods and pass criteria","For any pull test or chemical test, before testing.","Results that can be applied to later batches."),
+        ("Plan for a failed result","Who receives results, who approves corrective action, whether retesting is needed.","Time in the launch schedule for a fix."),
+        ("File the evidence with the SKU","Approved sample, specification, reports and inspection decision together.","A file the next buyer or QA manager can follow."),
+      ])),
+
+    ("VietPaw quality controls",
+      spec_table(["Control","Figure"],[
+        ("Coffee wood QC checkpoints","Five: intake, after seasoning, after shaping, at grading, at the packing bench"),
+        ("Moisture","Below 14% before packing; batch readings on request"),
+        ("Cracks","Any cracked piece rejected at grading"),
+        ("Length tolerance","±3 mm on the coffee wood stick line"),
+        ("Buyer inspection","Visits and third-party inspection welcome at all three factories"),
+        ("Laboratory testing","Arranged separately on request"),
+      ])),
+
+    ("Read the report beyond the result line",
+      p("Check the sample description, report number, testing body, dates, methods and results, and look at exclusions and limitations. If your "
+        "order adds a different thread, colour or attachment, ask whether the existing report still covers the changed product.")
+      + p("Do not treat a report for one size or component as automatic coverage for the full range. Agree how variants will be grouped with the "
+          "responsible specialist, and keep that rationale in the product file.")),
+    ],
     ("Discuss testing and documentation with VietPaw","/certifications/"),
-    related=[("Drying and quality protocol with five QC checkpoints","/quality-control/"),("CPSIA and REACH scope","/guides/pet-toy-safety-compliance-cpsia-reach/")],
+    related=[("CPSIA, REACH and GPSR","/guides/pet-toy-safety-compliance-cpsia-reach/"),("Drying and quality protocol with five QC checkpoints","/quality-control/"),
+             ("How to vet a supplier","/guides/how-to-vet-an-eco-pet-toy-supplier/")],
     image="vietpaw-moisture-check.jpg",
+    faqs=[
+      ("Is safety testing mandatory for pet toys?",
+       "There is no single mandatory pet-toy test in the US or the EU, but products must be safe and chemical rules such as REACH apply. "
+       "Retailers and marketplaces often set their own test requirements."),
+      ("Which tests should I ask for?",
+       "Those that match the components and claims: heavy metals for coloured parts, phthalates for plastic parts, a construction review for "
+       "knots and attachments, and lot inspection for every order."),
+      ("Does untreated coffee wood need chemical testing?",
+       "It has no glue, coating, preservative or colouring, so there is little for a dye or coating test to find. Moisture and crack control "
+       "are the relevant production checks. Testing can be arranged if your market or retailer requires it."),
+      ("Is a phytosanitary certificate a safety certificate?",
+       "No. It covers plant health for the shipment, not product safety."),
+      ("Can one report cover my whole range?",
+       "Only if a specialist agrees the variants can be grouped. A report for one size or material does not automatically cover others."),
+    ],
     figures=[('carton-quality-check.jpg','Worker examining corrugated board quality in a packing area','Test reports have a defined scope. Ask for the one covering your SKU and your destination.'),('moisture-meter-on-the-line.jpg','Pin-type moisture meter reading taken on coffee wood sticks','A moisture record is order-specific evidence; a general description is not.')])
 
 add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
@@ -1223,20 +1685,72 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
 add("coffee-wood-chew-size-guide","Natural chew toys",
     "Coffee Wood Chew Sizes: VietPaw's XS–XXL Reference",
     "Compare VietPaw CC01 coffee wood chew dimensions and reference weight bands, with advice on sample approval, labels and size selection.",
-    "An M label is convenient for ordering, but it is not a measurement. When comparing coffee wood chews, use length, diameter and weight together. For pet suitability, the dog's mouth size, chewing behavior and dental condition still matter; the weight band is only a starting reference.",
+    answer("<strong>Short answer:</strong> VietPaw’s standard CC01 coffee wood chews come in six sizes, from XS (10 cm, 23–30 g, dogs up to "
+           "3 kg) to XXL (22–23 cm, 340–440 g, dogs of 20 kg and over). Choose by the dog’s weight band and go up one size for a dog at the top "
+           "of its band. For strong chewers, use the thick-cut Gorilla line (GRLS–GRLXL, 155–900 g) instead of stretching the standard range."),
     [
-    ("The CC01 size reference",coffee_size_table()),
-    ("Measure the product you are approving",p("Natural sticks do not have perfectly cylindrical outlines. Agree how length and diameter will be measured, what variation is acceptable and which reference identifies the size. Include the finished weight band in the specification so our factory and receiving team are using the same definition.")+
-        p("For a first order, request the sizes you intend to sell and compare them side by side. Keep one approved reference per SKU. A photograph of the whole range is helpful for presentation but cannot replace individual measurements.")),
-    ("Do not let a weight chart make the entire decision",p("A dog should not be able to swallow the chew whole. Beyond that basic dimension check, consider how it chews and whether a hard product is appropriate. Increasing the size does not remove the possibility of tooth damage or make a hard chew suitable for every strong chewer.")+
-        p("For puppies, dogs with dental concerns or dogs that try to break off pieces, seek individual veterinary advice before using a hard chew. Do not treat XS as a puppy designation simply because it is the smallest product in the table.")),
-    ("Keep the shelf label and purchase order aligned",p("Use the same size chart on the website, retail pack and quotation. If the specification changes, update those versions together. Combining weight bands from different historical charts can make two products with the same size name appear equivalent when they are not.")+
-        p("For mixed cartons, show the quantity of each SKU clearly. A carton labeled assorted sizes is not enough if the warehouse needs to reconcile individual barcode counts or replenish separate retail lines.")),
-    ("Size changes during use",p("The starting dimensions are not the final removal rule. Supervise use, inspect the product and remove it when damaged, cracked or worn down to a size that could be swallowed. Remove loose pieces promptly; coffee wood chews are not food.")+
-        p("Put that advice near the size information. Owners need to understand both how to select a product and when the product they selected is no longer suitable for use."))],
+    ("How coffee wood chews are sized",
+      p("Each size is defined by three measurements together: <dfn>length</dfn> (cut to ±3 mm), <dfn>diameter</dfn> (which follows the natural "
+        "stem and is graded into bands) and <dfn>weight</dfn> (a range, because wood density varies). A size label such as “M” is convenient "
+        "for ordering, but it is not a measurement.")
+      + p("The <dfn>reference dog weight</dfn> is a starting point for choosing a size. Beyond it, the dog’s mouth size and chewing style decide "
+          "the fit — the chew must always stay too large to be swallowed whole.")),
+
+    ("CC01 standard size reference",
+      coffee_size_table()
+      + p("When a dog sits at the top of a band, or is a keen chewer, go up one size. The consequence of one size too large is a chew that lasts "
+          "longer; the consequence of one size too small is the thing everybody is trying to avoid.")),
+
+    ("Gorilla line for strong chewers",
+      p(GORILLA)
+      + gorilla_table()
+      + p("Keep the two tables separate on your listings. Gorilla and CC01 are different lines with different SKUs; do not merge them into one "
+          "size ladder.")),
+
+    ("Choosing and approving a size, step by step",
+      steps([
+        ("Start from the dog’s weight","Find the band in the CC01 table.","A first-choice size."),
+        ("Adjust for chewing style","Keen chewer or top of the band: one size up. Strong chewer: Gorilla.","A size that lasts and cannot be swallowed."),
+        ("Order samples of the sizes you will sell","Up to 3 free samples; you cover the courier.","Pieces to measure side by side."),
+        ("Measure and record","Length, diameter at the narrowest and widest point, and weight.","A written reference that matches the table."),
+        ("Keep one approved reference per SKU","Label it with the size and SKU code.","Repeat orders can be checked against it."),
+        ("Match the label to the table","Use the same chart on the website, the pack and the quotation.","No mismatch between shelf and purchase order."),
+      ])),
+
+    ("Measure the product you are approving",
+      p("Natural sticks are not perfect cylinders. Agree how length and diameter will be measured, what variation is acceptable and which "
+        "reference identifies the size. Include the finished weight band in the specification so the factory and your receiving team use the "
+        "same definition.")
+      + p("For mixed cartons, show the quantity of each SKU clearly. “Assorted sizes” is not enough if the warehouse needs to reconcile barcode "
+          "counts or replenish separate retail lines. Export carton counts for loose sticks are in the table above.")),
+
+    ("Size changes during use",
+      p("The starting dimensions are not the removal rule. Supervise use, inspect the chew and remove it when it cracks or wears down to a size "
+        "that could be swallowed. Coffee wood chews are not food.")
+      + p("Put that advice near the size information. Owners need to understand both how to select a size and when the chew they selected is no "
+          "longer suitable. Do not treat XS as a puppy designation simply because it is the smallest size; for puppies and dogs with dental "
+          "conditions, ask a vet first.")),
+    ],
     ("Coffee wood product specifications and sample options","/products/coffee-wood-dog-chew/"),
-    related=[("Coffee wood suitability","/guides/are-coffee-wood-chews-safe-for-dogs/"),("Private-label pack development","/services/private-label-pet-toys/")],
+    related=[("Coffee wood suitability","/guides/are-coffee-wood-chews-safe-for-dogs/"),("Toys for strong chewers","/guides/best-natural-chews-for-aggressive-chewers/"),
+             ("How long coffee wood chews last","/guides/how-long-do-coffee-wood-chews-last/"),("Private-label pack development","/services/private-label-pet-toys/")],
     image="vietpaw-coffee-wood-sizes.png",
+    faqs=[
+      ("What size coffee wood chew should I choose for my dog?",
+       "Use the dog’s weight: XS up to 3 kg, S 3–5 kg, M 5–8 kg, L 8–12 kg, XL 12–20 kg, XXL 20 kg and over. Go up one size for a keen chewer "
+       "or a dog at the top of its band."),
+      ("What size is best for a strong chewer?",
+       "The thick-cut Gorilla line rather than a bigger standard stick. It runs from GRLS (5–6 × 8 cm, 155–230 g) to GRLXL (10–12 × 15 cm, "
+       "550–900 g)."),
+      ("Why do two sticks of the same size weigh differently?",
+       "Coffee wood is natural and its density varies. Grading controls the size band; the weight is published as a range."),
+      ("How accurate is the length?",
+       "Length is cut to ±3 mm. Diameter follows the natural stem and is controlled by grading into bands."),
+      ("Is XS suitable for puppies?",
+       "Not automatically. XS is the smallest size, not a puppy product. Ask a vet before giving a puppy a hard chew."),
+      ("How many sticks fit in an export carton?",
+       "For loose sticks: S 512, M 224, L 126, XL 85; XS and XXL on request. Retail packaging reduces the count."),
+    ],
     figures=[('coffee-wood-chew-size-row.jpg','Coffee wood chew sticks laid out from smallest to largest','Six graded sizes. Length is cut to ±3 mm; diameter follows the natural stem and is graded into bands.'),('puppy-holding-coffee-wood-chew.jpg','Golden retriever puppy holding a coffee wood chew in its mouth',"Judge the fit against the dog's mouth, not against the size label.")])
 
 

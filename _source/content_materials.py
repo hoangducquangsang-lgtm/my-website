@@ -17,7 +17,7 @@ MATERIALS = {
  approval=["Request the current size sheet and physical sample; older charts use different weight bands.",
  MOISTURE+" Confirm the measurement method and keep the reading with your order records.",
  "Check wood surfaces and visible cracking, and agree the condition in which stock is packed and stored."],
- caution="Do not describe coffee wood as splinter-free, edible, caffeine-tested or proven to clean teeth without evidence for that exact claim. Hard wood can crack and can damage teeth; a natural origin is not a safety guarantee.",
+ caution="Do not describe coffee wood as splinter-free, edible, caffeine-tested or proven to clean teeth without evidence for that exact claim. A natural origin is not a safety guarantee: size the chew to the dog, supervise and replace it when damaged.",
  moq="From 50 pcs per SKU on standard sticks. Engraving, rope combinations and custom boxes are quoted separately."),
 "coconut-fiber":dict(
  title="Coconut Fiber Pet Toys Manufacturer & Wholesale | VietPaw",
@@ -130,7 +130,7 @@ DEEP["coffee-wood"] = dict(
          "Buyers replacing rawhide who want a single-material alternative with a clean component list.",
          "Brands that want an engraved product rather than a printed sleeve that peels off during chewing.",
          "Assortments where staff can advise on size at the point of sale."],
-        ["Your customers are mostly power chewers that crack hard objects — tooth fracture is the real risk.",
+        ["Your customers are mostly power chewers and you only plan to stock the standard stick — offer the thicker Gorilla line instead.",
          "The brief calls for an edible or digestible chew; this is a toy.",
          "You need small, frequent reorders into the EU — that is where a locally sourced wood has a genuine logistics advantage.",
          "The listing needs a certified biodegradability or dental-health claim, which no supplier in this category can currently support."])

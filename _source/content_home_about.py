@@ -116,7 +116,7 @@ def home(root):
           "them can currently be supported for these products.")
         + spec_table(["Claim you will see elsewhere", "Our position"], [
             ("\u201cSplinter-free\u201d", "No supplier has published test data supporting it, and an independent trainer has documented a coffee wood stick breaking into hard pieces in use. We do not print it."),
-            ("Cleans teeth / dental benefit", "No product-specific evidence exists. Hard chews can also fracture teeth."),
+            ("Cleans teeth / dental benefit", "No product-specific evidence exists, so we make no dental claim."),
             ("Digestible or edible", "These are toys, not food. Nothing here is digestible."),
             ("Biodegradable / compostable", "The toy, the bag, the box and any ink would all need evidence under stated disposal conditions. We publish no such claim."),
             ("Certified pet-safe", "There is no universal pet-safety certification. Test reports have a defined scope; ask for the one that covers your SKU and destination."),
@@ -153,8 +153,8 @@ def home(root):
          "lading, subject to destination requirements. Batch moisture readings on request. Phytosanitary and fumigation "
          "certificates are issued per shipment and cannot be produced retrospectively \u2014 list them at booking."),
         ("Are these toys suitable for every pet?",
-         "No. Size, construction, chewing style and dental health all matter, and hard chews carry a genuine tooth-fracture risk "
-         "for determined power chewers. These are supervised-play toys, not food. Each material page sets out where it fits and "
+         "No. Size, construction and chewing style all matter \u2014 strong chewers belong on our thicker Gorilla line. "
+         "These are supervised-play toys, not food. Each material page sets out where it fits and "
          "where it does not."),
       ])
 
