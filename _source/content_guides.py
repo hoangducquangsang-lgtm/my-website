@@ -306,37 +306,199 @@ add("sustainable-pet-toy-materials-compared","Materials & claims",
 add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
     "Sourcing Natural Pet Toys from Vietnam: The First Order",
     "Plan a first natural pet toy order from Vietnam, covering the buying brief, samples, packaging, quality checks and shipment preparation.",
-    "A first order becomes much easier to manage when the buyer and factory are looking at the same product, the same pack and the same delivery point. Most of the useful work happens before the purchase order: narrowing the assortment, approving a sample and deciding what must be ready before the goods leave Vietnam.",
+    answer("<strong>Short answer:</strong> a first order of natural pet toys from Vietnam runs in six stages — brief, samples, quote, "
+           "approval, production and shipment. With VietPaw, stock-packed goods take 5–7 days to produce and 30–35 days by sea to the EU "
+           "or the US; orders with your own branding take 60–80 days to produce. Start with 3 free samples, then a small stock-packed "
+           "order from 50 pcs per SKU."),
     [
-    ("Send a brief we can price",p("Include your destination country, sales channel, product references, sizes and quantity per SKU. Explain whether you want standard wholesale goods, your logo on an existing item or a change to the construction. Attach a reference image where it helps, but add measurements; a picture alone cannot define a product.")+
-        p("For a coffee wood range, decide which sizes you want to test first. For loofah shapes or fiber balls, specify whether the saleable unit is one toy or a set. That choice affects the price, the packaging minimum and the carton arrangement.")),
-    ("Approve the retail pack as carefully as the toy",p("Request a sample of the proposed pack, including label placement, barcode area and any protective wrapping. Check how the product sits inside it and whether the important instructions remain readable. A product sample in a plain courier bag does not approve a future printed retail box.")+
-        p("Keep the sample reference, agreed dimensions and artwork version together. Identify who can approve a change. This avoids a familiar problem: a factory waiting for artwork while the buyer believes the production clock has already started.")),
-    ("Build quality checks into the order",p("Agree the defects that matter for the construction, the inspection stage and what happens to non-conforming goods. For wood, discuss dimensions, finish, cracks and drying records. For fiber assemblies, include winding, knots and attachments. Add pack counts, labels and carton marks to the same inspection plan.")+
-        p("A photograph from a previous order can show a process. It cannot replace inspection information for the lot you are purchasing. Your order needs an identifiable reference from sample approval through receiving.")),
-    ("Work backwards from the date you need stock",p("Separate development, sample delivery, artwork approval, production, testing, freight and receiving. Ask when each stage can start and which approvals it depends on. A factory completion date is not a warehouse delivery date.")+
-        p("Before dispatch, have your forwarder or broker review the product description, destination requirements and document list. Confirm the named delivery point, carton dimensions, gross weight and shipment responsibilities. When the first shipment arrives, record any differences while the cartons and batch markings are still available. That receiving report is the foundation of a better repeat order."))],
+    ("What sourcing natural pet toys from Vietnam involves",
+      p("<dfn>Sourcing</dfn> here means buying finished pet toys directly from a Vietnamese manufacturer and importing them under your own "
+        "name — as a brand, retailer, distributor or marketplace seller. Vietnam’s natural-material base is the reason buyers look here: "
+        "coffee wood is collected in the Central Highlands, and coconut and loofah are grown in the country.")
+      + p("VietPaw manufactures across four material collections — coffee wood, coconut fiber, hemp and loofah — in three factories in Dak Lak, "
+          "Gia Lai and Binh Duong. Packing, quality release and export documents run from our Ho Chi Minh City office and warehouse, and "
+          "goods leave from Cat Lai port.")
+      + p("Most of the useful work on a first order happens before the purchase order: narrowing the assortment, approving a sample and "
+          "deciding what must be ready before the goods leave Vietnam.")),
+
+    ("First-order options compared",
+      spec_table(["Option","Quantity","Packaging","Production time","Best for"],[
+        ("Samples","3 free; you cover the courier","As sampled","Dispatched within 1 working day","Checking material, size and finish"),
+        ("Trial Box (coffee wood)","100 pcs","Stock packaging","5–7 days","Testing several sizes and early sell-through"),
+        ("Starting Box (coffee wood)","500 pcs","Stock packaging","5–7 days","A first retail or marketplace launch"),
+        ("Private label","From 500 pcs per SKU","Your label, printed box or engraving","60–80 days","Launching under your own brand"),
+        ("Container","429 cartons (20 ft) / 850 (40 ft)","Stock or branded","Per quotation","Distributors and repeat volume"),
+      ], caption="VietPaw planning figures. Selected standard products start from 50 pcs per SKU; your quotation confirms the mix.")
+      + p("A small first order is not a failure of ambition. It gives you receiving data, customer questions and sell-through by size — the "
+          "information that makes the second order accurate.")),
+
+    ("The first order, step by step",
+      steps([
+        ("Send a brief we can price","Destination, sales channel, product references, sizes and quantity per SKU, and whether you want stock goods, your logo or a changed construction.","An itemised quote rather than a price list."),
+        ("Approve samples","Up to 3 free samples, dispatched within 1 working day once the selection and courier are confirmed.","A physical reference with written dimensions."),
+        ("Agree the terms","Incoterm with a named place, payment, document list and inspection stage.","No gaps about who pays for what, or when."),
+        ("Approve artwork (branded orders)","Logo, barcode, warnings and pack contents on a proof.","Locked print files; the production clock can start."),
+        ("Release production","30% deposit for stock, 50% for a branded order.","5–7 days stock; 60–80 days branded."),
+        ("Inspect and ship","Final check, carton marks, seal number and the seven export documents.","Balance paid against documents; 30–35 days sea transit."),
+        ("Receive and record","Count, inspect against the sample and log any issue with the batch reference.","A receiving report that improves the repeat order."),
+      ])),
+
+    ("Documents and shipping data for every order",
+      spec_table(["Document or data","What it is","Why it matters"],[
+        ("Commercial Invoice","Goods, value and terms of sale","Customs valuation and duty"),
+        ("Packing List","Contents, cartons and weights","Clearance and receiving"),
+        ("Bill of Lading or Air Waybill","Transport contract and receipt","Taking delivery of the goods"),
+        ("Certificate of Origin","EUR.1 for the EU under the EVFTA; Form B as standard; Form VJ for Japan","Claiming preferential duty where the goods qualify"),
+        ("Phytosanitary Certificate","Plant-health certificate for plant-based goods","Required by many destinations for wood and fiber"),
+        ("Fumigation Certificate","Treatment record for the shipment","Wood and packaging import rules"),
+        ("Forest-Product Declaration","Proof of legal acquisition of the material","A prerequisite for the Certificate of Origin"),
+        ("Batch moisture readings","Coffee wood below 14% before packing","Available on request for your lot"),
+        ("Master carton","51 × 31 × 39 cm, 0.062 m³, 30 per pallet","Freight booking and warehouse planning"),
+      ])
+      + p("We do not issue veterinary certificates — coffee wood is a wood article, not an animal by-product — or FSC certification, since "
+          "coffee is an agricultural crop outside its scope. Laboratory testing is arranged separately on request. Have your forwarder or "
+          "broker confirm the list for your destination before dispatch.")),
+
+    ("Approve the retail pack as carefully as the toy",
+      p("Request a sample of the proposed pack, including label placement, barcode area and any protective wrapping. Check how the product "
+        "sits inside it and whether the important instructions remain readable. A product sample in a plain courier bag does not approve a "
+        "future printed retail box.")
+      + p("Keep the sample reference, agreed dimensions and artwork version together, and name who can approve a change. This avoids a "
+          "familiar problem: a factory waiting for artwork while the buyer believes the production clock has already started.")),
+
+    ("Build quality checks into the order",
+      p("Agree the defects that matter for the construction, the inspection stage and what happens to non-conforming goods. For wood, "
+        "discuss dimensions, finish, cracks and drying records. For fiber assemblies, include winding, knots and attachments. Add pack counts, "
+        "labels and carton marks to the same inspection plan.")
+      + p("A photograph from a previous order can show a process. It cannot replace inspection information for the lot you are purchasing. "
+          "Your order needs an identifiable reference from sample approval through receiving.")),
+
+    ("Work backwards from the date you need stock",
+      spec_table(["Order type","Production","Sea transit","Factory to destination port"],[
+        ("Stock packaging","5–7 days","30–35 days","About 35–42 days"),
+        ("Your own branding","60–80 days","30–35 days","About 90–115 days"),
+      ], caption="Add sample courier time, vessel booking, customs clearance and inland delivery.")
+      + p("A factory completion date is not a warehouse delivery date. When the first shipment arrives, record any differences while the "
+          "cartons and batch markings are still available. That receiving report is the foundation of a better repeat order.")),
+    ],
     ("See the VietPaw ordering process","/how-to-order/"),
-    related=[("Manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),("MOQ, pricing and lead times","/guides/pet-toy-moq-fob-pricing-lead-times/")],
+    related=[("Manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),("MOQ, pricing and lead times","/guides/pet-toy-moq-fob-pricing-lead-times/"),
+             ("How to vet a supplier","/guides/how-to-vet-an-eco-pet-toy-supplier/"),("Vietnam or China?","/guides/sourcing-pet-toys-vietnam-vs-china/")],
+    sources=[("VietPaw export documents and testing scope","/certifications/")],
     image="export-packed-box.jpg",
+    faqs=[
+      ("How long does a first order from Vietnam take?",
+       "With VietPaw, about 35–42 days from production start to an EU or US port for stock-packed goods (5–7 days production plus 30–35 days "
+       "sea transit), or about 90–115 days with your own branding. Sample courier time, booking and clearance are extra."),
+      ("What is the smallest first order?",
+       "Selected standard products start from 50 pcs per SKU. For coffee wood chews, the usual first steps are a Trial Box of 100 pcs or a Starting Box of 500 pcs; "
+       "private label starts at 500 pcs per SKU."),
+      ("Are samples free?",
+       "Yes, 3 free samples. You cover the courier, and standard samples are dispatched within 1 working day once the selection and courier "
+       "arrangements are confirmed."),
+      ("Which documents come with the shipment?",
+       "Seven: Commercial Invoice, Packing List, Bill of Lading or Air Waybill, Certificate of Origin, Phytosanitary Certificate, Fumigation "
+       "Certificate and a Forest-Product Declaration. Batch moisture readings are available on request."),
+      ("Which port do goods ship from?",
+       "Cat Lai, Ho Chi Minh City. Sea transit to the EU or the US is commonly quoted at 30–35 days port to port."),
+      ("Can I visit the factory before ordering?",
+       "Yes. Buyer visits and third-party inspection are welcome at any of our three factories; arrange in advance so the line is running when "
+       "you arrive."),
+    ],
     figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.')])
 
 add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     "Choosing a Natural Dog Toy Manufacturer in Vietnam",
     "How to evaluate a Vietnam dog toy manufacturer by product expertise, production stages, sample consistency and order-specific capacity.",
-    "The useful question is not simply whether a supplier has a factory. It is whether the supplier can make your particular construction consistently, explain where the work happens and keep the approved specification intact through a repeat order. A broad product catalogue is the beginning of that conversation, not its conclusion.",
+    answer("<strong>Short answer:</strong> choose a natural dog toy manufacturer in Vietnam on three tests — it makes your material and "
+           "construction in facilities it can show you, it can hold an approved sample through repeat orders, and its capacity fits your "
+           "SKU mix rather than only a headline number. VietPaw manufactures coffee wood, coconut fiber, hemp and loofah toys in three "
+           "factories in Dak Lak, Gia Lai and Binh Duong, with a capacity of 100,000 pieces a month."),
     [
-    ("Follow one product through production",p("Choose a representative SKU and ask how it is made. For coffee wood, follow the timber through preparation, drying, sizing, finishing, inspection and packing. For a rope assembly, identify who supplies the fiber, who makes the rope and where the knots and attachments are completed.")+
-        p("Ask which stages are performed at the supplier's own sites and which involve other producers. A clearly explained production arrangement is more useful than a vague claim that everything happens under one roof. It also tells you where an inspection would be most informative.")),
-    ("Evaluate capacity for your mix, not the largest headline",p("Annual output tells you little about a short run of several sizes with different labels. Ask how your order fits the current schedule, which operation is likely to take the longest and when packaging must be available. A standard stick and a new mixed-material design may use different skills and approval steps.")+
-        p("For a developing range, discuss the repeat order as well as the first order. Can the supplier retain the approved reference and reproduce the same pack? What notice is needed for a change in quantity or size mix? Those answers matter to a retailer that cannot keep relabeling stock.")),
-    ("Put the sample beside the specification",p("Natural materials will not look identical piece for piece. Set acceptable ranges for dimensions, weight and appearance, and distinguish them from defects. A knot in the grain and a damaged edge should not be grouped together as natural variation.")+
-        p("Use the same principle for complete construction. If the sample uses one rope material, a similar-looking substitute still requires approval. Keep the component list and packaging details with the sample, so consistency does not depend on one person's memory.")),
-    ("What to ask us",p("VietPaw's range covers coffee wood, coconut fiber, hemp fiber and loofah. For a manufacturing discussion, send the product references, destination, quantities and level of customization. Request current production-location information and a walkthrough or inspection arrangement relevant to that product.")+
-        p("Finish the review with a written quote and an agreed approval sequence. Knowing who answers product, quality and shipping questions is just as important as knowing the address of a production site."))],
+    ("Manufacturer, trading company or sourcing agent?",
+      p("A <dfn>natural dog toy manufacturer</dfn> makes chews and toys from plant materials — wood, coir, hemp, loofah — in its own "
+        "production facilities, and can show you the line that makes your product. Buyers in Vietnam also meet two other kinds of supplier:")
+      + spec_table(["Supplier type","What it does","What you gain","What to verify"],[
+        ("Manufacturer","Makes the product in its own facilities","Direct control of specification, quality and schedule","The site that makes your SKU, and a walkthrough"),
+        ("Trading company","Buys from one or more factories and resells","Range across categories, one invoice","Which factory makes each item; whether it can change"),
+        ("Sourcing agent","Finds and manages factories for a fee","Local presence without your own staff","Fee structure, and who is liable if goods are wrong"),
+      ])
+      + p("None of these is wrong. What matters is that you know which one you are dealing with and where the work is done. VietPaw is a "
+          "manufacturer: there is no trading layer between you and the production line.")),
+
+    ("VietPaw at a glance",
+      spec_table(["Item","Detail","Where to check"],[
+        ("Company","Registered in Vietnam on 12 November 2019; exporting to 40+ countries","About page; contract details in your quotation"),
+        ("Factories","Three own factories: Dak Lak and Gia Lai (Central Highlands), Binh Duong (south)","Factory page; visits by appointment"),
+        ("Head office and export","Ho Chi Minh City office and warehouse; shipments leave from Cat Lai","Contact page"),
+        ("Capacity","100,000 pcs a month across the three factories","Production slot confirmed per order"),
+        ("Materials","Coffee wood, coconut fiber, hemp and loofah","Collection pages"),
+        ("Coffee wood QC","Drying and quality protocol with five QC checkpoints; moisture below 14% before packing","Batch readings on request"),
+        ("Minimums","From 50 pcs per SKU; private label from 500 pcs per SKU","How to order"),
+        ("Lead time","5–7 days stock; 60–80 days with your own branding","Confirmed in the quotation"),
+      ])),
+
+    ("Follow one product through production",
+      p("Choose a representative SKU and ask how it is made. For a rope assembly, identify who supplies the fiber, who makes the rope and where "
+        "the knots and attachments are completed. For coffee wood, the path through our line looks like this:")
+      + steps([
+        ("Collect and cut the stems","Coffee wood is collected in the Central Highlands and cut into billets of 50–70 cm.","Raw material with a known origin."),
+        ("Season the billets","Billets are held for about a year in ventilated shade.","Wood that is dry through before shaping."),
+        ("Dry to the protocol","The drying and quality protocol runs with five QC checkpoints.","Moisture below 14% on every batch before packing."),
+        ("Size and finish","Sticks are cut to the size bands and the surface is finished on our line.","Pieces within the size band for each SKU."),
+        ("Grade","Pieces with cracks beyond 2 mm are removed at the grading bench.","Only graded pieces go to packing."),
+        ("Pack and release","Packed to the approved pack, marked and released from Ho Chi Minh City.","Batch reference and moisture reading available for your lot."),
+      ])
+      + p("We keep the protocol’s operating parameters confidential; the published figure is the finished-batch moisture threshold, not the "
+          "drying recipe. Ask for the record linked to your order.")),
+
+    ("Evaluate capacity for your mix, not the largest headline",
+      p("A monthly capacity figure tells you little about a short run of several sizes with different labels. Ask how your order fits the "
+        "current schedule, which operation is likely to take the longest and when packaging must be available. A standard stick and a new "
+        "mixed-material design may use different skills and approval steps.")
+      + p("For a developing range, discuss the repeat order as well as the first. Can the supplier retain the approved reference and reproduce "
+          "the same pack? What notice is needed for a change in quantity or size mix? Those answers matter to a retailer that cannot keep "
+          "relabeling stock.")),
+
+    ("Put the sample beside the specification",
+      p("Natural materials will not look identical piece for piece. Set acceptable ranges for dimensions, weight and appearance, and "
+        "distinguish them from defects. A knot in the grain and a damaged edge should not be grouped together as natural variation.")
+      + p("Use the same principle for complete construction. If the sample uses one rope material, a similar-looking substitute still requires "
+          "approval. Keep the component list and packaging details with the sample, so consistency does not depend on one person’s memory.")),
+
+    ("Questions to ask any manufacturer",
+      ul(["Which of your sites makes this SKU, and can I see it — in person, by video or through an inspector?",
+          "Which stages, if any, involve another producer?",
+          "What production slot can you give this SKU mix and pack, and what is the bottleneck?",
+          "Which QC checkpoints apply, and which record will be linked to my lot?",
+          "How do you retain the approved sample, and how are substitutions approved?",
+          "Which company will be named on the contract and invoice?"])
+      + p("Finish the review with a written quote and an agreed approval sequence. Knowing who answers product, quality and shipping questions "
+          "is just as important as knowing the address of a production site.")),
+    ],
     ("VietPaw pet toy manufacturing in Vietnam","/pet-toys-manufacturer-vietnam/"),
-    related=[("Factory and production","/factory/"),("Supplier due diligence","/guides/how-to-vet-an-eco-pet-toy-supplier/")],
+    related=[("Factory and production","/factory/"),("Supplier due diligence","/guides/how-to-vet-an-eco-pet-toy-supplier/"),
+             ("Quality control","/quality-control/"),("First order from Vietnam","/guides/sourcing-eco-pet-toys-vietnam/")],
     image="process-raw-sticks.jpg",
+    faqs=[
+      ("Does VietPaw manufacture its own products?",
+       "Yes. VietPaw manufactures in its own three factories in Dak Lak, Gia Lai and Binh Duong; there is no trading layer between you and the "
+       "production line."),
+      ("What is VietPaw’s production capacity?",
+       "100,000 pieces a month across the three factories. The slot and dates for your order depend on the SKU mix and packaging and are "
+       "confirmed in your quotation."),
+      ("Which dog toys does VietPaw make?",
+       "Coffee wood chews, coconut fiber toys, hemp rope toys and loofah toys, including wood-and-rope combinations made to an approved "
+       "specification."),
+      ("Can I visit the factory or send an inspector?",
+       "Yes. Buyer visits and third-party inspection are welcome at any of the three factories. Arrange in advance so the line is running when "
+       "you arrive."),
+      ("What is the minimum order?",
+       "Selected standard products start from 50 pcs per SKU. Private-label runs start at 500 pcs per SKU."),
+      ("How do I tell a manufacturer from a trading company?",
+       "Ask which site makes your specific SKU and request a walkthrough of that line. A manufacturer can show you; a trading company will "
+       "usually name, or decline to name, the factories it buys from."),
+    ],
     figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing on our own line in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.')])
 
 add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
@@ -360,39 +522,214 @@ add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
 add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
     "Private Label, OEM or ODM? Define the Work First",
     "Choose a practical development route for natural pet toys, with clear responsibilities for design, samples, branding and production approval.",
-    "Two suppliers can use OEM to describe different amounts of work. One may mean adding a logo to an existing toy; another may mean producing a new construction from your drawing. Before comparing prices, describe what you want changed. The work is more important than the acronym.",
+    answer("<strong>Short answer:</strong> private label puts your brand on an existing product; OEM means we manufacture to your design "
+           "or a changed construction; ODM means we develop a new design with you. The more of the product you change, the more "
+           "development, sampling and time the project needs. At VietPaw, engraving starts at 50 pcs, private-label packaging at 500 pcs "
+           "per SKU, and branded orders take 60–80 days in production."),
     [
-    ("An existing product with your branding",p("Private label is often the most direct route when the existing construction already fits your range. The project centers on the selected SKU, logo placement, labels and retail packaging. On suitable coffee wood surfaces, that may include laser engraving; on loose-fiber products, a tag or printed pack is usually the relevant discussion.")+
-        p("Approve the branding on a physical sample. An engraving can look different across natural grain, and a logo that is clear on a screen may be too small on a narrow stick. A new printed box can also have a separate minimum from the product inside it.")),
-    ("A change to the construction",p("Adding a rope, changing a join or altering dimensions creates more work than a packaging update. Our production team needs to review feasibility, materials and the way the assembled product will be inspected. A sample of the old design does not approve the new one.")+
-        p("Put the intended pet and play type in the brief. A change that looks attractive in a photograph can affect the handle opening, loose ends or attachment security. Agree the revised specification and any relevant assessment before committing to bulk production.")),
-    ("A design developed with our production team",p("For a new concept, decide who provides the initial design, who develops prototypes and who approves the final construction. Record development charges, tooling if applicable, revision rounds and the ownership or usage rights you have agreed. Do not assume that a private-label order creates exclusive rights to a standard design.")+
-        p("Allow separate time for development and production. A quote for making approved goods does not necessarily include the time spent refining a concept or revising artwork.")),
-    ("Use clear approval gates",ul(["Product brief agreed: construction, market, target quantity and packaging route.","Prototype or sample approved: dimensions, components and appearance recorded.","Artwork approved: logo, warnings, barcode and pack contents checked.","Production released: price, schedule, inspection and shipment responsibilities confirmed."])+
-        p("VietPaw offers product customization, engraving and packaging support. Describe which of these you need, then ask for a quotation that separates them. You will have a clearer project budget and fewer surprises when the design changes."))],
+    ("Private label, OEM, ODM and white label defined",
+      p("<dfn>Private label</dfn> is an existing, proven product sold under your brand. The construction stays the same; the logo, labels "
+        "and retail packaging are yours.")
+      + p("<dfn>OEM</dfn> (original equipment manufacturing) means the factory produces a product to the buyer’s design or specification — "
+          "including a change to an existing construction, such as a new rope, join or dimension.")
+      + p("<dfn>ODM</dfn> (original design manufacturing) means the factory designs and develops the product with you, from concept to "
+          "approved prototype, and then manufactures it.")
+      + p("<dfn>White label</dfn> usually means an unbranded standard product that several resellers can buy and label. Suppliers use it "
+          "loosely, sometimes as a synonym for private label, so ask what exclusivity — if any — is included.")
+      + p("Two suppliers can use OEM to describe very different amounts of work. Describe what you want changed before comparing prices; "
+          "the work matters more than the acronym.")),
+
+    ("Private label vs OEM vs ODM compared",
+      spec_table(["","Private label","OEM","ODM"],[
+        ("What changes","Branding and packaging only","Construction, materials or dimensions to your specification","The whole product, developed with our team"),
+        ("Who provides the design","Existing VietPaw design","You","Developed jointly"),
+        ("Design rights","No exclusivity on a standard design unless agreed","Your specification; agree ownership in writing","Agree ownership and usage rights before development"),
+        ("Starting quantity at VietPaw","Engraving from 50 pcs; printed packaging from 500 pcs per SKU","Quoted per project","Quoted per project"),
+        ("Samples","3 free standard samples; buyer covers courier","Prototype, quoted separately","Prototype rounds, quoted separately"),
+        ("Production time","60–80 days with your label, box or engraving","Project schedule after prototype approval","Project schedule after prototype approval"),
+        ("Best for","A fast, low-risk brand launch","Differentiating a proven format","A new product line"),
+      ], caption="VietPaw planning figures; development charges and schedules are itemised in your quotation.")),
+
+    ("An existing product with your branding",
+      p("Private label is often the most direct route when the existing construction already fits your range. The project centers on the "
+        "selected SKU, logo placement, labels and retail packaging.")
+      + spec_table(["Branding option","Starting quantity","Note"],[
+        ("Laser engraving","50 pcs","Burned into suitable coffee wood surfaces — nothing to peel off during chewing"),
+        ("Hang tag or label","500 pcs per SKU","Printed to your artwork"),
+        ("Printed box","500 pcs per SKU","Separate minimum from the product inside it"),
+        ("Bulk bag, individual pack, kraft box","Quoted with the order","Standard options without custom print"),
+      ])
+      + p("Approve the branding on a physical sample. An engraving can look different across natural grain, and a logo that is clear on a "
+          "screen may be too small on a narrow stick.")),
+
+    ("A change to the construction",
+      p("Adding a rope, changing a join or altering dimensions creates more work than a packaging update. Our production team needs to "
+        "review feasibility, materials and the way the assembled product will be inspected. A sample of the old design does not approve the "
+        "new one.")
+      + p("Put the intended pet and play type in the brief. A change that looks attractive in a photograph can affect the handle opening, "
+          "loose ends or attachment security. Agree the revised specification and any relevant assessment before committing to bulk "
+          "production.")),
+
+    ("A design developed with our production team",
+      p("For a new concept, decide who provides the initial design, who develops prototypes and who approves the final construction. Record "
+        "development charges, tooling if applicable, revision rounds and the ownership or usage rights you have agreed. Do not assume that a "
+        "private-label order creates exclusive rights to a standard design.")
+      + p("Allow separate time for development and production. A quote for making approved goods does not necessarily include the time spent "
+          "refining a concept or revising artwork.")),
+
+    ("The approval gates, step by step",
+      steps([
+        ("Agree the brief","Route (private label, OEM or ODM), intended pet and play type, market, target quantity and packaging.","A quote that separates development, branding, packaging and production."),
+        ("Approve the sample or prototype","Standard samples for private label; a prototype for OEM or ODM.","Dimensions, components and appearance recorded against a reference."),
+        ("Approve the artwork","Logo, warnings, barcode and pack contents checked on a proof.","Print files locked; changes after this point restart the clock."),
+        ("Sign off the specification","Component list, tolerances, acceptable natural variation and pack count.","One document both sides inspect against."),
+        ("Release production","50% deposit on a branded order.","Production scheduled; 60–80 days for private label, a project schedule for OEM or ODM."),
+        ("Inspect and ship","Pre-shipment check against the approved reference and export documents.","Balance paid against shipping documents."),
+      ])
+      + p("VietPaw offers product customization, engraving and packaging support. Ask for a quotation that separates them — you will have a "
+          "clearer budget and fewer surprises when the design changes.")),
+    ],
     ("Discuss OEM and ODM pet toy development","/services/oem-odm-pet-toy-manufacturing/"),
-    related=[("Private-label services","/services/private-label-pet-toys/"),("Sample and order process","/how-to-order/")],
+    related=[("Private-label services","/services/private-label-pet-toys/"),("Sample and order process","/how-to-order/"),
+             ("MOQ, pricing and lead times","/guides/pet-toy-moq-fob-pricing-lead-times/")],
     sources=[("VietPaw private-label and packaging options","/services/private-label-pet-toys/")],
     image="process-laser-engraving.jpg",
+    faqs=[
+      ("What is the difference between private label and OEM?",
+       "Private label keeps the existing product and changes only the branding and packaging. OEM changes the product itself — its construction, "
+       "materials or dimensions — to your specification, so it needs a prototype and a new approval."),
+      ("What is the minimum order for private-label pet toys?",
+       "At VietPaw, laser engraving starts at 50 pcs. Private-label runs and printed hang tags, labels or boxes start at 500 pcs per SKU."),
+      ("Can I add my logo without printed packaging?",
+       "Yes. Laser engraving on suitable coffee wood surfaces starts at 50 pcs and can ship in a standard pack; printed packaging is a separate "
+       "decision with its own 500-pc minimum."),
+      ("Do I own the design?",
+       "For a standard product sold under private label, no exclusivity is created unless you agree it. For OEM and ODM work, agree ownership and "
+       "usage rights in writing before development starts."),
+      ("How long does a private-label order take?",
+       "60–80 days of production when the order carries your own label, printed box or engraving, most of it artwork approval and tooling. Add "
+       "30–35 days sea transit to the EU or the US. OEM and ODM projects get their own schedule after prototype approval."),
+    ],
     figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('bagged-chews-with-desiccant.jpg','Bagged coffee wood chews with a desiccant sachet ready for packing','Printed tags, labels and boxes start at 500 pcs per SKU — a separate minimum from engraving.')])
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     "Pet Toy MOQ, FOB Pricing and Lead Times: Reading the Quote",
     "Understand pet toy minimum orders, packaging costs, FOB and FCA delivery terms, and the difference between production time and arrival date.",
-    "A useful quotation should let both parties describe the same order without filling in the gaps. Which SKU? Which pack? How many saleable units? Delivered where, and when? If those answers are missing, a low unit price can be expensive to interpret later.",
+    answer("<strong>Short answer:</strong> at VietPaw, selected standard products start at 50 pcs per SKU, laser engraving at 50 pcs and "
+           "private-label packaging at 500 pcs per SKU. Stock-packed orders are produced in 5–7 days; orders with your own label, "
+           "printed box or engraving take 60–80 days. An FOB price covers the goods loaded on board at a named port — sea transit "
+           "to the EU or the US adds another 30–35 days."),
     [
-    ("There may be more than one minimum",p("VietPaw’s starting point of 50 pcs applies to selected standard products. Laser engraving on suitable coffee wood surfaces also starts at 50 pcs, but a private-label run starts at 500 pcs. Custom hang tags, labels and printed boxes start at 500 pcs. An engraving-only order and a fully branded retail pack therefore need different budgets.")+
-        p("Ask whether sizes may be mixed and whether the minimum applies per SKU, size, artwork or total order. If the pack minimum exceeds the product quantity, agree who pays for the balance, who stores it and whether it can be used on the next order.")),
-    ("Compare the complete saleable unit",p("Separate the toy, customization, retail pack, master carton and any agreed testing or inspection charges. Confirm the currency, quotation validity and payment schedule. A one-off artwork or development charge should not disappear inside a unit price that you later expect on reorders.")+
-        p("For an internal landed-cost estimate, add the applicable origin charges, freight, insurance, import charges and destination handling to the goods cost. Allocate them across the saleable units you expect to receive. Use actual forwarder and broker inputs; freight and duty estimates are not factory product prices.")),
-    ("FOB needs a named port and the right transport arrangement",p("Under Incoterms® 2020, FOB is a sea and inland-waterway rule, with delivery and risk transfer when goods are on board at the named shipment port. It is not shorthand for delivery to your warehouse. For container goods handed to a carrier before vessel loading, ICC guidance points buyers toward considering FCA instead.")+
-        p("Agree the rule, named place or port and edition with the supplier and forwarder. Then identify any quoted services beyond that rule. Incoterms do not replace the product specification, payment agreement or inspection plan.")),
-    ("Put dates against the approval sequence",p("VietPaw’s published production lead times are 5–7 days for stock packaging and 60–80 days when the order carries your own label, printed box or engraving — most of that longer window is artwork approval and tooling rather than production. Do not apply the stock window to a private-label launch. Mixed orders and custom development need a project-specific schedule, and development, testing and transport need their own allowances. Production completion is not an arrival date: add 30–35 days port to port.")+
-        p("Ask which approval starts the clock and what could change the schedule. Work backwards from the date stock must be available for sale, allowing time to receive and inspect it. A launch plan needs that final stage just as much as it needs a factory completion date."))],
+    ("What MOQ, FOB and lead time mean",
+      p("<dfn>MOQ</dfn> (minimum order quantity) is the smallest quantity a supplier will produce or pack under one set of terms. "
+        "A single quotation can contain several minimums at once — one for the product, one for engraving, one for printed packaging.")
+      + p("<dfn>FOB</dfn> (Free On Board) is an Incoterms® 2020 rule for sea freight. The seller clears the goods for export and delivers "
+          "them on board the vessel at a named port of shipment; from that point, cost and risk pass to the buyer. An FOB price is not a "
+          "delivered price.")
+      + p("<dfn>FCA</dfn> (Free Carrier) is the rule for handing goods to the buyer’s carrier at a named place, before they are loaded on a "
+          "vessel. It works for any transport mode, including air.")
+      + p("<dfn>Lead time</dfn> is the production window after every approval has been given. It is not an arrival date: sample approval, "
+          "artwork, transit and customs clearance sit either side of it.")
+      + p("<dfn>Landed cost</dfn> is what one saleable unit costs once it is in your warehouse: goods, packaging, freight, insurance, "
+          "duties and handling, divided by the units you actually receive.")),
+
+    ("VietPaw minimums, timings and shipping data",
+      spec_table(["Item","Figure","What it applies to"],[
+        ("Standard product MOQ","50 pcs per SKU","Selected standard products; size and pack minimums confirmed in the quote"),
+        ("Laser engraving","From 50 pcs","Suitable coffee wood surfaces; separate from the packaging minimum"),
+        ("Private-label run","From 500 pcs","Your label or brand on an existing product"),
+        ("Printed hang tags, labels, boxes","From 500 pcs per SKU","Custom printed packaging"),
+        ("Trial Box / Starting Box","100 pcs / 500 pcs","Coffee wood chews: usual first steps above the 50-pc minimum"),
+        ("Samples","3 free; buyer covers courier","Standard samples dispatched within 1 working day once confirmed"),
+        ("Production, stock packaging","5–7 days","Standard sizes held in our warehouse"),
+        ("Production, your own branding","60–80 days","Own label, printed box or engraving; most of it is artwork approval and tooling"),
+        ("Sea transit","30–35 days port to port","From Cat Lai, Ho Chi Minh City, to the EU or the US"),
+        ("Deposit","30% stock / 50% branded","Balance against shipping documents; air freight paid in full before handover"),
+        ("Export master carton","51 × 31 × 39 cm (0.062 m³)","30 cartons per pallet"),
+        ("Container load","429 cartons (20 ft) / 850 (40 ft)","Planning reference; confirm for your packed SKU"),
+        ("Production capacity","100,000 pcs a month","Across our three factories; your slot is confirmed in the quotation"),
+      ], caption="Planning figures published by VietPaw. The quotation for your order governs.")
+      + p("An engraving-only order and a fully branded retail pack therefore need different budgets. Ask whether the minimum "
+          "applies per SKU, per size, per artwork or per order. If the packaging minimum is higher than the product quantity, agree who "
+          "pays for the balance, who stores it and whether it can be used on the next order.")),
+
+    ("EXW, FCA, FOB, CIF, DAP or DDP: where the price stops",
+      spec_table(["Incoterm","Delivery and risk pass to you","Main freight booked by","Transport"],[
+        ("EXW","At our premises, before export clearance","Buyer","Any"),
+        ("FCA","When handed to your carrier at the named place, export-cleared","Buyer","Any, including air"),
+        ("FOB","On board the vessel at the named port of shipment","Buyer","Sea only"),
+        ("CIF","On board at the port of shipment (seller pays freight and minimum insurance to the destination port)","Seller","Sea only"),
+        ("DAP","At the named destination, ready for unloading; you clear import and pay duties","Seller","Any"),
+        ("DDP","At the named destination, cleared for import with duties paid","Seller","Any"),
+      ], caption="Incoterms® 2020 summary. Always name the place or port with the rule, for example “FOB Cat Lai”.")
+      + p("VietPaw quotes EXW, FCA, FOB, CIF, DAP and DDP. For an air shipment, FCA is the correct rule — FOB is not. For containers handed "
+          "to a carrier at a terminal before loading, ICC guidance also points buyers toward FCA. DDP suits a first-time importer who would "
+          "rather not handle customs, though import VAT is usually not recoverable that way; DAP suits a VAT-registered buyer.")
+      + p("Incoterms decide delivery, cost and risk. They do not replace the product specification, the payment agreement or the "
+          "inspection plan.")),
+
+    ("Compare the complete saleable unit",
+      p("Separate the toy, customization, retail pack, master carton and any agreed testing or inspection charges. Confirm the currency, "
+        "quotation validity and payment schedule. A one-off artwork or development charge should not disappear inside a unit price that "
+        "you later expect on reorders.")
+      + p("A simple landed-cost calculation for an FOB quote looks like this:")
+      + ul(["Goods and packaging at the FOB price",
+            "+ sea freight and insurance from the named port",
+            "+ import duty and taxes on the declared value",
+            "+ destination port, customs broker and delivery to your warehouse",
+            "÷ the number of saleable units received"])
+      + p("Use real forwarder and broker figures for the freight and duty lines. A supplier’s estimate of either is not a product price.")),
+
+    ("From enquiry to stock on the shelf: the timeline",
+      steps([
+        ("Send the brief","Product references, sizes, quantity per SKU, destination, sales channel and branding.","An itemised quote that separates product, branding, packaging and freight."),
+        ("Approve samples","Select up to 3 free samples; you cover the courier. Standard samples leave within 1 working day of confirmation.","A physical reference with recorded dimensions."),
+        ("Approve artwork (branded orders only)","Logo, warnings, barcode and pack contents checked on a proof.","The stage that takes most of the 60–80-day window — start it early."),
+        ("Pay the deposit and release production","30% on a stock order, 50% on a branded order.","The production clock starts: 5–7 days stock, 60–80 days branded."),
+        ("Inspect and document","Final check, packing, carton marks and the seven export documents.","Balance paid against the shipping documents."),
+        ("Ship and clear","Sea transit 30–35 days port to port, then import clearance and inland delivery.","Stock received, counted and inspected against the approved sample."),
+      ])
+      + spec_table(["Order type","Production","Sea transit","Planning total, factory to destination port"],[
+        ("Stock packaging","5–7 days","30–35 days","About 35–42 days"),
+        ("Your label, printed box or engraving","60–80 days","30–35 days","About 90–115 days"),
+      ], caption="Excludes sample courier time, vessel booking, customs clearance and inland delivery.")
+      + p("Work backwards from the date stock must be on sale, and leave time to receive and inspect it. Do not apply the stock window "
+          "to a private-label launch.")),
+
+    ("Questions that make two quotes comparable",
+      ul(["Is the minimum per SKU, per size, per artwork or per order?",
+          "Which Incoterm, with which named place or port, and which Incoterms edition?",
+          "Which approval starts the production clock?",
+          "What is included in the unit price — pack, insert, barcode, master carton?",
+          "Which charges are one-off (artwork, tooling, development) and which recur?",
+          "How long is the quotation valid, and in which currency?"])
+      + p("Two quotes that answer the same six questions can be compared. Two quotes that do not are usually describing different orders.")),
+    ],
     ("Prepare a product and pricing enquiry","/request-a-quote/"),
-    related=[("Wholesale service","/services/wholesale-pet-products/"),("First-order planning","/guides/sourcing-eco-pet-toys-vietnam/")],
+    related=[("Wholesale service","/services/wholesale-pet-products/"),("First-order planning","/guides/sourcing-eco-pet-toys-vietnam/"),
+             ("Private label, OEM or ODM?","/guides/private-label-oem-eco-pet-toys-explained/"),("Vietnam or China?","/guides/sourcing-pet-toys-vietnam-vs-china/")],
     sources=[("VietPaw order minimums and lead times","/how-to-order/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
     image="container-wall-of-cartons.jpg",
+    faqs=[
+      ("What is the minimum order for VietPaw pet toys?",
+       "Selected standard products start at 50 pcs per SKU. Laser engraving starts at 50 pcs; private-label runs and printed hang tags, labels "
+       "or boxes start at 500 pcs per SKU. For coffee wood chews, the usual first steps are a Trial Box of 100 pcs or a Starting Box of 500 pcs."),
+      ("Is the FOB price what I will pay in total?",
+       "No. FOB covers the goods, export clearance and loading on board at the named port. Sea freight, insurance, import duty and taxes, "
+       "destination charges and inland delivery are added on your side."),
+      ("Should I buy FOB or FCA?",
+       "FOB is for sea freight when the goods are loaded on board at the port. For air freight, or when your forwarder collects a container "
+       "before it is loaded, FCA is the more accurate rule. Agree the choice with your forwarder."),
+      ("Why does a private-label order take 60–80 days when stock takes 5–7?",
+       "Stock sizes are already made and held in our warehouse. With your own label, printed box or engraving, most of the time goes on artwork "
+       "approval, printing and tooling rather than on making the product."),
+      ("When does the lead time start?",
+       "After the sample, artwork and order are approved and the deposit is received. Production time is not an arrival date; add 30–35 days "
+       "sea transit plus clearance."),
+      ("What are the payment terms?",
+       "A 30% deposit on a stock order or 50% on a branded order, with the balance against shipping documents. Air shipments are paid in full "
+       "before the goods are handed over at the airport."),
+    ],
     figures=[('container-wall-of-cartons.jpg','A full wall of export cartons loaded and netted inside a shipping container','429 cartons in a 20 ft, 850 in a 40 ft. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Stock sizes ship in 5–7 days; printed packaging is the part that takes 60–80.')])
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
@@ -416,25 +753,88 @@ add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
 add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
     "Vietnam or China for Pet Toys? Compare the Order, Not the Flag",
     "A practical sourcing comparison based on product fit, landed cost, capacity, origin requirements and repeat-order performance.",
-    "A country-level cost comparison can point a buyer in a direction, but it cannot select a supplier. Two factories in the same country may have very different skills, packaging options and production schedules. The useful comparison is between suppliers quoting the same finished order.",
+    answer("<strong>Short answer:</strong> neither country is automatically cheaper or better. For natural-material pet toys — coffee wood, "
+           "coconut fiber, hemp and loofah — Vietnam offers raw materials close to production and, for EU buyers, preferential duty under "
+           "the EU–Vietnam Free Trade Agreement when the goods qualify and carry valid proof of origin. China offers deeper supply chains for "
+           "synthetic, plush and multi-material toys. Decide by comparing two quotes for the same specification on landed cost, lead time "
+           "and repeatability."),
     [
-    ("Use one specification for both quotations",p("Send the same dimensions, component list, quantity, pack and inspection requirements. Make clear whether you are comparing standard products or a newly developed design. Otherwise, the lowest price may simply refer to less work, a different material or a simpler pack.")+
-        p("For VietPaw's natural-material range, the relevant comparison is coffee wood, coir, hemp or loofah production for your chosen construction. A supplier's strength in another product category does not establish its ability to reproduce that item.")),
-    ("Build the landed-cost comparison line by line",table(["Cost or condition","Comparison basis"],[
+    ("What a Vietnam-or-China comparison actually measures",
+      p("A country-level cost comparison can point a buyer in a direction, but it cannot select a supplier. Two factories in the same country "
+        "may have very different skills, packaging options and production schedules. The useful comparison is between suppliers quoting the "
+        "same finished order.")
+      + p("<dfn>Landed cost</dfn> is the full cost of one saleable unit in your warehouse: goods, packaging, freight, insurance, duties and "
+          "handling. <dfn>Country of origin</dfn> is where the goods were wholly obtained or last substantially transformed — not where they "
+          "were packed or shipped from. Both depend on the product, not the flag on the quote.")),
+
+    ("Vietnam vs China: factor-by-factor comparison",
+      spec_table(["Factor","Vietnam (natural materials)","China","How to compare fairly"],[
+        ("Material base","Coffee wood from the Central Highlands; coconut and loofah grown in the country","Broad supply of synthetic, rubber, plush and rope components","Ask where the main material is grown or made"),
+        ("Product focus","Natural-material chews and toys","Wide range, from basic to highly engineered","Match the supplier’s strength to your construction"),
+        ("EU import duty","EU–Vietnam FTA (in force since 1 August 2020): preferential rates for originating goods with valid proof of origin","Standard EU rates; no EU–China free-trade agreement","Broker checks the HS code and rate for your actual product"),
+        ("US import duty","Tariff treatment has changed repeatedly since 2025","Tariff treatment has changed repeatedly since 2025","Check the current rate for both origins at the time of order"),
+        ("Origin rules","Goods must be wholly obtained or substantially transformed in Vietnam","Same principle","Transshipped or merely repacked goods do not change origin"),
+        ("Minimum order","VietPaw: from 50 pcs per SKU on selected standard products","Varies widely by supplier","Compare the same quantity and pack"),
+        ("Lead time","VietPaw: 5–7 days stock, 60–80 days branded; 30–35 days sea to the EU or US","Varies by supplier and port","Compare approved sample to stock on sale, stage by stage"),
+      ], caption="Duty rates and trade measures change. Confirm them for the actual goods with your customs broker before ordering.")),
+
+    ("Build the landed-cost comparison line by line",
+      table(["Cost or condition","Comparison basis"],[
         ("Product and customization","Same SKU, quantity, components and approved finish"),
         ("Retail and transit packaging","Same saleable unit and carton requirements"),
         ("Testing and inspection","Same agreed scope and release stage"),
         ("Transport and handling","Packed dimensions, weight, route and named delivery point"),
-        ("Import charges","Current classification, origin and destination-specific assessment")])+
-        p("Ask your broker to check duties and any preference eligibility for the actual goods. A trade agreement is not a blanket zero-duty promise for everything shipped from a country. For EU imports, the European Commission's Access2Markets information covers tariffs, origin rules and product requirements.")),
-    ("Compare the calendar and the communication",p("Measure the full path from approved sample to stock available for sale. Include development, artwork, testing, production, transport and receiving. A shorter production estimate may not produce an earlier arrival if another stage remains unresolved.")+
-        p("Also assess how the supplier responds to a precise technical question. Can it explain a size tolerance, identify a packaging change and provide an updated drawing or sample? Clear answers during sampling are useful evidence of how a reorder may be managed.")),
-    ("Make a second source genuinely usable",p("If diversification is the objective, qualify the alternative product rather than only adding another supplier name to a spreadsheet. Natural materials can differ in appearance and handling. Retest the retail presentation, label information and receiving specification for the alternative source.")+
-        p("Choose on the basis of product fit, total cost and repeatability. Neither Vietnam nor China is automatically the better answer for every construction, order size or sales channel."))],
+        ("Import charges","Current classification, origin and destination-specific assessment")])
+      + p("A trade agreement is not a blanket zero-duty promise for everything shipped from a country. Preferential rates apply to goods "
+          "that meet the rules of origin and are covered by the right proof — for VietPaw shipments to the EU, a EUR.1 certificate under "
+          "the EVFTA. The European Commission’s Access2Markets service lists tariffs, origin rules and product requirements by HS code.")),
+
+    ("How to run a fair two-country comparison",
+      steps([
+        ("Write one specification","Dimensions, components, quantity per SKU, pack and inspection requirements.","Both suppliers price the same product."),
+        ("Request itemised quotes on the same Incoterm","For example, both FOB at a named port, or both DAP to your warehouse.","Freight is not hidden in one quote and missing from the other."),
+        ("Compare physical samples side by side","Measure, weigh and check the finish and construction against the specification.","Differences in material or work are visible before price is discussed."),
+        ("Have your broker assess duty and origin","HS code, origin and any preference for each quote.","Duty lines based on the real goods, not a country average."),
+        ("Map the calendar","Sample, artwork, production, transit and receiving for each supplier.","A realistic date that stock can be on sale."),
+        ("Start with a trial order","A small run from the preferred source before committing volume.","Receiving data that confirms — or corrects — the paper comparison."),
+      ])),
+
+    ("Compare the calendar and the communication",
+      p("Measure the full path from approved sample to stock available for sale. Include development, artwork, testing, production, transport "
+        "and receiving. A shorter production estimate may not produce an earlier arrival if another stage remains unresolved.")
+      + p("Also assess how the supplier responds to a precise technical question. Can it explain a size tolerance, identify a packaging change "
+          "and provide an updated drawing or sample? Clear answers during sampling are useful evidence of how a reorder may be managed.")),
+
+    ("Make a second source genuinely usable",
+      p("If diversification is the objective, qualify the alternative product rather than only adding another supplier name to a spreadsheet. "
+        "Natural materials can differ in appearance and handling. Retest the retail presentation, label information and receiving specification "
+        "for the alternative source.")
+      + p("Choose on the basis of product fit, total cost and repeatability. Neither Vietnam nor China is automatically the better answer for "
+          "every construction, order size or sales channel.")),
+    ],
     ("Review VietPaw's Vietnam manufacturing capabilities","/pet-toys-manufacturer-vietnam/"),
-    related=[("Supplier qualification","/guides/how-to-vet-an-eco-pet-toy-supplier/"),("Pricing and delivery terms","/guides/pet-toy-moq-fob-pricing-lead-times/")],
-    sources=[("European Commission: importing into the EU","https://policy.trade.ec.europa.eu/help-exporters-and-importers/importing-eu_en")],
+    related=[("Supplier qualification","/guides/how-to-vet-an-eco-pet-toy-supplier/"),("Pricing and delivery terms","/guides/pet-toy-moq-fob-pricing-lead-times/"),
+             ("First order from Vietnam","/guides/sourcing-eco-pet-toys-vietnam/")],
+    sources=[("European Commission: importing into the EU","https://policy.trade.ec.europa.eu/help-exporters-and-importers/importing-eu_en"),
+             ("Access2Markets: tariffs and origin rules","https://trade.ec.europa.eu/access-to-markets/en/home")],
     image="pallet-stack-inspection.jpg",
+    faqs=[
+      ("Is it cheaper to source pet toys from Vietnam or China?",
+       "It depends on the product. Compare two itemised quotes for the same specification, on the same Incoterm, and add freight and duty for "
+       "each. For natural-material toys, Vietnam’s local raw materials often matter more than the headline labour cost."),
+      ("Do pet toys from Vietnam pay lower EU import duty?",
+       "They can. Under the EU–Vietnam Free Trade Agreement, goods that meet the rules of origin and carry valid proof of origin, such as a EUR.1 "
+       "certificate, can qualify for preferential rates. Your broker confirms the rate for the actual HS code."),
+      ("What about US import duties?",
+       "US tariff treatment of goods from both Vietnam and China has changed several times since 2025. Check the current rate for your product "
+       "with a customs broker at the time of order rather than relying on an older comparison."),
+      ("Can a Chinese product be shipped through Vietnam to change its origin?",
+       "No. Origin follows where goods were wholly obtained or substantially transformed. Transshipped or merely repacked goods keep their "
+       "original origin, and mis-declaring it is a customs violation."),
+      ("Does VietPaw make synthetic or plush toys?",
+       "No. VietPaw manufactures four natural-material collections — coffee wood, coconut fiber, hemp and loofah — in its own three factories "
+       "in Vietnam."),
+    ],
     figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.')])
 
 add("pet-toy-safety-testing-requirements","Compliance & risk",
@@ -458,19 +858,86 @@ add("pet-toy-safety-testing-requirements","Compliance & risk",
 add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
     "How to Vet a Natural Pet Toy Supplier Before the First Order",
     "Evaluate a pet toy supplier through company checks, specific samples, production visibility, claim evidence and a written order plan.",
-    "Supplier due diligence is most useful when it follows the order you actually want to place. A well-presented catalogue can introduce the range; it cannot tell you whether the sample will be repeated, the right documents will arrive or a production change will be communicated before shipment.",
+    answer("<strong>Short answer:</strong> vet a natural pet toy supplier with six checks before paying a deposit — confirm the legal "
+           "entity and payment beneficiary, test one real SKU against a written specification, verify where production happens, match "
+           "every claim to evidence, agree inspection and documents in writing, and start with a small order. Each check should produce "
+           "a document, not just a reassurance."),
     [
-    ("Establish who you will contract with",p("Confirm the current legal entity, company information and payment beneficiary. Understand the relationship between the trading name, production site and exporter where they differ. Resolve inconsistent names or addresses before placing the order, rather than assuming a historical document explains the current arrangement.")+
-        p("If payment details change, verify the change through a trusted contact route already established with the company. Keep the confirmed details with the purchase order. This is basic transaction discipline, including when the product sample is excellent.")),
-    ("Ask questions tied to one real SKU",p("Choose a product and request its full construction, dimensions, packing and production sequence. Ask what natural variation our factory expects and which defects it rejects. A supplier that can explain those distinctions gives you something concrete to inspect later.")+
-        p("Keep a reference sample and ask how it will be retained at our factory. Confirm that substitutions in fiber, adhesive, finish or packaging need approval. A look-alike replacement may change the product or its claims even when it seems commercially convenient.")),
-    ("Make the production review specific",p("Request current location information and a walkthrough or inspection arrangement for the relevant process. Ask which stages involve other producers. Discuss order-specific scheduling rather than relying only on a large annual-capacity figure.")+
-        p("The goal is to understand who controls the work and how a problem will be traced. A warehouse image can show stock or packing, but it does not answer every question about production equipment, ownership or available capacity.")),
-    ("Test the claims against their evidence",p("For a material claim, review the component list. For a test claim, review the sample and report scope. For an environmental claim, identify exactly what product or packaging it covers. A confident supplier should be able to distinguish what is documented from what still needs assessment.")+
-        p("Finish with an order plan: approval stages, quality criteria, inspection timing, shipment responsibilities and a written process for non-conforming goods. The first delivery then becomes a measurable review of what was agreed, not a debate over what either party thought the catalogue implied."))],
+    ("What supplier vetting means",
+      p("<dfn>Supplier vetting</dfn> (or supplier due diligence) is the set of checks a buyer makes to confirm that a supplier is who it says "
+        "it is, can make the approved product repeatedly, and can back its claims with evidence. It is most useful when it follows the order "
+        "you actually want to place.")
+      + p("A well-presented catalogue can introduce the range. It cannot tell you whether the sample will be repeated, the right documents "
+          "will arrive or a production change will be communicated before shipment.")),
+
+    ("The supplier vetting checklist",
+      spec_table(["Check","What to ask for","Red flag","What VietPaw provides"],[
+        ("Legal entity and payment","Registration details and the beneficiary named on the contract","Bank account in a different name; bank details changed by email","Company details, beneficiary and terms in the quotation, invoice and contract"),
+        ("Production location","Site details and a walkthrough for your product","Only warehouse photos; no named site","Three own factories in Dak Lak, Gia Lai and Binh Duong; visits and third-party inspection welcome"),
+        ("Sample and specification","A sample with written dimensions, components and tolerances","Photo approval only; “same as before”","3 free samples; dimensions recorded at approval"),
+        ("Quality records","Checkpoints and a record linked to your lot","Generic certificate, no batch reference","Coffee wood: five QC checkpoints; moisture below 14% before packing, batch readings on request"),
+        ("Product claims","Evidence matched to the exact product and pack","“Non-toxic”, “splinter-free” or “biodegradable” without scope","Claims limited to what is documented; testing arranged on request"),
+        ("Export documents","The document list for your destination","Unclear who issues the Certificate of Origin","Seven documents with every order"),
+        ("Capacity","A production slot for your SKU mix","Only an annual headline figure","100,000 pcs a month; your slot confirmed in the quotation"),
+      ])),
+
+    ("Supplier vetting, step by step",
+      steps([
+        ("Confirm who you contract with","Match the company name, address and bank beneficiary across quote, invoice and contract.","One verified counterparty before any payment.","If payment details ever change, verify by a contact route you already trust."),
+        ("Pick one real SKU","Ask for its construction, dimensions, packing and production sequence.","Concrete answers you can inspect later."),
+        ("Approve a sample against a written spec","Measure it, list its components and record acceptable natural variation.","A reference that survives staff changes and repeat orders."),
+        ("Verify where the work happens","Request site details and a walkthrough, or book an inspection.","You know who controls production and where to inspect."),
+        ("Match claims to evidence","Component list for material claims; report scope for test claims; defined scope for environmental claims.","Only supportable claims reach your pack."),
+        ("Put the order plan in writing","Approval stages, quality criteria, inspection timing, document list and a process for non-conforming goods.","A first delivery you can measure against what was agreed."),
+        ("Start small","A stock-packed first order from 50 pcs per SKU.","Receiving data before you commit volume."),
+      ])),
+
+    ("Claims to test before they reach your pack",
+      spec_table(["Claim","Evidence that would support it","Watch for"],[
+        ("Non-toxic","A test report naming the product, the substances assessed and the method","A report for a different material or product"),
+        ("Biodegradable or compostable","A defined scope, disposal conditions and supporting test data","A material claim applied to the whole toy and pack"),
+        ("Splinter-free","Test data behind the phrase","No supplier in this category has published it"),
+        ("Dental or health benefit","Clinical evidence","A medical promise on a toy"),
+        ("CPSIA or REACH compliant","The applicable requirement for your market and a matching report","A certificate that names no product"),
+      ])
+      + p("For a material claim, review the component list. For a test claim, review the sample and report scope. A confident supplier should be "
+          "able to distinguish what is documented from what still needs assessment.")),
+
+    ("Ask questions tied to one real SKU",
+      p("Ask what natural variation the factory expects and which defects it rejects. A supplier that can explain those distinctions gives you "
+        "something concrete to inspect later.")
+      + p("Keep a reference sample and ask how it will be retained at the factory. Confirm that substitutions in fiber, adhesive, finish or "
+          "packaging need approval. A look-alike replacement may change the product or its claims even when it seems commercially convenient.")),
+
+    ("Make the production review specific",
+      p("Request current location information and a walkthrough or inspection arrangement for the relevant process. Discuss order-specific "
+        "scheduling rather than relying only on a large annual-capacity figure.")
+      + p("The goal is to understand who controls the work and how a problem will be traced. A warehouse image can show stock or packing, but "
+          "it does not answer every question about production equipment, ownership or available capacity. Before the container is sealed, ask "
+          "for the carton marks to be photographed against the packing list and for the seal number on your paperwork.")),
+    ],
     ("Review VietPaw factory and production information","/factory/"),
-    related=[("Testing and documents","/certifications/"),("Wholesale order planning","/services/wholesale-pet-products/")],
+    related=[("Testing and documents","/certifications/"),("Wholesale order planning","/services/wholesale-pet-products/"),
+             ("Choosing a manufacturer in Vietnam","/guides/natural-dog-toy-manufacturer-vietnam/"),("Safety testing plan","/guides/pet-toy-safety-testing-requirements/")],
+    sources=[("FTC Green Guides: environmental claims",FTC),("CPSC toy safety business guidance",CPSC)],
     image="pallet-stack-inspection.jpg",
+    faqs=[
+      ("How do I verify a pet toy supplier in Vietnam?",
+       "Match the company name, address and bank beneficiary across the quote, invoice and contract; request site details and a walkthrough "
+       "or a third-party inspection; and approve a physical sample against a written specification before paying a deposit."),
+      ("What should I do if a supplier changes its bank details?",
+       "Do not pay until you have confirmed the change through a contact route you already trust, such as a known phone number. Changed bank "
+       "details sent by email are a common fraud pattern."),
+      ("Do I need to visit the factory?",
+       "Not always, but you should be able to. A walkthrough, a video tour of your product line or an independent inspection gives similar "
+       "evidence. VietPaw welcomes visits and third-party inspection at all three factories."),
+      ("Which documents should a natural pet toy supplier provide?",
+       "At minimum a Commercial Invoice, Packing List and transport document. For plant-based goods, expect a Certificate of Origin, "
+       "Phytosanitary and Fumigation Certificates; VietPaw also issues a Forest-Product Declaration."),
+      ("How big should a first order be?",
+       "Small enough to learn from. A stock-packed order from 50 pcs per SKU lets you check receiving quality and sell-through before "
+       "committing to private label or container volume."),
+    ],
     figures=[('inspector-checking-cartons-clipboard.jpg','Inspector in a hi-vis vest checking export cartons against a printed document','Ask for the carton marks to be photographed against the packing list before the container is sealed.'),('container-seal-applied.jpg','Hands fitting a numbered plastic seal to a shipping container door','The seal number belongs on your paperwork. It is the cheapest verification step there is.')])
 
 add("coffee-wood-chew-size-guide","Natural chew toys",
@@ -587,7 +1054,8 @@ def build(root):
                 figs.pop(0)
         lead=FEATURE[a["slug"]]
         assert lead[0] not in [f[0] for f in (a.get("figures") or ())], a["slug"]
-        body=figure("/assets/img/"+lead[0],lead[1],lead[2],lazy=False)+p(a["intro"])+"".join(blocks)
+        intro=a["intro"] if a["intro"].startswith("<") else p(a["intro"])
+        body=figure("/assets/img/"+lead[0],lead[1],lead[2],lazy=False)+intro+"".join(blocks)
         if a["faqs"]:
             body+="<h2>Frequently asked</h2>"+"".join(
                 f'<div class="faq-item"><h3>{q}</h3><p>{ans}</p></div>' for q,ans in a["faqs"])
