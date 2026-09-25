@@ -13,7 +13,7 @@ from responsive_images import SIZES
 from content_helpers import IMAGE_DESCRIPTIONS
 
 HEMP_IMAGES = {
-    "products/hemp-fiber-ball/index.html": "assets/img/vietpaw-hemp-fiber-rope-ball.png",
+    "products/hemp-fiber-ball/index.html": "assets/img/hemp-rope-balls-three-sizes.jpg",
     "products/hemp-rope-dog-toy/index.html": "assets/img/vietpaw-hemp-rope-dog-toy.jpg",
 }
 

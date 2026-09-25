@@ -4,7 +4,7 @@ from content_helpers import (publish, section, p, ul, cards, table, terms, trust
 from content_products import product_cards
 
 CATEGORIES = [
-("/dog-toys/","Wholesale Natural Dog Toys from Vietnam","Dog Toys","dog-chewing-coffeewood.jpg",
+("/dog-toys/","Wholesale Natural Dog Toys from Vietnam","Dog Toys","golden-retriever-gnawing-coffee-wood.jpg",
  "Build a wholesale dog-toy assortment around coffee wood, coconut fiber and hemp. Compare play types, sample-approved sizes and private-label packaging with a Vietnam manufacturer.",
  ["coffee-wood-dog-chew","coconut-fiber-dog-ball","hemp-rope-dog-toy"],
  [("Chew toys","Wood stick specifications and responsible chew-range planning.","/dog-toys/chew-toys/"),
@@ -29,7 +29,7 @@ CATEGORIES = [
  ("Ball with rope","Ball and handle geometry","Assess the connection as a separate part"),
  ("Wood with rope","Wood and rope specification","Agree component and attachment checks")],
  "Hemp, cotton and coconut fiber are different materials; confirm the exact fiber or blend in the selected design. A catalogue photo is not proof of reinforcement or measured pull strength. Define any test method and acceptance criteria before using a strength claim on packaging."),
-("/dog-toys/fetch-toys/","Natural Fetch & Ball Dog Toys Wholesale","Dog Toys","dog-coconut-balls-lifestyle.jpg",
+("/dog-toys/fetch-toys/","Natural Fetch & Ball Dog Toys Wholesale","Dog Toys","coconut-fiber-ball-sizes-with-rope-toy.jpg",
  "Compare coconut-fiber and hemp balls for a supervised fetch-and-carry assortment. Approve diameter, weight, surface and packing before committing to volume.",
  ["coconut-fiber-dog-ball","hemp-fiber-ball"],[],
  [("Coir ball","Texture and winding","Confirm diameter and any core"),
@@ -43,7 +43,7 @@ CATEGORIES = [
  ("Mixed textures","Range variety","Declare every component"),
  ("New mechanisms","OEM/ODM feasibility","Prototype, test and approve before claiming availability")],
  "This is an enrichment sourcing category, not a claim that the displayed products are tested food puzzles. If you need a treat dispenser or measured difficulty levels, submit a specific brief. Agree cleaning, moving-part and food-contact requirements with the appropriate specialists for that construction."),
-("/cat-toys/","Wholesale Natural Cat Toys","Cat Toys","cat-loofah-toys-lifestyle.jpg",
+("/cat-toys/","Wholesale Natural Cat Toys","Cat Toys","cat-hugging-loofah-toy.jpg",
  "Build a cat-toy range from coconut-fiber balls and loofah shapes. Compare construction, shape-specific dimensions and private-label packaging for international retail.",
  ["coconut-fiber-cat-ball","loofah-cat-toy"],
  [("Balls & chasers","Choose a cat-specific size and construction.","/cat-toys/balls/"),
@@ -66,7 +66,7 @@ CATEGORIES = [
  ("Catnip option","Optional inclusion","Approve filling specification and source"),
  ("Custom silhouette","OEM/ODM development","Review detachable parts and feasibility")],
  "Catnip is not included in every toy. State clearly whether a quoted SKU is unfilled or contains catnip, and confirm the amount and source when relevant. A custom shape requires its own sample and component list."),
-("/collections/aggressive-chewers/","Sourcing Toys for Strong Chewers: Limits & Options","Materials","dog-chewing-coffeewood.jpg",
+("/collections/aggressive-chewers/","Sourcing Toys for Strong Chewers: Limits & Options","Materials","golden-retriever-gnawing-coffee-wood.jpg",
  "For strong chewers, choose the Gorilla line: thick-cut coffee wood chews in four sizes. No chew is indestructible, so supervise and replace when worn.",
  ["gorilla-coffee-wood-dog-chew","coffee-wood-dog-chew","hemp-rope-dog-toy"],[],
  [("Gorilla coffee wood chew","GRLS–GRLXL, 155–900 g","Choose the size against the dog; supervise and replace when worn"),

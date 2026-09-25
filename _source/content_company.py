@@ -40,7 +40,7 @@ def build(root):
         "Start with the material and intended play type, then verify the complete construction. A natural ingredient is the beginning of a sourcing decision, not a finished-product certification.",
         [section("Explore the material collections",cards([
             ("Coffee Wood","Mature coffee-tree timber for shaped chew sticks.","/collections/coffee-wood/","/assets/img/coffee-wood-chew-grain-detail.jpg"),
-            ("Coconut Fiber","Coconut-husk fiber for textured balls and coir formats.","/collections/coconut-fiber/","/assets/img/product-coconut-fiber-raw.jpg"),
+            ("Coconut Fiber","Coconut-husk fiber for textured balls and coir formats.","/collections/coconut-fiber/","/assets/img/coconut-fiber-ball-top-view.jpg"),
             ("Hemp Fiber","Plant fiber used in wound balls and rope constructions.","/collections/hemp-fiber/","/assets/img/vietpaw-hemp-wood-assortment.jpg"),
             ("Loofah","Dried gourd fiber cut and shaped for lightweight toys.","/collections/loofah/","/assets/img/vietpaw-loofah-growing.png")],4)+p(RANGE_SCOPE)),
          section("Read the full bill of materials",p("Request the primary material, core, binding thread, adhesive, filling, decoration and any surface treatment for the selected product. A wood stick with a rope is not the same construction as a plain stick, and a loofah shape with filling is not the same as a plain cut piece.")+

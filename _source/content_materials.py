@@ -23,7 +23,7 @@ MATERIALS = {
  title="Coconut Fiber Pet Toys Manufacturer & Wholesale | VietPaw",
  h1="Coconut Fiber Pet Toys for Wholesale & Private Label",
  lede="Source coconut-husk fiber balls and discuss rope constructions for a textured natural-material range. Separate cat and dog specifications, then approve winding, dimensions and packaging.",
- image="product-coconut-fiber-raw.jpg",products=["coconut-fiber-dog-ball","coconut-fiber-cat-ball"],
+ image="coconut-fiber-ball-top-view.jpg",products=["coconut-fiber-dog-ball","coconut-fiber-cat-ball"],
  what="Coconut fiber, also called coir, comes from the coconut husk. The supplied product material describes preparation, drying and shaping for pet-toy formats. A finished ball may have additional components that must be declared before a whole-product claim is made.",
  applications=[("Dog balls","Specify diameter, finished weight and the intended fetch/carry use; evaluate the actual sample."),
  ("Cat balls","Create a separate cat-range specification and check for detachable or loose components."),
