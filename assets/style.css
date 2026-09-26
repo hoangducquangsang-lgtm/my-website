@@ -351,7 +351,7 @@ figcaption{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
 /* Logo mark before the wordmark */
 .brand-logo{width:44px;height:44px;border-radius:50%;margin-right:10px;flex-shrink:0;display:inline-block;background:#fff url(img/vietpaw-logo-96.webp) center/contain no-repeat;background-image:image-set(url(img/vietpaw-logo-96.webp) 1x,url(img/vietpaw-logo-192.webp) 2x)}
 .footer-logo{display:flex;align-items:center}
-.footer-logo .brand-logo{width:40px;height:40px;background:#fff}
+.footer-logo .brand-logo{width:40px;height:40px;background-color:#fff}
 .footer-brand .footer-legal{opacity:.9;margin:-2px 0 8px;font-size:.85rem;color:#fff}
 @media (max-width:600px){.brand-logo{width:36px;height:36px;margin-right:8px}}
 
