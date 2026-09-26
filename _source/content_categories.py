@@ -212,6 +212,8 @@ DOG_TOYS_FAQ = [
    "and prototype. They have different minimums, lead times and approval paths."),
 ]
 
+from content_answers import CATEGORY_ANSWERS, CATEGORY_FAQS
+
 def build(root):
     for path,h1,active,img,lede,products,subcategories,comparison,notes in CATEGORIES:
         if path=="/dog-toys/":
@@ -223,7 +225,7 @@ def build(root):
             continue
         puppy_link=p('Planning a young-dog range? Review <a href="/collections/teething-puppies/">puppy-toy sourcing and suitability considerations</a>.') if path=="/dog-toys/" else ""
         references=product_cards(products) if products else p('No puppy-specific SKU has been confirmed in the supplied specification. Use the <a href="/materials/">material overview</a> to discuss a dedicated design; do not relabel a cat toy or hard wood stick as puppy-safe.')
-        parts=[section("Plan the assortment",p(notes)+(cards(subcategories,2) if subcategories else "")+puppy_link),
+        parts=[section("Plan the assortment",(answer(CATEGORY_ANSWERS[path]) if path in CATEGORY_ANSWERS else "")+p(notes)+(cards(subcategories,2) if subcategories else "")+puppy_link),
                section("Product references for your brief",references,True),
                section("Materials, formats and buying checks",table(["Option","What to specify","What to check"],comparison)),
                section("Wholesale terms: MOQ, samples and lead time",terms(),True),
@@ -234,4 +236,4 @@ def build(root):
         publish(root,path,h1+" | VietPaw",lede,h1,lede,parts,active=active,image="/assets/img/"+img,
             faqs=[("Can I start with a small mixed order?", "Ask for a line-by-line quote. A minimum starting from 50 pcs applies only to selected standard products, not automatically to the whole assortment or every custom design."),
                   ("Can the products carry my brand?", "Yes, discuss labels, tags, packaging and wood engraving where suitable. Approve artwork and the physical sample before production."),
-                  ("What does the quotation need to include?", "Product references, dimensions, quantities per SKU, branding, packaging, destination, timing and any buyer testing or document requirements.")])
+                  ("What does the quotation need to include?", "Product references, dimensions, quantities per SKU, branding, packaging, destination, timing and any buyer testing or document requirements.")] + CATEGORY_FAQS.get(path, []))

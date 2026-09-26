@@ -229,6 +229,7 @@ COFFEE_FAQ = [
   "Olive wood has published timber data (roughly 980 kg/m\u00b3 dried, Janka around 2,710 lbf) because it is a commercial timber; coffee is a crop, so no equivalent figures exist. For an EU buyer the bigger difference is usually logistics: EU-sourced olive wood needs no customs entry, no duty and no phytosanitary certificate and can be reordered in small quantities, while coffee wood is a 30\u201335 day sea shipment with an import entry. Neither material can support digestibility or dental-benefit claims."),
 ]
 
+from content_answers import PRODUCT_ANSWERS, PRODUCT_FAQS
 from content_gorilla import GORILLA_ENTRY, gorilla_sections, GORILLA_FAQ
 PRODUCTS["gorilla-coffee-wood-dog-chew"]=GORILLA_ENTRY
 
@@ -261,7 +262,7 @@ def build(root):
             sections=coffee_wood_sections(specifications)
         else:
             sections=[
-            section("Product overview",p(d["overview"])),
+            section("Product overview",(answer(PRODUCT_ANSWERS[slug]) if slug in PRODUCT_ANSWERS else "")+p(d["overview"])),
             section("Product specifications",specifications,True),
             section("Sizes, formats and private-label options",ul(d["options"])+p('For branding an existing item, see <a href="/services/private-label-pet-toys/">private-label pet toys</a>. For structural changes, use our <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development service</a>.')),
             section("Quality control and use instructions",ul(d["checks"])+p(SAFETY)+trust_links(),True),
@@ -286,5 +287,5 @@ def build(root):
             trail=[("Home","/"),(d["group"],"/collections/"+d["collection"]+"/"),(d["name"],None)],
             faqs=GORILLA_FAQ if gorilla else COFFEE_FAQ if slug=="coffee-wood-dog-chew" else [("Can I order this exact sample?", "Yes, request the product, size and packaging combination. Samples are free — up to 3 per request; you cover the courier. We confirm availability and the courier cost before dispatch."),
                   ("Are the photos and dimensions a binding specification?", "No. Photos show the range and natural variation. The agreed sample, drawing and purchase-order specification define the supplied product."),
-                  ("Is private labeling available?", "Discuss the artwork, packaging and order quantity with us. New shapes, printed boxes and special finishes may have separate minimums and costs.")],
+                  ("Is private labeling available?", "Discuss the artwork, packaging and order quantity with us. New shapes, printed boxes and special finishes may have separate minimums and costs.")] + PRODUCT_FAQS.get(slug, []),
             schemas=[schema])
