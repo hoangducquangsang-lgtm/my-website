@@ -218,6 +218,17 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
         raise ValueError(f"Public page title must use VietPaw, not WINVN: {title}")
     if not path.startswith("/") or not path.endswith("/") or "index.html" in path or "?" in path or "#" in path:
         raise ValueError(f"Page path must be a clean canonical directory URL: {path}")
+    from content_answers import PAGE_ANSWERS, PAGE_FAQS
+    if path in PAGE_ANSWERS and 'class="answer-box"' not in content:
+        box = ('<section class="section section-short-answer"><div class="wrap"><div class="answer-box"><p><strong>Short answer:</strong> '
+               + PAGE_ANSWERS[path] + '</p></div></div></section>')
+        m = re.search(r'<section class="hero".*?</section>', content, re.S)
+        content = content[:m.end()] + box + content[m.end():] if m else box + content
+    if path in PAGE_FAQS:
+        extra = "".join(f'<div class="faq-item"><h3>{q}</h3><p>{a}</p></div>' for q,a in PAGE_FAQS[path])
+        i = content.find('<section class="rfq-bar"')
+        sec = f'<section class="section"><div class="wrap"><h2>More questions</h2>{extra}</div></section>'
+        content = content[:i] + sec + content[i:] if i >= 0 else content + sec
     title = TITLE_OVERRIDES.get(path, title)
     meta_description = META_OVERRIDES.get(path, meta_description)
     canonical = BASE_URL+path

@@ -354,3 +354,6 @@ figcaption{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
 .footer-logo .brand-logo{width:40px;height:40px;background:#fff}
 .footer-brand .footer-legal{opacity:.9;margin:-2px 0 8px;font-size:.85rem;color:#fff}
 @media (max-width:600px){.brand-logo{width:36px;height:36px;margin-right:8px}}
+
+.section-short-answer{padding:28px 0 0}
+.section-short-answer .answer-box{margin-bottom:0}
