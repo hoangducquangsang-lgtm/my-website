@@ -70,7 +70,7 @@ PRODUCTS = {
  options=["Choose the diameter and finished weight for the cat range; no dog-size chart is reused here.","Approve winding, surface texture and any internal or binding components.","Use a branded tag or small paper box; define whether units are sold singly or as a set."],
  checks=["Check for loose strands and attachment security before packing.","Compare sample diameter, mass and construction across the order.","Reject musty or visibly contaminated units and define clean, dry storage conditions."]),
 "coconut-fiber-dog-ball":dict(name="Coconut Fiber Dog Ball",material="Coconut fiber",collection="coconut-fiber",group="Coconut Fiber",
- image="coconut-fiber-ball-sizes-with-rope-toy.jpg",size="S / M / L references; confirm diameter",moq="Request MOQ by size and construction; selected standard lines start from 50 pcs.",
+ image="coconut-fiber-ball-sizes-with-rope-toy.jpg",size="S: 4–6 cm; M: 6–8 cm; L: 8–10 cm (catalogue reference)",moq="Request MOQ by size and construction; selected standard lines start from 50 pcs.",
  lede="A natural-texture ball for supervised fetch and carry play. Quote the diameter, finished weight, fiber construction and packing format your dog-toy range needs.",
  overview="Coconut fiber offers a different texture from molded rubber or plastic. The approved sample should determine winding density, size and construction; the material name alone does not establish durability, bounce, buoyancy or suitability for power chewing.",
  options=["Specify S, M or L only together with measurable dimensions and an approved sample.","Choose individual, multi-pack or assortment presentation; quote each component of a mixed box.","Private-label tags and box artwork can carry your handling instructions and product identification."],

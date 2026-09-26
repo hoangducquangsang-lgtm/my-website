@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SOURCE_OEM, AMAZON
+from content_helpers import publish, section, p, ul, table, cards, terms, trust_links, SOURCE_OEM, AMAZON, answer
 from content_products import product_cards
 
 SOLUTIONS = [
@@ -96,7 +96,19 @@ def build(root):
         "VietPaw sourcing plans for Amazon sellers, distributors, startup brands, pet brands, eco shops and retail chains.",
         "Sourcing Plans for the Way Your Business Buys",
         "The same material can serve different business models. Choose the buyer route that matches your launch, assortment or replenishment needs.",
-        [section("Choose your buying context",cards([(label,lede,"/solutions/"+slug+"/") for slug,label,title,h1,lede,img,features,brief,extra,service in SOLUTIONS])),
+        [section("Which route fits your business",
+            answer("<strong>Short answer:</strong> start from how you sell. Amazon sellers need pack dimensions and carton weights; startup brands "
+                   "need a low first order (from 50 pcs per SKU); pet brands and retail chains need a locked specification and repeatable packs; "
+                   "wholesalers need mixed cartons and fast stock (5–7 days for stock packaging).")
+            +table(["Buyer","First priority","Typical first order"],[
+                ("Amazon seller","FBA carton weight, barcode artwork, pack size","Stock or private label; confirm cartons"),
+                ("Startup brand","Low minimum and a physical sample","From 50 pcs per SKU"),
+                ("Pet brand","Own label and a locked specification","From 500 pcs per SKU"),
+                ("Eco pet shop","Claims you can support on the shelf","Small mixed assortment"),
+                ("Retail chain","Vendor pack, labels, delivery windows","Per chain programme"),
+                ("Wholesaler / distributor","Mixed cartons, repeat stock","Container: 429 cartons (20 ft) / 850 (40 ft)"),
+            ])),
+         section("Choose your buying context",cards([(label,lede,"/solutions/"+slug+"/") for slug,label,title,h1,lede,img,features,brief,extra,service in SOLUTIONS])),
          section("Keep the product specification at the center",p("Every route begins with a product sample, measurable specification and clear commercial scope. Marketplace, importer and retailer requirements should be part of the brief rather than added after production.")+trust_links(),True)],active="Solutions",image=IMG+"warehouse-inspection-clipboard.jpg")
     for slug,label,title,h1,lede,img,features,brief,extra,service in SOLUTIONS:
         sections=[

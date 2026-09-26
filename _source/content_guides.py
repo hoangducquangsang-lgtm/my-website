@@ -55,7 +55,7 @@ add("natural-dog-chew-toys-guide","Natural chew toys",
     ("VietPaw chew and toy references",
       spec_table(["Line","Sizes","Minimum","Lead time"],[
         ("Coffee wood CC01","XS, S, M, L, XL, XXL","50 pcs per size; Trial Box 100 / Starting Box 500","5–7 days stock"),
-        ("Coffee wood Gorilla","GRLS, GRLM, GRLL, GRLXL","Confirmed in the quote","Confirmed in the quote"),
+        ("Coffee wood Gorilla","GRLS, GRLM, GRLL, GRLXL","50 pcs per SKU","5–7 days stock"),
         ("Coconut fiber dog ball","S / M / L references","Selected lines from 50 pcs","Confirmed in the quote"),
         ("Hemp rope dog toy","Quoted by design","Project-specific","Confirmed in the quote"),
         ("Private label (any line)","—","500 pcs per SKU","60–80 days"),
@@ -355,7 +355,7 @@ add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
 
 add("how-long-do-coffee-wood-chews-last","Natural chew toys",
     "How Long Do Coffee Wood Chews Last?",
-    "There is no published lifespan for a coffee wood chew, and this explains why: what actually drives wear, how to answer the question on a product page, and when a chew must be replaced.",
+    "Why no supplier publishes a coffee wood chew lifespan, what drives wear, what to write on a product page, and when to replace the chew.",
     "It is the question every customer asks and the one no honest supplier can answer with a number. We do not publish a figure in days or weeks, and this page sets out why, what determines the answer for an individual dog, and what to write on your product page instead of a promise you cannot keep.",
     [
     ("The short answer",

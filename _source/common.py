@@ -175,6 +175,42 @@ def brand_schema():
     return {"@context":"https://schema.org","@type":"Brand","@id":BASE_URL+"/#brand",
             "name":BRAND,"slogan":"Natural Pet Products","description":BRAND_INTRO,"url":BASE_URL+"/"}
 
+# 2026-09-26 SEO pass: search-length titles and descriptions (<= ~65 / 120-160 chars) without changing on-page copy.
+TITLE_OVERRIDES = {
+ "/": "Natural Pet Toys Wholesale from Vietnam | VietPaw",
+ "/dog-toys/": "Wholesale Natural Dog Toys from Vietnam | VietPaw",
+}
+META_OVERRIDES = {
+ "/": "Coffee wood, coconut fiber, hemp and loofah pet toys made in Vietnam. Published sizes, moisture below 14%, wholesale and private label from 50 pcs.",
+ "/about/": "Who VietPaw is, where our materials come from and which claims we will not make. Natural pet toys from Vietnam for wholesale, private label and OEM.",
+ "/cat-toys/": "Build a cat-toy range from coconut-fiber balls and loofah shapes. Compare construction, dimensions and private-label packaging for retail.",
+ "/collections/coconut-fiber/": "Coconut fiber (coir) pet toys from Vietnam: what the material is, what to declare beyond the fiber, and how to specify a ball you can reorder.",
+ "/collections/coffee-wood/": "Seasoned Robusta coffee wood dog chews from Vietnam, six sizes plus the thick-cut Gorilla line, packed below 14% moisture. Process and limits.",
+ "/collections/hemp-fiber/": "Hemp rope balls, knotted tugs and ball-with-rope toys from Vietnam. How to specify a rope toy by geometry and knot, not by appearance.",
+ "/contact/": "Email sarah@vietpaw.com or WhatsApp +84 906 111 016 for natural pet toy samples, wholesale quotes, private label and OEM/ODM from Vietnam.",
+ "/dog-toys/chew-toys/": "Non-edible natural dog chews led by coffee wood sticks and the Gorilla line for strong chewers. Compare sizes and specifications before ordering.",
+ "/dog-toys/": "Coffee wood chews, coconut fiber balls and hemp rope toys from Vietnam. Compare by chewing style, see sizes, order wholesale or private label from 50 pcs.",
+ "/dog-toys/puzzle-toys/": "Texture-led natural enrichment toys for dogs. Current products focus on material and shape; treat-dispensing designs are custom development.",
+ "/dog-toys/rope-toys/": "Natural-fiber rope, knotted and ball-with-rope dog toys for supervised tug play. Specify fiber, rope geometry and packaging for wholesale.",
+ "/guides/": "Buyer guides to natural pet toy materials, chew sizing, supplier checks, MOQ, lead times and which product claims can be supported.",
+ "/products/coffee-wood-dog-chew/": "Coffee wood dog chews in six sizes XS–XXL with lengths, diameters, weights and carton counts. Below 14% moisture, ±3 mm length tolerance.",
+ "/solutions/amazon-sellers/": "Natural pet toys for Amazon FBA sellers: pack dimensions, barcode artwork, carton weights and a marketplace prep brief before production.",
+ "/solutions/eco-pet-shops/": "Natural pet toys for eco retailers: choose natural-material formats, check the whole pack and confirm which sourcing statements you can support.",
+ "/solutions/pet-brands/": "Natural pet toy manufacturing for pet brands, with defined construction, artwork and approval stages that keep every reorder consistent.",
+ "/solutions/retail-chains/": "Natural pet toy supply for retail chains: a consistent product and vendor pack, carton configuration, labeling and delivery windows.",
+ "/solutions/startup-brands/": "Low-MOQ natural pet toys for startup brands: start from 50 pcs with a physical sample, then add branded packaging from 500 pcs per SKU.",
+ "/solutions/": "Sourcing plans for Amazon sellers, distributors, startup brands, pet brands, eco shops and retail chains buying natural pet toys from Vietnam.",
+ "/case-studies/": "VietPaw case study framework: how customer results will be verified before publication. No customer result is asserted on this draft page.",
+}
+
+def auto_faq_schema(content, path):
+    items = re.findall(r'<div class="faq-item"><h3>(.*?)</h3><p>(.*?)</p></div>', content, re.S)
+    if not items:
+        return None
+    strip = lambda t: re.sub(r"<[^>]+>", "", t).strip()
+    return {"@context":"https://schema.org","@type":"FAQPage","@id":BASE_URL+path+"#faq",
+            "mainEntity":[{"@type":"Question","name":strip(q),"acceptedAnswer":{"@type":"Answer","text":strip(a)}} for q,a in items]}
+
 def page(title, meta_description, path, content, active_top="", schemas=None,
          og_image="/assets/img/vietpaw-natural-toy-assortment.png", noindex=False):
     # VietPaw is the public site brand; WINVN is identified in manufacturer/legal data.
@@ -182,7 +218,12 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
         raise ValueError(f"Public page title must use VietPaw, not WINVN: {title}")
     if not path.startswith("/") or not path.endswith("/") or "index.html" in path or "?" in path or "#" in path:
         raise ValueError(f"Page path must be a clean canonical directory URL: {path}")
+    title = TITLE_OVERRIDES.get(path, title)
+    meta_description = META_OVERRIDES.get(path, meta_description)
     canonical = BASE_URL+path
+    if not noindex and not any(isinstance(x,dict) and x.get("@type")=="FAQPage" for x in (schemas or [])):
+        fq = auto_faq_schema(content, path)
+        if fq: schemas = list(schemas or []) + [fq]
     content = responsive_markup(content)
     og_image = optimized_url(og_image)
     schemas = optimize_schema(list(schemas or []))

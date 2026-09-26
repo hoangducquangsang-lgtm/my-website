@@ -38,7 +38,17 @@ def build(root):
         "Compare coffee wood, coconut fiber, hemp and loofah for wholesale pet toys. Review product formats, component declarations and sourcing questions.",
         "Four Natural Materials for Your Pet Toy Range",
         "Start with the material and intended play type, then verify the complete construction. A natural ingredient is the beginning of a sourcing decision, not a finished-product certification.",
-        [section("Explore the material collections",cards([
+        [section("Which material for which toy",
+            answer("<strong>Short answer:</strong> choose coffee wood for hard, long chewing (the thick-cut Gorilla line for strong chewers), "
+                   "coconut fiber for fetch-and-carry balls, hemp for rope and tug toys, and loofah for light cat play. All four are made in "
+                   "VietPaw’s three factories in Vietnam, from 50 pcs per SKU on selected standard products.")
+            +spec_table(["Material","Typical products","Best for","Main check at sample approval"],[
+                ("Coffee wood","CC01 chew sticks XS–XXL; Gorilla GRLS–GRLXL","Dogs that chew","Dimensions, finish, cracks, moisture below 14%"),
+                ("Coconut fiber","Dog balls S/M/L, cat balls, coir rope toys","Fetch, carry, cat batting","Diameter, weight, winding, any core"),
+                ("Hemp fiber","Rope balls S/M/L, ball-with-rope and loop toys","Owner-led tug and carry","Fibre declaration, knots, joins"),
+                ("Loofah","Cut shapes: fish, mouse, bone, duck, rabbit","Light cat play","Shape, thickness, attachments, filling"),
+            ])),
+         section("Explore the material collections",cards([
             ("Coffee Wood","Mature coffee-tree timber for shaped chew sticks.","/collections/coffee-wood/","/assets/img/coffee-wood-chew-grain-detail.jpg"),
             ("Coconut Fiber","Coconut-husk fiber for textured balls and coir formats.","/collections/coconut-fiber/","/assets/img/coconut-fiber-ball-top-view.jpg"),
             ("Hemp Fiber","Plant fiber used in wound balls and rope constructions.","/collections/hemp-fiber/","/assets/img/hemp-rope-balls-three-sizes.jpg"),
@@ -48,7 +58,11 @@ def build(root):
             p('<a href="/sustainability/">Read the material-claim approach</a> and <a href="/certifications/">testing/document scope</a>.'),True),
          section("From material to commercial brief",p("Choose the product, target pet, use, dimensions and first-order quantity. Then decide whether to use a standard wholesale design, add private-label packaging, or develop a new construction.")+
             p('<a href="/capabilities/">Compare manufacturing options</a> or <a href="/services/wholesale-pet-products/">plan a mixed-material wholesale order</a>.'))],
-        active="Materials")
+        active="Materials",
+        faqs=[("Which natural material is best for dog chew toys?","Coffee wood. For strong chewers, choose the thick-cut Gorilla line rather than a larger standard stick."),
+              ("Which materials suit cats?","Loofah shapes and small coconut fiber balls, specified for cats rather than scaled down from dog toys."),
+              ("Can I order several materials in one shipment?","Yes. Minimums are confirmed per product and size, and samples can cover several materials."),
+              ("Are these materials biodegradable?","They are plant materials, but a biodegradable claim must cover the finished toy and pack with evidence. VietPaw does not publish such a claim.")])
     publish(root,"/certifications/","Pet Toy Testing & Export Documentation | VietPaw",
         "Understand product testing, inspection and shipment documents for VietPaw pet toys. Confirm report scope and destination requirements before ordering.",
         "Pet Toy Testing, Quality Records & Export Documents",

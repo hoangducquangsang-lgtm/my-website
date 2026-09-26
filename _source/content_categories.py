@@ -124,7 +124,7 @@ def dog_toys_sections():
       media(p("Most first orders in this category buy too many sizes. Six coffee wood sizes look thorough on a "
               "spreadsheet, but two of them usually carry the sell-through while the rest tie up stock. Start "
               "with the dogs your customers actually own \u2014 for most European and North American pet retail that "
-              "is the 5\u201320 kg band, which is sizes S and M \u2014 then add the extremes once you have sell-through "
+              "is the 5\u201320 kg band, which is sizes M, L and XL \u2014 then add the extremes once you have sell-through "
               "data rather than before.")
             + p("The reference dog weights below are a starting point for picking a size, not a veterinary "
                 "suitability assessment. A 25 kg dog that chews gently and a 25 kg dog that cracks things need "
