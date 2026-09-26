@@ -37,7 +37,7 @@ MATERIALS = {
  title="Hemp Pet Toy Manufacturer | Rope & Balls Wholesale | VietPaw",
  h1="Hemp Fiber Pet Toys — Wholesale Rope & Ball Formats",
  lede="Develop a hemp-fiber assortment with standalone balls, knotted ropes and mixed-material designs. Match construction to supervised play and document the approved specification.",
- image="vietpaw-hemp-wood-assortment.jpg",products=["hemp-fiber-ball","hemp-rope-dog-toy"],
+ image="hemp-rope-balls-three-sizes.jpg",products=["hemp-fiber-ball","hemp-rope-dog-toy"],
  what="Hemp fiber is a plant fiber used for wound balls and rope constructions in VietPaw's product range. Catalogues identify ball diameter bands, while rope length and knot details are design-specific. Fiber identity and any blends need to be confirmed for the chosen product.",
  applications=[("Standalone balls","The catalogue lists S 4–5 cm, M 6–7 cm and L 8–9 cm diameter bands; confirm current dimensions."),
  ("Tug formats","Define rope length, diameter, handle opening and knot construction on the sample."),
@@ -163,7 +163,7 @@ DEEP["coconut-fiber"] = dict(
  title="Coconut Fiber (Coir) Pet Toys — Material & Wholesale | VietPaw",
  h1="Coconut Fiber for Pet Toys",
  lede="Coir from the coconut husk, wound into textured balls for cats and dogs. What the material gives you, what has to be declared beyond the fiber, and how to specify a ball you can reorder.",
- image="/assets/img/vietpaw-coconut-fiber-balls.jpg",
+ image="/assets/img/coconut-fiber-ball-top-view.jpg",
  blocks=lambda: [
   section("What coconut fiber is",
     answer("Coconut fiber — coir — is the coarse fiber from the husk that surrounds a coconut. For pet toys it is cleaned, dried and wound into a dense textured ball. It is a by-product of coconut processing: the husk is waste from the food and oil trade, so the fiber is a genuine reuse stream rather than a crop grown for toys.")
@@ -203,8 +203,8 @@ DEEP["coconut-fiber"] = dict(
     ])
     +media(p("A wound ball is a supervised-play toy. It is not dietary fiber, not a hairball remedy and not a chew that should be reduced and swallowed. Loose fiber and damaged pieces should be removed rather than left with the animal, and that instruction belongs on your pack rather than only in your product description.")
            +p(SAFETY),
-           IMG+"puppy-with-rope-and-fiber-ball.jpg",
-           "Puppy nosing a natural fiber ball with a rope loop on a tiled floor",
+           IMG+"coconut-fiber-ball-with-rope-toy.jpg",
+           "Coconut fiber ball beside a knotted coir rope toy",
            "Fetch and carry play. Winding density and diameter are what make one ball last longer than another.")),
 
   section("Where coconut fiber fits, and where it does not",
@@ -234,7 +234,7 @@ DEEP["hemp-fiber"] = dict(
  title="Hemp Fiber Rope & Ball Pet Toys — Material & Wholesale | VietPaw",
  h1="Hemp Fiber for Rope and Ball Toys",
  lede="Wound hemp balls, knotted rope and wood-and-rope constructions. How to specify a rope toy by geometry and knot rather than by appearance, and what a fiber name does and does not tell you.",
- image=IMG+"cotton-rope-coffee-wood-dumbbell.jpg",
+ image=IMG+"hemp-rope-toy-assortment.jpg",
  blocks=lambda: [
   section("What hemp fiber is",
     answer("Hemp fiber is the bast fiber from the stem of the industrial hemp plant, spun into cord and then wound into balls or knotted into rope toys. It is a textile fiber, not a CBD product, not an antimicrobial treatment and not a dental product — the finished toy carries none of those properties and we do not claim them.")
@@ -249,9 +249,9 @@ DEEP["hemp-fiber"] = dict(
       ("Wood and rope","A coffee wood block joined to rope","Every component listed separately: wood size, rope fiber and diameter, and the connection itself."),
     ], caption="A photograph shows the silhouette. These four are separate products with separate specifications, minimums and approval paths.")
     +'<div class="grid grid-3">'
-    +figure(IMG+"cotton-rope-coffee-wood-dumbbell.jpg","Coffee wood block with knotted hemp rope at both ends on a light background","Wood and rope: three things to approve — the wood, the cord and the join.")
-    +figure(IMG+"hemp-rope-loop-coffee-wood-toy.jpg","Knotted rope loop attached to a coffee wood block","A rope loop changes the play pattern and the failure point.")
-    +figure(IMG+"cotton-rope-coffee-wood-dumbbell.jpg","Coffee wood cylinder with white cotton rope knots at each end","Cotton cord, not hemp. This is exactly the distinction a listing has to get right.")
+    +figure(IMG+"hemp-rope-balls-three-sizes.jpg","Three knotted hemp rope balls in small, medium and large","Standalone wound balls: diameter band, finished weight and winding density.")
+    +figure(IMG+"hemp-rope-loop-ball-toy.jpg","Hemp rope toy with a loop handle and a knotted ball end","Ball with rope: the join between loop and ball is its own inspection point.")
+    +figure(IMG+"hemp-ball-and-loop-toy-set.jpg","Hemp rope balls with a double-ended loop toy","A loop tug and two balls — three separate SKUs with separate specifications.")
     +"</div>",True),
 
   section("Specifying a rope toy",
@@ -303,11 +303,36 @@ DEEP["hemp-fiber"] = dict(
    "Yes, and it is one of the more popular constructions. Treat it as a multi-component product: the wood size, the cord fiber and diameter, and the connection each need their own approval. Do not describe the assembled toy as single-ingredient."),
  ])
 
+GALLERY = {
+ "coffee-wood": [("coffee-wood-chews-group-white-background.jpg","Several coffee wood chews of different sizes on a white background","Finished chews: grain, outline and shade vary piece to piece."),
+                 ("coffee-wood-chews-mixed-sizes.jpg","Coffee wood chews in mixed sizes lying together","Mixed sizes from one grading run."),
+                 ("coffee-wood-chews-packing-by-hand.jpg","Hands packing coffee wood chews into bags","Packing by hand at our warehouse.")],
+ "coconut-fiber": [("coconut-fiber-ball-top-view.jpg","Wound coconut fiber ball seen from above","A wound coir ball."),
+                   ("coconut-fiber-rope-toy-flat-lay.jpg","Knotted coconut fiber rope toy on a marble surface","Coir rope with knotted ends."),
+                   ("coconut-fiber-ball-with-rope-toy.jpg","Coconut fiber ball beside a knotted coir rope toy","Ball and rope from the same coir line.")],
+ "hemp-fiber": [("hemp-rope-ball-large.jpg","Large knotted hemp rope ball close up","Large hemp ball: check knot tightness."),
+                ("hemp-rope-ball-vacuum-packed-size-l.jpg","Hemp rope ball vacuum-packed with a size L label","Packed with its size label."),
+                ("hemp-rope-toy-assortment.jpg","Assortment of hemp rope balls and loop toys","Balls and loop toys, quoted as separate SKUs.")],
+ "loofah": [("loofah-fish-cat-toy.jpg","Fish-shaped loofah cat toy with a small loop","Fish shape with a hanging loop."),
+            ("loofah-mouse-cat-wand-toys.jpg","Two loofah mouse toys on wooden cat wands","Loofah mice on wands — each component specified separately."),
+            ("loofah-rabbit-shape-cat-toy.jpg","Rabbit-shaped loofah cat toy","Rabbit shape cut from dried loofah fibre."),
+            ("loofah-duck-cat-toy.jpg","Duck-shaped loofah cat toy","Duck shape."),
+            ("loofah-bone-shape-pet-toy.jpg","Bone-shaped loofah pet toy","Bone shape."),
+            ("loofah-mouse-toys-vacuum-pack.jpg","Loofah mouse toys vacuum-packed in a clear bag","Mouse toys packed for export.")],
+}
+
+def gallery_section(slug):
+    items = GALLERY.get(slug)
+    if not items:
+        return []
+    return [section("Product photos", '<div class="grid grid-3">'+"".join(figure(IMG+f,a,c) for f,a,c in items)+"</div>")]
+
 def build(root):
     for slug,d in MATERIALS.items():
         deep = DEEP.get(slug)
         if deep:
-            sections = deep["blocks"]() + [
+            blocks = deep["blocks"]()
+            sections = blocks[:1] + gallery_section(slug) + blocks[1:] + [
                 section("Products in this collection", product_cards(d["products"])),
                 section("MOQ, samples, packaging and lead time", terms(d["moq"])+trust_links(),True),
             ]
@@ -318,6 +343,7 @@ def build(root):
             continue
         sections=[
             section("What this material is",p(d["what"])),
+            *gallery_section(slug),
             section("Products and wholesale applications",product_cards(d["products"])+table(["Format","Buyer decision"],d["applications"]),True),
             section("From material sample to approved order",ul(d["approval"],True)+trust_links()),
             section("OEM, private label and range planning",p("Start with the sales channel, target pet, intended use and pack format. A standard product with your label follows a different approval path from a new shape or mixed-material construction.")+

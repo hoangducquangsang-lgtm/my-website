@@ -41,7 +41,7 @@ def build(root):
         [section("Explore the material collections",cards([
             ("Coffee Wood","Mature coffee-tree timber for shaped chew sticks.","/collections/coffee-wood/","/assets/img/coffee-wood-chew-grain-detail.jpg"),
             ("Coconut Fiber","Coconut-husk fiber for textured balls and coir formats.","/collections/coconut-fiber/","/assets/img/coconut-fiber-ball-top-view.jpg"),
-            ("Hemp Fiber","Plant fiber used in wound balls and rope constructions.","/collections/hemp-fiber/","/assets/img/vietpaw-hemp-wood-assortment.jpg"),
+            ("Hemp Fiber","Plant fiber used in wound balls and rope constructions.","/collections/hemp-fiber/","/assets/img/hemp-rope-balls-three-sizes.jpg"),
             ("Loofah","Dried gourd fiber cut and shaped for lightweight toys.","/collections/loofah/","/assets/img/vietpaw-loofah-growing.png")],4)+p(RANGE_SCOPE)),
          section("Read the full bill of materials",p("Request the primary material, core, binding thread, adhesive, filling, decoration and any surface treatment for the selected product. A wood stick with a rope is not the same construction as a plain stick, and a loofah shape with filling is not the same as a plain cut piece.")+
             p("The retail pack needs its own material list. Paper boxes can include coatings or windows; vacuum bags are not automatically plastic-free.")+

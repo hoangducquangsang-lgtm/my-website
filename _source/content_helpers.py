@@ -29,6 +29,9 @@ ECHA = "https://echa.europa.eu/en/regulations/reach/restriction"
 AAHA = "https://www.aaha.org/resources/dont-chew-on-this/"
 AMAZON = "https://sell.amazon.com/pricing"
 IMAGE_DESCRIPTIONS = {
+    "hemp-rope-loop-ball-toy.jpg": "Hemp rope toy with a loop handle and a knotted ball end",
+    "coconut-fiber-ball-with-rope-toy.jpg": "Coconut fiber ball beside a knotted coir rope toy",
+    "hemp-rope-toy-assortment.jpg": "Assortment of hemp rope balls and loop toys",
     "gorilla-coffee-wood-chews-three-pieces.jpg": "Three thick-cut Gorilla coffee wood chews on a white background",
     "golden-retriever-chewing-coffee-wood-chew-floor.jpg": "Golden retriever lying on a wooden floor chewing a coffee wood chew",
     "vietpaw-home-lifestyle.jpg": "A small dog holding a coffee wood chew stick indoors",

@@ -41,9 +41,9 @@ def home(root):
         ("Coffee wood", "Seasoned Robusta stem, six graded sizes, packed below 14% moisture. The hard-chew line.",
          "/collections/coffee-wood/", IMG+"vietpaw-coffee-wood-sizes.png"),
         ("Coconut fiber", "Coir from the husk, wound into textured balls. Specified by sample and weight, not by catalogue number.",
-         "/collections/coconut-fiber/", IMG+"puppy-with-rope-and-fiber-ball.jpg"),
+         "/collections/coconut-fiber/", IMG+"coconut-fiber-ball-top-view.jpg"),
         ("Hemp fiber", "Wound balls, knotted tug rope and wood-and-rope constructions. Specified by geometry and knot.",
-         "/collections/hemp-fiber/", IMG+"cotton-rope-coffee-wood-dumbbell.jpg"),
+         "/collections/hemp-fiber/", IMG+"hemp-rope-toy-assortment.jpg"),
         ("Loofah", "Dried gourd fiber cut into light cat-play shapes. Dimensions confirmed per shape.",
          "/collections/loofah/", IMG+"loofah-duck-cat-toy.jpg")], 4)
         + p(RANGE_SCOPE), True)

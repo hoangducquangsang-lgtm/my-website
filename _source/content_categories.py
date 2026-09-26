@@ -22,7 +22,7 @@ CATEGORIES = [
  ("Wood with rope","Multi-component toy","Confirm both materials and connection security"),
  ("Private-label pack","Brand-specific presentation","Size guide, warnings and pack protection")],
  "This category covers chew toys, not edible treats. Harder does not automatically mean safer or better for strong chewers. Select a range only after reviewing sample construction and clear supervised-use instructions. Coffee wood collection information supports supplier selection; the product page carries the detailed size table."),
-("/dog-toys/rope-toys/","Rope & Tug Dog Toys Wholesale","Dog Toys","vietpaw-hemp-wood-assortment.jpg",
+("/dog-toys/rope-toys/","Rope & Tug Dog Toys Wholesale","Dog Toys","hemp-rope-loop-ball-toy.jpg",
  "Discuss natural-fiber rope, knotted and ball-with-rope designs for supervised tug play. Specify fiber identity, rope geometry and packaging for wholesale or private-label orders.",
  ["hemp-rope-dog-toy","hemp-fiber-ball"],[],
  [("Knotted rope","Length, diameter, knots","Inspect knot security and fraying"),
@@ -52,7 +52,7 @@ CATEGORIES = [
  ("Loofah shapes","Lightweight play","Check stitching and detachable parts"),
  ("Optional catnip","Development request","Confirm inclusion, source and labeling")],
  "A cat assortment needs its own specifications rather than scaled-down dog-toy descriptions. Ask for each shape's measurements and every internal or attached component. Plan pack information around supervised play, inspection and replacement, without promising dental or therapeutic benefits."),
-("/cat-toys/balls/","Natural Cat Balls & Chasers Wholesale","Cat Toys","vietpaw-coconut-fiber-balls.jpg",
+("/cat-toys/balls/","Natural Cat Balls & Chasers Wholesale","Cat Toys","coconut-fiber-ball-top-view.jpg",
  "Request coconut-fiber cat-ball samples and build a measured, consistent batting-and-chasing range with your own tags or packaging.",
  ["coconut-fiber-cat-ball"],[],
  [("Single ball","Diameter and mass","Approve a cat-specific sample"),
@@ -116,8 +116,8 @@ def dog_toys_sections():
 
     section("Browse by play type", cards([
         ("Chew toys", "Coffee wood stick specifications and honest chew-range planning.", "/dog-toys/chew-toys/", IMG+"vietpaw-coffee-wood-sizes.png"),
-        ("Rope & tug toys", "Cord geometry, knot construction and attachment checks.", "/dog-toys/rope-toys/", IMG+"cotton-rope-coffee-wood-dumbbell.jpg"),
-        ("Fetch & balls", "Diameter, winding density, pack format.", "/dog-toys/fetch-toys/", IMG+"puppy-with-rope-and-fiber-ball.jpg"),
+        ("Rope & tug toys", "Cord geometry, knot construction and attachment checks.", "/dog-toys/rope-toys/", IMG+"hemp-rope-loop-ball-toy.jpg"),
+        ("Fetch & balls", "Diameter, winding density, pack format.", "/dog-toys/fetch-toys/", IMG+"coconut-fiber-ball-with-rope-toy.jpg"),
         ("Enrichment", "Texture-led formats and development briefs.", "/dog-toys/puzzle-toys/", IMG+"hemp-rope-loop-coffee-wood-toy.jpg")], 4), True),
 
     section("Sizing the range to real dogs",
