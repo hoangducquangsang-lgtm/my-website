@@ -17,7 +17,7 @@ HOME_LEDE = ("Coffee wood, coconut fiber, hemp and loofah, manufactured in our o
 def home(root):
     content = hero("Wholesale Natural Pet Toys, Specified Before You Buy", HOME_LEDE,
         eyebrow="VietPaw \u00b7 Natural pet toys from Vietnam",
-        image=IMG+"golden-retriever-chewing-coffee-wood.jpg")
+        image=IMG+"golden-retriever-chewing-coffee-wood-chew-floor.jpg")
 
     content += section("What VietPaw supplies",
         answer("VietPaw manufactures and exports natural-material pet toys from Vietnam: coffee wood chews, "
@@ -165,7 +165,7 @@ def home(root):
         "Wholesale Natural Pet Toys from Vietnam | Specs & Private Label | VietPaw",
         "Coffee wood, coconut fiber, hemp and loofah pet toys made in Vietnam. Published sizes and carton data, "
         "moisture below 14%, five QC checkpoints. Wholesale, private label and OEM/ODM from 50 pcs.",
-        "/", content, schemas=schemas, og_image=IMG+"golden-retriever-chewing-coffee-wood.jpg"))
+        "/", content, schemas=schemas, og_image=IMG+"golden-retriever-chewing-coffee-wood-chew-floor.jpg"))
 
 
 def about(root):

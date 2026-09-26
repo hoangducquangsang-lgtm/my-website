@@ -29,6 +29,8 @@ ECHA = "https://echa.europa.eu/en/regulations/reach/restriction"
 AAHA = "https://www.aaha.org/resources/dont-chew-on-this/"
 AMAZON = "https://sell.amazon.com/pricing"
 IMAGE_DESCRIPTIONS = {
+    "gorilla-coffee-wood-chews-three-pieces.jpg": "Three thick-cut Gorilla coffee wood chews on a white background",
+    "golden-retriever-chewing-coffee-wood-chew-floor.jpg": "Golden retriever lying on a wooden floor chewing a coffee wood chew",
     "vietpaw-home-lifestyle.jpg": "A small dog holding a coffee wood chew stick indoors",
     "vietpaw-natural-toy-assortment.png": "VietPaw loofah play shapes and coffee wood stick displayed in a basket",
     "coffee-wood-chew-grain-detail.jpg": "Finished coffee wood chew stick on a light background",

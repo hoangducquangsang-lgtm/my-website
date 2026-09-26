@@ -1452,6 +1452,56 @@
         }
       ]
     },
+    "assets/img/golden-retriever-chewing-coffee-wood-chew-floor.jpg": {
+      "sha256": "5f3e7d59d089ad0eca70ffe9aeff3a33cd2b3505d995d3e5feff9c4d695fe9f5",
+      "width": 1672,
+      "height": 941,
+      "bytes": 333210,
+      "variants": [
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-chew-floor-jpg-320w.webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 14516
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-chew-floor-jpg-480w.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 28690
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-chew-floor-jpg-640w.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 47946
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-chew-floor-jpg-800w.webp",
+          "width": 800,
+          "height": 450,
+          "bytes": 71676
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-chew-floor-jpg-960w.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 98390
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-chew-floor-jpg-1200w.webp",
+          "width": 1200,
+          "height": 675,
+          "bytes": 143172
+        },
+        {
+          "path": "assets/img/webp/golden-retriever-chewing-coffee-wood-chew-floor-jpg-1600w.webp",
+          "width": 1600,
+          "height": 900,
+          "bytes": 208714
+        }
+      ]
+    },
     "assets/img/golden-retriever-chewing-coffee-wood.jpg": {
       "sha256": "c7898ffb6face54af841153cd862da324338ff5b175149728e8998b4a734f620",
       "width": 1980,
@@ -1543,6 +1593,32 @@
           "width": 1200,
           "height": 1600,
           "bytes": 130734
+        }
+      ]
+    },
+    "assets/img/gorilla-coffee-wood-chews-three-pieces.jpg": {
+      "sha256": "7b2ceac0eff117898cf8479b58b8d216df5707d6757b846ccc1386e3ec41eeac",
+      "width": 550,
+      "height": 550,
+      "bytes": 40163,
+      "variants": [
+        {
+          "path": "assets/img/webp/gorilla-coffee-wood-chews-three-pieces-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 7506
+        },
+        {
+          "path": "assets/img/webp/gorilla-coffee-wood-chews-three-pieces-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14474
+        },
+        {
+          "path": "assets/img/webp/gorilla-coffee-wood-chews-three-pieces-jpg-550w.webp",
+          "width": 550,
+          "height": 550,
+          "bytes": 18498
         }
       ]
     },

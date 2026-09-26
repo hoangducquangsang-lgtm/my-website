@@ -13,7 +13,7 @@ GORILLA_ROWS = [
 ]
 
 GORILLA_ENTRY = dict(name="Gorilla Coffee Wood Dog Chew",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
- image="process-raw-sticks.jpg",size="GRLS–GRLXL; four thick-cut sizes",moq="From 50 pcs per SKU; 500 pcs with your own label.",
+ image="gorilla-coffee-wood-chews-three-pieces.jpg",size="GRLS–GRLXL; four thick-cut sizes",moq="From 50 pcs per SKU; 500 pcs with your own label.",
  lede="Thick-cut coffee wood chews for strong chewers — the same untreated coffee wood as our stick range, cut short and thick. Four sizes from GRLS (155–230 g) to GRLXL (550–900 g).",
  overview="",options=[],checks=[])
 
@@ -25,14 +25,12 @@ def gorilla_sections(specifications):
                "(10–12 × 15 cm, 550–900 g). Nothing is added to it, and nothing is done to it that is not done to a standard stick.")
         + p("Choose Gorilla when a dog gets through a standard chew within a weekend. For moderate chewers, the standard CC01 stick range "
             "(XS–XXL) remains the better fit — see the <a href=\"/products/coffee-wood-dog-chew/\">coffee wood dog chew</a> page.")
-        + media(ul([
+        + ul([
             "<strong>Thick-cut.</strong> Diameter, not length, is what a strong chewer works against.",
             "<strong>One material.</strong> Untreated coffee wood — no glue, coating, preservative or colouring.",
             "<strong>Dried and graded.</strong> Below 14% moisture on every batch; any cracked piece is rejected.",
             "<strong>Not food.</strong> A chew toy for supervised use.",
-        ]), IMG+"thick-coffee-wood-chews-vacuum-pack.jpg",
-            "Thicker coffee wood pieces vacuum-packed at our warehouse",
-            "Coffee wood from our line, vacuum-packed. Gorilla pieces are cut from the thickest stems.")),
+        ])),
 
     section("Why diameter matters more than length",
         p("A wood chew stops working for a strong chewer when the dog can get a molar around it and lever rather than gnaw. What decides "
