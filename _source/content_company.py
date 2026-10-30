@@ -188,8 +188,8 @@ def build(root):
            "A booking with its paperwork attached rather than chased afterwards."),
         ])
         + p('For production locations and inspection arrangements, see <a href="/factory/">factory and '
-            'production</a>. Buyer-arranged inspection is welcome; please arrange visits in advance and confirm '
-            'the current site and contact for your product line.')
+            'production</a>. Pre-shipment inspection can be arranged at our Ho Chi Minh City warehouse, and dated '
+            'photos or a video walkthrough of your production line are available on request.')
         + p(CONTRACT_NOTICE)),
     ]
     publish(root,"/contact/","Contact VietPaw | Samples, Quotes & Wholesale Enquiries",
@@ -212,9 +212,10 @@ def build(root):
           ("Do you work with small buyers and new brands?",
            "Yes. Selected standard SKUs start at 50 pcs, and laser engraving also starts at 50 pcs, so a small branded trial "
            "is possible before committing to the 500 pcs printed-packaging minimum."),
-          ("Can I visit the factory?",
-           "Yes, by arrangement. Confirm the current site and the contact for your product line in advance. Buyer-appointed "
-           "third-party inspection is also welcome and we would encourage it for a first container."),
+          ("How can I check production before I pay the balance?",
+           "Ask for dated photos of your line, a video walkthrough and the batch moisture record filed against your lot. "
+           "Pre-shipment inspection at our Ho Chi Minh City warehouse can be arranged before the container is sealed, and we "
+           "would encourage it for a first container."),
           ("What languages do you work in?",
            "English and Vietnamese."),
         ])

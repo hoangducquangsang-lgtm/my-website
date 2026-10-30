@@ -76,7 +76,7 @@ def gorilla_sections(specifications):
         ul([MOISTURE,
             "Any cracked piece is rejected at grading. Roughly one piece in five is removed across the whole process.",
             "Seven export documents ship with every order, including phytosanitary and fumigation certificates and a Certificate of Origin.",
-            "Buyer visits and third-party inspection are welcome at our factories."])
+            "Pre-shipment inspection at our Ho Chi Minh City warehouse and batch moisture records are available on request."])
         + p(CAFFEINE)
         + p(SAFETY)),
     ]

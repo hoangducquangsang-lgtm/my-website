@@ -8,7 +8,7 @@ import re
 import sys
 import zipfile
 
-from validate_site import Document, ROOT
+from validate_site import Document, ROOT, RETIRED_REDIRECT_STUBS
 from responsive_images import SIZES
 from content_helpers import IMAGE_DESCRIPTIONS
 
@@ -76,6 +76,8 @@ def run(backup, *, check_legacy_copy=False):
     for file in sorted(ROOT.rglob("index.html")):
         if "_source" in file.parts:
             continue
+        if file.relative_to(ROOT).as_posix() in RETIRED_REDIRECT_STUBS:
+            continue  # redirect stub, not a page
         d = document(file.read_text(encoding="utf-8"))
         docs[file.relative_to(ROOT).as_posix()] = d
         for image in d.images:

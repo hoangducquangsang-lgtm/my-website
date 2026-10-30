@@ -16,6 +16,9 @@ from datetime import date
 from guide_dates import GUIDE_UPDATED_DATES, updated_time
 from retired_content import assert_retired_files_absent, is_retired_path
 
+# Files that exist only to forward a retired route; they are not site pages.
+RETIRED_REDIRECT_STUBS = {"wholesale-catalogue/index.html"}
+
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
 GOOGLE_TAG_ID = "G-XTXJ45XN8B"
@@ -100,6 +103,8 @@ def run():
         if not ok: errors.append(message)
     for file in sorted(ROOT.rglob("index.html")):
         if "_source" in file.parts: continue
+        # Retired routes keep a redirect stub, not a page; checked separately below.
+        if str(file.relative_to(ROOT)).replace("\\", "/") in RETIRED_REDIRECT_STUBS: continue
         d=Document()
         html=file.read_text(encoding="utf-8")
         check(not re.search(r"(?:^|[ /])proof/|proof-(?:co-form-vj|fumigation-2021|phytosanitary-specimen|surrendered-bl-2022)", html, re.I),
@@ -279,6 +284,16 @@ def run():
     check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email","phone","country","buyer_type"},"RFQ required fields differ (company must be optional)")
     check(sum(1 for f in rfq.fields if f.get("name")=="products" and f.get("type")=="checkbox")==4,"RFQ product interest must be 4 checkboxes")
     check("/wholesale-catalogue/" not in docs,"Retired catalogue route must not be published again")
+    stub = ROOT/"wholesale-catalogue"/"index.html"
+    check(stub.is_file(),"Retired catalogue route must keep a redirect stub to /request-a-quote/")
+    if stub.is_file():
+        stub_html = stub.read_text(encoding="utf-8")
+        check('http-equiv="refresh" content="0; url=/request-a-quote/"' in stub_html,
+              "Catalogue redirect stub must forward to /request-a-quote/")
+        check('rel="canonical" href="https://vietpaw.com/request-a-quote/"' in stub_html,
+              "Catalogue redirect stub must canonicalise to /request-a-quote/")
+        check('content="noindex, follow"' in stub_html,
+              "Catalogue redirect stub must be noindex")
     check(any(key=="action" and link=="https://formspree.io/f/mvkpbvlb" for _,key,link in rfq.links),"Legacy Formspree destination missing")
     check(docs["/request-a-quote/thank-you/"][1].meta.get("robots")=="noindex,follow","Thank-you page must be noindex")
     for route in ("/products/coffee-wood-dog-chew/","/guides/coffee-wood-chew-size-guide/"):

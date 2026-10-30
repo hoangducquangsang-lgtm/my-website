@@ -1159,9 +1159,9 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
        "Certificate and a Forest-Product Declaration. Batch moisture readings are available on request."),
       ("Which port do goods ship from?",
        "Cat Lai, Ho Chi Minh City. Sea transit to the EU or the US is commonly quoted at 30–35 days port to port."),
-      ("Can I visit the factory before ordering?",
-       "Yes. Buyer visits and third-party inspection are welcome at both factories; arrange in advance so the line is running when "
-       "you arrive."),
+      ("How can I check the supplier before ordering?",
+       "Ask for dated photos of the line making your product, a video walkthrough and the batch moisture record. Pre-shipment "
+       "inspection can be arranged at our Ho Chi Minh City warehouse before the container is sealed."),
     ],
     figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.'),('coffee-wood-chews-graded-sizes-stacked.jpg','Packs of graded coffee wood chews stacked from small to large','Graded sizes stacked from smallest to largest, ready for cartoning.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
 
@@ -1189,7 +1189,7 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     ("VietPaw at a glance",
       spec_table(["Item","Detail","Where to check"],[
         ("Company","Registered in Vietnam on 12 November 2019; exporting to 40+ countries","About page; contract details in your quotation"),
-        ("Factories","Two partner factories: Dak Lak and Gia Lai, Central Highlands","Factory page; visits by appointment"),
+        ("Factories","Two partner factories: Dak Lak and Gia Lai, Central Highlands","Factory page; dated photos and video walkthrough on request"),
         ("Head office and export","Ho Chi Minh City office and warehouse; shipments leave from Cat Lai","Contact page"),
         ("Materials","Coffee wood, coconut fiber, hemp and loofah","Collection pages"),
         ("Coffee wood QC","Drying and quality protocol with five QC checkpoints; moisture below 14% before packing","Batch readings on request"),
@@ -1250,9 +1250,9 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
       ("Which dog toys does VietPaw make?",
        "Coffee wood chews, coconut fiber toys, hemp rope toys and loofah toys, including wood-and-rope combinations made to an approved "
        "specification."),
-      ("Can I visit the factory or send an inspector?",
-       "Yes. Buyer visits and third-party inspection are welcome at both factories. Arrange in advance so the line is running when "
-       "you arrive."),
+      ("Can I have an inspector check the goods?",
+       "Yes. Pre-shipment inspection is arranged at our Ho Chi Minh City warehouse, where a third party can measure a sample, "
+       "witness the moisture reading and check carton marks before the container is sealed."),
       ("What is the minimum order?",
        "Selected standard products start from 50 pcs per SKU. Private-label runs start at 500 pcs per SKU."),
       ("How do I tell a manufacturer from a trading company?",
@@ -1429,7 +1429,7 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
        "60–80 days of production when the order carries your own label, printed box or engraving, most of it artwork approval and tooling. Add "
        "30–35 days sea transit to the EU or the US. OEM and ODM projects get their own schedule after prototype approval."),
     ],
-    figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('bagged-chews-with-desiccant.jpg','Bagged coffee wood chews with a desiccant sachet ready for packing','Printed tags, labels and boxes start at 500 pcs per SKU — a separate minimum from engraving.'),('hemp-rope-ball-vacuum-packed-size-l.jpg','Hemp rope ball vacuum-packed with a size L label','Size label on the pack: the same reference should appear on the quote and the packing list.')])
+    figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('vacuum-bagged-chews-stacked.jpg','Coffee wood chews vacuum packed with a desiccant sachet, stacked ready for cartoning','Printed tags, labels and boxes start at 500 pcs per SKU — a separate minimum from engraving.'),('hemp-rope-ball-vacuum-packed-size-l.jpg','Hemp rope ball vacuum-packed with a size L label','Size label on the pack: the same reference should appear on the quote and the packing list.')])
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     "Pet Toy MOQ, FOB Pricing and Lead Times: Reading the Quote",
@@ -1759,7 +1759,7 @@ add("pet-toy-safety-testing-requirements","Compliance & risk",
         ("Moisture","Below 14% before packing; batch readings on request"),
         ("Cracks","Any cracked piece rejected at grading"),
         ("Length tolerance","±3 mm on the coffee wood stick line"),
-        ("Buyer inspection","Visits and third-party inspection welcome at both factories"),
+        ("Buyer inspection","Pre-shipment inspection at the Ho Chi Minh City warehouse; dated photos and video walkthrough on request"),
         ("Laboratory testing","Arranged separately on request"),
       ])),
 
@@ -1808,7 +1808,7 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
     ("The supplier vetting checklist",
       spec_table(["Check","What to ask for","Red flag","What VietPaw provides"],[
         ("Legal entity and payment","Registration details and the beneficiary named on the contract","Bank account in a different name; bank details changed by email","Company details, beneficiary and terms in the quotation, invoice and contract"),
-        ("Production location","Site details and a walkthrough for your product","Only warehouse photos; no named site","Two named factories in Dak Lak and Gia Lai; visits and third-party inspection welcome"),
+        ("Production location","Site details and a walkthrough for your product","Only warehouse photos; no named site","Two named factories in Dak Lak and Gia Lai; dated photos, video walkthrough and pre-shipment inspection"),
         ("Sample and specification","A sample with written dimensions, components and tolerances","Photo approval only; “same as before”","3 free samples; dimensions recorded at approval"),
         ("Quality records","Checkpoints and a record linked to your lot","Generic certificate, no batch reference","Coffee wood: five QC checkpoints; moisture below 14% before packing, batch readings on request"),
         ("Product claims","Evidence matched to the exact product and pack","“Non-toxic”, “splinter-free” or “biodegradable” without scope","Claims limited to what is documented; testing arranged on request"),
@@ -1864,8 +1864,9 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
        "Do not pay until you have confirmed the change through a contact route you already trust, such as a known phone number. Changed bank "
        "details sent by email are a common fraud pattern."),
       ("Do I need to visit the factory?",
-       "Not always, but you should be able to. A walkthrough, a video tour of your product line or an independent inspection gives similar "
-       "evidence. VietPaw welcomes visits and third-party inspection at both factories."),
+       "Not always. A dated walkthrough, a video tour of your product line or an independent pre-shipment inspection gives similar "
+       "evidence. VietPaw provides dated photos and a video walkthrough on request, and inspection is arranged at the Ho Chi Minh "
+       "City warehouse before the container is sealed."),
       ("Which documents should a natural pet toy supplier provide?",
        "At minimum a Commercial Invoice, Packing List and transport document. For plant-based goods, expect a Certificate of Origin, "
        "Phytosanitary and Fumigation Certificates; VietPaw also issues a Forest-Product Declaration."),

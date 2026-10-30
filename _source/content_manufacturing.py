@@ -125,14 +125,14 @@ def build(root):
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
     publish(root,"/factory/","Pet Toy Factory Vietnam | Process & Verification | VietPaw",
-        "VietPaw works with two coffee wood factories in Dak Lak and Gia Lai, Vietnam. Process, quality control, export documents and factory visits.",
+        "VietPaw works with two coffee wood factories in Dak Lak and Gia Lai, Vietnam. Process, quality control, export documents and pre-shipment inspection.",
         "The Factories We Work With in Vietnam",
         "We work with two coffee wood factories in Dak Lak and Gia Lai, with packing and export documents prepared from our Ho Chi Minh City warehouse.",
         [section("Two factories, one specification",
             p("VietPaw does not own the factories; it controls the manufacturing. We work with two factories in Vietnam — one in Dak Lak and one in Gia Lai, both in the Central Highlands close to where the coffee wood is collected — that build to our specification and release against our quality checks, with packing and export documentation run from our Ho Chi Minh City office and warehouse.")+
             table(["Site","Location"],SITES)+
             p("We do not publish a headline capacity figure. Volume and dates for your order are planned against the actual SKU mix and confirmed in your quotation.")+
-            p("Buyer visits and third-party inspection are welcome at any of our factories; please arrange in advance so the line is running when you arrive.")),
+            p("Pre-shipment inspection can be arranged at our Ho Chi Minh City warehouse, and dated photos or a video walkthrough of your production line are available on request.")),
          section("Coffee wood drying and quality protocol",
             p("Coffee wood follows a "+QC_PROTOCOL+". The five checkpoints are inspection controls within that process.")+
             p(MOISTURE)+
@@ -145,13 +145,13 @@ def build(root):
             "A dated walkthrough identifying the product line and stages handled there.",
             "Production slot and capacity calculation for the actual SKU mix and pack.",
             "Quality checkpoints, measuring equipment and sample/lot identification.",
-            "Arrangements for buyer or independent inspection at our factories.",
+            "Arrangements for independent pre-shipment inspection at the packing warehouse.",
             "Authorized, appropriately redacted shipment examples where relevant."])+
             p('<a href="/quality-control/">Review the quality-control workflow</a> and <a href="/certifications/">document scope</a> before agreeing the inspection brief.'),True)],
         active="Manufacturing",image="/assets/img/process-raw-sticks.jpg",
         faqs=[("How is production capacity confirmed?", "We do not publish a headline monthly figure. Capacity is planned against your actual product mix and packaging, and the lead time and production slot are confirmed in your quotation."),
               ("Do you own the factories?", "No. VietPaw works with two factories, in Dak Lak and Gia Lai. We are the manufacturer in the OEM sense: the specification, the production plan, the QC checkpoints and the quality release are ours, and so are the export documents. We will name the site that makes your order."),
-              ("Can I arrange a factory visit?", "Yes. Tell us which factory and product you want to see and we will arrange the appointment and contact before you travel. Third-party inspection is also welcome.")])
+              ("How can I verify production without travelling?", "Ask for dated photos of your line, a video walkthrough and the batch moisture record filed against your lot. Pre-shipment inspection can be arranged at our Ho Chi Minh City warehouse before the container is sealed.")])
     publish(root,"/quality-control/","Pet Toy Quality Control | VietPaw",
         "Coffee wood follows our drying and quality protocol with five QC checkpoints. Review batch moisture below 14% before packing and inspection records.",
         "Quality Control for Natural Pet Toy Orders",

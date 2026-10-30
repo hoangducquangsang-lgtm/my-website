@@ -106,7 +106,7 @@ DEEP["coffee-wood"] = dict(
        "Pieces are sorted into diameter bands; any cracked piece is pulled.",
        "Graded stock per size, with an internally reported reject rate of roughly one piece in five overall."),
       ("Moisture check and packing",
-       "A pin-type meter reading is taken and photographed for the batch, pieces are bagged with a desiccant sachet, and carton marks are checked against the packing list.",
+       "A pin-type meter reading is taken and photographed for the batch, pieces are vacuum packed with a desiccant sachet, and carton marks are checked against the packing list.",
        "A sealed carton whose marks and moisture record match the paperwork."),
     ])
     +'<div class="grid grid-3">'

@@ -1,7 +1,9 @@
 """Content withdrawn by the owner. Originals are backed up outside the website.
 
-Proof pages (2026) and the wholesale catalogue route (retired 2026-10-29, 301 to the
-RFQ page in .htaccess) must never be published again."""
+Proof pages (2026) and the wholesale catalogue route (retired 2026-10-29) must never be
+published again. The only file allowed at the retired catalogue route is the redirect
+stub written by build.py, which sends visitors to /request-a-quote/ (GitHub Pages does
+not read the .htaccess 301 rules; the stub is what actually redirects on the live site)."""
 from pathlib import Path
 
 PROOF_STEMS = (
@@ -12,8 +14,13 @@ PROOF_STEMS = (
 )
 
 
+REDIRECT_STUB = "wholesale-catalogue/index.html"
+
+
 def is_retired_path(relative):
     value = str(relative).replace("\\", "/").strip("/")
+    if value == REDIRECT_STUB:
+        return False
     return (
         value == "wholesale-catalogue" or value.startswith("wholesale-catalogue/")
         or value == "proof" or value.startswith("proof/")

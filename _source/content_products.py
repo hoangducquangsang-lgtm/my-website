@@ -142,7 +142,7 @@ def coffee_wood_sections(specifications):
              "Pieces are sorted into diameter bands and any cracked piece is pulled out.",
              "Graded stock per size, with roughly one piece in five removed across the whole process."),
             ("Moisture check and packing",
-             "A pin-type meter reading is taken and photographed for the batch, then pieces are bagged with a desiccant sachet and packed.",
+             "A pin-type meter reading is taken and photographed for the batch, then pieces are vacuum packed with a desiccant sachet and cartoned.",
              "A sealed carton with a moisture record attached to the lot.",
              "A second reading is taken before the container is sealed, because the container voyage — not our factory — is where most mould claims originate."),
         ])
@@ -177,7 +177,7 @@ def coffee_wood_sections(specifications):
               +ul(["Engraving on suitable wood surfaces starts at 50 pcs and is separate from the packaging minimum.",
                    "Custom hang tags, printed labels and printed boxes start at 500 pcs per SKU.",
                    "Bulk bag, single poly bag, vacuum pack and paper or kraft box formats are all available.",
-                   "Every pack carries a desiccant sachet; confirm the desiccant type in writing if your market restricts it."]),
+                   "Packs are vacuum sealed with a desiccant sachet inside; confirm the film and desiccant type in writing if your market restricts them."]),
               IMG+"laser-engraving-coffee-wood-chew.jpg",
               "Laser engraving head marking a brand logo onto a coffee wood chew stick",
               "Engraving is burned into the surface, so there is no label to peel away during chewing.")
@@ -201,8 +201,8 @@ def coffee_wood_sections(specifications):
                    "Leave bags sealed until the goods go out, and finish an opened bag the same day.",
                    "Around 25–28 °C with air circulation is a workable warehouse target."]),
                IMG+"sealed-bag-pressed-into-export-carton.jpg",
-               "Hand pressing a sealed bag of coffee wood chews into an export carton with a desiccant sachet",
-               "Bagged and packed with a desiccant sachet. Most mould claims trace back to the voyage, not the bench.")),
+               "Coffee wood chews vacuum packed with a desiccant sachet before cartoning",
+               "Vacuum packed with a desiccant sachet. Most mould claims trace back to the voyage, not the bench.")),
 
     section("Order terms",terms("From 50 pcs per SKU on standard coffee wood sticks. Engraving, rope combinations and custom boxes are quoted separately.")
         +trust_links(),True),

@@ -193,8 +193,8 @@ def about(root):
           "control what is made there \u2014 the specification, the production plan and the quality release are ours. "
           "Packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")
         + spec_table(["Site", "Location"], SITES,
-            caption="Buyer-arranged visits and third-party inspection are welcome at any site; please arrange in "
-                    "advance so the line is running when you arrive. Loading port is Cat Lai, Ho Chi Minh City.")
+            caption="Pre-shipment inspection can be arranged at our Ho Chi Minh City warehouse before the container "
+                    "is sealed. Loading port is Cat Lai, Ho Chi Minh City.")
         + p("We do not publish a headline capacity figure. The volume and dates for your order are planned "
             "against the actual SKU mix and confirmed in your quotation.")),
 
@@ -285,14 +285,14 @@ def about(root):
            "No, and we do not claim to. We work with two factories, in Dak Lak and Gia Lai. What we control is the "
            "manufacturing itself: the specification they build to, the production plan, the five QC checkpoints and "
            "the quality release, and we ship on our own export documents. We will name the site that makes your "
-           "order, and you are welcome to visit it or send an inspector."),
+           "order, and we provide dated photos, a video walkthrough and the batch records for it."),
           ("How long have you been exporting?",
            "The company has been registered in Vietnam since "+REGISTRATION_DATE+" and now ships to "+COUNTRIES+" countries. "
            "Country count is our own record rather than an audited figure, and we present it as such."),
-          ("Can I visit the factory or send an inspector?",
-           "Yes. Buyer-arranged inspection is welcome, and for a shipment that matters we would encourage it: a third party can "
-           "witness the moisture reading, measure a sample, photograph carton marks against the packing list and witness "
-           "stuffing before the container is sealed."),
+          ("Can I have the goods inspected before they ship?",
+           "Yes, and for a shipment that matters we would encourage it. Pre-shipment inspection is arranged at our Ho Chi Minh "
+           "City warehouse: a third party can witness the moisture reading, measure a sample, photograph carton marks against "
+           "the packing list and witness stuffing before the container is sealed."),
           ("Why does the site carry so many caveats?",
            "Because the alternative is a listing you cannot defend. Most of what gets overclaimed in this category \u2014 "
            "splinter-free, dental benefits, biodegradability, certified pet-safe \u2014 has no evidence behind it, and a buyer who "

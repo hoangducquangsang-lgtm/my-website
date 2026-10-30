@@ -1,13 +1,14 @@
 """Verify the owner-provided Google tag on every generated HTML page."""
 import json
 import re
-from validate_site import ROOT
+from validate_site import ROOT, RETIRED_REDIRECT_STUBS
 
 MEASUREMENT_ID = "G-XTXJ45XN8B"
 manifest = json.loads((ROOT / "_source/page_manifest.json").read_text(encoding="utf-8"))
 pages = sorted(path for path in ROOT.rglob("*.html")
                if "_source" not in path.relative_to(ROOT).parts
-               and "_to_delete" not in path.relative_to(ROOT).parts)
+               and "_to_delete" not in path.relative_to(ROOT).parts
+               and path.relative_to(ROOT).as_posix() not in RETIRED_REDIRECT_STUBS)
 
 # Count follows the manifest rather than a fixed baseline, so adding a page
 # cannot silently fail this check.

@@ -42,6 +42,34 @@ def build_robots():
     return "\n".join(lines)
 
 
+RETIRED_REDIRECTS = {"wholesale-catalogue": "/request-a-quote/"}
+
+
+def write_retired_redirects():
+    """Client-side redirects for retired routes.
+
+    GitHub Pages serves this site and ignores the .htaccess 301 rules, so a retired
+    route needs a stub page that forwards the visitor and tells search engines the
+    canonical destination. Keep both in step if hosting moves back to Apache.
+    """
+    for route, target in RETIRED_REDIRECTS.items():
+        url = BASE_URL + target
+        html = (
+            '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+            '<title>Moved - Request a Quote | VietPaw</title>\n'
+            '<meta name="robots" content="noindex, follow">\n'
+            f'<link rel="canonical" href="{url}">\n'
+            f'<meta http-equiv="refresh" content="0; url={target}">\n'
+            '</head>\n<body>\n'
+            f'<p>This page has moved. Continue to <a href="{target}">request a quote</a>.</p>\n'
+            f'<script>window.location.replace("{target}");</script>\n'
+            '</body>\n</html>\n'
+        )
+        destination = ROOT / route
+        destination.mkdir(parents=True, exist_ok=True)
+        (destination / "index.html").write_text(html, encoding="utf-8")
+
+
 def build():
     from retired_content import assert_retired_files_absent
     assert_retired_files_absent(ROOT)
@@ -57,6 +85,7 @@ def build():
     (ROOT/"robots.txt").write_text(build_robots(), encoding="utf-8")
     (ROOT/"_source"/"page_manifest.json").write_text(json.dumps(PAGES,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     save_manifest()
+    write_retired_redirects()
     from deployment import write_redirect_plan
     write_redirect_plan(ROOT, PAGES)
     print(f"Built {len(PAGES)} HTML pages; {sum(p['indexable'] for p in PAGES.values())} sitemap URLs. Existing assets preserved.")
