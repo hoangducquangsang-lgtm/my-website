@@ -1226,7 +1226,7 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
           "approval. Keep the component list and packaging details with the sample, so consistency does not depend on one person’s memory.")),
 
     ("Questions to ask any manufacturer",
-      ul(["Which of your sites makes this SKU, and can I see it — in person, by video or through an inspector?",
+      ul(["Which of your sites makes this SKU, and can I see it on video or through an independent inspector?",
           "Which stages, if any, involve another producer?",
           "What production slot can you give this SKU mix and pack, and what is the bottleneck?",
           "Which QC checkpoints apply, and which record will be linked to my lot?",
@@ -1527,7 +1527,7 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     related=[("Wholesale service","/services/wholesale-pet-products/"),("First-order planning","/guides/sourcing-eco-pet-toys-vietnam/"),
              ("Private label, OEM or ODM?","/guides/private-label-oem-eco-pet-toys-explained/"),("Vietnam or China?","/guides/sourcing-pet-toys-vietnam-vs-china/")],
     sources=[("VietPaw order minimums and lead times","/how-to-order/"),("ICC guidance: FCA or FOB?","https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/")],
-    image="container-wall-of-cartons.jpg",
+    image="stacking-cartons-in-container.jpg",
     faqs=[
       ("What is the minimum order for VietPaw pet toys?",
        "Selected standard products start at 50 pcs per SKU. Laser engraving starts at 50 pcs; private-label runs and printed hang tags, labels "
@@ -1548,7 +1548,7 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
        "A 30% deposit on a stock order or 50% on a branded order, with the balance against shipping documents. Air shipments are paid in full "
        "before the goods are handed over at the airport."),
     ],
-    figures=[('container-wall-of-cartons.jpg','A full wall of export cartons loaded and netted inside a shipping container','429 cartons in a 20 ft, 850 in a 40 ft. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Stock sizes ship in 5–7 days; printed packaging is the part that takes 60–80.'),('coffee-wood-chews-pack-with-desiccant.jpg','Coffee wood chews packed with a labelled desiccant sachet','Moisture protection is part of the pack specification — agree the sachet material as well as the bag.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
+    figures=[('stacking-cartons-in-container.jpg','Worker stacking export cartons inside a shipping container beside a forklift','429 cartons in a 20 ft, 850 in a 40 ft. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Stock sizes ship in 5–7 days; printed packaging is the part that takes 60–80.'),('coffee-wood-chews-pack-with-desiccant.jpg','Coffee wood chews packed with a labelled desiccant sachet','Moisture protection is part of the pack specification — agree the sachet material as well as the bag.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
     "CPSIA, REACH and Pet Toys: Ask the Right Compliance Question",
@@ -1964,7 +1964,7 @@ FEATURE = {
     "what-is-coconut-fiber-pet-toys": ("coconut-fiber-ball-top-view.jpg", "Wound coconut fiber ball seen from above", "Coir from the coconut husk, wound into textured balls."),
     "non-toxic-cat-toys-wholesale-buying-guide": ("vietpaw-loofah-play-shapes.png", "Loofah cat play shapes arranged on a light surface", "Light loofah shapes for batting and carrying — specified for cats, not scaled-down dog toys."),
     "sustainable-pet-toy-materials-compared": ("hemp-rope-toy-assortment.jpg", "Assortment of hemp rope balls and loop toys", "Coconut, hemp, loofah and coffee wood each have a different origin story."),
-    "sourcing-eco-pet-toys-vietnam": ("coffee-wood-stem-cross-cutting.jpg", "Worker cross-cutting coffee wood stems with a saw in a Vietnamese workshop", "Cutting coffee wood stems to length at our factory."),
+    "sourcing-eco-pet-toys-vietnam": ("coffee-stems-cut-at-plantation.jpg", "Worker cutting coffee stems to length with a saw at the plantation", "Stems are cut to length where they are collected, before they reach the factory."),
     "natural-dog-toy-manufacturer-vietnam": ("coffee-wood-drying-rack-rows.jpg", "Rows of coffee wood chew sticks laid out on drying racks", "Chews drying in rows before grading."),
     "wholesale-coconut-fiber-cat-toys-supplier": ("coconut-fiber-ball-with-rope-toy.jpg", "Coconut fiber ball beside a knotted coir rope toy", "Coconut fiber balls: specify diameter and winding for cats separately."),
     "private-label-oem-eco-pet-toys-explained": ("coffee-wood-cotton-rope-tug-pair.jpg", "Two coffee wood and cotton rope tug toys on a white background", "A changed construction is an OEM project, not a label swap."),

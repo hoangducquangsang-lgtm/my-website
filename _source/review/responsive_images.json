@@ -1018,50 +1018,6 @@
         }
       ]
     },
-    "assets/img/coffee-wood-chews-packing-by-hand.jpg": {
-      "sha256": "133feb1a7c13374ef3d46ef43b1db63324e18db76451c642152b141d3cfed8ad",
-      "width": 1080,
-      "height": 1350,
-      "bytes": 113922,
-      "variants": [
-        {
-          "path": "assets/img/webp/coffee-wood-chews-packing-by-hand-jpg-320w.webp",
-          "width": 320,
-          "height": 400,
-          "bytes": 14768
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chews-packing-by-hand-jpg-480w.webp",
-          "width": 480,
-          "height": 600,
-          "bytes": 22882
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chews-packing-by-hand-jpg-640w.webp",
-          "width": 640,
-          "height": 800,
-          "bytes": 31922
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chews-packing-by-hand-jpg-800w.webp",
-          "width": 800,
-          "height": 1000,
-          "bytes": 41686
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chews-packing-by-hand-jpg-960w.webp",
-          "width": 960,
-          "height": 1200,
-          "bytes": 52750
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-chews-packing-by-hand-jpg-1080w.webp",
-          "width": 1080,
-          "height": 1350,
-          "bytes": 61696
-        }
-      ]
-    },
     "assets/img/coffee-wood-chews-pair-in-vacuum-pack.jpg": {
       "sha256": "3e866772a17f036e4cb26d310eabb9160d0eb2b746f9b6a850e15a619961c8a0",
       "width": 1200,
@@ -1476,26 +1432,6 @@
         }
       ]
     },
-    "assets/img/coffee-wood-stem-cross-cutting.jpg": {
-      "sha256": "8d27b0e305bc7d158ac06623f45f5984f0f65eaed826a4077b35afd081644589",
-      "width": 395,
-      "height": 296,
-      "bytes": 31363,
-      "variants": [
-        {
-          "path": "assets/img/webp/coffee-wood-stem-cross-cutting-jpg-320w.webp",
-          "width": 320,
-          "height": 240,
-          "bytes": 12376
-        },
-        {
-          "path": "assets/img/webp/coffee-wood-stem-cross-cutting-jpg-395w.webp",
-          "width": 395,
-          "height": 296,
-          "bytes": 17266
-        }
-      ]
-    },
     "assets/img/coffee-wood-workshop-stacked-billets.jpg": {
       "sha256": "57759f9cd3bbe8f786ae9fd75e6d464da30ce225837adaed79b90f36fd7793e7",
       "width": 2000,
@@ -1631,50 +1567,6 @@
           "width": 1080,
           "height": 1350,
           "bytes": 121022
-        }
-      ]
-    },
-    "assets/img/container-wall-of-cartons.jpg": {
-      "sha256": "b6e4d47c56c09b64c43f9a6925c81e82426a4e234589acb6b597cac68915b917",
-      "width": 1080,
-      "height": 1350,
-      "bytes": 179004,
-      "variants": [
-        {
-          "path": "assets/img/webp/container-wall-of-cartons-jpg-320w.webp",
-          "width": 320,
-          "height": 400,
-          "bytes": 21656
-        },
-        {
-          "path": "assets/img/webp/container-wall-of-cartons-jpg-480w.webp",
-          "width": 480,
-          "height": 600,
-          "bytes": 38200
-        },
-        {
-          "path": "assets/img/webp/container-wall-of-cartons-jpg-640w.webp",
-          "width": 640,
-          "height": 800,
-          "bytes": 52968
-        },
-        {
-          "path": "assets/img/webp/container-wall-of-cartons-jpg-800w.webp",
-          "width": 800,
-          "height": 1000,
-          "bytes": 68936
-        },
-        {
-          "path": "assets/img/webp/container-wall-of-cartons-jpg-960w.webp",
-          "width": 960,
-          "height": 1200,
-          "bytes": 85048
-        },
-        {
-          "path": "assets/img/webp/container-wall-of-cartons-jpg-1080w.webp",
-          "width": 1080,
-          "height": 1350,
-          "bytes": 102038
         }
       ]
     },
@@ -3257,6 +3149,56 @@
           "width": 1080,
           "height": 1350,
           "bytes": 105464
+        }
+      ]
+    },
+    "assets/img/polybagged-chews-layered-in-carton.jpg": {
+      "sha256": "d6a4ba4e85711143791539238d47abe4eeba5469c2462cad4150237231e339af",
+      "width": 1500,
+      "height": 2000,
+      "bytes": 822770,
+      "variants": [
+        {
+          "path": "assets/img/webp/polybagged-chews-layered-in-carton-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 26626
+        },
+        {
+          "path": "assets/img/webp/polybagged-chews-layered-in-carton-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 53436
+        },
+        {
+          "path": "assets/img/webp/polybagged-chews-layered-in-carton-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 88932
+        },
+        {
+          "path": "assets/img/webp/polybagged-chews-layered-in-carton-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 128070
+        },
+        {
+          "path": "assets/img/webp/polybagged-chews-layered-in-carton-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 182694
+        },
+        {
+          "path": "assets/img/webp/polybagged-chews-layered-in-carton-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 288450
+        },
+        {
+          "path": "assets/img/webp/polybagged-chews-layered-in-carton-jpg-1500w.webp",
+          "width": 1500,
+          "height": 2000,
+          "bytes": 458308
         }
       ]
     },

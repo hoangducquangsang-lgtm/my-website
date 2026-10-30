@@ -181,8 +181,8 @@ def about(root):
         + p("That matters for three practical reasons. Stock sizes ship in 5\u20137 days because they are already "
             "packed and held in our own warehouse. Quality decisions \u2014 what counts as a rejectable crack, what "
             "moisture we pack at \u2014 are set by us and written into the specification the factories work to. And "
-            "when you want to verify something, we will tell you which site makes your order and arrange the "
-            "visit there.")
+            "when you want to verify something, we will tell you which site makes your order and give you "
+            "dated photos, a video walkthrough and the batch records for it.")
         + p("What we will not do is overclaim. Most of what gets printed in this category \u2014 splinter-free, dental "
             "benefits, certified biodegradable \u2014 has no evidence behind it, and a buyer who prints it inherits "
             "the risk. We would rather lose a sale than hand you a claim that fails.")),
@@ -278,7 +278,7 @@ def about(root):
         "Natural pet toys from Vietnam for wholesale, private label and OEM/ODM.",
         "About VietPaw",
         "A Vietnamese manufacturer and exporter of natural-material pet toys \u2014 how our products are made, "
-        "what we will not claim, and where you can come and look.",
+        "what we will not claim, and how you can verify it without leaving your desk.",
         sections, active="Company", image=IMG+"coffee-wood-workshop-stacked-billets.jpg",
         faqs=[
           ("Does VietPaw own its factories?",

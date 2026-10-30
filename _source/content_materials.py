@@ -327,7 +327,7 @@ DEEP["hemp-fiber"] = dict(
 GALLERY = {
  "coffee-wood": [("coffee-wood-chews-group-white-background.jpg","Several coffee wood chews of different sizes on a white background","Finished chews: grain, outline and shade vary piece to piece."),
                  ("coffee-wood-chews-mixed-sizes.jpg","Coffee wood chews in mixed sizes lying together","Mixed sizes from one grading run."),
-                 ("coffee-wood-chews-packing-by-hand.jpg","Hands packing coffee wood chews into bags","Packing by hand at our warehouse.")],
+                 ("polybagged-chews-layered-in-carton.jpg","Vacuum-packed coffee wood chews layered inside an export carton","Packed chews layered into the export carton.")],
  "coconut-fiber": [("coconut-fiber-ball-top-view.jpg","Wound coconut fiber ball seen from above","A wound coir ball."),
                    ("coconut-fiber-rope-toy-flat-lay.jpg","Knotted coconut fiber rope toy on a marble surface","Coir rope with knotted ends."),
                    ("coconut-fiber-ball-with-rope-toy.jpg","Coconut fiber ball beside a knotted coir rope toy","Ball and rope from the same coir line.")],
