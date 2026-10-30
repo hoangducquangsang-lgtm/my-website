@@ -63,7 +63,7 @@ def build(root):
       <p class="hero-lede">VietPaw is a natural, biodegradable pet toys manufacturer in Vietnam, producing coffee wood dog chews, coconut fiber, hemp fiber and loofah toys for brands, wholesalers and retailers worldwide. Low MOQ from 50 pcs, full OEM/ODM and private label, free samples, and export documentation on every shipment.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="/request-a-quote/">Request a Free Sample</a>
-        <a class="btn btn-outline" href="/wholesale-catalogue/">Download Wholesale Catalogue</a>
+        <a class="btn btn-outline" href="/how-to-order/">How to Order</a>
       </div>
       <div class="hero-badges">
         <div><strong>30+</strong> countries served</div>

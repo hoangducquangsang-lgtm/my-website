@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from content_helpers import (publish, section, p, ul, table, terms, trust_links, SAFETY, MOISTURE,
+from content_helpers import (publish, section, p, ul, table, terms, trust_links, SAFETY, MOISTURE, video_figure,
                              answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT,
                              INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE)
 from content_products import product_cards
@@ -113,7 +113,19 @@ DEEP["coffee-wood"] = dict(
     +figure(IMG+"coffee-wood-workshop-stacked-billets.jpg","Workshop interior with stacked coffee wood billets and a worker at a bench","Seasoned billets waiting to be cut. The holding period is roughly a year.")
     +figure(IMG+"coffee-wood-chew-finishing-bench.jpg","Row of workers shaping and finishing coffee wood chew sticks at benches","Shaping and surface finishing. We do not publish machine or timing detail.")
     +figure(IMG+"coffee-wood-drying-rack-rows.jpg","Rows of coffee wood sticks laid out on drying racks","Drying racks, where most rejections occur.")
-    +"</div>",True),
+    +"</div>"
+    +'<div class="grid grid-2 video-row">'
+    +video_figure("/assets/video/coffee-wood-surface-finishing.webm",
+                  IMG+"coffee-wood-surface-finishing-poster.jpg",
+                  "Surface finishing on the drum sander, step two of five. Filmed on our line; no sound.",
+                  "Your browser cannot play this WebM video. It shows a coffee wood chew being surface-finished on a drum sander.")
+    +"<div>"
+    +p("Step two, filmed on our line: a cross-cut piece held against the drum sander until the surface is even. "
+       "Bark is already off at this point, and what the operator is judging is the surface rather than the diameter "
+       "\u2014 diameter follows the stem and is settled later, at grading.")
+    +p("Machine settings, drying temperatures and cycle times stay proprietary, so the clip shows the step without "
+       "the parameters. Seven seconds, no sound; it loads only when you press play.")
+    +"</div></div>",True),
 
   section("Formats built from this material",
     media(ul(["<strong>Standard chew sticks.</strong> Six graded sizes, XS to XXL, with lengths from about 10 cm to 23 cm. This is the core reference range.",
@@ -143,6 +155,15 @@ DEEP["coffee-wood"] = dict(
     p(CARTON)+p(SEA_TRANSIT)
     +p("Wood ships with moisture risk attached, and the risk is concentrated in the container rather than in our factory. A sealed box cools overnight, water condenses on the steel and drips onto the top of the cargo. Damage on the top layer and toward the doors points to condensation in transit; bloom spread evenly through the stack points to goods packed wet. Hanging desiccant is cheap relative to a claim and is the single most useful addition for a monsoon-season sailing.")
     +p('The HS code commonly used is 4421.99 — confirm the classification with your own broker. Per-shipment documents cover Certificate of Origin, fumigation and phytosanitary certificates; these are issued against the shipment and cannot be produced afterwards. See <a href="/certifications/">testing and export documents</a>.')),
+
+  section("Buyer guides on coffee wood",
+    p("Six guides answer the questions buyers ask about this material before they order. Each one is written from the supply side, including the parts that do not help us sell.")
+    +ul(['<a href="/guides/where-does-coffee-wood-come-from/">Where does coffee wood come from?</a> — species, region, the replanting cycle behind the supply and what you can verify.',
+         '<a href="/guides/olive-wood-vs-coffee-wood-dog-chews/">Olive wood vs coffee wood</a> — why no hardness comparison exists, and the sourcing and logistics differences that actually decide it.',
+         '<a href="/guides/coffee-wood-vs-antler-nylon-rawhide/">Coffee wood vs antler, nylon and rawhide</a> — four different product categories compared on origin, use and paperwork.',
+         '<a href="/guides/coffee-wood-chew-size-guide/">Coffee wood chew size guide</a> — the six diameter bands, reference dog weights and why diameter is a range.',
+         '<a href="/guides/are-coffee-wood-chews-safe-for-dogs/">Are coffee wood chews safe for dogs?</a> — supervision, sizing and the claims this category gets wrong.',
+         '<a href="/guides/how-long-do-coffee-wood-chews-last/">How long do coffee wood chews last?</a> — what sets wear rate, and what to tell a retail customer.']),True),
  ],
  faqs=[
   ("Is coffee wood a sustainable material?",

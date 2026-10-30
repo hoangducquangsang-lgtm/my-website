@@ -1,5 +1,63 @@
+# vietpaw.com crawler policy
+# AI search and user-triggered retrieval: allowed. Model training: blocked.
+
 User-agent: *
 Allow: /
 Disallow: /_source/
+
+# AI search / retrieval crawlers - allowed
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /_source/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /_source/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /_source/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /_source/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /_source/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /_source/
+
+User-agent: GoogleOther
+Allow: /
+Disallow: /_source/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /_source/
+
+# Model-training crawlers - blocked
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
 
 Sitemap: https://vietpaw.com/sitemap.xml

@@ -11,7 +11,7 @@ import re
 import sys
 ROUTES=["/","/about/","/materials/","/certifications/","/collections/coffee-wood/",
         "/products/coffee-wood-dog-chew/","/solutions/wholesalers/","/factory/",
-        "/contact/","/wholesale-catalogue/","/sustainability/"]
+        "/contact/","/sustainability/"]
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self,req,fp,code,msg,headers,newurl):return None
 def fetch(url):

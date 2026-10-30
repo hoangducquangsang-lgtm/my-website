@@ -6,6 +6,8 @@ never derive existing dates from the build clock or shift them with list order.
 from datetime import date
 
 GUIDE_UPDATED_DATES = {
+    "olive-wood-vs-coffee-wood-dog-chews": "2026-09-06",
+    "where-does-coffee-wood-come-from": "2026-09-02",
     "natural-dog-chew-toys-guide": "2026-08-30",
     "are-coffee-wood-chews-safe-for-dogs": "2026-08-27",
     "coffee-wood-vs-antler-nylon-rawhide": "2026-08-23",

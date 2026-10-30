@@ -15,6 +15,196 @@ def add(slug,cluster,title,description,intro,sections,commercial,related=(),sour
         sections=sections,commercial=commercial,related=related,sources=sources,image=image,
         faqs=faqs,h1=h1 or title,figures=figures))
 
+add("olive-wood-vs-coffee-wood-dog-chews","Natural chew toys",
+    "Olive Wood vs Coffee Wood Dog Chews: What Actually Differs",
+    "Olive wood vs coffee wood dog chews compared on origin, available test data, sizing, supply season, logistics and the claims each one supports.",
+    answer("<strong>Short answer:</strong> both are hard, untreated, non-edible wood chews, and the real differences are not about toughness. "
+           "Olive wood is a commercial timber with published density and hardness figures, mainly sourced around the Mediterranean, which gives "
+           "an EU buyer a short freight leg. Coffee wood is an agricultural by-product from Vietnam with no standardised timber test data, "
+           "graded into size bands rather than machined, and priced and shipped from Asia. Choose on supply route, sizing range and the claims "
+           "you need, not on a hardness score."),
+    [
+    ("What each material is",
+      p("<dfn>Olive wood chew</dfn>: a piece cut from the wood of the olive tree, usually from pruning or grove renewal, dried and shaped. "
+        "Olive is a commercial timber species, so it appears in timber databases \u2014 roughly 980 kg/m\u00b3 dried and around 2,710 lbf "
+        "on the Janka scale.")
+      + p("<dfn>Coffee wood chew</dfn>: a stick cut from the stem of a Robusta coffee plant removed during a grower's replanting cycle in "
+          "Vietnam's Central Highlands, seasoned about a year, dried below 14% moisture and graded. Coffee is a crop, not a timber species, "
+          "so it has no entry in those databases at all.")
+      + p("Both are single untreated plant materials in their standard form: no glue, coating, preservative or colouring. Both are toys, not "
+          "edible chews.")),
+
+    ("Olive wood vs coffee wood, side by side",
+      spec_table(["","Coffee wood","Olive wood"],[
+        ("Botanical source","Coffea canephora (Robusta) stem","Olea europaea wood"),
+        ("Why the wood is available","Grower replanting after 20+ years of yield","Pruning and grove renewal"),
+        ("Main supply regions","Vietnam \u2014 Dak Lak, Gia Lai","Mediterranean \u2014 Spain, Italy, Greece, Tunisia"),
+        ("Published hardness data","None \u2014 never standardised-tested as timber","Yes \u2014 about 2,710 lbf Janka, 980 kg/m\u00b3 dried"),
+        ("How size is controlled","Graded into diameter bands; the stem decides","Often cut and machined from larger stock"),
+        ("Moisture at packing","Below 14%, measured per batch, vacuum packed","Varies by supplier; ask for the figure"),
+        ("Shape consistency","Natural variation piece to piece","More uniform where machined"),
+        ("Supply pattern","Follows the agricultural collection season","Follows pruning cycles"),
+        ("Freight to the EU","Sea from Cat Lai, roughly 28\u201345 days port to port","Short intra-EU road or sea leg"),
+        ("Freight to the US","Sea, roughly 28\u201345 days port to port","Sea from the Mediterranean"),
+        ("Export documents","Certificate of Origin, phytosanitary, fumigation, issued per shipment","Intra-EU movement needs no import paperwork"),
+        ("Minimum order with us","From 50 pcs per SKU","Supplier-dependent"),
+      ], caption="Category comparison for buyers. Olive figures are published timber data; coffee wood has none and we do not estimate one.")),
+
+    ("Why nobody can give you a hardness comparison",
+      p("This is the question we are asked most, and the honest answer is that the comparison does not exist. Olive wood has published density "
+        "and Janka figures because it is a commercial timber that has been through standardised testing. Coffee is an agricultural crop; it has "
+        "never been through that testing, so there is no comparable number to put beside olive's.")
+      + p("Any supplier quoting a Janka value for coffee wood is estimating. We would rather say so than repeat a figure nobody has measured. "
+          "What we can describe is behaviour on the line and in use: seasoned coffee stem is pale, light and hard, it wears into soft fibres "
+          "rather than softening, swelling or developing an odour, and density varies stem to stem \u2014 which is why sizes are graded into "
+          "bands rather than machined to a number.")
+      + p("A powerful chewer can break a piece off either material. No supplier in this category has published test data behind the phrase "
+          "\u201csplinter-free\u201d, and neither material supports a dental-health or digestibility claim.")),
+
+    ("Which one fits your range",
+      fit([
+        "You want a plant-based hard chew with a documented material-reuse story and a verifiable batch record.",
+        "You need a wide sizing ladder \u2014 six standard bands XS to XXL, plus four thick-cut Gorilla sizes for power chewers.",
+        "You are buying container volumes, or building a private-label line where laser engraving from 50 pcs per SKU matters.",
+        "Your differentiator is origin: a Vietnamese agricultural by-product rather than a European timber.",
+      ],[
+        "You need small, frequent reorders into the EU \u2014 a Mediterranean-sourced olive wood has a genuine logistics advantage there.",
+        "Your listing copy depends on quoting published hardness or density figures.",
+        "You need machined, highly uniform pieces rather than graded natural variation.",
+        "Your customers specifically ask for olive wood by name, which is a marketing position rather than a performance one.",
+      ], suit_head="Coffee wood suits you when", less_head="Olive wood may suit you better when")),
+
+    ("Compare the two quotes at the same point in the supply chain",
+      p("A loose olive stick quoted ex-works in Spain and a boxed, barcoded coffee wood SKU delivered to your warehouse are not comparable "
+        "prices. Match the specification, the saleable unit, the packaging, the quantity and the Incoterm, then add inspection, testing, "
+        "transport, duties and handling.")
+      + p("For coffee wood the planning figures are: export master carton 51 \u00d7 31 \u00d7 39 cm (0.062 m\u00b3) holding 120 pieces of "
+          "size M, 100 of size L or 50 of size XL packed loose; HS code commonly 4421.99; sea transit roughly 28\u201345 days port to port "
+          "to the EU or the US, before inland legs and clearance. Hanging desiccant is cheap relative to a moisture claim and is the single "
+          "most useful addition for a monsoon-season sailing.")),
+
+    ("Claims that hold for both, and claims that hold for neither",
+      p("Both materials support a single-material, untreated description in their standard stick form, and both lose it the moment a rope or "
+        "a printed sleeve is added \u2014 a wood-and-rope toy is a multi-component product and the rope is declared separately.")
+      + p("Neither supports a certified biodegradability claim for the finished toy, a carbon claim, a dental-health benefit or a digestibility "
+          "claim. For coffee wood specifically we also publish no caffeine-free claim: chew sticks are cut from the stem wood rather than the "
+          "bean or cherry, but no laboratory result has been produced for the material. Ask us if your market requires the test.")
+      + p(SAFETY)),
+    ],
+    ("Request coffee wood samples and wholesale pricing","/collections/coffee-wood/"),
+    related=[("Where coffee wood comes from","/guides/where-does-coffee-wood-come-from/"),
+             ("Coffee wood vs antler, nylon and rawhide","/guides/coffee-wood-vs-antler-nylon-rawhide/"),
+             ("Coffee wood chew size guide","/guides/coffee-wood-chew-size-guide/")],
+    image="coffee-wood-chew-size-ladder-xs-xxl.jpg",
+    figures=[('coffee-wood-chew-grain-detail.jpg','Close-up of a finished coffee wood chew showing grain and surface finish','Seasoned coffee stem: pale, hard and untreated. Density still varies stem to stem.'),
+             ('coffee-wood-moisture-meter-reading.jpg','Moisture meter held against a coffee wood chew showing a reading of 10.8 per cent','A packing-line reading, not a laboratory result \u2014 this is the record behind the below-14% figure.'),
+             ('coffee-wood-chews-group-white-background.jpg','Several coffee wood chews of different sizes on a white background','Graded, not machined: two sticks of one size will not weigh the same.')],
+    faqs=[
+      ("Is olive wood harder than coffee wood?",
+       "There is no published comparison. Olive wood has standardised timber figures of about 2,710 lbf Janka and 980 kg/m\u00b3 dried; coffee "
+       "is an agricultural crop that has never been through that testing, so no comparable number exists. Anyone quoting one is estimating."),
+      ("Which lasts longer, olive wood or coffee wood?",
+       "It depends far more on the dog than on the species. Both are hard woods that wear down gradually; a power chewer can break a piece off "
+       "either. For coffee wood, match strong chewers to the thick-cut Gorilla line rather than a longer standard stick."),
+      ("Is coffee wood cheaper than olive wood?",
+       "The ex-factory price is usually lower, but the landed cost depends on freight and order size. Sea transit from Vietnam runs roughly "
+       "28\u201345 days port to port, so for small frequent EU reorders olive wood can land cheaper despite a higher unit price."),
+      ("Are both safe for dogs?",
+       "Both are untreated non-edible wood toys for supervised play. Neither supports a splinter-free, dental or digestibility claim. Choose a "
+       "size the dog cannot swallow whole and replace damaged pieces."),
+      ("Can I stock both in the same range?",
+       "Yes, and some buyers do \u2014 olive wood as a European-origin line and coffee wood as the wider size ladder including a power-chewer "
+       "option. Keep the material declaration separate on each pack."),
+      ("Do coffee wood chews need different import paperwork?",
+       "For a non-EU origin, yes: a Certificate of Origin, a phytosanitary certificate and a fumigation certificate are issued per shipment and "
+       "cannot be produced afterwards. No veterinary certificate applies \u2014 this is a wood article, not an animal by-product."),
+    ])
+
+add("where-does-coffee-wood-come-from","Natural chew toys",
+    "Where Does Coffee Wood Come From? Origin, Season and Traceability",
+    "Where coffee wood dog chews come from: Robusta stems from Vietnam's Central Highlands, the replanting cycle behind the supply, and what a buyer can verify.",
+    answer("<strong>Short answer:</strong> our coffee wood is the stem of Robusta coffee plants aged 20 years and over, grown on smallholder "
+           "plots in Vietnam's Central Highlands \u2014 principally Dak Lak and Gia Lai. Growers remove trees that have stopped yielding "
+           "economically as part of normal replanting; the stems, which previously went to firewood, are cut to billets of roughly 50\u201370 cm "
+           "in the field, held about a year in ventilated shade, then machined, dried below 14% moisture and graded at our factory."),
+    [
+    ("The plant, not a forest",
+      p("Coffee wood is the woody stem of <dfn>Coffea canephora</dfn> \u2014 Robusta \u2014 which is the variety that dominates Vietnam's "
+        "Central Highlands. It is an agricultural crop on a replanting cycle, not a timber species on a felling rotation. A plot is replanted "
+        "when yield per tree no longer pays for the land and labour, usually after two decades or more, and the stems that come out are the "
+        "raw material for these chews.")
+      + p("That distinction decides what can honestly be said about the product. No forest is cleared for it, nobody fells a tree that is still "
+          "yielding cherries, and the material already existed with a low-value use. It also means coffee has never been through standardised "
+          "timber testing, so there is no published density or Janka hardness figure for it \u2014 any number you see quoted is an estimate.")),
+
+    ("Origin facts at a glance",
+      spec_table(["Item","Detail"],[
+        ("Species","Coffea canephora (Robusta)"),
+        ("Growing region","Central Highlands of Vietnam \u2014 principally Dak Lak and Gia Lai"),
+        ("Plant age at removal","20 years and over, at the end of its economic yield"),
+        ("Reason for removal","Grower replanting cycle; previous use of the stems was firewood"),
+        ("Field billet length","Roughly 50\u201370 cm, cut at the plantation edge"),
+        ("Holding before machining","About one year in ventilated shade"),
+        ("Moisture at packing","Below 14%, measured at the factory, then vacuum packed"),
+        ("Factory locations","Partner factories in Dak Lak and Gia Lai"),
+        ("HS code commonly used","4421.99 \u2014 confirm classification with your own broker"),
+        ("Plant-health documents","Phytosanitary and fumigation certificates, issued per shipment"),
+      ], caption="Origin and intake data for coffee wood chews. Figures are production records, not laboratory results.")),
+
+    ("From plot to sealed carton",
+      steps([
+        ("Collection at the plantation edge","Stems from scattered smallholder plots are cut to billets and lifted by hand onto trailers.","Intake arrives across a collection season rather than in container loads."),
+        ("Seasoning","Billets are held about a year in ventilated shade.","Green stems that were heavy, dark and flexible become pale, light and hard."),
+        ("Cutting and shaping","Stems are cross-cut to the length band, bark removed, surface finished.","Sizes follow the natural stem and vary slightly piece to piece."),
+        ("Controlled drying","Shaped pieces are racked for the drying stages.","Finished moisture below 14%. Most rejection happens here \u2014 pieces that were going to crack crack on the rack."),
+        ("Grading and packing","Pieces are sorted into diameter bands, cracked pieces pulled, moisture measured and the carton marks checked against the packing list.","A sealed carton whose marks and moisture record match the paperwork."),
+      ])),
+
+    ("Why availability follows the agricultural calendar",
+      p("Supply is set by when growers replant, not by when orders arrive. Stems reach us from many scattered plots across a collection season, "
+        "so a large single-size order placed outside that window waits on intake rather than on machine time. Plan a seasonal range on this "
+        "material with the order placed before the season, not after a sales spike.")
+      + p("The same logic explains why diameter is quoted as a band. A size L is a piece that fell into the 3.5\u20134.5 cm band, not a piece "
+          "machined to 4 mm tolerance. Two sticks of the same size will not weigh the same, because density varies stem to stem.")),
+
+    ("What a buyer can actually verify",
+      p("Origin claims are worth only as much as the record behind them. For this material the verifiable items are the batch moisture reading, "
+        "the grading rejection at drying, and the per-shipment plant-health documents \u2014 the Certificate of Origin, the phytosanitary "
+        "certificate and the fumigation certificate, which are issued against the shipment and cannot be produced afterwards.")
+      + p("What does not exist, and should not be requested of any supplier in this category: FSC certification (coffee is an agricultural crop, "
+          "outside its scope), a veterinary certificate (this is a wood article, not an animal by-product), a certified biodegradability claim "
+          "for the finished toy, or a laboratory caffeine result unless you commission the test. Ask us if your market requires one.")),
+    ],
+    ("See coffee wood specifications and wholesale terms","/collections/coffee-wood/"),
+    related=[("Coffee wood chew size guide","/guides/coffee-wood-chew-size-guide/"),
+             ("Olive wood vs coffee wood","/guides/olive-wood-vs-coffee-wood-dog-chews/"),
+             ("Sourcing eco pet toys in Vietnam","/guides/sourcing-eco-pet-toys-vietnam/")],
+    image="coffee-stems-loaded-on-trailer-plantation.jpg",
+    figures=[('coffee-stems-cut-at-plantation.jpg','Worker cutting coffee stems to billet length with a chainsaw at the edge of a plantation','Stems are cut to 50\u201370 cm billets in the field, during the grower\u2019s replanting.'),
+             ('coffee-stem-billets-stacked-intake-yard.jpg','Large stacks of coffee stem billets in an open intake yard','Intake arrives from scattered smallholder plots across a collection season, not in container loads.'),
+             ('seasoned-coffee-stems-close-up.jpg','Close-up of pale seasoned coffee stems in a pile','After about a year of holding, the same stems are pale, light and hard.'),
+             ('coffee-wood-moisture-meter-reading.jpg','Moisture meter held against a coffee wood chew showing a reading of 10.8 per cent','Moisture is measured at the factory before vacuum packing; the record travels with the batch.')],
+    faqs=[
+      ("Where does coffee wood for dog chews come from?",
+       "From the stems of Robusta coffee plants aged 20 years and over, grown on smallholder plots in Vietnam's Central Highlands, principally "
+       "Dak Lak and Gia Lai. The stems come out during the grower's normal replanting cycle."),
+      ("Are trees cut down to make coffee wood chews?",
+       "No tree that is still yielding cherries is felled for this product, and no forest is cleared. The stems are removed by growers when the "
+       "plant has reached the end of its economic yield; their previous use was firewood."),
+      ("What part of the coffee plant is used?",
+       "The stem wood. Chew sticks are cut from the stem, not from the bean or the cherry. We do not publish a caffeine-free claim because no "
+       "laboratory result has been produced for this material."),
+      ("How long is the wood seasoned before it is made into chews?",
+       "About one year in ventilated shade as 50\u201370 cm billets, before cutting, shaping and the controlled drying stages that bring "
+       "moisture below 14%."),
+      ("Can I get FSC certification for coffee wood?",
+       "No. Coffee is an agricultural crop and falls outside the scope of FSC certification. The documents that do exist for this material are "
+       "the Certificate of Origin, the phytosanitary certificate and the fumigation certificate."),
+      ("Is the supply year-round?",
+       "Intake follows the replanting and collection season rather than arriving in steady container loads, so large single-size orders are best "
+       "placed ahead of the season."),
+    ])
+
 add("natural-dog-chew-toys-guide","Natural chew toys",
     "Natural Dog Chew Toys: Building a Range That Makes Sense",
     "How to choose natural dog toys for a wholesale range, from chewing behavior and material construction to sample approval and retail packaging.",
@@ -245,6 +435,7 @@ add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
     ],
     ("Compare coffee wood wholesale options","/collections/coffee-wood/"),
     related=[("Coffee wood safety considerations","/guides/are-coffee-wood-chews-safe-for-dogs/"),("How long coffee wood chews last","/guides/how-long-do-coffee-wood-chews-last/"),
+             ("Olive wood vs coffee wood","/guides/olive-wood-vs-coffee-wood-dog-chews/"),
              ("Natural material comparison","/guides/sustainable-pet-toy-materials-compared/")],
     image="vietpaw-coffee-wood-sizes.png",
     faqs=[
@@ -1757,6 +1948,8 @@ add("coffee-wood-chew-size-guide","Natural chew toys",
 # Owner request 2026-09-24: a content-matched lead image on every guide (served as responsive WebP).
 # Each lead image differs from the in-text figures of the same guide. Displayed dates are unchanged.
 FEATURE = {
+    "where-does-coffee-wood-come-from": ("coffee-stems-loaded-on-trailer-plantation.jpg", "Trailer being loaded with coffee stems at the edge of a plantation in the Central Highlands", "Collection at the plantation edge, in Dak Lak and Gia Lai."),
+    "olive-wood-vs-coffee-wood-dog-chews": ("coffee-wood-chew-size-ladder-xs-xxl.jpg", "Six coffee wood chews labelled XS to XXL laid out side by side", "Six graded bands XS to XXL, plus four thick-cut Gorilla sizes \u2014 a wider ladder than most olive wood ranges."),
     "natural-dog-chew-toys-guide": ("vietpaw-hemp-wood-assortment.jpg", "Woven basket holding rope toys and coffee wood chews", "Wood, rope and fiber: the chewing style decides which one fits the dog."),
     "are-coffee-wood-chews-safe-for-dogs": ("golden-retriever-gnawing-coffee-wood.jpg", "Golden retriever gnawing a coffee wood piece on a bench", "Supervised chewing with a size the dog cannot swallow whole."),
     "coffee-wood-vs-antler-nylon-rawhide": ("vietpaw-home-lifestyle.jpg", "Small dog at home holding a coffee wood chew in its mouth", "A plant-based hard chew, compared honestly with antler, nylon and rawhide."),

@@ -17,9 +17,19 @@
   </FilesMatch>
 
   # PDF catalogue: 7 days
+  # Video: 30 days
+  <FilesMatch "\.(webm|mp4)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
   <FilesMatch "\.pdf$">
     Header set Cache-Control "public, max-age=604800"
   </FilesMatch>
+</IfModule>
+
+# LiteSpeed/Apache usually know this type already; declared here to be certain.
+<IfModule mod_mime.c>
+  AddType video/webm .webm
 </IfModule>
 
 <IfModule mod_expires.c>
@@ -31,5 +41,17 @@
   ExpiresByType text/css "access plus 30 days"
   ExpiresByType application/javascript "access plus 30 days"
   ExpiresByType text/javascript "access plus 30 days"
+  ExpiresByType video/webm "access plus 30 days"
   ExpiresByType application/pdf "access plus 7 days"
+</IfModule>
+
+
+# ------------------------------------------------------------------
+# VietPaw — wholesale catalogue page retired (2026-10-29)
+# The catalogue is not published to the public; send buyers to the RFQ page.
+# ------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^wholesale-catalogue/?$ /request-a-quote/ [R=301,L]
+  RewriteRule ^wholesale-catalogue/index\.html$ /request-a-quote/ [R=301,L]
 </IfModule>

@@ -36,6 +36,7 @@
     "/guides/natural-dog-chew-toys-guide/",
     "/guides/natural-dog-toy-manufacturer-vietnam/",
     "/guides/non-toxic-cat-toys-wholesale-buying-guide/",
+    "/guides/olive-wood-vs-coffee-wood-dog-chews/",
     "/guides/pet-toy-moq-fob-pricing-lead-times/",
     "/guides/pet-toy-safety-compliance-cpsia-reach/",
     "/guides/pet-toy-safety-testing-requirements/",
@@ -45,6 +46,7 @@
     "/guides/sourcing-pet-toys-vietnam-vs-china/",
     "/guides/sustainable-pet-toy-materials-compared/",
     "/guides/what-is-coconut-fiber-pet-toys/",
+    "/guides/where-does-coffee-wood-come-from/",
     "/guides/wholesale-coconut-fiber-cat-toys-supplier/",
     "/how-to-order/",
     "/materials/",
@@ -69,10 +71,9 @@
     "/solutions/retail-chains/",
     "/solutions/startup-brands/",
     "/solutions/wholesalers/",
-    "/sustainability/",
-    "/wholesale-catalogue/"
+    "/sustainability/"
   ],
-  "index_redirects": 272,
+  "index_redirects": 276,
   "preserve_query_string": true,
   "notes": [
     "GitHub Pages does not execute this CSV or Cloudflare rules.",

@@ -357,3 +357,10 @@ figcaption{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
 
 .section-short-answer{padding:28px 0 0}
 .section-short-answer .answer-box{margin-bottom:0}
+
+/* Click-to-play process video. Vertical source, capped so it never dominates a section. */
+.video-figure{margin:0;max-width:300px}
+.video-row{align-items:center}
+.video-figure video{width:100%;height:auto;border-radius:10px;background:#1d1a16;display:block}
+.video-figure figcaption{font-size:.86rem;color:#5d5a53;margin-top:.5rem;line-height:1.45}
+@media (max-width:600px){.video-figure{max-width:100%}}

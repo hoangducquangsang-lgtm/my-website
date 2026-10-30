@@ -14,6 +14,34 @@ MODULES = [
     "content_products", "content_solutions", "content_manufacturing", "content_guides",
 ]
 
+# Retrieval/citation crawlers are allowed so the site can be quoted in AI answers;
+# model-training crawlers stay blocked. Groups are exclusive in robots.txt, so each
+# named agent repeats the /_source/ exclusion.
+AI_SEARCH_AGENTS = [
+    "OAI-SearchBot", "ChatGPT-User", "Claude-SearchBot", "Claude-User",
+    "PerplexityBot", "Perplexity-User", "GoogleOther", "Bingbot",
+]
+AI_TRAINING_AGENTS = [
+    "GPTBot", "ClaudeBot", "Google-Extended", "Applebot-Extended",
+    "Meta-ExternalAgent", "Bytespider", "CCBot",
+]
+
+
+def build_robots():
+    lines = ["# vietpaw.com crawler policy",
+             "# AI search and user-triggered retrieval: allowed. Model training: blocked.",
+             "",
+             "User-agent: *", "Allow: /", "Disallow: /_source/", ""]
+    lines.append("# AI search / retrieval crawlers - allowed")
+    for agent in AI_SEARCH_AGENTS:
+        lines += [f"User-agent: {agent}", "Allow: /", "Disallow: /_source/", ""]
+    lines.append("# Model-training crawlers - blocked")
+    for agent in AI_TRAINING_AGENTS:
+        lines += [f"User-agent: {agent}", "Disallow: /", ""]
+    lines += ["Sitemap: " + BASE_URL + "/sitemap.xml", ""]
+    return "\n".join(lines)
+
+
 def build():
     from retired_content import assert_retired_files_absent
     assert_retired_files_absent(ROOT)
@@ -26,7 +54,7 @@ def build():
     urls = "\n".join(f"  <url><loc>{escape(BASE_URL+path)}</loc></url>"
                      for path,data in sorted(PAGES.items()) if data["indexable"])
     (ROOT/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls+'\n</urlset>\n',encoding="utf-8")
-    (ROOT/"robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /_source/\n\nSitemap: "+BASE_URL+"/sitemap.xml\n",encoding="utf-8")
+    (ROOT/"robots.txt").write_text(build_robots(), encoding="utf-8")
     (ROOT/"_source"/"page_manifest.json").write_text(json.dumps(PAGES,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     save_manifest()
     from deployment import write_redirect_plan

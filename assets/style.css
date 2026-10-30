@@ -79,7 +79,7 @@ img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .card h3{margin-top:0}
 .card-img{border-radius:var(--radius) var(--radius) 0 0;margin:-24px -24px 16px}
-.card-img img{border-radius:var(--radius) var(--radius) 0 0;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--kraft-dark)}
+.card-img img{border-radius:var(--radius) var(--radius) 0 0;width:100%;aspect-ratio:4/3;object-fit:cover}
 .card-img img[src*="winvn-coffee-wood"],.card-img img[src*="winvn-hemp-wood"],.card-img img[src*="winvn-loofah-play"],.card-img img[src*="winvn-natural-toy"]{object-fit:contain;background:#f7f8f4}
 .card-img img[src*="winvn-hemp-fiber-rope-ball"],.card-img img[src*="winvn-hemp-rope-dog-toy"]{object-fit:contain;background:#f7f8f4}
 .material-card{position:relative;overflow:hidden}
@@ -351,9 +351,16 @@ figcaption{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
 /* Logo mark before the wordmark */
 .brand-logo{width:44px;height:44px;border-radius:50%;margin-right:10px;flex-shrink:0;display:inline-block;background:#fff url(img/vietpaw-logo-96.webp) center/contain no-repeat;background-image:image-set(url(img/vietpaw-logo-96.webp) 1x,url(img/vietpaw-logo-192.webp) 2x)}
 .footer-logo{display:flex;align-items:center}
-.footer-logo .brand-logo{width:40px;height:40px;background-color:#fff}
+.footer-logo .brand-logo{width:40px;height:40px;background:#fff}
 .footer-brand .footer-legal{opacity:.9;margin:-2px 0 8px;font-size:.85rem;color:#fff}
 @media (max-width:600px){.brand-logo{width:36px;height:36px;margin-right:8px}}
 
 .section-short-answer{padding:28px 0 0}
 .section-short-answer .answer-box{margin-bottom:0}
+
+/* Click-to-play process video. Vertical source, capped so it never dominates a section. */
+.video-figure{margin:0;max-width:300px}
+.video-row{align-items:center}
+.video-figure video{width:100%;height:auto;border-radius:10px;background:#1d1a16;display:block}
+.video-figure figcaption{font-size:.86rem;color:#5d5a53;margin-top:.5rem;line-height:1.45}
+@media (max-width:600px){.video-figure{max-width:100%}}

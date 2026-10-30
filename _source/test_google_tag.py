@@ -9,7 +9,9 @@ pages = sorted(path for path in ROOT.rglob("*.html")
                if "_source" not in path.relative_to(ROOT).parts
                and "_to_delete" not in path.relative_to(ROOT).parts)
 
-assert len(pages) == len(manifest) == 67
+# Count follows the manifest rather than a fixed baseline, so adding a page
+# cannot silently fail this check.
+assert len(pages) == len(manifest), (len(pages), len(manifest))
 for page in pages:
     relative = page.relative_to(ROOT).as_posix()
     html = page.read_text(encoding="utf-8")

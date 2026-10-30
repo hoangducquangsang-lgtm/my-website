@@ -410,6 +410,50 @@
         }
       ]
     },
+    "assets/img/coffee-stem-billets-stacked-intake-yard.jpg": {
+      "sha256": "e1db51736cb3e194c774c576916af52b9e27b481e6798fdbe9ee47b8e9427c6a",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 274839,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-stem-billets-stacked-intake-yard-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 50914
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-billets-stacked-intake-yard-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 88664
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-billets-stacked-intake-yard-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 124028
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-billets-stacked-intake-yard-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 158816
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-billets-stacked-intake-yard-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 192380
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-billets-stacked-intake-yard-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 217166
+        }
+      ]
+    },
     "assets/img/coffee-stem-diameter-caliper-check.jpg": {
       "sha256": "919ac701348797139f3d2d473faca192b2586bb7d7ed77c15de1393cd5374560",
       "width": 1080,
@@ -451,6 +495,94 @@
           "width": 1080,
           "height": 1350,
           "bytes": 167512
+        }
+      ]
+    },
+    "assets/img/coffee-stems-cut-at-plantation.jpg": {
+      "sha256": "29eab2c3bee6dbd3d54db775b9d5bb392b90d1f0bb91d09f7b158db1a33529dc",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 219269,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-stems-cut-at-plantation-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 37798
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-cut-at-plantation-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 63148
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-cut-at-plantation-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 85220
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-cut-at-plantation-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 109782
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-cut-at-plantation-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 133330
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-cut-at-plantation-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 152832
+        }
+      ]
+    },
+    "assets/img/coffee-stems-loaded-on-trailer-plantation.jpg": {
+      "sha256": "3ddc0a419fb92f68da22076b1153af44085a38ad85cc62ef86e2e6c3e44c862f",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 331936,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-stems-loaded-on-trailer-plantation-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 44650
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-loaded-on-trailer-plantation-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 92460
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-loaded-on-trailer-plantation-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 143864
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-loaded-on-trailer-plantation-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 196912
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-loaded-on-trailer-plantation-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 244718
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-loaded-on-trailer-plantation-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 275110
         }
       ]
     },
@@ -595,6 +727,56 @@
           "width": 1600,
           "height": 1200,
           "bytes": 50698
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chew-size-ladder-xs-xxl.jpg": {
+      "sha256": "45ce250d567cc08db33c66ded7712a73f55d6422900c58a5f856c854e6c7a9f1",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 229841,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-ladder-xs-xxl-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 10094
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-ladder-xs-xxl-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 18012
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-ladder-xs-xxl-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 26622
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-ladder-xs-xxl-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 37250
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-ladder-xs-xxl-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 46462
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-ladder-xs-xxl-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 64874
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chew-size-ladder-xs-xxl-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 101254
         }
       ]
     },
@@ -1197,6 +1379,50 @@
           "width": 1080,
           "height": 1350,
           "bytes": 80696
+        }
+      ]
+    },
+    "assets/img/coffee-wood-moisture-meter-reading.jpg": {
+      "sha256": "5e41e916eaa29a58575ce47d7319856a6064b0ed730a1c55e54124629254ae9d",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 132931,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-reading-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 17722
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-reading-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 27852
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-reading-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 40062
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-reading-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 52038
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-reading-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 63750
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-moisture-meter-reading-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 75262
         }
       ]
     },
@@ -3269,6 +3495,50 @@
           "width": 1080,
           "height": 1350,
           "bytes": 247744
+        }
+      ]
+    },
+    "assets/img/seasoned-coffee-stems-close-up.jpg": {
+      "sha256": "cab665fc581b649ec578432fbec36f16ad7b417b44ca7bdd8b82a567fb3edd63",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 251074,
+      "variants": [
+        {
+          "path": "assets/img/webp/seasoned-coffee-stems-close-up-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 44298
+        },
+        {
+          "path": "assets/img/webp/seasoned-coffee-stems-close-up-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 72224
+        },
+        {
+          "path": "assets/img/webp/seasoned-coffee-stems-close-up-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 99106
+        },
+        {
+          "path": "assets/img/webp/seasoned-coffee-stems-close-up-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 128316
+        },
+        {
+          "path": "assets/img/webp/seasoned-coffee-stems-close-up-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 154500
+        },
+        {
+          "path": "assets/img/webp/seasoned-coffee-stems-close-up-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 177698
         }
       ]
     },

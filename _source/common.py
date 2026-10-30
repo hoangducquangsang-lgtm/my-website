@@ -116,7 +116,7 @@ FOOTER_LINKS = [
         ("Solutions", "/solutions/"), ("Guides", "/guides/"), ("How to Order", "/how-to-order/"),
         ("Testing & Documents", "/certifications/"), ("Sustainability", "/sustainability/")]),
     ("Get in Touch", [
-        ("Request a Quote / Sample", "/request-a-quote/"), ("Wholesale Catalogue", "/wholesale-catalogue/"),
+        ("Request a Quote / Sample", "/request-a-quote/"),
         ("About", "/about/"), ("Contact", "/contact/")]),
 ]
 
@@ -302,7 +302,7 @@ def write_page(root, path, html):
             url, descriptor = candidate.strip().rsplit(" ", 1)
             candidates.append(f'{relative_url(url) if url.startswith("/") else url} {descriptor}')
         return 'srcset="' + ", ".join(candidates) + '"'
-    html = re.sub(r'(href|src|data-success-url)="(/[^"]*)"', relative, html)
+    html = re.sub(r'(href|src|poster|data-success-url)="(/[^"]*)"', relative, html)
     html = re.sub(r'srcset="([^"]+)"', relative_srcset, html)
     with open(target,"w",encoding="utf-8",newline="\n") as f:
         f.write(html)

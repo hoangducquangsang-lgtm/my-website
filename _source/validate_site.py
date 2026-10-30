@@ -59,7 +59,7 @@ class Document(HTMLParser):
         if tag=="details" and "nav-menu" in a.get("class", "").split(): self.nav_menus.append(a)
         if tag in ("input","select","textarea"): self.fields.append(a)
         if tag=="label": self.labels.add(a.get("for"))
-        for key in ("href","src","action","data-success-url"):
+        for key in ("href","src","poster","action","data-success-url"):
             if key in a:
                 self.links.append((tag,key,a[key]))
                 if self.main and tag=="a": self.main_links.append(a[key])
@@ -211,7 +211,7 @@ def run():
             warnings.append(f"{route}: long meta description ({len(d.meta['description'])} chars)")
     titles=Counter(d.title for _,d in docs.values())
     guide_dates=sorted(date.fromisoformat(v) for v in GUIDE_UPDATED_DATES.values())
-    check(len(guide_dates)==20 and len(set(guide_dates))==20,"Guides must have twenty distinct displayed dates")
+    check(len(guide_dates)==len(GUIDE_UPDATED_DATES) and len(set(guide_dates))==len(GUIDE_UPDATED_DATES),"Guides must have one distinct displayed date each")
     check(all((b-a).days in (3,4) for a,b in zip(guide_dates,guide_dates[1:])),"Guide dates must be spaced 3–4 days apart")
     hub_html=docs["/guides/"][0].read_text(encoding="utf-8")
     check(all(updated_time(slug) in hub_html for slug in GUIDE_UPDATED_DATES),"Guide list dates differ from article dates")
@@ -278,8 +278,7 @@ def run():
     check(names=={"name","email","phone","company","country","buyer_type","products","enquiry_type","_subject","_gotcha"},"RFQ fields differ from the current B2B brief: "+str(names))
     check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email","phone","country","buyer_type"},"RFQ required fields differ (company must be optional)")
     check(sum(1 for f in rfq.fields if f.get("name")=="products" and f.get("type")=="checkbox")==4,"RFQ product interest must be 4 checkboxes")
-    catalogue=docs["/wholesale-catalogue/"][1]
-    check({f.get("name") for f in catalogue.fields if "required" in f}=={"email","country"},"Catalogue pricing requires email and destination")
+    check("/wholesale-catalogue/" not in docs,"Retired catalogue route must not be published again")
     check(any(key=="action" and link=="https://formspree.io/f/mvkpbvlb" for _,key,link in rfq.links),"Legacy Formspree destination missing")
     check(docs["/request-a-quote/thank-you/"][1].meta.get("robots")=="noindex,follow","Thank-you page must be noindex")
     for route in ("/products/coffee-wood-dog-chew/","/guides/coffee-wood-chew-size-guide/"):

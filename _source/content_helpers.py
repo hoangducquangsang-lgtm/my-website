@@ -90,6 +90,14 @@ def figure(src, alt, caption, lazy=True):
     load = ' loading="lazy"' if lazy else ' loading="eager"'
     return f'<figure><img src="{src}" alt="{escape(alt, quote=True)}"{load}><figcaption>{caption}</figcaption></figure>'
 
+def video_figure(src, poster, caption, fallback):
+    """Click-to-play WebM figure. preload=none keeps it off the critical path."""
+    return ('<figure class="video-figure"><video controls preload="none" playsinline '
+            f'poster="{poster}" width="480" height="854">'
+            f'<source src="{src}" type="video/webm">{fallback}</video>'
+            f'<figcaption>{caption}</figcaption></figure>')
+
+
 def media(body, src, alt, caption, reverse=False):
     fig = figure(src, alt, caption)
     return ('<div class="grid grid-2">'+fig+'<div>'+body+'</div></div>') if reverse else \
@@ -143,7 +151,7 @@ def cards(items, cols=3):
 
 def hero(title, lede, eyebrow="Wholesale & Private Label", image=None, request="sample", product=None, ctas=True):
     query = urlencode({"request":request, **({"product":product} if product else {})})
-    actions = f'<div class="hero-ctas"><a class="btn btn-primary" href="/request-a-quote/?{escape(query, quote=True)}">{"Request This Product Sample" if product else "Request Samples & Pricing"}</a><a class="btn btn-outline" href="/wholesale-catalogue/">Get Wholesale Catalogue</a></div>' if ctas else ""
+    actions = f'<div class="hero-ctas"><a class="btn btn-primary" href="/request-a-quote/?{escape(query, quote=True)}">{"Request This Product Sample" if product else "Request Samples & Pricing"}</a><a class="btn btn-outline" href="/how-to-order/">How to Order</a></div>' if ctas else ""
     content = f'<div><p class="hero-eyebrow">{eyebrow}</p><h1>{title}</h1><p class="hero-lede">{lede}</p>{actions}</div>'
     visual = f'<img src="{image}" alt="{escape(image_description(image,title))}" loading="eager">' if image else ""
     if image and image.endswith("vietpaw-hemp-wood-assortment.jpg"):

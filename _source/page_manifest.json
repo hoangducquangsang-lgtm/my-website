@@ -34,11 +34,6 @@
     "description": "Plan your VietPaw sample and wholesale order: product brief, MOQ, artwork approval, production, inspection and destination-specific shipping.",
     "indexable": true
   },
-  "/wholesale-catalogue/": {
-    "title": "VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
-    "description": "Download the VietPaw 2026 pet toy catalogue (PDF) and contact us for current specifications, prices, MOQ and private-label terms.",
-    "indexable": true
-  },
   "/request-a-quote/": {
     "title": "Request Pet Toy Samples & Wholesale Quote | VietPaw",
     "description": "Request a quote or product sample from VietPaw. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",
@@ -237,6 +232,16 @@
   "/guides/": {
     "title": "Pet Toy Sourcing Guides | Specs, MOQ & Claims | VietPaw",
     "description": "Buyer guides to natural pet toy materials, chew sizing, supplier checks, MOQ, lead times and which product claims can be supported.",
+    "indexable": true
+  },
+  "/guides/olive-wood-vs-coffee-wood-dog-chews/": {
+    "title": "Olive Wood vs Coffee Wood Dog Chews: What Actually Differs | VietPaw",
+    "description": "Olive wood vs coffee wood dog chews compared on origin, available test data, sizing, supply season, logistics and the claims each one supports.",
+    "indexable": true
+  },
+  "/guides/where-does-coffee-wood-come-from/": {
+    "title": "Where Does Coffee Wood Come From? Origin, Season and Traceability | VietPaw",
+    "description": "Where coffee wood dog chews come from: Robusta stems from Vietnam's Central Highlands, the replanting cycle behind the supply, and what a buyer can verify.",
     "indexable": true
   },
   "/guides/natural-dog-chew-toys-guide/": {

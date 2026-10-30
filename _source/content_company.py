@@ -142,16 +142,8 @@ def build(root):
          section("For reorders",p("Keep the approved sample/version, product codes, artwork, carton configuration and inspection criteria together. Confirm material or packaging changes before repeat production. Share a rolling forecast with required delivery dates rather than relying on an annual capacity headline.")+
             p('<a href="/solutions/wholesalers/">Distributor reorder planning</a> · <a href="/solutions/retail-chains/">Retail-chain supply preparation</a>'),True)],
         active="Company",image=IMG+"inspection-documents-at-pallets.jpg")
-    publish(root,"/wholesale-catalogue/","VietPaw Wholesale Pet Toy Catalogue (PDF) | VietPaw",
-        "Download the VietPaw 2026 pet toy catalogue (PDF) and contact us for current specifications, prices, MOQ and private-label terms.",
-        "Wholesale Pet Toy Catalogue",
-        "Explore the VietPaw range. Use the catalogue as a visual reference, then confirm current specifications and terms with Sarah.",
-        [section("Download instantly. Ask for pricing when you need it.",
-            '<div class="grid grid-2"><div><p><a class="btn btn-primary" href="/assets/downloads/vietpaw-catalogue-2026.pdf">Download Catalogue (PDF)</a></p>'+
-            p("This catalogue is a visual reference, not a certified product specification or a live price list. Older safety, size, environmental or commercial wording in the PDF should not be copied into your packaging or order terms without review. Use the current website order information and your written quotation for samples, minimums and production timing.")+
-            p("No email is required to download. If you would like current MOQ and pricing, use the optional form alongside the catalogue. We use those details to reply to your request, not to subscribe you to a newsletter.")+'</div><div>'+catalogue_form()+'</div></div>'),
-         section("Send the product references you want quoted",p("Include the catalogue item or photo reference, dimensions, quantity per SKU, destination and packaging requirements. The approved sample and written quote take precedence over catalogue examples.")+
-            p('<a href="/products/coffee-wood-dog-chew/">Coffee wood reference specifications</a> · <a href="/collections/hemp-fiber/">Hemp collection</a> · <a href="/request-a-quote/">Request current pricing</a>'),True)],active="Company",image=IMG+"container-wall-of-cartons.jpg")
+    # The wholesale catalogue route was retired on 2026-10-29. .htaccess 301s it to the
+    # RFQ page, so nothing here publishes it and nothing links to it.
     build_rfq(root)
     contact_sections=[
       section("How to reach VietPaw",
@@ -250,7 +242,7 @@ def build_rfq(root):
         eyebrow="Enquiry received",ctas=False)
     thanks+=section("Stay in touch",p(f'<a class="btn btn-primary" href="https://wa.me/{PHONE_TEL[1:]}">Contact us on WhatsApp</a>')+
         p(f'<a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="tel:{PHONE_TEL}">{PHONE}</a>')+
-        p('<a href="/wholesale-catalogue/">Browse the catalogue</a> or <a href="/">return to the homepage</a>.'))
+        p('<a href="/guides/">Read the buyer guides</a> or <a href="/">return to the homepage</a>.'))
     write_page(root,"/request-a-quote/thank-you/",page("Thank You for Your Enquiry | VietPaw",
         "Thank you for contacting VietPaw. Our team will review your pet toy enquiry and reply with pricing, sample availability and lead time.",
         "/request-a-quote/thank-you/",thanks,schemas=[bs],noindex=True))
