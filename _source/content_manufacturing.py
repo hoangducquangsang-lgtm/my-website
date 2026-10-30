@@ -129,7 +129,7 @@ def build(root):
         "The Factories We Work With in Vietnam",
         "We work with two coffee wood factories in Dak Lak and Gia Lai, with packing and export documents prepared from our Ho Chi Minh City warehouse.",
         [section("Two factories, one specification",
-            p("VietPaw does not own its production. We work with two factories in Vietnam — one in Dak Lak and one in Gia Lai, both in the Central Highlands close to where the coffee wood is collected — with packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")+
+            p("VietPaw does not own the factories; it controls the manufacturing. We work with two factories in Vietnam — one in Dak Lak and one in Gia Lai, both in the Central Highlands close to where the coffee wood is collected — that build to our specification and release against our quality checks, with packing and export documentation run from our Ho Chi Minh City office and warehouse.")+
             table(["Site","Location"],SITES)+
             p("We do not publish a headline capacity figure. Volume and dates for your order are planned against the actual SKU mix and confirmed in your quotation.")+
             p("Buyer visits and third-party inspection are welcome at any of our factories; please arrange in advance so the line is running when you arrive.")),
@@ -150,7 +150,7 @@ def build(root):
             p('<a href="/quality-control/">Review the quality-control workflow</a> and <a href="/certifications/">document scope</a> before agreeing the inspection brief.'),True)],
         active="Manufacturing",image="/assets/img/process-raw-sticks.jpg",
         faqs=[("How is production capacity confirmed?", "We do not publish a headline monthly figure. Capacity is planned against your actual product mix and packaging, and the lead time and production slot are confirmed in your quotation."),
-              ("Do you own the factories?", "No. VietPaw works with two factories, in Dak Lak and Gia Lai. We set the specification, run quality release and issue the export documents, and we will name the site that makes your order."),
+              ("Do you own the factories?", "No. VietPaw works with two factories, in Dak Lak and Gia Lai. We are the manufacturer in the OEM sense: the specification, the production plan, the QC checkpoints and the quality release are ours, and so are the export documents. We will name the site that makes your order."),
               ("Can I arrange a factory visit?", "Yes. Tell us which factory and product you want to see and we will arrange the appointment and contact before you travel. Third-party inspection is also welcome.")])
     publish(root,"/quality-control/","Pet Toy Quality Control | VietPaw",
         "Coffee wood follows our drying and quality protocol with five QC checkpoints. Review batch moisture below 14% before packing and inspection records.",

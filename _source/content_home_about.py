@@ -171,11 +171,13 @@ def home(root):
 def about(root):
     sections = [
       section("Who VietPaw is",
-        answer("VietPaw is a Vietnamese exporter of natural-material pet toys. Coffee wood chews, coconut fiber "
-               "balls, hemp rope toys and loofah cat shapes are made at two factories we work with in Dak Lak "
-               "and Gia Lai. We hold standard sizes in our warehouse in Ho Chi Minh City and ship on our own "
-               "export documents. We are not a general trading company: these are the only two sites that make "
-               "our range, and we will name the one that makes your order.")
+        answer("VietPaw is a Vietnamese manufacturer and exporter of natural-material pet toys. Coffee wood "
+               "chews, coconut fiber balls, hemp rope toys and loofah cat shapes are made at two factories we "
+               "work with in Dak Lak and Gia Lai \u2014 to our specification, under our production plan and our "
+               "quality release. We hold standard sizes in our warehouse in Ho Chi Minh City and ship on our "
+               "own export documents. We are not a trading company reselling someone else\u2019s catalogue: we "
+               "specify the product, control how it is made and checked, and will name the site that makes "
+               "your order.")
         + p("That matters for three practical reasons. Stock sizes ship in 5\u20137 days because they are already "
             "packed and held in our own warehouse. Quality decisions \u2014 what counts as a rejectable crack, what "
             "moisture we pack at \u2014 are set by us and written into the specification the factories work to. And "
@@ -187,8 +189,9 @@ def about(root):
 
       section("The two factories we work with",
         p("Everything we sell is made at two factories in Vietnam, both in the Central Highlands close to where "
-          "the coffee wood is collected: one in Dak Lak and one in Gia Lai. We do not own them. Packing, quality "
-          "release and export documentation run from our Ho Chi Minh City office and warehouse.")
+          "the coffee wood is collected: one in Dak Lak and one in Gia Lai. We do not own the sites, and we do "
+          "control what is made there \u2014 the specification, the production plan and the quality release are ours. "
+          "Packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")
         + spec_table(["Site", "Location"], SITES,
             caption="Buyer-arranged visits and third-party inspection are welcome at any site; please arrange in "
                     "advance so the line is running when you arrive. Loading port is Cat Lai, Ho Chi Minh City.")
@@ -210,9 +213,13 @@ def about(root):
       section("The materials, and where they come from",
         media(p("Coffee wood comes from mature Robusta stems in Vietnam\u2019s Central Highlands \u2014 Dak Lak, Gia Lai "
                 "and Dak Nong. Growers take out the trees that have stopped paying their way and leave the rest "
-                "alone, so these stems already existed and previously went to firewood; nobody fells a coffee tree "
+                "alone, so these stems already existed and previously went to firewood or were burned off in the "
+                "field; nobody fells a coffee tree "
                 "that is still yielding cherries. Stems are cut to billets of roughly 50 to 70 cm in the field, then "
-                "held about a year in ventilated shade before anything is machined.")
+                "held about a year in ventilated shade before anything is machined. The open-air seasoning is the part "
+                "we publish; the controlled drying that follows machining runs to a protocol we keep to ourselves, and "
+                "what we publish from it is the result rather than the schedule \u2014 moisture below 14% on the finished "
+                "batch, measured at the factory.")
               + p("Coconut fiber is coir from the husk, itself a by-product of the coconut food and oil trade. "
                   "Loofah is the dried fibrous interior of a gourd, grown on vines and peeled by hand. Hemp is a "
                   "bast fiber spun into cord.")
@@ -226,7 +233,7 @@ def about(root):
       section("Brand, company and sales contact",
         table(["Role", "Information"], [
           ("Website / site name", BRAND),
-          ("Business", "Exporter of natural-material pet toys"),
+          ("Business", "Manufacturer (OEM) and exporter, natural-material pet toys"),
           ("Factories", "Two partner factories, in Dak Lak and Gia Lai"),
           ("Company registered", REGISTRATION_DATE),
           ("Export markets", COUNTRIES+" countries"),
@@ -270,14 +277,15 @@ def about(root):
         "Who VietPaw is, what we specify, where the materials come from and which claims we will not make. "
         "Natural pet toys from Vietnam for wholesale, private label and OEM/ODM.",
         "About VietPaw",
-        "A Vietnamese exporter of natural-material pet toys \u2014 how our products are made, "
+        "A Vietnamese manufacturer and exporter of natural-material pet toys \u2014 how our products are made, "
         "what we will not claim, and where you can come and look.",
         sections, active="Company", image=IMG+"coffee-wood-workshop-stacked-billets.jpg",
         faqs=[
           ("Does VietPaw own its factories?",
-           "No. We work with two factories, in Dak Lak and Gia Lai. We set the specification, run quality release "
-           "and ship on our own export documents. We will name the site that makes your order, and you are welcome "
-           "to visit it or send an inspector."),
+           "No, and we do not claim to. We work with two factories, in Dak Lak and Gia Lai. What we control is the "
+           "manufacturing itself: the specification they build to, the production plan, the five QC checkpoints and "
+           "the quality release, and we ship on our own export documents. We will name the site that makes your "
+           "order, and you are welcome to visit it or send an inspector."),
           ("How long have you been exporting?",
            "The company has been registered in Vietnam since "+REGISTRATION_DATE+" and now ships to "+COUNTRIES+" countries. "
            "Country count is our own record rather than an audited figure, and we present it as such."),

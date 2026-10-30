@@ -125,7 +125,7 @@ add("where-does-coffee-wood-come-from","Natural chew toys",
     "Where coffee wood dog chews come from: Robusta stems from Vietnam's Central Highlands, the replanting cycle behind the supply, and what a buyer can verify.",
     answer("<strong>Short answer:</strong> our coffee wood is the stem of Robusta coffee plants aged 20 years and over, grown on smallholder "
            "plots in Vietnam's Central Highlands \u2014 principally Dak Lak and Gia Lai. Growers remove trees that have stopped yielding "
-           "economically as part of normal replanting; the stems, which previously went to firewood, are cut to billets of roughly 50\u201370 cm "
+           "economically as part of normal replanting; the stems, which previously went to firewood or were burned off in the field, are cut to billets of roughly 50\u201370 cm "
            "in the field, held about a year in ventilated shade, then machined, dried below 14% moisture and graded at our factory."),
     [
     ("The plant, not a forest",
@@ -142,7 +142,7 @@ add("where-does-coffee-wood-come-from","Natural chew toys",
         ("Species","Coffea canephora (Robusta)"),
         ("Growing region","Central Highlands of Vietnam \u2014 principally Dak Lak and Gia Lai"),
         ("Plant age at removal","20 years and over, at the end of its economic yield"),
-        ("Reason for removal","Grower replanting cycle; previous use of the stems was firewood"),
+        ("Reason for removal","Grower replanting cycle; the stems previously went to firewood or were burned off in the field"),
         ("Field billet length","Roughly 50\u201370 cm, cut at the plantation edge"),
         ("Holding before machining","About one year in ventilated shade"),
         ("Moisture at packing","Below 14%, measured at the factory, then vacuum packed"),
@@ -190,13 +190,14 @@ add("where-does-coffee-wood-come-from","Natural chew toys",
        "Dak Lak and Gia Lai. The stems come out during the grower's normal replanting cycle."),
       ("Are trees cut down to make coffee wood chews?",
        "No tree that is still yielding cherries is felled for this product, and no forest is cleared. The stems are removed by growers when the "
-       "plant has reached the end of its economic yield; their previous use was firewood."),
+       "plant has reached the end of its economic yield, and previously went to firewood or were burned off in the field."),
       ("What part of the coffee plant is used?",
        "The stem wood. Chew sticks are cut from the stem, not from the bean or the cherry. We do not publish a caffeine-free claim because no "
        "laboratory result has been produced for this material."),
       ("How long is the wood seasoned before it is made into chews?",
        "About one year in ventilated shade as 50\u201370 cm billets, before cutting, shaping and the controlled drying stages that bring "
-       "moisture below 14%."),
+       "moisture below 14%. The seasoning is published; the drying parameters are not. What is published from that stage is the result "
+       "on the finished batch, not the temperatures, timings or stage order."),
       ("Can I get FSC certification for coffee wood?",
        "No. Coffee is an agricultural crop and falls outside the scope of FSC certification. The documents that do exist for this material are "
        "the Certificate of Origin, the phytosanitary certificate and the fumigation certificate."),
@@ -870,7 +871,7 @@ add("what-is-coconut-fiber-pet-toys","Materials & claims",
         ("Minimum order","Selected standard lines from 50 pcs; per-size minimum confirmed in the quote"),
         ("Branding","Hang tags, labels or small boxes; printed items from 500 pcs per SKU"),
         ("Samples","3 free samples; you cover the courier"),
-        ("Production","Two partner factories in Vietnam, in Dak Lak and Gia Lai"),
+        ("Production","Two partner factories in Vietnam, Dak Lak and Gia Lai; specification and QC controlled by VietPaw"),
       ])),
 
     ("A cat ball is not simply the smallest dog ball",
@@ -1072,7 +1073,7 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
       p("<dfn>Sourcing</dfn> here means buying finished pet toys directly from a Vietnamese manufacturer and importing them under your own "
         "name — as a brand, retailer, distributor or marketplace seller. Vietnam’s natural-material base is the reason buyers look here: "
         "coffee wood is collected in the Central Highlands, and coconut and loofah are grown in the country.")
-      + p("VietPaw supplies four material collections — coffee wood, coconut fiber, hemp and loofah — made at two factories in Dak Lak "
+      + p("VietPaw manufactures four material collections — coffee wood, coconut fiber, hemp and loofah — at two factories in Dak Lak "
           "and Gia Lai. Packing, quality release and export documents run from our Ho Chi Minh City office and warehouse, and "
           "goods leave from Cat Lai port.")
       + p("Most of the useful work on a first order happens before the purchase order: narrowing the assortment, approving a sample and "
@@ -1169,8 +1170,8 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     "How to evaluate a Vietnam dog toy manufacturer by product expertise, production stages, sample consistency and order-specific capacity.",
     answer("<strong>Short answer:</strong> choose a natural dog toy manufacturer in Vietnam on three tests — it makes your material and "
            "construction in facilities it can show you, it can hold an approved sample through repeat orders, and its capacity fits your "
-           "SKU mix rather than only a headline number. VietPaw supplies coffee wood, coconut fiber, hemp and loofah toys made at two "
-           "factories in Dak Lak and Gia Lai, and will name the site that makes your order."),
+           "SKU mix rather than only a headline number. VietPaw manufactures coffee wood, coconut fiber, hemp and loofah toys at two "
+           "factories in Dak Lak and Gia Lai, to its own specification and quality release, and will name the site that makes your order."),
     [
     ("Manufacturer, trading company or sourcing agent?",
       p("A <dfn>natural dog toy manufacturer</dfn> makes chews and toys from plant materials — wood, coir, hemp, loofah — in its own "
@@ -1181,8 +1182,9 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
         ("Sourcing agent","Finds and manages factories for a fee","Local presence without your own staff","Fee structure, and who is liable if goods are wrong"),
       ])
       + p("None of these is wrong. What matters is that you know which one you are dealing with and where the work is done. VietPaw "
-          "does not own its factories: it works with two, in Dak Lak and Gia Lai, and will name the one that makes your SKU and "
-          "arrange a walkthrough of it.")),
+          "does not own its factories and is not a trading company either: it works with two sites, in Dak Lak and Gia Lai, and owns "
+          "the specification, the production plan and the quality release — OEM manufacturing rather than resale. It will name the "
+          "site that makes your SKU and arrange a walkthrough of it.")),
 
     ("VietPaw at a glance",
       spec_table(["Item","Detail","Where to check"],[
@@ -1239,8 +1241,9 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     image="process-raw-sticks.jpg",
     faqs=[
       ("Does VietPaw own its factories?",
-       "No. VietPaw works with two factories, in Dak Lak and Gia Lai. It sets the specification, runs quality release and issues the export "
-       "documents, and will name the site that makes your order."),
+       "No. VietPaw works with two factories, in Dak Lak and Gia Lai, and controls the manufacturing: the specification, the production "
+       "plan, the QC checkpoints, the quality release and the export documents are all VietPaw’s. It will name the site that makes "
+       "your order."),
       ("How is VietPaw’s production capacity confirmed?",
        "No headline monthly figure is published. The slot and dates for your order depend on the SKU mix and packaging and are "
        "confirmed in your quotation."),
@@ -1708,7 +1711,7 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
        "No. Origin follows where goods were wholly obtained or substantially transformed. Transshipped or merely repacked goods keep their "
        "original origin, and mis-declaring it is a customs violation."),
       ("Does VietPaw make synthetic or plush toys?",
-       "No. VietPaw supplies four natural-material collections — coffee wood, coconut fiber, hemp and loofah — made at two factories "
+       "No. VietPaw manufactures four natural-material collections — coffee wood, coconut fiber, hemp and loofah — at two factories "
        "in Vietnam."),
     ],
     figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.'),('coconut-fiber-rope-toy-knotted.jpg','Coconut fiber rope toy with a knot at each end','Coconut fiber rope with two knots, for supervised tug and carry.'),('hemp-rope-loop-ball-toy.jpg', 'Hemp rope toy with a loop handle and a knotted ball end', 'Ball-with-rope: the join between loop and ball is a separate inspection point.')])
