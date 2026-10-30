@@ -226,9 +226,10 @@ def about(root):
               + p("Two of those four \u2014 coffee wood and coconut husk \u2014 have a genuine material-reuse story we are "
                   "happy to put in writing. Hemp and loofah are plant-derived but are grown as crops, and we do "
                   "not describe them as agricultural waste."),
-              IMG+"loofah-gourd-on-the-vine.jpg",
-              "A green loofah gourd hanging from its vine against foliage",
-              "Loofah on the vine. Grown as a crop \u2014 which is why we do not call it agricultural waste.")),
+              IMG+"coffee-stems-piled-after-clearing.jpg",
+              "A long roadside pile of cut coffee stems at the edge of a plantation in the Central Highlands",
+              "Stems from coffee trees taken out at replanting, piled where they were cut. This wood already "
+              "existed \u2014 it previously went to firewood or was burned off in the field.")),
 
       section("Brand, company and sales contact",
         table(["Role", "Information"], [

@@ -586,6 +586,56 @@
         }
       ]
     },
+    "assets/img/coffee-stems-piled-after-clearing.jpg": {
+      "sha256": "2255875625fdaf1c80ae887958a0ac47512b90488140a99d46c791611abef64b",
+      "width": 2000,
+      "height": 1500,
+      "bytes": 843055,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-stems-piled-after-clearing-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 27156
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-piled-after-clearing-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 58534
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-piled-after-clearing-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 100496
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-piled-after-clearing-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 153612
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-piled-after-clearing-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 215092
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-piled-after-clearing-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 322510
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-piled-after-clearing-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 515288
+        }
+      ]
+    },
     "assets/img/coffee-wood-chew-finishing-bench.jpg": {
       "sha256": "4d4d12969cca741c460822e2975862d6fa9a35c5b32cfd2bd89d2d51a4db5ed6",
       "width": 2000,
