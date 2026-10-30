@@ -830,6 +830,56 @@
         }
       ]
     },
+    "assets/img/coffee-wood-chews-drying-trays.jpg": {
+      "sha256": "6a16b2a6176684837b6769542d0c593b15308d9a585d2ceb96f544bc0e7f9553",
+      "width": 2000,
+      "height": 1500,
+      "bytes": 405045,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-drying-trays-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 26656
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-drying-trays-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 43898
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-drying-trays-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 61054
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-drying-trays-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 76160
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-drying-trays-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 94882
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-drying-trays-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 123534
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-drying-trays-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 172358
+        }
+      ]
+    },
     "assets/img/coffee-wood-chews-graded-sizes-stacked.jpg": {
       "sha256": "b9dbca8e98d44b211e28e7e578bbc56bae74cddfb5c5f741fd08db029a3b66bf",
       "width": 1200,

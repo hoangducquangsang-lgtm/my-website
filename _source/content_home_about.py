@@ -279,7 +279,7 @@ def about(root):
         "About VietPaw",
         "A Vietnamese manufacturer and exporter of natural-material pet toys \u2014 how our products are made, "
         "what we will not claim, and how you can verify it without leaving your desk.",
-        sections, active="Company", image=IMG+"coffee-wood-workshop-stacked-billets.jpg",
+        sections, active="Company", image=IMG+"coffee-wood-chews-drying-trays.jpg",
         faqs=[
           ("Does VietPaw own its factories?",
            "No, and we do not claim to. We work with two factories, in Dak Lak and Gia Lai. What we control is the "
