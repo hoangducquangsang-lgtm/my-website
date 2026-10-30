@@ -10,7 +10,7 @@ from content_products import product_cards
 
 IMG = "/assets/img/"
 
-HOME_LEDE = ("Coffee wood, coconut fiber, hemp and loofah, manufactured in our own three factories in Vietnam for brands, "
+HOME_LEDE = ("Coffee wood, coconut fiber, hemp and loofah, made with two factories in Dak Lak and Gia Lai for brands, "
              "wholesalers and retailers. Published specifications, five QC checkpoints, stock held in our "
              "warehouse, and standard products from 50 pcs per SKU.")
 
@@ -21,8 +21,8 @@ def home(root):
 
     content += section("What VietPaw supplies",
         answer("VietPaw manufactures and exports natural-material pet toys from Vietnam: coffee wood chews, "
-               "coconut fiber balls, hemp rope toys and loofah cat shapes. We manufacture ourselves in three "
-               "factories \u2014 Dak Lak, Gia Lai and Binh Duong \u2014 with a capacity of 100,000 pieces a month, hold standard sizes in our Ho Chi Minh City warehouse, and ship on our own "
+               "coconut fiber balls, hemp rope toys and loofah cat shapes. We work with two factories \u2014 in "
+               "Dak Lak and Gia Lai \u2014 hold standard sizes in our Ho Chi Minh City warehouse, and ship on our own "
                "export documents. Sell wholesale from stock, add your branding under private label, or develop a "
                "new construction under OEM/ODM. Standard products start at 50 pcs per SKU; private-label "
                "packaging starts at 500 pcs.")
@@ -70,7 +70,7 @@ def home(root):
             "<strong>Moisture below 14% at packing.</strong> Pin-type meter reading, photographed per batch, taken again before the container is sealed.",
             "<strong>\u00b13 mm length tolerance</strong> on the coffee wood stick line. Diameter follows the natural stem and is controlled by grading into bands.",
             "<strong>Any cracked piece rejected</strong> at grading, checked piece by piece rather than on a sampled average.",
-            "<strong>Roughly one piece in five rejected</strong> across the whole process, concentrated at the drying racks \u2014 an figure from our own production records that explains why lead time follows graded output.",
+            "<strong>Roughly one piece in five rejected</strong> across the whole process, concentrated at the drying racks \u2014 a figure from our own production records that explains why lead time follows graded output.",
             "<strong>Five checkpoints</strong> between raw stem and sealed carton: intake, after seasoning, after shaping, at grading, and at the packing bench.",
           ]),
           IMG+"moisture-reading-before-packing.jpg",
@@ -171,29 +171,29 @@ def home(root):
 def about(root):
     sections = [
       section("Who VietPaw is",
-        answer("VietPaw is a Vietnamese manufacturer and exporter of natural-material pet toys. We make coffee "
-               "wood chews, coconut fiber balls, hemp rope toys and loofah cat shapes ourselves, in our own three "
-               "factories in Dak Lak, Gia Lai and Binh Duong, hold standard sizes in our warehouse in Ho Chi Minh City, and ship on our own "
-               "export documents. Orders go from our stock or our line straight to your container — there is no "
-               "trading layer in between.")
+        answer("VietPaw is a Vietnamese exporter of natural-material pet toys. Coffee wood chews, coconut fiber "
+               "balls, hemp rope toys and loofah cat shapes are made at two factories we work with in Dak Lak "
+               "and Gia Lai. We hold standard sizes in our warehouse in Ho Chi Minh City and ship on our own "
+               "export documents. We are not a general trading company: these are the only two sites that make "
+               "our range, and we will name the one that makes your order.")
         + p("That matters for three practical reasons. Stock sizes ship in 5\u20137 days because they are already "
-            "packed, not because we are chasing another factory. Quality decisions \u2014 what counts as a rejectable "
-            "crack, what moisture we pack at \u2014 are ours to make and ours to change for your order. And when you "
-            "want to verify something, you are asking the people who ran the line rather than a middleman relaying "
-            "your question.")
+            "packed and held in our own warehouse. Quality decisions \u2014 what counts as a rejectable crack, what "
+            "moisture we pack at \u2014 are set by us and written into the specification the factories work to. And "
+            "when you want to verify something, we will tell you which site makes your order and arrange the "
+            "visit there.")
         + p("What we will not do is overclaim. Most of what gets printed in this category \u2014 splinter-free, dental "
             "benefits, certified biodegradable \u2014 has no evidence behind it, and a buyer who prints it inherits "
             "the risk. We would rather lose a sale than hand you a claim that fails.")),
 
-      section("Our three factories",
-        p("We manufacture everything we sell ourselves, in three factories we operate in Vietnam: Dak Lak and Gia "
-          "Lai in the Central Highlands, close to where the coffee wood is collected, and Binh Duong in the south. "
-          "Packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")
+      section("The two factories we work with",
+        p("Everything we sell is made at two factories in Vietnam, both in the Central Highlands close to where "
+          "the coffee wood is collected: one in Dak Lak and one in Gia Lai. We do not own them. Packing, quality "
+          "release and export documentation run from our Ho Chi Minh City office and warehouse.")
         + spec_table(["Site", "Location"], SITES,
             caption="Buyer-arranged visits and third-party inspection are welcome at any site; please arrange in "
                     "advance so the line is running when you arrive. Loading port is Cat Lai, Ho Chi Minh City.")
-        + p("<strong>Production capacity: 100,000 pieces a month</strong> across our three factories. Volume and "
-            "dates for your order are confirmed in your quotation.")),
+        + p("We do not publish a headline capacity figure. The volume and dates for your order are planned "
+            "against the actual SKU mix and confirmed in your quotation.")),
 
       section("What we do and do not do",
         fit(["Specifying a product properly before the first order, including the components a photograph does not show.",
@@ -226,10 +226,9 @@ def about(root):
       section("Brand, company and sales contact",
         table(["Role", "Information"], [
           ("Website / site name", BRAND),
-          ("Business", "Manufacturer and exporter, natural-material pet toys"),
-          ("Factories", "Own factories in Dak Lak, Gia Lai and Binh Duong"),
-          ("Production capacity", "100,000 pcs/month"),
-          ("Producing since", REGISTRATION_DATE),
+          ("Business", "Exporter of natural-material pet toys"),
+          ("Factories", "Two partner factories, in Dak Lak and Gia Lai"),
+          ("Company registered", REGISTRATION_DATE),
           ("Export markets", COUNTRIES+" countries"),
           ("Port of loading", "Cat Lai, Ho Chi Minh City"),
           ("VietPaw sales email", EMAIL),
@@ -271,18 +270,18 @@ def about(root):
         "Who VietPaw is, what we specify, where the materials come from and which claims we will not make. "
         "Natural pet toys from Vietnam for wholesale, private label and OEM/ODM.",
         "About VietPaw",
-        "A Vietnamese manufacturer and exporter of natural-material pet toys \u2014 how we produce, "
+        "A Vietnamese exporter of natural-material pet toys \u2014 how our products are made, "
         "what we will not claim, and where you can come and look.",
         sections, active="Company", image=IMG+"coffee-wood-workshop-stacked-billets.jpg",
         faqs=[
-          ("Does VietPaw manufacture its own products?",
-           "Yes. We manufacture ourselves, in our own three factories in Dak Lak, Gia Lai and Binh Duong, with a "
-           "production capacity of 100,000 pieces a month. There is no trading layer: the factory that makes your order "
-           "is ours, and you are welcome to visit or send an inspector."),
+          ("Does VietPaw own its factories?",
+           "No. We work with two factories, in Dak Lak and Gia Lai. We set the specification, run quality release "
+           "and ship on our own export documents. We will name the site that makes your order, and you are welcome "
+           "to visit it or send an inspector."),
           ("How long have you been exporting?",
            "The company has been registered in Vietnam since "+REGISTRATION_DATE+" and now ships to "+COUNTRIES+" countries. "
            "Country count is our own record rather than an audited figure, and we present it as such."),
-          ("Can I visit our factory or send an inspector?",
+          ("Can I visit the factory or send an inspector?",
            "Yes. Buyer-arranged inspection is welcome, and for a shipment that matters we would encourage it: a third party can "
            "witness the moisture reading, measure a sample, photograph carton marks against the packing list and witness "
            "stuffing before the container is sealed."),

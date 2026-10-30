@@ -82,7 +82,7 @@ def build(root):
       <p class="eyebrow">A real manufacturer, not a trading middleman</p>
       <h2>Manufacturing natural pet toys in Vietnam since 2018</h2>
     </div>
-    <p>Choosing a pet toys manufacturer is a decision about trust as much as price. VietPaw is a Vietnamese natural pet products manufacturer operating production and finishing sites in the Central Highlands and Ho Chi Minh City. Because we own production, we control quality, customisation and lead times end to end — and we can prove it with a factory address you can verify, export documents issued in our own name, and buyer-arranged audits welcome at any time. If you are sourcing a <strong>natural pet toys manufacturer in Vietnam</strong> for wholesale, OEM/ODM or private label, this page explains exactly what we make, how we work, and how to start.</p>
+    <p>Choosing a pet toys manufacturer is a decision about trust as much as price. VietPaw is a Vietnamese natural pet products brand working with two factories in Dak Lak and Gia Lai, with packing and export preparation run from Ho Chi Minh City. We set the specification, run quality release and issue the export documents in our own name — and we can prove it with factory addresses you can verify and buyer-arranged audits welcome at any time. If you are sourcing a <strong>natural pet toys manufacturer in Vietnam</strong> for wholesale, OEM/ODM or private label, this page explains exactly what we make, how we work, and how to start.</p>
   </div>
 </section>
 

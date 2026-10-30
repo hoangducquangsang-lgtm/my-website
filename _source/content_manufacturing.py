@@ -10,7 +10,7 @@ def build(root):
         "Natural Pet Toy Manufacturer in Vietnam for B2B Brands",
         "Source coffee wood, coconut fiber, hemp and loofah pet toys through VietPaw with product specifications, production checks and order-specific documentation.",
         [section("A Vietnam manufacturing brief, not just a product list",
-            p("VietPaw manufactures natural pet products ourselves, in our own three factories in Dak Lak, Gia Lai and Binh Duong, with a production capacity of 100,000 pieces a month. Coffee wood is sourced in the Central Highlands; export coordination runs through Ho Chi Minh City. Our range covers coffee wood, coconut fiber, hemp fiber and loofah.")+
+            p("VietPaw makes natural pet products with two factories in Dak Lak and Gia Lai. Coffee wood is collected in the Central Highlands; packing, quality release and export coordination run through Ho Chi Minh City. Our range covers coffee wood, coconut fiber, hemp fiber and loofah.")+
             p("For your order, confirm the actual production location, the approved product specification and the company named in the contract. A manufacturer description should lead to verifiable project details, not replace them.")),
          section("Natural materials we manufacture",cards([
             ("Coffee wood dog chews","Standard sticks and specification-led wood/rope combinations.","/collections/coffee-wood/"),
@@ -46,7 +46,7 @@ def build(root):
             "Coconut fiber: ball dimensions, winding or other coir constructions.",
             "Hemp: rope geometry, knots, balls and connection details.",
             "Loofah: silhouette, dimensions, stitching and optional fillings."])+
-            p(f'We develop designs and packaging in our own factories — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
+            p(f'We develop designs and packaging with the factories we work with — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Material, construction, tooling, test and print requirements are quoted for the specific project.'),True),
          section("The development and approval sequence",ul([
             "<strong>Brief review:</strong> target pet, play context, destination, intended claims and indicative volume.",
             "<strong>Feasibility:</strong> material availability, workable dimensions, manufacturing method and cost drivers.",
@@ -125,13 +125,13 @@ def build(root):
               ("Do you sell every type of pet product?", "This website focuses on coffee wood, coconut fiber, hemp and loofah pet toys, rather than an all-category pet-supply offer."),
               ("Can I order without my own branding?", "Discuss a standard wholesale configuration. Custom packaging and development are separate options.")])
     publish(root,"/factory/","Pet Toy Factory Vietnam | Process & Verification | VietPaw",
-        "VietPaw manufactures in its own three factories in Dak Lak, Gia Lai and Binh Duong, Vietnam — 100,000 pieces a month. Process, quality control and factory visits.",
-        "Our Factories in Vietnam",
-        "We manufacture ourselves, in three factories we operate in Dak Lak, Gia Lai and Binh Duong, with a production capacity of 100,000 pieces a month.",
-        [section("Three factories, one production team",
-            p("VietPaw manufactures its own products. We operate three factories in Vietnam — Dak Lak and Gia Lai in the Central Highlands, close to where the coffee wood is collected, and Binh Duong in the south — with packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")+
+        "VietPaw works with two coffee wood factories in Dak Lak and Gia Lai, Vietnam. Process, quality control, export documents and factory visits.",
+        "The Factories We Work With in Vietnam",
+        "We work with two coffee wood factories in Dak Lak and Gia Lai, with packing and export documents prepared from our Ho Chi Minh City warehouse.",
+        [section("Two factories, one specification",
+            p("VietPaw does not own its production. We work with two factories in Vietnam — one in Dak Lak and one in Gia Lai, both in the Central Highlands close to where the coffee wood is collected — with packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")+
             table(["Site","Location"],SITES)+
-            p("<strong>Production capacity: 100,000 pieces a month</strong> across our three factories. Volume and dates for your order are confirmed in your quotation.")+
+            p("We do not publish a headline capacity figure. Volume and dates for your order are planned against the actual SKU mix and confirmed in your quotation.")+
             p("Buyer visits and third-party inspection are welcome at any of our factories; please arrange in advance so the line is running when you arrive.")),
          section("Coffee wood drying and quality protocol",
             p("Coffee wood follows a "+QC_PROTOCOL+". The five checkpoints are inspection controls within that process.")+
@@ -149,8 +149,8 @@ def build(root):
             "Authorized, appropriately redacted shipment examples where relevant."])+
             p('<a href="/quality-control/">Review the quality-control workflow</a> and <a href="/certifications/">document scope</a> before agreeing the inspection brief.'),True)],
         active="Manufacturing",image="/assets/img/process-raw-sticks.jpg",
-        faqs=[("What is your production capacity?", "100,000 pieces a month across our three factories in Dak Lak, Gia Lai and Binh Duong. Lead time for your order depends on the product mix, packaging and the production schedule, and is confirmed in your quotation."),
-              ("Do you manufacture yourselves?", "Yes. VietPaw manufactures in its own three factories; there is no trading layer between you and the production line."),
+        faqs=[("How is production capacity confirmed?", "We do not publish a headline monthly figure. Capacity is planned against your actual product mix and packaging, and the lead time and production slot are confirmed in your quotation."),
+              ("Do you own the factories?", "No. VietPaw works with two factories, in Dak Lak and Gia Lai. We set the specification, run quality release and issue the export documents, and we will name the site that makes your order."),
               ("Can I arrange a factory visit?", "Yes. Tell us which factory and product you want to see and we will arrange the appointment and contact before you travel. Third-party inspection is also welcome.")])
     publish(root,"/quality-control/","Pet Toy Quality Control | VietPaw",
         "Coffee wood follows our drying and quality protocol with five QC checkpoints. Review batch moisture below 14% before packing and inspection records.",

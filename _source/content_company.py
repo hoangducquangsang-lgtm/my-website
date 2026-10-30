@@ -24,7 +24,7 @@ def build(root):
             "Product tags, size labels, paper/kraft boxes and pack artwork.",
             "Wood-and-rope combinations, rope geometry and loofah shapes, subject to feasibility.",
             "Product photography or video support by agreement; scope and cost depend on the project."])+
-            p(f'We run these services in our own factories — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
+            p(f'We run these services with the factories we work with — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
          section("Before approving a sample",ul([
             "Agree materials, dimensions, tolerances and intended pet/use.",
             "List every component, including thread, cores, adhesive and packaging film.",
@@ -41,7 +41,7 @@ def build(root):
         [section("Which material for which toy",
             answer("<strong>Short answer:</strong> choose coffee wood for hard, long chewing (the thick-cut Gorilla line for strong chewers), "
                    "coconut fiber for fetch-and-carry balls, hemp for rope and tug toys, and loofah for light cat play. All four are made in "
-                   "VietPaw’s three factories in Vietnam, from 50 pcs per SKU on selected standard products.")
+                   "the two factories VietPaw works with in Vietnam, from 50 pcs per SKU on selected standard products.")
             +spec_table(["Material","Typical products","Best for","Main check at sample approval"],[
                 ("Coffee wood","CC01 chew sticks XS–XXL; Gorilla GRLS–GRLXL","Dogs that chew","Dimensions, finish, cracks, moisture below 14%"),
                 ("Coconut fiber","Dog balls S/M/L, cat balls, coir rope toys","Fetch, carry, cat batting","Diameter, weight, winding, any core"),
@@ -212,7 +212,7 @@ def build(root):
           ("Do you work with small buyers and new brands?",
            "Yes. Selected standard SKUs start at 50 pcs, and laser engraving also starts at 50 pcs, so a small branded trial "
            "is possible before committing to the 500 pcs printed-packaging minimum."),
-          ("Can I visit our factory?",
+          ("Can I visit the factory?",
            "Yes, by arrangement. Confirm the current site and the contact for your product line in advance. Buyer-appointed "
            "third-party inspection is also welcome and we would encourage it for a first container."),
           ("What languages do you work in?",

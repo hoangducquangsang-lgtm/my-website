@@ -870,7 +870,7 @@ add("what-is-coconut-fiber-pet-toys","Materials & claims",
         ("Minimum order","Selected standard lines from 50 pcs; per-size minimum confirmed in the quote"),
         ("Branding","Hang tags, labels or small boxes; printed items from 500 pcs per SKU"),
         ("Samples","3 free samples; you cover the courier"),
-        ("Production","Three own factories in Vietnam; 100,000 pcs a month across the range"),
+        ("Production","Two partner factories in Vietnam, in Dak Lak and Gia Lai"),
       ])),
 
     ("A cat ball is not simply the smallest dog ball",
@@ -1028,7 +1028,7 @@ add("sustainable-pet-toy-materials-compared","Materials & claims",
         ("Coconut fiber","Cat ball; dog ball S/M/L; diameter and weight set by sample","Selected lines from 50 pcs"),
         ("Hemp","Rope and ball formats; length, rope diameter and knots quoted by design","Project-specific"),
         ("Loofah","Shapes dimensioned per design; catnip optional","Quoted per shape"),
-      ], caption="All four are made in VietPaw’s three factories; printed packaging from 500 pcs per SKU.")),
+      ], caption="All four are made at the two factories VietPaw works with; printed packaging from 500 pcs per SKU.")),
 
     ("Separate the origin story from the product claim",
       p("Coffee-tree wood and coconut husks offer specific material-reuse stories. Hemp and loofah are plant-derived, but that does not make every "
@@ -1072,8 +1072,8 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
       p("<dfn>Sourcing</dfn> here means buying finished pet toys directly from a Vietnamese manufacturer and importing them under your own "
         "name — as a brand, retailer, distributor or marketplace seller. Vietnam’s natural-material base is the reason buyers look here: "
         "coffee wood is collected in the Central Highlands, and coconut and loofah are grown in the country.")
-      + p("VietPaw manufactures across four material collections — coffee wood, coconut fiber, hemp and loofah — in three factories in Dak Lak, "
-          "Gia Lai and Binh Duong. Packing, quality release and export documents run from our Ho Chi Minh City office and warehouse, and "
+      + p("VietPaw supplies four material collections — coffee wood, coconut fiber, hemp and loofah — made at two factories in Dak Lak "
+          "and Gia Lai. Packing, quality release and export documents run from our Ho Chi Minh City office and warehouse, and "
           "goods leave from Cat Lai port.")
       + p("Most of the useful work on a first order happens before the purchase order: narrowing the assortment, approving a sample and "
           "deciding what must be ready before the goods leave Vietnam.")),
@@ -1159,7 +1159,7 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
       ("Which port do goods ship from?",
        "Cat Lai, Ho Chi Minh City. Sea transit to the EU or the US is commonly quoted at 30–35 days port to port."),
       ("Can I visit the factory before ordering?",
-       "Yes. Buyer visits and third-party inspection are welcome at any of our three factories; arrange in advance so the line is running when "
+       "Yes. Buyer visits and third-party inspection are welcome at both factories; arrange in advance so the line is running when "
        "you arrive."),
     ],
     figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.'),('coffee-wood-chews-graded-sizes-stacked.jpg','Packs of graded coffee wood chews stacked from small to large','Graded sizes stacked from smallest to largest, ready for cartoning.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
@@ -1169,8 +1169,8 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     "How to evaluate a Vietnam dog toy manufacturer by product expertise, production stages, sample consistency and order-specific capacity.",
     answer("<strong>Short answer:</strong> choose a natural dog toy manufacturer in Vietnam on three tests — it makes your material and "
            "construction in facilities it can show you, it can hold an approved sample through repeat orders, and its capacity fits your "
-           "SKU mix rather than only a headline number. VietPaw manufactures coffee wood, coconut fiber, hemp and loofah toys in three "
-           "factories in Dak Lak, Gia Lai and Binh Duong, with a capacity of 100,000 pieces a month."),
+           "SKU mix rather than only a headline number. VietPaw supplies coffee wood, coconut fiber, hemp and loofah toys made at two "
+           "factories in Dak Lak and Gia Lai, and will name the site that makes your order."),
     [
     ("Manufacturer, trading company or sourcing agent?",
       p("A <dfn>natural dog toy manufacturer</dfn> makes chews and toys from plant materials — wood, coir, hemp, loofah — in its own "
@@ -1180,15 +1180,15 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
         ("Trading company","Buys from one or more factories and resells","Range across categories, one invoice","Which factory makes each item; whether it can change"),
         ("Sourcing agent","Finds and manages factories for a fee","Local presence without your own staff","Fee structure, and who is liable if goods are wrong"),
       ])
-      + p("None of these is wrong. What matters is that you know which one you are dealing with and where the work is done. VietPaw is a "
-          "manufacturer: there is no trading layer between you and the production line.")),
+      + p("None of these is wrong. What matters is that you know which one you are dealing with and where the work is done. VietPaw "
+          "does not own its factories: it works with two, in Dak Lak and Gia Lai, and will name the one that makes your SKU and "
+          "arrange a walkthrough of it.")),
 
     ("VietPaw at a glance",
       spec_table(["Item","Detail","Where to check"],[
         ("Company","Registered in Vietnam on 12 November 2019; exporting to 40+ countries","About page; contract details in your quotation"),
-        ("Factories","Three own factories: Dak Lak and Gia Lai (Central Highlands), Binh Duong (south)","Factory page; visits by appointment"),
+        ("Factories","Two partner factories: Dak Lak and Gia Lai, Central Highlands","Factory page; visits by appointment"),
         ("Head office and export","Ho Chi Minh City office and warehouse; shipments leave from Cat Lai","Contact page"),
-        ("Capacity","100,000 pcs a month across the three factories","Production slot confirmed per order"),
         ("Materials","Coffee wood, coconut fiber, hemp and loofah","Collection pages"),
         ("Coffee wood QC","Drying and quality protocol with five QC checkpoints; moisture below 14% before packing","Batch readings on request"),
         ("Minimums","From 50 pcs per SKU; private label from 500 pcs per SKU","How to order"),
@@ -1238,17 +1238,17 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
              ("Quality control","/quality-control/"),("First order from Vietnam","/guides/sourcing-eco-pet-toys-vietnam/")],
     image="process-raw-sticks.jpg",
     faqs=[
-      ("Does VietPaw manufacture its own products?",
-       "Yes. VietPaw manufactures in its own three factories in Dak Lak, Gia Lai and Binh Duong; there is no trading layer between you and the "
-       "production line."),
-      ("What is VietPaw’s production capacity?",
-       "100,000 pieces a month across the three factories. The slot and dates for your order depend on the SKU mix and packaging and are "
+      ("Does VietPaw own its factories?",
+       "No. VietPaw works with two factories, in Dak Lak and Gia Lai. It sets the specification, runs quality release and issues the export "
+       "documents, and will name the site that makes your order."),
+      ("How is VietPaw’s production capacity confirmed?",
+       "No headline monthly figure is published. The slot and dates for your order depend on the SKU mix and packaging and are "
        "confirmed in your quotation."),
       ("Which dog toys does VietPaw make?",
        "Coffee wood chews, coconut fiber toys, hemp rope toys and loofah toys, including wood-and-rope combinations made to an approved "
        "specification."),
       ("Can I visit the factory or send an inspector?",
-       "Yes. Buyer visits and third-party inspection are welcome at any of the three factories. Arrange in advance so the line is running when "
+       "Yes. Buyer visits and third-party inspection are welcome at both factories. Arrange in advance so the line is running when "
        "you arrive."),
       ("What is the minimum order?",
        "Selected standard products start from 50 pcs per SKU. Private-label runs start at 500 pcs per SKU."),
@@ -1256,7 +1256,7 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
        "Ask which site makes your specific SKU and request a walkthrough of that line. A manufacturer can show you; a trading company will "
        "usually name, or decline to name, the factories it buys from."),
     ],
-    figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing on our own line in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.'),('hemp-ball-and-loop-toy-set.jpg','Hemp rope balls with a double-ended loop toy','Hemp balls and a loop toy — specify each construction on its own line.'),('coffee-wood-chews-three-in-vacuum-pack.jpg','Three coffee wood chews sealed in a clear vacuum bag','Vacuum-packed at our warehouse: the bag keeps the wood at its packing moisture until it is opened.')])
+    figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing at one of the two factories in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.'),('hemp-ball-and-loop-toy-set.jpg','Hemp rope balls with a double-ended loop toy','Hemp balls and a loop toy — specify each construction on its own line.'),('coffee-wood-chews-three-in-vacuum-pack.jpg','Three coffee wood chews sealed in a clear vacuum bag','Vacuum-packed at our warehouse: the bag keeps the wood at its packing moisture until it is opened.')])
 
 add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     "Sourcing Coconut-Fiber Cat Toys for Wholesale",
@@ -1463,7 +1463,6 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
         ("Deposit","30% stock / 50% branded","Balance against shipping documents; air freight paid in full before handover"),
         ("Export master carton","51 × 31 × 39 cm (0.062 m³)","30 cartons per pallet"),
         ("Container load","429 cartons (20 ft) / 850 (40 ft)","Planning reference; confirm for your packed SKU"),
-        ("Production capacity","100,000 pcs a month","Across our three factories; your slot is confirmed in the quotation"),
       ], caption="Planning figures published by VietPaw. The quotation for your order governs.")
       + p("An engraving-only order and a fully branded retail pack therefore need different budgets. Ask whether the minimum "
           "applies per SKU, per size, per artwork or per order. If the packaging minimum is higher than the product quantity, agree who "
@@ -1709,7 +1708,7 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
        "No. Origin follows where goods were wholly obtained or substantially transformed. Transshipped or merely repacked goods keep their "
        "original origin, and mis-declaring it is a customs violation."),
       ("Does VietPaw make synthetic or plush toys?",
-       "No. VietPaw manufactures four natural-material collections — coffee wood, coconut fiber, hemp and loofah — in its own three factories "
+       "No. VietPaw supplies four natural-material collections — coffee wood, coconut fiber, hemp and loofah — made at two factories "
        "in Vietnam."),
     ],
     figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.'),('coconut-fiber-rope-toy-knotted.jpg','Coconut fiber rope toy with a knot at each end','Coconut fiber rope with two knots, for supervised tug and carry.'),('hemp-rope-loop-ball-toy.jpg', 'Hemp rope toy with a loop handle and a knotted ball end', 'Ball-with-rope: the join between loop and ball is a separate inspection point.')])
@@ -1757,7 +1756,7 @@ add("pet-toy-safety-testing-requirements","Compliance & risk",
         ("Moisture","Below 14% before packing; batch readings on request"),
         ("Cracks","Any cracked piece rejected at grading"),
         ("Length tolerance","±3 mm on the coffee wood stick line"),
-        ("Buyer inspection","Visits and third-party inspection welcome at all three factories"),
+        ("Buyer inspection","Visits and third-party inspection welcome at both factories"),
         ("Laboratory testing","Arranged separately on request"),
       ])),
 
@@ -1806,12 +1805,12 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
     ("The supplier vetting checklist",
       spec_table(["Check","What to ask for","Red flag","What VietPaw provides"],[
         ("Legal entity and payment","Registration details and the beneficiary named on the contract","Bank account in a different name; bank details changed by email","Company details, beneficiary and terms in the quotation, invoice and contract"),
-        ("Production location","Site details and a walkthrough for your product","Only warehouse photos; no named site","Three own factories in Dak Lak, Gia Lai and Binh Duong; visits and third-party inspection welcome"),
+        ("Production location","Site details and a walkthrough for your product","Only warehouse photos; no named site","Two named factories in Dak Lak and Gia Lai; visits and third-party inspection welcome"),
         ("Sample and specification","A sample with written dimensions, components and tolerances","Photo approval only; “same as before”","3 free samples; dimensions recorded at approval"),
         ("Quality records","Checkpoints and a record linked to your lot","Generic certificate, no batch reference","Coffee wood: five QC checkpoints; moisture below 14% before packing, batch readings on request"),
         ("Product claims","Evidence matched to the exact product and pack","“Non-toxic”, “splinter-free” or “biodegradable” without scope","Claims limited to what is documented; testing arranged on request"),
         ("Export documents","The document list for your destination","Unclear who issues the Certificate of Origin","Seven documents with every order"),
-        ("Capacity","A production slot for your SKU mix","Only an annual headline figure","100,000 pcs a month; your slot confirmed in the quotation"),
+        ("Capacity","A production slot for your SKU mix","Only an annual headline figure","No headline figure published; your slot confirmed in the quotation"),
       ])),
 
     ("Supplier vetting, step by step",
@@ -1863,7 +1862,7 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
        "details sent by email are a common fraud pattern."),
       ("Do I need to visit the factory?",
        "Not always, but you should be able to. A walkthrough, a video tour of your product line or an independent inspection gives similar "
-       "evidence. VietPaw welcomes visits and third-party inspection at all three factories."),
+       "evidence. VietPaw welcomes visits and third-party inspection at both factories."),
       ("Which documents should a natural pet toy supplier provide?",
        "At minimum a Commercial Invoice, Packing List and transport document. For plant-based goods, expect a Certificate of Origin, "
        "Phytosanitary and Fumigation Certificates; VietPaw also issues a Forest-Product Declaration."),
@@ -1962,7 +1961,7 @@ FEATURE = {
     "non-toxic-cat-toys-wholesale-buying-guide": ("vietpaw-loofah-play-shapes.png", "Loofah cat play shapes arranged on a light surface", "Light loofah shapes for batting and carrying — specified for cats, not scaled-down dog toys."),
     "sustainable-pet-toy-materials-compared": ("hemp-rope-toy-assortment.jpg", "Assortment of hemp rope balls and loop toys", "Coconut, hemp, loofah and coffee wood each have a different origin story."),
     "sourcing-eco-pet-toys-vietnam": ("coffee-wood-stem-cross-cutting.jpg", "Worker cross-cutting coffee wood stems with a saw in a Vietnamese workshop", "Cutting coffee wood stems to length at our factory."),
-    "natural-dog-toy-manufacturer-vietnam": ("coffee-wood-drying-rack-rows.jpg", "Rows of coffee wood chew sticks laid out on drying racks", "Chews drying in rows before grading — our own line."),
+    "natural-dog-toy-manufacturer-vietnam": ("coffee-wood-drying-rack-rows.jpg", "Rows of coffee wood chew sticks laid out on drying racks", "Chews drying in rows before grading."),
     "wholesale-coconut-fiber-cat-toys-supplier": ("coconut-fiber-ball-with-rope-toy.jpg", "Coconut fiber ball beside a knotted coir rope toy", "Coconut fiber balls: specify diameter and winding for cats separately."),
     "private-label-oem-eco-pet-toys-explained": ("coffee-wood-cotton-rope-tug-pair.jpg", "Two coffee wood and cotton rope tug toys on a white background", "A changed construction is an OEM project, not a label swap."),
     "pet-toy-moq-fob-pricing-lead-times": ("export-cartons-stacked-for-loading.jpg", "Export cartons stacked on pallets in a warehouse ready for loading", "Carton count and pack format drive the landed cost per piece."),

@@ -19,7 +19,7 @@ from retired_content import assert_retired_files_absent, is_retired_path
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://vietpaw.com"
 GOOGLE_TAG_ID = "G-XTXJ45XN8B"
-EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. Producing since 2019 and exporting to 40+ countries."
+EXPECTED_TAGLINE = "Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber & loofah. Wholesale, private label & OEM/ODM. Registered in 2019, exporting to 40+ countries."
 EXPECTED_ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
 
 class Document(HTMLParser):

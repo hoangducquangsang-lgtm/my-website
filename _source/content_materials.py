@@ -8,7 +8,7 @@ MATERIALS = {
 "coffee-wood":dict(
  title="Coffee Wood Dog Chew Manufacturer | Wholesale | VietPaw",
  h1="Coffee Wood Dog Chews — Wholesale from Vietnam",
- lede="Build a coffee wood range with our own factory in Vietnam: standard chew sticks, custom wood-and-rope constructions and private-label packaging for international buyers.",
+ lede="Build a coffee wood range with our partner factories in Vietnam: standard chew sticks, custom wood-and-rope constructions and private-label packaging for international buyers.",
  image="coffee-wood-chew-grain-detail.jpg",products=["coffee-wood-dog-chew","gorilla-coffee-wood-dog-chew"],
  what="Coffee wood chews are shaped pieces of coffee-tree timber, not coffee beans or edible treats. VietPaw's product information identifies mature coffee wood from Gia Lai and describes cutting, bark removal, surface finishing and drying.",
  applications=[("Standard sticks","Start with a focused size assortment using the CC01 reference specification. Each size is a separate ordering decision."),

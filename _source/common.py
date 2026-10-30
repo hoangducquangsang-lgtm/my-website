@@ -22,15 +22,15 @@ GOOGLE_TAG_HTML = f"""<!-- Google tag (gtag.js) -->
 BRAND = "VietPaw"
 BRAND_TAGLINE = "Natural Pet Products"
 BRAND_ENTITY_STATEMENT = f"{BRAND} is a Vietnamese manufacturer and exporter of natural-material pet toys"
-BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, manufacturing in its own three factories in Vietnam."
+BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, working with two factories in Dak Lak and Gia Lai, Vietnam."
 BRAND_INTRO = f"{BRAND} manufactures natural-material pet toys in Vietnam and exports them to brands, wholesalers and retailers worldwide."
 # Production and finishing sites. Street addresses are published only where confirmed.
-# Owner instruction 2026-09-24: three own factories in Dak Lak, Gia Lai and Binh Duong; 100,000 pcs/month.
-FACTORY_LOCATIONS = "Dak Lak, Gia Lai and Binh Duong"
+# Owner instruction 2026-10-30: VietPaw works with two factories, in Dak Lak and Gia Lai.
+# Binh Duong removed; no production-capacity figure is published anywhere on the site.
+FACTORY_LOCATIONS = "Dak Lak and Gia Lai"
 SITES = [
-    ("Factory — Dak Lak", "Dak Lak province, Central Highlands, Vietnam"),
-    ("Factory — Gia Lai", "Gia Lai province, Central Highlands, Vietnam"),
-    ("Factory — Binh Duong", "Binh Duong, southern Vietnam"),
+    ("Partner factory — Dak Lak", "Dak Lak province, Central Highlands, Vietnam"),
+    ("Partner factory — Gia Lai", "Gia Lai province, Central Highlands, Vietnam"),
     ("Head office, warehouse and export preparation",
      "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"),
 ]
@@ -47,7 +47,6 @@ ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Bin
 REGISTERED_YEAR = "2019"
 REGISTRATION_DATE = "12 November 2019"
 COUNTRIES = "40+"
-CAPACITY = "100,000 pcs/month"
 REVIEW_DATE = "2026-08-30"
 # Owner instruction 2026-09-24: the only place the legal company is named on the site.
 FOOTER_LEGAL = "VietPaw is an international B2B brand of WINVN INT CO., LTD"
@@ -141,7 +140,7 @@ def footer_html():
 <div class="footer-brand"><div class="footer-logo"><span class="brand-logo" aria-hidden="true"></span>{BRAND}</div>
 <p class="footer-legal">{FOOTER_LEGAL}</p>
 <p class="footer-brand-tagline"><em>Natural Pet Products</em></p>
-<p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. Producing since {REGISTERED_YEAR} and exporting to {COUNTRIES} countries.</p>
+<p class="footer-tagline">Natural pet toys manufactured in Vietnam — coffee wood, coconut fiber, hemp fiber &amp; loofah. Wholesale, private label &amp; OEM/ODM. Registered in {REGISTERED_YEAR}, exporting to {COUNTRIES} countries.</p>
 <ul class="footer-contact"><li>{ADDRESS}</li><li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
 <li><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp: {PHONE}</a></li>
 <li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul>
