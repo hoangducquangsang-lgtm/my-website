@@ -252,6 +252,26 @@ def run():
         if data["indexable"] and route!="/":
             check(incoming[route]>0,f"{route}: orphaned indexable URL")
     check("Sitemap: "+BASE+"/sitemap.xml" in (ROOT/"robots.txt").read_text(),"robots sitemap missing")
+    # <lastmod> must be present on every URL, W3C-formatted, never ahead of today
+    # and varied enough to be believable; Google drops a sitemap whose lastmod
+    # values look mechanical. A guide's lastmod must equal the editorial date it
+    # shows on the page and in its Article schema.
+    SM="{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    lastmods={node.findtext(SM+"loc"):node.findtext(SM+"lastmod")
+              for node in ET.parse(ROOT/"sitemap.xml").getroot().iter(SM+"url")}
+    missing_lastmod=sorted(url for url,stamp in lastmods.items() if not stamp)
+    check(not missing_lastmod,f"sitemap: {len(missing_lastmod)} URL without lastmod")
+    stamps=[stamp for stamp in lastmods.values() if stamp]
+    check(all(re.fullmatch(r"\d{4}-\d{2}-\d{2}",stamp) for stamp in stamps),"sitemap: lastmod is not a W3C date")
+    if stamps:
+        check(max(stamps)<=date.today().isoformat(),"sitemap: lastmod dated in the future")
+        check(len(set(stamps))>3,"sitemap: lastmod values too uniform to be trusted")
+    for slug,iso in GUIDE_UPDATED_DATES.items():
+        url=f"{BASE}/guides/{slug}/"
+        if url not in lastmods: continue
+        check(lastmods[url]==iso,f"/guides/{slug}/: sitemap lastmod {lastmods[url]} != editorial date {iso}")
+        guide_html=(ROOT/"guides"/slug/"index.html").read_text(encoding="utf-8")
+        check(f'"dateModified": "{iso}"' in guide_html,f"/guides/{slug}/: Article dateModified out of step with {iso}")
     replacements=json.loads((ROOT/"_source/review/image_replacements.json").read_text(encoding="utf-8"))
     # A relocated site may keep its original source-photo archive in another folder.
     raw_root=ROOT.parent/"1. Raw material/1. Hinh anh/HÌNH ẢNH"
@@ -336,7 +356,8 @@ def run():
         results=list(ThreadPoolExecutor(max_workers=8).map(request,docs))
         for route,status in results: check(status==200,f"HTTP {route}: {status}")
         http_result={"checked":len(results),"status_200":sum(s==200 for _,s in results)}
-    report={"pages":len(docs),"indexed_sitemap_urls":len(urls),"guides":sum(p.startswith("/guides/") and p!="/guides/" for p in docs),
+    report={"pages":len(docs),"indexed_sitemap_urls":len(urls),
+        "sitemap_lastmod_present":len(stamps),"sitemap_lastmod_distinct_dates":len(set(stamps)),"guides":sum(p.startswith("/guides/") and p!="/guides/" for p in docs),
         "products":sum(p.startswith("/products/") for p in docs),"baseline_pages":len(old_routes),
         "original_assets_verified":preserved,"replacement_references_verified":len(replacements),
         "supplied_replacement_files_verified":len({x["asset"] for x in replacements}),

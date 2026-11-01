@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """Rebuild only generated site files; never delete the site or touch source assets."""
 from pathlib import Path
+from datetime import date
 import importlib
 import json
 import shutil
 from xml.sax.saxutils import escape
 from common import PAGES, BASE_URL
+from lastmod import resolve as resolve_lastmods
 from responsive_images import save_manifest
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -79,8 +81,11 @@ def build():
     if "/proof/" in PAGES:
         raise ValueError("The retired Proof route must not be published again.")
     shutil.copyfile(ROOT/"_source"/"style.css", ROOT/"assets"/"style.css")
-    urls = "\n".join(f"  <url><loc>{escape(BASE_URL+path)}</loc></url>"
-                     for path,data in sorted(PAGES.items()) if data["indexable"])
+    # lastmod reflects the page's own content history, not this build's clock.
+    lastmods = resolve_lastmods(ROOT, PAGES, date.today().isoformat())
+    urls = "\n".join(
+        f"  <url><loc>{escape(BASE_URL+path)}</loc><lastmod>{lastmods[path]}</lastmod></url>"
+        for path,data in sorted(PAGES.items()) if data["indexable"])
     (ROOT/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls+'\n</urlset>\n',encoding="utf-8")
     (ROOT/"robots.txt").write_text(build_robots(), encoding="utf-8")
     (ROOT/"_source"/"page_manifest.json").write_text(json.dumps(PAGES,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
