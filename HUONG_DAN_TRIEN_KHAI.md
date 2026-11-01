@@ -1,5 +1,19 @@
 # Bản sửa tốc độ vietpaw.com, ngày 12/10/2026
 
+> **Cập nhật 01/11/2026 — phần hosting trong tài liệu này đã lỗi thời.**
+> Lúc viết, kế hoạch là phục vụ site từ Namecheap cPanel. Thực tế đã đo lại bằng
+> `curl -I`: vietpaw.com do **GitHub Pages** phục vụ (xem `CNAME`), có Cloudflare
+> proxy đứng trước. Vì vậy:
+> - **Deploy chỉ là commit + push lên `origin/main`** (GitHub Desktop). Không có
+>   bước chép file lên Namecheap, không có cPanel File Manager.
+> - **`.htaccess` và `_headers` đều không chạy** — GitHub Pages bỏ qua cả hai.
+>   Cache do GitHub Pages quyết định (`max-age=600`), không ghi đè được từ repo.
+> - **Không cần purge Cloudflare cho `sitemap.xml`** (`cf-cache-status: DYNAMIC`).
+>   Với ảnh và CSS/JS thì purge vẫn hữu ích khi thay file mà giữ nguyên tên.
+>
+> Phần đo đạc CLS và tối ưu ảnh bên dưới vẫn còn giá trị. Xem `AGENTS.md` để biết
+> quy trình hiện hành.
+
 ## File trong gói
 
 | File | Thay đổi | Mục đích |
@@ -12,7 +26,7 @@
 
 Các trang khác **không cần sửa**: chúng vẫn tải `style.css` theo cách thông thường nên không bị lỗi CLS này.
 
-## Các bước triển khai
+## Các bước triển khai *(phần hosting đã lỗi thời — xem ghi chú đầu file)*
 
 1. Chép đè `index.html` và 2 file logo vào thư mục website (`my-website/`) theo đúng đường dẫn.
 2. `.htaccess`: nếu thư mục gốc trên Namecheap **chưa có** file này thì chép vào. Nếu **đã có**, mở file cũ và dán toàn bộ nội dung file mới vào cuối, không ghi đè.
@@ -36,7 +50,9 @@ Các trang khác **không cần sửa**: chúng vẫn tải `style.css` theo cá
 - Cache 30 ngày:
   - Khi sửa `style.css` hoặc file JS, **phải đổi `?v=`** trong HTML (như đang làm).
   - Khi thay một ảnh, **nên đổi tên file**. Nếu giữ tên cũ, khách quay lại có thể vẫn thấy ảnh cũ tới 30 ngày.
-- File `_headers` không có tác dụng trên Namecheap. Có thể giữ, không gây hại.
+- File `_headers` không có tác dụng — cả trên Namecheap lẫn trên GitHub Pages
+  (chỉ Netlify và Cloudflare Pages mới đọc nó). Giữ lại để tham khảo, đã ghi chú
+  "NOT ACTIVE" ngay đầu file.
 
 ## Tùy chọn (chưa làm)
 

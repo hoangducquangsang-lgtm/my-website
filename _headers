@@ -1,4 +1,11 @@
-# Cache policy (Netlify / Cloudflare Pages read this file)
+# NOT ACTIVE — GitHub Pages ignores this file.
+#
+# Only Netlify and Cloudflare Pages read a _headers file. vietpaw.com is
+# served by GitHub Pages, which sets its own Cache-Control (max-age=600)
+# and offers no way to override it. Nothing below affects the live site.
+# To change caching for real, use the Cloudflare dashboard. See AGENTS.md.
+#
+# Cache policy (kept for reference if hosting moves)
 # Fingerprint-free assets: long cache for images, shorter for CSS/HTML.
 
 # Versioned assets (with cache-busting query strings like ?v=20260930-optimized)

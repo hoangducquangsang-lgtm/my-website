@@ -1,5 +1,5 @@
 {
-  "description": "VietPaw canonical URLs — proposed rules; review in the existing zone before applying",
+  "description": "NOT APPLIED — never enabled in the Cloudflare zone, and no longer needed: GitHub Pages already answers www -> apex with a 301 (measured 2026-11-01). Kept for reference only. See AGENTS.md.",
   "kind": "zone",
   "phase": "http_request_dynamic_redirect",
   "rules": [

@@ -1,8 +1,14 @@
 # ------------------------------------------------------------------
+# NOT ACTIVE — GitHub Pages ignores this file.
+#
+# vietpaw.com is served by GitHub Pages (see CNAME) behind a Cloudflare
+# proxy. Apache/LiteSpeed never sees this file, so nothing below has any
+# effect on the live site. Kept only in case hosting moves to Apache.
+# To change cache or redirect behaviour for real, use the Cloudflare
+# dashboard. See AGENTS.md.
+#
 # VietPaw — browser cache for static files (2026-10-12)
-# Namecheap (Apache/LiteSpeed) reads this file; _headers is ignored here.
-# If the server already has a .htaccess, PASTE this block at the end of it
-# instead of replacing the file.
+# Written when the plan was to serve from Namecheap cPanel.
 # ------------------------------------------------------------------
 
 <IfModule mod_headers.c>
