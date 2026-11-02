@@ -12,11 +12,12 @@ from common import page, BASE_URL, BRAND_ENTITY_STATEMENT
 from validate_site import Document
 
 EXPECTED_TITLES = {
-    "/materials/": "Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw",
+    # Titles below are locked by AGENTS.md until 02/05/2027; update both together.
+    "/materials/": "Pet Toy Materials: Coffee Wood, Coir, Hemp | VietPaw",
     "/factory/": "Pet Toy Factory Vietnam | Process & Verification | VietPaw",
     "/quality-control/": "Pet Toy Quality Control | VietPaw",
     "/services/wholesale-pet-products/": "Wholesale Natural Pet Products Supplier | VietPaw",
-    "/pet-toys-manufacturer-vietnam/": "Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
+    "/pet-toys-manufacturer-vietnam/": "Natural Pet Toy Manufacturer in Vietnam | VietPaw",
 }
 manifest = json.loads((ROOT / "_source/page_manifest.json").read_text(encoding="utf-8"))
 checked_links = 0

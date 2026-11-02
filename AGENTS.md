@@ -79,6 +79,115 @@ hai file trên, nên không sửa tay trong `index.html`.
 
 Kiểm tra sau 30 ngày: GA4 → Pages & Screens, lọc trang chủ — chỉ còn **một** title.
 
+**Đổi title nào cũng phải chạy `test_brand_urls.py`.** File đó có bảng
+`EXPECTED_TITLES` ghi cứng title của 5 route (`/materials/`, `/factory/`,
+`/quality-control/`, `/services/wholesale-pet-products/`,
+`/pet-toys-manufacturer-vietnam/`). `validate_site.py` **không** bắt lỗi này — chỉ
+`test_brand_urls.py` mới bắt, nên phải chạy cả bộ test chứ không riêng validate.
+
+## 18 title đã rút ngắn — đã khoá (02/11/2026)
+
+Đợt 1 của mục 1.4 trong audit SEO: 18 title từ 61–75 ký tự rút còn ≤55, và 2 meta
+description từ 161–163 rút còn 124–139. Lý do: Google cắt title trong SERP, cả 18
+trang đều đang 0 click.
+
+Khai báo ở `_source/common.py` — `TITLE_OVERRIDES` và `META_OVERRIDES`, có ghi chú ngày.
+`<title>`, `og:title`, `twitter:title` và `meta description` trong từng `index.html` là
+do build sinh ra từ đó, **không sửa tay trong `index.html`**.
+
+**Không đổi cho tới 02/05/2027.** Cùng lý do với title trang chủ: mỗi lần đổi title,
+Google phải đánh giá lại trang từ đầu. Cần 2–4 tuần để ổn định.
+
+Còn lại đợt 2, cố ý hoãn: `/products/coffee-wood-dog-chew/` (65) và
+`/collections/coffee-wood/` (63). Đây là hai trang **duy nhất** trong nhóm đang thực sự
+ra click (CTR 5,2% và 5,4%), nên để riêng sau 2 tuần để đo được tác động, không lẫn
+với 18 trang kia. Nội dung đề xuất nằm ở `../DUYET_TITLE_MUC_1.4.md`.
+
+Lưu ý: đổi title **không** làm `lastmod` nhảy — vân tay băm vùng `<main>`, title nằm
+trong `<head>`. Đúng điều mình muốn, xem mục `sitemap.xml` quy tắc 4.
+
+Đo sau 30 ngày: GSC → Performance, so CTR từng URL với baseline 02/11/2026.
+
+## 5 trang CTR 0% — title/meta đã sửa và khoá (02/11/2026)
+
+Mục 1.5 của audit SEO: `/guides/how-long-do-coffee-wood-chews-last/`, `/guides/`,
+`/capabilities/`, `/guides/coffee-wood-chew-size-guide/`, `/pet-toys-manufacturer-vietnam/`.
+4 title + 4 meta. **Không đổi cho tới 02/05/2027.**
+
+### Hai khẳng định KHÔNG được đưa vào title/meta
+
+Audit mục 3.4 có đề xuất sẵn hai câu, cả hai đều **sai so với chính website**. Đã bị
+loại, đừng áp dụng lại khi đọc audit:
+
+1. **Không nói chew đã được "tested" hay đo tuổi thọ.** Audit đề xuất
+   *"Tested by Dog Size"* / *"measured on our own XS–XXL range"*. Chính trang
+   `/guides/how-long-do-coffee-wood-chews-last/` viết: *"We do not publish a figure in
+   days or weeks... durability testing for chew toys would mean testing on animals and
+   nobody in this category has done it."*
+
+2. **Không nói "factory direct" hay "our factory" theo nghĩa sở hữu.** Audit đề xuất
+   *"Factory Direct"* / *"A Vietnam pet toy factory"*. FAQ `/about/` viết:
+   *"Does VietPaw own its factories? No, and we do not claim to. We work with two
+   factories, in Dak Lak and Gia Lai."* (Link điều hướng "Our Factory" là tên menu,
+   không phải khẳng định sở hữu — đừng dựa vào đó để viết title.)
+
+Nếu thực tế kinh doanh đã khác thì **sửa `/about/` trước**, rồi mới đổi title/meta.
+
+### Meta description của guide nằm ở đâu
+
+**Guide thì sửa trong `content_guides.py`, KHÔNG dùng `META_OVERRIDES`.**
+Guide có Article schema, và `validate_site.py` bắt `description` trong schema phải
+trùng meta description. `META_OVERRIDES` được áp dụng **sau** khi schema đã dựng xong,
+nên đặt meta của guide ở đó sẽ làm build ra lỗi `article description mismatch`.
+Các trang không phải guide thì dùng `META_OVERRIDES` bình thường.
+
+Lưu ý kèm theo: trang hub `/guides/` in lại description của từng guide trong `<main>`,
+nên sửa meta một guide sẽ làm `lastmod` của `/guides/` nhảy. Đó là đúng — nội dung
+hiển thị của hub thực sự đã đổi.
+
+## Đo lường GA4 — code nằm ở đâu (02/11/2026)
+
+Mục 1.6 của audit. Trước đợt này repo **không có một dòng code đo lường nào** — chỉ
+có thẻ gtag cơ bản. `submit_quote` không nằm trong repo: đó là custom event tạo trong
+GA4 Admin từ `page_view` của `/request-a-quote/thank-you/`.
+
+### Ranh giới giữa hai file — giữ đúng
+
+- **`assets/rfq.js` không được chứa `gtag(`.** `test_rfq.cjs` có hẳn một assertion chặn
+  điều này. Khi gửi thành công, nó chỉ bắn một DOM event `vietpaw:lead` (bubbles).
+- **`assets/track.js` giữ toàn bộ GA4 event.** Nạp trên cả 69 trang, đặt sau `</main>`
+  nên không ảnh hưởng `lastmod`.
+
+Tách như vậy để module xử lý dữ liệu người mua không dính gì tới analytics, và để
+mọi quyết định "gửi gì lên GA4" nằm đúng một chỗ, dễ rà soát.
+
+### Luật cứng: không bao giờ gửi PII lên GA4
+
+`name`, `email`, `phone`, `company` **không được** xuất hiện trong bất kỳ tham số GA4 nào.
+Vi phạm chính sách Google và có thể bị xoá property. Cả `test_rfq.cjs` lẫn
+`test_track.cjs` đều có assertion chặn. Chỉ gửi: `buyer_type`, `country`, `products`,
+`enquiry_type`, `form_id`, `lead_source`, `page_location`.
+
+### Event đang bắn
+
+`generate_lead` (lúc Formspree xác nhận, **không** phụ thuộc trang thank-you),
+`contact_whatsapp`, `contact_email`, `form_view` (≥50% trong viewport, một lần),
+`scroll_75` (một lần).
+
+**`request_sample` cố ý KHÔNG bắn.** `enquiry_type` là trường ẩn giá trị cố định
+`samples_and_pricing` trên form duy nhất, nên event này sẽ trùng 1:1 với `generate_lead`
+và thổi phồng số key event. Bật lại khi có form xin mẫu riêng, hoặc khi `enquiry_type`
+thực sự biến thiên.
+
+### Phần KHÔNG nằm trong repo
+
+Key events và custom dimensions phải cấu hình trong **GA4 Admin**, code không làm thay
+được. **GA4 không hồi tố**: gắn sao hôm nay chỉ tính từ hôm nay. Đó là lý do
+`form_start` có 25 sự kiện mà tổng key events chỉ bằng 2.
+
+Cũng lưu ý: site **chưa có trang privacy policy và chưa có banner consent**, trong khi
+khách chính ở EU/DE/UK. GA4 đã chạy từ trước đợt này, nhưng đây là nợ cần xử lý.
+
 ## Trước mỗi lần push
 
 ```

@@ -41,7 +41,7 @@ CONTRACT_NOTICE = ("Company registration details, the payment beneficiary and th
 # Contact and export reach supplied directly by the site owner on 2026-08-30.
 PHONE = "+84 906 111 016"
 PHONE_TEL = "+84906111016"
-EMAIL = "sarah@vietpaw.com"
+EMAIL = "sales@vietpaw.com"
 # Legal details confirmed against WINVNINT and the owner's correction on 2026-08-31.
 ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
 REGISTERED_YEAR = "2019"
@@ -178,6 +178,32 @@ def brand_schema():
 TITLE_OVERRIDES = {
  "/": "Natural Pet Toys Wholesale from Vietnam | VietPaw",
  "/dog-toys/": "Wholesale Natural Dog Toys from Vietnam | VietPaw",
+ # 2026-11-02 SEO pass (audit muc 1.4): 18 titles trimmed from >60 to <=55 chars.
+ # Locked for 6 months - see AGENTS.md. Do not edit without re-reading that note.
+ "/collections/coconut-fiber/": "Coconut Fiber (Coir) Pet Toys \u2014 Wholesale | VietPaw",
+ "/collections/hemp-fiber/": "Hemp Rope & Ball Dog Toys \u2014 Wholesale | VietPaw",
+ "/guides/coffee-wood-vs-antler-nylon-rawhide/": "Coffee Wood vs Antler, Nylon & Rawhide Chews | VietPaw",
+ "/guides/how-to-vet-an-eco-pet-toy-supplier/": "How to Vet a Pet Toy Supplier Before Ordering | VietPaw",
+ "/guides/natural-dog-chew-toys-guide/": "Natural Dog Chew Toys: Buyer's Guide | VietPaw",
+ "/guides/non-toxic-cat-toys-wholesale-buying-guide/": "Non-Toxic Cat Toys: Wholesale Buying Guide | VietPaw",
+ "/guides/olive-wood-vs-coffee-wood-dog-chews/": "Olive Wood vs Coffee Wood Dog Chews | VietPaw",
+ "/guides/pet-toy-moq-fob-pricing-lead-times/": "Pet Toy MOQ, FOB Pricing & Lead Times | VietPaw",
+ "/guides/pet-toy-safety-compliance-cpsia-reach/": "Pet Toy Compliance: CPSIA & REACH Explained | VietPaw",
+ "/guides/pet-toy-safety-testing-requirements/": "Pet Toy Safety Testing Requirements | VietPaw",
+ "/guides/plastic-free-biodegradable-pet-toys-guide/": "Plastic-Free & Biodegradable Pet Toys | VietPaw",
+ "/guides/sourcing-eco-pet-toys-vietnam/": "Sourcing Eco Pet Toys from Vietnam | VietPaw",
+ "/guides/sourcing-pet-toys-vietnam-vs-china/": "Sourcing Pet Toys: Vietnam vs China | VietPaw",
+ "/guides/sustainable-pet-toy-materials-compared/": "Sustainable Pet Toy Materials Compared | VietPaw",
+ "/guides/what-is-coconut-fiber-pet-toys/": "What Is Coconut Fiber in Pet Toys? Coir Guide | VietPaw",
+ "/guides/where-does-coffee-wood-come-from/": "Where Does Coffee Wood Come From? Origin | VietPaw",
+ "/materials/": "Pet Toy Materials: Coffee Wood, Coir, Hemp | VietPaw",
+ "/products/gorilla-coffee-wood-dog-chew/": "Gorilla Coffee Wood Dog Chew \u2014 Wholesale | VietPaw",
+ # 2026-11-02 SEO pass (audit muc 1.5): pages with impressions but 0% CTR.
+ # Locked for 6 months - see AGENTS.md.
+ "/capabilities/": "Compare OEM, ODM & Private Label Pet Toys | VietPaw",
+ "/guides/": "Pet Toy Sourcing Guides for B2B Buyers | VietPaw",
+ "/guides/coffee-wood-chew-size-guide/": "Coffee Wood Chew Size Guide: XS to XXL | VietPaw",
+ "/pet-toys-manufacturer-vietnam/": "Natural Pet Toy Manufacturer in Vietnam | VietPaw",
 }
 META_OVERRIDES = {
  "/": "Coffee wood, coconut fiber, hemp and loofah pet toys made in Vietnam. Published sizes, moisture below 14%, wholesale and private label from 50 pcs.",
@@ -186,12 +212,15 @@ META_OVERRIDES = {
  "/collections/coconut-fiber/": "Coconut fiber (coir) pet toys from Vietnam: what the material is, what to declare beyond the fiber, and how to specify a ball you can reorder.",
  "/collections/coffee-wood/": "Seasoned Robusta coffee wood dog chews from Vietnam, six sizes plus the thick-cut Gorilla line, packed below 14% moisture. Process and limits.",
  "/collections/hemp-fiber/": "Hemp rope balls, knotted tugs and ball-with-rope toys from Vietnam. How to specify a rope toy by geometry and knot, not by appearance.",
- "/contact/": "Email sarah@vietpaw.com or WhatsApp +84 906 111 016 for natural pet toy samples, wholesale quotes, private label and OEM/ODM from Vietnam.",
+ "/contact/": "Email sales@vietpaw.com or WhatsApp +84 906 111 016 for natural pet toy samples, wholesale quotes, private label and OEM/ODM from Vietnam.",
  "/dog-toys/chew-toys/": "Non-edible natural dog chews led by coffee wood sticks and the Gorilla line for strong chewers. Compare sizes and specifications before ordering.",
  "/dog-toys/": "Coffee wood chews, coconut fiber balls and hemp rope toys from Vietnam. Compare by chewing style, see sizes, order wholesale or private label from 50 pcs.",
  "/dog-toys/puzzle-toys/": "Texture-led natural enrichment toys for dogs. Current products focus on material and shape; treat-dispensing designs are custom development.",
  "/dog-toys/rope-toys/": "Natural-fiber rope, knotted and ball-with-rope dog toys for supervised tug play. Specify fiber, rope geometry and packaging for wholesale.",
- "/guides/": "Buyer guides to natural pet toy materials, chew sizing, supplier checks, MOQ, lead times and which product claims can be supported.",
+ # 2026-11-02 SEO pass (audit muc 1.5). Every factual claim below is checked against
+ # live page content: no lifespan figure is asserted, and no factory ownership is implied.
+ "/guides/": "22 buyer guides on natural pet toy materials, chew sizing, supplier checks, MOQ, lead times and which product claims you can actually support.",
+ "/pet-toys-manufacturer-vietnam/": "Natural pet toys built to your specification in Vietnam: coffee wood, coconut fiber, hemp and loofah. Five QC checkpoints, export documents, MOQ from 50 pcs.",
  "/products/coffee-wood-dog-chew/": "Coffee wood dog chews in six sizes XS–XXL with lengths, diameters, weights and carton counts. Below 14% moisture, ±3 mm length tolerance.",
  "/solutions/amazon-sellers/": "Natural pet toys for Amazon FBA sellers: pack dimensions, barcode artwork, carton weights and a marketplace prep brief before production.",
  "/solutions/eco-pet-shops/": "Natural pet toys for eco retailers: choose natural-material formats, check the whole pack and confirm which sourcing statements you can support.",
@@ -199,6 +228,9 @@ META_OVERRIDES = {
  "/solutions/retail-chains/": "Natural pet toy supply for retail chains: a consistent product and vendor pack, carton configuration, labeling and delivery windows.",
  "/solutions/startup-brands/": "Low-MOQ natural pet toys for startup brands: start from 50 pcs with a physical sample, then add branded packaging from 500 pcs per SKU.",
  "/solutions/": "Sourcing plans for Amazon sellers, distributors, startup brands, pet brands, eco shops and retail chains buying natural pet toys from Vietnam.",
+ # 2026-11-02 SEO pass (audit muc 1.4): two meta descriptions trimmed below 160 chars.
+ "/collections/loofah/": "Dried loofah-gourd cat toys from Vietnam: choose shapes, define attachments and approve packaging for your own retail or marketplace brand.",
+ "/request-a-quote/": "Tell us the product, destination and quantity. We reply within one business day with sample options, pricing and lead times.",
  "/case-studies/": "VietPaw case study framework: how customer results will be verified before publication. No customer result is asserted on this draft page.",
 }
 
@@ -274,7 +306,7 @@ def page(title, meta_description, path, content, active_top="", schemas=None,
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
 <nav class="main-nav" id="main-nav" aria-label="Main"><ul>{nav_html(active_top)}</ul></nav>
 <a class="btn btn-primary btn-header" href="/request-a-quote/">Request a Quote</a>
-</div></header><main id="main">{content}</main>{footer_html()}{sticky}<script src="/assets/local-preview.js?v=20260831-clean-urls" defer></script>{form_script}<script src="/assets/navigation.js?v=20260830-exclusive" defer></script></body></html>
+</div></header><main id="main">{content}</main>{footer_html()}{sticky}<script src="/assets/track.js?v=20261102-events" defer></script><script src="/assets/local-preview.js?v=20260831-clean-urls" defer></script>{form_script}<script src="/assets/navigation.js?v=20260830-exclusive" defer></script></body></html>
 """
 
 def write_page(root, path, html):

@@ -1,6 +1,24 @@
-/* Explicit quote and catalogue requests. No tracking, automatic sends or browser storage. */
+/* Explicit quote and catalogue requests. No analytics code, automatic sends or browser
+   storage here. On a confirmed send this module dispatches a "vietpaw:lead" DOM event
+   carrying business fields only; assets/track.js decides what is reported. */
 (() => {
   "use strict";
+  // Never include name, email, phone or company: those are personal data and must not
+  // reach an analytics tool.
+  const announceLead = (form, data) => {
+    if (typeof window.CustomEvent !== "function" || typeof form.dispatchEvent !== "function") return;
+    const first = key => (typeof data.get === "function" ? data.get(key) : null) || "";
+    const every = key => (typeof data.getAll === "function" ? data.getAll(key) : null);
+    const chosen = every("products") || first("products");
+    form.dispatchEvent(new window.CustomEvent("vietpaw:lead", { bubbles: true, detail: {
+      form_id: form.id || form.dataset.enquiryForm || "",
+      buyer_type: String(first("buyer_type")),
+      country: String(first("country")),
+      est_quantity: String(first("est_quantity")),
+      products: Array.isArray(chosen) ? chosen.join(", ") : String(chosen),
+      enquiry_type: String(first("enquiry_type"))
+    } }));
+  };
   document.querySelectorAll("form[data-enquiry-form]").forEach(form => {
     const status = form.querySelector("[data-form-status]");
     const error = form.querySelector("[data-form-error]");
@@ -12,6 +30,18 @@
     const productBoxes = productGroup ? Array.from(productGroup.querySelectorAll("[data-product-option]")) : [];
     const idleLabel = button.textContent;
     const params = new URLSearchParams(window.location.search);
+    // Campaign attribution: copy utm_* from the landing URL into the hidden fields, so a
+    // lead can be credited to its channel. Nothing is stored in the browser.
+    if (typeof form.querySelectorAll === "function") {
+      Array.from(form.querySelectorAll("[data-utm]")).forEach(field => {
+        const value = params.get((field.dataset && field.dataset.utm) || "");
+        if (value) field.value = value.slice(0, 200);
+      });
+    }
+    // The sample CTAs link with ?request=sample. Keep that apart from a pricing enquiry so
+    // enquiry_type varies in the lead data instead of being a single fixed value.
+    const kind = form.querySelector("[data-enquiry-kind]");
+    if (kind && (params.get("request") || "").toLowerCase() === "sample") kind.value = "sample_request";
     const product = (params.get("product") || "").toLowerCase();
     const matches = { coffee: "Coffee wood chew", coconut: "Coconut", hemp: "Hemp", loofah: "Loofah" };
     if (product) Object.keys(matches).forEach(key => {
@@ -71,6 +101,7 @@
           throw failure;
         }
         accepted = true;
+        announceLead(form, data);
         status.textContent = form.dataset.enquiryForm === "catalogue"
           ? "Thank you. We have received your price-list request and will reply by email. You can still download the catalogue above."
           : "Your enquiry has been received. Thank you.";

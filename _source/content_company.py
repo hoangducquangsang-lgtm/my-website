@@ -193,7 +193,7 @@ def build(root):
         + p(CONTRACT_NOTICE)),
     ]
     publish(root,"/contact/","Contact VietPaw | Samples, Quotes & Wholesale Enquiries",
-        "Email sarah@vietpaw.com or message us on WhatsApp for natural pet toy samples, wholesale quotations, "
+        "Email sales@vietpaw.com or message us on WhatsApp for natural pet toy samples, wholesale quotations, "
         "private label and OEM/ODM from Vietnam. Replies normally within one business day.",
         "Contact VietPaw",
         "Email, WhatsApp or a structured enquiry \u2014 and the four lines of information that turn a first message "
@@ -224,15 +224,37 @@ def build_rfq(root):
     bc,bs=breadcrumb_html([("Home","/"),("Request a Quote",None)])
     content=bc+hero("Request a Quote or Product Sample",
         "Tell us the product and destination first. Add what you know about quantities, branding and launch timing; you do not need a finished technical brief.",eyebrow="VietPaw B2B enquiries",ctas=False)
+    proof=figure(IMG+"container-loading-forklift.jpg",
+        "Cartons being loaded into an export container by forklift",
+        "Order loading at our Ho Chi Minh City warehouse. Pre-shipment inspection can be arranged before the container is sealed.")
+    stats=('<div class="stats">'
+        '<div><strong>40+</strong><span>Export markets</span></div>'
+        '<div><strong>5</strong><span>Coffee wood QC checkpoints</span></div>'
+        '<div><strong>7</strong><span>Export documents per order</span></div></div>')
+    steps_next=ul([
+        "<strong>Within one business day.</strong> We confirm product availability, MOQ, sample terms and an indicative timeline.",
+        "<strong>Sample selection.</strong> "+SAMPLES+" "+SAMPLE_DISPATCH,
+        "<strong>Written quotation.</strong> Pricing against your Incoterm and named place, with carton data and the document list for your shipment.",
+        "<strong>Production.</strong> The production start date is confirmed in writing after sample, artwork and order approval.",
+        ],True)
     content+=f"""
 <section class="section"><div class="wrap grid grid-2">
 {quote_form()}
-<div><h2>What happens next</h2><p>We review your brief and confirm product availability, MOQ, sample terms and an indicative timeline. New development or testing may need a separate feasibility discussion.</p>
-{ul(["Starting MOQ from 50 pcs on selected standard products; confirm each line.",SAMPLES+" "+SAMPLE_DISPATCH,PRIVATE_LABEL,LEAD,EXPORT_DOCS])}
-<h3>Company details for your order</h3>{p(CONTRACT_NOTICE)}
+<div><h2>Why buyers start here</h2>
+<div class="rfq-proof">{proof}
+{stats}</div>
+<h3>Specifications before purchase</h3><p>Sizes, weights, moisture bands and carton data are published on the product and guide pages before you ask, so you can check them against your own brief first.</p>
+<h3>Five quality checkpoints</h3><p>Moisture, length tolerance, crack rejection, surface finish and packing are each checked and recorded against your lot.</p>
+<h3>Export documents with every order</h3><p>Seven documents ship with every order, the certificate of origin, phytosanitary certificate and fumigation certificate among them. The full list is below.</p>
+<h3>Samples</h3><p>{SAMPLES} {SAMPLE_DISPATCH}</p>
 <h3>Contact sales directly</h3><p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{PHONE_TEL[1:]}">WhatsApp</a></p>
-<p class="small">Do not include payment-card information or confidential designs in this first enquiry. Request an agreed confidentiality process if needed.</p>
-{trust_links()}</div></div></section>
+<p class="small">Do not include payment-card information or confidential designs in this first enquiry. Request an agreed confidentiality process if needed.</p></div></div></section>
+<section class="section section-alt"><div class="wrap"><h2>What happens next</h2><p>We review your brief and confirm product availability, MOQ, sample terms and an indicative timeline. New development or testing may need a separate feasibility discussion.</p>
+{steps_next}
+<h3>Order planning</h3>
+{ul(["Starting MOQ from 50 pcs on selected standard products; confirm each line.",PRIVATE_LABEL,LEAD,EXPORT_DOCS])}
+<h3>Company details for your order</h3>{p(CONTRACT_NOTICE)}
+{trust_links()}</div></section>
 """
     write_page(root,"/request-a-quote/",page("Request Pet Toy Samples & Wholesale Quote | VietPaw",
         "Request a quote or product sample from VietPaw. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",

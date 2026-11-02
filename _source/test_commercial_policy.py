@@ -85,7 +85,7 @@ def run(backup):
         org = next(s for s in new.schemas if s.get("@type") == "Organization")
         assert org["address"]["streetAddress"] == EXPECTED_ADDRESS
         assert "registered in Vietnam in 2019" in org["description"]
-        assert org["email"] == "sarah@vietpaw.com" and org["telephone"] == "+84 906 111 016"
+        assert org["email"] == "sales@vietpaw.com" and org["telephone"] == "+84 906 111 016"
         for schema in new.schemas:
             if schema.get("@type") == "Article":
                 previous = next(s for s in old.schemas if s.get("@type") == "Article")

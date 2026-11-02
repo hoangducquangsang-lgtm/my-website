@@ -10,12 +10,12 @@
     "indexable": true
   },
   "/capabilities/": {
-    "title": "OEM, ODM & Private-Label Capabilities | VietPaw",
+    "title": "Compare OEM, ODM & Private Label Pet Toys | VietPaw",
     "description": "Compare VietPaw wholesale, OEM/ODM and private-label pet toy services. Choose the right route for standard products, custom development and branded packaging.",
     "indexable": true
   },
   "/materials/": {
-    "title": "Pet Toy Materials: Coffee Wood, Coir, Hemp & Loofah | VietPaw",
+    "title": "Pet Toy Materials: Coffee Wood, Coir, Hemp | VietPaw",
     "description": "Compare coffee wood, coconut fiber, hemp and loofah for wholesale pet toys. Review product formats, component declarations and sourcing questions.",
     "indexable": true
   },
@@ -36,7 +36,7 @@
   },
   "/request-a-quote/": {
     "title": "Request Pet Toy Samples & Wholesale Quote | VietPaw",
-    "description": "Request a quote or product sample from VietPaw. Share your products of interest for pricing, lead time and sample availability — usually within one business day.",
+    "description": "Tell us the product, destination and quantity. We reply within one business day with sample options, pricing and lead times.",
     "indexable": true
   },
   "/request-a-quote/thank-you/": {
@@ -46,7 +46,7 @@
   },
   "/contact/": {
     "title": "Contact VietPaw | Samples, Quotes & Wholesale Enquiries",
-    "description": "Email sarah@vietpaw.com or WhatsApp +84 906 111 016 for natural pet toy samples, wholesale quotes, private label and OEM/ODM from Vietnam.",
+    "description": "Email sales@vietpaw.com or WhatsApp +84 906 111 016 for natural pet toy samples, wholesale quotes, private label and OEM/ODM from Vietnam.",
     "indexable": true
   },
   "/collections/coffee-wood/": {
@@ -55,18 +55,18 @@
     "indexable": true
   },
   "/collections/coconut-fiber/": {
-    "title": "Coconut Fiber (Coir) Pet Toys — Material & Wholesale | VietPaw",
+    "title": "Coconut Fiber (Coir) Pet Toys — Wholesale | VietPaw",
     "description": "Coconut fiber (coir) pet toys from Vietnam: what the material is, what to declare beyond the fiber, and how to specify a ball you can reorder.",
     "indexable": true
   },
   "/collections/hemp-fiber/": {
-    "title": "Hemp Fiber Rope & Ball Pet Toys — Material & Wholesale | VietPaw",
+    "title": "Hemp Rope & Ball Dog Toys — Wholesale | VietPaw",
     "description": "Hemp rope balls, knotted tugs and ball-with-rope toys from Vietnam. How to specify a rope toy by geometry and knot, not by appearance.",
     "indexable": true
   },
   "/collections/loofah/": {
     "title": "Loofah Pet Toy Manufacturer | Cat Toys Wholesale | VietPaw",
-    "description": "Create a lightweight cat-toy range from dried loofah-gourd fiber. Choose shapes, define attachments and approve packaging for your own retail or marketplace brand.",
+    "description": "Dried loofah-gourd cat toys from Vietnam: choose shapes, define attachments and approve packaging for your own retail or marketplace brand.",
     "indexable": true
   },
   "/dog-toys/": {
@@ -130,7 +130,7 @@
     "indexable": true
   },
   "/products/gorilla-coffee-wood-dog-chew/": {
-    "title": "Gorilla Coffee Wood Chew for Strong Chewers — Wholesale | VietPaw",
+    "title": "Gorilla Coffee Wood Dog Chew — Wholesale | VietPaw",
     "description": "Thick-cut coffee wood chews for strong chewers: GRLS–GRLXL, 155–900 g, carton data, FBA notes. From 50 pcs per SKU; private label from 500.",
     "indexable": true
   },
@@ -200,8 +200,8 @@
     "indexable": false
   },
   "/pet-toys-manufacturer-vietnam/": {
-    "title": "Pet Toy Manufacturer Vietnam | OEM & Private Label | VietPaw",
-    "description": "Source natural pet toys through VietPaw. Review Vietnam production, OEM/ODM, quality control, samples and order-specific manufacturing information.",
+    "title": "Natural Pet Toy Manufacturer in Vietnam | VietPaw",
+    "description": "Natural pet toys built to your specification in Vietnam: coffee wood, coconut fiber, hemp and loofah. Five QC checkpoints, export documents, MOQ from 50 pcs.",
     "indexable": true
   },
   "/services/oem-odm-pet-toy-manufacturing/": {
@@ -230,22 +230,22 @@
     "indexable": true
   },
   "/guides/": {
-    "title": "Pet Toy Sourcing Guides | Specs, MOQ & Claims | VietPaw",
-    "description": "Buyer guides to natural pet toy materials, chew sizing, supplier checks, MOQ, lead times and which product claims can be supported.",
+    "title": "Pet Toy Sourcing Guides for B2B Buyers | VietPaw",
+    "description": "22 buyer guides on natural pet toy materials, chew sizing, supplier checks, MOQ, lead times and which product claims you can actually support.",
     "indexable": true
   },
   "/guides/olive-wood-vs-coffee-wood-dog-chews/": {
-    "title": "Olive Wood vs Coffee Wood Dog Chews: What Actually Differs | VietPaw",
+    "title": "Olive Wood vs Coffee Wood Dog Chews | VietPaw",
     "description": "Olive wood vs coffee wood dog chews compared on origin, available test data, sizing, supply season, logistics and the claims each one supports.",
     "indexable": true
   },
   "/guides/where-does-coffee-wood-come-from/": {
-    "title": "Where Does Coffee Wood Come From? Origin, Season and Traceability | VietPaw",
+    "title": "Where Does Coffee Wood Come From? Origin | VietPaw",
     "description": "Where coffee wood dog chews come from: Robusta stems from Vietnam's Central Highlands, the replanting cycle behind the supply, and what a buyer can verify.",
     "indexable": true
   },
   "/guides/natural-dog-chew-toys-guide/": {
-    "title": "Natural Dog Chew Toys: Building a Range That Makes Sense | VietPaw",
+    "title": "Natural Dog Chew Toys: Buyer's Guide | VietPaw",
     "description": "How to choose natural dog toys for a wholesale range, from chewing behavior and material construction to sample approval and retail packaging.",
     "indexable": true
   },
@@ -255,7 +255,7 @@
     "indexable": true
   },
   "/guides/coffee-wood-vs-antler-nylon-rawhide/": {
-    "title": "Coffee Wood, Antler, Nylon or Rawhide: What Are You Comparing? | VietPaw",
+    "title": "Coffee Wood vs Antler, Nylon & Rawhide Chews | VietPaw",
     "description": "Compare coffee wood, antler, nylon and rawhide by intended use, product construction, retail presentation and purchasing requirements.",
     "indexable": true
   },
@@ -266,11 +266,11 @@
   },
   "/guides/how-long-do-coffee-wood-chews-last/": {
     "title": "How Long Do Coffee Wood Chews Last? | VietPaw",
-    "description": "Why no supplier publishes a coffee wood chew lifespan, what drives wear, what to write on a product page, and when to replace the chew.",
+    "description": "A few days to several months — the dog decides, not the calendar. The four things that change it, how to size for a hard chewer, and when to replace.",
     "indexable": true
   },
   "/guides/plastic-free-biodegradable-pet-toys-guide/": {
-    "title": "Plastic-Free Pet Toys: What Belongs in the Buying Brief? | VietPaw",
+    "title": "Plastic-Free & Biodegradable Pet Toys | VietPaw",
     "description": "Specify plastic-free pet toys and packaging clearly, with separate decisions on materials, components and end-of-life claims.",
     "indexable": true
   },
@@ -280,22 +280,22 @@
     "indexable": true
   },
   "/guides/what-is-coconut-fiber-pet-toys/": {
-    "title": "Coconut Fiber in Pet Toys: Texture, Construction and Quality | VietPaw",
+    "title": "What Is Coconut Fiber in Pet Toys? Coir Guide | VietPaw",
     "description": "Understand coconut coir pet toys, including ball construction, winding consistency, loose fiber and wholesale packing considerations.",
     "indexable": true
   },
   "/guides/non-toxic-cat-toys-wholesale-buying-guide/": {
-    "title": "Buying Natural Cat Toys: What to Check Beyond Non-Toxic | VietPaw",
+    "title": "Non-Toxic Cat Toys: Wholesale Buying Guide | VietPaw",
     "description": "A wholesale guide to cat toy materials, small components, sample inspection, packaging and evidence behind non-toxic claims.",
     "indexable": true
   },
   "/guides/sustainable-pet-toy-materials-compared/": {
-    "title": "Coffee Wood, Coir, Hemp and Loofah: Choosing the Right Material | VietPaw",
+    "title": "Sustainable Pet Toy Materials Compared | VietPaw",
     "description": "Compare four natural pet toy materials by construction, product format, quality-control priorities and packaging requirements.",
     "indexable": true
   },
   "/guides/sourcing-eco-pet-toys-vietnam/": {
-    "title": "Sourcing Natural Pet Toys from Vietnam: The First Order | VietPaw",
+    "title": "Sourcing Eco Pet Toys from Vietnam | VietPaw",
     "description": "Plan a first natural pet toy order from Vietnam, covering the buying brief, samples, packaging, quality checks and shipment preparation.",
     "indexable": true
   },
@@ -315,33 +315,33 @@
     "indexable": true
   },
   "/guides/pet-toy-moq-fob-pricing-lead-times/": {
-    "title": "Pet Toy MOQ, FOB Pricing and Lead Times: Reading the Quote | VietPaw",
+    "title": "Pet Toy MOQ, FOB Pricing & Lead Times | VietPaw",
     "description": "Understand pet toy minimum orders, packaging costs, FOB and FCA delivery terms, and the difference between production time and arrival date.",
     "indexable": true
   },
   "/guides/pet-toy-safety-compliance-cpsia-reach/": {
-    "title": "CPSIA, REACH and Pet Toys: Ask the Right Compliance Question | VietPaw",
+    "title": "Pet Toy Compliance: CPSIA & REACH Explained | VietPaw",
     "description": "How pet toy buyers should approach CPSIA and REACH discussions, including product classification, material scope and report relevance.",
     "indexable": true
   },
   "/guides/sourcing-pet-toys-vietnam-vs-china/": {
-    "title": "Vietnam or China for Pet Toys? Compare the Order, Not the Flag | VietPaw",
+    "title": "Sourcing Pet Toys: Vietnam vs China | VietPaw",
     "description": "A practical sourcing comparison based on product fit, landed cost, capacity, origin requirements and repeat-order performance.",
     "indexable": true
   },
   "/guides/pet-toy-safety-testing-requirements/": {
-    "title": "Pet Toy Safety Testing: Build a Product-Specific Plan | VietPaw",
+    "title": "Pet Toy Safety Testing Requirements | VietPaw",
     "description": "Prepare a useful pet toy assessment brief and distinguish laboratory testing, factory inspection and shipment documentation.",
     "indexable": true
   },
   "/guides/how-to-vet-an-eco-pet-toy-supplier/": {
-    "title": "How to Vet a Natural Pet Toy Supplier Before the First Order | VietPaw",
+    "title": "How to Vet a Pet Toy Supplier Before Ordering | VietPaw",
     "description": "Evaluate a pet toy supplier through company checks, specific samples, production visibility, claim evidence and a written order plan.",
     "indexable": true
   },
   "/guides/coffee-wood-chew-size-guide/": {
-    "title": "Coffee Wood Chew Sizes: VietPaw's XS–XXL Reference | VietPaw",
-    "description": "Compare VietPaw CC01 coffee wood chew dimensions and reference weight bands, with advice on sample approval, labels and size selection.",
+    "title": "Coffee Wood Chew Size Guide: XS to XXL | VietPaw",
+    "description": "Length, diameter and weight for all six coffee wood chew sizes, XS to XXL, with the dog weight band each size suits and how to confirm it on sample.",
     "indexable": true
   }
 }

@@ -547,7 +547,7 @@ add("best-natural-chews-for-aggressive-chewers","Natural chew toys",
 
 add("how-long-do-coffee-wood-chews-last","Natural chew toys",
     "How Long Do Coffee Wood Chews Last?",
-    "Why no supplier publishes a coffee wood chew lifespan, what drives wear, what to write on a product page, and when to replace the chew.",
+    "A few days to several months \u2014 the dog decides, not the calendar. The four things that change it, how to size for a hard chewer, and when to replace.",
     "It is the question every customer asks and the one no honest supplier can answer with a number. We do not publish a figure in days or weeks, and this page sets out why, what determines the answer for an individual dog, and what to write on your product page instead of a promise you cannot keep.",
     [
     ("The short answer",
@@ -1878,7 +1878,7 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
 
 add("coffee-wood-chew-size-guide","Natural chew toys",
     "Coffee Wood Chew Sizes: VietPaw's XS–XXL Reference",
-    "Compare VietPaw CC01 coffee wood chew dimensions and reference weight bands, with advice on sample approval, labels and size selection.",
+    "Length, diameter and weight for all six coffee wood chew sizes, XS to XXL, with the dog weight band each size suits and how to confirm it on sample.",
     answer("<strong>Short answer:</strong> VietPaw’s standard CC01 coffee wood chews come in six sizes, from XS (10 cm, 23–30 g, dogs up to "
            "3 kg) to XXL (22–23 cm, 340–440 g, dogs of 20 kg and over). Choose by the dog’s weight band and go up one size for a dog at the top "
            "of its band. For strong chewers, use the thick-cut Gorilla line (GRLS–GRLXL, 155–900 g) instead of stretching the standard range."),

@@ -149,7 +149,7 @@ def run():
         if footer:
             plain=" ".join(unescape(re.sub(r"<[^>]+>"," ",footer.group(1))).split())
             check(EXPECTED_TAGLINE in plain,f"{route}: owner-requested footer text differs")
-            for item in ("VietPaw","Natural Pet Products",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
+            for item in ("VietPaw","Natural Pet Products",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sales@vietpaw.com"):
                 check(item in plain,f"{route}: footer field missing {item}")
             check("biodegrad" not in plain.lower(),f"{route}: environmental claim in shared footer")
             check(not re.search(r'<a\b[^>]*>Proof</a>',footer.group()),f"{route}: Proof must not appear in footer navigation")
@@ -201,7 +201,7 @@ def run():
                 check(schema.get("name")=="VietPaw",f"{route}: organization name must be VietPaw")
                 check("legalName" not in schema,f"{route}: schema must not carry a separate legal name")
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: organization brand mismatch")
-                check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
+                check(schema.get("email")=="sales@vietpaw.com",f"{route}: organization email mismatch")
                 check(schema.get("address",{}).get("streetAddress")==EXPECTED_ADDRESS,f"{route}: legal address schema mismatch")
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: commercial brand mismatch")
             if schema.get("@type")=="Brand":
@@ -300,9 +300,16 @@ def run():
         if field.get("type")=="hidden": continue
         check(field.get("id") in rfq.labels,"RFQ field has no label: "+str(field))
     names={f.get("name") for f in rfq.fields}
-    check(names=={"name","email","phone","company","country","buyer_type","products","enquiry_type","_subject","_gotcha"},"RFQ fields differ from the current B2B brief: "+str(names))
-    check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email","phone","country","buyer_type"},"RFQ required fields differ (company must be optional)")
-    check(sum(1 for f in rfq.fields if f.get("name")=="products" and f.get("type")=="checkbox")==4,"RFQ product interest must be 4 checkboxes")
+    check(names=={"name","email","phone","company","country","buyer_type","est_quantity","message","products",
+                  "enquiry_type","_subject","_gotcha","utm_source","utm_medium","utm_campaign","utm_term","utm_content"},
+          "RFQ fields differ from the current B2B brief: "+str(names))
+    # Quantity is the field that lets the first reply carry a price; phone and company stay
+    # optional because they are the two fields a first-time buyer is least willing to give.
+    check({f.get("name") for f in rfq.fields if "required" in f}=={"name","email","country","buyer_type","est_quantity"},
+          "RFQ required fields differ (phone and company must stay optional)")
+    check(sum(1 for f in rfq.fields if f.get("name")=="products" and f.get("type")=="checkbox")==5,"RFQ product interest must be 5 checkboxes")
+    check(sum(1 for f in rfq.fields if f.get("name")=="message")==1,"RFQ must keep a free-text field for buyer context")
+    check(sum(1 for f in rfq.fields if f.get("name")=="country" and f.get("type") is None)==1,"Destination country must be a select, not free text")
     check("/wholesale-catalogue/" not in docs,"Retired catalogue route must not be published again")
     stub = ROOT/"wholesale-catalogue"/"index.html"
     check(stub.is_file(),"Retired catalogue route must keep a redirect stub to /request-a-quote/")

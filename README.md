@@ -10,7 +10,7 @@ Cập nhật lần cuối: **24/09/2026**.
 - **Công suất: 100.000 chiếc/tháng** — ghi thống nhất trên trang About và Factory (và các trang có nhắc tới công suất).
 - Phạm vi sản phẩm: 4 dòng vật liệu (gỗ cà phê, xơ dừa, hemp, loofah). **Không** có đệm/nệm, võng, thảm trên website.
 - Tên pháp nhân chỉ xuất hiện ở **một dòng chân trang** (hằng `FOOTER_LEGAL` trong `_source/common.py`). `validate_site.py` báo lỗi nếu tên này xuất hiện ở bất kỳ chỗ nào khác trên trang.
-- Liên hệ: sarah@vietpaw.com · +84 906 111 016 (WhatsApp).
+- Liên hệ: sales@vietpaw.com · +84 906 111 016 (WhatsApp).
 - Mạng xã hội: LinkedIn, Instagram, Facebook (https://www.facebook.com/sarahhue6789), YouTube — khai báo trong `SOCIAL` của `_source/common.py`.
 - Google Analytics 4: mã `G-XTXJ45XN8B`, gắn đúng 1 lần trong `<head>` của cả 67 trang (`GOOGLE_TAG_ID` trong `common.py`; kiểm tra bằng `test_google_tag.py`).
 
@@ -57,6 +57,7 @@ python _source/validate_site.py
 python _source/test_google_tag.py
 python _source/test_brand_urls.py .
 node _source/test_rfq.cjs
+node _source/test_track.cjs
 node _source/test_navigation.cjs
 node _source/test_local_preview.cjs
 ```
