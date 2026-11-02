@@ -60,6 +60,25 @@ Quy tắc phải nhớ:
 6. **GSC: giữ đúng một entry sitemap, ở property apex.** Không nộp lại ở property
    `www` — sitemap ở đó chỉ nhận redirect, tuy vẫn đọc được nhưng làm loãng báo cáo.
 
+## Title trang chủ — đã khoá (02/11/2026)
+
+Title trang chủ là `Natural Pet Toys Wholesale from Vietnam | VietPaw`.
+**Không đổi cho tới 02/05/2027.**
+
+Lý do: GA4 Pages & Screens ghi nhận trang chủ mang 3 title khác nhau trong 90 ngày
+(263 / 210 / 130 lượt xem). Mỗi lần đổi title, Google phải đánh giá lại trang từ
+đầu nên thứ hạng không bao giờ ổn định.
+
+Title được khai ở hai chỗ, phải luôn trùng nhau:
+
+- `_source/common.py` — bảng title theo đường dẫn, khoá `"/"`
+- `_source/page_manifest.json` — mục đầu tiên
+
+`<title>`, `og:title` và `twitter:title` trong `index.html` là do build sinh ra từ
+hai file trên, nên không sửa tay trong `index.html`.
+
+Kiểm tra sau 30 ngày: GA4 → Pages & Screens, lọc trang chủ — chỉ còn **một** title.
+
 ## Trước mỗi lần push
 
 ```
