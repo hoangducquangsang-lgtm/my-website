@@ -41,7 +41,7 @@ CONTRACT_NOTICE = ("Company registration details, the payment beneficiary and th
 # Contact and export reach supplied directly by the site owner on 2026-08-30.
 PHONE = "+84 906 111 016"
 PHONE_TEL = "+84906111016"
-EMAIL = "sales@vietpaw.com"
+EMAIL = "sarah@vietpaw.com"
 # Legal details confirmed against WINVNINT and the owner's correction on 2026-08-31.
 ADDRESS = "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"
 REGISTERED_YEAR = "2019"
@@ -212,7 +212,7 @@ META_OVERRIDES = {
  "/collections/coconut-fiber/": "Coconut fiber (coir) pet toys from Vietnam: what the material is, what to declare beyond the fiber, and how to specify a ball you can reorder.",
  "/collections/coffee-wood/": "Seasoned Robusta coffee wood dog chews from Vietnam, six sizes plus the thick-cut Gorilla line, packed below 14% moisture. Process and limits.",
  "/collections/hemp-fiber/": "Hemp rope balls, knotted tugs and ball-with-rope toys from Vietnam. How to specify a rope toy by geometry and knot, not by appearance.",
- "/contact/": "Email sales@vietpaw.com or WhatsApp +84 906 111 016 for natural pet toy samples, wholesale quotes, private label and OEM/ODM from Vietnam.",
+ "/contact/": "Email sarah@vietpaw.com or WhatsApp +84 906 111 016 for natural pet toy samples, wholesale quotes, private label and OEM/ODM from Vietnam.",
  "/dog-toys/chew-toys/": "Non-edible natural dog chews led by coffee wood sticks and the Gorilla line for strong chewers. Compare sizes and specifications before ordering.",
  "/dog-toys/": "Coffee wood chews, coconut fiber balls and hemp rope toys from Vietnam. Compare by chewing style, see sizes, order wholesale or private label from 50 pcs.",
  "/dog-toys/puzzle-toys/": "Texture-led natural enrichment toys for dogs. Current products focus on material and shape; treat-dispensing designs are custom development.",

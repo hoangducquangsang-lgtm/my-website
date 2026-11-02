@@ -149,7 +149,7 @@ def run():
         if footer:
             plain=" ".join(unescape(re.sub(r"<[^>]+>"," ",footer.group(1))).split())
             check(EXPECTED_TAGLINE in plain,f"{route}: owner-requested footer text differs")
-            for item in ("VietPaw","Natural Pet Products",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sales@vietpaw.com"):
+            for item in ("VietPaw","Natural Pet Products",EXPECTED_ADDRESS,"+84 906 111 016","WhatsApp: +84 906 111 016","sarah@vietpaw.com"):
                 check(item in plain,f"{route}: footer field missing {item}")
             check("biodegrad" not in plain.lower(),f"{route}: environmental claim in shared footer")
             check(not re.search(r'<a\b[^>]*>Proof</a>',footer.group()),f"{route}: Proof must not appear in footer navigation")
@@ -201,7 +201,7 @@ def run():
                 check(schema.get("name")=="VietPaw",f"{route}: organization name must be VietPaw")
                 check("legalName" not in schema,f"{route}: schema must not carry a separate legal name")
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: organization brand mismatch")
-                check(schema.get("email")=="sales@vietpaw.com",f"{route}: organization email mismatch")
+                check(schema.get("email")=="sarah@vietpaw.com",f"{route}: organization email mismatch")
                 check(schema.get("address",{}).get("streetAddress")==EXPECTED_ADDRESS,f"{route}: legal address schema mismatch")
                 check(schema.get("brand",{}).get("name")=="VietPaw",f"{route}: commercial brand mismatch")
             if schema.get("@type")=="Brand":

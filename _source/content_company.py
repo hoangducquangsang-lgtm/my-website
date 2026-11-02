@@ -193,7 +193,7 @@ def build(root):
         + p(CONTRACT_NOTICE)),
     ]
     publish(root,"/contact/","Contact VietPaw | Samples, Quotes & Wholesale Enquiries",
-        "Email sales@vietpaw.com or message us on WhatsApp for natural pet toy samples, wholesale quotations, "
+        "Email sarah@vietpaw.com or message us on WhatsApp for natural pet toy samples, wholesale quotations, "
         "private label and OEM/ODM from Vietnam. Replies normally within one business day.",
         "Contact VietPaw",
         "Email, WhatsApp or a structured enquiry \u2014 and the four lines of information that turn a first message "

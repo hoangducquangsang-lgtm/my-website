@@ -65,7 +65,7 @@ assert.equal(bare.sent[0].params.country, "");
 // 3. Contact clicks.
 const clicks = setup();
 clicks.doc("click", link("https://wa.me/84906111016"));
-clicks.doc("click", link("mailto:sales@vietpaw.com"));
+clicks.doc("click", link("mailto:sarah@vietpaw.com"));
 clicks.doc("click", link("/guides/"));
 assert.deepEqual(clicks.sent.map(e => e.name), ["contact_whatsapp", "contact_email"]);
 assert.equal(clicks.sent[0].params.page_location, "https://vietpaw.com/request-a-quote/");
