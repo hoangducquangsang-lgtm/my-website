@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from content_helpers import (publish, section, p, ul, cards, table, terms, trust_links, SAFETY,
+from content_helpers import (publish, section, p, ul, cards, table, terms, trust_links, SAFETY, SAFETY_DOG_CHEW,
                              answer, fit, steps, spec_table, figure, media)
 from content_products import product_cards
 
@@ -145,7 +145,7 @@ def dog_toys_sections():
            "The dog swallows strands \u2014 rope is the wrong category for that animal, whatever the fiber.",
            "The customer wants an edible or digestible chew \u2014 none of this is food.",
            "The listing needs certified biodegradability, dental benefit or \u201csplinter-free\u201d \u2014 none of those can be supported here."])
-      + p(SAFETY), True),
+      + p(SAFETY_DOG_CHEW), True),
 
     section("Product references for your brief", product_cards(["coffee-wood-dog-chew","coconut-fiber-dog-ball","hemp-rope-dog-toy"])
       + p('Planning a young-dog range? Review <a href="/collections/teething-puppies/">puppy-toy sourcing and '
@@ -223,16 +223,18 @@ def build(root):
                 "Natural Dog Toys, Wholesale from Vietnam", DOG_TOYS_LEDE, dog_toys_sections(),
                 active=active, image=IMG+"french-bulldog-chewing-coffee-wood.jpg", faqs=DOG_TOYS_FAQ)
             continue
+        dog=path.startswith("/dog-toys/") or path in ("/collections/aggressive-chewers/","/collections/teething-puppies/")
+        wood=any("coffee-wood" in s for s in products) or path=="/collections/teething-puppies/"
         puppy_link=p('Planning a young-dog range? Review <a href="/collections/teething-puppies/">puppy-toy sourcing and suitability considerations</a>.') if path=="/dog-toys/" else ""
-        references=product_cards(products) if products else p('No puppy-specific SKU has been confirmed in the supplied specification. Use the <a href="/materials/">material overview</a> to discuss a dedicated design; do not relabel a cat toy or hard wood stick as puppy-safe.')
+        references=product_cards(products) if products else p('There is no dedicated puppy SKU in the current range. Use the <a href="/materials/">material overview</a> to discuss a design for young dogs; a cat toy or a hard wood stick should not be sold as puppy-safe simply because it is small.')
         parts=[section("Plan the assortment",(answer(CATEGORY_ANSWERS[path]) if path in CATEGORY_ANSWERS else "")+p(notes)+(cards(subcategories,2) if subcategories else "")+puppy_link),
                section("Product references for your brief",references,True),
                section("Materials, formats and buying checks",table(["Option","What to specify","What to check"],comparison)),
-               section("Wholesale terms: MOQ, samples and lead time",terms(),True),
+               section("Wholesale terms: MOQ, samples and lead time",terms(wood=wood),True),
                section("Private label, quality and export preparation",
                  p("Send quantities per SKU, destination country, intended sales channel and required launch date. Standard designs with your branding are quoted differently from new constructions. Separate product quantity from the minimum for printed boxes.")+
                  p('Explore <a href="/services/private-label-pet-toys/">private-label options</a> or <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development</a>. For recurring assortments, use our <a href="/services/wholesale-pet-products/">wholesale service</a>.')+trust_links()),
-               section("Clear use instructions belong on every pack",p(SAFETY)+p('Review <a href="/guides/pet-toy-safety-testing-requirements/">how to scope product testing</a> and <a href="/sustainability/">how material claims are qualified</a>.'),True)]
+               section("Clear use instructions belong on every pack",p(SAFETY_DOG_CHEW if dog else SAFETY)+p('Review <a href="/guides/pet-toy-safety-testing-requirements/">how to scope product testing</a> and <a href="/sustainability/">how material claims are qualified</a>.'),True)]
         publish(root,path,h1+" | VietPaw",lede,h1,lede,parts,active=active,image="/assets/img/"+img,
             faqs=[("Can I start with a small mixed order?", "Ask for a line-by-line quote. A minimum starting from 50 pcs applies only to selected standard products, not automatically to the whole assortment or every custom design."),
                   ("Can the products carry my brand?", "Yes, discuss labels, tags, packaging and wood engraving where suitable. Approve artwork and the physical sample before production."),

@@ -19,8 +19,16 @@ EXPORT_DOCS = ("Seven documents ship with every order: Commercial Invoice, Packi
                "Batch moisture readings are available on request. We do not issue veterinary certificates (this is a wood "
                "article, not an animal by-product) or FSC certification (coffee is an agricultural crop, outside its scope); "
                "laboratory testing is arranged separately on request.")
+# Non-wood pages (coconut fiber, hemp, loofah, cat toys): no wood-only clauses
+# (Forest-Product Declaration, veterinary/FSC wording) — those belong to coffee wood.
+EXPORT_DOCS_FIBER = ("Standard export documents: Commercial Invoice, Packing List, Bill of Lading or Air Waybill and "
+                     "Certificate of Origin (EUR.1 for the EU under the EVFTA, Form B as standard, Form VJ for Japan). "
+                     "Phytosanitary and fumigation certificates are issued per shipment where the destination requires "
+                     "them for plant-fiber goods, so list them at booking. Laboratory testing is arranged separately on request.")
 RANGE_SCOPE = 'VietPaw manufactures and sells pet toys and chews across four material collections: coffee wood, coconut fiber, hemp and loofah.'
-SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items. Strong chewers need a larger, thicker chew such as our Gorilla line; seek veterinary advice for puppies and dogs with dental conditions."
+# Generic safe-use line for every page; the Gorilla/dog-chew advice is added only on dog-chew pages.
+SAFETY = "For supervised pet play only, not food. Select a size that cannot be swallowed whole. Remove damaged toys, loose strands or pieces, and replace worn items."
+SAFETY_DOG_CHEW = SAFETY + " Strong chewers need a larger, thicker chew such as our Gorilla line; seek veterinary advice for puppies and dogs with dental conditions."
 SOURCE_OEM = "/services/oem-odm-pet-toy-manufacturing/"
 SOURCE_COMPANY = "/about/"
 FTC = "https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides"
@@ -161,13 +169,13 @@ def hero(title, lede, eyebrow="Wholesale & Private Label", image=None, request="
 def faq(items):
     return section("Buyer questions", "".join(f'<div class="faq-item"><h3>{q}</h3><p>{a}</p></div>' for q,a in items))
 
-def terms(moq=MOQ):
+def terms(moq=MOQ, wood=True):
     return table(["Order detail","Planning information"],[
         ("Product MOQ",moq),("Private label",PRIVATE_LABEL),
         ("Samples",SAMPLES+" "+SAMPLE_DISPATCH),("Production lead time",LEAD),
         ("Branding","Laser engraving on suitable coffee wood surfaces starts at 50 pcs. This is separate from the 500-pc private-label packaging minimum. Custom development is quoted separately."),
         ("Packaging","Bulk bags, individual packs and paper/kraft boxes are options. Custom hang tags, labels and printed boxes start at 500 pcs."),
-        ("Export documents",EXPORT_DOCS),
+        ("Export documents",EXPORT_DOCS if wood else EXPORT_DOCS_FIBER),
         ("Shipping","Confirm destination, Incoterm with named place, transport mode, carton data and the shipment-specific document list. Freight is not included unless stated.")])
 
 def trust_links():

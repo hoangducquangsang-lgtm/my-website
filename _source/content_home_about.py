@@ -5,7 +5,7 @@ from content_helpers import (hero, section, cards, p, ul, table, faq, rfq_bar, t
                              INCOTERMS, PAYMENT, CAFFEINE, SIZE_ADVICE, ORDER_TIERS,
                              answer, fit, steps, spec_table, figure, media,
                              SAMPLES, SAMPLE_DISPATCH, PRIVATE_LABEL, QC_PROTOCOL, RANGE_SCOPE, LEAD,
-                             CARTON, SEA_TRANSIT, SAFETY)
+                             CARTON, SEA_TRANSIT, SAFETY_DOG_CHEW as SAFETY)
 from content_products import product_cards
 
 IMG = "/assets/img/"

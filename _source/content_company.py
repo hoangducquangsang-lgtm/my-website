@@ -113,7 +113,7 @@ def build(root):
          section("Biodegradability requires conditions and scope",
             p("VietPaw does not publish biodegradability claims without appropriate evidence for the finished product and its disposal conditions.")+
             p(f'Material origin does not by itself substantiate a whole-product disposal claim. Define the component, disposal environment, time period and test evidence before using biodegradability or compostability language. See the <a href="{FTC}">FTC environmental-claims guidance</a>.')+
-            p("No product-wide compostability certificate or fixed decomposition time is asserted here. Do not instruct customers to bury toys or dispose of them in a compost stream unless the exact construction and local acceptance support that instruction.")),
+            p("We hold no product-wide compostability certificate and publish no fixed decomposition time. Do not instruct customers to bury toys or dispose of them in a compost stream unless the exact construction and local acceptance support that instruction.")),
          section("What buyers can build into a sourcing brief",ul([
             "A complete bill of materials for the product and the pack.",
             "Clear requirements for thread, cores, adhesives, dyes, coatings and plastic components.",

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from content_helpers import (publish, section, p, ul, table, terms, trust_links, SAFETY, MOISTURE, video_figure,
+from content_helpers import (publish, section, p, ul, table, terms, trust_links, SAFETY, SAFETY_DOG_CHEW, MOISTURE, video_figure,
                              answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT,
                              INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE)
 from content_products import product_cards
@@ -52,7 +52,7 @@ MATERIALS = {
  h1="Loofah Pet Toys for Wholesale & Private Label",
  lede="Create a lightweight cat-toy range from dried loofah-gourd fiber. Choose shapes, define attachments and approve packaging for your own retail or marketplace brand.",
  image="vietpaw-loofah-growing.png",products=["loofah-cat-toy"],
- what="Loofah is the fibrous interior of a mature gourd, not a sea sponge. Our supplied product sheet describes drying, cutting and shaping the fiber into toy forms. Shape, stitching and filling determine the finished specification.",
+ what="Loofah is the fibrous interior of a mature gourd, not a sea sponge. The fiber is dried, cut and shaped into toy forms. Shape, stitching and filling determine the finished specification.",
  applications=[("Cat play shapes","Discuss fish, mouse or other available shapes, with each design measured separately."),
  ("Brand-specific designs","Provide a drawing, target dimensions and attachment restrictions for an OEM/ODM feasibility review."),
  ("Catnip or other filling","Treat filling as an optional, separately specified component with its own source and labeling needs.")],
@@ -149,7 +149,7 @@ DEEP["coffee-wood"] = dict(
     +p(WEAR_BEHAVIOUR)
     +p("<strong>Dental and digestibility benefits</strong> have no evidence for this material and we publish neither. What the process does control is cracking at grading and moisture at packing, and those are records we can show you.")
     +p(CAFFEINE)
-    +p(SAFETY),True),
+    +p(SAFETY_DOG_CHEW),True),
 
   section("Shipping this material",
     p(CARTON)+p(SEA_TRANSIT)
@@ -355,7 +355,7 @@ def build(root):
             blocks = deep["blocks"]()
             sections = blocks[:1] + gallery_section(slug) + blocks[1:] + [
                 section("Products in this collection", product_cards(d["products"])),
-                section("MOQ, samples, packaging and lead time", terms(d["moq"])+trust_links(),True),
+                section("MOQ, samples, packaging and lead time", terms(d["moq"],wood=slug=="coffee-wood")+trust_links(),True),
             ]
             publish(root,"/collections/"+slug+"/",deep["title"],deep["lede"],deep["h1"],deep["lede"],
                 sections,active="Materials",image=deep["image"],
@@ -369,8 +369,8 @@ def build(root):
             section("From material sample to approved order",ul(d["approval"],True)+trust_links()),
             section("OEM, private label and range planning",p("Start with the sales channel, target pet, intended use and pack format. A standard product with your label follows a different approval path from a new shape or mixed-material construction.")+
                 p('<a href="/services/private-label-pet-toys/">Private label</a> covers branding and packaging on approved designs. <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM</a> covers specification-led development. For a multi-material range, review <a href="/services/wholesale-pet-products/">wholesale ordering</a>.'),True),
-            section("MOQ, samples, packaging and lead time",terms(d["moq"])),
-            section("Claims, quality and safe-use boundaries",p(d["caution"])+p(SAFETY)+p('Review <a href="/sustainability/">material and packaging claim boundaries</a> before printing environmental language. Inspection records and third-party reports have different scopes.'),True)]
+            section("MOQ, samples, packaging and lead time",terms(d["moq"],wood=any("coffee-wood" in s for s in d["products"]))),
+            section("Claims, quality and safe-use boundaries",p(d["caution"])+p(SAFETY_DOG_CHEW if any("coffee-wood" in s for s in d["products"]) else SAFETY)+p('Review <a href="/sustainability/">material and packaging claim boundaries</a> before printing environmental language. Inspection records and third-party reports have different scopes.'),True)]
         publish(root,"/collections/"+slug+"/",d["title"],
             d["lede"],d["h1"],d["lede"],sections,active="Materials",image="/assets/img/"+d["image"],
             trail=[("Home","/"),("Materials","/materials/"),(d["h1"],None)],

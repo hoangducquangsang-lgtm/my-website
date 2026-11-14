@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Gorilla line — thick-cut coffee wood chews for strong chewers (owner instruction 2026-09-25)."""
-from content_helpers import (section, p, ul, answer, fit, steps, spec_table, figure, media, SAFETY, MOISTURE,
+from content_helpers import (section, p, ul, answer, fit, steps, spec_table, figure, media, SAFETY_DOG_CHEW as SAFETY, MOISTURE,
                              CAFFEINE, GORILLA, PAYMENT, SEA_TRANSIT)
 
 IMG = "/assets/img/"

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Product specifications grounded in our product sheets."""
 from common import BASE_URL, BRAND
-from content_helpers import (publish, section, p, ul, table, cards, terms, trust_links, SAFETY, MOISTURE,
+from content_helpers import (publish, section, p, ul, table, cards, terms, trust_links, SAFETY, SAFETY_DOG_CHEW, MOISTURE,
                              answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT,
                              INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE, ORDER_TIERS,
                              GORILLA, gorilla_table)
@@ -165,7 +165,7 @@ def coffee_wood_sections(specifications):
            "Nobody will be supervising, or the piece is small enough to be swallowed whole."])
         +p(WEAR_BEHAVIOUR)
         +p("There is also no evidence that the chew cleans teeth, prevents disease or is digestible, so we make none of those claims either.")
-        +p(SAFETY),True),
+        +p(SAFETY_DOG_CHEW),True),
 
     section("How to specify and order",
         steps(COFFEE_STEPS)
@@ -264,8 +264,8 @@ def build(root):
             section("Product overview",(answer(PRODUCT_ANSWERS[slug]) if slug in PRODUCT_ANSWERS else "")+p(d["overview"])),
             section("Product specifications",specifications,True),
             section("Sizes, formats and private-label options",ul(d["options"])+p('For branding an existing item, see <a href="/services/private-label-pet-toys/">private-label pet toys</a>. For structural changes, use our <a href="/services/oem-odm-pet-toy-manufacturing/">OEM/ODM development service</a>.')),
-            section("Quality control and use instructions",ul(d["checks"])+p(SAFETY)+trust_links(),True),
-            section("Packaging, samples and export planning",terms(d["moq"])+p("Natural-material products are not interchangeable with their packaging. Confirm the bag film, paper coating, inks, adhesive and desiccant separately, especially for a plastic-free retail brief.")),
+            section("Quality control and use instructions",ul(d["checks"])+p(SAFETY_DOG_CHEW if "dog" in slug else SAFETY)+trust_links(),True),
+            section("Packaging, samples and export planning",terms(d["moq"],wood=False)+p("Natural-material products are not interchangeable with their packaging. Confirm the bag film, paper coating, inks, adhesive and desiccant separately, especially for a plastic-free retail brief.")),
             section("Recommended buyers and related products",p("Suitable sourcing conversations include pet brands, wholesalers and retailers building a sample-approved natural-material range. Marketplace acceptance and retail suitability remain specific to your listing and target market.")+
                 p(f'<a href="/collections/{d["collection"]}/">Explore the {d["group"].lower()} wholesale collection</a> or <a href="/services/wholesale-pet-products/">plan a mixed-product wholesale order</a>.'),True)]
         schema={"@context":"https://schema.org","@type":"Product","@id":BASE_URL+path+"#product",

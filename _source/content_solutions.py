@@ -121,7 +121,6 @@ def build(root):
             sections.insert(3,section("Compare pack economics using your own data",
                 p(f'Referral, FBA, storage and advertising costs vary by marketplace, category, packaged dimensions and fulfillment program. Use the current <a href="{AMAZON}">Amazon pricing information</a> and the tools for your selling account; this page does not apply one global fee percentage.')+
                 p("Compare net sales less product/pack cost, inbound logistics, marketplace charges, advertising and returns. Keep the measurement period, currency, order definition and seller population consistent.")+
-                p("An earlier version of this page described a third-party example in our planning material as our own AOV data. It is not presented here as a verified VietPaw client result. The period, marketplace and underlying order export were not supplied.")+
                 p("For FBA preparation, you provide the current shipment plan and labeling instructions. We discuss packing and forwarding support against that brief; this does not imply Amazon endorsement, guaranteed acceptance or a guaranteed direct-delivery route."),True))
         if slug=="eco-pet-shops":
             sections.insert(3,section("Review the claim before it goes on a shelf",

@@ -4,7 +4,7 @@ import re
 from common import BASE_URL, BRAND, page, write_page, breadcrumb_html
 from guide_dates import GUIDE_UPDATED_DATES, updated_time
 from content_helpers import (section, p, ul, table, cards, rfq_bar, FTC, CPSC, ECHA, AAHA,
-                             answer, fit, steps, spec_table, figure, SAFETY)
+                             answer, fit, steps, spec_table, figure, SAFETY_DOG_CHEW as SAFETY)
 from content_products import coffee_size_table
 from content_helpers import GORILLA, gorilla_table
 

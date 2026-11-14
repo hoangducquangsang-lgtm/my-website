@@ -136,7 +136,7 @@ def build(root):
          section("Coffee wood drying and quality protocol",
             p("Coffee wood follows a "+QC_PROTOCOL+". The five checkpoints are inspection controls within that process.")+
             p(MOISTURE)+
-            p('We keep its operating parameters confidential; the published figure is the finished-batch moisture threshold, not the drying recipe. Ask for the moisture record linked to your order; no drying temperature, cycle time or unpublished stage sequence is asserted here.'),True),
+            p('We keep its operating parameters confidential; the published figure is the finished-batch moisture threshold, not the drying recipe. Ask for the moisture record linked to your order. Drying temperatures, cycle times and the stage sequence are not published.'),True),
          section("Process and warehouse references",
             '<div class="grid grid-3"><figure><img src="/assets/img/process-raw-sticks.jpg" alt="Raw coffee wood preparation reference" loading="lazy"><figcaption>Raw material reference.</figcaption></figure><figure><img src="/assets/img/vietpaw-moisture-check.jpg" alt="Coffee wood moisture measurement reference" loading="lazy"><figcaption>Moisture-check reference.</figcaption></figure><figure><img src="/assets/img/pallet-stack-inspection.jpg" alt="Packed VietPaw carton reference" loading="lazy"><figcaption>Packed-carton reference.</figcaption></figure></div>'+
             p("Images show our process and range. Ask for dated photos or a video walkthrough for your specific order.")),
@@ -157,7 +157,7 @@ def build(root):
         "Quality Control for Natural Pet Toy Orders",
         "Coffee wood follows a "+QC_PROTOCOL+". Use an approved sample, agreed acceptance criteria and batch-linked records to review your order.",
         [section("Six process stages and five QC checkpoints",
-            p("The six stages refer to the drying/quality protocol; the five QC checkpoints are controls within it. They are not interchangeable counts. VietPaw does not publish the confidential operating parameters or a detailed stage-by-stage sequence.")+
+            p("The drying and quality protocol has six stages; the five QC checkpoints are controls inside those stages. VietPaw does not publish the confidential operating parameters or a detailed stage-by-stage sequence.")+
             p('See our <a href="/collections/coffee-wood/">coffee wood material page</a> for the current process summary. For other materials, agree the checks appropriate to the construction rather than applying a wood-drying protocol to every toy.')),
          section("Inspection records to agree for your order",table(["Review area","What to agree for your product","Record to request"],[
             ("Raw material","Material identity, cleanliness, visible defects and declared treatment","Intake record linked to material/lot"),
@@ -178,7 +178,7 @@ def build(root):
          section("Agree quality before the purchase order",ul([
             "Approved physical sample and current specification version.",
             "Measurable dimensions, material composition and acceptable natural variation.",
-            "Defect definitions and agreed sampling/acceptance plan; no AQL level is assumed here.",
+            "Defect definitions and the sampling and acceptance plan (for example an AQL level) agreed for your order.",
             "Any required independent lab test or third-party inspection, scoped separately.",
             "Hold/rework/rejection process and written receiving/claim terms."])+
             p("Do not use the phrase SGS-certified as a substitute for a report with a named product, method, date and scope. Inspection, laboratory testing and shipment documentation serve different purposes.")+
