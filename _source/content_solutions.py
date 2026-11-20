@@ -43,7 +43,7 @@ SOLUTIONS = [
  ("Pilot quantity","Minimum per SKU and a separate box/print minimum"),
  ("Launch assets","Logo, label copy, photos and usage rights"),
  ("Timeline","Sample, artwork, production, transport and launch buffer")],
- "Selected standard products start from 50 pcs per SKU. Private-label runs, custom hang tags, labels and printed boxes start at 500 pcs; laser engraving on suitable coffee wood surfaces is available separately from 50 pcs. 3 free samples. Buyer covers courier. Ask for an itemized quote for custom development, media and packaging before committing your launch budget.",
+ "Selected standard products start from 50 pcs per product. An own-label product carries the same 50 pcs minimum, with hang tags, labels and printed boxes quoted on their print quantity; laser engraving on suitable coffee wood surfaces is available separately from 50 pcs. 3 free samples. Buyer covers courier. Ask for an itemized quote for custom development, media and packaging before committing your launch budget.",
  "private-label-pet-toys"),
 ("eco-pet-shops","Eco Pet Shops","Natural Pet Toys for Eco Retailers | VietPaw",
  "A Natural-Material Range with Specific, Supportable Claims",
@@ -98,15 +98,15 @@ def build(root):
         "The same material can serve different business models. Choose the buyer route that matches your launch, assortment or replenishment needs.",
         [section("Which route fits your business",
             answer("<strong>Short answer:</strong> start from how you sell. Amazon sellers need pack dimensions and carton weights; startup brands "
-                   "need a low first order (from 50 pcs per SKU); pet brands and retail chains need a locked specification and repeatable packs; "
-                   "wholesalers need mixed cartons and fast stock (5–7 days for stock packaging).")
+                   "need a low first order (from 50 pcs per product); pet brands and retail chains need a locked specification and repeatable packs; "
+                   "wholesalers need mixed cartons and fast stock (8–10 days for 50–200 pcs of plain goods).")
             +table(["Buyer","First priority","Typical first order"],[
                 ("Amazon seller","FBA carton weight, barcode artwork, pack size","Stock or private label; confirm cartons"),
-                ("Startup brand","Low minimum and a physical sample","From 50 pcs per SKU"),
-                ("Pet brand","Own label and a locked specification","From 500 pcs per SKU"),
+                ("Startup brand","Low minimum and a physical sample","From 50 pcs per product"),
+                ("Pet brand","Own label and a locked specification","From 50 pcs"),
                 ("Eco pet shop","Claims you can support on the shelf","Small mixed assortment"),
                 ("Retail chain","Vendor pack, labels, delivery windows","Per chain programme"),
-                ("Wholesaler / distributor","Mixed cartons, repeat stock","Container: 429 cartons (20 ft) / 850 (40 ft)"),
+                ("Wholesaler / distributor","Mixed cartons, repeat stock","Carton count confirmed per pack configuration"),
             ])),
          section("Choose your buying context",cards([(label,lede,"/solutions/"+slug+"/") for slug,label,title,h1,lede,img,features,brief,extra,service in SOLUTIONS])),
          section("Keep the product specification at the center",p("Every route begins with a product sample, measurable specification and clear commercial scope. Marketplace, importer and retailer requirements should be part of the brief rather than added after production.")+trust_links(),True)],active="Solutions",image=IMG+"warehouse-inspection-clipboard.jpg")

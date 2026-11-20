@@ -69,7 +69,7 @@ CATEGORIES = [
 ("/collections/aggressive-chewers/","Sourcing Toys for Strong Chewers: Limits & Options","Materials","golden-retriever-gnawing-coffee-wood.jpg",
  "For strong chewers, choose the Gorilla line: thick-cut coffee wood chews in four sizes. No chew is indestructible, so supervise and replace when worn.",
  ["gorilla-coffee-wood-dog-chew","coffee-wood-dog-chew","hemp-rope-dog-toy"],[],
- [("Gorilla coffee wood chew","GRLS–GRLXL, 155–900 g","Choose the size against the dog; supervise and replace when worn"),
+ [("Gorilla coffee wood chew","GRLS–GRLXL, 155 g to 1.1 kg","Choose the size against the dog; supervise and replace when worn"),
  ("Rope play","Fraying and ingestion risks","Use only for supervised interaction"),
  ("Claims","No indestructible promise","Describe tested construction, not guaranteed outcomes")],
  "For a strong chewer, the Gorilla line is the better answer than stretching the standard CC01 stick to XL or XXL: it is cut much thicker, so there is more wood per piece. Size it against the dog’s mouth, supervise, and replace it when it cracks or wears small. Retail copy should not promise an indestructible chew or swallowable fibers."),
@@ -172,7 +172,7 @@ def dog_toys_sections():
     section("Wholesale terms: MOQ, samples and lead time", terms() + trust_links(), True),
 
     section("Private label and development",
-      p("Laser engraving on suitable coffee wood surfaces starts at 50 pcs and is separate from the 500 pcs per "
+      p("Laser engraving on suitable coffee wood surfaces starts at 50 pcs and is separate from the print quantity for "
         "SKU minimum for printed tags, labels and boxes. That gap is useful: it lets you run a small engraved "
         "trial before committing to printed packaging.")
       + p('Explore <a href="/services/private-label-pet-toys/">private-label options</a> for branding an approved '

@@ -1,5 +1,11 @@
 """Content withdrawn by the owner. Originals are backed up outside the website.
 
+Owner instruction 2026-11-20: the /proof/ route and the four 2026 proof pages stay
+retired. Separately, the owner supplied redacted specimens (phytosanitary, EUR.1) and
+the SGS report VNHL2609024326HG, and these are published inside /certifications/ —
+a page, not a proof route. Document scans may carry no consignee name, certificate
+number, quantity, B/L number or container/seal number.
+
 Proof pages (2026) and the wholesale catalogue route (retired 2026-10-29) must never be
 published again. The only file allowed at the retired catalogue route is the redirect
 stub written by build.py, which sends visitors to /request-a-quote/ (GitHub Pages does

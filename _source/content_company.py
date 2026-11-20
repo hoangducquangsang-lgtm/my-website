@@ -2,7 +2,7 @@
 from common import page, write_page, breadcrumb_html, BRAND, BRAND_INTRO, BRAND_ENTITY_STATEMENT, CONTRACT_NOTICE, PHONE, PHONE_TEL, EMAIL, ADDRESS, social_html
 from content_helpers import answer, fit, steps, spec_table, figure, media  # noqa: F401
 IMG = "/assets/img/"
-from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
+from content_helpers import publish, hero, section, p, ul, table, cards, terms, trust_links, gallery, SAMPLES, SAMPLE_DISPATCH, LEAD, PRIVATE_LABEL, EXPORT_DOCS, RANGE_SCOPE, SOURCE_OEM, FTC, CPSC, ECHA
 from content_materials import MATERIALS
 from forms import quote_form, catalogue_form
 
@@ -24,12 +24,22 @@ def build(root):
             "Product tags, size labels, paper/kraft boxes and pack artwork.",
             "Wood-and-rope combinations, rope geometry and loofah shapes, subject to feasibility.",
             "Product photography or video support by agreement; scope and cost depend on the project."])+
-            p(f'We run these services with the factories we work with — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
+            p(f'We run these services at our own two factories — see our <a href="{SOURCE_OEM}">manufacturing and order information</a>. Specific charges, minimums and deliverables are confirmed in your quotation.'),True),
          section("Before approving a sample",ul([
             "Agree materials, dimensions, tolerances and intended pet/use.",
             "List every component, including thread, cores, adhesive and packaging film.",
             "Confirm artwork, barcode file, warnings and market-specific testing needs.",
             "Record approval and the circumstances that require a new sample."],True)+trust_links()),
+         section("Capability, photographed",
+            p("Coffee wood is produced at our two factories in Dak Lak and Gia Lai; goods are shipped from our warehouse in Ho Chi Minh City. The photographs below are from our own lines and warehouse.")+
+            gallery([
+              ("grading-chews-at-the-packing-bench.jpg","Grading before packing."),
+              ("laser-engraving-a-coffee-wood-chew.jpg","Logo engraving on the chew itself."),
+              ("packing-vacuum-packs-into-export-carton.jpg","Packing to the approved carton plan."),
+              ("warehouse-stock-of-packed-cartons.jpg","Standard sizes held in stock."),
+              ("inspector-checking-cartons-with-a-checklist.jpg","Checks against the packing list."),
+              ("forklift-loading-a-container-for-export.jpg","Container loading at our warehouse."),
+            ])),
          section("Order planning",terms(),True)],
         active="Manufacturing",image="/assets/img/process-laser-engraving.jpg",
         faqs=[("Is every customization included in the standard price?", "No. Engraving, printing, box production, new tooling, tests and media work must be itemized where applicable."),
@@ -40,8 +50,8 @@ def build(root):
         "Start with the material and intended play type, then verify the complete construction. A natural ingredient is the beginning of a sourcing decision, not a finished-product certification.",
         [section("Which material for which toy",
             answer("<strong>Short answer:</strong> choose coffee wood for hard, long chewing (the thick-cut Gorilla line for strong chewers), "
-                   "coconut fiber for fetch-and-carry balls, hemp for rope and tug toys, and loofah for light cat play. All four are made in "
-                   "the two factories VietPaw works with in Vietnam, from 50 pcs per SKU on selected standard products.")
+                   "coconut fiber for fetch-and-carry balls, hemp for rope and tug toys, and loofah for light cat play. All four are made at "
+                   "VietPaw’s two factories in Vietnam, from 50 pcs per product on selected standard products.")
             +spec_table(["Material","Typical products","Best for","Main check at sample approval"],[
                 ("Coffee wood","CC01 chew sticks XS–XXL; Gorilla GRLS–GRLXL","Dogs that chew","Dimensions, finish, cracks, moisture below 14%"),
                 ("Coconut fiber","Dog balls S/M/L, cat balls, coir rope toys","Fetch, carry, cat batting","Diameter, weight, winding, any core"),
@@ -86,7 +96,51 @@ def build(root):
          section("Product testing is scoped, not implied",
             p("Third-party testing can be discussed against the requirements applicable to your target market, retailer, product construction and buyer specification. Confirm the laboratory, sample identification, test method, report date, result and limits of the assessment.")+
             p(f'<a href="{CPSC}">CPSC toy-safety guidance</a> addresses children’s toys; do not assume every pet toy needs a children’s-product certificate. <a href="{ECHA}">REACH restrictions</a> can apply to substances in articles; natural materials do not automatically establish compliance.')+
-            p("This website does not present a current, SKU-specific SGS, Intertek, CPSIA or REACH certificate as already verified. Ask us to confirm what relevant evidence is available and what needs to be arranged.")),
+            p("One SGS report is published below. Beyond its stated scope, this website does not present a current, SKU-specific SGS, Intertek, CPSIA or REACH certificate as already verified: ask us to confirm what evidence exists for your SKU and what needs to be arranged.")),
+         section("A third-party test report you can check",
+            p("Coffee wood chews were tested by SGS Vietnam in September 2026. The report is published in full so you can read the scope rather than take a logo on trust.")+
+            spec_table(["Field","As stated in the report"],[
+              ("Report","SGS Vietnam, No. VNHL2609024326HG, dated 18 September 2026"),
+              ("Laboratory","SGS Vietnam Ltd, ISO/IEC 17025 accredited (VILAS 237)"),
+              ("Sample tested","Coffee wooden pet toy, size L, 19\u201320 cm \u00d7 3.5\u20134.5 cm, 120\u2013140 g, finished product, produced 15 July 2026"),
+              ("Method","ASTM F963-23 Clause 4.3.5 \u2014 soluble heavy elements in substrate materials, ICP-OES"),
+              ("Elements covered","Lead, antimony, arsenic, barium, cadmium, chromium, mercury, selenium"),
+              ("Result","All eight recorded as ND (not detected); conclusion PASS"),
+              ("Scope limit","The report covers the submitted sample, not every size, material or future batch"),
+            ], caption="Reproduced from the report. SGS results refer to the submitted sample only \u2014 this is a test report, not a certification of the range.")+
+            gallery([
+              ("docs/sgs-test-report-astm-f963-cover.jpg","Report cover: sample, dates, method and conclusion."),
+              ("docs/sgs-test-report-heavy-elements-results.jpg","Results page: eight soluble heavy elements, all not detected."),
+            ],2)+
+            p('<a href="/assets/downloads/sgs-test-report-vnhl2609024326hg.pdf">Download the full SGS report (PDF, 3 pages)</a>. '
+              "ASTM F963 is the US toy-safety standard; clause 4.3.5 is the heavy-elements requirement. It does not by itself establish compliance with every destination\u2019s rules for pet products \u2014 confirm what your market and retailer require."),True),
+         section("Shipment documents from an actual export",
+            p("Two specimens from a coffee wood shipment to Germany. Consignee details, certificate numbers, quantities and dates are blacked out \u2014 those belong to the buyer \u2014 and the documents are shown so you can see the forms we actually issue, not as evidence about your own order.")+
+            gallery([
+              ("docs/phytosanitary-certificate-coffee-wood-toys.jpg","Phytosanitary certificate: Coffea spp., coffee wooden pet toys, origin Vietnam, issued in Ho Chi Minh City."),
+              ("docs/eur1-movement-certificate-coffee-wood-toys.jpg","EUR.1 movement certificate under the EU\u2013Viet Nam agreement, HS 4421.99, origin Vietnam."),
+            ],2)+
+            p("EUR.1 supports a preferential duty claim in the EU; it does not make preference automatic \u2014 your importer or broker still verifies the origin rule and the tariff line. Equivalent forms are issued for other markets: Form VJ for Japan, Form B elsewhere.")+
+            p("The documents for your own shipment are issued in your names and numbers. Ask for a redacted specimen set with your quotation.")),
+         section("The company behind the documents",
+            spec_table(["Field","Detail"],[
+              ("Exporter of record","The company named in the footer legal line of every page, on the documents above and in your contract"),
+              ("Business registration number","0316014351"),
+              ("Registered","12 November 2019, Ho Chi Minh City, Vietnam"),
+              ("Registered office and warehouse",ADDRESS),
+              ("Port of loading","Cat Lai, Ho Chi Minh City"),
+            ], caption="The registration number is public: check it on Vietnam\u2019s national business registration portal before you order \u2014 from us or from anyone else.")+
+            p(CONTRACT_NOTICE),True),
+         section("What the shipment evidence looks like",
+            p("Documents are prepared with the goods, not after them. These are our own photographs of the carton, inspection and sealing steps the documents describe.")+
+            gallery([
+              ("palletised-export-cartons-with-size-labels.jpg","Carton marks matching the packing list."),
+              ("measuring-a-carton-stack-during-inspection.jpg","Carton data verified before booking."),
+              ("pre-shipment-inspection-at-the-container-door.jpg","Pre-shipment inspection at the container."),
+              ("checking-the-carton-wall-inside-a-container.jpg","Load checked before the doors close."),
+              ("applying-the-container-seal-before-departure.jpg","Seal number recorded on the documents."),
+              ("sealed-container-leaving-the-warehouse.jpg","Container leaving for Cat Lai port."),
+            ]),True),
          section("What to request before signing the order",ul([
             "Current company details matching the contracting party and payment beneficiary.",
             "The precise SKU/material list covered by each report, including attachments and treatments.",
@@ -114,6 +168,13 @@ def build(root):
             p("VietPaw does not publish biodegradability claims without appropriate evidence for the finished product and its disposal conditions.")+
             p(f'Material origin does not by itself substantiate a whole-product disposal claim. Define the component, disposal environment, time period and test evidence before using biodegradability or compostability language. See the <a href="{FTC}">FTC environmental-claims guidance</a>.')+
             p("We hold no product-wide compostability certificate and publish no fixed decomposition time. Do not instruct customers to bury toys or dispose of them in a compost stream unless the exact construction and local acceptance support that instruction.")),
+         section("Where the coffee wood actually comes from",
+            p("The stems are taken out during a grower\u2019s normal replanting cycle in Dak Lak and Gia Lai and previously went to firewood or were burned off in the field. These are our own photographs of that collection.")+
+            gallery([
+              ("collecting-coffee-stems-at-the-plantation.jpg","Stems cut during replanting."),
+              ("worker-loading-coffee-stems-onto-trailer.jpg","Loaded at the plantation edge."),
+              ("coffee-wood-stacked-for-air-seasoning.jpg","Air seasoning before machining."),
+            ]),True),
          section("What buyers can build into a sourcing brief",ul([
             "A complete bill of materials for the product and the pack.",
             "Clear requirements for thread, cores, adhesives, dyes, coatings and plastic components.",
@@ -139,6 +200,16 @@ def build(root):
             p(CONTRACT_NOTICE)+p("Ask for transport mode, named origin/destination, packed dimensions and weight before comparing shipping quotes. Air, courier and sea services are not interchangeable; there is no single worldwide freight timeline.")+
             p("EXW, FOB or CIF can be discussed with your forwarder, but the named place/port and the applicable version of the terms must be stated. Destination duties, taxes, clearance and local delivery should be itemized rather than assumed to be included.")+
             p("Payment schedule, inspection acceptance and handling of defective goods belong in the written order agreement. This page does not set an automatic credit, refund or replacement entitlement.")),
+         section("What happens to your order in our warehouse",
+            p("Stock sizes are picked, checked and loaded in Ho Chi Minh City; made-to-order sizes come down from the factories first.")+
+            gallery([
+              ("warehouse-stock-of-packed-cartons.jpg","Stock picked from the warehouse."),
+              ("checking-packs-inside-an-export-carton.jpg","Cartons opened and checked."),
+              ("stretch-wrapped-pallet-of-export-cartons.jpg","Pallets wrapped for your shipment."),
+              ("loading-cartons-into-the-container.jpg","Loading on your booked date."),
+              ("applying-the-container-seal-before-departure.jpg","Seal applied and reported to you."),
+              ("sealed-container-leaving-the-warehouse.jpg","Departure for Cat Lai port."),
+            ])),
          section("For reorders",p("Keep the approved sample/version, product codes, artwork, carton configuration and inspection criteria together. Confirm material or packaging changes before repeat production. Share a rolling forecast with required delivery dates rather than relying on an annual capacity headline.")+
             p('<a href="/solutions/wholesalers/">Distributor reorder planning</a> · <a href="/solutions/retail-chains/">Retail-chain supply preparation</a>'),True)],
         active="Company",image=IMG+"inspection-documents-at-pallets.jpg")
@@ -167,7 +238,7 @@ def build(root):
           "information. You do not need a finished technical brief \u2014 just enough for us to price the right thing.")
         + spec_table(["Tell us","Why it changes the answer"],[
             ("The product and size","A size M coffee wood stick and a size XL are different prices, different carton counts and sometimes different lead times"),
-            ("Quantity per SKU","This decides whether you are at the 50 pcs standard minimum or the 500 pcs private-label minimum, and which lead-time band applies"),
+            ("Quantity per SKU","This decides which lead-time band applies"),
             ("Destination country","It sets the certificate list, the transit time and whether phytosanitary and fumigation documents need booking"),
             ("Branding, if any","Engraving and printed packaging have separate minimums and separate approval paths"),
             ("Timing","Production time is not an arrival date; if you have a shelf date, say so early"),
@@ -211,7 +282,7 @@ def build(root):
            "selection and courier arrangements are confirmed. Custom prototypes are quoted separately on timing."),
           ("Do you work with small buyers and new brands?",
            "Yes. Selected standard SKUs start at 50 pcs, and laser engraving also starts at 50 pcs, so a small branded trial "
-           "is possible before committing to the 500 pcs printed-packaging minimum."),
+           "is possible before committing to a printed-packaging run."),
           ("How can I check production before I pay the balance?",
            "Ask for dated photos of your line, a video walkthrough and the batch moisture record filed against your lot. "
            "Pre-shipment inspection at our Ho Chi Minh City warehouse can be arranged before the container is sealed, and we "

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from common import (BRAND, BRAND_INTRO, CONTRACT_NOTICE, ADDRESS, PHONE, EMAIL, BASE_URL,
                    REGISTRATION_DATE, COUNTRIES, SITES, page, write_page, organization_schema, social_html)
-from content_helpers import (hero, section, cards, p, ul, table, faq, rfq_bar, trust_links, publish,
+from content_helpers import (hero, section, cards, p, ul, table, faq, rfq_bar, trust_links, publish, gallery,
                              INCOTERMS, PAYMENT, CAFFEINE, SIZE_ADVICE, ORDER_TIERS,
                              answer, fit, steps, spec_table, figure, media,
                              SAMPLES, SAMPLE_DISPATCH, PRIVATE_LABEL, QC_PROTOCOL, RANGE_SCOPE, LEAD,
@@ -10,9 +10,9 @@ from content_products import product_cards
 
 IMG = "/assets/img/"
 
-HOME_LEDE = ("Coffee wood, coconut fiber, hemp and loofah, made with two factories in Dak Lak and Gia Lai for brands, "
-             "wholesalers and retailers. Published specifications, five QC checkpoints, stock held in our "
-             "warehouse, and standard products from 50 pcs per SKU.")
+HOME_LEDE = ("Coffee wood, coconut fiber, hemp and loofah for brands, wholesalers and retailers. Coffee wood is "
+             "produced at our two factories in Dak Lak and Gia Lai and ships from our Ho Chi Minh City warehouse. "
+             "Published specifications, five QC checkpoints, and standard products from 50 pcs per product.")
 
 def home(root):
     content = hero("Wholesale Natural Pet Toys, Specified Before You Buy", HOME_LEDE,
@@ -21,11 +21,11 @@ def home(root):
 
     content += section("What VietPaw supplies",
         answer("VietPaw manufactures and exports natural-material pet toys from Vietnam: coffee wood chews, "
-               "coconut fiber balls, hemp rope toys and loofah cat shapes. We work with two factories \u2014 in "
-               "Dak Lak and Gia Lai \u2014 hold standard sizes in our Ho Chi Minh City warehouse, and ship on our own "
-               "export documents. Sell wholesale from stock, add your branding under private label, or develop a "
-               "new construction under OEM/ODM. Standard products start at 50 pcs per SKU; private-label "
-               "packaging starts at 500 pcs.")
+               "coconut fiber balls, hemp rope toys and loofah cat shapes. Coffee wood is produced at our two factories in "
+               "Dak Lak and Gia Lai; we hold standard sizes in our Ho Chi Minh City warehouse, ship goods "
+               "from there and issue our own export documents. Sell wholesale from stock, add your branding under private label, or develop a "
+               "new construction under OEM/ODM. Standard products start at 50 pcs per product; private-label "
+               "packaging is quoted with its print quantity.")
         + '<div class="stats">'
           '<div><strong>4</strong><span>Natural materials</span></div>'
           '<div><strong>50 pcs</strong><span>Starting MOQ, selected SKUs</span></div>'
@@ -82,6 +82,19 @@ def home(root):
             '<a href="/certifications/">the document scope</a>, and a third-party inspection that witnesses the '
             'moisture reading and the container stuffing before the doors close.'), True)
 
+    content += section("Our factories and warehouse, photographed",
+        p("Coffee wood is produced at our two factories in Dak Lak and Gia Lai, and goods are shipped from our "
+          "warehouse in Ho Chi Minh City. Every photograph below is from our own line, warehouse and loading bay.")
+        + gallery([
+            ("coffee-stems-on-trailer-central-highlands.jpg","Coffee stems collected in the Central Highlands."),
+            ("coffee-wood-chews-on-drying-racks.jpg","Shaped chews on the drying racks."),
+            ("moisture-meter-reading-on-coffee-wood-chew.jpg","Batch moisture read below 14% before packing."),
+            ("staff-packing-chews-into-export-carton.jpg","Packing into export cartons."),
+            ("ho-chi-minh-city-warehouse-aisle.jpg","Stock held in our Ho Chi Minh City warehouse."),
+            ("sealed-container-leaving-the-warehouse.jpg","Sealed container leaving for Cat Lai port."),
+          ])
+        + p('<a href="/factory/">See the full factory and process walkthrough</a>.'))
+
     content += section("How you buy from here", cards([
         ("Wholesale", "Order an approved standard specification. Fastest route to a first shipment.",
          "/services/wholesale-pet-products/"),
@@ -132,13 +145,13 @@ def home(root):
 
     content += faq([
         ("What is the minimum order quantity?",
-         "Selected standard SKUs start at 50 pcs. Laser engraving on suitable coffee wood surfaces also starts at 50 pcs. "
-         "Private-label runs and custom hang tags, labels or printed boxes start at 500 pcs per SKU. The two minimums are "
-         "separate, so a small engraved trial before committing to printed packaging is possible."),
+         "Selected standard SKUs start at 50 pcs per product and sizes can be mixed inside the 50. An own-label product "
+         "carries the same minimum, and laser engraving on suitable coffee wood surfaces also starts at 50 pcs. Print "
+         "quantities for hang tags, labels or printed boxes are quoted separately."),
         ("How long does production take?",
-         "5\u20137 days for stock packaging, because standard sizes are held in our warehouse rather than made to order. "
-         "60\u201380 days when the order carries your own label, printed box or engraving \u2014 most of that window is artwork "
-         "approval and tooling, not production. Production time is not an arrival date: add roughly 30\u201335 days port to "
+         "For plain goods: 8\u201310 days for 50\u2013200 pcs, 10\u201315 days for 200\u20131,000 pcs, 25\u201327 days for 1,000\u20135,000 pcs and "
+         "30\u201345 days for a full 20 ft container. Own-label, printed-box and engraved orders are confirmed per order \u2014 most of "
+         "that window is artwork approval and tooling, not production. Production time is not an arrival date: add roughly 30\u201335 days port to "
          "port for the EU or the US, plus clearance and inland legs."),
         ("Can I get samples before ordering?",
          "Three free samples, with the courier at your cost. Standard samples dispatch within one working day once the "
@@ -172,36 +185,44 @@ def about(root):
     sections = [
       section("Who VietPaw is",
         answer("VietPaw is a Vietnamese manufacturer and exporter of natural-material pet toys. Coffee wood "
-               "chews, coconut fiber balls, hemp rope toys and loofah cat shapes are made at two factories we "
-               "work with in Dak Lak and Gia Lai \u2014 to our specification, under our production plan and our "
-               "quality release. We hold standard sizes in our warehouse in Ho Chi Minh City and ship on our "
-               "own export documents. We are not a trading company reselling someone else\u2019s catalogue: we "
-               "specify the product, control how it is made and checked, and will name the site that makes "
-               "your order.")
-        + p("That matters for three practical reasons. Stock sizes ship in 5\u20137 days because they are already "
-            "packed and held in our own warehouse. Quality decisions \u2014 what counts as a rejectable crack, what "
-            "moisture we pack at \u2014 are set by us and written into the specification the factories work to. And "
+               "chews, coconut fiber balls, hemp rope toys and loofah cat shapes are made at our two "
+               "factories in Dak Lak and Gia Lai \u2014 to our specification, under our production plan and our "
+               "quality release. We hold standard sizes in our warehouse in Ho Chi Minh City, ship goods from "
+               "there and issue our own export documents. We are not a trading company reselling someone "
+               "else\u2019s catalogue: we specify the product, control how it is made and checked, and will "
+               "name the site that makes your order.")
+        + p("That matters for three practical reasons. A plain order of 50\u2013200 pcs is produced in 8\u201310 days, and a "
+            "size already packed in our own warehouse is simply picked. Quality decisions \u2014 what counts as a rejectable crack, what "
+            "moisture we pack at \u2014 are set by us and written into the specification both factories work to. And "
             "when you want to verify something, we will tell you which site makes your order and give you "
             "dated photos, a video walkthrough and the batch records for it.")
         + p("What we will not do is overclaim. Most of what gets printed in this category \u2014 splinter-free, dental "
             "benefits, certified biodegradable \u2014 has no evidence behind it, and a buyer who prints it inherits "
             "the risk. We would rather lose a sale than hand you a claim that fails.")),
 
-      section("The two factories we work with",
-        p("Everything we sell is made at two factories in Vietnam, both in the Central Highlands close to where "
-          "the coffee wood is collected: one in Dak Lak and one in Gia Lai. We do not own the sites, and we do "
-          "control what is made there \u2014 the specification, the production plan and the quality release are ours. "
-          "Packing, quality release and export documentation run from our Ho Chi Minh City office and warehouse.")
+      section("Our two factories",
+        p("Coffee wood is produced at our two factories in Vietnam, both in the Central Highlands close to "
+          "where the wood is collected: one in Dak Lak and one in Gia Lai. The specification, the production "
+          "plan and the quality release are ours. Goods are shipped from our Ho Chi Minh City warehouse, "
+          "where packing, quality release and export documentation are prepared.")
         + spec_table(["Site", "Location"], SITES,
             caption="Pre-shipment inspection can be arranged at our Ho Chi Minh City warehouse before the container "
                     "is sealed. Loading port is Cat Lai, Ho Chi Minh City.")
-        + p("We do not publish a headline capacity figure. The volume and dates for your order are planned "
-            "against the actual SKU mix and confirmed in your quotation.")),
+        + p("Monthly capacity is 100,000 pieces across the product lines. The volume and dates for your "
+            "order are planned against the actual SKU mix and confirmed in your quotation.")
+        + gallery([
+            ("coffee-stem-intake-yard.jpg","Stem intake at the factory yard."),
+            ("coffee-wood-chews-on-drying-racks.jpg","Drying racks on the coffee wood line."),
+            ("grading-chews-at-the-packing-bench.jpg","Grading at the packing bench."),
+            ("ho-chi-minh-city-warehouse-aisle.jpg","Our Ho Chi Minh City warehouse."),
+            ("stretch-wrapped-pallet-of-export-cartons.jpg","Pallets staged for dispatch."),
+            ("applying-the-container-seal-before-departure.jpg","Seal applied before the container leaves."),
+          ])),
 
       section("What we do and do not do",
         fit(["Specifying a product properly before the first order, including the components a photograph does not show.",
              "Wholesale from approved standard specifications across four materials.",
-             "Private label \u2014 engraving from 50 pcs, printed packaging from 500 pcs per SKU.",
+             "Private label \u2014 engraving from 50 pcs, printed packaging quoted with its print quantity.",
              "OEM/ODM development from a drawing or brief, through feasibility and prototype.",
              "Export documentation, carton planning and the moisture records that come with a wood shipment."],
             ["We do not claim certifications we do not hold, or present planning figures as audited output.",
@@ -235,7 +256,7 @@ def about(root):
         table(["Role", "Information"], [
           ("Website / site name", BRAND),
           ("Business", "Manufacturer (OEM) and exporter, natural-material pet toys"),
-          ("Factories", "Two partner factories, in Dak Lak and Gia Lai"),
+          ("Factories", "Two factories of our own, in Dak Lak and Gia Lai"),
           ("Company registered", REGISTRATION_DATE),
           ("Export markets", COUNTRIES+" countries"),
           ("Port of loading", "Cat Lai, Ho Chi Minh City"),
@@ -282,11 +303,11 @@ def about(root):
         "what we will not claim, and how you can verify it without leaving your desk.",
         sections, active="Company", image=IMG+"coffee-wood-chews-drying-trays.jpg",
         faqs=[
-          ("Does VietPaw own its factories?",
-           "No, and we do not claim to. We work with two factories, in Dak Lak and Gia Lai. What we control is the "
-           "manufacturing itself: the specification they build to, the production plan, the five QC checkpoints and "
-           "the quality release, and we ship on our own export documents. We will name the site that makes your "
-           "order, and we provide dated photos, a video walkthrough and the batch records for it."),
+          ("Where are VietPaw products made?",
+           "Coffee wood is produced at our two factories, in Dak Lak and Gia Lai. The specification they build to, "
+           "the production plan, the five QC checkpoints and the quality release are ours, goods are shipped from "
+           "our Ho Chi Minh City warehouse and we issue our own export documents. We will name the site that makes "
+           "your order, and we provide dated photos, a video walkthrough and the batch records for it."),
           ("How long have you been exporting?",
            "The company has been registered in Vietnam since "+REGISTRATION_DATE+" and now ships to "+COUNTRIES+" countries. "
            "Country count is our own record rather than an audited figure, and we present it as such."),

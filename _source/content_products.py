@@ -6,21 +6,45 @@ from content_helpers import (publish, section, p, ul, table, cards, terms, trust
                              INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE, ORDER_TIERS,
                              GORILLA, gorilla_table)
 
+# Figures aligned 2026-11-20 with the published wholesale specification on
+# coffeewoodchew.com, which the owner confirms is the official source for coffee wood.
 COFFEE_SIZES = [
-    ("XS","CC01XS","10","1.5–2.0","23–30","Up to 3 kg"),
+    ("XS","CC01XS","10–11","1.5–2.0","23–30","Up to 3 kg"),
     ("S","CC01S","13–14","2.0–2.5","35–45","3–5 kg"),
     ("M","CC01M","17–18","2.5–3.5","90–110","5–8 kg"),
-    ("L","CC01L","19–20","3.5–4.5","120–180","8–12 kg"),
-    ("XL","CC01XL","21–22","4.5–5.5","230–310","12–20 kg"),
-    ("XXL","CC01XXL","22–23","5.5–7.0","340–440","20 kg and over"),
+    ("L","CC01L","18–19","3.5–4.5","120–180","8–12 kg"),
+    ("XL","CC01XL","20–21","4.5–5.5","230–400","12–20 kg"),
+    ("XXL","CC01XXL","22–23","5.5–8.0","325–600","20 kg and over"),
 ]
 def coffee_size_table():
     return spec_table(
-        ["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight","Pcs per export carton"],
+        ["Size","Reference SKU","Length (cm)","Diameter (cm)","Weight (g)","Reference dog weight","Pcs per carton, single pack"],
         [(a,b,c,d,e,f,g) for (a,b,c,d,e,f),g in zip(COFFEE_SIZES,COFFEE_CARTON)],
         caption="Reference specification supplied for the VietPaw range. Coffee wood is a natural material: outline, grain and mass vary within each band. Dog weight is a starting reference for choosing a size, not a veterinary suitability assessment. Carton counts are for bulk-packed sticks; retail-packed and multi-piece sets fit fewer units per carton. Confirm the current size sheet, tolerances and carton data against your approved sample.")
 
-COFFEE_CARTON = ["On request","512","224","126","85","On request"]
+COFFEE_CARTON = ["On request","On request","120","100","50","On request"]
+
+# Pieces per master carton by pack configuration, from the official wholesale specification.
+COFFEE_PACKING = [
+    ("S3CC01S","Size S, pack of 3","100","300"),
+    ("CC01M","Size M, single","120","120"),
+    ("S2CC01M","Size M, pack of 2","92","184"),
+    ("S3CC01M","Size M, pack of 3","52","156"),
+    ("CC01L","Size L, single","100","100"),
+    ("S2CC01L","Size L, pack of 2","55","110"),
+    ("S3CC01L","Size L, pack of 3","34","102"),
+    ("CC01XL","Size XL, single","50","50"),
+    ("S2CC01XL","Size XL, pack of 2","35","70"),
+    ("S3CC01XL","Size XL, pack of 3","22","66"),
+    ("S3CC01XXL","Size XXL, pack of 3","16","48"),
+    ("GRLS","Gorilla S, single","60","60"),
+    ("GRLM","Gorilla M, single","52","52"),
+    ("GRLL","Gorilla L, single","52","52"),
+]
+
+def coffee_packing_table():
+    return spec_table(["Reference SKU","Configuration","Sets per carton","Pieces per carton"],COFFEE_PACKING,
+        caption="Master carton 51 \u00d7 31 \u00d7 39 cm as packed (0.062 m\u00b3). Any other pack configuration is calculated for the combination before a proforma is issued.")
 
 COFFEE_TOLERANCE = [
     ("Finished moisture","Below 14% before packing","Pin-type meter reading taken on the finished batch and again before the container is sealed. Ask for the reading filed against your lot."),
@@ -56,7 +80,7 @@ COFFEE_STEPS = [
 
 PRODUCTS = {
 "coffee-wood-dog-chew":dict(name="Coffee Wood Dog Chew Stick",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
- image="vietpaw-coffee-wood-sizes.png",size="XS–XXL; six reference sizes",moq="From 50 pcs per SKU on standard coffee wood sticks.",
+ image="vietpaw-coffee-wood-sizes.png",size="XS–XXL; six reference sizes",moq="From 50 pcs per product on standard coffee wood sticks.",
  lede="Six graded sizes of seasoned Robusta coffee stem, packed below 14% moisture with a \u00b13 mm length tolerance. Full specification, carton data and the limits we will not claim \u2014 before you request a sample.",
  overview="The standard stick is described in our product sheet as coffee wood without added flavor, glue or color. This composition statement is not a laboratory safety certificate or a statement about every treatment used in export preparation. Rope combinations and other custom constructions need their own component list.",
  options=["Standard stick sizes XS–XXL; natural grain, outline and shade vary.","Laser-engraved brand mark on an agreed area of the wood, with placement approved on a sample.","Coffee wood combined with cotton or hemp rope is a separate construction; specify the rope material rather than describing the whole toy as single-ingredient."],
@@ -115,6 +139,7 @@ def coffee_wood_sections(specifications):
 
     section("Specification",
         specifications+coffee_size_table()
+        +"<h3>Pieces per carton by pack configuration</h3>"+coffee_packing_table()
         +"<h3>Gorilla line for strong chewers</h3>"+p(GORILLA)+gorilla_table()
         +"<h3>Measured limits and process figures</h3>"
         +spec_table(["Parameter","Figure","What it means in practice"],COFFEE_TOLERANCE,
@@ -175,7 +200,7 @@ def coffee_wood_sections(specifications):
     section("Branding and packaging",
         media(p("Laser engraving burns your mark into the wood surface. There is no ink, no label and nothing to peel off, which is why it survives a chew better than a printed sleeve. Engraving needs a reasonably flat area, so placement is approved on a sample per size rather than assumed.")
               +ul(["Engraving on suitable wood surfaces starts at 50 pcs and is separate from the packaging minimum.",
-                   "Custom hang tags, printed labels and printed boxes start at 500 pcs per SKU.",
+                   "Custom hang tags, printed labels and printed boxes are quoted with their print quantity.",
                    "Bulk bag, single poly bag, vacuum pack and paper or kraft box formats are all available.",
                    "Packs are vacuum sealed with a desiccant sachet inside; confirm the film and desiccant type in writing if your market restricts them."]),
               IMG+"laser-engraving-coffee-wood-chew.jpg",
@@ -188,7 +213,7 @@ def coffee_wood_sections(specifications):
         +spec_table(["Shipping detail","Reference"],[
             ("HS code","4421.99 — confirm the classification your own customs broker will use."),
             ("Master carton","51 × 31 × 39 cm, 0.062 m³"),
-            ("Per pallet / 20 ft / 40 ft","30 cartons / 429 cartons / 850 cartons"),
+            ("Per pallet / 20 ft / 40 ft","Calculated for the actual pack configuration, not published as a fixed count"),
             ("Port of loading","Cat Lai, Ho Chi Minh City"),
             ("Transit reference","30–35 days port to port, EU or US"),
             ("Incoterms",INCOTERMS),
@@ -204,7 +229,7 @@ def coffee_wood_sections(specifications):
                "Coffee wood chews vacuum packed with a desiccant sachet before cartoning",
                "Vacuum packed with a desiccant sachet. Most mould claims trace back to the voyage, not the bench.")),
 
-    section("Order terms",terms("From 50 pcs per SKU on standard coffee wood sticks. Engraving, rope combinations and custom boxes are quoted separately.")
+    section("Order terms",terms("From 50 pcs per product on standard coffee wood sticks. Engraving, rope combinations and custom boxes are quoted separately.")
         +trust_links(),True),
     ]
 
@@ -217,11 +242,11 @@ COFFEE_FAQ = [
  ("How long does one chew last?",
   "There is no published figure, because lifespan is set by the dog rather than by the material \u2014 a light gnawer may keep a size M stick for months while a determined chewer reduces the same piece in days. Size, moisture and how much time the dog actually spends with it all move the answer. Our guide on chew lifespan sets out what to tell customers instead of quoting a number."),
  ("Can coffee wood chews be private labelled?",
-  "Yes, in two ways. Laser engraving burns your mark into the wood and starts at 50 pcs on suitable surfaces. Printed packaging \u2014 hang tags, labels, boxes \u2014 starts at 500 pcs per SKU. The two minimums are separate, so a small engraved trial run is possible before you commit to printed packaging."),
+  "Yes, in two ways. Laser engraving burns your mark into the wood and starts at 50 pcs on suitable surfaces. An own-label product carries the same 50 pcs minimum as a plain one, and printed packaging \u2014 hang tags, labels, boxes \u2014 is quoted with its own print quantity. Engraving and printing are priced separately, so a small engraved trial run is possible before you commit to printed packaging."),
  ("What moisture level are the chews packed at, and how do I verify it?",
   "Below 14%, measured with a pin-type meter on the finished batch and photographed, then read again before the container is sealed. Ask for the reading filed against your lot number, and if the shipment matters, have a third party witness the moisture reading, measure a sample, photograph the carton marks and witness stuffing before the doors close."),
  ("How many pieces fit in a carton and a container?",
-  "For bulk-packed sticks: 512 (S), 224 (M), 126 (L) and 85 (XL) per master carton of 51 \u00d7 31 \u00d7 39 cm. A carton is 0.062 m\u00b3, a pallet takes 30 cartons, a 20 ft container 429 and a 40 ft 850. Retail-packed and multi-piece sets fit noticeably fewer units per carton, so confirm the count for your own pack format before you cost the freight."),
+  "Pieces per master carton depend on the pack configuration: 120 for a size M single, 100 for a size L single, 50 for a size XL single, 300 for a pack of three in size S. The master carton is 51 \u00d7 31 \u00d7 39 cm as packed (0.062 m\u00b3), one size across the range. Pallet and container counts are calculated for the combination you order rather than published as fixed figures, so confirm them for your own pack format before you cost the freight."),
  ("What documents come with the shipment?",
   "Certificate of Origin, fumigation certificate, phytosanitary certificate, packing list, commercial invoice and bill of lading, subject to what the destination requires. Batch moisture readings are available on request. Phytosanitary and fumigation certificates are issued per shipment and cannot be produced after the fact, so list them with the booking."),
  ("Coffee wood or olive wood \u2014 what is the practical difference?",
@@ -255,7 +280,7 @@ def build(root):
                 ("Sizes",d["size"]),("MOQ",d["moq"]),
                 ("Branding","Laser engraving on the wood, or your own label, hang tag or printed box."),
                 ("Sample","3 free samples; buyer covers courier."),
-                ("Lead time","5–7 days stock packaging; 60–80 days with your own label, box or engraving.")])
+                ("Lead time","8–10 days for 50–200 pcs, up to 30–45 days for a 20 ft container; own-label confirmed per order.")])
             sections=gorilla_sections(specifications)
         elif slug=="coffee-wood-dog-chew":
             sections=coffee_wood_sections(specifications)
@@ -277,7 +302,7 @@ def build(root):
             "Gorilla Coffee Wood Chew for Strong Chewers — Wholesale | VietPaw" if gorilla else
             "Coffee Wood Dog Chew — Sizes, Specification & Wholesale | VietPaw" if coffee
               else d["name"]+" | Wholesale & Private Label | VietPaw",
-            ("Thick-cut coffee wood chews for strong chewers: GRLS–GRLXL, 155–900 g, carton data, FBA notes. From 50 pcs per SKU; private label from 500." if gorilla else
+            ("Thick-cut coffee wood chews for strong chewers: GRLS\u2013GRLXL, 155 g to 1.1 kg, carton data, FBA notes. From 50 pcs per product; own label at the same 50 pcs minimum." if gorilla else
              "Six sizes XS–XXL with lengths, diameters, weights and carton counts. Packed below 14% moisture, ±3 mm length tolerance, five QC checkpoints. Wholesale and private label from Vietnam."
              if coffee else
              f'Source {d["name"].lower()} from Vietnam. Review sizes, sample options, private-label packaging and order requirements before requesting a quote.'),

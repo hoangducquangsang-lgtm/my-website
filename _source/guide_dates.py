@@ -1,5 +1,10 @@
 """Owner-requested displayed editorial dates; not reconstructed edit history.
 
+Owner instruction 2026-11-20: these displayed dates stay exactly as they are. A
+site-wide change to shared copy (brand statement, MOQ, lead time, capacity) is not an
+editorial revision of an article, so lastmod.py no longer forces a new date when a
+guide's rendered HTML changes. Re-date a guide only on a deliberate decision.
+
 Dates stay fixed across builds. Assign a deliberate date when adding a guide;
 never derive existing dates from the build clock or shift them with list order.
 """

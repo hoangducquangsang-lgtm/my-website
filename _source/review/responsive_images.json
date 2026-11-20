@@ -14,6 +14,50 @@
     "method": 6
   },
   "images": {
+    "assets/img/applying-the-container-seal-before-departure.jpg": {
+      "sha256": "9ea539306aac64030d52e97ce7fe6b799c3b0bc23830227745a3bb3567c15e25",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 166654,
+      "variants": [
+        {
+          "path": "assets/img/webp/applying-the-container-seal-before-departure-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 15202
+        },
+        {
+          "path": "assets/img/webp/applying-the-container-seal-before-departure-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 28666
+        },
+        {
+          "path": "assets/img/webp/applying-the-container-seal-before-departure-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 45324
+        },
+        {
+          "path": "assets/img/webp/applying-the-container-seal-before-departure-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 59654
+        },
+        {
+          "path": "assets/img/webp/applying-the-container-seal-before-departure-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 81484
+        },
+        {
+          "path": "assets/img/webp/applying-the-container-seal-before-departure-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 102070
+        }
+      ]
+    },
     "assets/img/bagged-chews-with-desiccant.jpg": {
       "sha256": "d70c8e49e22a516b896d4026f2ca10bc477c739abd81a798a2e23f860c855ea1",
       "width": 1500,
@@ -61,6 +105,50 @@
           "width": 1500,
           "height": 2000,
           "bytes": 204674
+        }
+      ]
+    },
+    "assets/img/bagging-coffee-wood-chews-for-export.jpg": {
+      "sha256": "cb1fb82d12620a7a8ef3a602739e3730d64da387ff1217cf3dc3e50ef37e52a7",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 224979,
+      "variants": [
+        {
+          "path": "assets/img/webp/bagging-coffee-wood-chews-for-export-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 20160
+        },
+        {
+          "path": "assets/img/webp/bagging-coffee-wood-chews-for-export-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 34408
+        },
+        {
+          "path": "assets/img/webp/bagging-coffee-wood-chews-for-export-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 50998
+        },
+        {
+          "path": "assets/img/webp/bagging-coffee-wood-chews-for-export-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 69634
+        },
+        {
+          "path": "assets/img/webp/bagging-coffee-wood-chews-for-export-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 87898
+        },
+        {
+          "path": "assets/img/webp/bagging-coffee-wood-chews-for-export-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 122688
         }
       ]
     },
@@ -143,6 +231,94 @@
           "width": 900,
           "height": 1600,
           "bytes": 234086
+        }
+      ]
+    },
+    "assets/img/checking-packs-inside-an-export-carton.jpg": {
+      "sha256": "7f383918275a36ec27087981740f4c4aa8660f3a335d755bd0b1f8c46b54975c",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 295561,
+      "variants": [
+        {
+          "path": "assets/img/webp/checking-packs-inside-an-export-carton-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 33188
+        },
+        {
+          "path": "assets/img/webp/checking-packs-inside-an-export-carton-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 70216
+        },
+        {
+          "path": "assets/img/webp/checking-packs-inside-an-export-carton-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 114460
+        },
+        {
+          "path": "assets/img/webp/checking-packs-inside-an-export-carton-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 157756
+        },
+        {
+          "path": "assets/img/webp/checking-packs-inside-an-export-carton-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 198966
+        },
+        {
+          "path": "assets/img/webp/checking-packs-inside-an-export-carton-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 232792
+        }
+      ]
+    },
+    "assets/img/checking-the-carton-wall-inside-a-container.jpg": {
+      "sha256": "8605fac423b2db65e34f1fc7096bd2cbb7cb9d833e1e15c605757a1733df6853",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 177922,
+      "variants": [
+        {
+          "path": "assets/img/webp/checking-the-carton-wall-inside-a-container-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 22956
+        },
+        {
+          "path": "assets/img/webp/checking-the-carton-wall-inside-a-container-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 40488
+        },
+        {
+          "path": "assets/img/webp/checking-the-carton-wall-inside-a-container-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 56350
+        },
+        {
+          "path": "assets/img/webp/checking-the-carton-wall-inside-a-container-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 74402
+        },
+        {
+          "path": "assets/img/webp/checking-the-carton-wall-inside-a-container-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 89836
+        },
+        {
+          "path": "assets/img/webp/checking-the-carton-wall-inside-a-container-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 107986
         }
       ]
     },
@@ -498,6 +674,56 @@
         }
       ]
     },
+    "assets/img/coffee-stem-intake-yard.jpg": {
+      "sha256": "dfc8ced905bccfff82c65a27375ffd1d1c7108282fad537c5e090a9809366579",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 569858,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-stem-intake-yard-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 26816
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-intake-yard-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 58548
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-intake-yard-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 100366
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-intake-yard-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 154312
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-intake-yard-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 216434
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-intake-yard-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 322670
+        },
+        {
+          "path": "assets/img/webp/coffee-stem-intake-yard-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 526290
+        }
+      ]
+    },
     "assets/img/coffee-stems-cut-at-plantation.jpg": {
       "sha256": "29eab2c3bee6dbd3d54db775b9d5bb392b90d1f0bb91d09f7b158db1a33529dc",
       "width": 1080,
@@ -586,6 +812,50 @@
         }
       ]
     },
+    "assets/img/coffee-stems-on-trailer-central-highlands.jpg": {
+      "sha256": "51dcfa7d987778ff4f425ffffa53a85cd2595d93d2d9058709a477d69c62fbad",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 458905,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-stems-on-trailer-central-highlands-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 51524
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-on-trailer-central-highlands-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 104220
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-on-trailer-central-highlands-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 170496
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-on-trailer-central-highlands-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 236286
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-on-trailer-central-highlands-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 295578
+        },
+        {
+          "path": "assets/img/webp/coffee-stems-on-trailer-central-highlands-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 373150
+        }
+      ]
+    },
     "assets/img/coffee-stems-piled-after-clearing.jpg": {
       "sha256": "2255875625fdaf1c80ae887958a0ac47512b90488140a99d46c791611abef64b",
       "width": 2000,
@@ -633,6 +903,38 @@
           "width": 1600,
           "height": 1200,
           "bytes": 515288
+        }
+      ]
+    },
+    "assets/img/coffee-wood-billets-after-cross-cutting.jpg": {
+      "sha256": "ac22c97bd512ab47b652b77055a86e3b5922d9a865aa1a6dab662e84ca848a66",
+      "width": 800,
+      "height": 1000,
+      "bytes": 232355,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-billets-after-cross-cutting-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 55198
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-billets-after-cross-cutting-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 105880
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-billets-after-cross-cutting-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 155034
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-billets-after-cross-cutting-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 199150
         }
       ]
     },
@@ -1024,6 +1326,50 @@
         }
       ]
     },
+    "assets/img/coffee-wood-chews-inside-drying-chamber.jpg": {
+      "sha256": "6ff8db13d20f0a348f4df059dc0583e79668b37ab655802b7ef073cf65007201",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 181017,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-inside-drying-chamber-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 28682
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-inside-drying-chamber-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 46964
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-inside-drying-chamber-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 63030
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-inside-drying-chamber-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 82490
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-inside-drying-chamber-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 102222
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-inside-drying-chamber-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 118502
+        }
+      ]
+    },
     "assets/img/coffee-wood-chews-mixed-sizes.jpg": {
       "sha256": "7d5fa5b6d85fd391f603333a78f2011ec09a383c7e0ef6578c800aae37b9905a",
       "width": 1600,
@@ -1071,6 +1417,56 @@
           "width": 1600,
           "height": 1600,
           "bytes": 79466
+        }
+      ]
+    },
+    "assets/img/coffee-wood-chews-on-drying-racks.jpg": {
+      "sha256": "2bec9b4a73fa7391d39563c82c70842db30d104fa8a4f4fa51d86dce65fdb682",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 260392,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-chews-on-drying-racks-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 23054
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-on-drying-racks-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 37980
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-on-drying-racks-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 51824
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-on-drying-racks-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 69442
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-on-drying-racks-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 83336
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-on-drying-racks-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 109210
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-chews-on-drying-racks-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 154186
         }
       ]
     },
@@ -1532,6 +1928,50 @@
         }
       ]
     },
+    "assets/img/coffee-wood-stacked-for-air-seasoning.jpg": {
+      "sha256": "4d1dc5d3f2aecfccc7ec715ca616cf9aeaff8475f166f98d689238ce1b289a4b",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 273654,
+      "variants": [
+        {
+          "path": "assets/img/webp/coffee-wood-stacked-for-air-seasoning-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 50362
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-stacked-for-air-seasoning-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 88054
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-stacked-for-air-seasoning-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 124178
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-stacked-for-air-seasoning-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 158434
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-stacked-for-air-seasoning-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 190396
+        },
+        {
+          "path": "assets/img/webp/coffee-wood-stacked-for-air-seasoning-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 215532
+        }
+      ]
+    },
     "assets/img/coffee-wood-workshop-stacked-billets.jpg": {
       "sha256": "57759f9cd3bbe8f786ae9fd75e6d464da30ce225837adaed79b90f36fd7793e7",
       "width": 2000,
@@ -1579,6 +2019,88 @@
           "width": 1600,
           "height": 900,
           "bytes": 181758
+        }
+      ]
+    },
+    "assets/img/collecting-coffee-stems-at-the-plantation.jpg": {
+      "sha256": "fff1893d045b56cd1f8db820dae8b9bfa74bca5e7be5113d00629d8138cef57d",
+      "width": 960,
+      "height": 1280,
+      "bytes": 450398,
+      "variants": [
+        {
+          "path": "assets/img/webp/collecting-coffee-stems-at-the-plantation-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 65240
+        },
+        {
+          "path": "assets/img/webp/collecting-coffee-stems-at-the-plantation-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 139438
+        },
+        {
+          "path": "assets/img/webp/collecting-coffee-stems-at-the-plantation-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 226054
+        },
+        {
+          "path": "assets/img/webp/collecting-coffee-stems-at-the-plantation-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 326930
+        },
+        {
+          "path": "assets/img/webp/collecting-coffee-stems-at-the-plantation-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 414960
+        }
+      ]
+    },
+    "assets/img/container-loaded-with-export-cartons.jpg": {
+      "sha256": "0f2ac99def65489ab067b67d739e2a02096020afe6c264944e55650563fbd0c1",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 224132,
+      "variants": [
+        {
+          "path": "assets/img/webp/container-loaded-with-export-cartons-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 29158
+        },
+        {
+          "path": "assets/img/webp/container-loaded-with-export-cartons-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 52532
+        },
+        {
+          "path": "assets/img/webp/container-loaded-with-export-cartons-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 77864
+        },
+        {
+          "path": "assets/img/webp/container-loaded-with-export-cartons-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 103144
+        },
+        {
+          "path": "assets/img/webp/container-loaded-with-export-cartons-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 125028
+        },
+        {
+          "path": "assets/img/webp/container-loaded-with-export-cartons-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 146232
         }
       ]
     },
@@ -1667,6 +2189,220 @@
           "width": 1080,
           "height": 1350,
           "bytes": 121022
+        }
+      ]
+    },
+    "assets/img/cut-coffee-wood-billets.jpg": {
+      "sha256": "fb9fccecd4b4b37cebf4f18411ca61bfcb26308c5d00c9e73300e466a5843c42",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 505994,
+      "variants": [
+        {
+          "path": "assets/img/webp/cut-coffee-wood-billets-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 47868
+        },
+        {
+          "path": "assets/img/webp/cut-coffee-wood-billets-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 93416
+        },
+        {
+          "path": "assets/img/webp/cut-coffee-wood-billets-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 149614
+        },
+        {
+          "path": "assets/img/webp/cut-coffee-wood-billets-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 216374
+        },
+        {
+          "path": "assets/img/webp/cut-coffee-wood-billets-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 286764
+        },
+        {
+          "path": "assets/img/webp/cut-coffee-wood-billets-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 418936
+        }
+      ]
+    },
+    "assets/img/docs/eur1-movement-certificate-coffee-wood-toys.jpg": {
+      "sha256": "75a8fe725edc5c718519923db6eea4f613bd2e2b0702435311a0dce7f7d4ff0c",
+      "width": 994,
+      "height": 1400,
+      "bytes": 163467,
+      "variants": [
+        {
+          "path": "assets/img/webp/eur1-movement-certificate-coffee-wood-toys-jpg-320w.webp",
+          "width": 320,
+          "height": 451,
+          "bytes": 13678
+        },
+        {
+          "path": "assets/img/webp/eur1-movement-certificate-coffee-wood-toys-jpg-480w.webp",
+          "width": 480,
+          "height": 676,
+          "bytes": 28608
+        },
+        {
+          "path": "assets/img/webp/eur1-movement-certificate-coffee-wood-toys-jpg-640w.webp",
+          "width": 640,
+          "height": 901,
+          "bytes": 45870
+        },
+        {
+          "path": "assets/img/webp/eur1-movement-certificate-coffee-wood-toys-jpg-800w.webp",
+          "width": 800,
+          "height": 1127,
+          "bytes": 64016
+        },
+        {
+          "path": "assets/img/webp/eur1-movement-certificate-coffee-wood-toys-jpg-960w.webp",
+          "width": 960,
+          "height": 1352,
+          "bytes": 83248
+        },
+        {
+          "path": "assets/img/webp/eur1-movement-certificate-coffee-wood-toys-jpg-994w.webp",
+          "width": 994,
+          "height": 1400,
+          "bytes": 89358
+        }
+      ]
+    },
+    "assets/img/docs/phytosanitary-certificate-coffee-wood-toys.jpg": {
+      "sha256": "db42ea1cd07aae48707dbbe2d5edf04a548fefe18d9a828aa1246eafeb891920",
+      "width": 958,
+      "height": 1400,
+      "bytes": 225300,
+      "variants": [
+        {
+          "path": "assets/img/webp/phytosanitary-certificate-coffee-wood-toys-jpg-320w.webp",
+          "width": 320,
+          "height": 468,
+          "bytes": 24780
+        },
+        {
+          "path": "assets/img/webp/phytosanitary-certificate-coffee-wood-toys-jpg-480w.webp",
+          "width": 480,
+          "height": 701,
+          "bytes": 50524
+        },
+        {
+          "path": "assets/img/webp/phytosanitary-certificate-coffee-wood-toys-jpg-640w.webp",
+          "width": 640,
+          "height": 935,
+          "bytes": 79520
+        },
+        {
+          "path": "assets/img/webp/phytosanitary-certificate-coffee-wood-toys-jpg-800w.webp",
+          "width": 800,
+          "height": 1169,
+          "bytes": 109428
+        },
+        {
+          "path": "assets/img/webp/phytosanitary-certificate-coffee-wood-toys-jpg-958w.webp",
+          "width": 958,
+          "height": 1400,
+          "bytes": 139350
+        }
+      ]
+    },
+    "assets/img/docs/sgs-test-report-astm-f963-cover.jpg": {
+      "sha256": "79e3dfc5abc5f02872f9e5ff0826a31a1a10f2cf83acc3b2236f4814326a03ab",
+      "width": 990,
+      "height": 1400,
+      "bytes": 194604,
+      "variants": [
+        {
+          "path": "assets/img/webp/sgs-test-report-astm-f963-cover-jpg-320w.webp",
+          "width": 320,
+          "height": 453,
+          "bytes": 20628
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-astm-f963-cover-jpg-480w.webp",
+          "width": 480,
+          "height": 679,
+          "bytes": 41278
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-astm-f963-cover-jpg-640w.webp",
+          "width": 640,
+          "height": 905,
+          "bytes": 65688
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-astm-f963-cover-jpg-800w.webp",
+          "width": 800,
+          "height": 1131,
+          "bytes": 90360
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-astm-f963-cover-jpg-960w.webp",
+          "width": 960,
+          "height": 1358,
+          "bytes": 115886
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-astm-f963-cover-jpg-990w.webp",
+          "width": 990,
+          "height": 1400,
+          "bytes": 121754
+        }
+      ]
+    },
+    "assets/img/docs/sgs-test-report-heavy-elements-results.jpg": {
+      "sha256": "47ba9d0277b89f7de0d784025447dfebb6b4bc279cc82fee1e80d69850321ac9",
+      "width": 990,
+      "height": 1400,
+      "bytes": 186106,
+      "variants": [
+        {
+          "path": "assets/img/webp/sgs-test-report-heavy-elements-results-jpg-320w.webp",
+          "width": 320,
+          "height": 453,
+          "bytes": 19374
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-heavy-elements-results-jpg-480w.webp",
+          "width": 480,
+          "height": 679,
+          "bytes": 38026
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-heavy-elements-results-jpg-640w.webp",
+          "width": 640,
+          "height": 905,
+          "bytes": 59950
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-heavy-elements-results-jpg-800w.webp",
+          "width": 800,
+          "height": 1131,
+          "bytes": 82722
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-heavy-elements-results-jpg-960w.webp",
+          "width": 960,
+          "height": 1358,
+          "bytes": 105264
+        },
+        {
+          "path": "assets/img/webp/sgs-test-report-heavy-elements-results-jpg-990w.webp",
+          "width": 990,
+          "height": 1400,
+          "bytes": 111954
         }
       ]
     },
@@ -1843,6 +2579,138 @@
           "width": 1080,
           "height": 1350,
           "bytes": 234768
+        }
+      ]
+    },
+    "assets/img/forklift-loading-a-container-for-export.jpg": {
+      "sha256": "6b9a3248045cf6a975934e4cb3008d7b92c505140cb9703705cd50b265bd4e9b",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 224765,
+      "variants": [
+        {
+          "path": "assets/img/webp/forklift-loading-a-container-for-export-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 29176
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-container-for-export-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 54030
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-container-for-export-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 80008
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-container-for-export-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 103090
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-container-for-export-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 131122
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-container-for-export-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 150822
+        }
+      ]
+    },
+    "assets/img/forklift-loading-a-pallet-into-the-container.jpg": {
+      "sha256": "90e7bd8aa291f2c66f28f4b487cbf89fafbb8dbc49474ac7bb223714c0950390",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 220153,
+      "variants": [
+        {
+          "path": "assets/img/webp/forklift-loading-a-pallet-into-the-container-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 30348
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-pallet-into-the-container-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 52458
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-pallet-into-the-container-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 77490
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-pallet-into-the-container-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 98978
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-pallet-into-the-container-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 122434
+        },
+        {
+          "path": "assets/img/webp/forklift-loading-a-pallet-into-the-container-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 141932
+        }
+      ]
+    },
+    "assets/img/forklift-moving-an-export-pallet.jpg": {
+      "sha256": "21185c55cac6f94cab801393fbc8ae411576211310d860fd40ca46a54639e713",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 186965,
+      "variants": [
+        {
+          "path": "assets/img/webp/forklift-moving-an-export-pallet-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 27540
+        },
+        {
+          "path": "assets/img/webp/forklift-moving-an-export-pallet-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 46520
+        },
+        {
+          "path": "assets/img/webp/forklift-moving-an-export-pallet-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 64458
+        },
+        {
+          "path": "assets/img/webp/forklift-moving-an-export-pallet-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 81936
+        },
+        {
+          "path": "assets/img/webp/forklift-moving-an-export-pallet-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 100064
+        },
+        {
+          "path": "assets/img/webp/forklift-moving-an-export-pallet-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 116490
         }
       ]
     },
@@ -2063,6 +2931,144 @@
           "width": 550,
           "height": 550,
           "bytes": 18498
+        }
+      ]
+    },
+    "assets/img/graded-coffee-wood-chews-on-rack-rows.jpg": {
+      "sha256": "f78d48151c0eea63ebabbdec26e8b10cae27414fa41ab8c54822bb62219adcb9",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 279533,
+      "variants": [
+        {
+          "path": "assets/img/webp/graded-coffee-wood-chews-on-rack-rows-jpg-320w.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 26666
+        },
+        {
+          "path": "assets/img/webp/graded-coffee-wood-chews-on-rack-rows-jpg-480w.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 44068
+        },
+        {
+          "path": "assets/img/webp/graded-coffee-wood-chews-on-rack-rows-jpg-640w.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 61030
+        },
+        {
+          "path": "assets/img/webp/graded-coffee-wood-chews-on-rack-rows-jpg-800w.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 77416
+        },
+        {
+          "path": "assets/img/webp/graded-coffee-wood-chews-on-rack-rows-jpg-960w.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 94766
+        },
+        {
+          "path": "assets/img/webp/graded-coffee-wood-chews-on-rack-rows-jpg-1200w.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 123668
+        },
+        {
+          "path": "assets/img/webp/graded-coffee-wood-chews-on-rack-rows-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 172568
+        }
+      ]
+    },
+    "assets/img/grading-chew-sticks-by-hand.jpg": {
+      "sha256": "5f116cda0f24d23de58e5fb672bf36a3addab062d442aec6883ba420213c92d9",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 228230,
+      "variants": [
+        {
+          "path": "assets/img/webp/grading-chew-sticks-by-hand-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 27766
+        },
+        {
+          "path": "assets/img/webp/grading-chew-sticks-by-hand-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 53514
+        },
+        {
+          "path": "assets/img/webp/grading-chew-sticks-by-hand-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 80188
+        },
+        {
+          "path": "assets/img/webp/grading-chew-sticks-by-hand-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 109130
+        },
+        {
+          "path": "assets/img/webp/grading-chew-sticks-by-hand-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 136472
+        },
+        {
+          "path": "assets/img/webp/grading-chew-sticks-by-hand-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 163202
+        }
+      ]
+    },
+    "assets/img/grading-chews-at-the-packing-bench.jpg": {
+      "sha256": "0bb6589135f6409533d3b4f3222840fabdd6a1f76ead7add312eec5a3d5d4cc9",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 247047,
+      "variants": [
+        {
+          "path": "assets/img/webp/grading-chews-at-the-packing-bench-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 26066
+        },
+        {
+          "path": "assets/img/webp/grading-chews-at-the-packing-bench-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 45316
+        },
+        {
+          "path": "assets/img/webp/grading-chews-at-the-packing-bench-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 65218
+        },
+        {
+          "path": "assets/img/webp/grading-chews-at-the-packing-bench-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 83718
+        },
+        {
+          "path": "assets/img/webp/grading-chews-at-the-packing-bench-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 104414
+        },
+        {
+          "path": "assets/img/webp/grading-chews-at-the-packing-bench-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 137640
         }
       ]
     },
@@ -2468,6 +3474,50 @@
         }
       ]
     },
+    "assets/img/ho-chi-minh-city-warehouse-aisle.jpg": {
+      "sha256": "439170f786fd19e147b791d7160d5956478af15d42105abee84f983d2454a1f4",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 228171,
+      "variants": [
+        {
+          "path": "assets/img/webp/ho-chi-minh-city-warehouse-aisle-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 23096
+        },
+        {
+          "path": "assets/img/webp/ho-chi-minh-city-warehouse-aisle-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 43944
+        },
+        {
+          "path": "assets/img/webp/ho-chi-minh-city-warehouse-aisle-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 66304
+        },
+        {
+          "path": "assets/img/webp/ho-chi-minh-city-warehouse-aisle-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 91508
+        },
+        {
+          "path": "assets/img/webp/ho-chi-minh-city-warehouse-aisle-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 118238
+        },
+        {
+          "path": "assets/img/webp/ho-chi-minh-city-warehouse-aisle-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 146148
+        }
+      ]
+    },
     "assets/img/inspection-documents-at-pallets.jpg": {
       "sha256": "969c41efb4469a9fe9ed877e732717435aee7f8d4e15aba67017f5a887b9be8d",
       "width": 1080,
@@ -2556,6 +3606,138 @@
         }
       ]
     },
+    "assets/img/inspector-checking-cartons-with-a-checklist.jpg": {
+      "sha256": "13c7ceb836261a004391d461d75b2d162acb4619d85898f60de26f784b161810",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 133961,
+      "variants": [
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-with-a-checklist-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 17800
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-with-a-checklist-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 28642
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-with-a-checklist-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 38614
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-with-a-checklist-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 51442
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-with-a-checklist-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 63264
+        },
+        {
+          "path": "assets/img/webp/inspector-checking-cartons-with-a-checklist-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 75270
+        }
+      ]
+    },
+    "assets/img/labelled-export-cartons-on-a-pallet.jpg": {
+      "sha256": "2820ffd74a5548a209aad1a9a71a1c307240d679aaab0dba703699ece38453ba",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 245452,
+      "variants": [
+        {
+          "path": "assets/img/webp/labelled-export-cartons-on-a-pallet-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 26404
+        },
+        {
+          "path": "assets/img/webp/labelled-export-cartons-on-a-pallet-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 51550
+        },
+        {
+          "path": "assets/img/webp/labelled-export-cartons-on-a-pallet-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 78572
+        },
+        {
+          "path": "assets/img/webp/labelled-export-cartons-on-a-pallet-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 106764
+        },
+        {
+          "path": "assets/img/webp/labelled-export-cartons-on-a-pallet-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 136334
+        },
+        {
+          "path": "assets/img/webp/labelled-export-cartons-on-a-pallet-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 164506
+        }
+      ]
+    },
+    "assets/img/laser-engraving-a-coffee-wood-chew.jpg": {
+      "sha256": "7f8875a3da2a4a9d3e80d79c19b9b8df73a719a4f333e82c083f72b1c28fc38b",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 133161,
+      "variants": [
+        {
+          "path": "assets/img/webp/laser-engraving-a-coffee-wood-chew-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 19514
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-a-coffee-wood-chew-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 32300
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-a-coffee-wood-chew-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 44246
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-a-coffee-wood-chew-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 57110
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-a-coffee-wood-chew-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 69666
+        },
+        {
+          "path": "assets/img/webp/laser-engraving-a-coffee-wood-chew-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 81336
+        }
+      ]
+    },
     "assets/img/laser-engraving-coffee-wood-chew.jpg": {
       "sha256": "e392b3ee0f930911dc7f22332b66e9986ae80902ce3389c8c537352be2b403a1",
       "width": 1080,
@@ -2597,6 +3779,50 @@
           "width": 1080,
           "height": 1350,
           "bytes": 82622
+        }
+      ]
+    },
+    "assets/img/loading-cartons-into-the-container.jpg": {
+      "sha256": "ff122861288d7f2b9db8518efd095f6abb44e5a7d356c28d929b8536a53d7fd5",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 208720,
+      "variants": [
+        {
+          "path": "assets/img/webp/loading-cartons-into-the-container-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 28024
+        },
+        {
+          "path": "assets/img/webp/loading-cartons-into-the-container-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 49450
+        },
+        {
+          "path": "assets/img/webp/loading-cartons-into-the-container-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 69742
+        },
+        {
+          "path": "assets/img/webp/loading-cartons-into-the-container-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 89778
+        },
+        {
+          "path": "assets/img/webp/loading-cartons-into-the-container-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 111128
+        },
+        {
+          "path": "assets/img/webp/loading-cartons-into-the-container-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 129568
         }
       ]
     },
@@ -3076,6 +4302,94 @@
         }
       ]
     },
+    "assets/img/measuring-a-carton-stack-during-inspection.jpg": {
+      "sha256": "9996594d2c5ae19868ebc13314a75956406d302649048e6aaa3230bef41be551",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 163044,
+      "variants": [
+        {
+          "path": "assets/img/webp/measuring-a-carton-stack-during-inspection-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18414
+        },
+        {
+          "path": "assets/img/webp/measuring-a-carton-stack-during-inspection-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 31640
+        },
+        {
+          "path": "assets/img/webp/measuring-a-carton-stack-during-inspection-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 46484
+        },
+        {
+          "path": "assets/img/webp/measuring-a-carton-stack-during-inspection-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 61230
+        },
+        {
+          "path": "assets/img/webp/measuring-a-carton-stack-during-inspection-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 77110
+        },
+        {
+          "path": "assets/img/webp/measuring-a-carton-stack-during-inspection-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 91552
+        }
+      ]
+    },
+    "assets/img/moisture-check-before-packing.jpg": {
+      "sha256": "93a050dba84770251d68ed27c48a2f2b443c99aa3ecb7c571d3ca09b6ac72d3d",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 124831,
+      "variants": [
+        {
+          "path": "assets/img/webp/moisture-check-before-packing-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18378
+        },
+        {
+          "path": "assets/img/webp/moisture-check-before-packing-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 28980
+        },
+        {
+          "path": "assets/img/webp/moisture-check-before-packing-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 39704
+        },
+        {
+          "path": "assets/img/webp/moisture-check-before-packing-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 51626
+        },
+        {
+          "path": "assets/img/webp/moisture-check-before-packing-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 63472
+        },
+        {
+          "path": "assets/img/webp/moisture-check-before-packing-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 74384
+        }
+      ]
+    },
     "assets/img/moisture-meter-on-the-line.jpg": {
       "sha256": "529b3620e35e0b3175db57a3f609e816368b8260715293d886a02d45d6f4571e",
       "width": 1080,
@@ -3117,6 +4431,94 @@
           "width": 1080,
           "height": 1350,
           "bytes": 81408
+        }
+      ]
+    },
+    "assets/img/moisture-meter-probes-in-chew-stick.jpg": {
+      "sha256": "552d45cdf9a8a8b6ac63770bdc99002582553300b41972a9ed0ae886cdc60d33",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 132556,
+      "variants": [
+        {
+          "path": "assets/img/webp/moisture-meter-probes-in-chew-stick-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18528
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-probes-in-chew-stick-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 30228
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-probes-in-chew-stick-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 42670
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-probes-in-chew-stick-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 55424
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-probes-in-chew-stick-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 67378
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-probes-in-chew-stick-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 79732
+        }
+      ]
+    },
+    "assets/img/moisture-meter-reading-on-coffee-wood-chew.jpg": {
+      "sha256": "92f7a24522a1df5e01bec39f3f26059b5ef869a9ac1cdd605775e3cdb2714cbe",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 125256,
+      "variants": [
+        {
+          "path": "assets/img/webp/moisture-meter-reading-on-coffee-wood-chew-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 17448
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-reading-on-coffee-wood-chew-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 27884
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-reading-on-coffee-wood-chew-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 39920
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-reading-on-coffee-wood-chew-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 51768
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-reading-on-coffee-wood-chew-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 63264
+        },
+        {
+          "path": "assets/img/webp/moisture-meter-reading-on-coffee-wood-chew-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 74488
         }
       ]
     },
@@ -3164,6 +4566,50 @@
         }
       ]
     },
+    "assets/img/packing-vacuum-packs-into-export-carton.jpg": {
+      "sha256": "431b109424ac813d96e688743c7ecdc318db1d1de3094d6fcba16a28de273da5",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 168002,
+      "variants": [
+        {
+          "path": "assets/img/webp/packing-vacuum-packs-into-export-carton-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 22586
+        },
+        {
+          "path": "assets/img/webp/packing-vacuum-packs-into-export-carton-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 38782
+        },
+        {
+          "path": "assets/img/webp/packing-vacuum-packs-into-export-carton-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 53212
+        },
+        {
+          "path": "assets/img/webp/packing-vacuum-packs-into-export-carton-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 68600
+        },
+        {
+          "path": "assets/img/webp/packing-vacuum-packs-into-export-carton-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 86136
+        },
+        {
+          "path": "assets/img/webp/packing-vacuum-packs-into-export-carton-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 101106
+        }
+      ]
+    },
     "assets/img/pallet-stack-inspection.jpg": {
       "sha256": "fcc65ca1d7d1ac9306b9f69c105d4943ade16eaf87bd3f2de326a4f69be0d543",
       "width": 1080,
@@ -3205,6 +4651,38 @@
           "width": 1080,
           "height": 1350,
           "bytes": 79148
+        }
+      ]
+    },
+    "assets/img/palletised-export-cartons-with-size-labels.jpg": {
+      "sha256": "8c85d219bf6abd8ca0e3a037e2d926abe7a2e9c8017f66c5887b1a8a253218fd",
+      "width": 800,
+      "height": 771,
+      "bytes": 124961,
+      "variants": [
+        {
+          "path": "assets/img/webp/palletised-export-cartons-with-size-labels-jpg-320w.webp",
+          "width": 320,
+          "height": 308,
+          "bytes": 21738
+        },
+        {
+          "path": "assets/img/webp/palletised-export-cartons-with-size-labels-jpg-480w.webp",
+          "width": 480,
+          "height": 463,
+          "bytes": 43590
+        },
+        {
+          "path": "assets/img/webp/palletised-export-cartons-with-size-labels-jpg-640w.webp",
+          "width": 640,
+          "height": 617,
+          "bytes": 69532
+        },
+        {
+          "path": "assets/img/webp/palletised-export-cartons-with-size-labels-jpg-800w.webp",
+          "width": 800,
+          "height": 771,
+          "bytes": 100194
         }
       ]
     },
@@ -3299,6 +4777,50 @@
           "width": 1500,
           "height": 2000,
           "bytes": 458308
+        }
+      ]
+    },
+    "assets/img/pre-shipment-inspection-at-the-container-door.jpg": {
+      "sha256": "ada31fe8bd8aa5697071bea4b5c6191cf89e976c06eb010b14101f2327974cd5",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 134244,
+      "variants": [
+        {
+          "path": "assets/img/webp/pre-shipment-inspection-at-the-container-door-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 18458
+        },
+        {
+          "path": "assets/img/webp/pre-shipment-inspection-at-the-container-door-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 29198
+        },
+        {
+          "path": "assets/img/webp/pre-shipment-inspection-at-the-container-door-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 40870
+        },
+        {
+          "path": "assets/img/webp/pre-shipment-inspection-at-the-container-door-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 52460
+        },
+        {
+          "path": "assets/img/webp/pre-shipment-inspection-at-the-container-door-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 65048
+        },
+        {
+          "path": "assets/img/webp/pre-shipment-inspection-at-the-container-door-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 77456
         }
       ]
     },
@@ -3540,6 +5062,50 @@
         }
       ]
     },
+    "assets/img/sealed-container-leaving-the-warehouse.jpg": {
+      "sha256": "e6db78b1f99a65941303677becb10c92d62ce1ae35a89a5a9dda2311c21848b2",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 251900,
+      "variants": [
+        {
+          "path": "assets/img/webp/sealed-container-leaving-the-warehouse-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 33302
+        },
+        {
+          "path": "assets/img/webp/sealed-container-leaving-the-warehouse-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 61934
+        },
+        {
+          "path": "assets/img/webp/sealed-container-leaving-the-warehouse-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 89596
+        },
+        {
+          "path": "assets/img/webp/sealed-container-leaving-the-warehouse-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 119480
+        },
+        {
+          "path": "assets/img/webp/sealed-container-leaving-the-warehouse-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 150268
+        },
+        {
+          "path": "assets/img/webp/sealed-container-leaving-the-warehouse-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 171762
+        }
+      ]
+    },
     "assets/img/seasoned-coffee-stems-close-up.jpg": {
       "sha256": "cab665fc581b649ec578432fbec36f16ad7b417b44ca7bdd8b82a567fb3edd63",
       "width": 1080,
@@ -3634,6 +5200,56 @@
         }
       ]
     },
+    "assets/img/silica-gel-sachet-inside-vacuum-pack.jpg": {
+      "sha256": "ee3da8c77add85b781425387f46f54e3b6a58ae54ad11b55c7486f356ef6624a",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 184852,
+      "variants": [
+        {
+          "path": "assets/img/webp/silica-gel-sachet-inside-vacuum-pack-jpg-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14290
+        },
+        {
+          "path": "assets/img/webp/silica-gel-sachet-inside-vacuum-pack-jpg-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 22250
+        },
+        {
+          "path": "assets/img/webp/silica-gel-sachet-inside-vacuum-pack-jpg-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 31742
+        },
+        {
+          "path": "assets/img/webp/silica-gel-sachet-inside-vacuum-pack-jpg-800w.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 43026
+        },
+        {
+          "path": "assets/img/webp/silica-gel-sachet-inside-vacuum-pack-jpg-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 52354
+        },
+        {
+          "path": "assets/img/webp/silica-gel-sachet-inside-vacuum-pack-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1200,
+          "bytes": 68380
+        },
+        {
+          "path": "assets/img/webp/silica-gel-sachet-inside-vacuum-pack-jpg-1600w.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 98318
+        }
+      ]
+    },
     "assets/img/stacking-cartons-in-container.jpg": {
       "sha256": "f300a0658ec40e9be9f0a54a43e177f84d3abaff78dec8f525243d6e91e981db",
       "width": 1080,
@@ -3675,6 +5291,170 @@
           "width": 1080,
           "height": 1350,
           "bytes": 107020
+        }
+      ]
+    },
+    "assets/img/stacking-cartons-inside-the-container.jpg": {
+      "sha256": "f3c30ad20c142c469dfa73c2725546e026435800cb1879921b5fa41e10ba0493",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 175601,
+      "variants": [
+        {
+          "path": "assets/img/webp/stacking-cartons-inside-the-container-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 21640
+        },
+        {
+          "path": "assets/img/webp/stacking-cartons-inside-the-container-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 38568
+        },
+        {
+          "path": "assets/img/webp/stacking-cartons-inside-the-container-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 52920
+        },
+        {
+          "path": "assets/img/webp/stacking-cartons-inside-the-container-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 69668
+        },
+        {
+          "path": "assets/img/webp/stacking-cartons-inside-the-container-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 86534
+        },
+        {
+          "path": "assets/img/webp/stacking-cartons-inside-the-container-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 101626
+        }
+      ]
+    },
+    "assets/img/staff-packing-chews-into-export-carton.jpg": {
+      "sha256": "b7d0aee48eb932357ca0301068040a115593afbf68c23b029aab025814a5e9ed",
+      "width": 800,
+      "height": 999,
+      "bytes": 131264,
+      "variants": [
+        {
+          "path": "assets/img/webp/staff-packing-chews-into-export-carton-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 25530
+        },
+        {
+          "path": "assets/img/webp/staff-packing-chews-into-export-carton-jpg-480w.webp",
+          "width": 480,
+          "height": 599,
+          "bytes": 45390
+        },
+        {
+          "path": "assets/img/webp/staff-packing-chews-into-export-carton-jpg-640w.webp",
+          "width": 640,
+          "height": 799,
+          "bytes": 67624
+        },
+        {
+          "path": "assets/img/webp/staff-packing-chews-into-export-carton-jpg-800w.webp",
+          "width": 800,
+          "height": 999,
+          "bytes": 88592
+        }
+      ]
+    },
+    "assets/img/stretch-wrapped-pallet-of-export-cartons.jpg": {
+      "sha256": "d94ae49479469f7faa2c78773e4313ddd1fd662b3a8ac864b740018824542dd4",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 268098,
+      "variants": [
+        {
+          "path": "assets/img/webp/stretch-wrapped-pallet-of-export-cartons-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 29012
+        },
+        {
+          "path": "assets/img/webp/stretch-wrapped-pallet-of-export-cartons-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 56918
+        },
+        {
+          "path": "assets/img/webp/stretch-wrapped-pallet-of-export-cartons-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 90226
+        },
+        {
+          "path": "assets/img/webp/stretch-wrapped-pallet-of-export-cartons-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 126056
+        },
+        {
+          "path": "assets/img/webp/stretch-wrapped-pallet-of-export-cartons-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 157270
+        },
+        {
+          "path": "assets/img/webp/stretch-wrapped-pallet-of-export-cartons-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 188594
+        }
+      ]
+    },
+    "assets/img/team-stacking-cartons-in-the-container.jpg": {
+      "sha256": "d3664176d536bc43a093c302cb2a4ab17fd10e6f874456ea83ed99b616bc0f43",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 164466,
+      "variants": [
+        {
+          "path": "assets/img/webp/team-stacking-cartons-in-the-container-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 20440
+        },
+        {
+          "path": "assets/img/webp/team-stacking-cartons-in-the-container-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 35398
+        },
+        {
+          "path": "assets/img/webp/team-stacking-cartons-in-the-container-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 50004
+        },
+        {
+          "path": "assets/img/webp/team-stacking-cartons-in-the-container-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 66314
+        },
+        {
+          "path": "assets/img/webp/team-stacking-cartons-in-the-container-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 81112
+        },
+        {
+          "path": "assets/img/webp/team-stacking-cartons-in-the-container-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 95134
         }
       ]
     },
@@ -3813,6 +5593,82 @@
           "width": 1500,
           "height": 2000,
           "bytes": 275498
+        }
+      ]
+    },
+    "assets/img/vacuum-pack-with-desiccant-sachet-in-carton.jpg": {
+      "sha256": "0ef48f87e819ce96e9aa020054cb100d3115e1e6d1e4134b0eb30778563401ff",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144471,
+      "variants": [
+        {
+          "path": "assets/img/webp/vacuum-pack-with-desiccant-sachet-in-carton-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 22518
+        },
+        {
+          "path": "assets/img/webp/vacuum-pack-with-desiccant-sachet-in-carton-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 35032
+        },
+        {
+          "path": "assets/img/webp/vacuum-pack-with-desiccant-sachet-in-carton-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 49830
+        },
+        {
+          "path": "assets/img/webp/vacuum-pack-with-desiccant-sachet-in-carton-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 64176
+        },
+        {
+          "path": "assets/img/webp/vacuum-pack-with-desiccant-sachet-in-carton-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 79910
+        },
+        {
+          "path": "assets/img/webp/vacuum-pack-with-desiccant-sachet-in-carton-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 92720
+        }
+      ]
+    },
+    "assets/img/vacuum-packs-layered-in-export-carton.jpg": {
+      "sha256": "8abcfdf53fb75faa90657a5dfdb51012e5d7029d7a0bd3d757f1c9fb52843eba",
+      "width": 800,
+      "height": 1000,
+      "bytes": 115577,
+      "variants": [
+        {
+          "path": "assets/img/webp/vacuum-packs-layered-in-export-carton-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 19662
+        },
+        {
+          "path": "assets/img/webp/vacuum-packs-layered-in-export-carton-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 36668
+        },
+        {
+          "path": "assets/img/webp/vacuum-packs-layered-in-export-carton-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 52930
+        },
+        {
+          "path": "assets/img/webp/vacuum-packs-layered-in-export-carton-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 72458
         }
       ]
     },
@@ -4148,6 +6004,50 @@
         }
       ]
     },
+    "assets/img/warehouse-container-loading-bay.jpg": {
+      "sha256": "f72801e0490cdadaf6ef67945709ecf03a8c4eabf049e779f99e659e8b325a43",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 232244,
+      "variants": [
+        {
+          "path": "assets/img/webp/warehouse-container-loading-bay-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 29600
+        },
+        {
+          "path": "assets/img/webp/warehouse-container-loading-bay-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 56778
+        },
+        {
+          "path": "assets/img/webp/warehouse-container-loading-bay-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 86100
+        },
+        {
+          "path": "assets/img/webp/warehouse-container-loading-bay-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 111062
+        },
+        {
+          "path": "assets/img/webp/warehouse-container-loading-bay-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 140316
+        },
+        {
+          "path": "assets/img/webp/warehouse-container-loading-bay-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 164680
+        }
+      ]
+    },
     "assets/img/warehouse-inspection-clipboard.jpg": {
       "sha256": "6c37ad59acb245c247d013e98c9290c93565d7644777d3ba6d7e02faf141112f",
       "width": 1080,
@@ -4189,6 +6089,94 @@
           "width": 1080,
           "height": 1350,
           "bytes": 76376
+        }
+      ]
+    },
+    "assets/img/warehouse-stock-of-packed-cartons.jpg": {
+      "sha256": "3f8830cc576d0bb12778dfac2da0f9d0c0a550995351a98e529bbc19dff5b45c",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 162775,
+      "variants": [
+        {
+          "path": "assets/img/webp/warehouse-stock-of-packed-cartons-jpg-320w.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 17142
+        },
+        {
+          "path": "assets/img/webp/warehouse-stock-of-packed-cartons-jpg-480w.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 30254
+        },
+        {
+          "path": "assets/img/webp/warehouse-stock-of-packed-cartons-jpg-640w.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 42994
+        },
+        {
+          "path": "assets/img/webp/warehouse-stock-of-packed-cartons-jpg-800w.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 55628
+        },
+        {
+          "path": "assets/img/webp/warehouse-stock-of-packed-cartons-jpg-960w.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 71400
+        },
+        {
+          "path": "assets/img/webp/warehouse-stock-of-packed-cartons-jpg-1080w.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 85842
+        }
+      ]
+    },
+    "assets/img/worker-loading-coffee-stems-onto-trailer.jpg": {
+      "sha256": "8169fe2c354214d763fe059cf722fddd2dbca7bfacacaa01d0a09cb1acc79fea",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 375913,
+      "variants": [
+        {
+          "path": "assets/img/webp/worker-loading-coffee-stems-onto-trailer-jpg-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 46688
+        },
+        {
+          "path": "assets/img/webp/worker-loading-coffee-stems-onto-trailer-jpg-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 84938
+        },
+        {
+          "path": "assets/img/webp/worker-loading-coffee-stems-onto-trailer-jpg-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 125746
+        },
+        {
+          "path": "assets/img/webp/worker-loading-coffee-stems-onto-trailer-jpg-800w.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 164502
+        },
+        {
+          "path": "assets/img/webp/worker-loading-coffee-stems-onto-trailer-jpg-960w.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 202430
+        },
+        {
+          "path": "assets/img/webp/worker-loading-coffee-stems-onto-trailer-jpg-1200w.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 261786
         }
       ]
     }

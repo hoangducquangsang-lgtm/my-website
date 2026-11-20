@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-from content_helpers import (publish, section, p, ul, table, terms, trust_links, SAFETY, SAFETY_DOG_CHEW, MOISTURE, video_figure,
+from content_helpers import (publish, section, p, ul, table, terms, trust_links, gallery, SAFETY, SAFETY_DOG_CHEW, MOISTURE, video_figure,
                              answer, fit, steps, spec_table, figure, media, CARTON, SEA_TRANSIT,
-                             INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE)
-from content_products import product_cards
+                             INCOTERMS, PAYMENT, CAFFEINE, WEAR_BEHAVIOUR, SIZE_ADVICE, MOULD_COMMITMENT)
+from content_products import product_cards, coffee_packing_table
 
 MATERIALS = {
 "coffee-wood":dict(
  title="Coffee Wood Dog Chew Manufacturer | Wholesale | VietPaw",
  h1="Coffee Wood Dog Chews — Wholesale from Vietnam",
- lede="Build a coffee wood range with our partner factories in Vietnam: standard chew sticks, custom wood-and-rope constructions and private-label packaging for international buyers.",
+ lede="Build a coffee wood range with our two factories in Vietnam: standard chew sticks, custom wood-and-rope constructions and private-label packaging for international buyers.",
  image="coffee-wood-chew-grain-detail.jpg",products=["coffee-wood-dog-chew","gorilla-coffee-wood-dog-chew"],
- what="Coffee wood chews are shaped pieces of coffee-tree timber, not coffee beans or edible treats. VietPaw's product information identifies mature coffee wood from Gia Lai and describes cutting, bark removal, surface finishing and drying.",
+ what="Coffee wood chews are shaped pieces of coffee-tree timber, not coffee beans or edible treats. VietPaw's product information identifies mature coffee wood from Dak Lak and Gia Lai and describes cutting, bark removal, surface finishing and drying.",
  applications=[("Standard sticks","Start with a focused size assortment using the CC01 reference specification. Each size is a separate ordering decision."),
  ("Wood-and-rope designs","Discuss cotton or hemp rope variants, component declarations and connection checks; they are not single-material sticks."),
  ("Branded retail range","Add laser engraving, size labels, safety instructions and a pack format suited to the sales channel.")],
@@ -18,7 +18,7 @@ MATERIALS = {
  MOISTURE+" Confirm the measurement method and keep the reading with your order records.",
  "Check wood surfaces and visible cracking, and agree the condition in which stock is packed and stored."],
  caution="Do not describe coffee wood as splinter-free, edible, caffeine-tested or proven to clean teeth without evidence for that exact claim. A natural origin is not a safety guarantee: size the chew to the dog, supervise and replace it when damaged.",
- moq="From 50 pcs per SKU on standard sticks. Engraving, rope combinations and custom boxes are quoted separately."),
+ moq="From 50 pcs per product on standard sticks. Engraving, rope combinations and custom boxes are quoted separately."),
 "coconut-fiber":dict(
  title="Coconut Fiber Pet Toys Manufacturer & Wholesale | VietPaw",
  h1="Coconut Fiber Pet Toys for Wholesale & Private Label",
@@ -152,9 +152,10 @@ DEEP["coffee-wood"] = dict(
     +p(SAFETY_DOG_CHEW),True),
 
   section("Shipping this material",
-    p(CARTON)+p(SEA_TRANSIT)
+    p(CARTON)+coffee_packing_table()+p(SEA_TRANSIT)
+    +p(MOULD_COMMITMENT)
     +p("Wood ships with moisture risk attached, and the risk is concentrated in the container rather than in our factory. A sealed box cools overnight, water condenses on the steel and drips onto the top of the cargo. Damage on the top layer and toward the doors points to condensation in transit; bloom spread evenly through the stack points to goods packed wet. Hanging desiccant is cheap relative to a claim and is the single most useful addition for a monsoon-season sailing.")
-    +p('The HS code commonly used is 4421.99 — confirm the classification with your own broker. Per-shipment documents cover Certificate of Origin, fumigation and phytosanitary certificates; these are issued against the shipment and cannot be produced afterwards. See <a href="/certifications/">testing and export documents</a>.')),
+    +p("<strong>EUDR:</strong> coffee wood is a by-product of a coffee crop, and we do not publish a deforestation-free determination on your behalf. We can supply the province of collection, the documents listed above and a statement of what we do and do not hold; your own compliance team decides what satisfies the regulation.")+p('The HS code commonly used is 4421.99 — confirm the classification with your own broker. Per-shipment documents cover Certificate of Origin, fumigation and phytosanitary certificates; these are issued against the shipment and cannot be produced afterwards. See <a href="/certifications/">testing and export documents</a>.')),
 
   section("Buyer guides on coffee wood",
     p("Six guides answer the questions buyers ask about this material before they order. Each one is written from the supply side, including the parts that do not help us sell.")
@@ -248,7 +249,7 @@ DEEP["coconut-fiber"] = dict(
   ("Can I use the same ball for cats and dogs?",
    "We would not recommend listing it that way. Diameter, winding density and attachment tolerance differ between the two, and a size that is a batting toy for a cat can be a swallowing hazard for a dog, or too light to interest one. Specify each separately."),
   ("What MOQ applies?",
-   "Selected standard lines start from 50 pcs per SKU. Each size and construction needs its own confirmed minimum — a mixed carton does not automatically satisfy the minimum for every SKU inside it. Private-label packaging starts at 500 pcs."),
+   "Selected standard lines start from 50 pcs per product. Each size and construction needs its own confirmed minimum — a mixed carton does not automatically satisfy the minimum for every SKU inside it. Print quantities for private-label packaging are quoted separately."),
  ])
 
 DEEP["hemp-fiber"] = dict(
@@ -342,6 +343,27 @@ GALLERY = {
             ("loofah-mouse-toys-vacuum-pack.jpg","Loofah mouse toys vacuum-packed in a clear bag","Mouse toys packed for export.")],
 }
 
+# Owner instruction 2026-11-20: show the production run behind each collection.
+PROCESS_GALLERY = {
+ "coffee-wood": ("Coffee wood is produced at our two factories in Dak Lak and Gia Lai; goods are shipped from our warehouse in Ho Chi Minh City.",
+   [("collecting-coffee-stems-at-the-plantation.jpg","Stems cut during the grower\u2019s replanting cycle."),
+    ("coffee-wood-stacked-for-air-seasoning.jpg","About a year of open-air seasoning."),
+    ("coffee-wood-billets-after-cross-cutting.jpg","Billets cross-cut for the line."),
+    ("coffee-wood-chews-on-drying-racks.jpg","Shaped chews on the drying racks."),
+    ("moisture-meter-probes-in-chew-stick.jpg","Batch moisture read below 14%."),
+    ("grading-chew-sticks-by-hand.jpg","Graded by hand; cracked pieces rejected."),
+    ("silica-gel-sachet-inside-vacuum-pack.jpg","Vacuum packed with a desiccant sachet."),
+    ("vacuum-packs-layered-in-export-carton.jpg","Layered into the export carton."),
+    ("sealed-container-leaving-the-warehouse.jpg","Shipped from our Ho Chi Minh City warehouse.")]),
+}
+
+def process_section(slug):
+    entry = PROCESS_GALLERY.get(slug)
+    if not entry:
+        return []
+    lede, items = entry
+    return [section("How this collection is made", p(lede) + gallery(items), True)]
+
 def gallery_section(slug):
     items = GALLERY.get(slug)
     if not items:
@@ -353,7 +375,7 @@ def build(root):
         deep = DEEP.get(slug)
         if deep:
             blocks = deep["blocks"]()
-            sections = blocks[:1] + gallery_section(slug) + blocks[1:] + [
+            sections = blocks[:1] + gallery_section(slug) + process_section(slug) + blocks[1:] + [
                 section("Products in this collection", product_cards(d["products"])),
                 section("MOQ, samples, packaging and lead time", terms(d["moq"],wood=slug=="coffee-wood")+trust_links(),True),
             ]
@@ -365,6 +387,7 @@ def build(root):
         sections=[
             section("What this material is",p(d["what"])),
             *gallery_section(slug),
+            *process_section(slug),
             section("Products and wholesale applications",product_cards(d["products"])+table(["Format","Buyer decision"],d["applications"]),True),
             section("From material sample to approved order",ul(d["approval"],True)+trust_links()),
             section("OEM, private label and range planning",p("Start with the sales channel, target pet, intended use and pack format. A standard product with your label follows a different approval path from a new shape or mixed-material construction.")+

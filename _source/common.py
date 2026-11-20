@@ -22,16 +22,19 @@ GOOGLE_TAG_HTML = f"""<!-- Google tag (gtag.js) -->
 BRAND = "VietPaw"
 BRAND_TAGLINE = "Natural Pet Products"
 BRAND_ENTITY_STATEMENT = f"{BRAND} is a Vietnamese manufacturer and exporter of natural-material pet toys"
-BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}, working with two factories in Dak Lak and Gia Lai, Vietnam."
+BRAND_RELATIONSHIP = f"{BRAND_ENTITY_STATEMENT}. Coffee wood is produced at our two factories in Dak Lak and Gia Lai, Vietnam, and goods ship from our warehouse in Ho Chi Minh City."
 BRAND_INTRO = f"{BRAND} manufactures natural-material pet toys in Vietnam and exports them to brands, wholesalers and retailers worldwide."
 # Production and finishing sites. Street addresses are published only where confirmed.
-# Owner instruction 2026-10-30: VietPaw works with two factories, in Dak Lak and Gia Lai.
-# Binh Duong removed; no production-capacity figure is published anywhere on the site.
+# Owner instruction 2026-11-20: coffee wood is produced at our two factories in Dak Lak and
+# Gia Lai; goods are shipped from our warehouse in Ho Chi Minh City. "Partner factory" and
+# "we do not own the factories" wording retired site-wide on the same instruction.
+# Binh Duong removed. Owner instruction 2026-11-20: publish the capacity figure from
+# coffeewoodchew.com, 100,000 pieces a month across the product lines.
 FACTORY_LOCATIONS = "Dak Lak and Gia Lai"
 SITES = [
-    ("Partner factory — Dak Lak", "Dak Lak province, Central Highlands, Vietnam"),
-    ("Partner factory — Gia Lai", "Gia Lai province, Central Highlands, Vietnam"),
-    ("Head office, warehouse and export preparation",
+    ("Our factory — Dak Lak", "Dak Lak province, Central Highlands, Vietnam"),
+    ("Our factory — Gia Lai", "Gia Lai province, Central Highlands, Vietnam"),
+    ("Head office, warehouse and export dispatch",
      "Floor 1, 70 Street No. 10, Van Phuc Residence 1, Quarter 22, Hiep Binh Ward, Ho Chi Minh City, Vietnam"),
 ]
 # Current audit brief: VietPaw is the site brand; our production team is identified in legal contexts.
@@ -226,7 +229,7 @@ META_OVERRIDES = {
  "/solutions/eco-pet-shops/": "Natural pet toys for eco retailers: choose natural-material formats, check the whole pack and confirm which sourcing statements you can support.",
  "/solutions/pet-brands/": "Natural pet toy manufacturing for pet brands, with defined construction, artwork and approval stages that keep every reorder consistent.",
  "/solutions/retail-chains/": "Natural pet toy supply for retail chains: a consistent product and vendor pack, carton configuration, labeling and delivery windows.",
- "/solutions/startup-brands/": "Low-MOQ natural pet toys for startup brands: start from 50 pcs with a physical sample, then add branded packaging from 500 pcs per SKU.",
+ "/solutions/startup-brands/": "Low-MOQ natural pet toys for startup brands: start from 50 pcs with a physical sample, then add branded packaging with the print quantity confirmed in the quote.",
  "/solutions/": "Sourcing plans for Amazon sellers, distributors, startup brands, pet brands, eco shops and retail chains buying natural pet toys from Vietnam.",
  # 2026-11-02 SEO pass (audit muc 1.4): two meta descriptions trimmed below 160 chars.
  "/collections/loofah/": "Dried loofah-gourd cat toys from Vietnam: choose shapes, define attachments and approve packaging for your own retail or marketplace brand.",

@@ -13,7 +13,7 @@ GORILLA_ROWS = [
 ]
 
 GORILLA_ENTRY = dict(name="Gorilla Coffee Wood Dog Chew",material="Coffee wood",collection="coffee-wood",group="Coffee Wood",
- image="gorilla-coffee-wood-chews-three-pieces.jpg",size="GRLS–GRLXL; four thick-cut sizes",moq="From 50 pcs per SKU; 500 pcs with your own label.",
+ image="gorilla-coffee-wood-chews-three-pieces.jpg",size="GRLS–GRLXL; four thick-cut sizes",moq="From 50 pcs per product, with your own label or plain.",
  lede="Thick-cut coffee wood chews for strong chewers — the same untreated coffee wood as our stick range, cut short and thick. Four sizes from GRLS (155–230 g) to GRLXL (550–900 g).",
  overview="",options=[],checks=[])
 
@@ -61,7 +61,7 @@ def gorilla_sections(specifications):
         steps([
             ("Pick the sizes","Most buyers start with GRLL and GRLXL; add GRLM for medium dogs.","A short, clear strong-chewer range."),
             ("Request samples","3 free samples; you cover the courier.","Pieces to weigh and measure against the table."),
-            ("Choose the pack","Bulk, individual pack, or your own label or box (from 500 pcs per SKU).","A saleable unit that matches your channel."),
+            ("Choose the pack","Bulk, individual pack, or your own label or box, print quantity confirmed in the quote.","A saleable unit that matches your channel."),
             ("Confirm carton data","Especially for Amazon FBA — see below.","Cartons that pass inbound limits."),
             ("Release production","30% deposit for stock packaging, 50% for your own label.","Balance against shipping documents."),
         ])),
@@ -92,7 +92,7 @@ GORILLA_FAQ = [
      "Gorilla is cut much thicker. For a strong chewer, diameter matters more than length, so a Gorilla piece gives far more wood to work "
      "through than a longer standard stick."),
     ("What is the minimum order?",
-     "50 pcs per SKU in stock packaging; 500 pcs per SKU with your own label, hang tag or printed box."),
+     "50 pcs per product, plain or with your own label; the print quantity for a hang tag or printed box is confirmed in the quote."),
     ("Can I ship Gorilla chews to Amazon FBA?",
      "Yes. GRLS, GRLM and GRLL cartons stay within the 50 lb (22.7 kg) inbound limit; GRLXL cartons are built to a target weight for FBA."),
     ("Are samples free?",

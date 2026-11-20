@@ -67,12 +67,12 @@ def resolve(root, pages, today):
         stored = previous.get(route, {})
         slug = guide_slug(route)
         if slug:
+            # Owner instruction 2026-11-20: a guide's displayed editorial date is set by
+            # hand in guide_dates.py and is not forced to move when the rendered HTML
+            # changes. Shared copy (brand statement, MOQ, lead time) appears on every
+            # guide, and a wording change there is not an editorial revision of the
+            # article. To re-date a guide, edit GUIDE_UPDATED_DATES deliberately.
             lastmod = GUIDE_UPDATED_DATES[slug]
-            if stored and stored["fingerprint"] != mark and stored["lastmod"] == lastmod:
-                raise ValueError(
-                    f"{route}: guide content changed but GUIDE_UPDATED_DATES['{slug}'] "
-                    f"is still {lastmod}. Assign a deliberate editorial date, then build again."
-                )
         elif stored.get("fingerprint") == mark:
             lastmod = stored["lastmod"]
         else:

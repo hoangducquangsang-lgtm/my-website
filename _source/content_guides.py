@@ -47,7 +47,7 @@ add("olive-wood-vs-coffee-wood-dog-chews","Natural chew toys",
         ("Freight to the EU","Sea from Cat Lai, roughly 28\u201345 days port to port","Short intra-EU road or sea leg"),
         ("Freight to the US","Sea, roughly 28\u201345 days port to port","Sea from the Mediterranean"),
         ("Export documents","Certificate of Origin, phytosanitary, fumigation, issued per shipment","Intra-EU movement needs no import paperwork"),
-        ("Minimum order with us","From 50 pcs per SKU","Supplier-dependent"),
+        ("Minimum order with us","From 50 pcs per product","Supplier-dependent"),
       ], caption="Category comparison for buyers. Olive figures are published timber data; coffee wood has none and we do not estimate one.")),
 
     ("Why nobody can give you a hardness comparison",
@@ -65,7 +65,7 @@ add("olive-wood-vs-coffee-wood-dog-chews","Natural chew toys",
       fit([
         "You want a plant-based hard chew with a documented material-reuse story and a verifiable batch record.",
         "You need a wide sizing ladder \u2014 six standard bands XS to XXL, plus four thick-cut Gorilla sizes for power chewers.",
-        "You are buying container volumes, or building a private-label line where laser engraving from 50 pcs per SKU matters.",
+        "You are buying container volumes, or building a private-label line where laser engraving from 50 pcs per product matters.",
         "Your differentiator is origin: a Vietnamese agricultural by-product rather than a European timber.",
       ],[
         "You need small, frequent reorders into the EU \u2014 a Mediterranean-sourced olive wood has a genuine logistics advantage there.",
@@ -146,7 +146,7 @@ add("where-does-coffee-wood-come-from","Natural chew toys",
         ("Field billet length","Roughly 50\u201370 cm, cut at the plantation edge"),
         ("Holding before machining","About one year in ventilated shade"),
         ("Moisture at packing","Below 14%, measured at the factory, then vacuum packed"),
-        ("Factory locations","Partner factories in Dak Lak and Gia Lai"),
+        ("Factory locations","Our two factories in Dak Lak and Gia Lai"),
         ("HS code commonly used","4421.99 \u2014 confirm classification with your own broker"),
         ("Plant-health documents","Phytosanitary and fumigation certificates, issued per shipment"),
       ], caption="Origin and intake data for coffee wood chews. Figures are production records, not laboratory results.")),
@@ -183,7 +183,7 @@ add("where-does-coffee-wood-come-from","Natural chew toys",
     figures=[('coffee-stems-cut-at-plantation.jpg','Worker cutting coffee stems to billet length with a chainsaw at the edge of a plantation','Stems are cut to 50\u201370 cm billets in the field, during the grower\u2019s replanting.'),
              ('coffee-stem-billets-stacked-intake-yard.jpg','Large stacks of coffee stem billets in an open intake yard','Intake arrives from scattered smallholder plots across a collection season, not in container loads.'),
              ('seasoned-coffee-stems-close-up.jpg','Close-up of pale seasoned coffee stems in a pile','After about a year of holding, the same stems are pale, light and hard.'),
-             ('coffee-wood-moisture-meter-reading.jpg','Moisture meter held against a coffee wood chew showing a reading of 10.8 per cent','Moisture is measured at the factory before vacuum packing; the record travels with the batch.')],
+             ('coffee-wood-moisture-meter-reading.jpg','Moisture meter held against a coffee wood chew showing a reading of 10.8 per cent','Moisture is measured at the factory before vacuum packing; the record travels with the batch.'),('worker-loading-coffee-stems-onto-trailer.jpg','Worker lifting cut coffee stems onto a trailer at the plantation','Stems lifted onto the trailer during the grower’s replanting.'),('coffee-stem-intake-yard.jpg','Coffee stems delivered and heaped in the intake yard','Delivered to the intake yard at one of our two factories.'),('coffee-wood-stacked-for-air-seasoning.jpg','Coffee stems stacked in open rows for air seasoning','Stacked in the open for about a year before machining.'),('coffee-wood-billets-after-cross-cutting.jpg','Pile of coffee wood billets after cross-cutting','Billets cross-cut and ready for the line.')],
     faqs=[
       ("Where does coffee wood for dog chews come from?",
        "From the stems of Robusta coffee plants aged 20 years and over, grown on smallholder plots in Vietnam's Central Highlands, principally "
@@ -224,7 +224,7 @@ add("natural-dog-chew-toys-guide","Natural chew toys",
 
     ("Give each product a job",
       spec_table(["Product","Job in the range","Best for","Key specification"],[
-        ("Gorilla coffee wood chew","Long, hard chewing","Strong chewers","Thick-cut; GRLS–GRLXL, 155–900 g"),
+        ("Gorilla coffee wood chew","Long, hard chewing","Strong chewers","Thick-cut; GRLS–GRLXL, 155 g to 1.1 kg"),
         ("Standard coffee wood stick (CC01)","Gnawing","Moderate chewers","XS–XXL by length, diameter and weight"),
         ("Coconut fiber ball","Fetch and carry","Dogs that carry and mouth","Diameter, finished weight, winding, any core"),
         ("Hemp rope toy","Owner-led tug","Interactive play with a person","Length, rope diameter, knots and joins"),
@@ -245,11 +245,11 @@ add("natural-dog-chew-toys-guide","Natural chew toys",
 
     ("VietPaw chew and toy references",
       spec_table(["Line","Sizes","Minimum","Lead time"],[
-        ("Coffee wood CC01","XS, S, M, L, XL, XXL","50 pcs per size; Trial Box 100 / Starting Box 500","5–7 days stock"),
-        ("Coffee wood Gorilla","GRLS, GRLM, GRLL, GRLXL","50 pcs per SKU","5–7 days stock"),
+        ("Coffee wood CC01","XS, S, M, L, XL, XXL","50 pcs per product, sizes can be mixed; Trial Box 100 / Starting Box 500","8–10 days for 50–200 pcs"),
+        ("Coffee wood Gorilla","GRLS, GRLM, GRLL, GRLXL","50 pcs per product","8–10 days for 50–200 pcs"),
         ("Coconut fiber dog ball","S / M / L references","Selected lines from 50 pcs","Confirmed in the quote"),
         ("Hemp rope dog toy","Quoted by design","Project-specific","Confirmed in the quote"),
-        ("Private label (any line)","—","500 pcs per SKU","60–80 days"),
+        ("Own label (any line)","—","Same 50 pcs minimum; print quantity quoted separately","Confirmed per order"),
       ], caption="Planning figures; your quotation governs.")),
 
     ("The sample needs to answer more than one question",
@@ -414,10 +414,10 @@ add("coffee-wood-vs-antler-nylon-rawhide","Natural chew toys",
         ("Material","Coffee tree stem wood; untreated"),
         ("Moisture at packing","Below 14%, checked on every batch"),
         ("Cracks","Any cracked piece is rejected at grading"),
-        ("Standard sizes","CC01 XS–XXL, 23–440 g"),
-        ("Strong-chewer line","Gorilla GRLS–GRLXL, 155–900 g"),
+        ("Standard sizes","CC01 XS–XXL, 23–600 g"),
+        ("Strong-chewer line","Gorilla GRLS–GRLXL, 155 g to 1.1 kg"),
         ("Export documents","Seven, including phytosanitary and fumigation certificates"),
-        ("Minimum order","50 pcs per size"),
+        ("Minimum order","50 pcs per product"),
       ])),
 
     ("Compare the quote at the same point in the supply chain",
@@ -702,7 +702,7 @@ add("plastic-free-biodegradable-pet-toys-guide","Materials & claims",
         ("Bulk bag","With the order","Protective bulk packing; confirm material"),
         ("Individual pack","With the order","Confirm film or paper"),
         ("Paper or kraft box","With the order","Check coating and window"),
-        ("Printed box, hang tag or label","500 pcs per SKU","Your artwork; specify uncoated stock if required"),
+        ("Printed box, hang tag or label","Print quantity quoted","Your artwork; specify uncoated stock if required"),
         ("Laser engraving (coffee wood)","50 pcs","Branding burned into the wood — no label needed on the product"),
       ])
       + p("Vacuum packing is a method, not a material description, and kraft-coloured paper may be coated or laminated. If your brief excludes "
@@ -869,9 +869,9 @@ add("what-is-coconut-fiber-pet-toys","Materials & claims",
         ("Products","Coconut fiber cat ball; coconut fiber dog ball (S / M / L references)"),
         ("Sizes","Diameter and finished weight set by the approved sample"),
         ("Minimum order","Selected standard lines from 50 pcs; per-size minimum confirmed in the quote"),
-        ("Branding","Hang tags, labels or small boxes; printed items from 500 pcs per SKU"),
+        ("Branding","Hang tags, labels or small boxes; print quantity confirmed in the quote"),
         ("Samples","3 free samples; you cover the courier"),
-        ("Production","Two partner factories in Vietnam, Dak Lak and Gia Lai; specification and QC controlled by VietPaw"),
+        ("Production","Two factories of our own in Vietnam, Dak Lak and Gia Lai; specification and QC controlled by VietPaw"),
       ])),
 
     ("A cat ball is not simply the smallest dog ball",
@@ -910,8 +910,8 @@ add("what-is-coconut-fiber-pet-toys","Materials & claims",
        "A light, textured coir ball suits batting and chasing. Specify the cat version separately — diameter, weight and any attachment — rather "
        "than using the smallest dog ball."),
       ("What is the minimum order for coconut fiber toys?",
-       "Selected standard lines start from 50 pcs; the per-size minimum is confirmed in the quote. Printed tags, labels and boxes start at "
-       "500 pcs per SKU."),
+       "Selected standard lines start from 50 pcs; the per-size minimum is confirmed in the quote. Print quantities for tags, "
+       "labels and boxes are quoted separately."),
     ],
     figures=[('coconut-fiber-rope-toy-flat-lay.jpg', 'Knotted coconut fiber rope toy on a marble surface', 'Coir rope with knotted ends — the same fibre as the balls, a different construction.'),('coconut-fiber-ball-with-rope-toy.jpg', 'Coconut fiber ball beside a knotted coir rope toy', 'Specify diameter and finished weight together; diameter alone hides a loosely wound batch.'),('coconut-fiber-ball-sizes-with-rope-toy.jpg','Small and large coconut fiber balls beside a coir rope toy','Two ball sizes side by side: size names only mean something with measured diameters.')])
 
@@ -950,8 +950,8 @@ add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
 
     ("VietPaw cat toy references",
       spec_table(["Product","Sizes","Minimum","Branding"],[
-        ("Loofah cat toy","Dimensions confirmed per shape","Quoted per shape","Tags, labels or small boxes; printed items from 500 pcs per SKU"),
-        ("Coconut fiber cat ball","Diameter and weight set by sample","Selected lines from 50 pcs","Tags, labels or small boxes; printed items from 500 pcs per SKU"),
+        ("Loofah cat toy","Dimensions confirmed per shape","Quoted per shape","Tags, labels or small boxes; print quantity confirmed in the quote"),
+        ("Coconut fiber cat ball","Diameter and weight set by sample","Selected lines from 50 pcs","Tags, labels or small boxes; print quantity confirmed in the quote"),
       ])
       + p("Samples: 3 free, you cover the courier. Catnip is not included in every toy; each quoted SKU states whether it is unfilled or contains "
           "catnip.")),
@@ -983,7 +983,7 @@ add("non-toxic-cat-toys-wholesale-buying-guide","Materials & claims",
       ("Can I print “non-toxic” on the pack?",
        "Only with evidence that covers the finished toy for the claim you are making. A precise material description is usually more useful."),
       ("What is the minimum order for natural cat toys?",
-       "Loofah shapes are quoted per shape; selected coconut fiber lines start from 50 pcs. Printed tags, labels and boxes start at 500 pcs per "
+       "Loofah shapes are quoted per shape; selected coconut fiber lines start from 50 pcs. Print quantities for tags, labels and boxes are confirmed in the quote per "
        "SKU."),
     ],
     figures=[('cat-hugging-loofah-toy.jpg','Cat hugging and biting a loofah toy','There is no universal pet-safety certification to carry — ask for the report that covers your SKU.'),('loofah-bear-shape-cat-toy.jpg','Loofah fibre cut into a bear-shaped cat toy','Confirm thread, filling and attachments before printing a composition claim.'),('cat-hugging-loofah-toy.jpg', 'Cat hugging and biting a loofah toy', 'Loofah shapes for batting, carrying and biting.'),('loofah-fish-cat-toy.jpg', 'Fish-shaped loofah cat toy with a small loop', 'The hanging loop is a component to declare and inspect.'),('loofah-mouse-cat-wand-toys.jpg', 'Two loofah mouse toys on wooden cat wands', 'Wand, string, ears and tail: every part belongs on the component list.')])
@@ -1025,11 +1025,11 @@ add("sustainable-pet-toy-materials-compared","Materials & claims",
 
     ("VietPaw material facts",
       spec_table(["Material","Key figures","Minimum"],[
-        ("Coffee wood","Moisture below 14% at packing; any cracked piece rejected; CC01 XS–XXL, Gorilla GRLS–GRLXL","50 pcs per size"),
+        ("Coffee wood","Moisture below 14% at packing; any cracked piece rejected; CC01 XS–XXL, Gorilla GRLS–GRLXL","50 pcs per product"),
         ("Coconut fiber","Cat ball; dog ball S/M/L; diameter and weight set by sample","Selected lines from 50 pcs"),
         ("Hemp","Rope and ball formats; length, rope diameter and knots quoted by design","Project-specific"),
         ("Loofah","Shapes dimensioned per design; catnip optional","Quoted per shape"),
-      ], caption="All four are made at the two factories VietPaw works with; printed packaging from 500 pcs per SKU.")),
+      ], caption="All four are made at VietPaw’s two factories; printed packaging quoted with its print quantity.")),
 
     ("Separate the origin story from the product claim",
       p("Coffee-tree wood and coconut husks offer specific material-reuse stories. Hemp and loofah are plant-derived, but that does not make every "
@@ -1065,28 +1065,28 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
     "Sourcing Natural Pet Toys from Vietnam: The First Order",
     "Plan a first natural pet toy order from Vietnam, covering the buying brief, samples, packaging, quality checks and shipment preparation.",
     answer("<strong>Short answer:</strong> a first order of natural pet toys from Vietnam runs in six stages — brief, samples, quote, "
-           "approval, production and shipment. With VietPaw, stock-packed goods take 5–7 days to produce and 30–35 days by sea to the EU "
-           "or the US; orders with your own branding take 60–80 days to produce. Start with 3 free samples, then a small stock-packed "
-           "order from 50 pcs per SKU."),
+           "approval, production and shipment. With VietPaw, plain goods take 8–10 days to produce for 50–200 pcs and 30–35 days by sea to the EU "
+           "or the US; orders with your own branding are confirmed per order. Start with 3 free samples, then a small stock-packed "
+           "order from 50 pcs per product."),
     [
     ("What sourcing natural pet toys from Vietnam involves",
       p("<dfn>Sourcing</dfn> here means buying finished pet toys directly from a Vietnamese manufacturer and importing them under your own "
         "name — as a brand, retailer, distributor or marketplace seller. Vietnam’s natural-material base is the reason buyers look here: "
         "coffee wood is collected in the Central Highlands, and coconut and loofah are grown in the country.")
-      + p("VietPaw manufactures four material collections — coffee wood, coconut fiber, hemp and loofah — at two factories in Dak Lak "
-          "and Gia Lai. Packing, quality release and export documents run from our Ho Chi Minh City office and warehouse, and "
-          "goods leave from Cat Lai port.")
+      + p("VietPaw manufactures four material collections — coffee wood, coconut fiber, hemp and loofah. Coffee wood is produced "
+          "at our two factories in Dak Lak and Gia Lai, and goods are shipped from our Ho Chi Minh City warehouse, where "
+          "packing, quality release and export documents are prepared; goods leave from Cat Lai port.")
       + p("Most of the useful work on a first order happens before the purchase order: narrowing the assortment, approving a sample and "
           "deciding what must be ready before the goods leave Vietnam.")),
 
     ("First-order options compared",
       spec_table(["Option","Quantity","Packaging","Production time","Best for"],[
         ("Samples","3 free; you cover the courier","As sampled","Dispatched within 1 working day","Checking material, size and finish"),
-        ("Trial Box (coffee wood)","100 pcs","Stock packaging","5–7 days","Testing several sizes and early sell-through"),
-        ("Starting Box (coffee wood)","500 pcs","Stock packaging","5–7 days","A first retail or marketplace launch"),
-        ("Private label","From 500 pcs per SKU","Your label, printed box or engraving","60–80 days","Launching under your own brand"),
-        ("Container","429 cartons (20 ft) / 850 (40 ft)","Stock or branded","Per quotation","Distributors and repeat volume"),
-      ], caption="VietPaw planning figures. Selected standard products start from 50 pcs per SKU; your quotation confirms the mix.")
+        ("Trial Box (coffee wood)","100 pcs","Plain goods","8–10 days","Testing several sizes and early sell-through"),
+        ("Starting Box (coffee wood)","500 pcs","Plain goods","10–15 days","A first retail or marketplace launch"),
+        ("Own label","From 50 pcs","Your label, printed box or engraving","Confirmed per order","Launching under your own brand"),
+        ("Container","Calculated per pack configuration","Stock or branded","Per quotation","Distributors and repeat volume"),
+      ], caption="VietPaw planning figures. Selected standard products start from 50 pcs per product; your quotation confirms the mix.")
       + p("A small first order is not a failure of ambition. It gives you receiving data, customer questions and sell-through by size — the "
           "information that makes the second order accurate.")),
 
@@ -1096,7 +1096,7 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
         ("Approve samples","Up to 3 free samples, dispatched within 1 working day once the selection and courier are confirmed.","A physical reference with written dimensions."),
         ("Agree the terms","Incoterm with a named place, payment, document list and inspection stage.","No gaps about who pays for what, or when."),
         ("Approve artwork (branded orders)","Logo, barcode, warnings and pack contents on a proof.","Locked print files; the production clock can start."),
-        ("Release production","30% deposit for stock, 50% for a branded order.","5–7 days stock; 60–80 days branded."),
+        ("Release production","30% deposit for stock, 50% for a branded order.","8–10 days for 50–200 pcs; own-label confirmed per order."),
         ("Inspect and ship","Final check, carton marks, seal number and the seven export documents.","Balance paid against documents; 30–35 days sea transit."),
         ("Receive and record","Count, inspect against the sample and log any issue with the batch reference.","A receiving report that improves the repeat order."),
       ])),
@@ -1133,8 +1133,8 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
 
     ("Work backwards from the date you need stock",
       spec_table(["Order type","Production","Sea transit","Factory to destination port"],[
-        ("Stock packaging","5–7 days","30–35 days","About 35–42 days"),
-        ("Your own branding","60–80 days","30–35 days","About 90–115 days"),
+        ("Plain goods, 50–200 pcs","8–10 days","30–35 days","About 38–45 days"),
+        ("Your own branding","Confirmed per order","30–35 days","Per order plus about 30–35 days"),
       ], caption="Add sample courier time, vessel booking, customs clearance and inland delivery.")
       + p("A factory completion date is not a warehouse delivery date. When the first shipment arrives, record any differences while the "
           "cartons and batch markings are still available. That receiving report is the foundation of a better repeat order.")),
@@ -1146,11 +1146,11 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
     image="export-packed-box.jpg",
     faqs=[
       ("How long does a first order from Vietnam take?",
-       "With VietPaw, about 35–42 days from production start to an EU or US port for stock-packed goods (5–7 days production plus 30–35 days "
+       "With VietPaw, about 38–45 days from production start to an EU or US port for a 50–200 pc plain order (8–10 days production plus 30–35 days "
        "sea transit), or about 90–115 days with your own branding. Sample courier time, booking and clearance are extra."),
       ("What is the smallest first order?",
-       "Selected standard products start from 50 pcs per SKU. For coffee wood chews, the usual first steps are a Trial Box of 100 pcs or a Starting Box of 500 pcs; "
-       "private label starts at 500 pcs per SKU."),
+       "Selected standard products start from 50 pcs per product. For coffee wood chews, the usual first steps are a Trial Box of 100 pcs or a Starting Box of 500 pcs; "
+       "an own-label product carries the same 50 pcs minimum."),
       ("Are samples free?",
        "Yes, 3 free samples. You cover the courier, and standard samples are dispatched within 1 working day once the selection and courier "
        "arrangements are confirmed."),
@@ -1163,7 +1163,7 @@ add("sourcing-eco-pet-toys-vietnam","Sourcing & trade",
        "Ask for dated photos of the line making your product, a video walkthrough and the batch moisture record. Pre-shipment "
        "inspection can be arranged at our Ho Chi Minh City warehouse before the container is sealed."),
     ],
-    figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.'),('coffee-wood-chews-graded-sizes-stacked.jpg','Packs of graded coffee wood chews stacked from small to large','Graded sizes stacked from smallest to largest, ready for cartoning.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
+    figures=[('coffee-wood-workshop-stacked-billets.jpg','Workshop interior with stacked coffee wood billets','Billets are cut to 50–70 cm in the field and held about a year in ventilated shade.'),('container-loading-forklift.jpg','Forklift loading pallets of cartons into a container','Loading port is Cat Lai, Ho Chi Minh City; 30–35 days port to port to the EU or the US.'),('coffee-wood-chews-graded-sizes-stacked.jpg','Packs of graded coffee wood chews stacked from small to large','Graded sizes stacked from smallest to largest, ready for cartoning.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.'),('coffee-wood-chews-on-drying-racks.jpg','Rows of shaped coffee wood chews laid out on drying racks','Drying racks at our factory — ask any supplier to show you this stage.'),('moisture-meter-probes-in-chew-stick.jpg','Moisture meter probes pressed into a coffee wood chew stick','A moisture reading you can ask to see for your own lot.'),('inspector-checking-cartons-with-a-checklist.jpg','Inspector checking cartons against a printed checklist','Carton marks checked against the packing list before loading.'),('applying-the-container-seal-before-departure.jpg','Numbered seal applied to the container before departure','Seal number recorded before the container leaves Ho Chi Minh City.')])
 
 add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
     "Choosing a Natural Dog Toy Manufacturer in Vietnam",
@@ -1182,19 +1182,19 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
         ("Sourcing agent","Finds and manages factories for a fee","Local presence without your own staff","Fee structure, and who is liable if goods are wrong"),
       ])
       + p("None of these is wrong. What matters is that you know which one you are dealing with and where the work is done. VietPaw "
-          "does not own its factories and is not a trading company either: it works with two sites, in Dak Lak and Gia Lai, and owns "
+          "owns its two factories, in Dak Lak and Gia Lai, and is not a trading company: it owns "
           "the specification, the production plan and the quality release — OEM manufacturing rather than resale. It will name the "
           "site that makes your SKU and arrange a walkthrough of it.")),
 
     ("VietPaw at a glance",
       spec_table(["Item","Detail","Where to check"],[
         ("Company","Registered in Vietnam on 12 November 2019; exporting to 40+ countries","About page; contract details in your quotation"),
-        ("Factories","Two partner factories: Dak Lak and Gia Lai, Central Highlands","Factory page; dated photos and video walkthrough on request"),
+        ("Factories","Two factories of our own: Dak Lak and Gia Lai, Central Highlands","Factory page; dated photos and video walkthrough on request"),
         ("Head office and export","Ho Chi Minh City office and warehouse; shipments leave from Cat Lai","Contact page"),
         ("Materials","Coffee wood, coconut fiber, hemp and loofah","Collection pages"),
         ("Coffee wood QC","Drying and quality protocol with five QC checkpoints; moisture below 14% before packing","Batch readings on request"),
-        ("Minimums","From 50 pcs per SKU; private label from 500 pcs per SKU","How to order"),
-        ("Lead time","5–7 days stock; 60–80 days with your own branding","Confirmed in the quotation"),
+        ("Minimums","From 50 pcs per product, own label included; print quantity quoted separately","How to order"),
+        ("Lead time","8–10 days for 50–200 pcs; own-label confirmed per order","Confirmed in the quotation"),
       ])),
 
     ("Follow one product through production",
@@ -1240,10 +1240,10 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
              ("Quality control","/quality-control/"),("First order from Vietnam","/guides/sourcing-eco-pet-toys-vietnam/")],
     image="process-raw-sticks.jpg",
     faqs=[
-      ("Does VietPaw own its factories?",
-       "No. VietPaw works with two factories, in Dak Lak and Gia Lai, and controls the manufacturing: the specification, the production "
-       "plan, the QC checkpoints, the quality release and the export documents are all VietPaw’s. It will name the site that makes "
-       "your order."),
+      ("Where does VietPaw manufacture?",
+       "Coffee wood is produced at VietPaw’s two factories, in Dak Lak and Gia Lai, and goods ship from its Ho Chi Minh City "
+       "warehouse. VietPaw controls the manufacturing: the specification, the production plan, the QC checkpoints, the quality "
+       "release and the export documents are all VietPaw’s. It will name the site that makes your order."),
       ("How is VietPaw’s production capacity confirmed?",
        "No headline monthly figure is published. The slot and dates for your order depend on the SKU mix and packaging and are "
        "confirmed in your quotation."),
@@ -1254,20 +1254,20 @@ add("natural-dog-toy-manufacturer-vietnam","Sourcing & trade",
        "Yes. Pre-shipment inspection is arranged at our Ho Chi Minh City warehouse, where a third party can measure a sample, "
        "witness the moisture reading and check carton marks before the container is sealed."),
       ("What is the minimum order?",
-       "Selected standard products start from 50 pcs per SKU. Private-label runs start at 500 pcs per SKU."),
+       "Selected standard products start from 50 pcs per product, and an own-label product carries the same minimum."),
       ("How do I tell a manufacturer from a trading company?",
        "Ask which site makes your specific SKU and request a walkthrough of that line. A manufacturer can show you; a trading company will "
        "usually name, or decline to name, the factories it buys from."),
     ],
-    figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing at one of the two factories in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.'),('hemp-ball-and-loop-toy-set.jpg','Hemp rope balls with a double-ended loop toy','Hemp balls and a loop toy — specify each construction on its own line.'),('coffee-wood-chews-three-in-vacuum-pack.jpg','Three coffee wood chews sealed in a clear vacuum bag','Vacuum-packed at our warehouse: the bag keeps the wood at its packing moisture until it is opened.')])
+    figures=[('coffee-wood-chew-finishing-bench.jpg','Row of workers shaping and finishing coffee wood chew sticks at benches','Shaping and surface finishing at one of our two factories in the Central Highlands.'),('pallet-stack-inspection.jpg','Staff inspecting a stack of palletised export cartons','Buyer-arranged inspection is welcome — please arrange in advance so the line is running.'),('hemp-ball-and-loop-toy-set.jpg','Hemp rope balls with a double-ended loop toy','Hemp balls and a loop toy — specify each construction on its own line.'),('coffee-wood-chews-three-in-vacuum-pack.jpg','Three coffee wood chews sealed in a clear vacuum bag','Vacuum-packed at our warehouse: the bag keeps the wood at its packing moisture until it is opened.'),('coffee-stem-intake-yard.jpg','Coffee stems delivered and heaped in the intake yard','Raw material intake at one of our two factories in Dak Lak and Gia Lai.'),('grading-chews-at-the-packing-bench.jpg','Staff grading coffee wood chews at the packing bench','Grading bench: cracked pieces are taken out piece by piece.'),('staff-packing-chews-into-export-carton.jpg','Two staff packing coffee wood chews into an export carton','Packing into export cartons at our warehouse.'),('ho-chi-minh-city-warehouse-aisle.jpg','Aisle of stacked export cartons in the Ho Chi Minh City warehouse','Goods are shipped from our warehouse in Ho Chi Minh City.')])
 
 add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     "Sourcing Coconut-Fiber Cat Toys for Wholesale",
     "Build a wholesale coconut-fiber cat toy assortment with clear size specifications, sample checks, pack counts and private-label requirements.",
     answer("<strong>Short answer:</strong> to buy coconut-fiber cat toys wholesale, specify the ball (diameter, finished weight, full "
            "construction), then the saleable unit (single, two-pack or mixed box), then the carton. With VietPaw, selected standard lines start "
-           "from 50 pcs, private-label tags and boxes from 500 pcs per SKU, samples are free (3, you cover the courier), and stock-packed goods "
-           "ship in 5–7 days."),
+           "from 50 pcs, private-label tags and boxes quoted with their print quantity, samples are free (3, you cover the courier), and stock-packed goods "
+           "are produced in 8–10 days for 50–200 pcs."),
     [
     ("Key terms",
       p("<dfn>Coconut-fiber cat ball</dfn>: a small, light ball of wound coir for batting and chasing — specified for cats, not scaled down from a "
@@ -1283,7 +1283,7 @@ add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
         ("Two-pack or three-pack","Marketplace listings","One per pack","Pack contents and sizes"),
         ("Boxed assortment","Gift and seasonal ranges","One per box","Exact contents per box"),
         ("Bulk, unbranded","Wholesalers who repack","Per carton","Units per carton and carton marks"),
-      ], caption="Printed tags, labels and boxes start at 500 pcs per SKU.")),
+      ], caption="Print quantities for tags, labels and boxes are confirmed in the quote.")),
 
     ("Sourcing coconut-fiber cat toys, step by step",
       steps([
@@ -1298,10 +1298,10 @@ add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     ("VietPaw order facts",
       spec_table(["Item","Detail"],[
         ("Minimum","Selected standard lines from 50 pcs; per-size minimum in the quote"),
-        ("Private label","Hang tags, labels and printed boxes from 500 pcs per SKU"),
+        ("Private label","Hang tags, labels and printed boxes, print quantity confirmed in the quote"),
         ("Samples","3 free; buyer covers courier; dispatched within 1 working day once confirmed"),
-        ("Production","5–7 days stock packaging; 60–80 days with your own label or box"),
-        ("Export master carton","51 × 31 × 39 cm (0.062 m³); 30 cartons per pallet"),
+        ("Production","8–10 days for 50–200 pcs, up to 30–45 days for a 20 ft container; own-label confirmed per order"),
+        ("Export master carton","51 \u00d7 31 \u00d7 39 cm (0.062 m\u00b3); pieces per carton depend on the pack"),
         ("Sea transit","30–35 days port to port from Cat Lai to the EU or the US"),
         ("Payment","30% deposit stock / 50% branded; balance against documents"),
       ])),
@@ -1324,15 +1324,15 @@ add("wholesale-coconut-fiber-cat-toys-supplier","Sourcing & trade",
     image="coconut-fiber-ball-top-view.jpg",
     faqs=[
       ("What is the minimum order for coconut-fiber cat toys?",
-       "Selected standard lines start from 50 pcs; the per-size minimum is confirmed in the quote. Printed tags, labels and boxes start at "
-       "500 pcs per SKU."),
+       "Selected standard lines start from 50 pcs; the per-size minimum is confirmed in the quote. Print quantities for tags, "
+       "labels and boxes are quoted separately."),
       ("Can I get samples first?",
        "Yes — 3 free samples; you cover the courier. Standard samples are dispatched within 1 working day once confirmed."),
       ("Can I sell them under my own brand?",
-       "Yes. Private-label hang tags, labels and printed boxes start at 500 pcs per SKU and take 60–80 days, mostly artwork approval and "
+       "Yes. An own-label product carries the same 50 pcs minimum; hang tags, labels and printed boxes are quoted with their own print quantity and scheduled per order, mostly artwork approval and "
        "printing."),
       ("How long does delivery take?",
-       "5–7 days to produce stock-packed goods, then 30–35 days by sea from Cat Lai to the EU or the US."),
+       "8–10 days to produce 50–200 pcs of plain goods, then 30–35 days by sea from Cat Lai to the EU or the US."),
       ("Is a cat ball just a small dog ball?",
        "No. Specify the cat version separately — diameter, weight and any attachment — and keep its instructions separate from dog toys."),
     ],
@@ -1343,8 +1343,8 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
     "Choose a practical development route for natural pet toys, with clear responsibilities for design, samples, branding and production approval.",
     answer("<strong>Short answer:</strong> private label puts your brand on an existing product; OEM means we manufacture to your design "
            "or a changed construction; ODM means we develop a new design with you. The more of the product you change, the more "
-           "development, sampling and time the project needs. At VietPaw, engraving starts at 50 pcs, private-label packaging at 500 pcs "
-           "per SKU, and branded orders take 60–80 days in production."),
+           "development, sampling and time the project needs. At VietPaw, engraving starts at 50 pcs and an own-label product at 50 pcs "
+           "per SKU, and branded orders are confirmed per order."),
     [
     ("Private label, OEM, ODM and white label defined",
       p("<dfn>Private label</dfn> is an existing, proven product sold under your brand. The construction stays the same; the logo, labels "
@@ -1363,9 +1363,9 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
         ("What changes","Branding and packaging only","Construction, materials or dimensions to your specification","The whole product, developed with our team"),
         ("Who provides the design","Existing VietPaw design","You","Developed jointly"),
         ("Design rights","No exclusivity on a standard design unless agreed","Your specification; agree ownership in writing","Agree ownership and usage rights before development"),
-        ("Starting quantity at VietPaw","Engraving from 50 pcs; printed packaging from 500 pcs per SKU","Quoted per project","Quoted per project"),
+        ("Starting quantity at VietPaw","Engraving from 50 pcs; print quantity for packaging quoted separately","Quoted per project","Quoted per project"),
         ("Samples","3 free standard samples; buyer covers courier","Prototype, quoted separately","Prototype rounds, quoted separately"),
-        ("Production time","60–80 days with your label, box or engraving","Project schedule after prototype approval","Project schedule after prototype approval"),
+        ("Production time","Confirmed per order with your label, box or engraving","Project schedule after prototype approval","Project schedule after prototype approval"),
         ("Best for","A fast, low-risk brand launch","Differentiating a proven format","A new product line"),
       ], caption="VietPaw planning figures; development charges and schedules are itemised in your quotation.")),
 
@@ -1374,8 +1374,8 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
         "selected SKU, logo placement, labels and retail packaging.")
       + spec_table(["Branding option","Starting quantity","Note"],[
         ("Laser engraving","50 pcs","Burned into suitable coffee wood surfaces — nothing to peel off during chewing"),
-        ("Hang tag or label","500 pcs per SKU","Printed to your artwork"),
-        ("Printed box","500 pcs per SKU","Separate minimum from the product inside it"),
+        ("Hang tag or label","Print quantity quoted","Printed to your artwork"),
+        ("Printed box","Print quantity quoted","Quoted separately from the product inside it"),
         ("Bulk bag, individual pack, kraft box","Quoted with the order","Standard options without custom print"),
       ])
       + p("Approve the branding on a physical sample. An engraving can look different across natural grain, and a logo that is clear on a "
@@ -1402,7 +1402,7 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
         ("Approve the sample or prototype","Standard samples for private label; a prototype for OEM or ODM.","Dimensions, components and appearance recorded against a reference."),
         ("Approve the artwork","Logo, warnings, barcode and pack contents checked on a proof.","Print files locked; changes after this point restart the clock."),
         ("Sign off the specification","Component list, tolerances, acceptable natural variation and pack count.","One document both sides inspect against."),
-        ("Release production","50% deposit on a branded order.","Production scheduled; 60–80 days for private label, a project schedule for OEM or ODM."),
+        ("Release production","50% deposit on a branded order.","Production scheduled; own-label confirmed per order, a project schedule for OEM or ODM."),
         ("Inspect and ship","Pre-shipment check against the approved reference and export documents.","Balance paid against shipping documents."),
       ])
       + p("VietPaw offers product customization, engraving and packaging support. Ask for a quotation that separates them — you will have a "
@@ -1418,7 +1418,7 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
        "Private label keeps the existing product and changes only the branding and packaging. OEM changes the product itself — its construction, "
        "materials or dimensions — to your specification, so it needs a prototype and a new approval."),
       ("What is the minimum order for private-label pet toys?",
-       "At VietPaw, laser engraving starts at 50 pcs. Private-label runs and printed hang tags, labels or boxes start at 500 pcs per SKU."),
+       "At VietPaw, laser engraving starts at 50 pcs. An own-label product carries the same 50 pcs minimum; the print quantity for hang tags, labels or boxes is quoted separately."),
       ("Can I add my logo without printed packaging?",
        "Yes. Laser engraving on suitable coffee wood surfaces starts at 50 pcs and can ship in a standard pack; printed packaging is a separate "
        "decision with its own 500-pc minimum."),
@@ -1426,17 +1426,17 @@ add("private-label-oem-eco-pet-toys-explained","Sourcing & trade",
        "For a standard product sold under private label, no exclusivity is created unless you agree it. For OEM and ODM work, agree ownership and "
        "usage rights in writing before development starts."),
       ("How long does a private-label order take?",
-       "60–80 days of production when the order carries your own label, printed box or engraving, most of it artwork approval and tooling. Add "
+       "a per-order production schedule when the order carries your own label, printed box or engraving, most of it artwork approval and tooling. Add "
        "30–35 days sea transit to the EU or the US. OEM and ODM projects get their own schedule after prototype approval."),
     ],
-    figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('vacuum-bagged-chews-stacked.jpg','Coffee wood chews vacuum packed with a desiccant sachet, stacked ready for cartoning','Printed tags, labels and boxes start at 500 pcs per SKU — a separate minimum from engraving.'),('hemp-rope-ball-vacuum-packed-size-l.jpg','Hemp rope ball vacuum-packed with a size L label','Size label on the pack: the same reference should appear on the quote and the packing list.')])
+    figures=[('laser-engraving-coffee-wood-chew.jpg','Laser engraving head marking a logo onto a coffee wood chew stick','Engraving is burned into the wood — nothing to peel off during chewing. From 50 pcs.'),('vacuum-bagged-chews-stacked.jpg','Coffee wood chews vacuum packed with a desiccant sachet, stacked ready for cartoning','Print quantities for tags, labels and boxes are quoted separately from engraving.'),('hemp-rope-ball-vacuum-packed-size-l.jpg','Hemp rope ball vacuum-packed with a size L label','Size label on the pack: the same reference should appear on the quote and the packing list.'),('laser-engraving-a-coffee-wood-chew.jpg','Laser engraving a logo onto a coffee wood chew','Engraving a logo directly onto the chew.'),('bagging-coffee-wood-chews-for-export.jpg','Staff bagging coffee wood chews before they go into the carton','Bagging ahead of your own retail pack.'),('palletised-export-cartons-with-size-labels.jpg','Palletised export cartons marked with size and quantity labels','Carton marks carry the size and quantity your packing list references.')])
 
 add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     "Pet Toy MOQ, FOB Pricing and Lead Times: Reading the Quote",
     "Understand pet toy minimum orders, packaging costs, FOB and FCA delivery terms, and the difference between production time and arrival date.",
-    answer("<strong>Short answer:</strong> at VietPaw, selected standard products start at 50 pcs per SKU, laser engraving at 50 pcs and "
-           "private-label packaging at 500 pcs per SKU. Stock-packed orders are produced in 5–7 days; orders with your own label, "
-           "printed box or engraving take 60–80 days. An FOB price covers the goods loaded on board at a named port — sea transit "
+    answer("<strong>Short answer:</strong> at VietPaw, selected standard products start at 50 pcs per product, laser engraving at 50 pcs and "
+           "an own-label product at the same 50 pcs. Plain orders of 50–200 pcs are produced in 8–10 days; orders with your own label, "
+           "printed box or engraving are confirmed per order. An FOB price covers the goods loaded on board at a named port — sea transit "
            "to the EU or the US adds another 30–35 days."),
     [
     ("What MOQ, FOB and lead time mean",
@@ -1454,18 +1454,18 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
 
     ("VietPaw minimums, timings and shipping data",
       spec_table(["Item","Figure","What it applies to"],[
-        ("Standard product MOQ","50 pcs per SKU","Selected standard products; size and pack minimums confirmed in the quote"),
+        ("Standard product MOQ","50 pcs per product","Selected standard products; size and pack minimums confirmed in the quote"),
         ("Laser engraving","From 50 pcs","Suitable coffee wood surfaces; separate from the packaging minimum"),
-        ("Private-label run","From 500 pcs","Your label or brand on an existing product"),
-        ("Printed hang tags, labels, boxes","From 500 pcs per SKU","Custom printed packaging"),
+        ("Private-label run","From 50 pcs","Your label or brand on an existing product"),
+        ("Printed hang tags, labels, boxes","Print quantity quoted","Custom printed packaging"),
         ("Trial Box / Starting Box","100 pcs / 500 pcs","Coffee wood chews: usual first steps above the 50-pc minimum"),
         ("Samples","3 free; buyer covers courier","Standard samples dispatched within 1 working day once confirmed"),
-        ("Production, stock packaging","5–7 days","Standard sizes held in our warehouse"),
-        ("Production, your own branding","60–80 days","Own label, printed box or engraving; most of it is artwork approval and tooling"),
+        ("Production, plain goods","8–10 days for 50–200 pcs; 30–45 days for a 20 ft container","Published production ladder"),
+        ("Production, your own branding","Confirmed per order","Own label, printed box or engraving; most of it is artwork approval and tooling"),
         ("Sea transit","30–35 days port to port","From Cat Lai, Ho Chi Minh City, to the EU or the US"),
         ("Deposit","30% stock / 50% branded","Balance against shipping documents; air freight paid in full before handover"),
-        ("Export master carton","51 × 31 × 39 cm (0.062 m³)","30 cartons per pallet"),
-        ("Container load","429 cartons (20 ft) / 850 (40 ft)","Planning reference; confirm for your packed SKU"),
+        ("Export master carton","51 \u00d7 31 \u00d7 39 cm (0.062 m\u00b3)","One carton size across the range"),
+        ("Container load","Calculated for the pack configuration","Pallet and container counts are confirmed for your packed SKU, not published as fixed figures"),
       ], caption="Planning figures published by VietPaw. The quotation for your order governs.")
       + p("An engraving-only order and a fully branded retail pack therefore need different budgets. Ask whether the minimum "
           "applies per SKU, per size, per artwork or per order. If the packaging minimum is higher than the product quantity, agree who "
@@ -1503,13 +1503,13 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
         ("Send the brief","Product references, sizes, quantity per SKU, destination, sales channel and branding.","An itemised quote that separates product, branding, packaging and freight."),
         ("Approve samples","Select up to 3 free samples; you cover the courier. Standard samples leave within 1 working day of confirmation.","A physical reference with recorded dimensions."),
         ("Approve artwork (branded orders only)","Logo, warnings, barcode and pack contents checked on a proof.","The stage that takes most of the 60–80-day window — start it early."),
-        ("Pay the deposit and release production","30% on a stock order, 50% on a branded order.","The production clock starts: 5–7 days stock, 60–80 days branded."),
+        ("Pay the deposit and release production","30% on a stock order, 50% on a branded order.","The production clock starts: 8–10 days for 50–200 pcs of plain goods; own-label confirmed per order."),
         ("Inspect and document","Final check, packing, carton marks and the seven export documents.","Balance paid against the shipping documents."),
         ("Ship and clear","Sea transit 30–35 days port to port, then import clearance and inland delivery.","Stock received, counted and inspected against the approved sample."),
       ])
       + spec_table(["Order type","Production","Sea transit","Planning total, factory to destination port"],[
-        ("Stock packaging","5–7 days","30–35 days","About 35–42 days"),
-        ("Your label, printed box or engraving","60–80 days","30–35 days","About 90–115 days"),
+        ("Plain goods, 50–200 pcs","8–10 days","30–35 days","About 38–45 days"),
+        ("Your label, printed box or engraving","Confirmed per order","30–35 days","Per order plus about 30–35 days"),
       ], caption="Excludes sample courier time, vessel booking, customs clearance and inland delivery.")
       + p("Work backwards from the date stock must be on sale, and leave time to receive and inspect it. Do not apply the stock window "
           "to a private-label launch.")),
@@ -1530,16 +1530,16 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
     image="stacking-cartons-in-container.jpg",
     faqs=[
       ("What is the minimum order for VietPaw pet toys?",
-       "Selected standard products start at 50 pcs per SKU. Laser engraving starts at 50 pcs; private-label runs and printed hang tags, labels "
-       "or boxes start at 500 pcs per SKU. For coffee wood chews, the usual first steps are a Trial Box of 100 pcs or a Starting Box of 500 pcs."),
+       "Selected standard products start at 50 pcs per product. Laser engraving starts at 50 pcs; private-label runs and printed hang tags, labels "
+       "or boxes are quoted with their print quantity. For coffee wood chews, the usual first steps are a Trial Box of 100 pcs or a Starting Box of 500 pcs."),
       ("Is the FOB price what I will pay in total?",
        "No. FOB covers the goods, export clearance and loading on board at the named port. Sea freight, insurance, import duty and taxes, "
        "destination charges and inland delivery are added on your side."),
       ("Should I buy FOB or FCA?",
        "FOB is for sea freight when the goods are loaded on board at the port. For air freight, or when your forwarder collects a container "
        "before it is loaded, FCA is the more accurate rule. Agree the choice with your forwarder."),
-      ("Why does a private-label order take 60–80 days when stock takes 5–7?",
-       "Stock sizes are already made and held in our warehouse. With your own label, printed box or engraving, most of the time goes on artwork "
+      ("Why is a private-label order scheduled per order when plain goods run 8–10 days?",
+       "Plain goods follow the published production ladder. With your own label, printed box or engraving, most of the time goes on artwork "
        "approval, printing and tooling rather than on making the product."),
       ("When does the lead time start?",
        "After the sample, artwork and order are approved and the deposit is received. Production time is not an arrival date; add 30–35 days "
@@ -1548,7 +1548,7 @@ add("pet-toy-moq-fob-pricing-lead-times","Sourcing & trade",
        "A 30% deposit on a stock order or 50% on a branded order, with the balance against shipping documents. Air shipments are paid in full "
        "before the goods are handed over at the airport."),
     ],
-    figures=[('stacking-cartons-in-container.jpg','Worker stacking export cartons inside a shipping container beside a forklift','429 cartons in a 20 ft, 850 in a 40 ft. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Stock sizes ship in 5–7 days; printed packaging is the part that takes 60–80.'),('coffee-wood-chews-pack-with-desiccant.jpg','Coffee wood chews packed with a labelled desiccant sachet','Moisture protection is part of the pack specification — agree the sachet material as well as the bag.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.')])
+    figures=[('stacking-cartons-in-container.jpg','Worker stacking export cartons inside a shipping container beside a forklift','Pieces per carton follow the pack configuration: 120 for a size M single, 50 for a size XL single. Pack format changes the count before it changes the price.'),('warehouse-inspection-clipboard.jpg','Warehouse staff checking stock against a document','Plain goods run 8–10 days for 50–200 pcs; printed packaging is confirmed per order.'),('coffee-wood-chews-pack-with-desiccant.jpg','Coffee wood chews packed with a labelled desiccant sachet','Moisture protection is part of the pack specification — agree the sachet material as well as the bag.'),('hemp-rope-ball-packed-size-m.jpg','Hemp rope ball vacuum-packed with a size M label','Packed size M ball — pack format changes carton counts before it changes the price.'),('warehouse-stock-of-packed-cartons.jpg','Packed cartons held as warehouse stock','Stock held packed, which is why a stock order ships in days.'),('stretch-wrapped-pallet-of-export-cartons.jpg','Stretch-wrapped pallet of export cartons ready for dispatch','Pallet wrapped and staged for the booked date.'),('forklift-loading-a-pallet-into-the-container.jpg','Forklift placing a pallet of cartons into the container','Loading at our Ho Chi Minh City warehouse.'),('container-loaded-with-export-cartons.jpg','Container loaded with stacked export cartons','A loaded container before the doors close.')])
 
 add("pet-toy-safety-compliance-cpsia-reach","Compliance & risk",
     "CPSIA, REACH and Pet Toys: Ask the Right Compliance Question",
@@ -1653,8 +1653,8 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
         ("EU import duty","EU–Vietnam FTA (in force since 1 August 2020): preferential rates for originating goods with valid proof of origin","Standard EU rates; no EU–China free-trade agreement","Broker checks the HS code and rate for your actual product"),
         ("US import duty","Tariff treatment has changed repeatedly since 2025","Tariff treatment has changed repeatedly since 2025","Check the current rate for both origins at the time of order"),
         ("Origin rules","Goods must be wholly obtained or substantially transformed in Vietnam","Same principle","Transshipped or merely repacked goods do not change origin"),
-        ("Minimum order","VietPaw: from 50 pcs per SKU on selected standard products","Varies widely by supplier","Compare the same quantity and pack"),
-        ("Lead time","VietPaw: 5–7 days stock, 60–80 days branded; 30–35 days sea to the EU or US","Varies by supplier and port","Compare approved sample to stock on sale, stage by stage"),
+        ("Minimum order","VietPaw: from 50 pcs per product on selected standard products","Varies widely by supplier","Compare the same quantity and pack"),
+        ("Lead time","VietPaw: 8–10 days for 50–200 pcs plain, own-label per order; 30–35 days sea to the EU or US","Varies by supplier and port","Compare approved sample to stock on sale, stage by stage"),
       ], caption="Duty rates and trade measures change. Confirm them for the actual goods with your customs broker before ordering.")),
 
     ("Build the landed-cost comparison line by line",
@@ -1711,10 +1711,10 @@ add("sourcing-pet-toys-vietnam-vs-china","Sourcing & trade",
        "No. Origin follows where goods were wholly obtained or substantially transformed. Transshipped or merely repacked goods keep their "
        "original origin, and mis-declaring it is a customs violation."),
       ("Does VietPaw make synthetic or plush toys?",
-       "No. VietPaw manufactures four natural-material collections — coffee wood, coconut fiber, hemp and loofah — at two factories "
-       "in Vietnam."),
+       "No. VietPaw manufactures four natural-material collections — coffee wood, coconut fiber, hemp and loofah — at its two "
+       "factories in Vietnam."),
     ],
-    figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.'),('coconut-fiber-rope-toy-knotted.jpg','Coconut fiber rope toy with a knot at each end','Coconut fiber rope with two knots, for supervised tug and carry.'),('hemp-rope-loop-ball-toy.jpg', 'Hemp rope toy with a loop handle and a knotted ball end', 'Ball-with-rope: the join between loop and ball is a separate inspection point.')])
+    figures=[('two-inspectors-container-check.jpg','Two staff checking stacked export cartons inside a container','Ask the same verification questions of every origin: moisture, marks, stuffing, documents.'),('stacking-cartons-in-container.jpg','Worker stacking cartons inside a shipping container','Consolidation and container choice move landed cost more than unit price often does.'),('coconut-fiber-rope-toy-knotted.jpg','Coconut fiber rope toy with a knot at each end','Coconut fiber rope with two knots, for supervised tug and carry.'),('hemp-rope-loop-ball-toy.jpg', 'Hemp rope toy with a loop handle and a knotted ball end', 'Ball-with-rope: the join between loop and ball is a separate inspection point.'),('coffee-wood-chews-on-drying-racks.jpg','Rows of shaped coffee wood chews laid out on drying racks','Our own drying racks in the Central Highlands.'),('measuring-a-carton-stack-during-inspection.jpg','Carton stack being measured during inspection','Carton data verified before booking the shipment.'),('team-stacking-cartons-in-the-container.jpg','Loading team stacking cartons in the container','Loading team at our warehouse.'),('sealed-container-leaving-the-warehouse.jpg','Sealed container at the warehouse before it leaves for the port','Sealed and bound for Cat Lai port.')])
 
 add("pet-toy-safety-testing-requirements","Compliance & risk",
     "Pet Toy Safety Testing: Build a Product-Specific Plan",
@@ -1808,7 +1808,7 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
     ("The supplier vetting checklist",
       spec_table(["Check","What to ask for","Red flag","What VietPaw provides"],[
         ("Legal entity and payment","Registration details and the beneficiary named on the contract","Bank account in a different name; bank details changed by email","Company details, beneficiary and terms in the quotation, invoice and contract"),
-        ("Production location","Site details and a walkthrough for your product","Only warehouse photos; no named site","Two named factories in Dak Lak and Gia Lai; dated photos, video walkthrough and pre-shipment inspection"),
+        ("Production location","Site details and a walkthrough for your product","Only warehouse photos; no named site","Two factories of our own in Dak Lak and Gia Lai; dated photos, video walkthrough and pre-shipment inspection"),
         ("Sample and specification","A sample with written dimensions, components and tolerances","Photo approval only; “same as before”","3 free samples; dimensions recorded at approval"),
         ("Quality records","Checkpoints and a record linked to your lot","Generic certificate, no batch reference","Coffee wood: five QC checkpoints; moisture below 14% before packing, batch readings on request"),
         ("Product claims","Evidence matched to the exact product and pack","“Non-toxic”, “splinter-free” or “biodegradable” without scope","Claims limited to what is documented; testing arranged on request"),
@@ -1824,7 +1824,7 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
         ("Verify where the work happens","Request site details and a walkthrough, or book an inspection.","You know who controls production and where to inspect."),
         ("Match claims to evidence","Component list for material claims; report scope for test claims; defined scope for environmental claims.","Only supportable claims reach your pack."),
         ("Put the order plan in writing","Approval stages, quality criteria, inspection timing, document list and a process for non-conforming goods.","A first delivery you can measure against what was agreed."),
-        ("Start small","A stock-packed first order from 50 pcs per SKU.","Receiving data before you commit volume."),
+        ("Start small","A stock-packed first order from 50 pcs per product.","Receiving data before you commit volume."),
       ])),
 
     ("Claims to test before they reach your pack",
@@ -1871,17 +1871,17 @@ add("how-to-vet-an-eco-pet-toy-supplier","Compliance & risk",
        "At minimum a Commercial Invoice, Packing List and transport document. For plant-based goods, expect a Certificate of Origin, "
        "Phytosanitary and Fumigation Certificates; VietPaw also issues a Forest-Product Declaration."),
       ("How big should a first order be?",
-       "Small enough to learn from. A stock-packed order from 50 pcs per SKU lets you check receiving quality and sell-through before "
+       "Small enough to learn from. A stock-packed order from 50 pcs per product lets you check receiving quality and sell-through before "
        "committing to private label or container volume."),
     ],
-    figures=[('inspector-checking-cartons-clipboard.jpg','Inspector in a hi-vis vest checking export cartons against a printed document','Ask for the carton marks to be photographed against the packing list before the container is sealed.'),('container-seal-applied.jpg','Hands fitting a numbered plastic seal to a shipping container door','The seal number belongs on your paperwork. It is the cheapest verification step there is.'),('coconut-fiber-balls-and-rope-toy.jpg','Two coconut fiber balls of different sizes and a knotted rope toy','Balls and rope from the same coir line — one material, three formats.'),('hemp-rope-loop-ball-toy.jpg','Hemp rope toy with a loop handle and a knotted ball end','Ball-with-rope: the join between loop and ball is a separate inspection point.')])
+    figures=[('inspector-checking-cartons-clipboard.jpg','Inspector in a hi-vis vest checking export cartons against a printed document','Ask for the carton marks to be photographed against the packing list before the container is sealed.'),('container-seal-applied.jpg','Hands fitting a numbered plastic seal to a shipping container door','The seal number belongs on your paperwork. It is the cheapest verification step there is.'),('coconut-fiber-balls-and-rope-toy.jpg','Two coconut fiber balls of different sizes and a knotted rope toy','Balls and rope from the same coir line — one material, three formats.'),('hemp-rope-loop-ball-toy.jpg','Hemp rope toy with a loop handle and a knotted ball end','Ball-with-rope: the join between loop and ball is a separate inspection point.'),('pre-shipment-inspection-at-the-container-door.jpg','Pre-shipment inspection recorded at the container door','Pre-shipment inspection at the container door — ask for this on your order.'),('checking-packs-inside-an-export-carton.jpg','Checking the sealed packs inside an opened export carton','Cartons opened and the sealed packs checked.'),('measuring-a-carton-stack-during-inspection.jpg','Carton stack being measured during inspection','Carton dimensions measured, not quoted from memory.'),('checking-the-carton-wall-inside-a-container.jpg','Checking the finished carton wall inside a loaded container','The finished load checked before the doors close.')])
 
 add("coffee-wood-chew-size-guide","Natural chew toys",
     "Coffee Wood Chew Sizes: VietPaw's XS–XXL Reference",
     "Length, diameter and weight for all six coffee wood chew sizes, XS to XXL, with the dog weight band each size suits and how to confirm it on sample.",
     answer("<strong>Short answer:</strong> VietPaw’s standard CC01 coffee wood chews come in six sizes, from XS (10 cm, 23–30 g, dogs up to "
            "3 kg) to XXL (22–23 cm, 340–440 g, dogs of 20 kg and over). Choose by the dog’s weight band and go up one size for a dog at the top "
-           "of its band. For strong chewers, use the thick-cut Gorilla line (GRLS–GRLXL, 155–900 g) instead of stretching the standard range."),
+           "of its band. For strong chewers, use the thick-cut Gorilla line (GRLS–GRLXL, 155 g to 1.1 kg) instead of stretching the standard range."),
     [
     ("How coffee wood chews are sized",
       p("Each size is defined by three measurements together: <dfn>length</dfn> (cut to ±3 mm), <dfn>diameter</dfn> (which follows the natural "
